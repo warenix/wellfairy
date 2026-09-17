@@ -278,13 +278,13 @@ function openDetail(id) {
     <button class="btn ghost" id="shareBtn" type="button">🔗 ${t('Share','分享')}</button>
     <button class="btn ghost" id="closeD" type="button">${t('Close','關閉')}</button></div>
     <p class="hint">${t('Please verify with the official source before applying.','申請前請以政府網站為準。')}</p></div>`;
+  // manage history stack before overwriting current id
+  const prevId = d.dataset.cur;
+  if (prevId && prevId !== id) {
+    detailStack.push(prevId);
+  }
   d.dataset.cur = id;
   if (!d.open) d.showModal();
-  // manage history stack for scheme navigation
-  const current = d.dataset.cur && d.dataset.cur !== id ? d.dataset.cur : null;
-  if (current && current !== id) {
-    detailStack.push(current);
-  }
   const url = '#/s/' + encodeURIComponent(id);
   if (history.state?.schemeId !== id) {
     history.pushState({schemeId:id}, '', url);
