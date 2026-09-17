@@ -2,6 +2,7 @@
 const LS_KEY = 'hkbm_profile_v1', SAVE_KEY = 'hkbm_saved_v1', HIDE_KEY = 'hkbm_hidden_v1';
 let BENEFITS = [], LANG = localStorage.getItem('hkbm_lang') || 'zh';
 let FILTER = 'all', FILTER_ALL = 'all', LIFE_FILTER = 'all';
+let detailStack = [];
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const t = (en, zh) => LANG === 'zh' ? (zh || en) : (en || zh);
@@ -279,7 +280,15 @@ function openDetail(id) {
     <p class="hint">${t('Please verify with the official source before applying.','申請前請以政府網站為準。')}</p></div>`;
   d.dataset.cur = id;
   if (!d.open) d.showModal();
-  if (location.hash !== '#/s/' + id) location.hash = '#/s/' + id;
+  // manage history stack for scheme navigation
+  const current = d.dataset.cur && d.dataset.cur !== id ? d.dataset.cur : null;
+  if (current && current !== id) {
+    detailStack.push(current);
+  }
+  const url = '#/s/' + encodeURIComponent(id);
+  if (history.state?.schemeId !== id) {
+    history.pushState({schemeId:id}, '', url);
+  }
   $('#closeD').onclick = () => closeDetail();
   d.onclick = e => { if (e.target === d) closeDetail(); };
   $('#shareBtn').onclick = async e => {
@@ -299,7 +308,8 @@ function closeDetail() {
   const d = $('#detail');
   if (d.open) d.close();
   delete d.dataset.cur;
-  if ((location.hash || '').startsWith('#/s/')) history.replaceState(null, '', location.pathname + location.search);
+  detailStack = [];
+  // keep history entry; user can back to previous page if desired
 }
 
 function openHash() {
@@ -414,7 +424,17 @@ async function init() {
   if('serviceWorker' in navigator){try{await navigator.serviceWorker.register('sw.js');}catch{}}
   render();
   window.addEventListener('hashchange', openHash);
-  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; if ((location.hash||'').startsWith('#/s/')) history.replaceState(null,'',location.pathname+location.search); });
+  window.addEventListener('popstate', (e) => {
+    const sid = e.state?.schemeId;
+    const d = $('#detail');
+    if (sid && BENEFITS.some(b=>b.id===sid)) {
+      if (d.dataset.cur !== sid) openDetail(sid);
+    } else {
+      // no scheme in state, close modal
+      if (d.open) { d.close(); delete d.dataset.cur; }
+    }
+  });
+  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; });
   openHash();
 }
 init();
