@@ -264,13 +264,15 @@ function openDetail(id) {
   const b = BENEFITS.find(x=>x.id===id); if(!b) return;
   const d = $('#detail');
   const cat = CAT_NAME[b.category] || {en:b.category,zh:b.category};
-  const related = BENEFITS.filter(x=>x.category===b.category && x.id!==b.id).slice(0,5).map(x=>`<a class="relink" href="#" data-open="${esc(x.id)}">${esc(t(x.title_en,x.title_zh))}</a>`).join('');
+  const relatedItems = BENEFITS.filter(x=>x.category===b.category && x.id!==b.id).slice(0,5);
+  const relatedChips = relatedItems.map(x=>`<button type="button" class="chip relchip" data-open="${esc(x.id)}"><span>${CAT_ICON[x.category]||'🎁'}</span> ${esc(t(x.title_en,x.title_zh))}</button>`).join('');
+  const relatedHtml = relatedItems.length ? `<section class="relatives"><h4>${t('Related in this category','同類資助')}</h4><div class="chips">${relatedChips}</div><p class="hint">${t('Tap to view related schemes; means-test pass may unlock secondary allowances.','點擊查看同類計劃；通過資助審查可解鎖次要津貼。')}</p></section>` : '';
   d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}">${CAT_ICON[b.category]||'🎁'}</div>
     <div><h3>${esc(t(b.title_en,b.title_zh))}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
     <div class="pills">${deadlinePill(b)}</div>
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
     <div class="why">💡 ${esc(t(b.why_en,b.why_zh))}<br><br>🧾 <strong>${t('Please bring','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please confirm before applying','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br>🔗 <strong>${t('Source','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
-    ${related ? `<div class="relatives"><strong>${t('Related schemes in this category','同類資助')}</strong><br>${related}</div>`:''}
+    ${relatedHtml}
     <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')}</a>
     <button class="btn ghost" id="shareBtn" type="button">🔗 ${t('Share','分享')}</button>
     <button class="btn ghost" id="closeD" type="button">${t('Close','關閉')}</button></div>
