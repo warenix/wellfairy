@@ -5732,26 +5732,5 @@
     "proof_needed_zh": [],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
-  },
-  {
-    "id": "special-needs-trust",
-    "title_en": "Special Needs Trust",
-    "title_zh": "特殊需要信託",
-    "category": "family",
-    "value_summary_en": "Support for eligible persons under Special Needs Trust",
-    "value_summary_zh": "特殊需要信託資格人士支援",
-    "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": [],
-    "apply_link": "https://www.swd.gov.hk/en/",
-    "needs": {
-      "hk_resident": true
-    },
-    "why_en": "Eligible for Special Needs Trust",
-    "why_zh": "符合特殊需要信託資格",
-    "proof_needed_zh": [],
-    "source_url_zh": "https://www.swd.gov.hk/tc/",
-    "apply_link_zh": "https://www.swd.gov.hk/tc/"
   }
 ]

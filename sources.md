@@ -3,7 +3,7 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (172 schemes, 2026-09-18)
+- Catalog: `data/benefits.json` (171 schemes, 2026-09-18)
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
 - Last full verification: **2026-09-18** (172 schemes added 30 new entries)
