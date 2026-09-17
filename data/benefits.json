@@ -1,0 +1,5062 @@
+[
+  {
+    "id": "hcv-2026",
+    "title_en": "Elderly Health Care Voucher Scheme $2,000/yr",
+    "title_zh": "長者醫療券計劃 $2,000/年",
+    "category": "elderly",
+    "value_summary_en": "$2,000/yr, cap $4,000. +$500 reward if $1,000 spent on designated PHC in same year.",
+    "value_summary_zh": "每年$2,000，上限$4,000。同年指定基層醫療用滿$1,000再賞$500。",
+    "deadline": null,
+    "source_url": "https://www.hcv.gov.hk/en/hcvs/background.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "Electronic Health System (eHealth) consent"
+    ],
+    "apply_link": "https://www.hcv.gov.hk/en/",
+    "needs": {
+      "min_age": 65,
+      "hk_resident": true
+    },
+    "why_en": "You are 65+ HK resident.",
+    "why_zh": "你年滿65歲並為香港居民。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "醫健通同意書"
+    ],
+    "source_url_zh": "https://www.hcv.gov.hk/tc/hcvs/background.html",
+    "apply_link_zh": "https://www.hcv.gov.hk/tc/",
+    "needs_ehealth": true
+  },
+  {
+    "id": "hcv-reward-2026",
+    "title_en": "HCV Pilot Reward Scheme $500 (2026)",
+    "title_zh": "長者醫療券獎賞先導計劃 $500 (2026)",
+    "category": "elderly",
+    "value_summary_en": "Spend $1,000 on designated PHC in 2026 → $500 reward, use by end 2027.",
+    "value_summary_zh": "2026年內指定基層醫療用滿$1,000 → 賞$500，2027年底前用。",
+    "deadline": "2026-12-31",
+    "source_url": "https://www.hcv.gov.hk/en/use_of_vouchers/pilot_reward_scheme.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HCV account with $1,000 PHC spend"
+    ],
+    "apply_link": "https://www.hcv.gov.hk/en/",
+    "needs": {
+      "min_age": 65,
+      "hk_resident": true
+    },
+    "why_en": "Same as HCV, plus 2026 spend window.",
+    "why_zh": "同醫療券資格，並在2026年有用券。",
+    "proof_needed_zh": [
+      "醫療券戶口同年指定基層醫療用滿$1,000"
+    ],
+    "source_url_zh": "https://www.hcv.gov.hk/tc/use_of_vouchers/pilot_reward_scheme.html",
+    "apply_link_zh": "https://www.hcv.gov.hk/tc/",
+    "needs_ehealth": true
+  },
+  {
+    "id": "senior-card",
+    "title_en": "Senior Citizen Card (65+)",
+    "title_zh": "長者咭 (65歲+)",
+    "category": "elderly",
+    "value_summary_en": "Proof of age for concessions on transport, gov services, shops.",
+    "value_summary_zh": "年齡證明，享交通、政府及商戶優惠。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/housing/socialservices/elderly/elderlyservices.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID, age 65+"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/housing/socialservices/elderly/",
+    "needs": {
+      "min_age": 65,
+      "hk_resident": true
+    },
+    "why_en": "You are 65+.",
+    "why_zh": "你年滿65歲。",
+    "proof_needed_zh": [
+      "香港身份證,年滿65歲"
+    ],
+    "source_url_zh": "https://www.gov.hk/tc/residents/housing/socialservices/elderly/elderlyservices.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/housing/socialservices/elderly/"
+  },
+  {
+    "id": "fare-2dollar",
+    "title_en": "$2 Scheme (60+, JoyYou Card)",
+    "title_zh": "$2優惠計劃 (60歲+ 樂悠咭)",
+    "category": "transport",
+    "value_summary_en": "$2 flat or pay 20% (80% off) (reform eff 3 Apr 2026). 60+ via JoyYou Card. <60 disabled via DA/CSSA-100% Personalised Octopus.",
+    "value_summary_zh": "$2或兩折(2026年4月3日改制)。60歲+用JoyYou卡；60歲以下殘疾經傷殘津貼/綜援100%個人八達通。",
+    "deadline": null,
+    "source_url": "https://www.td.gov.hk/en/gov_public_transport_fare_concession/index.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "JoyYou Card (60+) / Disability-status Octopus (<60)"
+    ],
+    "apply_link": "https://www.td.gov.hk/en/gov_public_transport_fare_concession/index.html",
+    "needs": {
+      "min_age": 60,
+      "hk_resident": true
+    },
+    "why_en": "You are 60+. Get a JoyYou Card.",
+    "why_zh": "你年滿60歲，申請JoyYou卡即享。",
+    "proof_needed_zh": [
+      "樂悠咭(60歲+)/殘疾身份八達通(60歲以下)"
+    ],
+    "source_url_zh": "https://www.td.gov.hk/tc/gov_public_transport_fare_concession/index.html",
+    "apply_link_zh": "https://www.td.gov.hk/tc/gov_public_transport_fare_concession/index.html"
+  },
+  {
+    "id": "ccsv",
+    "title_en": "Community Care Service Voucher (up to $10,824/mo)",
+    "title_zh": "長者社區照顧服務券 (最高$10,824/月)",
+    "category": "elderly",
+    "value_summary_en": "Money-following-user home/centre care for frail elderly after SCNAMES assessment. Co-pay by affordability.",
+    "value_summary_zh": "經統一評估後，體弱長者自選服務單位，政府按負擔能力共同付款。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/housing/socialservices/elderly/elderlyservices.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "SCNAMES assessment",
+      "HKID"
+    ],
+    "apply_link": "https://www.swd.gov.hk/",
+    "needs": {
+      "min_age": 60,
+      "hk_resident": true,
+      "requires_elderly_in_house": true
+    },
+    "why_en": "Household has elderly needing care. Requires assessment.",
+    "why_zh": "家中有需要照顧長者，需經評估。",
+    "proof_needed_zh": [
+      "安老服務統一評估機制評估",
+      "香港身份證"
+    ],
+    "source_url_zh": "https://www.gov.hk/tc/residents/housing/socialservices/elderly/elderlyservices.htm",
+    "confirm_en": [
+      "SWD invites by CWL application-date batches; or apply via VISE"
+    ],
+    "confirm_zh": [
+      "社署按中央輪候冊日期分批邀請，亦可經VISE網上申請"
+    ]
+  },
+  {
+    "id": "kcfrs-2026",
+    "title_en": "Kindergarten and Child Care Centre Fee Remission Scheme",
+    "title_zh": "幼稚園及幼兒中心學費減免計劃",
+    "category": "student",
+    "value_summary_en": "100%/75%/50% fee remission for K1-K3 (non-profit KG scheme). AFI ≤89,515.",
+    "value_summary_zh": "K1-K3學費減免100%/75%/50%，家庭入息限額AFI。",
+    "deadline": "2027-08-15",
+    "source_url": "https://www.wfsfaa.gov.hk/en/sfo/preprimary/kcfr/details.php",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Birth cert",
+      "KG admission",
+      "Income proof Apr25-Mar26",
+      "School Certificate by 31 Aug 2026"
+    ],
+    "apply_link": "https://eWFSFAA.gov.hk",
+    "needs": {
+      "has_kids_level": [
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "afi_max": 89515
+    },
+    "why_en": "You have a K1-K3 child and pass income test.",
+    "why_zh": "你有K1-K3子女並通過入息審查。",
+    "proof_needed_zh": [
+      "出生證明",
+      "幼稚園入學證明",
+      "2025年4月至2026年3月入息證明",
+      "8月31日前交學校證明書"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/preprimary/kcfr/details.php"
+  },
+  {
+    "id": "grant-kg-2026",
+    "title_en": "Grant for KG School-related Expenses",
+    "title_zh": "幼稚園學生就學開支津貼",
+    "category": "student",
+    "value_summary_en": "Extra grant on top of KCFRS, autopay from Sep.",
+    "value_summary_zh": "KCFRS以外額外津貼，9月起自動轉賬。",
+    "deadline": "2027-08-15",
+    "source_url": "https://www.wfsfaa.gov.hk/en/sfo/preprimary/kcfr/details.php",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Same as KCFRS"
+    ],
+    "apply_link": "https://eWFSFAA.gov.hk",
+    "needs": {
+      "has_kids_level": [
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "afi_max": 89515
+    },
+    "why_en": "Same as KCFRS.",
+    "why_zh": "與KCFRS相同資格。",
+    "proof_needed_zh": [
+      "同KCFRS"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/preprimary/kcfr/details.php"
+  },
+  {
+    "id": "ta-sts-sia",
+    "title_en": "School Textbook Assistance + Student Travel Subsidy + Internet Subsidy (one SFO form)",
+    "title_zh": "學校書簿津貼+學生車船津貼+上網費津貼 (一表通辦)",
+    "category": "student",
+    "value_summary_en": "One form SFO 75B covers TA, STS (>10min walk), SIA (P/S, household). Autopay Oct/Nov.",
+    "value_summary_zh": "一表申請學校書簿津貼、學生車船津貼(>10分鐘路程)、上網費津貼，10-11月發放。",
+    "deadline": "2027-08-15",
+    "source_url": "https://www.wfsfaa.gov.hk/sfo/pdf/common/Form/kc/form2627/Guidance%20Notes_SFO%2075B(1)_E.pdf",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Income proof",
+      "School Certificate"
+    ],
+    "apply_link": "https://eWFSFAA.gov.hk",
+    "needs": {
+      "has_kids_level": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "afi_max": 89515
+    },
+    "why_en": "You have a P/S child and pass income test.",
+    "why_zh": "你有中小學子女並通過入息審查。",
+    "proof_needed_zh": [
+      "入息證明",
+      "學校證明書"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/primarysecondary/tt/forms.php"
+  },
+  {
+    "id": "ascp",
+    "title_en": "After School Care Programme Fee-Waiving (primary)",
+    "title_zh": "課餘託管計劃收費減免 (小學)",
+    "category": "family",
+    "value_summary_en": "Full / half / 1-3 waiving when parents work or job-search.",
+    "value_summary_zh": "家長工作/求職未能照顧，減免全費/半費/三分一。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/housing/socialservices/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Employment proof",
+      "Income proof"
+    ],
+    "apply_link": "https://www.swd.gov.hk/",
+    "needs": {
+      "has_kids_level": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "afi_max": 56707
+    },
+    "why_en": "Primary child + working parents + low income.",
+    "why_zh": "小學子女、家長工作、低收入。",
+    "proof_needed_zh": [
+      "受僱證明",
+      "入息證明"
+    ],
+    "source_url_zh": "https://www.gov.hk/tc/residents/housing/socialservices/"
+  },
+  {
+    "id": "wfa",
+    "title_en": "Working Family Allowance Scheme + Child Allowance",
+    "title_zh": "在職家庭津貼計劃及兒童津貼",
+    "category": "family",
+    "value_summary_en": "Basic $575-1,150 / Medium $690-1,380 / Higher $805-1,610 per household + per child $805-1,610, at full/¾/half rates by exact income × household-size table (2026-27).",
+    "value_summary_zh": "基本$575-1,150／中額$690-1,380／高額$805-1,610＋每名兒童$805-1,610，按2026-27入息×人數表發全額/四分三/半額。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/wfao/wfas/eligibility.php",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "6-month work hours proof",
+      "Income + assets proof",
+      "HK residence"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/wfao/wfas/eligibility.php",
+    "needs": {
+      "hk_resident": true,
+      "requires_work_hours": 144,
+      "wfa_exact": true
+    },
+    "why_en": "Working household meeting hours + income limits. Not on CSSA.",
+    "why_zh": "在職家庭符合工時及入息限額，非綜援戶。",
+    "proof_needed_zh": [
+      "6個月工時證明",
+      "入息及資產證明",
+      "香港居留"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/wfao/wfas/eligibility.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/wfao/wfas/eligibility.php",
+    "confirm_en": [
+      "Claim in 6-month periods; extra allowance if Budget passes",
+      "Child allowance per child <15 (or 15-21 in full-time non-post-secondary)"
+    ],
+    "confirm_zh": [
+      "以6個月為一期申領；預算案通過或有額外津貼",
+      "每名15歲以下（或15-21歲全日制非專上）子女另有兒童津貼"
+    ]
+  },
+  {
+    "id": "vss-elderly",
+    "title_en": "Vaccination Subsidy Scheme",
+    "title_zh": "疫苗資助計劃",
+    "category": "health",
+    "value_summary_en": "Subsidised flu / pneumococcal shots at enrolled clinics. Check stock before visit.",
+    "value_summary_zh": "指定診所享流感/肺炎球菌資助，去前先問有無貨。",
+    "deadline": null,
+    "source_url": "https://apps.hcv.gov.hk/public/en/SPS/Search",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "Age proof"
+    ],
+    "apply_link": "https://apps.hcv.gov.hk/public/en/SPS/Search",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "All residents — check clinic list by district.",
+    "why_zh": "所有居民適用，按地區查診所名單。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "年齡證明"
+    ],
+    "source_url_zh": "https://apps.hcv.gov.hk/public/tc/SPS/Search",
+    "apply_link_zh": "https://apps.hcv.gov.hk/public/tc/SPS/Search",
+    "needs_ehealth": true
+  },
+  {
+    "id": "cssa-note",
+    "title_en": "Comprehensive Social Security Assistance Safety Net",
+    "title_zh": "綜合社會保障援助(綜援)安全網",
+    "category": "family",
+    "value_summary_en": "Means-tested basic + rent/school/medical special grants. Cannot get WFA at same time.",
+    "value_summary_zh": "經濟審查基本金 + 租金/學費/醫療特別津貼，不可與WFA同領。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Income/assets proof",
+      "Residence proof"
+    ],
+    "apply_link": "https://www.swd.gov.hk/",
+    "needs": {
+      "hk_resident": true,
+      "afi_max": 46292,
+      "min_hk_years": 1
+    },
+    "why_en": "Low-income household not working enough hours for WFA.",
+    "why_zh": "低收入且工時不足申請WFA的家庭。",
+    "proof_needed_zh": [
+      "入息資產證明",
+      "居留證明"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/cssa/"
+  },
+  {
+    "id": "ptfss",
+    "title_en": "Public Transport Fare Subsidy Scheme (up to $400/mo)",
+    "title_zh": "公共交通費用補貼計劃 (最高$400/月)",
+    "category": "transport",
+    "value_summary_en": "1/3 of monthly expenses over $500 back, cap $400/mo per Octopus/AlipayHK. No application, collect from 16th.",
+    "value_summary_zh": "月費超$500部份回贈1/3，上限$400/月。免申請，每月16日起拍卡領取。",
+    "deadline": null,
+    "source_url": "https://www.ptfss.gov.hk/en-main.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Octopus / AlipayHK travel record"
+    ],
+    "apply_link": "https://www.ptfss.gov.hk/en-main.html",
+    "needs": {
+      "hk_resident": true,
+      "min_transport_spend": 500
+    },
+    "why_en": "Your monthly transport spend exceeds $500.",
+    "why_zh": "你每月車費超過$500。",
+    "proof_needed_zh": [
+      "八達通/AlipayHK車費紀錄"
+    ],
+    "source_url_zh": "https://www.ptfss.gov.hk/tc-main.html",
+    "apply_link_zh": "https://www.ptfss.gov.hk/tc-main.html"
+  },
+  {
+    "id": "oala-2026",
+    "title_en": "Old Age Living Allowance $4,345/mo",
+    "title_zh": "長者生活津貼 $4,345/月",
+    "category": "elderly",
+    "value_summary_en": "$4,345/mo. Single: income ≤$10,900 + assets ≤$415,000. Couple: ≤$16,680 + ≤$630,000. Not with OAA/DA/CSSA.",
+    "value_summary_zh": "每月$4,345。單人入息≤$10,900資產≤$415,000；夫婦≤$16,680/≤$630,000。不可同領高齡/傷殘/綜援。",
+    "deadline": null,
+    "source_url": "https://www.1823.gov.hk/en/faq/what-are-the-eligibility-criteria-of-old-age-living-allowance-what-is-the-amount-of-assistance-payable",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "7-yr residence",
+      "Income + asset proof"
+    ],
+    "apply_link": "https://www.swd.gov.hk/oala/index_e.html",
+    "needs": {
+      "min_age": 65,
+      "hk_resident": true,
+      "no_other_allowance": true,
+      "max_monthly_income_single": 10900,
+      "max_monthly_income_couple": 16680,
+      "max_assets_single": 415000,
+      "max_assets_couple": 630000,
+      "min_hk_years": 7
+    },
+    "why_en": "You are 65+ within income/asset limits.",
+    "why_zh": "你年滿65歲並符合入息資產限額，且非領綜合社會保障援助/高齡津貼/傷殘津貼。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "居港7年",
+      "入息及資產證明"
+    ],
+    "source_url_zh": "https://www.1823.gov.hk/tc/faq/what-are-the-eligibility-criteria-of-old-age-living-allowance-what-is-the-amount-of-assistance-payable",
+    "confirm_en": [
+      "Not on talent/student/working-holiday visas or as their dependants"
+    ],
+    "confirm_zh": [
+      "並非以人才/學生/工作假期簽證留港（及其受養人）"
+    ]
+  },
+  {
+    "id": "oaa-2026",
+    "title_en": "Old Age Allowance $1,675/mo (non-means-tested)",
+    "title_zh": "高齡津貼 $1,675/月 (免審查)",
+    "category": "elderly",
+    "value_summary_en": "$1,675/mo for 70+. No income/asset test. 7-yr residence.",
+    "value_summary_zh": "70歲+每月$1,675，免入息資產審查，需居港7年。",
+    "deadline": null,
+    "source_url": "https://www.1823.gov.hk/en/faq/what-are-the-eligibility-criteria-of-old-age-allowance-what-is-the-amount-of-assistance-payable",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "7-yr residence"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/ssallowance/index.html",
+    "needs": {
+      "min_age": 70,
+      "hk_resident": true,
+      "min_hk_years": 7
+    },
+    "why_en": "You are 70+. Fallback if OALA limits exceeded.",
+    "why_zh": "你年滿70歲，OALA超額都仲有。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "居港7年"
+    ],
+    "source_url_zh": "https://www.1823.gov.hk/tc/faq/what-are-the-eligibility-criteria-of-old-age-allowance-what-is-the-amount-of-assistance-payable",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/ssallowance/index.html",
+    "confirm_en": [
+      "Not on talent/student/working-holiday visas or as their dependants"
+    ],
+    "confirm_zh": [
+      "並非以人才/學生/工作假期簽證留港（及其受養人）"
+    ]
+  },
+  {
+    "id": "da-note",
+    "title_en": "Disability Allowance ($2,140 / $4,280 + $345 transport)",
+    "title_zh": "傷殘津貼（$2,140／$4,280＋$345交通補助）",
+    "category": "health",
+    "value_summary_en": "Non-means-tested: Normal $2,140/mo, Higher $4,280/mo (needs constant attendance, not in subsidised care), +$345/mo transport supplement age 12-64. From 1 Feb 2026.",
+    "value_summary_zh": "免審查：普通$2,140/月、高額$4,280/月（需人長期照顧、非住資助院舍），12-64歲另加$345/月交通補助。2026年2月1日起。",
+    "deadline": null,
+    "source_url": "https://www.1823.gov.hk/en/faq/what-are-the-eligibility-criteria-of-disability-allowance-what-is-the-amount-of-assistance-payable",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Medical assessment (HA/DH)"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/ssallowance/index.html",
+    "needs": {
+      "hk_resident": true,
+      "requires_disability": true,
+      "min_hk_years": 7
+    },
+    "why_en": "Household includes a severely disabled member.",
+    "why_zh": "家中有重度殘疾成員。",
+    "proof_needed_zh": [
+      "醫生評估(衞生署/醫管局)"
+    ],
+    "source_url_zh": "https://www.1823.gov.hk/tc/faq/what-are-the-eligibility-criteria-of-disability-allowance-what-is-the-amount-of-assistance-payable",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/ssallowance/index.html",
+    "confirm_en": [
+      "Higher tier: constant attendance + not in subsidised residential care/HA/special-school boarding"
+    ],
+    "confirm_zh": [
+      "高額須有人長期照顧＋非住資助院舍／公院／特殊學校宿舍"
+    ]
+  },
+  {
+    "id": "hos-white",
+    "title_en": "HOS White Form (subsidised flats)",
+    "title_zh": "居屋白表 (資助出售房屋)",
+    "category": "housing",
+    "value_summary_en": "Periodic sales (HOS 2025: 6,926 flats). 1p: income ≤$30k, assets ≤$615k. 2+: ≤$60k/≤$1.23M. No property. Fee ~$350.",
+    "value_summary_zh": "定期發售(2025年6,926伙)。1人入息≤$30k資產≤$615k；2人+≤$60k/≤$1.23M。不可擁有物業。",
+    "deadline": null,
+    "source_url": "https://hos.housingauthority.gov.hk/mini-site/hos2025/en/general-information.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "7-yr residence",
+      "Income + asset proof",
+      "No-property declaration"
+    ],
+    "apply_link": "https://www.housingauthority.gov.hk/en/home-ownership/hos-flats/eligibility/index.html",
+    "needs": {
+      "min_age": 18,
+      "hk_resident": true,
+      "housing_in": [
+        "private"
+      ],
+      "no_property": true,
+      "max_monthly_income_1p": 30000,
+      "max_monthly_income_2p": 60000,
+      "max_assets_1p": 615000,
+      "max_assets_2p": 1230000,
+      "min_hk_years": 7
+    },
+    "why_en": "Private-housing household within White Form limits. Watch for sale windows.",
+    "why_zh": "私樓戶符合白表限額，留意發售期。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "居港7年",
+      "入息及資產證明",
+      "無物業聲明"
+    ],
+    "source_url_zh": "https://hos.housingauthority.gov.hk/mini-site/hos2025/tc/general-information.html",
+    "apply_link_zh": "https://www.housingauthority.gov.hk/tc/home-ownership/hos-flats/eligibility/index.html",
+    "confirm_en": [
+      "MPF employee contributions are deductible from declared income"
+    ],
+    "confirm_zh": [
+      "強積金僱員供款可從申報入息扣減"
+    ]
+  },
+  {
+    "id": "hos-green",
+    "title_en": "HOS Green Form (PRH tenants)",
+    "title_zh": "居屋綠表 (公屋戶)",
+    "category": "housing",
+    "value_summary_en": "PRH / HKHS Group A households buy with no income/asset limit. 24-mo no-property rule. Priority quotas for elderly/newborn families.",
+    "value_summary_zh": "公屋/房協甲類屋邨戶免入息資產審查，24個月無物業規定。有長者/新生嬰兒優先配額。",
+    "deadline": null,
+    "source_url": "https://www.housingauthority.gov.hk/en/home-ownership/hos-flats/eligibility/index.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "PRH tenancy",
+      "No-property 24mo declaration"
+    ],
+    "apply_link": "https://www.housingauthority.gov.hk/en/home-ownership/hos-flats/eligibility/index.html",
+    "needs": {
+      "hk_resident": true,
+      "housing_in": [
+        "prh"
+      ],
+      "no_property": true
+    },
+    "why_en": "PRH household — cheapest path to ownership.",
+    "why_zh": "公屋住戶置業的經濟之選。",
+    "proof_needed_zh": [
+      "公屋租約",
+      "24個月無物業聲明"
+    ],
+    "source_url_zh": "https://www.housingauthority.gov.hk/tc/home-ownership/hos-flats/eligibility/index.html",
+    "apply_link_zh": "https://www.housingauthority.gov.hk/tc/home-ownership/hos-flats/eligibility/index.html"
+  },
+  {
+    "id": "cef-25k",
+    "title_en": "Continuing Education Fund $25,000",
+    "title_zh": "持續進修基金 $25,000",
+    "category": "student",
+    "value_summary_en": "Up to $25k course fee reimbursement. First $10k you pay 20%, rest 40%. Claim within 1yr of completion. 18+, no upper age limit.",
+    "value_summary_zh": "最高$25k學費發還，首$10k自付20%、餘額40%。完成1年內申領。18歲+無上限。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/ce/cef/faq.php",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "70% attendance + 50% marks proof"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/ce/cef/faq.php",
+    "needs": {
+      "min_age": 18,
+      "hk_resident": true
+    },
+    "why_en": "Adult learner — use it before the account lapses.",
+    "why_zh": "成年進修適用，善用進修資助增值自己。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "出席率70%+成績50%證明"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/ce/cef/faq.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/ce/cef/faq.php"
+  },
+  {
+    "id": "erb-allowance",
+    "title_en": "ERB Retraining Allowance (Employees Retraining Board)",
+    "title_zh": "僱員再培訓局再培訓津貼",
+    "category": "student",
+    "value_summary_en": "Placement-tied 7+ days: $333/day ($167 youth), max $8k/mo, once/yr. Course fee waiver if monthly income ≤$15k, subsidised ≤$23.5k.",
+    "value_summary_zh": "就業掛鈎7日+課程：$333/日(青年$167)，月上限$8k，每年一次。月入≤$15k免學費，≤$23.5k半費。",
+    "deadline": null,
+    "source_url": "https://www.erb.org/en/about-erb/faqs",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID / One-way Permit",
+      "Income proof for waiver",
+      "80% attendance"
+    ],
+    "apply_link": "https://www.erb.org/",
+    "needs": {
+      "min_age": 15,
+      "hk_resident": true
+    },
+    "why_en": "Eligible age for ERB courses and allowance.",
+    "why_zh": "符合再培訓局課程年齡。",
+    "proof_needed_zh": [
+      "香港身份證/單程證",
+      "減免用入息證明",
+      "出席率80%"
+    ],
+    "source_url_zh": "https://www.erb.org/tc/about-erb/faqs"
+  },
+  {
+    "id": "yetp",
+    "title_en": "Youth Employment & Training Programme",
+    "title_zh": "展翅青見計劃 YETP",
+    "category": "student",
+    "value_summary_en": "Age 15-29, sub-degree or below: paid workplace attachment ($8,000 allowance), training $333/day, career advisor. Free.",
+    "value_summary_zh": "15-29歲副學位或以下：有薪實習($8,000津貼)、培訓$333/日、就業顧問跟進。免費。",
+    "deadline": "2027-08-31",
+    "source_url": "https://www.gov.hk/en/residents/employment/retraining/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "Education proof"
+    ],
+    "apply_link": "https://www.yes.labour.gov.hk/",
+    "needs": {
+      "min_age": 15,
+      "max_age": 29,
+      "hk_resident": true,
+      "edu_max_rank": 1
+    },
+    "why_en": "Youth in range — career advisor + paid attachment.",
+    "why_zh": "青年符合年齡 — 有顧問跟+有薪實習。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "學歷證明"
+    ],
+    "source_url_zh": "https://www.gov.hk/tc/residents/employment/retraining/"
+  },
+  {
+    "id": "crc-screen",
+    "title_en": "Colorectal Cancer Screening Programme (50-75)",
+    "title_zh": "大腸癌篩查計劃 (50-75歲)",
+    "category": "health",
+    "value_summary_en": "Asymptomatic 50-75: FIT test at 1,000+ clinics, free; positive → colonoscopy in ~8 weeks. Needs eHealth registration.",
+    "value_summary_zh": "無病徵50-75歲：千間診所免費大便測試，陽性約8星期內照腸鏡。需eHealth登記。",
+    "deadline": null,
+    "source_url": "https://www.colonscreen.gov.hk/en/public/programme/who_may_enrol.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "Electronic Health System (eHealth) registration"
+    ],
+    "apply_link": "https://www.colonscreen.gov.hk/",
+    "needs": {
+      "min_age": 50,
+      "max_age": 75,
+      "hk_resident": true
+    },
+    "why_en": "You are in screening age — free, repeat every 2 years.",
+    "why_zh": "你到篩查年齡 — 免費，兩年一次。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "醫健通登記"
+    ],
+    "source_url_zh": "https://www.colonscreen.gov.hk/tc/public/programme/who_may_enrol.html",
+    "needs_ehealth": true
+  },
+  {
+    "id": "cervical-screen",
+    "title_en": "Cervical Screening Programme (women 25-64)",
+    "title_zh": "子宮頸篩查計劃 (25-64歲女性)",
+    "category": "health",
+    "value_summary_en": "Women 25-64 ever sexually active: subsidised screening at MCHC / Woman Health Centre. Booking 3166 6631.",
+    "value_summary_zh": "25-64歲曾有性經驗女性：母嬰健康院/婦女健康中心資助篩查。預約3166 6631。",
+    "deadline": null,
+    "source_url": "https://www.chp.gov.hk/files/pdf/0_health_information_on_cancer_screening_eng.pdf",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID"
+    ],
+    "apply_link": "https://www.fhs.gov.hk",
+    "needs": {
+      "sex": "female",
+      "min_age": 25,
+      "max_age": 64,
+      "hk_resident": true
+    },
+    "why_en": "Eligible age — regular screening saves lives.",
+    "why_zh": "符合年齡 — 定期篩查救命。",
+    "proof_needed_zh": [
+      "香港身份證"
+    ],
+    "source_url_zh": "https://www.chp.gov.hk/files/pdf/0_health_information_on_cancer_screening_chi.pdf"
+  },
+  {
+    "id": "breast-pilot2",
+    "title_en": "Breast Cancer Screening Pilot Programme Phase II (high-risk 35-74)",
+    "title_zh": "乳癌篩查先導計劃第二期 (高風險35-74歲)",
+    "category": "health",
+    "value_summary_en": "High-risk women 35-74 (family history/BRCA): subsidised mammogram via NGOs + DH. Asymptomatic, no screening in past year.",
+    "value_summary_zh": "高風險35-74歲女性(家族史/BRCA)：NGO+衛生署資助造影。無病徵、過去一年無照過。",
+    "deadline": null,
+    "source_url": "https://www.ucn.org.hk/en/services/preventive-medicine-and-clinical-service/Breast-Cancer-Screening-Pilot-Programme-2/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "Electronic Health System (eHealth) registration",
+      "Risk assessment"
+    ],
+    "apply_link": "https://www.ucn.org.hk/",
+    "needs": {
+      "sex": "female",
+      "min_age": 35,
+      "max_age": 74,
+      "hk_resident": true
+    },
+    "why_en": "In age range — get risk assessment to confirm high-risk slot.",
+    "why_zh": "年齡符合 — 先做風險評估確認高風險名額。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "醫健通登記",
+      "風險評估"
+    ],
+    "source_url_zh": "https://www.ucn.org.hk/tc/services/preventive-medicine-and-clinical-service/Breast-Cancer-Screening-Pilot-Programme-2/",
+    "needs_ehealth": true
+  },
+  {
+    "id": "carer-elderly-3000",
+    "title_en": "Living Allowance for Carers of Elderly Persons from Low-income Families ($3,000/mo)",
+    "title_zh": "低收入家庭護老者生活津貼 ($3,000/月)",
+    "category": "elderly",
+    "value_summary_en": "$3,000/mo for carers giving 80+ hrs/mo (120+ for 2 elderly). Elderly must be on CWL for long-term care, living in community.",
+    "value_summary_zh": "每月$3,000。照顧80小時+/月(2老120小時+)。長者需經安老服務統一評估機制輪候資助長期護理、在社區居住。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "SCNAMES assessment + CWL letter",
+      "Care hours declaration",
+      "Household income proof"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
+    "needs": {
+      "is_carer": true,
+      "requires_elderly_in_house": true,
+      "no_other_allowance": true,
+      "carer_income_exact": true
+    },
+    "confirm_en": [
+      "Elderly on Central Waiting List for LTC (SCNAMES)",
+      "80+ hrs care/mo (120+ if 2 elderly)",
+      "Household income within CAST table by size",
+      "Carer not employed by the elderly",
+      "Income caps by size: 1p $18k / 2p $24,225 / 3p $30,750 / 4p $38,700 / 5p $47,925 / 6+ $52,800"
+    ],
+    "confirm_zh": [
+      "長者經安老服務統一評估機制並輪候資助長期護理",
+      "每月照顧80小時+(2老120小時+)",
+      "住戶入息符合CAST按人數限額",
+      "照顧者非受僱於長者",
+      "按人數入息限額：1人$18,000／2人$24,225／3人$30,750／4人$38,700／5人$47,925／6人+$52,800"
+    ],
+    "why_en": "You care for an elderly person 80+ hrs/mo and are not on CSSA/OALA/DA.",
+    "why_zh": "你每月照顧長者80小時+，且非領綜合社會保障援助/長者生活津貼/傷殘津貼。",
+    "proof_needed_zh": [
+      "安老服務統一評估+中央輪候冊信件",
+      "照顧時數聲明",
+      "住戶入息證明"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/"
+  },
+  {
+    "id": "carer-disabled-3000",
+    "title_en": "Living Allowance for Low-income Carers of Persons with Disabilities ($3,000/mo)",
+    "title_zh": "低收入家庭殘疾人士照顧者生活津貼 ($3,000/月)",
+    "category": "health",
+    "value_summary_en": "$3,000/mo for carers giving 80+ hrs/mo. PWD must be on rehab/special-school/infirmary waitlist, living in community.",
+    "value_summary_zh": "每月$3,000。照顧80小時+/月。殘疾人士需輪候康復/特殊學校住宿/療養服務，在社區居住。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_supportcom/scpd/alcpd/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Waitlist letter (CRSRehab/EDB/HA)",
+      "Care hours declaration",
+      "Household income proof"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_supportcom/scpd/alcpd/",
+    "needs": {
+      "is_carer": true,
+      "requires_disability": true,
+      "no_other_allowance": true,
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "PWD on specified rehab waitlist",
+      "80+ hrs care/mo (120+ if 2 persons)",
+      "Household income within CAST table by size"
+    ],
+    "confirm_zh": [
+      "殘疾人士輪候指定康復服務",
+      "每月照顧80小時+(2人120小時+)",
+      "住戶入息符合CAST按人數限額"
+    ],
+    "why_en": "You care for a disabled person 80+ hrs/mo and are not on CSSA/OALA/DA.",
+    "why_zh": "你每月照顧殘疾人士80小時+，且非領綜合社會保障援助/長者生活津貼/傷殘津貼。",
+    "proof_needed_zh": [
+      "輪候信(康復服務中央轉介系統/教育局/醫管局)",
+      "照顧時數聲明",
+      "住戶入息證明"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_supportcom/scpd/alcpd/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_supportcom/scpd/alcpd/"
+  },
+  {
+    "id": "carer-hotline",
+    "title_en": "Carer Hotline 182 183 (24hr, free)",
+    "title_zh": "照顧者支援專線 182 183 (24小時免費)",
+    "category": "elderly",
+    "value_summary_en": "24hr social-worker hotline: counselling, respite matching, outreach, transport subsidy for respite. WhatsApp 5322 2183 for hearing/speech impaired.",
+    "value_summary_zh": "24小時社工專線：輔導、暫託配對、外展探訪、暫託交通津貼。聽障/言語障礙WhatsApp 5322 2183。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_supportcom/scpd/dhcs/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "None — just call"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_supportcom/scpd/dhcs/",
+    "needs": {
+      "carer_context": true
+    },
+    "why_en": "Your household has care needs — save this number.",
+    "why_zh": "如家中有照顧需要，建議儲存此號碼以備不時之需。",
+    "proof_needed_zh": [
+      "無需文件 — 歡迎直接來電"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_supportcom/scpd/dhcs/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_supportcom/scpd/dhcs/"
+  },
+  {
+    "id": "respite-day",
+    "title_en": "Day Respite Service for the Elderly (60+)",
+    "title_zh": "長者日間暫託服務 (60歲+)",
+    "category": "elderly",
+    "value_summary_en": "Short-term day care so carers can rest. Via 182 183, IFSC/MSSU, or direct to centres. 349 locations.",
+    "value_summary_zh": "短暫日間照顧，讓照顧者稍事休息。經182 183、綜合家庭服務中心或直接向中心申請。全港349個服務點。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/dayrespite",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Aged 60+",
+      "Fit for communal living",
+      "Social worker referral (or direct)"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/dayrespite",
+    "needs": {
+      "carer_context": true
+    },
+    "confirm_en": [
+      "Aged 60+",
+      "Needs personal/limited nursing care"
+    ],
+    "confirm_zh": [
+      "年滿60歲",
+      "需個人/有限度護理"
+    ],
+    "why_en": "Your household has an elderly member who may need breaks cover.",
+    "why_zh": "如家中有長者，照顧者需要休息時便可使用。",
+    "proof_needed_zh": [
+      "年滿60歲",
+      "適合群體生活",
+      "社工轉介(或直接申請)"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_careersupp/drrr/dayrespite",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_careersupp/drrr/dayrespite"
+  },
+  {
+    "id": "respite-residential",
+    "title_en": "Residential Respite Service for the Elderly (60+)",
+    "title_zh": "長者住宿暫託服務 (60歲+)",
+    "category": "elderly",
+    "value_summary_en": "Temporary residential care when carers unavailable. No SCNAMES needed. Check vacancies at VES, referral via social worker.",
+    "value_summary_zh": "照顧者暫時未能照顧時短期入住。免統一評估，上VES查空位，經社工轉介。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/respiteser/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Aged 60+",
+      "Fit for communal living",
+      "Taken back after expiry"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/respiteser/",
+    "needs": {
+      "carer_context": true
+    },
+    "confirm_en": [
+      "Aged 60+",
+      "Family takes back after respite period"
+    ],
+    "confirm_zh": [
+      "年滿60歲",
+      "暫託期滿接返屋企"
+    ],
+    "why_en": "Backup when you as carer are away or ill.",
+    "why_zh": "照顧者有事離開或病倒時的後備。",
+    "proof_needed_zh": [
+      "年滿60歲",
+      "適合群體生活",
+      "期滿接返屋企"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_careersupp/drrr/respiteser/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_careersupp/drrr/respiteser/"
+  },
+  {
+    "id": "fare-2-disabled",
+    "title_en": "$2 Scheme for Disabled Persons (<60)",
+    "title_zh": "$2優惠計劃 (60歲以下殘疾人士)",
+    "category": "transport",
+    "value_summary_en": "Same $2/80%-off via Personalised Octopus with Disabilities Status. SWD mails pre-verified form on DA/CSSA approval.",
+    "value_summary_zh": "同享$2/8折，用殘疾身份個人八達通。批出傷殘津貼/綜援時社署會寄已核實申請表。",
+    "deadline": null,
+    "source_url": "https://www.lwb.gov.hk/en/highlights/fare_concession/index.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "DA or CSSA-100% award",
+      "Disabilities-status Octopus"
+    ],
+    "apply_link": "https://www.lwb.gov.hk/en/highlights/fare_concession/index.html",
+    "needs": {
+      "hk_resident": true,
+      "max_age": 59,
+      "requires_disability": true
+    },
+    "why_en": "Disabled member under 60 — apply for the status Octopus.",
+    "why_zh": "家有60歲以下殘疾成員 — 申請殘疾身份八達通。",
+    "proof_needed_zh": [
+      "傷殘津貼/綜援100%批核",
+      "殘疾身份八達通"
+    ],
+    "source_url_zh": "https://www.lwb.gov.hk/tc/highlights/fare_concession/index.html",
+    "apply_link_zh": "https://www.lwb.gov.hk/tc/highlights/fare_concession/index.html"
+  },
+  {
+    "id": "tsp-waitlist",
+    "title_en": "Training Subsidy Programme for Children on Waitlist of Subvented Pre-school Rehabilitation Services",
+    "title_zh": "輪候資助學前康復服務兒童學習訓練津貼",
+    "category": "family",
+    "value_summary_en": "Subsidy for private training while under-6 child waits for subvented pre-school rehab (not receiving any). Income ≤75% MMDHI. SWD invites by letter.",
+    "value_summary_zh": "6歲以下輪候資助學前康復(未接受任何服務)可申請私人訓練津貼，入息≤住戶每月入息中位數75%。社署會寄信邀請。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_serpresch/tsp/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "CRSRehab waitlist letter",
+      "Under 6",
+      "Income proof (≤75% MMDHI)"
+    ],
+    "apply_link": "https://eform.cefs.gov.hk/form/swd053/en/",
+    "needs": {
+      "hk_resident": true,
+      "child_sen": true,
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "Child under 6 on CRSRehab waitlist",
+      "Receiving NO subvented pre-school rehab",
+      "Income ≤75% MMDHI for EETC/IP/OPRS waitlist"
+    ],
+    "confirm_zh": [
+      "子女6歲以下輪候康復服務中央轉介系統",
+      "未接受任何資助學前康復服務",
+      "入息≤住戶每月入息中位數75%"
+    ],
+    "why_en": "Your child has SEN and your income is in range — watch for SWD letter.",
+    "why_zh": "你子女有特殊需要且入息範圍符合 — 等社署信。",
+    "proof_needed_zh": [
+      "康復服務中央轉介系統輪候信",
+      "未滿6歲",
+      "入息證明(≤住戶每月入息中位數75%)"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_serpresch/tsp/",
+    "apply_link_zh": "https://eform.cefs.gov.hk/form/swd053/tc/"
+  },
+  {
+    "id": "oprs",
+    "title_en": "On-site Pre-school Rehab (OPRS, ~10,000 places)",
+    "title_zh": "到校學前康復服務 (約10,000名額)",
+    "category": "family",
+    "value_summary_en": "School-based rehab at ~900 KGs for under-6 with mild disabilities. Free. Apply via CRSRehab with paediatrician/psychologist referral.",
+    "value_summary_zh": "約900間幼稚園到校康復，6歲以下輕度殘疾免費。經CRSRehab+兒科/心理醫生轉介申請。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/oprs/index_en.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Professional assessment (paediatrician/psychologist)",
+      "KG placement (participating school)"
+    ],
+    "apply_link": "https://www.swd.gov.hk/oprs/index_en.htm",
+    "needs": {
+      "hk_resident": true,
+      "child_sen": true,
+      "has_kids_level": [
+        "K1",
+        "K2",
+        "K3"
+      ]
+    },
+    "confirm_en": [
+      "Child assessed with mild disabilities",
+      "Attending KG in OPRS network"
+    ],
+    "confirm_zh": [
+      "子女評估為輕度殘疾",
+      "就讀OPRS網絡幼稚園"
+    ],
+    "why_en": "KG-age child with SEN — earliest help in the prime window.",
+    "why_zh": "幼稚園SEN子女 — 把握學習黃金期及早支援。",
+    "proof_needed_zh": [
+      "專業評估(兒科/心理醫生)",
+      "幼稚園學位(參與計劃學校)"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/oprs/index_tc.htm",
+    "apply_link_zh": "https://www.swd.gov.hk/oprs/index_tc.htm"
+  },
+  {
+    "id": "food-assist-8wk",
+    "title_en": "Short-term Food Assistance Service (up to 8 weeks)",
+    "title_zh": "短期食物援助服務 (最長8星期)",
+    "category": "family",
+    "value_summary_en": "Free basic food up to 8 weeks for sudden hardship (unemployed, low-income, new arrivals, street sleepers). Contact team by residence.",
+    "value_summary_zh": "突變困境(失業、低收入、新來港、露宿)免費基本食物最長8星期。按居住地區聯絡服務隊。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/family/cat_support/foodassist/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "ID + residence + financial proof",
+      "Sudden-change statement"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/family/cat_support/foodassist/",
+    "needs": {
+      "hk_resident": true,
+      "afi_max": 46292
+    },
+    "confirm_en": [
+      "Sudden financial hardship",
+      "Income/assets within Apr 2026 limits table"
+    ],
+    "confirm_zh": [
+      "突發經濟困難",
+      "入息資產符合2026年4月限額表"
+    ],
+    "why_en": "Low income — know this exists before crisis hits.",
+    "why_zh": "低收入家庭 — 及早了解，急時有人幫。",
+    "proof_needed_zh": [
+      "身份+住址+經濟證明",
+      "突變陳述"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/family/cat_support/foodassist/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/family/cat_support/foodassist/"
+  },
+  {
+    "id": "rehabus-pass",
+    "title_en": "Rehabus Monthly Pass ($184/$264)",
+    "title_zh": "復康巴士月票 ($184/$264)",
+    "category": "transport",
+    "value_summary_en": "Monthly pass for mobility-impaired HKID holders (under-11 HK residents incl.). Escorts allowed. CSSA/RCSV holders get Dial-a-Ride half fare.",
+    "value_summary_zh": "行動不便持香港身份證者月票(11歲以下香港居民都得)。可有人陪搭。綜援/RCSV坐電召半價。",
+    "deadline": null,
+    "source_url": "https://www.rehabsociety.org.hk/transport/rehabus/our-services/rehabus-charge-table/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "Mobility impairment"
+    ],
+    "apply_link": "https://www.rehabsociety.org.hk/transport/rehabus/our-services/rehabus-charge-table/",
+    "needs": {
+      "hk_resident": true,
+      "requires_disability": true
+    },
+    "confirm_en": [
+      "Mobility impairment (escort allowed)"
+    ],
+    "confirm_zh": [
+      "行動不便(可陪搭)"
+    ],
+    "why_en": "Mobility-impaired member — cheapest accessible transport.",
+    "why_zh": "家有行動不便成員 — 實惠的無障礙交通選擇。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "行動不便"
+    ]
+  },
+  {
+    "id": "special-needs-trust",
+    "title_en": "Special Needs Trust (estate planning for SEN kids)",
+    "title_zh": "特殊需要信託 (為SEN子女安排身後財產)",
+    "category": "family",
+    "value_summary_en": "DSW as trustee manages deceased parents' assets, disburses to carers per wishes. For ID/autism/mental-disorder beneficiaries. 18+ HKPR settlor, not bankrupt.",
+    "value_summary_zh": "社署署長做法定受託人，按父母意願定期發放財產給照顧者。受益人為智障/自閉/精神障礙。委託人須18歲+香港永久居民、非破產。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_fundtrustfinaid/snto/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Settlor HKPR + solvency",
+      "Beneficiary diagnosis"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_fundtrustfinaid/snto/",
+    "needs": {
+      "hk_resident": true,
+      "child_sen": true
+    },
+    "confirm_en": [
+      "Beneficiary: intellectual disability / autism / mental disorder",
+      "Settlor 18+, HKPR, not bankrupt"
+    ],
+    "confirm_zh": [
+      "受益人：智障/自閉/精神障礙",
+      "委託人18歲+、香港永久居民、非破產"
+    ],
+    "why_en": "SEN child in family — plan decades ahead, not years.",
+    "why_zh": "家有SEN子女 — 為十年後的需要及早打算。",
+    "proof_needed_zh": [
+      "委託人香港永久居民+償債能力",
+      "受益人診斷"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_fundtrustfinaid/snto/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_fundtrustfinaid/snto/"
+  },
+  {
+    "id": "cdsp-dental",
+    "title_en": "Community Dental Support (CDSP, any age)",
+    "title_zh": "社區牙科支援計劃 (任何年齡)",
+    "category": "health",
+    "value_summary_en": "Replaces CCF dental (ended Jan 2026). Subsidised checkup/scale/extract/fill/X-ray/root canal. Admin fee waived for 75+ OALA, Level-1 home care, full-waiver holders. Hotline 2111 3403.",
+    "value_summary_zh": "取代關愛基金長者牙科服務資助(2026年1月停)。資助洗牙補牙杜牙根等。75歲+長者生活津貼/一級家居照顧/全免醫療費用者免行政費。熱線2111 3403。",
+    "deadline": null,
+    "source_url": "https://www.communitydental.gov.hk/en/cdsp/public/faq.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "OALA 3-mo bank proof / waiver cert",
+      "eHealth registration"
+    ],
+    "apply_link": "https://www.communitydental.gov.hk/en/cdsp/public/faq.html",
+    "needs": {
+      "hk_resident": true,
+      "oala_or_waiver": true
+    },
+    "confirm_en": [
+      "OALA recipient / CCSV co-pay II / Level-1 home care / HA fee waiver / referred homeless",
+      "Registered in eHealth"
+    ],
+    "confirm_zh": [
+      "長者生活津貼/社區照顧服務券第二級/一級家居照顧/醫療費用減免/轉介露宿者",
+      "已登記醫健通eHealth"
+    ],
+    "why_en": "You hold OALA or a fee waiver — dental covered.",
+    "why_zh": "如您領取長者生活津貼或享有醫療費用減免，牙科治療已有保障。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "長者生活津貼3個月銀行證明/減免證明",
+      "醫健通登記"
+    ],
+    "source_url_zh": "https://www.communitydental.gov.hk/tc/cdsp/public/faq.html",
+    "apply_link_zh": "https://www.communitydental.gov.hk/tc/cdsp/public/faq.html"
+  },
+  {
+    "id": "ha-fee-waiver",
+    "title_en": "Medical Fee Waiving Mechanism, Hospital Authority (up to 18 months)",
+    "title_zh": "醫院管理局醫療費用減免機制 (最長18個月)",
+    "category": "health",
+    "value_summary_en": "Jan 2026 enhanced: auto for CSSA / OALA 75+ / RCSV-L0. Others: income <100% MMDHI (2+) or <150% (1p), assets at PRH limit. Conditional waiver if documents late. Covers 1.4M people.",
+    "value_summary_zh": "2026年1月放寬：綜援/75歲+長者生活津貼/RCSV零級自動免。其他：入息<住戶每月入息中位數100%(2人+)/150%(1人)，資產公屋限額。可先簽聲明後補文件。覆蓋140萬人。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202510/31/P2025103100494.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Income + asset proof (or CSSA/OALA75 auto)",
+      "Apply at MSSU / IFSC / HA Go"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202510/31/P2025103100494.htm",
+    "needs": {
+      "hk_resident": true,
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "CSSA / OALA 75+ / RCSV-L0: automatic",
+      "Others: HA Go Means Test Calculator vs MMDHI",
+      "Reapply within 18mo by declaration if unchanged"
+    ],
+    "confirm_zh": [
+      "綜援/75歲+長者生活津貼/RCSV零級：自動",
+      "其他：用HA Go計算器對住戶每月入息中位數",
+      "18個月內無變可用聲明續"
+    ],
+    "why_en": "Low income — check the HA Go calculator, odds are good now.",
+    "why_zh": "低收入 — 用HA Go計算器check，放寬後好大機會得。",
+    "proof_needed_zh": [
+      "入息及資產證明(綜援/75歲+長者生活津貼自動)",
+      "醫務社會服務部/綜合家庭服務中心/HA Go申請"
+    ]
+  },
+  {
+    "id": "student-health-service",
+    "title_en": "Student Health Service (free annual check, P/S day students)",
+    "title_zh": "學生健康服務（中小學生免費全年檢查）",
+    "category": "student",
+    "value_summary_en": "Free annual assessment (growth, vision, hearing, counselling) at 13 centres for eligible P/S day students. Non-eligible $680/yr.",
+    "value_summary_zh": "合資格中小日校生13間中心免費全年檢查（生長、視力、聽力、輔導）。非合資格$680/年。",
+    "deadline": "2027-09-14",
+    "source_url": "https://www.studenthealth.gov.hk/english/faq/faq.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID / birth cert with PR status",
+      "School e-enrolment link (early Sep)"
+    ],
+    "proof_needed_zh": [
+      "香港身份證／具居留權出生證明",
+      "學校電子報名連結（9月初）"
+    ],
+    "apply_link": "https://www.studenthealth.gov.hk/",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ]
+    },
+    "confirm_en": [
+      "Joint e-enrolment runs ~1–14 Sep yearly via school link",
+      "Bring ID to the centre or reschedule"
+    ],
+    "confirm_zh": [
+      "每年約9月1–14日經學校連結網上報名",
+      "帶身份證明文件去中心，否則要改期"
+    ],
+    "why_en": "You have a primary/secondary day-school child.",
+    "why_zh": "你有中小日校子女。"
+  },
+  {
+    "id": "school-dental",
+    "title_en": "School Dental Care Service ($45/yr, primary)",
+    "title_zh": "學童牙科保健服務（小學，每年$45）",
+    "category": "health",
+    "value_summary_en": "$45/yr for eligible primary pupils: checkup, cleaning, fillings, school bus. Non-eligible $970. Pay via #DH-PAYMENT SMS from Oct.",
+    "value_summary_zh": "合資格小學生每年$45：檢查洗牙補牙加校巴。非合資格$970。10月起#DH-PAYMENT短訊繳費。",
+    "deadline": "2027-09-14",
+    "source_url": "https://www.dh.gov.hk/english/useful/useful_fee/useful_fee_sdcs.html",
+    "source_url_zh": "https://www.dh.gov.hk/tc_chi/useful/useful_fee/useful_fee_sdcs.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID / birth cert",
+      "School e-enrolment link (early Sep)"
+    ],
+    "proof_needed_zh": [
+      "香港身份證／出生證明",
+      "學校電子報名連結（9月初）"
+    ],
+    "apply_link": "https://www.schooldental.gov.hk/",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    "confirm_en": [
+      "Joint e-enrolment runs ~1–14 Sep yearly via school link",
+      "Settle #DH-PAYMENT SMS promptly or service lapses"
+    ],
+    "confirm_zh": [
+      "每年約9月1–14日經學校連結網上報名",
+      "收到#DH-PAYMENT短訊盡快繳費，否則停服務"
+    ],
+    "why_en": "You have a primary-school child — $45 for a year of dental.",
+    "why_zh": "你有小學生 — $45包全年牙科。"
+  },
+  {
+    "id": "salsp-afterschool",
+    "title_en": "School-based After-school Learning and Support Programmes ($400–$600/student)",
+    "title_zh": "校本課後學習及支援計劃（每生$400–$600）",
+    "category": "student",
+    "value_summary_en": "Free tutorials, sports, arts, visits via school for P1-S6 on CSSA or full SFA grant (+25% discretionary incl. half-grant). Ask your school.",
+    "value_summary_zh": "綜援或全額資助P1-S6學生經學校免費參加功課班、運動、藝術、參觀（另25%酌情名額含半額）。問學校。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/student-parents/support-subsidies/after-sch-learning-support-program/index.html",
+    "source_url_zh": "https://www.edb.gov.hk/tc/student-parents/support-subsidies/after-sch-learning-support-program/index.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "CSSA / full-grant status",
+      "Ask school for place"
+    ],
+    "proof_needed_zh": [
+      "綜援／全額資助身份",
+      "向學校查詢名額"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/student-parents/support-subsidies/after-sch-learning-support-program/index.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/student-parents/support-subsidies/after-sch-learning-support-program/index.html",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "afi_max": 46292
+    },
+    "confirm_en": [
+      "CSSA or full SFA grant = direct; half-grant via 25% school discretion"
+    ],
+    "confirm_zh": [
+      "綜援或全額資助直接符合；半額經學校25%酌情名額"
+    ],
+    "why_en": "Low-income P/S household — ask the school for a place.",
+    "why_zh": "低收入中小家庭 — 問學校攞位。"
+  },
+  {
+    "id": "epem-40plus",
+    "title_en": "Employment Programme for the Elderly and Middle-aged (40+, retention up to $12,000)",
+    "title_zh": "中高齡就業計劃（40歲+，留任津貼高達$12,000）",
+    "category": "family",
+    "value_summary_en": "Unemployed 40+ hired via LD vacancies get mentor + training; employers get up to $4k–$5k/mo. Age 60+: retention allowance up to $12,000.",
+    "value_summary_zh": "失業40歲+經勞工處空缺受聘有師傅帶+培訓，僱主獲$4k–$5k/月。60歲+留任津貼高達$12,000。",
+    "deadline": null,
+    "source_url": "https://www2.jobs.gov.hk/0/en/information/epem/jsfaq/",
+    "source_url_zh": "https://www2.jobs.gov.hk/0/tc/information/epem/jsfaq/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Aged 40+",
+      "1+ month unemployed in past year",
+      "Register at LD Job Centre"
+    ],
+    "proof_needed_zh": [
+      "年滿40歲",
+      "過去1年失業1個月以上",
+      "勞工處就業中心登記"
+    ],
+    "apply_link": "https://www2.jobs.gov.hk/0/en/information/epem/jsfaq/",
+    "apply_link_zh": "https://www2.jobs.gov.hk/0/tc/information/epem/jsfaq/",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 40,
+      "unemployed": true
+    },
+    "confirm_en": [
+      "Not on talent/student visas",
+      "No kinship with employer",
+      "Job via LD-displayed vacancy"
+    ],
+    "confirm_zh": [
+      "並非人才/學生簽證",
+      "與僱主無親屬關係",
+      "經勞工處刊登空缺受聘"
+    ],
+    "why_en": "Unemployed and 40+ — LD pairs you with a mentored job.",
+    "why_zh": "失業兼年滿40歲 — 勞工處為您配對有師傅指導的工作。"
+  },
+  {
+    "id": "poa-2027",
+    "title_en": "Primary One Admission Sep 2027 (DP now!)",
+    "title_zh": "小一入學2027年9月（自行階段現正接受申請！）",
+    "category": "student",
+    "value_summary_en": "DP: ONE school any net, ~50% places (30% sibling/staff + 20% points). Miss it → Central Allocation Jan 2027 (Part A any net ×3, Part B own net). ePOA via iAM Smart+.",
+    "value_summary_zh": "自行階段：只可報一間官津小學（任何校網，約50%學額：30%世襲+20%計分）。失落則1月統一派位（甲部任選3間，乙部本網）。ePOA需智方便+。",
+    "deadline": "2026-09-25",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/primary-secondary/spa-systems/primary-1-admission/index.html",
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/primary-secondary/spa-systems/primary-1-admission/index.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Child born on/before 31 Dec 2021",
+      "HK resident, never allocated P1",
+      "ePOA + iAM Smart+"
+    ],
+    "proof_needed_zh": [
+      "子女2021年12月31日或之前出生",
+      "香港居民、從未獲派小一學位",
+      "ePOA＋智方便+"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/primary-secondary/spa-systems/primary-1-admission/index.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/primary-secondary/spa-systems/primary-1-admission/index.html",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "K2",
+        "K3"
+      ]
+    },
+    "confirm_en": [
+      "Confirm exact 2027 DP dates on EDB NOW (late Sep)",
+      "ONE school only — two applications voids all",
+      "CA choices Jan 2027, results Jun 2027"
+    ],
+    "confirm_zh": [
+      "即上教育局確認2027自行確實日期（9月下旬）",
+      "只可報一間，報兩間即DQ",
+      "統一派位2027年1月揀校，6月放榜"
+    ],
+    "why_en": "K2/K3 child of P1 age — the DP window is days away.",
+    "why_zh": "K2/K3適齡子女 — 自行階段只剩幾日。"
+  },
+  {
+    "id": "ccf-medical",
+    "title_en": "CCF Medical Assistance (ultra-expensive drugs & implants)",
+    "title_zh": "關愛基金醫療援助（貴價藥及植入儀器）",
+    "category": "health",
+    "value_summary_en": "Subsidy for HA patients needing ultra-expensive drugs or specified implants. Income ≤1.25× MMDHI by household size. Apply BEFORE treatment — no refunds, no backdating.",
+    "value_summary_zh": "資助醫管局病人買貴價藥或指定植入儀器。入息≤住戶每月入息中位數1.25倍（按人數）。治療前申請 — 事後不退款、不追溯。",
+    "deadline": null,
+    "source_url": "https://www.ha.org.hk/haho/ho/ccf/CCF_e.html",
+    "source_url_zh": "https://www.ha.org.hk/haho/ho/ccf/CCF_c.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HA patient status",
+      "MSW financial assessment",
+      "6-month income proof"
+    ],
+    "proof_needed_zh": [
+      "醫管局病人身份",
+      "醫務社工經濟審查",
+      "6個月入息證明"
+    ],
+    "apply_link": "https://www.ha.org.hk/haho/ho/ccf/CCF_e.html",
+    "apply_link_zh": "https://www.ha.org.hk/haho/ho/ccf/CCF_c.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Via hospital MSW referral only",
+      "Check HA Go MFA calculator vs MMDHI table",
+      "CSSA holders auto-covered"
+    ],
+    "confirm_zh": [
+      "須經醫院醫務社工轉介",
+      "用HA Go計算器對中位數表",
+      "綜援戶自動受保"
+    ],
+    "why_en": "Safety net for catastrophic medical costs — know it before you need it.",
+    "why_zh": "天價醫藥費安全網 — 未用到都要知。"
+  },
+  {
+    "id": "maf-cataract",
+    "title_en": "Free Cataract Surgery for Underprivileged Elders (Community Chest)",
+    "title_zh": "基層長者免費白內障手術（公益金）",
+    "category": "health",
+    "value_summary_en": "Free private cataract surgery via HK Society for the Blind for elders with financial difficulty (public wait ~3 years). Also cochlear support from Jan 2026.",
+    "value_summary_zh": "經香港盲人輔導會免費私家白內障手術，幫有經濟困難長者（公院輪候約3年）。2026年1月起亦支援人工耳蝸。",
+    "deadline": null,
+    "source_url": "https://www.commchest.org/en/page/medical-assistance-fund-2-1",
+    "source_url_zh": "https://www.commchest.org/tc/page/medical-assistance-fund-2-1",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Aged, financial difficulty",
+      "HA referral / Society assessment"
+    ],
+    "proof_needed_zh": [
+      "年長、有經濟困難",
+      "醫管局轉介／輔導會評估"
+    ],
+    "apply_link": "https://www.commchest.org/en/page/medical-assistance-fund-2-1",
+    "apply_link_zh": "https://www.commchest.org/tc/page/medical-assistance-fund-2-1",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 60,
+      "afi_max": 56707
+    },
+    "confirm_en": [
+      "Financial-difficulty assessment by the Society"
+    ],
+    "confirm_zh": [
+      "經輔導會經濟評估"
+    ],
+    "why_en": "Elderly with failing eyesight — skip the 3-year queue.",
+    "why_zh": "長者視力衰退 — 不用輪候3年。"
+  },
+  {
+    "id": "k1-rc-ap",
+    "title_en": "K1 Registration Certificate / Admission Pass (apply Sep–Nov!)",
+    "title_zh": "幼稚園入學註冊證／入學許可證（9–11月申請！）",
+    "category": "student",
+    "value_summary_en": "No RC/AP = no Scheme-KG K1 place. RC brings subsidy, AP pays full fee. Apply Sep–Nov, 6–8 weeks processing, e-RC QR for Jan Centralised Registration.",
+    "value_summary_zh": "無註冊證入唔到資助幼稚園K1。註冊證有資助，許可證交全費。9–11月申請，6–8星期處理，電子證QR碼1月統一註冊用。",
+    "deadline": "2026-11-28",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/kindergarten-k1-admission-arrangements/2728_admission_arrangements.html",
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/preprimary-kindergarten/kindergarten-k1-admission-arrangements/2728_admission_arrangements.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Child birth cert + residence proof",
+      "Parent HKID",
+      "e-RC via iAM Smart+ (fastest)"
+    ],
+    "proof_needed_zh": [
+      "子女出生證明＋居留證明",
+      "家長香港身份證",
+      "智方便+電子申請（最快）"
+    ],
+    "apply_link": "https://www.edb.gov.hk/applyRC/en/",
+    "apply_link_zh": "https://www.edb.gov.hk/applyRC/tc/",
+    "needs": {
+      "hk_resident": true,
+      "toddler": true
+    },
+    "confirm_en": [
+      "Child born on/before 31 Dec 2024 for 27/28 K1",
+      "Apply by 28 Nov for Jan Centralised Registration",
+      "Student-visa holders ineligible"
+    ],
+    "confirm_zh": [
+      "27/28年度K1須2024年12月31日或之前出生",
+      "11月28日前申請趕及1月統一註冊",
+      "學生簽證不合資格"
+    ],
+    "why_en": "Toddler at home — the Sep–Nov window is open now.",
+    "why_zh": "家有未入園幼兒 — 9–11月窗口現正開放。"
+  },
+  {
+    "id": "rea-pilot",
+    "title_en": "Re-employment Allowance up to $20,000 (40+, 3-yr pilot)",
+    "title_zh": "再就業津貼高達$20,000（40歲+，3年試驗）",
+    "category": "family",
+    "value_summary_en": "$10k after 6 months + $10k after 12 months continuous full-time work (half for part-time). For 40+ with 3+ months no paid work. Register before/within 1 month of starting.",
+    "value_summary_zh": "全職連續做滿6個月$10k、12個月再$10k（兼職半額）。40歲+並連續3個月無受薪工作。開工前／開工1個月內登記。",
+    "deadline": "2027-07-14",
+    "source_url": "https://www1.jobs.gov.hk/0/en/information/rea/",
+    "source_url_zh": "https://www1.jobs.gov.hk/0/tc/information/rea/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Aged 40+",
+      "3+ months no paid work proof",
+      "LD registration"
+    ],
+    "proof_needed_zh": [
+      "年滿40歲",
+      "連續3個月無受薪工作證明",
+      "勞工處登記"
+    ],
+    "apply_link": "https://www1.jobs.gov.hk/0/en/information/rea/",
+    "apply_link_zh": "https://www1.jobs.gov.hk/0/tc/information/rea/",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 40,
+      "unemployed": true
+    },
+    "confirm_en": [
+      "Job started on/after 15 Jul 2024 within pilot period",
+      "No kinship with employer, not owner/partner",
+      "Not on talent/student visas",
+      "OALA recipients: REA ignored as income"
+    ],
+    "confirm_zh": [
+      "2024年7月15日或之後開工並在試驗期內",
+      "與僱主無親屬關係、非東主",
+      "並非人才/學生簽證",
+      "長者生活津貼戶：津貼不計入息"
+    ],
+    "why_en": "Unemployed 40+ — a $20k reason to re-enter now.",
+    "why_zh": "失業兼年滿40歲 — k重返職場的原因。"
+  },
+  {
+    "id": "cdcc-cocare",
+    "title_en": "Chronic Disease Co-Care (45+, subsidised family doctor)",
+    "title_zh": "慢性疾病共同治理先導計劃（45歲+，資助家庭醫生）",
+    "category": "health",
+    "value_summary_en": "45+ with no known diabetes/hypertension: subsidised screening, consultations (up to 4–6/yr), labs, basic drugs via paired family doctor. 65+ may pay copay with HCV.",
+    "value_summary_zh": "45歲+無已知糖尿病/高血壓：資助篩查、覆診（每年最多4–6次）、化驗、基本藥物，配對家庭醫生。65歲+可用醫療券付自付額。",
+    "deadline": null,
+    "source_url": "https://www.primaryhealthcare.gov.hk/cdcc/en/hp/eligibility.html",
+    "source_url_zh": "https://www.primaryhealthcare.gov.hk/cdcc/tc/hp/eligibility.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "eHealth enrolment",
+      "No known DM/HT"
+    ],
+    "proof_needed_zh": [
+      "香港身份證",
+      "醫健通登記",
+      "無已知糖尿病/高血壓"
+    ],
+    "apply_link": "https://www.primaryhealthcare.gov.hk/cdcc/en/hp/eligibility.html",
+    "apply_link_zh": "https://www.primaryhealthcare.gov.hk/cdcc/tc/hp/eligibility.html",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 45
+    },
+    "confirm_en": [
+      "Enrol at any DHC/DHCE across 18 districts",
+      "Hepatitis B arm needs family/partner history + no vaccination"
+    ],
+    "confirm_zh": [
+      "任何一區地區康健中心/站報名",
+      "乙肝項目需家人/伴侶病史＋未打齊針"
+    ],
+    "why_en": "Aged 45+ — a subsidised family doctor before things break.",
+    "why_zh": "年滿45歲 — 未病先有資助家庭醫生跟。",
+    "needs_ehealth": true
+  },
+  {
+    "id": "dhc-member",
+    "title_en": "District Health Centre Membership (free, lifelong)",
+    "title_zh": "地區康健中心會籍（免費、終身）",
+    "category": "health",
+    "value_summary_en": "Free membership, first health-risk assessment, nurse/dietitian/physio classes. HKID + eHealth. Express stations serve district residents/workers.",
+    "value_summary_zh": "免費入會、首次健康風險評估、護士營養師物理治療課堂。需香港身份證＋醫健通。快捷站點服務該區居民/工作人士。",
+    "deadline": null,
+    "source_url": "https://www.dhc.gov.hk/en/general_public.html",
+    "source_url_zh": "https://www.dhc.gov.hk/tc/general_public.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "eHealth enrolment"
+    ],
+    "proof_needed_zh": [
+      "香港身份證",
+      "醫健通登記"
+    ],
+    "apply_link": "https://www.dhc.gov.hk/en/general_public.html",
+    "apply_link_zh": "https://www.dhc.gov.hk/tc/general_public.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Express stations: live or work in that district"
+    ],
+    "confirm_zh": [
+      "快捷站點：需在該區居住或工作"
+    ],
+    "why_en": "Free front door to the whole primary-care system.",
+    "why_zh": "免費大門，直通基層醫療系統。",
+    "needs_ehealth": true
+  },
+  {
+    "id": "cdf-savings",
+    "title_en": "Child Development Fund ($14,400 matched savings, P3-P6)",
+    "title_zh": "兒童發展基金（$14,400配對儲蓄，小三至小六）",
+    "category": "family",
+    "value_summary_en": "Save $200/mo × 24 ($4,800) → matched 1:1:1 to $14,400 for the child's plan, plus mentor. 11th batch ~4,600 P3-P6 places via schools/NGOs.",
+    "value_summary_zh": "月存$200×24個月（$4,800）→ 1:1:1配對至$14,400實踐孩子發展計劃，另有師友。第十一批約4,600個小三至小六名額，經學校/機構參加。",
+    "deadline": null,
+    "source_url": "https://www.cdf.gov.hk/en/aboutus/components/targeted_savings.html",
+    "source_url_zh": "https://www.cdf.gov.hk/tc/aboutus/components/targeted_savings.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "P3-P6 school place",
+      "Disadvantaged background (CSSA / low income / single parent / EM / new immigrant)"
+    ],
+    "proof_needed_zh": [
+      "小三至小六學位",
+      "弱勢背景（綜援／低收入／單親／少數族裔／新來港）"
+    ],
+    "apply_link": "https://www.cdf.gov.hk/en/aboutus/components/targeted_savings.html",
+    "apply_link_zh": "https://www.cdf.gov.hk/tc/aboutus/components/targeted_savings.html",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "afi_max": 56707
+    },
+    "confirm_en": [
+      "Join via school/NGO project, not direct application",
+      "CSSA / low-income / single-parent / EM / new-immigrant priority"
+    ],
+    "confirm_zh": [
+      "經學校／機構項目參加，非直接申請",
+      "綜援／低收入／單親／少數族裔／新來港優先"
+    ],
+    "why_en": "P3-P6 child + tight budget — $200/mo becomes $14,400.",
+    "why_zh": "小三至小六子女兼手緊 — 月存$200變$14,400。"
+  },
+  {
+    "id": "samaritan-fund",
+    "title_en": "Samaritan Fund (self-financed drugs & devices, HA patients)",
+    "title_zh": "撒瑪利亞基金（自費藥物及儀器，醫管局病人）",
+    "category": "health",
+    "value_summary_en": "Est. 1950 safety net for HA patients needing privately-purchased drugs/devices: ADFR means test via MSW, sliding patient contribution. CSSA auto-covered. Enhanced Jan 2026.",
+    "value_summary_zh": "1950年成立安全網：醫管局病人需自費藥物儀器，經醫務社工家庭經濟審查（ADFR累進分擔）。綜援自動受保。2026年1月已放寬。",
+    "deadline": null,
+    "source_url": "https://www.ha.org.hk/haho/ho/sf/SF_e.htm",
+    "source_url_zh": "https://www.ha.org.hk/haho/ho/sf/SF_c.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HA patient status",
+      "Doctor referral → MSW assessment",
+      "6-month household finances"
+    ],
+    "proof_needed_zh": [
+      "醫管局病人身份",
+      "醫生轉介→醫務社工評估",
+      "6個月住戶財務"
+    ],
+    "apply_link": "https://www.ha.org.hk/haho/ho/sf/SF_e.htm",
+    "apply_link_zh": "https://www.ha.org.hk/haho/ho/sf/SF_c.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Apply ≥2 weeks before treatment; no backdating/refunds",
+      "Pre-check with HA Go Means Test Calculator",
+      "Pairs with CCF medical — MSW routes you"
+    ],
+    "confirm_zh": [
+      "治療前至少兩星期申請，不追溯不退款",
+      "先用HA Go計算器初核",
+      "與關愛基金醫療援助配對，社工會分流"
+    ],
+    "why_en": "Facing a self-financed drug bill — this is the fund built for it.",
+    "why_zh": "收到自費藥單 — 此基金正為此而設。"
+  },
+  {
+    "id": "tsfs",
+    "title_en": "Tertiary Student Finance Scheme (publicly-funded places)",
+    "title_zh": "專上學生資助計劃（資助學額）",
+    "category": "student",
+    "value_summary_en": "Means-tested grant for tuition/academic/union fees + 1% living loan for full-time publicly-funded places (UGC unis, VTC). Right of abode / 3yr residence.",
+    "value_summary_zh": "全日制資助學額經審查助學金（學費／學習開支／會費）＋1%生活貸款（教資會院校、職訓局）。居留權／住滿3年。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/sfo/postsecondary/tsfs/eligibility.php",
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/postsecondary/tsfs/eligibility.php",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Full-time publicly-funded place",
+      "Residence proof",
+      "Income + asset proof"
+    ],
+    "proof_needed_zh": [
+      "全日制資助學額",
+      "居留證明",
+      "入息及資產證明"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/sfo/postsecondary/tsfs/eligibility.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/sfo/postsecondary/tsfs/eligibility.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true,
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "One programme per year; TSFS and FASP cannot overlap",
+      "Also unlocks STS travel + NLSFT loan + hostel subsidy"
+    ],
+    "confirm_zh": [
+      "每年只限一個課程；TSFS與FASP不可同年同課程",
+      "同時解鎖車船津貼＋免入息貸款＋宿舍津貼"
+    ],
+    "why_en": "Tertiary student at home — the main grant gate.",
+    "why_zh": "家有大專生 — 資助主門。"
+  },
+  {
+    "id": "fasp",
+    "title_en": "Financial Assistance Scheme for Post-secondary Students (self-financing)",
+    "title_zh": "專上學生獎學金計劃（自資課程）",
+    "category": "student",
+    "value_summary_en": "Means-tested grant/loan for full-time self-financing AD/HD/degree (≤30yo, accredited). Same AFI test as TSFS.",
+    "value_summary_zh": "全日制自資副學位／高級文憑／學位（30歲或以下、經評審）經審查助學金／貸款。與TSFS同一入息審查。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/sfo/postsecondary/fasp/eligibility.php",
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/postsecondary/fasp/eligibility.php",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Accredited self-financing place",
+      "Age 30 or below",
+      "Income + asset proof"
+    ],
+    "proof_needed_zh": [
+      "經評審自資學額",
+      "30歲或以下",
+      "入息及資產證明"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/sfo/postsecondary/fasp/eligibility.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/sfo/postsecondary/fasp/eligibility.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true,
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "Accredited programme on the official register only"
+    ],
+    "confirm_zh": [
+      "只限官方名冊內經評審課程"
+    ],
+    "why_en": "Self-financing place — same test, different pot.",
+    "why_zh": "自資學額 — 同一審查，另一個資助。"
+  },
+  {
+    "id": "ccf-hostel",
+    "title_en": "CCF Hostel Subsidy for Needy Undergraduates",
+    "title_zh": "關愛基金貧窮大學生宿舍津貼",
+    "category": "student",
+    "value_summary_en": "Hostel subsidy for undergrads who pass TSFS/FASP means test and occupy a hostel place 75%+ of the semester. No separate application.",
+    "value_summary_zh": "通過TSFS/FASP審查並住滿宿舍75%以上學期的大學生獲宿舍津貼。無需另行申請。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/student-parents/support-subsidies/community-care-fund-assistance-programme/index.html",
+    "source_url_zh": "https://www.edb.gov.hk/tc/student-parents/support-subsidies/community-care-fund-assistance-programme/index.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "TSFS/FASP means-test pass",
+      "Hostel 75%+ occupancy (confirmed by institution)"
+    ],
+    "proof_needed_zh": [
+      "通過TSFS/FASP審查",
+      "院校確認住滿宿舍75%以上學期"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/student-parents/support-subsidies/community-care-fund-assistance-programme/index.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/student-parents/support-subsidies/community-care-fund-assistance-programme/index.html",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true,
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "Private-flat tenants excluded — hostel only"
+    ],
+    "confirm_zh": [
+      "租私樓住戶不合 — 只限宿舍"
+    ],
+    "why_en": "Hostel bills hurt — this one files itself.",
+    "why_zh": "宿舍費用高昂 — 此項自動跟隨，無需另行申請。"
+  },
+  {
+    "id": "nmtss-35120",
+    "title_en": "NMTSS $35,120/yr Top-up (self-financing degrees, non-means)",
+    "title_zh": "自資學士免入息審查$35,120/年",
+    "category": "student",
+    "value_summary_en": "$35,120/yr off tuition for HK students on accredited full-time self-financing degrees incl. top-ups (15 institutions). Via institution; can still claim SFO aid on the balance.",
+    "value_summary_zh": "本地認可全日制自資學士（含銜接學位）每年減$35,120（15間院校）。經院校申請；餘額仍可再申學生資助。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202512/19/P2025121900221.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HK student on NMTSS-listed programme",
+      "No prior bachelor degree",
+      "Not on UGC-funded place"
+    ],
+    "proof_needed_zh": [
+      "入讀NMTSS名單課程的本地生",
+      "未曾取得學士學位",
+      "非教資會資助學額"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202512/19/P2025121900221.htm",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "confirm_en": [
+      "Programme must be on the NMTSS list (cspe site)",
+      "Applies automatically via tuition bill at the institution"
+    ],
+    "confirm_zh": [
+      "課程須在NMTSS名單內（cspe網）",
+      "經院校學費單直接扣減"
+    ],
+    "why_en": "Self-financing degree at home — $35k off, no means test.",
+    "why_zh": "家有自資學位生 — 免審查減$35,120。"
+  },
+  {
+    "id": "prh-apply",
+    "title_en": "Public Rental Housing Application (income + asset tested)",
+    "title_zh": "公屋申請（入息及資產審查）",
+    "category": "housing",
+    "value_summary_en": "Subsidised rent for low-income families: 1p ≤$13,230+$295k … 10p+ ≤$69,150+$974k (2026-27). No property; half the family 7yr residence. Elderly households: doubled asset limits.",
+    "value_summary_zh": "低收入家庭資助租金：1人≤$13,230+$295k…10人+≤$69,150+$974k（2026-27）。無物業；半數家人居港7年。全長者戶資產限額雙倍。",
+    "deadline": null,
+    "source_url": "https://www.housingauthority.gov.hk/en/flat-application/income-and-asset-limits/",
+    "source_url_zh": "https://www.housingauthority.gov.hk/tc/flat-application/income-and-asset-limits/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID + 7yr residence",
+      "Income + asset proof",
+      "No-property declaration"
+    ],
+    "proof_needed_zh": [
+      "香港身份證＋7年居留",
+      "入息及資產證明",
+      "無物業聲明"
+    ],
+    "apply_link": "https://www.housingauthority.gov.hk/en/flat-application/income-and-asset-limits/",
+    "apply_link_zh": "https://www.housingauthority.gov.hk/tc/flat-application/income-and-asset-limits/",
+    "needs": {
+      "hk_resident": true,
+      "min_hk_years": 7,
+      "no_property": true,
+      "prh_exact": true
+    },
+    "confirm_en": [
+      "MPF contributions deductible",
+      "All-elderly households: asset limits doubled",
+      "Years-long queue — apply early"
+    ],
+    "confirm_zh": [
+      "強積金供款可扣減",
+      "全長者戶資產限額雙倍",
+      "輪候以年計 — 早排早著"
+    ],
+    "why_en": "Renting privately on a low income — this is the main queue.",
+    "why_zh": "低收入租私樓 — 這是最主要的輪候隊伍。"
+  },
+  {
+    "id": "ehc-member",
+    "title_en": "Elderly Health Centre Membership (65+, one centre only)",
+    "title_zh": "長者健康中心會籍（65歲+，只可一間）",
+    "category": "health",
+    "value_summary_en": "65+: annual health assessment, counselling, treatment via family-medicine teams at 18 centres. Free Visiting Health Team talks. Expect a wait; services merging into district network.",
+    "value_summary_zh": "65歲+：18間中心家庭醫學團隊全年檢查、輔導、治療。外展健康講座免費。輪候較長；服務正併入地區網絡。",
+    "deadline": null,
+    "source_url": "https://www.elderly.gov.hk/english/elderly_health_centres/faq.html",
+    "source_url_zh": "https://www.elderly.gov.hk/tc_chi/elderly_health_centres/faq.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Aged 65+",
+      "HKID (family may apply on behalf)"
+    ],
+    "proof_needed_zh": [
+      "年滿65歲",
+      "香港身份證（家人可代辦）"
+    ],
+    "apply_link": "https://www.elderly.gov.hk/english/elderly_health_centres/faq.html",
+    "apply_link_zh": "https://www.elderly.gov.hk/tc_chi/elderly_health_centres/faq.html",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 65
+    },
+    "confirm_en": [
+      "One EHC only — re-applying cancels the first",
+      "Show original HKID at assessment"
+    ],
+    "confirm_zh": [
+      "只可報一間 — 重報會取消前一個",
+      "評估當日帶身份證正本"
+    ],
+    "why_en": "65+ health home base — free, thorough, worth the wait.",
+    "why_zh": "65歲+健康大本營 — 免費詳細，值得等。"
+  },
+  {
+    "id": "mtr-student-2627",
+    "title_en": "MTR Student Travel Scheme 2026/27 (renew by 31 Oct!)",
+    "title_zh": "港鐵學生乘車優惠計劃2026/27（10月31日前續期！）",
+    "category": "transport",
+    "value_summary_en": "Half-fare MTR for full-time day students 12-25. New: $90 with photo Octopus. Renewal $20 — status expires 31 Oct 2026, then full adult fare.",
+    "value_summary_zh": "12-25歲全日制日校生半價搭港鐵。新證$90連相八達通。續期$20 — 學生身份10月31日到期，過期收足成人費。",
+    "deadline": "2026-10-31",
+    "source_url": "https://www.mtr.com.hk/en/customer/tickets/student_travel_scheme.html",
+    "source_url_zh": "https://www.mtr.com.hk/tc/customer/tickets/student_travel_scheme.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Age 12-25",
+      "Full-time day course (20+ hrs/wk)",
+      "School chop + photo"
+    ],
+    "proof_needed_zh": [
+      "12-25歲",
+      "全日制日間課程（每週20小時+）",
+      "學校蓋印＋相片"
+    ],
+    "apply_link": "https://www.mtr.com.hk/en/customer/tickets/student_travel_scheme.html",
+    "apply_link_zh": "https://www.mtr.com.hk/tc/customer/tickets/student_travel_scheme.html",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ]
+    },
+    "confirm_en": [
+      "Tertiary 12-25 on recognised courses also eligible",
+      "Activate via Octopus App 2-4 weeks after approval",
+      "Not for Airport Express / Lo Wu / First Class"
+    ],
+    "confirm_zh": [
+      "認可課程大專生12-25歲亦合資格",
+      "批核後2-4星期經八達通App啟動",
+      "機場快線／羅湖／頭等除外"
+    ],
+    "why_en": "Secondary kid at home — renew before 31 Oct or pay full fare.",
+    "why_zh": "家有中學生 — 10月31日前續期，否則需付全費。"
+  },
+  {
+    "id": "sped-40k",
+    "title_en": "Workplace Support for Disabled Employees (up to $40,000)",
+    "title_zh": "殘疾僱員工作支援（高達$40,000）",
+    "category": "family",
+    "value_summary_en": "One-off up to $40k per disabled employee for assistive devices / workplace mods, via employer + referring org (NGO/LD/VTC/Po Leung Kuk). Year-round, free.",
+    "value_summary_zh": "每名殘疾僱員一次性高達$4萬買輔助儀器／改裝工作間，經僱主＋轉介機構（NGO／勞工處／職訓局／保良局）申請。全年收件，免費。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_fundtrustfinaid/sped/",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_fundtrustfinaid/sped/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Disabled employee status",
+      "Employer + referring org application"
+    ],
+    "proof_needed_zh": [
+      "殘疾僱員身份",
+      "僱主經轉介機構申請"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_fundtrustfinaid/sped/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/rehab/cat_fundtrustfinaid/sped/",
+    "needs": {
+      "hk_resident": true,
+      "requires_disability": true
+    },
+    "confirm_en": [
+      "Employer files, not the employee — ask HR",
+      "Also ask about WOPS $60k employer allowance + $1,500 mentor award"
+    ],
+    "confirm_zh": [
+      "由僱主申請 — 請向人力資源部查詢",
+      "同時問工作展能計劃$60k僱主津貼＋$1,500師傅獎"
+    ],
+    "why_en": "Disabled and working — your employer can claim $40k for your setup.",
+    "why_zh": "殘疾在職 — 可請僱主申請$4萬改善工作間。"
+  },
+  {
+    "id": "dae-reimburse",
+    "title_en": "DAE / Yi Jin Tuition Reimbursement (30–100%)",
+    "title_zh": "應用教育文憑／毅進學費發還（30–100%）",
+    "category": "student",
+    "value_summary_en": "30/50/100% of DAE/DYJ tuition back by AFI level (FULL/HALF via EC; 30% base with pass + 80% attendance). Choose DAE or evening courses, not both.",
+    "value_summary_zh": "按入息審查發還DAE/毅進學費30/50/100%（全額／半額憑資格證明；有及格＋80%出席率保底30%）。夜中學只能二選一。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/sfo/primarysecondary/yjd/eligibility.php",
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/primarysecondary/yjd/eligibility.php",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "DAE/DYJ enrolment",
+      "EC via Household Application",
+      "Pass + 80% attendance"
+    ],
+    "proof_needed_zh": [
+      "應用教育文憑／毅進入學",
+      "住戶申請資格證明",
+      "及格＋80%出席率"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/sfo/primarysecondary/yjd/eligibility.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/sfo/primarysecondary/yjd/eligibility.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true,
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "Same-year DAE vs evening-course choice is exclusive"
+    ],
+    "confirm_zh": [
+      "同年DAE與夜中學只能二選一"
+    ],
+    "why_en": "Second-chance diploma at home — most of the fee comes back.",
+    "why_zh": "家有人讀DAE／毅進 — 大部分學費返得到。"
+  },
+  {
+    "id": "rcsv",
+    "title_en": "Residential Care Service Voucher ($17,015–$21,982/mo)",
+    "title_zh": "安老院舍照顧服務券（每月$17,015–$21,982）",
+    "category": "elderly",
+    "value_summary_en": "From Apr 2026: $17,015/mo care-and-attention, $21,982 nursing. For SCNAMES-RCS elders on the CWL; invited in batches, apply via VISE.",
+    "value_summary_zh": "2026年4月起：照顧$17,015/月、護養$21,982/月。經統一評估需院舍並輪候冊等候長者；分批邀請，可經VISE申請。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_residentcare/psrcsv/",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_residentcare/psrcsv/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "SCNAMES RCS assessment",
+      "CWL waitlist place",
+      "SWD invitation"
+    ],
+    "proof_needed_zh": [
+      "統一評估需院舍",
+      "中央輪候冊位置",
+      "社署邀請信"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_residentcare/psrcsv/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_residentcare/psrcsv/",
+    "needs": {
+      "min_age": 60,
+      "hk_resident": true,
+      "requires_elderly_in_house": true
+    },
+    "confirm_en": [
+      "Inactive CWL status or already-placed elders excluded",
+      "Level-0 holders: auto fee waiver path"
+    ],
+    "confirm_zh": [
+      "凍結輪候或已入住者不合",
+      "零級券持有人走自動減免通道"
+    ],
+    "why_en": "Residential care in the family future — know the voucher before the crisis.",
+    "why_zh": "家中或需院舍照顧 — 危機前先認識此券。"
+  },
+  {
+    "id": "ird-parent-allowance",
+    "title_en": "Salaries Tax: Dependent Parent/Grandparent Allowance ($55,000+)",
+    "title_zh": "薪俸稅：供養父母／祖父母免稅額（$55,000+）",
+    "category": "family",
+    "value_summary_en": "$55,000 per parent 60+ (or DA-eligible) + $55,000 more if living with you all year. 55-60: $27,500 + $27,500. Needs 6-month cohabit or $12k+ support.",
+    "value_summary_zh": "每名60歲+（或領傷殘津貼）父母$55,000，全年同住再加$55,000。55-60歲$27,500＋$27,500。需同住6個月或供養$12,000+。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Parent 55+ ordinarily resident",
+      "6-month cohabit proof or $12k+ support"
+    ],
+    "proof_needed_zh": [
+      "父母55歲+通常居港",
+      "同住6個月證明或供養$12,000+"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "needs": {
+      "hk_resident": true,
+      "hasElderly": true
+    },
+    "confirm_en": [
+      "55-60 at half rate; DA-eligible any age at full rate",
+      "Only one taxpayer per parent — agree within family",
+      "Mainland-settled parents excluded"
+    ],
+    "confirm_zh": [
+      "55-60歲半額；領傷殘津貼任何年齡全額",
+      "每名父母只限一名納稅人申索",
+      "定居內地父母不合"
+    ],
+    "why_en": "Supporting an elderly parent — cut your tax bill for it.",
+    "why_zh": "供養緊長者 — 減輕稅務負擔。"
+  },
+  {
+    "id": "ird-child-allowance",
+    "title_en": "Salaries Tax: Child Allowance ($140,000/child)",
+    "title_zh": "薪俸稅：子女免稅額（每名$140,000）",
+    "category": "family",
+    "value_summary_en": "$140,000 per child + $140,000 extra in birth year; from 2026/27 an additional allowance for the first 2 years after birth.",
+    "value_summary_zh": "每名子女$140,000，出生年度多$140,000；2026/27起出生後首兩年另有額外免稅額。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Child birth cert",
+      "Unmarried + (<18 / 18-25 full-time study / disabled)"
+    ],
+    "proof_needed_zh": [
+      "子女出生證明",
+      "未婚＋（未滿18／18-25全日制讀書／殘疾）"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_any": true
+    },
+    "confirm_en": [
+      "Check the 2026/27 first-2-years top-up on IRD"
+    ],
+    "confirm_zh": [
+      "2026/27首兩年加碼見稅局公布"
+    ],
+    "why_en": "Kids at home — $140k off taxable income each.",
+    "why_zh": "家有細路 — 每名減$140k應課稅入息。"
+  },
+  {
+    "id": "ird-single-parent",
+    "title_en": "Salaries Tax: Single Parent Allowance ($145,000)",
+    "title_zh": "薪俸稅：單親免稅額（$145,000）",
+    "category": "family",
+    "value_summary_en": "$145,000 on top of child allowance for a single parent with a maintained child meeting child-allowance conditions.",
+    "value_summary_zh": "單親父／母除子女免稅額外再加$145,000，子女須符合子女免稅額條件。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Single status",
+      "Maintained child as per child allowance"
+    ],
+    "proof_needed_zh": [
+      "單親身份",
+      "供養符合子女免稅額條件的子女"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "needs": {
+      "hk_resident": true,
+      "single_parent": true,
+      "has_kids_any": true
+    },
+    "confirm_en": [
+      "Separated/divorced/widowed or never-married with sole care"
+    ],
+    "confirm_zh": [
+      "分居／離婚／喪偶或獨力照顧未婚子女"
+    ],
+    "why_en": "Raising kids solo — the tax code recognises it.",
+    "why_zh": "獨力湊大 — 稅制認可這份承擔。"
+  },
+  {
+    "id": "ird-disabled-dep",
+    "title_en": "Salaries Tax: Disabled Dependant Allowance ($75,000)",
+    "title_zh": "薪俸稅：殘疾受養人免稅額（$75,000）",
+    "category": "family",
+    "value_summary_en": "$75,000 per DA-eligible dependant you maintain (spouse/child/parent/sibling meeting conditions). Medical certification required.",
+    "value_summary_zh": "每名供養並符合傷殘津貼的受養人（配偶／子女／父母／兄弟姊妹）$75,000。需醫生證明。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Dependant DA-eligible (certified)",
+      "Maintenance proof"
+    ],
+    "proof_needed_zh": [
+      "受養人符合傷殘津貼（已認證）",
+      "供養證明"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "needs": {
+      "hk_resident": true,
+      "requires_disability": true
+    },
+    "confirm_en": [
+      "Dependant certified under DA/SSA definition",
+      "DA recipients themselves: separate $75k Personal Disability Allowance exists"
+    ],
+    "confirm_zh": [
+      "受養人須符合傷殘津貼定義之認證",
+      "領傷殘津貼者另有$75k傷殘人士免稅額"
+    ],
+    "why_en": "Caring for a disabled dependant — claim the recognition.",
+    "why_zh": "照顧殘疾受養人 — 申索應得的認可。"
+  },
+  {
+    "id": "spd-job-matching",
+    "title_en": "Selective Placement: job matching for disabled jobseekers",
+    "title_zh": "展能就業科：殘疾求職者就業配對",
+    "category": "family",
+    "value_summary_en": "Free LD job matching, workplace visits, work-trial liaison and post-placement follow-up for disabled jobseekers. Gateway to WOPS/SPED employer incentives.",
+    "value_summary_zh": "勞工處免費就業配對、實地探訪、試工聯繫及入職跟進。通往WOPS／SPED僱主津貼之門。",
+    "deadline": null,
+    "source_url": "https://www1.jobs.gov.hk/0/en/information/ourservices/spd/",
+    "source_url_zh": "https://www1.jobs.gov.hk/0/tc/information/ourservices/spd/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Disability status",
+      "Register with Selective Placement Division"
+    ],
+    "proof_needed_zh": [
+      "殘疾身份",
+      "展能就業科登記"
+    ],
+    "apply_link": "https://www1.jobs.gov.hk/0/en/information/ourservices/spd/",
+    "apply_link_zh": "https://www1.jobs.gov.hk/0/tc/information/ourservices/spd/",
+    "needs": {
+      "hk_resident": true,
+      "requires_disability": true
+    },
+    "confirm_en": [
+      "Ask SPD about WOPS $60k and SPED $40k when placed"
+    ],
+    "confirm_zh": [
+      "獲聘時問展能科WOPS $60k及SPED $4萬"
+    ],
+    "why_en": "Disabled and job-hunting — a dedicated team places you free.",
+    "why_zh": "殘疾求職中 — 專責團隊免費幫你配對。"
+  },
+  {
+    "id": "faeaec-evening",
+    "title_en": "Evening Adult Education Reimbursement (30–100%, 17+)",
+    "title_zh": "指定夜間成人教育學費發還（30–100%，17歲+）",
+    "category": "student",
+    "value_summary_en": "30/50/100% of evening secondary fees back by AFI level (FULL/HALF via EC; 30% base with attendance). 17+, designated centres. Choose evening OR DAE, not both.",
+    "value_summary_zh": "按入息審查發還夜中學費30/50/100%（全額／半額憑資格證明；有出席率保底30%）。17歲+、指定中心。夜中學與DAE只能二選一。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/sfo/primarysecondary/faeaec/eligibility.php",
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/primarysecondary/faeaec/eligibility.php",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Age 17+",
+      "Designated evening centre enrolment",
+      "EC via Household Application"
+    ],
+    "proof_needed_zh": [
+      "年滿17歲",
+      "指定夜中學入讀",
+      "住戶申請資格證明"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/sfo/primarysecondary/faeaec/eligibility.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/sfo/primarysecondary/faeaec/eligibility.php",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 17,
+      "edu_max_rank": 1,
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "No repeating same level (unless switching to NSS curriculum)",
+      "Refund DAE first if switching pots"
+    ],
+    "confirm_zh": [
+      "不可重讀同級（轉新高中學制除外）",
+      "轉計劃先退還DAE款項"
+    ],
+    "why_en": "Night school while working days — most of the fee comes back.",
+    "why_zh": "日頭返工夜晚讀書 — 大部分學費返得到。"
+  },
+  {
+    "id": "transitional-housing",
+    "title_en": "Transitional Housing (move now, PRH limits apply)",
+    "title_zh": "過渡性房屋（即搬，入息資產跟公屋線）",
+    "category": "housing",
+    "value_summary_en": "Cat A: PRH wait 3+yr (newborn families 2yr). Cat B: inadequate/urgent housing. Cat C: subdivided 6mo+. Rent-capped, apply via TH-E platform.",
+    "value_summary_zh": "甲類：輪候公屋3年+（新生嬰兒家庭2年）。乙類：居所不適切／急需。丙類：劏房6個月+。租金封頂，經TH-E平台申請。",
+    "deadline": null,
+    "source_url": "https://www.hb.gov.hk/eng/policy/housing/policy/transitionalhousing/index.html",
+    "source_url_zh": "https://www.hb.gov.hk/tc/policy/housing/policy/transitionalhousing/index.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Aged 18+",
+      "Right of land in HK",
+      "Income + assets within PRH limits"
+    ],
+    "proof_needed_zh": [
+      "年滿18歲",
+      "香港居留權",
+      "入息資產在公屋限額內"
+    ],
+    "apply_link": "https://www.hb.gov.hk/eng/policy/housing/policy/transitionalhousing/index.html",
+    "apply_link_zh": "https://www.hb.gov.hk/tc/policy/housing/policy/transitionalhousing/index.html",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18,
+      "prh_exact": true
+    },
+    "confirm_en": [
+      "Self-route Cat A/B/C by wait time and urgency",
+      "Up to 3 project choices; acceptance cancels the rest"
+    ],
+    "confirm_zh": [
+      "按輪候年期及急切度自選甲／乙／丙類",
+      "最多選3個項目，獲接受即取消其餘"
+    ],
+    "why_en": "Bad housing now + PRH queue years away — bridge it.",
+    "why_zh": "現居惡劣＋公屋遙遙無期 — 先搭條橋。"
+  },
+  {
+    "id": "twgh-free-clinic",
+    "title_en": "Tung Wah Free Clinics (Chinese + Western, since 1870)",
+    "title_zh": "東華免費門診（中西醫，1870年至今）",
+    "category": "health",
+    "value_summary_en": "Free Chinese internal-medicine + bone-setting consults (TW/KW hospitals, queue tickets, no booking) and 1M+/yr free western consults. CSSA hospital fees waived.",
+    "value_summary_zh": "東華／廣華免費中醫內科＋跌打（排籌、免預約），每年逾百萬人次免費西醫門診。綜援住院費全免。",
+    "deadline": null,
+    "source_url": "https://www.tungwah.org.hk/en/medical/mh-introduction/free-medical/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Queue early for tickets",
+      "HKID"
+    ],
+    "proof_needed_zh": [
+      "早到排籌",
+      "香港身份證"
+    ],
+    "apply_link": "https://www.tungwah.org.hk/en/medical/mh-introduction/free-medical/",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "First-come tickets daily; check 2026 free-scheme updates"
+    ],
+    "confirm_zh": [
+      "每日先到先得派籌；留意2026免費計劃更新"
+    ],
+    "why_en": "Free care with 150 years of history — queue early.",
+    "why_zh": "百年免費傳統 — 早到排籌就有。"
+  },
+  {
+    "id": "nsccp-childcare",
+    "title_en": "Neighbourhood Child Care ($28/hr home, $20/hr centre)",
+    "title_zh": "鄰里支援幼兒照顧（上門$28/時，中心$20/時）",
+    "category": "family",
+    "value_summary_en": "Flexible 7am-11pm care for newborn-to-P kids of shift/unsupported parents, all 18 districts. Fee waiver for hardship. Or earn $40-60/hr as a home carer.",
+    "value_summary_zh": "輪班／無支援家長的新生至小學生彈性照顧（朝7晚11），18區都有。困難可免收費。亦可做褓姆賺$40-60/時。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/daychildcares/nsccp/",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/family/cat_childcareservice/daychildcares/nsccp/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Shift/unstable hours or emergency need",
+      "No support network + financial hardship"
+    ],
+    "proof_needed_zh": [
+      "輪班／不穩定工時或緊急需要",
+      "無支援網絡＋經濟困難"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/daychildcares/nsccp/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/family/cat_childcareservice/daychildcares/nsccp/",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_any": true
+    },
+    "confirm_en": [
+      "Call the district hotline 9am-9pm; SWD 2343 2255 after hours",
+      "Fee waiver via operator for hardship"
+    ],
+    "confirm_zh": [
+      "打地區專線朝9晚9；深夜急事打社署2343 2255",
+      "困難戶經營辦機構申請減免"
+    ],
+    "why_en": "Shift work + little ones + no helper — this was built for you.",
+    "why_zh": "輪班兼湊年幼子女又無支援 — 此計劃正是為您而設。"
+  },
+  {
+    "id": "gd-scheme",
+    "title_en": "Guangdong/Fujian OAA/OALA (retire on the Mainland)",
+    "title_zh": "廣東／福建計劃高齡／長者生活津貼（北上退休）",
+    "category": "elderly",
+    "value_summary_en": "Same OAA/OALA rates while residing in GD/FJ (60+ days/yr). 7yr HK resident + 1yr continuous stay before applying; apply in person in HK + interview.",
+    "value_summary_zh": "居廣東／福建照領高齡／長者生活津貼（每年住滿60日）。居港7年＋申請前連續住滿1年；親身來港辦手續＋面談。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/gds/index_e.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "7yr HK residence",
+      "GD/FJ address proof",
+      "In-person HK interview + travel docs"
+    ],
+    "proof_needed_zh": [
+      "居港7年",
+      "廣東／福建住址證明",
+      "親身來港面談＋旅遊證件"
+    ],
+    "apply_link": "https://www.swd.gov.hk/gds/index_e.html",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 65,
+      "min_hk_years": 7,
+      "lives_mainland": true
+    },
+    "confirm_en": [
+      "OALA means test still applies; OAA 70+ non-means",
+      "PRH tenants surrender unit before leaving",
+      "Apply within 1 month before 65th/70th birthday counts"
+    ],
+    "confirm_zh": [
+      "長者生活津貼照要審查；高齡津貼70歲免審查",
+      "公屋戶離港前須交回單位",
+      "65／70歲生日前一個月可預先申請"
+    ],
+    "why_en": "Retired across the border — keep the allowance coming.",
+    "why_zh": "北上退休 — 津貼繼續發放。"
+  },
+  {
+    "id": "elderly-centre",
+    "title_en": "Elderly Centre Membership ($21/yr, meals + counselling)",
+    "title_zh": "長者中心會籍（$21/年，膳食＋輔導）",
+    "category": "elderly",
+    "value_summary_en": "DECC/NEC: $21/yr for 60+ (55-59 university $20, carers free). Meals, counselling, referrals, LTC applications, rehab-equipment loans.",
+    "value_summary_zh": "地區／鄰舍中心：60歲+$21/年（55-59學舍$20，照顧者免費）。膳食、輔導、轉介、長期護理申請、復康用品借用。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_commsupp/elderly_centres/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Aged 60+",
+      "Walk in or call the district centre"
+    ],
+    "proof_needed_zh": [
+      "年滿60歲",
+      "親身或致電地區中心"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_commsupp/elderly_centres/",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 60
+    },
+    "confirm_en": [
+      "Join the centre in your own district",
+      "Hidden-elderly outreach via Support Teams"
+    ],
+    "confirm_zh": [
+      "參加所屬地區中心",
+      "隱蔽長者由外展隊跟進"
+    ],
+    "why_en": "The neighbourhood living room for 60+ — $21 a year.",
+    "why_zh": "60歲+街坊客廳 — 一年$21。"
+  },
+  {
+    "id": "musss-mainland",
+    "title_en": "Mainland Study Subsidy (up to $19,400/yr, 217 institutions)",
+    "title_zh": "內地升學資助（高達$19,400/年，217間院校）",
+    "category": "student",
+    "value_summary_en": "Means-tested full/half ($8,900–$19,400 by distance) or non-means $5,900–$6,500 (DSE 3322 / principal nomination / Huaqiao) for HK students on the Mainland.",
+    "value_summary_zh": "經審查全額／半額（按距離$8,900–$19,400）或免審查$5,900–$6,500（DSE 3322／校長推薦／華僑大學），在內地升學港生。",
+    "deadline": "2026-09-21",
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/policy-doc/musss/",
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/policy-doc/musss/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HK secondary completed",
+      "Designated Mainland institution offer",
+      "Right of abode / One-way Permit"
+    ],
+    "proof_needed_zh": [
+      "完成香港中學",
+      "指定內地院校取錄",
+      "居留權／單程證"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/postsecondary/policy-doc/musss/",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/policy-doc/musss/",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "confirm_en": [
+      "Yearly application by 21 Sep",
+      "One subsidy type per year; clashes with TSFS/FASP excluded",
+      "Renewals notified individually"
+    ],
+    "confirm_zh": [
+      "每年9月21日前申請",
+      "每年只限一種津貼；已領TSFS/FASP者不合",
+      "續領個別通知"
+    ],
+    "why_en": "Studying across the border — distance pays.",
+    "why_zh": "北上升學 — 路程遠資助多。"
+  },
+  {
+    "id": "cahk-food-aid",
+    "title_en": "NGO Food Assistance (CSSA/DA/WFA holders + referrals)",
+    "title_zh": "民間食物援助（綜援／傷殘／在職家庭＋轉介）",
+    "category": "family",
+    "value_summary_en": "Conservancy Association food aid for CSSA/CCF/DA/WFA holders, or unemployed / single parents / new immigrants / EM via social-worker referral. HKID + address + docs.",
+    "value_summary_zh": "長春社食物援助：綜援／關愛基金／傷殘／在職家庭戶，或失業／單親／新來港／少數族裔經社工轉介。需身份證＋住址＋文件。",
+    "deadline": null,
+    "source_url": "https://www.cahk.org.hk/en/work/frrc-apply-food-assistance-service/",
+    "source_url_zh": "https://www.cahk.org.hk/tc/work/frrc-apply-food-assistance-service/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID",
+      "3-month address proof",
+      "Benefit proof or social-worker referral form"
+    ],
+    "proof_needed_zh": [
+      "香港身份證",
+      "3個月住址證明",
+      "福利證明或社工轉介表"
+    ],
+    "apply_link": "https://www.cahk.org.hk/en/work/frrc-apply-food-assistance-service/",
+    "apply_link_zh": "https://www.cahk.org.hk/tc/work/frrc-apply-food-assistance-service/",
+    "needs": {
+      "hk_resident": true,
+      "afi_max": 56707
+    },
+    "confirm_en": [
+      "No SWD service needed — ask any social worker for the referral form",
+      "Feeding HK supplies charities, not walk-ins — go via partners"
+    ],
+    "confirm_zh": [
+      "無社署服務亦可 — 請任何社工索取轉介表",
+      "樂餉只供機構不直接派 — 經夥伴機構"
+    ],
+    "why_en": "Food stress now — no SWD case needed, any social worker unlocks it.",
+    "why_zh": "糧食有壓力 — 無需社署個案，任何社工均可轉介。"
+  },
+  {
+    "id": "mchc-child-health",
+    "title_en": "MCHC Child Health (free, birth to 5)",
+    "title_zh": "母嬰健康院兒童健康服務（免費，0-5歲）",
+    "category": "family",
+    "value_summary_en": "Free growth + immunisation + development checks birth-to-5 at MCHCs, plus antenatal/postnatal and $1 family planning. Non-eligible $365/visit.",
+    "value_summary_zh": "母嬰健康院0-5歲免費生長＋防疫注射＋發展監測，另有產前產後及$1家計服務。非合資格每次$365。",
+    "deadline": null,
+    "source_url": "https://www.fhs.gov.hk/english/main_ser/child_health/child_health.html",
+    "source_url_zh": "https://www.fhs.gov.hk/tc_chi/main_ser/child_health/child_health.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Child birth cert / HKID",
+      "Immunisation card + discharge record"
+    ],
+    "proof_needed_zh": [
+      "子女出生證明／身份證",
+      "防疫注射卡＋出院紀錄"
+    ],
+    "apply_link": "https://www.fhs.gov.hk/english/main_ser/child_health/child_health.html",
+    "apply_link_zh": "https://www.fhs.gov.hk/tc_chi/main_ser/child_health/child_health.html",
+    "needs": {
+      "hk_resident": true,
+      "toddler": true
+    },
+    "confirm_en": [
+      "Book MCHC ahead — newborn jaundice/breastfeeding seen fast",
+      "Parenting talks mostly in Cantonese"
+    ],
+    "confirm_zh": [
+      "預約母嬰健康院 — 初生黃疸／餵哺問題優先見",
+      "親職講座多為廣東話"
+    ],
+    "why_en": "Baby at home — free jabs, weighing and advice on schedule.",
+    "why_zh": "家有BB — 免費打針磅重加指導，跟時間表。"
+  },
+  {
+    "id": "cm-subsidised",
+    "title_en": "Subsidised Chinese Medicine ($120, 18 districts)",
+    "title_zh": "資助中醫門診（$120，18區）",
+    "category": "health",
+    "value_summary_en": "$120 per visit (consult + acupuncture/bone-setting + up to 5 doses) at 18 district clinics, 800k quota/yr. CSSA + OALA-75+ auto-waived via online check.",
+    "value_summary_zh": "18區診所每次$120（診症＋針灸跌打＋最多5劑藥），每年80萬籌。綜援＋75歲+長者生活津貼線上核實自動免費。",
+    "deadline": null,
+    "source_url": "https://cmk.ha.org.hk/services/GovtSubsidisedCMServices_Eng",
+    "source_url_zh": "https://cmk.ha.org.hk/services/GovtSubsidisedCMServices/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "HKID original",
+      "CSSA/OALA75 auto-waived online"
+    ],
+    "proof_needed_zh": [
+      "香港身份證正本",
+      "綜援／75歲+長者生活津貼線上自動免費"
+    ],
+    "apply_link": "https://cmk.ha.org.hk/services/GovtSubsidisedCMServices_Eng",
+    "apply_link_zh": "https://cmk.ha.org.hk/services/GovtSubsidisedCMServices/",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Quota fills fast — book via 18 CM Clinics app",
+      "HCV cannot be used here"
+    ],
+    "confirm_zh": [
+      "籌額搶手 — 用18區中醫診所App搶",
+      "醫療券不適用"
+    ],
+    "why_en": "Subsidised herbal care in your district — $120 all-in.",
+    "why_zh": "屋企附近資助中醫 — $120全包。"
+  },
+  {
+    "id": "kg-scheme-base",
+    "title_en": "Kindergarten Education Scheme (half-day free)",
+    "title_zh": "幼稚園教育計劃（半日制免費）",
+    "category": "student",
+    "value_summary_en": "Scheme-KGs: half-day local classes free; whole-day fees capped ($30,540/yr post-subsidy). Needs RC. Registration fee caps $970/$1,570.",
+    "value_summary_zh": "計劃幼稚園本地課程半日制免費；全日制收費封頂（資助後$30,540/年）。須持註冊證。註冊費上限$970/$1,570。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html",
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "RC registration document",
+      "Local-curriculum K1-K3 place"
+    ],
+    "proof_needed_zh": [
+      "註冊證",
+      "本地課程K1-K3學位"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html",
+    "needs": {
+      "hk_resident": true,
+      "toddler": true
+    },
+    "confirm_en": [
+      "Choose half-day for zero fees; compare whole-day net fees on the Fees Certificate",
+      "KCFRS stacks on top for needy families"
+    ],
+    "confirm_zh": [
+      "揀半日制零學費；全日制睇收費證比較實付",
+      "有需要家庭再疊加學費減免"
+    ],
+    "why_en": "Choosing a KG now — half-day can cost nothing.",
+    "why_zh": "揀緊幼稚園 — 半日制可以零學費。"
+  },
+  {
+    "id": "lph-light-housing",
+    "title_en": "Light Public Housing (~90% PRH rent, keep your queue)",
+    "title_zh": "簡約公屋（約九成公屋租，保留輪候）",
+    "category": "housing",
+    "value_summary_en": "PRH wait 3yr+ families move in fast at ~90% PRH rent, keep PRH queue position. Priority: inadequate housing, medical needs, kids/elderly/newborns.",
+    "value_summary_zh": "輪候公屋3年+家庭快上車，租金約九成公屋租，保留公屋隊。劏房、病患、有細佬長者初生優先。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202605/26/P2026052600286.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "PRH wait 3+ years",
+      "Income + assets within PRH limits"
+    ],
+    "proof_needed_zh": [
+      "輪候公屋3年以上",
+      "入息資產在公屋限額內"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202605/26/P2026052600286.htm",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18,
+      "prh_exact": true
+    },
+    "confirm_en": [
+      "Forms mailed in batches — watch the post",
+      "Moving in forfeits Cash Allowance Trial Scheme"
+    ],
+    "confirm_zh": [
+      "表格分批郵寄 — 留意信箱",
+      "入住即停發現金津貼試驗計劃"
+    ],
+    "why_en": "PRH queue years long + subdivided flat now — jump it.",
+    "why_zh": "公屋隊長劏房窄 — 先入住過渡。"
+  },
+  {
+    "id": "dse-fee-remission",
+    "title_en": "HKDSE Exam Fee Remission (Full = free, Half = 50%)",
+    "title_zh": "文憑試考試費減免（全免／半免）",
+    "category": "student",
+    "value_summary_en": "S6 first-time school candidates with SFO Full/Half: fees free or halved ($777 languages, $519 others). School applies Sep-Oct; late = pay first, refund later.",
+    "value_summary_zh": "中六首次應考＋資助全額／半額：考試費全免或半價（語文$777，其他$519）。經學校9-10月申請；遲申請先付後退。",
+    "deadline": "2026-10-08",
+    "source_url": "https://www.hkeaa.edu.hk/DocLibrary/Circulars/HKDSE/HKDSE_Examination_Circular_No_3_Applications_for_Examination_Fee_Remission_in_HKDSE_E.pdf",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "S6 first-time school candidate",
+      "SFO Full/Half EC"
+    ],
+    "proof_needed_zh": [
+      "中六首次應考",
+      "資助全額／半額資格證明"
+    ],
+    "apply_link": "https://www.hkeaa.edu.hk/DocLibrary/Circulars/HKDSE/HKDSE_Examination_Circular_No_3_Applications_for_Examination_Fee_Remission_in_HKDSE_E.pdf",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "S6"
+      ],
+      "afi_max": 89515
+    },
+    "confirm_en": [
+      "CSSA families claim from SWD directly",
+      "Evening-centre + ApL-only candidates included"
+    ],
+    "confirm_zh": [
+      "綜援戶直接向社署申領",
+      "夜中學＋應用學習單科考生都包"
+    ],
+    "why_en": "S6 at home this year — don't pay exam fees you needn't.",
+    "why_zh": "屋企有中六 — 可減免的考試費不用繳付。"
+  },
+  {
+    "id": "quit-smoking-free",
+    "title_en": "Free Quit-Smoking Support (hotline 1833 183)",
+    "title_zh": "免費戒煙支援（熱線1833 183）",
+    "category": "health",
+    "value_summary_en": "Free nurse counselling, NRT trial packs by mail, acupuncture options and HA clinics. 24hr info in Cantonese/Mandarin/English.",
+    "value_summary_zh": "免費護士輔導、戒煙藥郵寄試用裝、針灸選擇及醫管局診所。24小時廣東話／普通話／英語資訊。",
+    "deadline": null,
+    "source_url": "https://www.livetobaccofree.hk/en/free-quit-tools/free-cessation-services.html",
+    "source_url_zh": "https://www.livetobaccofree.hk/tc/free-quit-tools/free-cessation-services.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Smoker status (self-declared)",
+      "HKID for clinic meds"
+    ],
+    "proof_needed_zh": [
+      "吸煙者身份（自行申報）",
+      "診所藥物需香港身份證"
+    ],
+    "apply_link": "https://www.livetobaccofree.hk/en/free-quit-tools/free-cessation-services.html",
+    "apply_link_zh": "https://www.livetobaccofree.hk/tc/free-quit-tools/free-cessation-services.html",
+    "needs": {
+      "hk_resident": true,
+      "smoker": true
+    },
+    "confirm_en": [
+      "Mail-to-quit needs 3 working days after assessment",
+      "Pregnant/chronic/allergy cases see a doctor first"
+    ],
+    "confirm_zh": [
+      "郵寄戒煙藥評估後3個工作天寄到",
+      "懷孕／長期病／藥物敏感先見醫生"
+    ],
+    "why_en": "Smoking in the house — free help that actually works.",
+    "why_zh": "屋企有人食煙 — 免費又有成效的幫助。"
+  },
+  {
+    "id": "vtc-earn-learn",
+    "title_en": "VTC Earn & Learn (salary + $90k allowance + $36k training)",
+    "title_zh": "職學計劃（有薪＋$9萬津貼＋$3.6萬培訓）",
+    "category": "student",
+    "value_summary_en": "S3+ leavers: guaranteed salary ≥$10,780/mo + gov allowance up to $90k + $1k/mo training allowance + $30.8k industry incentive. Diploma to Higher Diploma, 8 industries.",
+    "value_summary_zh": "中三以上：保證月薪$10,780+政府津貼高達$9萬＋每月$1k培訓津貼＋$30,800行業獎金。文憑至高級文憑，8大行業。",
+    "deadline": null,
+    "source_url": "https://www.vtc.edu.hk/home/en/vtc-earn-and-learn.html",
+    "source_url_zh": "https://www.vtc.edu.hk/home/tc/vtc-earn-and-learn.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "S3+ school-leaver status",
+      "Employer apprenticeship contract"
+    ],
+    "proof_needed_zh": [
+      "中三以上離校身份",
+      "僱主學徒合約"
+    ],
+    "apply_link": "https://www.vtc.edu.hk/home/en/vtc-earn-and-learn.html",
+    "apply_link_zh": "https://www.vtc.edu.hk/home/tc/vtc-earn-and-learn.html",
+    "needs": {
+      "hk_resident": true,
+      "edu_max_rank": 1
+    },
+    "confirm_en": [
+      "Needs an employer contract — apply via VTC portal + industry fairs",
+      "Upskilling $30k more after graduation"
+    ],
+    "confirm_zh": [
+      "須有僱主合約 — 經VTC招生網＋行業展覽申請",
+      "畢業後進修再多$3萬"
+    ],
+    "why_en": "Hands-on learner at home — paid to learn a trade.",
+    "why_zh": "屋企有手作仔 — 學師有糧出。"
+  },
+  {
+    "id": "foster-parent",
+    "title_en": "Become a Foster Parent (~$11,000/mo incentive, tax-free)",
+    "title_zh": "成為寄養家長（每月約$11,000獎勵，免稅）",
+    "category": "family",
+    "value_summary_en": "~$11k/mo ordinary (~$13k emergency) + maintenance grant + SEN/under-6 extras + tuition support. Any healthy adult incl. singles; home assessment; one-plus-one with friends.",
+    "value_summary_zh": "普通每月約$11k（緊急約$13k）＋生活津貼＋SEN／6歲以下額外＋補習支援。任何健康成人包括單身可申請；家訪評估；可與親友一加一。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/fostercare/",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/family/cat_childcareservice/fostercare/",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Healthy adult",
+      "Safe home + separate beds",
+      "Central Foster Care Unit assessment"
+    ],
+    "proof_needed_zh": [
+      "健康成人",
+      "安全家居＋獨立床位",
+      "中央寄養服務課評估"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/fostercare/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/family/cat_childcareservice/fostercare/",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18
+    },
+    "confirm_en": [
+      "A calling, not a benefit — home study + referees",
+      "Short-term relief care also welcome"
+    ],
+    "confirm_zh": [
+      "這是召命不是福利 — 家訪＋諮詢人",
+      "短期替假照顧亦歡迎"
+    ],
+    "why_en": "Spare room, spare love — 1,112 families and counting.",
+    "why_zh": "有多間房多份愛 — 已有1,112個家庭。"
+  },
+  {
+    "id": "dcss-dementia",
+    "title_en": "Dementia Community Support (free for CSSA/OALA/waiver)",
+    "title_zh": "智友醫社同行計劃（綜援／長生津／減免免費）",
+    "category": "elderly",
+    "value_summary_en": "Support for mild/moderate dementia via DECC: free for CSSA/OALA/waiver holders, else $150/mo. Geriatric/HA referral; discretionary waivers.",
+    "value_summary_zh": "輕中度認知障礙經長者中心支援：綜援／長生津／減免免費，其他$150/月。需老人科／醫管局轉介；酌情減免。",
+    "deadline": null,
+    "source_url": "https://www.healthbureau.gov.hk/en/press_and_publications/otherinfo/180500_dcss/dcss_fees.html",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Mild/moderate dementia diagnosis",
+      "Geriatric or HA referral"
+    ],
+    "proof_needed_zh": [
+      "輕中度認知障礙診斷",
+      "老人科或醫管局轉介"
+    ],
+    "apply_link": "https://www.healthbureau.gov.hk/en/press_and_publications/otherinfo/180500_dcss/dcss_fees.html",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 60
+    },
+    "confirm_en": [
+      "Ask the DECC about discretionary waiver if stuck"
+    ],
+    "confirm_zh": [
+      "有困難問中心酌情減免"
+    ],
+    "why_en": "Early dementia in the family — supported, not alone.",
+    "why_zh": "家人初現認知障礙 — 有支援，不孤單。"
+  },
+  {
+    "id": "free-legal-advice",
+    "title_en": "Free Legal Advice (Duty Lawyer, 9 districts, no means test)",
+    "title_zh": "免費法律諮詢（當值律師，9區，免審查）",
+    "category": "family",
+    "value_summary_en": "20-30 min with a volunteer lawyer, evenings 6:30-8:30pm. No means test, completely free. Book via referral agency (IFSC/HAEC/Caritas); ~3-4 week wait, 2 weeks urgent.",
+    "value_summary_zh": "義務律師20-30分鐘諮詢，晚6:30-8:30。免入息審查，完全免費。經轉介機構（綜合家庭服務中心／民政諮詢中心／明愛）預約；約等3-4星期，急件2星期。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/government/legal/advice/advice.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/government/legal/advice/advice.htm",
+    "updated_at": "2026-09-16",
+    "proof_needed_en": [
+      "Genuine case details (no-shy applicants get no slot)",
+      "Book at referral agency, not the centre"
+    ],
+    "proof_needed_zh": [
+      "真實案情（須說明案情方可預約）",
+      "去轉介機構預約，請勿直接前往中心"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/government/legal/advice/advice.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/government/legal/advice/advice.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Preliminary advice only — no follow-up or representation",
+      "Legal-aid/private-lawyer clients excluded"
+    ],
+    "confirm_zh": [
+      "僅屬初步意見 — 無跟進無代表出庭",
+      "已有法援／私家律師者不合"
+    ],
+    "why_en": "Legal trouble in the family — 30 free minutes first.",
+    "why_zh": "屋企遇上法律煩惱 — 先用免費30分鐘。"
+  },
+  {
+    "id": "cssa-wfa-45k",
+    "title_en": "CCF Pilot: CSSA to WFA Transition Bonus up to $45,000",
+    "title_zh": "關愛基金：綜援轉在職家庭津貼試驗$45,000",
+    "category": "family",
+    "value_summary_en": "Leave CSSA on/after 1 Oct 2026 for WFA: $10k + $15k + $20k over 3 years. No sign-up, WFAO data-matches and notifies.",
+    "value_summary_zh": "2026年10月1日或之後離開綜援轉領在職家庭津貼：3年分$10k+$15k+$20k。免報名，在職家庭津貼處對資料後通知。",
+    "deadline": "2029-09-30",
+    "source_url": "https://www.wfsfaa.gov.hk/wfao/cssatowfa/en/index.html",
+    "source_url_zh": "https://www.wfsfaa.gov.hk/wfao/cssatowfa/tc/index.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "CSSA exit on/after 1 Oct 2026",
+      "2 consecutive WFA approvals (12 claim months, 10+ granted)"
+    ],
+    "proof_needed_zh": [
+      "2026年10月1日或之後離開綜援",
+      "連續兩次在職家庭津貼獲批（12個月期內10個月以上獲批）"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/wfao/cssatowfa/en/index.html",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/wfao/cssatowfa/tc/index.html",
+    "needs": {
+      "hk_resident": true,
+      "wfa_exact": true
+    },
+    "confirm_en": [
+      "Claim months Oct 2026-Sep 2029 only",
+      "All CSSA household types may join",
+      "Paid to WFA bank account, $10k then $15k then $20k"
+    ],
+    "confirm_zh": [
+      "申領月份限2026年10月至2029年9月",
+      "各類綜援住戶均可參加",
+      "經在職家庭津貼銀行戶口發放，先$10k再$15k再$20k"
+    ],
+    "why_en": "Leaving CSSA for work — $45k reasons to stay employed.",
+    "why_zh": "由綜援轉為就業 — $45,000鼓勵持續工作。"
+  },
+  {
+    "id": "gba-yes-2026",
+    "title_en": "Greater Bay Area Youth Employment Scheme 2026 (employer $12k/mo)",
+    "title_zh": "大灣區青年就業計劃2026（僱主月補$12,000）",
+    "category": "family",
+    "value_summary_en": "Aged ≤29, sub-degree+: work in GBA Mainland via HK employer (pay ≥$18k if degree). Employer gets 60% salary up to $12k/mo for 18 months.",
+    "value_summary_zh": "29歲或以下、副學位+：經香港僱主派往大灣區內地工作（學位$18k+月薪）。僱主獲6成薪金、上限$12k/月、為期18個月。",
+    "deadline": "2026-12-31",
+    "source_url": "https://www2.jobs.gov.hk/0/en/information/gbayes/",
+    "source_url_zh": "https://www2.jobs.gov.hk/0/tc/information/gbayes/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "HK resident aged 29 or below",
+      "Sub-degree or above",
+      "Lawfully employable in HK + Mainland"
+    ],
+    "proof_needed_zh": [
+      "香港居民29歲或以下",
+      "副學位或以上學歷",
+      "可在香港及內地合法受僱"
+    ],
+    "apply_link": "https://www2.jobs.gov.hk/0/en/information/gbayes/",
+    "apply_link_zh": "https://www2.jobs.gov.hk/0/tc/information/gbayes/",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18,
+      "max_age": 29,
+      "tertiary": true
+    },
+    "confirm_en": [
+      "Degree holders: salary no less than $18,000/mo",
+      "Ask employer about the 60%/$12k allowance"
+    ],
+    "confirm_zh": [
+      "學位持有人月薪不少於$18,000",
+      "問僱主申請6成／$12k津貼"
+    ],
+    "why_en": "Young graduate at home — a GBA career with subsidy behind it.",
+    "why_zh": "屋企有年輕畢業生 — 有資助的大灣區事業起點。"
+  },
+  {
+    "id": "wops-60k",
+    "title_en": "Work Orientation and Placement Scheme (employer up to $60,000)",
+    "title_zh": "展能就業科工作展能計劃（僱主高達$60,000）",
+    "category": "family",
+    "value_summary_en": "Employer hiring via SPD gets up to $60k over 9 months (mo 1-3 salary-$500 cap $8k, mo 4-9 two-thirds cap $6k). Mentor gets $500 award.",
+    "value_summary_zh": "經展能就業科聘用，僱主9個月高達$6萬（首3月薪金-$500上限$8k，後6月三分二上限$6k）。師傅獲$500獎。",
+    "deadline": null,
+    "source_url": "https://www1.jobs.gov.hk/isps/WebForm/WOPS/Introduction/",
+    "source_url_zh": "https://www1.jobs.gov.hk/isps/WebForm/WOPS/Introduction/Default.aspx?lang=tc",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Disability status",
+      "Referred by Selective Placement Division"
+    ],
+    "proof_needed_zh": [
+      "殘疾身份",
+      "經展能就業科轉介"
+    ],
+    "apply_link": "https://www1.jobs.gov.hk/isps/WebForm/WOPS/Introduction/",
+    "apply_link_zh": "https://www1.jobs.gov.hk/isps/WebForm/WOPS/Introduction/Default.aspx?lang=tc",
+    "needs": {
+      "hk_resident": true,
+      "requires_disability": true
+    },
+    "confirm_en": [
+      "Employer files via SPD, not the employee — ask HR",
+      "Employment-difficulty cases get the full $60k/9mo track"
+    ],
+    "confirm_zh": [
+      "由僱主經展能科申請 — 請向人力資源部查詢",
+      "就業困難個案走足$6萬／9個月"
+    ],
+    "why_en": "Disabled and job-hunting — your employer gets $60k to hire you.",
+    "why_zh": "殘疾求職中 — 僱主請你可獲$6萬。"
+  },
+  {
+    "id": "sssdp-2627",
+    "title_en": "SSSDP 2026/27: Designated Professions Subsidy ($81,450 lab / $46,780)",
+    "title_zh": "指定專業課程資助2026/27（實驗室$81,450／非實驗室$46,780）",
+    "category": "student",
+    "value_summary_en": "4,781 undergrad places in 57 programmes (10 manpower-short disciplines). Lab $81,450/yr, non-lab $46,780/yr; applied degrees $89,620/$51,880. Via JUPAS/direct.",
+    "value_summary_zh": "57個課程4,781個學士名額（10大人才短缺學科）。實驗室$81,450/年、非實驗室$46,780/年；應用學位$89,620/$51,880。經JUPAS／院校直收。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202509/09/P2025090900348.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202509/09/P2025090900338.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "HK student admitted 2026/27 to designated self-financing FYFD/top-up",
+      "JUPAS or institution direct offer"
+    ],
+    "proof_needed_zh": [
+      "2026/27入讀指定自資學士／銜接學位",
+      "JUPAS或院校直接取錄"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202509/09/P2025090900348.htm",
+    "apply_link_zh": "https://www.info.gov.hk/gia/general/202509/09/P2025090900338.htm",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "confirm_en": [
+      "Subsidy for normal programme duration; balance can still claim SFO aid",
+      "Sub-degree SSSDP places announced separately"
+    ],
+    "confirm_zh": [
+      "資助至正常修業期；餘額仍可申學生資助",
+      "副學位名額另行公布"
+    ],
+    "why_en": "Self-financing degree at home — up to $81k off, no means test.",
+    "why_zh": "家有自資學位生 — 最高減$81,450，免審查。"
+  },
+  {
+    "id": "ccf-sba-care",
+    "title_en": "CCF School-based After School Care (free, P1-P6, 2026/27)",
+    "title_zh": "關愛基金在校課後託管（免費，小一至小六，2026/27學年）",
+    "category": "family",
+    "value_summary_en": "Free weekday care to 6pm/6:30pm (3hrs+, to 7pm) + holidays, uncapped places across 18 districts. CSSA / full-WFA / full student finance / ≤55% MMDHI, no asset test.",
+    "value_summary_zh": "平日免費託管至6點／6點半（3小時+，可延至7點）＋假期，18區名額不限。綜援／全額在職家庭津貼／全額學生資助／入息≤住戶每月入息中位數55%，免資產審查。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/svcdesk/funds/ccf/ccf_current/index.html",
+    "source_url_zh": "https://www.swd.gov.hk/tc/svcdesk/funds/ccf/ccf_current/index.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "P1-P6 in participating school",
+      "Parent working/job-seeking/retraining + low-income proof"
+    ],
+    "proof_needed_zh": [
+      "就讀參與計劃小學的小一至小六",
+      "家長工作／求職／再培訓＋低收入證明"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/svcdesk/funds/ccf/ccf_current/index.html",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/svcdesk/funds/ccf/ccf_current/index.html",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    "confirm_en": [
+      "Apply via the school / Approved Service Provider",
+      "2026/27 year running now; 4p example cap $28,600/mo"
+    ],
+    "confirm_zh": [
+      "經學校／獲批服務機構申請",
+      "2026/27學年現正推行；4人戶例子上限$28,600/月"
+    ],
+    "why_en": "Primary kid + working parents — free care till evening.",
+    "why_zh": "小學生＋家長要返工 — 免費託管到黃昏。"
+  },
+  {
+    "id": "hpv-catchup-2026",
+    "title_en": "HPV Vaccination Catch-up (free 2 doses, ends Dec 2026!)",
+    "title_zh": "HPV疫苗補種計劃（免費2針，2026年12月截止！）",
+    "category": "health",
+    "value_summary_en": "Females born 2004-2008 not yet vaccinated: 2 free doses (3 if immunocompromised). First dose by 30 Jun 2026 advised. Needs eHealth. ENDS END 2026.",
+    "value_summary_zh": "2004-2008年出生未打齊HPV疫苗女性：免費2針（免疫力弱3針）。建議6月30日前打第一針。需醫健通。2026年底截止。",
+    "deadline": "2026-12-31",
+    "source_url": "https://www.chp.gov.hk/en/features/108084.html",
+    "source_url_zh": "https://www.chp.gov.hk/tc/features/108084.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Female HK resident born 2004-2008",
+      "eHealth registration",
+      "Incomplete HPV series"
+    ],
+    "proof_needed_zh": [
+      "2004-2008年出生香港女性居民",
+      "醫健通登記",
+      "未完成HPV疫苗系列"
+    ],
+    "apply_link": "https://www.chp.gov.hk/en/features/108084.html",
+    "apply_link_zh": "https://www.chp.gov.hk/tc/features/108084.html",
+    "needs": {
+      "hk_resident": true,
+      "sex": "female",
+      "min_age": 18,
+      "max_age": 22
+    },
+    "confirm_en": [
+      "Schoolgirls via outreach teams; post-secondary via campus clinics; others via WWS/DHC centres",
+      "Enquiry 2125 2125"
+    ],
+    "confirm_zh": [
+      "中學生經外展隊；大專經校園診所；其他經婦女健康衛星／地區康健中心",
+      "查詢2125 2125"
+    ],
+    "why_en": "Young woman at home born 2004-2008 — free HPV jabs before the window shuts.",
+    "why_zh": "屋企有2004-2008年出生年輕女性 — 窗口關閉前免費打HPV針。",
+    "needs_ehealth": true
+  },
+  {
+    "id": "mh-18111",
+    "title_en": "18111 Mental Health Support Hotline (24/7, free)",
+    "title_zh": "18111精神健康支援熱線（24小時免費）",
+    "category": "health",
+    "value_summary_en": "Free 24/7 one-stop phone + WhatsApp counselling and referral for anyone distressed + carers. 12 languages. Just call 18111.",
+    "value_summary_zh": "免費24小時一站式電話＋WhatsApp輔導轉介，情緒困擾者及照顧者適用。12種語言。打18111就得。",
+    "deadline": null,
+    "source_url": "https://www.shallwetalk.hk/en/get-help/mental-health-support-hotline-18111",
+    "source_url_zh": "https://www.shallwetalk.hk/zh/get-help/mental-health-support-hotline-18111",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "None — just call 18111 or WhatsApp (852)18111"
+    ],
+    "proof_needed_zh": [
+      "無需文件 — 打18111或WhatsApp (852)18111"
+    ],
+    "apply_link": "https://www.shallwetalk.hk/en/get-help/mental-health-support-hotline-18111",
+    "apply_link_zh": "https://www.shallwetalk.hk/zh/get-help/mental-health-support-hotline-18111",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "WhatsApp texts/photos/audio/video (no voice calls)",
+      "Scheduled call-back + multi-language support"
+    ],
+    "confirm_zh": [
+      "WhatsApp收文字／相／錄音錄像（不支援語音通話）",
+      "可預約回電＋多語言支援"
+    ],
+    "why_en": "Anyone struggling — one number, any hour, free.",
+    "why_zh": "情緒有困擾 — 一個號碼，全日免費。"
+  },
+  {
+    "id": "mtr-city-saver",
+    "title_en": "MTR City Saver ($460 = 40 rides / 40 days)",
+    "title_zh": "港鐵都會票（$460＝40程／40日）",
+    "category": "transport",
+    "value_summary_en": "$460 for 40 single journeys in 40 days across 67 urban stations. For frequent medium-long cross-harbour commuters. First use within 14 days.",
+    "value_summary_zh": "$460包40程單程、40日內67個市區站用。啱頻繁中長途過海返工。買後14日內啟用。",
+    "deadline": null,
+    "source_url": "https://www.mtr.com.hk/en/customer/tickets/citysaver.html",
+    "source_url_zh": "https://www.mtr.com.hk/ch/customer/tickets/citysaver.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "No registration — buy via MTR Mobile / station"
+    ],
+    "proof_needed_zh": [
+      "免登記 — MTR Mobile／車站買"
+    ],
+    "apply_link": "https://www.mtr.com.hk/en/customer/tickets/citysaver.html",
+    "apply_link_zh": "https://www.mtr.com.hk/ch/customer/tickets/citysaver.html",
+    "needs": {
+      "hk_resident": true,
+      "min_transport_spend": 460
+    },
+    "confirm_en": [
+      "Monthly Pass + Early Bird extended another year (2026/27 fare freeze)",
+      "Check the 67-station coverage map before buying"
+    ],
+    "confirm_zh": [
+      "月票＋早鳥優惠延多一年（2026/27凍結票價）",
+      "買前先睇67個站覆蓋圖"
+    ],
+    "why_en": "Daily cross-harbour commute — $11.50 a ride beats the gate fare.",
+    "why_zh": "日日過海返工 — 每程$11.50平過閘機價。"
+  },
+  {
+    "id": "lph-special-allowance",
+    "title_en": "LPH Special Allowance (one-off $1,950–$13,000, to Mar 2028)",
+    "title_zh": "簡約公屋住戶特別津貼（一次過$1,950–$13,000，至2028年3月）",
+    "category": "housing",
+    "value_summary_en": "Moved into Light Public Housing: one-off cash (NT 1p $3,950 … 6p+ $13,000; urban 1p $1,950 … 6p+ $6,500). No use restriction. Reside 1yr+.",
+    "value_summary_zh": "已入住簡約公屋：一次過現金（新界1人$3,950…6人+$13,000；市區1人$1,950…6人+$6,500）。用途不限。住滿1年。",
+    "deadline": "2028-03-31",
+    "source_url": "https://www.hb.gov.hk/eng/policy/housing/policy/light_public_housing/lphallowance.html",
+    "source_url_zh": "https://www.hb.gov.hk/tc/policy/housing/policy/light_public_housing/lphallowance.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Successful LPH application + moved in",
+      "Family details as registered"
+    ],
+    "proof_needed_zh": [
+      "成功申請並已入住簡約公屋",
+      "家庭資料與申請登記一致"
+    ],
+    "apply_link": "https://www.hb.gov.hk/eng/policy/housing/policy/light_public_housing/lphallowance.html",
+    "apply_link_zh": "https://www.hb.gov.hk/tc/policy/housing/policy/light_public_housing/lphallowance.html",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18,
+      "prh_exact": true
+    },
+    "confirm_en": [
+      "Apply via the LPH operator after eligibility check",
+      "TH-allowance recipients excluded; <1yr leavers refund"
+    ],
+    "confirm_zh": [
+      "經簡約公屋營辦機構申請",
+      "已領過渡屋津貼不合；住唔夠1年要退錢"
+    ],
+    "why_en": "Just moved into LPH — lump sum for furniture, moves and settling in.",
+    "why_zh": "啱啱入住簡約公屋 — 一筆過幫補傢俬搬屋安頓。"
+  },
+  {
+    "id": "newborn-bonus-20k",
+    "title_en": "Newborn Baby Bonus $20,000 (births to 24 Oct 2026!)",
+    "title_zh": "新生嬰兒獎勵金$20,000（2026年10月24日前出生！）",
+    "category": "family",
+    "value_summary_en": "$20,000 per baby born in HK 25 Oct 2023-24 Oct 2026, either parent HKPR. Apply at birth registration (42 days) or within 6 months. Extension/$30k 2nd-child from Policy Address 2026 pending.",
+    "value_summary_zh": "2023年10月25日至2026年10月24日在港出生每嬰$20,000，父母一方香港永久居民。出生登記時（42日內）或6個月內申請。2026施政報告延續／第二胎$30k待落實。",
+    "deadline": "2026-10-24",
+    "source_url": "https://www.cso.gov.hk/newbornbabybonus/eng/index.htm",
+    "source_url_zh": "https://www.cso.gov.hk/newbornbabybonus/chi/index.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Baby born in HK in window",
+      "Either parent HKPR",
+      "Birth registration + bonus form"
+    ],
+    "proof_needed_zh": [
+      "期內在港出生嬰兒",
+      "父母一方香港永久居民",
+      "出生登記＋獎勵金表格"
+    ],
+    "apply_link": "https://www.cso.gov.hk/newbornbabybonus/eng/index.htm",
+    "apply_link_zh": "https://www.cso.gov.hk/newbornbabybonus/chi/index.htm",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_any": true
+    },
+    "confirm_en": [
+      "Twins = $40,000 (per baby)",
+      "Hotline 2810 3568"
+    ],
+    "confirm_zh": [
+      "孖胎＝$40,000（按嬰計）",
+      "熱線2810 3568"
+    ],
+    "why_en": "Baby on the way before late Oct 2026 — $20k waiting at the registry.",
+    "why_zh": "2026年10月底前有BB出世 — 出生登記處有$20,000等緊。"
+  },
+  {
+    "id": "ccf-clr",
+    "title_en": "Community Living Room (free space for subdivided-flat families)",
+    "title_zh": "社區客廳（劏房戶免費共享空間）",
+    "category": "family",
+    "value_summary_en": "Free extra living space: shared kitchen/dining/study/laundry/bath + homework guidance + referrals. 14 rooms open, 18 by end-2026.",
+    "value_summary_zh": "免費額外生活空間：共享廚房飯廳溫習洗衣沖涼＋功課輔導＋轉介。14間已開，2026年底18間。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/svcdesk/funds/ccf/ccf_current/index.html",
+    "source_url_zh": "https://www.swd.gov.hk/tc/svcdesk/funds/ccf/ccf_current/index.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Subdivided-unit address in project district",
+      "1+ HK resident in household",
+      "CSSA/OALA/WFA/student-aid proof or income test"
+    ],
+    "proof_needed_zh": [
+      "項目地區劏房住址",
+      "1名以上香港居民",
+      "綜援／長生津／在職家庭津貼／學生資助證明或入息審查"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/svcdesk/funds/ccf/ccf_current/index.html",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/svcdesk/funds/ccf/ccf_current/index.html",
+    "needs": {
+      "hk_resident": true,
+      "afi_max": 46292
+    },
+    "confirm_en": [
+      "Find your district's Living Room on the CCF current-programmes page",
+      "Basic facilities free once the 3 criteria pass"
+    ],
+    "confirm_zh": [
+      "上關愛基金現行計劃頁搵所屬地區客廳",
+      "過3關即免費享用基本設施"
+    ],
+    "why_en": "Subdivided flat with kids — a free second living room nearby.",
+    "why_zh": "住劏房兼有細路 — 附近有間免費第二客廳。"
+  },
+  {
+    "id": "ccf-stepping-stone",
+    "title_en": "Stepping Stone: $500/mo for Employed Disabled CSSA Recipients",
+    "title_zh": "踏出一步：就業殘疾綜援受助人每月+$500",
+    "category": "family",
+    "value_summary_en": "Disabled CSSA recipients in paid work get an extra $500/mo employment subsidy + disregarded earnings. 3-yr pilot Sep 2024-Aug 2027.",
+    "value_summary_zh": "有工開殘疾綜援受助人每月多$500就業補助＋豁免計算部份入息。3年試驗2024年9月至2027年8月。",
+    "deadline": "2027-08-31",
+    "source_url": "https://www.swd.gov.hk/en/svcdesk/funds/ccf/ccf_current/index.html",
+    "source_url_zh": "https://www.swd.gov.hk/tc/svcdesk/funds/ccf/ccf_current/index.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Disabled CSSA status",
+      "Paid employment proof"
+    ],
+    "proof_needed_zh": [
+      "殘疾綜援身份",
+      "受薪工作證明"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/svcdesk/funds/ccf/ccf_current/index.html",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/svcdesk/funds/ccf/ccf_current/index.html",
+    "needs": {
+      "hk_resident": true,
+      "requires_disability": true
+    },
+    "confirm_en": [
+      "CCF-funded via SWD; pairs with SPED/WOPS employer incentives"
+    ],
+    "confirm_zh": [
+      "關愛基金經社署發放；可疊加SPED／WOPS僱主津貼"
+    ],
+    "why_en": "Disabled, on CSSA and working — $500 extra for stepping out.",
+    "why_zh": "殘疾領綜援兼有工開 — 踏出一步多$500。"
+  },
+  {
+    "id": "ccf-gd-rche-5000",
+    "title_en": "Guangdong Care-Home Pilot $5,000/mo (elderly CSSA, quota 1,000)",
+    "title_zh": "廣東院舍試驗每月$5,000（長者綜援，名額1,000）",
+    "category": "elderly",
+    "value_summary_en": "$5,000/mo on top of Portable CSSA (~$4,600 singleton) to live in designated Guangdong care homes. 3-yr pilot 1 Oct 2025-30 Sep 2028, quota 1,000. PRH tenants keep flat 6 months.",
+    "value_summary_zh": "可攜綜援（單人約$4,600）外每月多$5,000入住指定廣東院舍。3年試驗2025年10月1日至2028年9月30日，名額1,000。公屋戶可保留單位6個月。",
+    "deadline": "2028-09-30",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/portableco/pilot_scheme",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/portableco/pilot_scheme",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Portable CSSA eligible/joined",
+      "Designated Guangdong RCHE placement",
+      "No other SWD residential subsidy"
+    ],
+    "proof_needed_zh": [
+      "符合／已參加可攜綜援",
+      "指定廣東院舍宿位",
+      "無領其他社署院舍資助"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/portableco/pilot_scheme",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/portableco/pilot_scheme",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 60,
+      "lives_mainland": true
+    },
+    "confirm_en": [
+      "Apply via New Home Association or SWD field unit",
+      "Distinct from the general Guangdong Scheme (gd-scheme)"
+    ],
+    "confirm_zh": [
+      "經新家園協會或社署分區辦事處申請",
+      "與一般廣東計劃（gd-scheme）不同，此為現金試驗"
+    ],
+    "why_en": "Elderly across the border in care — $5k extra a month.",
+    "why_zh": "長者在廣東院舍 — 每月多$5,000。"
+  },
+  {
+    "id": "hepb-cocare-2026",
+    "title_en": "Hepatitis B Co-care ($180 screening, free antivirals)",
+    "title_zh": "乙型肝炎共治計劃（篩查$180，抗病毒藥免費）",
+    "category": "health",
+    "value_summary_en": "Born ≤1988 with family/partner chronic hep-B history: free rapid test at DHC, $180 screening (govt $136 for 2 GP visits), treatment ≤4 visits/yr ($150 co-pay) + free antivirals. From 7 Feb 2026.",
+    "value_summary_zh": "1988年或之前出生、家人／伴侶有慢性乙肝：地區康健中心免費快測，篩查$180（政府資助2次診金$136），治療每年最多4次（自付$150）＋免費抗病毒藥。2026年2月7日起。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202601/26/P2026012600288.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202601/26/P2026012600284.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Born 1988 or before",
+      "Family/partner chronic hep-B history",
+      "DHC member + eHealth, no known CHB"
+    ],
+    "proof_needed_zh": [
+      "1988年或之前出生",
+      "家人／伴侶慢性乙肝病史",
+      "地區康健中心會員＋醫健通、無已知慢性乙肝"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202601/26/P2026012600288.htm",
+    "apply_link_zh": "https://www.info.gov.hk/gia/general/202601/26/P2026012600284.htm",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 38
+    },
+    "confirm_en": [
+      "Screening via paired family doctor; treatment phase via DHC",
+      "Pairs with cdcc-cocare (different arm)"
+    ],
+    "confirm_zh": [
+      "經配對家庭醫生篩查；治療階段經地區康健中心",
+      "與慢性疾病共同治理（糖尿／高血壓臂）並行"
+    ],
+    "why_en": "Family history of hep-B and born before 1989 — $180 to know.",
+    "why_zh": "家人有乙肝＋1989年前出生 — $180驗個明白。",
+    "needs_ehealth": true
+  },
+  {
+    "id": "oohp-preschool-2026",
+    "title_en": "Preschool Oral Health Outreach (free, 32mo+, yearly)",
+    "title_zh": "學前兒童外展口腔健康（免費，32個月+，每年一次）",
+    "category": "health",
+    "value_summary_en": "Free yearly on-campus oral screening + risk check + fluoride + parent report for 32mo+ kids in participating KGs (680/949 joined). From 1 Sep 2026.",
+    "value_summary_zh": "參與幼稚園32個月+學童每年免費校內口腔檢查＋風險評估＋氟化物＋家長報告（680/949間已參加）。2026年9月1日起。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202608/24/P2026082400327.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202608/24/P2026082400322.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Child 32mo+ in participating KG",
+      "Once per school year"
+    ],
+    "proof_needed_zh": [
+      "32個月+就讀參與幼稚園",
+      "每學年一次"
+    ],
+    "apply_link": "https://www.communitydental.gov.hk/",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "K1",
+        "K2",
+        "K3"
+      ]
+    },
+    "confirm_en": [
+      "Ask your KG if it joined OOHP",
+      "Portal: communitydental.gov.hk"
+    ],
+    "confirm_zh": [
+      "問幼稚園有無參加",
+      "網站：communitydental.gov.hk"
+    ],
+    "why_en": "Preschooler at home — free teeth check at school.",
+    "why_zh": "屋企有幼稚園生 — 學校免費驗牙。"
+  },
+  {
+    "id": "cmhk-subsidised",
+    "title_en": "Chinese Medicine Hospital (65% subsidised, TKO)",
+    "title_zh": "香港中醫醫院（65%資助，將軍澳）",
+    "category": "health",
+    "value_summary_en": "HK's first CM hospital (opened 11 Dec 2025): 65% of volume subsidised — General/Specialised/Allied + 25 day beds. Full waiver for CSSA / RCS-L0 / OALA75+. First-year 10-30% promo. Hotline 3121 3121.",
+    "value_summary_zh": "全港首間中醫醫院（2025年12月11日開業）：65%服務量資助——普通／專科／綜合 allied＋25張日間病床。綜援／RCS零級／75歲+長生津全免。首年9折至7折。熱線3121 3121。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202510/15/P2025101500325.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202510/15/P2025101500294.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "HKID (eligible citizen)",
+      "CSSA/RCS-L0/OALA75+ for auto waiver",
+      "Book via website/app/hotline from Nov"
+    ],
+    "proof_needed_zh": [
+      "香港身份證（合資格市民）",
+      "綜援／RCS零級／75歲+長生津自動免費",
+      "11月起網站／App／熱線預約"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202510/15/P2025101500325.htm",
+    "apply_link_zh": "https://www.info.gov.hk/gia/general/202510/15/P2025101500294.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Inpatient from year 2; 400 beds + 400k visits by 2030",
+      "Package/itemised/combined fee models"
+    ],
+    "confirm_zh": [
+      "住院第2年起；2030年400床＋40萬人次",
+      "套餐／分項／組合收費"
+    ],
+    "why_en": "Into Chinese medicine — a whole subsidised hospital for it.",
+    "why_zh": "信中醫 — 成間資助中醫醫院為你服務。"
+  },
+  {
+    "id": "prh-ras",
+    "title_en": "PRH Rent Assistance (25%/50% off, 2 years)",
+    "title_zh": "公屋租金援助（減25%/50%，2年）",
+    "category": "housing",
+    "value_summary_en": "PRH/interim-housing tenants in hardship: 25% or 50% rent cut for 2 years. Income/rent-ratio test, no property, no CSSA rent aid. Apply at estate office.",
+    "value_summary_zh": "有困難公屋／中轉屋戶：減租25%或50%，為期2年。入息／租收比審查、無物業、無綜援租金津貼。去屋邨辦事處申請。",
+    "deadline": null,
+    "source_url": "https://www.housingauthority.gov.hk/en/public-housing/rent-related-matters/rent-assistance-scheme/index.html",
+    "source_url_zh": "https://www.housingauthority.gov.hk/tc/public-housing/rent-related-matters/rent-assistance-scheme/index.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "PRH tenancy + 2yr residence (newer blocks)",
+      "Income proof + hardship statement"
+    ],
+    "proof_needed_zh": [
+      "公屋租約＋住滿2年（新屋邨）",
+      "入息證明＋困難陳述"
+    ],
+    "apply_link": "https://www.housingauthority.gov.hk/en/public-housing/rent-related-matters/rent-assistance-scheme/index.html",
+    "apply_link_zh": "https://www.housingauthority.gov.hk/tc/public-housing/rent-related-matters/rent-assistance-scheme/index.html",
+    "needs": {
+      "hk_resident": true,
+      "housing_in": [
+        "prh"
+      ]
+    },
+    "confirm_en": [
+      "Elderly all-60+ households use relaxed Table C",
+      "Flat must not exceed allocation standard"
+    ],
+    "confirm_zh": [
+      "全長者戶用寬鬆丙表",
+      "單位不可超編配標準"
+    ],
+    "why_en": "PRH tenant feeling the squeeze — halve the rent for 2 years.",
+    "why_zh": "公屋戶手緊 — 2年減租一半。"
+  },
+  {
+    "id": "letting-wf-pilot-3000",
+    "title_en": "Letting White-Form SSF without Premium (pilot, quota 3,000)",
+    "title_zh": "白表免補價出租資助屋（試點，名額3,000）",
+    "category": "housing",
+    "value_summary_en": "Own SSF 10yrs+: let with premium unpaid after quarterly Letting Permit Fee, to White-Form-eligible tenants. Owner/Tenant/Nomination certificates $400 each. HKHS opens Sep 2026.",
+    "value_summary_zh": "持有資助屋10年+：繳季租用證費後免補價出租給白表合資格租客。業主／租客／提名證書各$400。房協2026年9月起收表。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202606/18/P2026061800280.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202606/18/P2026061800285.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Owner: 10yr+ SSF ownership + LPF",
+      "Tenant: White-Form eligibility"
+    ],
+    "proof_needed_zh": [
+      "業主：持有10年+＋租用證費",
+      "租客：符合白表資格"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202606/18/P2026061800280.htm",
+    "apply_link_zh": "https://www.info.gov.hk/gia/general/202606/18/P2026061800285.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Pilot quota 3,000 via HKHS",
+      "Sibling scheme: flat-for-flat-elderly"
+    ],
+    "confirm_zh": [
+      "試點名額3,000，房協辦",
+      "姊妹計劃：長者換樓"
+    ],
+    "why_en": "SSF owner with a spare room, or White-Form hunter — meet legally now.",
+    "why_zh": "資助屋業主有多間房，或白表搵屋 — 合法配對。"
+  },
+  {
+    "id": "flat-for-flat-elderly",
+    "title_en": "Flat-for-Flat for Elderly SSF Owners (60+, keep the surplus)",
+    "title_zh": "長者換樓計劃（60歲+，差價養老）",
+    "category": "housing",
+    "value_summary_en": "All members 60+ and owned HA SSF 10yrs+: Trade Down Permit ($500), sell in Secondary Market, buy smaller or more-remote flat, keep the cash surplus. HKHS opens Sep 2026.",
+    "value_summary_zh": "全家60歲+、持有房委會資助屋10年+：$500換樓證，居二市場賣樓，買細單位或偏遠區，差價留用養老。房協2026年9月起收表。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202606/18/P2026061800280.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202606/18/P2026061800285.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "All family members 60+",
+      "HA SSF owned 10yrs+"
+    ],
+    "proof_needed_zh": [
+      "全家60歲或以上",
+      "持有房委會資助屋10年+"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202606/18/P2026061800280.htm",
+    "apply_link_zh": "https://www.info.gov.hk/gia/general/202606/18/P2026061800285.htm",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 60
+    },
+    "confirm_en": [
+      "Buy smaller area OR more-remote district (4 PRH district bands)",
+      "Sibling scheme: letting-wf-pilot-3000"
+    ],
+    "confirm_zh": [
+      "買細面積或更偏遠分區（4個公屋分區）",
+      "姊妹計劃：白表出租試點"
+    ],
+    "why_en": "Elderly owner rattling in a big flat — downsize and bank the difference.",
+    "why_zh": "長者業主住大屋 — 細屋換大錢養老。"
+  },
+  {
+    "id": "ird-hli",
+    "title_en": "Salaries Tax: Home Loan Interest ($100,000/yr, 20 years)",
+    "title_zh": "薪俸稅：居所貸款利息扣除（$100,000/年，20年）",
+    "category": "family",
+    "value_summary_en": "$100k/yr off for owner-occupier mortgage interest, up to 20 (non-consecutive) years. +$20k/yr extra from 2024/25 if living with child born on/after 25 Oct 2023 (<18).",
+    "value_summary_zh": "自住按揭利息每年減$100k，最長20年（可不連續）。2024/25起與2023年10月25日後出生未滿18子女同住再加$20k/年。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/homeloan.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/homeloan.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Owner-occupier of rateable HK dwelling",
+      "HK-secured mortgage from prescribed lender"
+    ],
+    "proof_needed_zh": [
+      "自住應課差餉香港住宅",
+      "認可貸款機構香港物業按揭"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/homeloan.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/homeloan.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Claim yearly in BIR60 Pt 8",
+      "Not for rented-out / non-residence periods"
+    ],
+    "confirm_zh": [
+      "每年BIR60第8部申索",
+      "出租／非自住期不合"
+    ],
+    "why_en": "Paying a mortgage on your own home — $100k off taxable income.",
+    "why_zh": "供緊自住樓 — 每年減$100k應課稅入息。"
+  },
+  {
+    "id": "ird-tvc-qdap-60k",
+    "title_en": "Salaries Tax: TVC + Annuity Premiums ($60,000/yr combined)",
+    "title_zh": "薪俸稅：可扣稅強積金＋年金保費（合共$60,000/年）",
+    "category": "family",
+    "value_summary_en": "TVC to MPF + qualifying deferred annuity premiums: combined $60k/yr off (TVC first, QDAP second). Claim in BIR60 yearly.",
+    "value_summary_zh": "強積金可扣稅自願供款＋合資格延期年金保費：合共每年減$60k（先TVC後年金）。每年BIR60申索。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/annuity.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/annuity.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "TVC account (MPFSO) / QDAP policy (self/spouse)"
+    ],
+    "proof_needed_zh": [
+      "可扣稅強積金戶口／合資格年金（自己／配偶）"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/annuity.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/annuity.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Cap shared since 2020/21; IR831 back-claims within 6 years"
+    ],
+    "confirm_zh": [
+      "2020/21起合併上限；IR831可追6年"
+    ],
+    "why_en": "Topping up MPF or paying annuity — $60k off tax too.",
+    "why_zh": "有供TVC或交年金 — 順手減$60k稅。"
+  },
+  {
+    "id": "ird-erce-110k",
+    "title_en": "Salaries Tax: Elderly Residential Care ($110,000 from 2026/27)",
+    "title_zh": "薪俸稅：長者住宿照顧開支（2026/27起$110,000）",
+    "category": "family",
+    "value_summary_en": "Paying a licensed HK care home for a 60+ (or DA-eligible) parent/grandparent: deduct up to $110,000/yr from 2026/27 ($100k before). One claimant per dependant; replaces parent allowance.",
+    "value_summary_zh": "為60歲+（或合傷殘津貼）父母／祖父母付持牌安老院費：2026/27起每年扣高達$110,000（之前$100k）。每名受養人只限一人申索；取代父母免稅額。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/elderly.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/elderly.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Parent/grandparent 60+ (or DA-eligible)",
+      "Licensed HK RCHE/RCHD/nursing home receipts"
+    ],
+    "proof_needed_zh": [
+      "父母／祖父母60歲+（或合傷殘津貼）",
+      "持牌安老／殘疾院舍／護養院單據"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/elderly.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/elderly.htm",
+    "needs": {
+      "hk_resident": true,
+      "hasElderly": true
+    },
+    "confirm_en": [
+      "Raised $100k→$110k by 2026 law (gazetted 22 May 2026)",
+      "Net of any reimbursements"
+    ],
+    "confirm_zh": [
+      "2026年法例由$100k加至$110k（5月22日刊憲）",
+      "扣減任何已獲發還款項"
+    ],
+    "why_en": "Paying a care-home bill for mum or dad — deduct $110k.",
+    "why_zh": "幫父母付安老院費 — 扣$110k稅。"
+  },
+  {
+    "id": "ird-pda-75k",
+    "title_en": "Salaries Tax: Personal Disability Allowance ($75,000, self)",
+    "title_zh": "薪俸稅：傷殘人士免稅額（$75,000，本人）",
+    "category": "family",
+    "value_summary_en": "If you yourself are DA-eligible (certified severely disabled, SWD): $75,000/yr off your salaries tax on top of dependant allowances. Claim in BIR60 yearly.",
+    "value_summary_zh": "本人符合傷殘津貼（社署認證重度殘疾）：薪俸稅每年減$75,000，受養人免稅額以外另計。每年BIR60申索。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "DA-eligible (SWD certified)"
+    ],
+    "proof_needed_zh": [
+      "符合傷殘津貼（社署認證）"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "needs": {
+      "hk_resident": true,
+      "requires_disability": true
+    },
+    "confirm_en": [
+      "Separate from the $75k disabled-dependant allowance (ird-disabled-dep)",
+      "Unchanged $75k in 2026/27"
+    ],
+    "confirm_zh": [
+      "與$75k殘疾受養人免稅額（ird-disabled-dep）分開",
+      "2026/27維持$75k"
+    ],
+    "why_en": "Disabled and working — $75k off your own tax bill.",
+    "why_zh": "殘疾在職 — 自己稅單減$75k。"
+  },
+  {
+    "id": "mtr-monthly-pass",
+    "title_en": "MTR Monthly Pass (5 types, +25% connecting discount)",
+    "title_zh": "港鐵全月通（5款，接駁75折）",
+    "category": "transport",
+    "value_summary_en": "Unlimited rides between designated stations for the calendar month (e.g. Pass 1 $430) + 25% off connecting legs. Stacks with interchange/Fare Saver/Early Bird. Fares frozen 2026/27.",
+    "value_summary_zh": "曆月內指定站無限次（例1號$430）＋接駁75折。可疊加轉乘／特惠站／早鳥。2026/27凍票價。",
+    "deadline": null,
+    "source_url": "https://www.mtr.com.hk/en/customer/tickets/monthly_pass_extra.html",
+    "source_url_zh": "https://www.mtr.com.hk/ch/customer/tickets/monthly_pass_extra.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Octopus",
+      "Buy last-7-days-prev-month to first-7-days-current"
+    ],
+    "proof_needed_zh": [
+      "八達通",
+      "上月尾7日至本月初7日買"
+    ],
+    "apply_link": "https://www.mtr.com.hk/en/customer/tickets/monthly_pass_extra.html",
+    "apply_link_zh": "https://www.mtr.com.hk/ch/customer/tickets/monthly_pass_extra.html",
+    "needs": {
+      "hk_resident": true,
+      "min_transport_spend": 430
+    },
+    "confirm_en": [
+      "Excl. First Class / Airport Express / Lo Wu-Lok Ma Chau",
+      "Sibling: mtr-city-saver ($460/40 rides) — compare both"
+    ],
+    "confirm_zh": [
+      "頭等／機場快線／羅湖落馬洲除外",
+      "姊妹：都會票（$460／40程） — 兩款比較下"
+    ],
+    "why_en": "Same MTR line every day — cap the month, not the ride.",
+    "why_zh": "日日同一條港鐵線 — 月費封頂最抵。"
+  },
+  {
+    "id": "nls-loan-2627",
+    "title_en": "NLS Tuition Loans NLSFT+NLSPS ($419,400 lifetime, 2.173%)",
+    "title_zh": "免入息審查專上貸款NLSFT+NLSPS（終身$419,400，2.173%）",
+    "category": "student",
+    "value_summary_en": "No-means-test tuition loan up to 100% fees: NLSFT (publicly-funded places) + NLSPS (self-financing). Shared lifetime cap $419,400 (2026/27), interest 2.173%. Apply by 31 Dec 2026.",
+    "value_summary_zh": "免審查學費貸款最高100%學費：NLSFT（資助學額）＋NLSPS（自資）。共用終身限額$419,400（2026/27），利息2.173%。2026年12月31日前申請。",
+    "deadline": "2026-12-31",
+    "source_url": "https://www.wfsfaa.gov.hk/en/sfo/postsecondary/nlsft/overview.php",
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/postsecondary/nlsft/overview.php",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Full-time recognised place (publicly-funded or self-financing)",
+      "Right of abode / 3yr residence"
+    ],
+    "proof_needed_zh": [
+      "全日制認可學額（資助或自資）",
+      "居留權／住滿3年"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/sfo/postsecondary/nlsps/overview.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/sfo/postsecondary/nlsps/overview.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "confirm_en": [
+      "Cap shared NLSFT+NLSPS since 2012/13, non-revolving",
+      "Interest from drawdown; also unlocks hostel/TSFS siblings"
+    ],
+    "confirm_zh": [
+      "2012/13起共用限額，不循環",
+      "提款起計息；可配宿舍／資助姊妹計劃"
+    ],
+    "why_en": "Tertiary fees due — borrow no-means-test, repay later.",
+    "why_zh": "要交大專學費 — 免審查先借後還。"
+  },
+  {
+    "id": "enls-2627",
+    "title_en": "Extended Non-means-tested Loan ENLS ($419,400, to Jul 2027)",
+    "title_zh": "擴展免入息審查貸款ENLS（$419,400，至2027年7月）",
+    "category": "student",
+    "value_summary_en": "Tuition loan for eligible post-secondary/continuing/professional courses in HK (incl. CEF-type). Own lifetime pot $419,400 (2026/27), 2.173%. Apply by 31 Jul 2027 before lectures end.",
+    "value_summary_zh": "香港合資格專上／持續／專業課程學費貸款（含持續進修類）。獨立終身限額$419,400（2026/27），2.173%。2027年7月31日前、完課前申請。",
+    "deadline": "2027-07-31",
+    "source_url": "https://www.wfsfaa.gov.hk/en/sfo/postsecondary/enls/overview.php",
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/sfo/postsecondary/enls/overview.php",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "ENLS-eligible HK course enrolment",
+      "Right of abode / 3yr residence"
+    ],
+    "proof_needed_zh": [
+      "入讀ENLS合資格香港課程",
+      "居留權／住滿3年"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/sfo/postsecondary/enls/faq.php",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18
+    },
+    "confirm_en": [
+      "Separate pot from NLSFT/NLSPS",
+      "Pairs with cef-25k reimbursement courses"
+    ],
+    "confirm_zh": [
+      "與NLSFT／NLSPS分開計算",
+      "可配持續進修基金發還課程"
+    ],
+    "why_en": "Adult upskilling on credit — no means test.",
+    "why_zh": "成年進修碌卡讀 — 免審查貸款。"
+  },
+  {
+    "id": "rdep-em",
+    "title_en": "Racial Diversity Employment (free EM job support, 6mo)",
+    "title_zh": "種族多元就業計劃（免費少數族裔就業支援，6個月）",
+    "category": "family",
+    "value_summary_en": "Free one-stop help for ethnic-minority jobseekers: NGO case manager, counselling, job matching, post-placement support. 6 months per enrolment. Hotline 2150 6359.",
+    "value_summary_zh": "免費一站式少數族裔求職支援：NGO個案經理、輔導、配對、入職跟進。每期6個月。熱線2150 6359。",
+    "deadline": null,
+    "source_url": "https://www2.jobs.gov.hk/0/en/information/Rdep/Intro",
+    "source_url_zh": "https://www2.jobs.gov.hk/0/tc/information/Rdep/Intro/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Ethnic-minority jobseeker",
+      "Enrol via site / NGO / LD Job Centre"
+    ],
+    "proof_needed_zh": [
+      "少數族裔求職者",
+      "網站／機構／勞工處就業中心登記"
+    ],
+    "apply_link": "https://www2.jobs.gov.hk/0/en/information/Rdep/Intro",
+    "apply_link_zh": "https://www2.jobs.gov.hk/0/tc/information/Rdep/Intro/",
+    "needs": {
+      "hk_resident": true,
+      "unemployed": true
+    },
+    "confirm_en": [
+      "Free; becomes LD registered jobseeker on enrolment",
+      "Re-enrol after 6 months if needed"
+    ],
+    "confirm_zh": [
+      "免費；登記即成勞工處求職者",
+      "6個月後可再參加"
+    ],
+    "why_en": "EM and job-hunting — a case manager, free.",
+    "why_zh": "少數族裔搵工 — 免費個案經理幫手。"
+  },
+  {
+    "id": "hksar-gov-scholarship",
+    "title_en": "HKSAR Government Scholarship ($40,000/yr local)",
+    "title_zh": "香港特別行政區政府獎學基金（本地每年$40,000）",
+    "category": "student",
+    "value_summary_en": "$40k/yr local ($80k non-local) for outstanding full-time publicly-funded sub-degree/degree+ students. Institution-nominated (academics + leadership + service).",
+    "value_summary_zh": "全日制資助副學位／學位+優異生本地每年$40k（非本地$80k）。院校提名（成績＋領袖＋服務）。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Full-time publicly-funded place (8 UGC + HKAPA + VTC)",
+      "Institution nomination"
+    ],
+    "proof_needed_zh": [
+      "全日制資助學額（8大＋演藝＋職訓局）",
+      "院校提名"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "confirm_en": [
+      "Ask your institution (nominations ~Oct/Nov)",
+      "Tenable for normal programme duration"
+    ],
+    "confirm_zh": [
+      "問院校（約10／11月提名）",
+      "資助至正常修業期"
+    ],
+    "why_en": "Top grades at uni — $40k a year says well done.",
+    "why_zh": "大學成績標青 — 每年$40k獎勵。"
+  },
+  {
+    "id": "spss-ops",
+    "title_en": "Self-financing Post-secondary Scholarship ($40,000/yr OPS)",
+    "title_zh": "自資專上獎學金（卓越表現每年$40,000）",
+    "category": "student",
+    "value_summary_en": "Outstanding Performance: $40k/yr local degree ($80k non-local), $30k sub-degree. Full-time accredited self-financing, Year 2+, CGPA 3.23+ or top non-academic awards. Via institution quota.",
+    "value_summary_zh": "卓越表現：本地學位每年$40k（非本地$80k），副學位$30k。全日制認可自資，二年級+、GPA 3.23+或頂尖非學術獎。經院校配額。",
+    "deadline": null,
+    "source_url": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Full-time accredited self-financing place",
+      "Year 2+ results / award proof"
+    ],
+    "proof_needed_zh": [
+      "全日制認可自資學額",
+      "二年級+成績／獎項證明"
+    ],
+    "apply_link": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "confirm_en": [
+      "Also TDS/BPA/ROA/EDS tracks — ask institution",
+      "Sibling: hksar-gov-scholarship (publicly-funded side)",
+      "EN-only site (no TC tree) — EDB amounts page"
+    ],
+    "confirm_zh": [
+      "另有才藝／最佳進步等組別 — 問院校",
+      "姊妹：政府獎學基金（資助學額）"
+    ],
+    "why_en": "Self-financing but stellar — $40k recognises it.",
+    "why_zh": "讀自資但成績勁 — $40k肯定你。"
+  },
+  {
+    "id": "odcp-elderly",
+    "title_en": "Outreach Dental for Care-Home Elderly (free, on-site)",
+    "title_zh": "長者牙科外展（院舍免費上門）",
+    "category": "elderly",
+    "value_summary_en": "Free on-site check-up + treatment for RCHE/nursing-home/C&A-blind-home residents (any age with HKID) or 60+ day-care users. 25 NGO teams, ~481k attendances. No means test.",
+    "value_summary_zh": "持牌安老／護養／盲人院舍院友（任何年齡＋香港身份證）或60歲+日間中心用家免費上門檢查＋治療。25隊NGO，約48萬人次。免審查。",
+    "deadline": null,
+    "source_url": "https://www.dh.gov.hk/english/main/main_ds/main_ds_dcp.html",
+    "source_url_zh": "https://www.dh.gov.hk/tc_chi/main/main_ds/main_ds_dcp.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "HKID",
+      "RCHE/nursing-home residence or 60+ day-care use"
+    ],
+    "proof_needed_zh": [
+      "香港身份證",
+      "院舍住客或60歲+日間中心用家"
+    ],
+    "apply_link": "https://www.dh.gov.hk/english/main/main_ds/main_ds_dcp.html",
+    "apply_link_zh": "https://www.dh.gov.hk/tc_chi/main/main_ds/main_ds_dcp.html",
+    "needs": {
+      "hk_resident": true,
+      "carer_context": true
+    },
+    "confirm_en": [
+      "Complex cases referred to dental clinic",
+      "Distinct from CDSP (community) and OOHP (preschool)"
+    ],
+    "confirm_zh": [
+      "複雜症轉牙科診所",
+      "與社區牙科（CDSP）／學前（OOHP）不同"
+    ],
+    "why_en": "Elderly in residential care — dentist comes to them, free.",
+    "why_zh": "長者住緊院舍 — 牙醫上門免費睇。"
+  },
+  {
+    "id": "wws-women",
+    "title_en": "Women Wellness Satellites (≤64, co-pay screening)",
+    "title_zh": "女性健康衛星中心（64歲或以下，分擔收費篩查）",
+    "category": "health",
+    "value_summary_en": "Prevention-first women's checks (assessment, cervical + breast screening, nurse clinic) via DHC referral, co-pay model. Register as DHC member first. Chai Wan open Jun 2025; Lam Tin + Tuen Mun from Sep 2025.",
+    "value_summary_zh": "預防為本婦女檢查（評估、子宮頸＋乳房篩查、護士診所），經地區康健中心轉介、分擔收費。先入會DHC。柴灣2025年6月開；藍田＋屯門9月起。",
+    "deadline": null,
+    "source_url": "https://www.dhc.gov.hk/en/wws.html",
+    "source_url_zh": "https://www.dhc.gov.hk/tc/wws.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Woman aged 64 or below",
+      "DHC/DHCE membership"
+    ],
+    "proof_needed_zh": [
+      "64歲或以下女性",
+      "地區康健中心／站會籍"
+    ],
+    "apply_link": "https://www.dhc.gov.hk/en/wws.html",
+    "apply_link_zh": "https://www.dhc.gov.hk/tc/wws.html",
+    "needs": {
+      "hk_resident": true,
+      "sex": "female",
+      "max_age": 64
+    },
+    "confirm_en": [
+      "Old DH well-woman clinics stopped new bookings Jan 2025",
+      "CSSA/waiver holders: same care at 7 HA GOPCs"
+    ],
+    "confirm_zh": [
+      "舊衛生署婦女健康中心2025年1月停新症",
+      "綜援／減免戶：7間公院門診同類服務"
+    ],
+    "why_en": "Woman 64 or under — prevention beats cure, subsidised.",
+    "why_zh": "64歲或以下女性 — 預防勝治療，有資助。"
+  },
+  {
+    "id": "ha-ivf-public",
+    "title_en": "HA Public IVF (up to 3 cycles, capped fees)",
+    "title_zh": "公營試管嬰兒（最多3個周期，收費封頂）",
+    "category": "family",
+    "value_summary_en": "Married couples, female <40 to start: up to 3 stimulation cycles at QMH/PWH/KWH. $135 first visit + $80 follow-ups, $4,000 drug pack, lab $9k-$40k/cycle. Quota rising to 1,800/yr.",
+    "value_summary_zh": "已婚夫婦、女方未滿40歲開始：瑪麗／威爾斯／廣華最多3個周期。$135首次＋$80覆診，$4,000藥包，化驗每周期$9k-$40k。名額增至每年1,800。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202304/26/P2023042600401.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202304/26/P2023042600398.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Legally married",
+      "Female under 40",
+      "GP/FPA referral → SOPC assessment"
+    ],
+    "proof_needed_zh": [
+      "合法已婚",
+      "女方未滿40歲",
+      "普通科／家計會轉介→專科評估"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202304/26/P2023042600401.htm",
+    "apply_link_zh": "https://www.info.gov.hk/gia/general/202304/26/P2023042600398.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "9 HA hospitals assess; 3 do IVF",
+      "Pairs with ird-ar-100k ($100k tax deduction)"
+    ],
+    "confirm_zh": [
+      "9間公院評估；3間做試管",
+      "可配$100k稅項扣除（ird-ar-100k）"
+    ],
+    "why_en": "Trying for a baby with medical help — public route first.",
+    "why_zh": "要醫學幫助先有BB — 先行公營路。"
+  },
+  {
+    "id": "ird-ar-100k",
+    "title_en": "Salaries Tax: Fertility Treatment ($100,000/yr)",
+    "title_zh": "薪俸稅：輔助生育開支（$100,000/年）",
+    "category": "family",
+    "value_summary_en": "IVF/AIH/gamete handling at licensed centres: deduct up to $100k/yr (self/spouse payer, self/spouse recipient, medical-need). Licensed-centre doctor proof. From YA 2024/25, 6-yr back-claims.",
+    "value_summary_zh": "持牌中心試管／人工授精／配子處理：每年扣高達$100k（自己／配偶付款、自己／配偶接受，須醫學需要）。持牌醫生證明。2024/25年度起，可追6年。",
+    "deadline": null,
+    "source_url": "https://www.ird.gov.hk/eng/tax/ars.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/ars.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Licensed-centre treatment + doctor-signed proof",
+      "Medical-need (infertility / chemo-induced)"
+    ],
+    "proof_needed_zh": [
+      "持牌中心治療＋醫生簽署證明",
+      "醫學需要（不育／化療致）"
+    ],
+    "apply_link": "https://www.ird.gov.hk/eng/tax/ars.htm",
+    "apply_link_zh": "https://www.ird.gov.hk/chi/tax/ars.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Gazetted 28 Feb 2025; pairs with ha-ivf-public",
+      "Chemo/radio-induced infertility included"
+    ],
+    "confirm_zh": [
+      "2025年2月28日刊憲；可配公營試管",
+      "化療／電療致不育都包"
+    ],
+    "why_en": "Paying for IVF — $100k of it is tax-deductible.",
+    "why_zh": "自費試管 — $100k可扣稅。"
+  },
+  {
+    "id": "ha-fmc-cap",
+    "title_en": "HA Family Medicine Clinics ($150/visit, $10k yearly cap)",
+    "title_zh": "醫管局家庭醫學門診（$150/次，全年$10k封頂）",
+    "category": "health",
+    "value_summary_en": "Eligible HKID holders: $150/visit + $5/drug item (4 weeks), $50 dressing/injection, basic labs/X-ray free. Annual spending cap $10,000. Book via HA Go. (Ex-GOPC, repriced 1 Jan 2026.)",
+    "value_summary_zh": "合資格香港身份證持有人：$150/次＋$5/種藥（4星期）、$50洗傷口打針，基本化驗照X光免費。全年上限$10,000。HA Go預約。（前普通科，2026年1月1日新收費。）",
+    "deadline": null,
+    "source_url": "https://www.ha.org.hk/ho/corpcomm/fncr/index-en.html",
+    "source_url_zh": "https://www.ha.org.hk/ho/corpcomm/fncr/index-tc.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Eligible Person (HKID / <11 HK resident)",
+      "Book via HA Go / phone"
+    ],
+    "proof_needed_zh": [
+      "合資格人士（香港身份證／11歲以下香港居民）",
+      "HA Go／電話預約"
+    ],
+    "apply_link": "https://www.ha.org.hk/ho/corpcomm/fncr/index-en.html",
+    "apply_link_zh": "https://www.ha.org.hk/ho/corpcomm/fncr/index-tc.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Intermediate labs $50/item; waiver holders auto (ha-fee-waiver)",
+      "Chronic DM/HT + mild episodic cases"
+    ],
+    "confirm_zh": [
+      "中級化驗$50/項；減免戶自動（ha-fee-waiver）",
+      "長期糖尿血壓＋輕微偶發症"
+    ],
+    "why_en": "Everyday doctor visits — $150 a go, never over $10k a year.",
+    "why_zh": "日常见醫生 — $150一次，全年唔過$10k。"
+  },
+  {
+    "id": "kmb-monthly-834",
+    "title_en": "KMB Monthly Pass ($834/30 days, 10 trips/day)",
+    "title_zh": "九巴月票（$834／30日，每日10程）",
+    "category": "transport",
+    "value_summary_en": "$834 for 30 days: up to 10 KMB/LWB trips + 2× B1 trips daily, 450+ routes. Load at kiosks with Octopus.",
+    "value_summary_zh": "$834包30日：每日最多10程九巴龍運＋2程B1，450+條線。八達通售票機買。",
+    "deadline": null,
+    "source_url": "https://www.kmb.hk/monthlypass.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Octopus",
+      "Buy at monthly-pass kiosk"
+    ],
+    "proof_needed_zh": [
+      "八達通",
+      "月票售票機買"
+    ],
+    "apply_link": "https://www.kmb.hk/monthlypass.html",
+    "needs": {
+      "hk_resident": true,
+      "min_transport_spend": 834
+    },
+    "confirm_en": [
+      "Bilingual page (TC/EN toggle)",
+      "Sibling: mtr-monthly-pass — compare bus vs rail"
+    ],
+    "confirm_zh": [
+      "中英雙語頁",
+      "姊妹：港鐵全月通 — 巴士鐵路鬥平"
+    ],
+    "why_en": "Daily KMB rider — $834 caps the month.",
+    "why_zh": "日日搭九巴 — $834封頂一個月。"
+  },
+  {
+    "id": "mtr-early-bird-25",
+    "title_en": "MTR Early Bird 25% Off (7:15-8:15am weekdays)",
+    "title_zh": "港鐵早鳥75折（平日7:15-8:15出閘）",
+    "category": "transport",
+    "value_summary_en": "25% off exiting designated core-urban stations 7:15-8:15am Mon-Fri (ex PH) on Adult Octopus. Stacks with interchange/Fare Saver/Monthly-Pass connecting discount.",
+    "value_summary_zh": "平日（假日除外）7:15-8:15成人八達通出指定市區站75折。可疊加轉乘／特惠站／全月通接駁折。",
+    "deadline": null,
+    "source_url": "https://www.mtr.com.hk/en/customer/main/early_bird.html",
+    "source_url_zh": "https://www.mtr.com.hk/ch/customer/main/early_bird.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Adult Octopus",
+      "Exit designated station in window"
+    ],
+    "proof_needed_zh": [
+      "成人八達通",
+      "時段內指定站出閘"
+    ],
+    "apply_link": "https://www.mtr.com.hk/en/customer/main/early_bird.html",
+    "apply_link_zh": "https://www.mtr.com.hk/ch/customer/main/early_bird.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Promo renewed yearly — confirm current period on page",
+      "East Rail Hung Hom-Kowloon Tong, Island, Kwun Tong + more core lines"
+    ],
+    "confirm_zh": [
+      "優惠按年延續 — 上頁確認現行有效期",
+      "東鐵紅磡九龍塘、港島、觀塘等核心線"
+    ],
+    "why_en": "Early riser — 25% off for beating the rush.",
+    "why_zh": "早起鳥 — 避開繁忙時間仲有75折。"
+  },
+  {
+    "id": "mtr-fare-saver-2",
+    "title_en": "MTR Fare Saver $2 Off + Green-Minibus Interchange",
+    "title_zh": "港鐵特惠站減$2＋綠Van轉乘優惠",
+    "category": "transport",
+    "value_summary_en": "Tap a Fare Saver reader then ride same day: $2 off (Adult Octopus). Plus $0.5+ off interchanging MTR ↔ all green-minibus routes on Octopus.",
+    "value_summary_zh": "撳特惠站讀卡器同日搭港鐵：成人八達通減$2。另港鐵↔全部綠Van線八達通轉乘減$0.5+。",
+    "deadline": null,
+    "source_url": "https://www.mtr.com.hk/en/customer/tickets/fare-saver-terms-and-conditions.html",
+    "source_url_zh": "https://www.mtr.com.hk/ch/customer/tickets/fare-saver-terms-and-conditions.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Adult Octopus",
+      "Tap reader before ride (same day)"
+    ],
+    "proof_needed_zh": [
+      "成人八達通",
+      "搭車同日先撳讀卡器"
+    ],
+    "apply_link": "https://www.mtr.com.hk/en/customer/tickets/fare-saver-terms-and-conditions.html",
+    "apply_link_zh": "https://www.mtr.com.hk/ch/customer/tickets/fare-saver-terms-and-conditions.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Excl. Airport Express / Monthly-Pass unlimited leg",
+      "Stacks with Early Bird + Monthly-Pass connecting 25%"
+    ],
+    "confirm_zh": [
+      "機場快線／全月通無限程除外",
+      "可疊早鳥＋全月通接駁75折"
+    ],
+    "why_en": "Small taps, real money — $2 off most days.",
+    "why_zh": "撳一撳慳$2 — 日日搭就係錢。"
+  },
+  {
+    "id": "budget-tax-3000",
+    "title_en": "Budget One-off: 2025/26 Tax Cut 100% (cap $3,000)",
+    "title_zh": "預算案一次過：2025/26稅款全免（上限$3,000）",
+    "category": "family",
+    "value_summary_en": "Salaries/personal-assessment/profits tax YA2025/26 cut 100%, cap $3k/case. File BIR60 as usual; IRD auto-applies. Law passed May 2026.",
+    "value_summary_zh": "2025/26薪俸／個人入息課稅／利得稅全免，上限每案$3k。照交BIR60，稅局自動扣。2026年5月通過。",
+    "deadline": null,
+    "source_url": "https://www.ird.gov.hk/eng/faq/budget2026_27.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/faq/budget2026_27.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "YA2025/26 taxpayer",
+      "File BIR60 as usual"
+    ],
+    "proof_needed_zh": [
+      "2025/26年度納稅人",
+      "照交BIR60"
+    ],
+    "apply_link": "https://www.budget.gov.hk/2026/eng/budget55.html",
+    "apply_link_zh": "https://www.budget.gov.hk/2026/chi/budget55.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "NOT the old $1,500 cap (that was YA2024/25)",
+      "One-off; next Budget may differ"
+    ],
+    "confirm_zh": [
+      "唔係舊$1,500上限（嗰個係2024/25）",
+      "一次過；下年預算案再定"
+    ],
+    "why_en": "Paid tax last year — up to $3k back, no forms.",
+    "why_zh": "舊年有交稅 — 自動回水高達$3k。"
+  },
+  {
+    "id": "budget-rates-500",
+    "title_en": "Budget One-off: Rates Waived Q1+Q2 2026/27 (cap $500/qtr)",
+    "title_zh": "預算案一次過：2026/27首兩季差餉全免（每季上限$500）",
+    "category": "housing",
+    "value_summary_en": "Domestic + non-domestic rates waived Q1+Q2 2026/27 (Apr-Sep 2026), cap $500/quarter per property. Auto-applied to demand notes.",
+    "value_summary_zh": "住宅＋非住宅2026/27首兩季（2026年4-9月）差餉全免，每物業每季上限$500。稅單自動扣。",
+    "deadline": "2026-09-30",
+    "source_url": "https://www.budget.gov.hk/2026/eng/budget55.html",
+    "source_url_zh": "https://www.budget.gov.hk/2026/chi/budget55.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Ratepayer (demand note holder)"
+    ],
+    "proof_needed_zh": [
+      "差餉繳納人（稅單持有人）"
+    ],
+    "apply_link": "https://www.budget.gov.hk/2026/eng/budget55.html",
+    "apply_link_zh": "https://www.budget.gov.hk/2026/chi/budget55.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "No application; check your quarterly demand note",
+      "No new electricity relief in 2026 Budget"
+    ],
+    "confirm_zh": [
+      "免申請；睇季度稅單",
+      "2026預算案無新增電費紓緩"
+    ],
+    "why_en": "Paying rates — two quarters waived, check the bill.",
+    "why_zh": "有交差餉 — 兩季全免，睇稅單。"
+  },
+  {
+    "id": "lad-olas",
+    "title_en": "Ordinary Legal Aid (full court representation)",
+    "title_zh": "普通法律援助（全程出庭代表）",
+    "category": "family",
+    "value_summary_en": "Means-tested full solicitor (+ counsel) representation for civil cases (District → Final Appeal, matrimonial, injury, tenancy, compensation). Resources ≤$452,320. Merits test applies.",
+    "value_summary_zh": "經審查全程律師（＋大律師）代表打民事官司（區域至終審、離婚、工傷交通、租務、僱員補償）。資產≤$452,320。須過案情審查。",
+    "deadline": null,
+    "source_url": "https://www.lad.gov.hk/eng/las/civil/olas.html",
+    "source_url_zh": "https://www.lad.gov.hk/chi/las/civil/olas.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Financial resources ≤$452,320",
+      "Case with reasonable merits"
+    ],
+    "proof_needed_zh": [
+      "財務資源≤$452,320",
+      "案情合理可爭辯"
+    ],
+    "apply_link": "https://www.lad.gov.hk/eng/las/civil/olas.html",
+    "apply_link_zh": "https://www.lad.gov.hk/chi/las/civil/olas.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Sibling: free-legal-advice (30-min preliminary only)",
+      "Bill-of-Rights cases: limit may be waived"
+    ],
+    "confirm_zh": [
+      "姊妹：免費法律諮詢（30分鐘初步）",
+      "人權法案案件限額可豁免"
+    ],
+    "why_en": "Real court fight ahead — a full lawyer, means-tested.",
+    "why_zh": "要正式打官司 — 經審查有全程律師。"
+  },
+  {
+    "id": "strive-rise-teen",
+    "title_en": "Strive and Rise: Teen Mentoring + $10,000 (S1-S4)",
+    "title_zh": "共創明Teen：師友＋$10,000（中一至中四）",
+    "category": "student",
+    "value_summary_en": "Underprivileged S1-S4 (esp. subdivided-unit families): 1-yr mentor + development plan + $5k start-up + $5k completion scholarship. 4,000 places/cohort via school.",
+    "value_summary_zh": "基層中一至中四（特別劏房戶）：1年師友＋發展計劃＋$5k啟動＋$5k畢業獎學金。每屆4,000名額，經學校。",
+    "deadline": null,
+    "source_url": "https://striveandrise.gov.hk/en",
+    "source_url_zh": "https://striveandrise.gov.hk/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "S1-S4 in participating school",
+      "Underprivileged background"
+    ],
+    "proof_needed_zh": [
+      "參與學校中一至中四",
+      "基層背景"
+    ],
+    "apply_link": "https://striveandrise.gov.hk/en",
+    "apply_link_zh": "https://striveandrise.gov.hk/",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_level": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "afi_max": 46292
+    },
+    "confirm_en": [
+      "4th cohort closed Nov 2025 — watch for next round",
+      "District Organiser + app support"
+    ],
+    "confirm_zh": [
+      "第4期2025年11月截止 — 等下一期",
+      "地區統籌＋App支援"
+    ],
+    "why_en": "Tight-budget teen at home — mentor plus $10k.",
+    "why_zh": "屋企有基層中學生 — 師友加$10,000。"
+  },
+  {
+    "id": "youth-hostel-yhs",
+    "title_en": "Youth Hostel Scheme (≤60% market rent, 18-30)",
+    "title_zh": "青年宿舍計劃（六折租金，18-30歲）",
+    "category": "housing",
+    "value_summary_en": "Working youth 18-30 (HKPR, no property): hostel at ≤60% nearby market rent, 2-yr first tenancy to 5yrs max. 1p income ≤$29,600, assets ≤$411k. ~3,700 places.",
+    "value_summary_zh": "在職青年18-30歲（香港永久居民、無物業）：宿舍六折租金，首約2年、最長5年。單人入息≤$29,600資產≤$411k。約3,700宿位。",
+    "deadline": null,
+    "source_url": "https://www.hyab.gov.hk/en/policy_responsibilities/Social_Harmony_and_Civic_Education/youth_hostel_scheme.htm",
+    "source_url_zh": "https://www.hyab.gov.hk/tc/policy_responsibilities/Social_Harmony_and_Civic_Education/youth_hostel_scheme.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Aged 18-30, HKPR, working",
+      "No residential property",
+      "Income + asset proof"
+    ],
+    "proof_needed_zh": [
+      "18-30歲香港永久居民在職",
+      "無住宅物業",
+      "入息資產證明"
+    ],
+    "apply_link": "https://www.hyab.gov.hk/en/policy_responsibilities/Social_Harmony_and_Civic_Education/youth_hostel_scheme.htm",
+    "apply_link_zh": "https://www.hyab.gov.hk/tc/policy_responsibilities/Social_Harmony_and_Civic_Education/youth_hostel_scheme.htm",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18,
+      "max_age": 30,
+      "no_property": true
+    },
+    "confirm_en": [
+      "Apply direct to NGO operators (HKFYG, Po Leung Kuk + 6 more)",
+      "2p caps double the 1p caps"
+    ],
+    "confirm_zh": [
+      "直接向營辦機構申請（青協、保良局等）",
+      "2人上限係單人雙倍"
+    ],
+    "why_en": "Young and working but priced out — halve the rent, save the rest.",
+    "why_zh": "後生打工租唔起樓 — 半價宿舍儲錢。"
+  },
+  {
+    "id": "elder-academy",
+    "title_en": "Elder Academy (learn on real campuses, ~200)",
+    "title_zh": "長者學苑（校園上課，約200間）",
+    "category": "elderly",
+    "value_summary_en": "Learn in real primary/secondary/post-secondary campuses: ~200 academies via NGO-school partnerships, mostly free or nominal fee. Enrol per academy.",
+    "value_summary_zh": "中小大專校園上課：約200間學苑，NGO＋學校合辦，多數免費或象徵收費。逐間報名。",
+    "deadline": null,
+    "source_url": "https://www.elderacademy.org.hk/about-elder-academy/",
+    "source_url_zh": "https://www.elderacademy.org.hk/tc/about-elder-academy/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Older person (usually 60+)",
+      "Enrol at academy of choice"
+    ],
+    "proof_needed_zh": [
+      "長者（一般60歲+）",
+      "向心儀學苑報名"
+    ],
+    "apply_link": "https://www.elderacademy.org.hk/about-elder-academy/",
+    "apply_link_zh": "https://www.elderacademy.org.hk/tc/about-elder-academy/",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 60
+    },
+    "confirm_en": [
+      "LWB + Elderly Commission scheme since 2007",
+      "Clusters share cross-school courses"
+    ],
+    "confirm_zh": [
+      "勞福局＋安老事務委員會2007年起辦",
+      "聯網跨校課程"
+    ],
+    "why_en": "Retired and curious — back to school, from $0.",
+    "why_zh": "退休想學嘢 — 重返校園，近乎免費。"
+  },
+  {
+    "id": "smhss-student-mental",
+    "title_en": "Student Mental Health Support (school team + HA nurse)",
+    "title_zh": "學生精神健康支援（校隊＋公院護士）",
+    "category": "student",
+    "value_summary_en": "210 schools: HA psychiatric nurse + teacher + social worker team with individual care plans (parental consent). Plus 3-tier emergency mechanism in all secondary schools from Dec 2025.",
+    "value_summary_zh": "210間學校：公院精神科護士＋老師＋社工小組個別跟進（須家長同意）。另三層應急機制2025年12月起全中學推行。",
+    "deadline": null,
+    "source_url": "https://mentalhealth.edb.gov.hk/en/support-programmes/student-mental-health-support-scheme.html",
+    "source_url_zh": "https://mentalhealth.edb.gov.hk/tc/support-programmes/student-mental-health-support-scheme.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Student in participating school",
+      "Parental consent for assessment/plan"
+    ],
+    "proof_needed_zh": [
+      "參與學校學生",
+      "家長同意評估／照顧計劃"
+    ],
+    "apply_link": "https://mentalhealth.edb.gov.hk/en/support-programmes/student-mental-health-support-scheme.html",
+    "apply_link_zh": "https://mentalhealth.edb.gov.hk/tc/support-programmes/student-mental-health-support-scheme.html",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_any": true
+    },
+    "confirm_en": [
+      "Ask school counsellor/social worker for referral",
+      "Crisis: 18111 hotline (mh-18111)"
+    ],
+    "confirm_zh": [
+      "問學校輔導／社工轉介",
+      "危機打18111（mh-18111）"
+    ],
+    "why_en": "Child struggling at school — a clinical team, not just talk.",
+    "why_zh": "仔女喺學校唔開心 — 有醫護團隊跟，唔止傾偈。"
+  },
+  {
+    "id": "em-support-centres",
+    "title_en": "EM Support Centres (10 free centres + TELIS hotline)",
+    "title_zh": "少數族裔支援中心（10間免費＋傳譯熱線）",
+    "category": "family",
+    "value_summary_en": "10 HAD-funded centres: free Cantonese/English classes, after-school tutorials, integration activities, counselling + free phone interpretation in 8 languages (TELIS daily 8am-10pm).",
+    "value_summary_zh": "10間民政資助中心：免費廣東話／英文班、課後補習、融合活動、輔導＋8種語言免費電話傳譯（每日朝8晚10）。",
+    "deadline": null,
+    "source_url": "https://www.had.gov.hk/rru/en/programmes/support_service_centres.php",
+    "source_url_zh": "https://www.had.gov.hk/rru/tc_chi/programmes/support_service_centres.php",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Ethnic-minority background",
+      "Walk in or call"
+    ],
+    "proof_needed_zh": [
+      "少數族裔背景",
+      "親身或致電"
+    ],
+    "apply_link": "https://www.had.gov.hk/rru/en/programmes/support_service_centres.php",
+    "apply_link_zh": "https://www.had.gov.hk/rru/tc_chi/programmes/support_service_centres.php",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Operators: HKCS/CHEER, ISS/HOPE, YMCA/LINK + more",
+      "Sibling: rdep-em (job support)"
+    ],
+    "confirm_zh": [
+      "營辦：香港基督教服務處／香港國際社會服務社等",
+      "姊妹：種族多元就業（rdep-em）"
+    ],
+    "why_en": "EM family new or settled — free classes and a hotline that speaks your language.",
+    "why_zh": "少數族裔家庭 — 免費課程＋識你語言嘅熱線。"
+  },
+  {
+    "id": "tava-2026",
+    "title_en": "Traffic Accident Victims Aid ($330/day × 60, no means test)",
+    "title_zh": "交通意外傷亡援助（$330/日×60日，免審查）",
+    "category": "family",
+    "value_summary_en": "Police-reported traffic victims: $330/day up to 60 days sick leave + death/disability/burial per schedule. No means test. Apply within 6 months. Paid ~7 working days after approval.",
+    "value_summary_zh": "有報警交通意外傷者：病假$330/日最多60日＋死亡／傷殘／殮葬按表。免審查。意外後6個月內申請。批後約7個工作天發放。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/trafficacc/",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/trafficacc/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Police report (Cap.229)",
+      "7+ days hospital/sick leave or death/disability",
+      "Legal stay in HK"
+    ],
+    "proof_needed_zh": [
+      "警方案件（第229章）",
+      "住院／病假7日+或死亡傷殘",
+      "合法留港"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/trafficacc/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/trafficacc/",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Burial $17,540; death to $270,110; disability to $228,790",
+      "Sibling: cleic-2026 (crime victims)"
+    ],
+    "confirm_zh": [
+      "殮葬$17,540；死亡高達$270,110；傷殘高達$228,790",
+      "姊妹：暴力傷亡賠償（cleic-2026）"
+    ],
+    "why_en": "Hurt on the road — cash help without a means test.",
+    "why_zh": "交通意外受傷 — 免審查現金援助。"
+  },
+  {
+    "id": "cleic-2026",
+    "title_en": "Crime Victims Compensation (ex-gratia, no means test)",
+    "title_zh": "暴力及執法傷亡賠償（特惠金，免審查）",
+    "category": "family",
+    "value_summary_en": "Victims of violent crime / law-enforcement weapon use: ex-gratia award on common-law damages basis (death/disability/injury schedule). Non-contributory, no means test. Apply within 3 years.",
+    "value_summary_zh": "暴力罪行／執法武器傷亡受害人：按普通法損害基準特惠賠償（死亡／傷殘／受傷表）。非供款、免審查。事發3年內申請。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/criminalan/",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/criminalan/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Crime reported / proceedings",
+      "3+ days hospital/sick leave or death/disability",
+      "Legal stay in HK"
+    ],
+    "proof_needed_zh": [
+      "已報案／刑事程序",
+      "住院／病假3日+或死亡傷殘",
+      "合法留港"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/criminalan/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/criminalan/",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Board-assessed; separate from TAVA traffic scheme",
+      "Re-apply window: 3yr or 1yr after withdrawal"
+    ],
+    "confirm_zh": [
+      "委員會評定；與交通意外分開",
+      "再申請：3年或撤回後1年"
+    ],
+    "why_en": "Hurt by crime — the state compensates, no means test.",
+    "why_zh": "暴力罪行受害 — 政府賠償，免審查。"
+  },
+  {
+    "id": "erf-relief",
+    "title_en": "Emergency Relief Fund (fire/typhoon/flood cash + shelter)",
+    "title_zh": "緊急救援基金（火災風災水災現金＋收容）",
+    "category": "family",
+    "value_summary_en": "Fire/typhoon/flood/landslide/collapse victims + closure-order evacuees: urgent cash relief (not compensation) + evacuation centres/food/shelter. Apply within 6 months.",
+    "value_summary_zh": "火災／颱風／水浸／山泥／塌樓受害人＋封閉令撤離戶：緊急現金救濟（非賠償）＋收容中心／膳食／棲身。事發6個月內申請。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/emergencyr/",
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/emergencyr/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Disaster/evacuation proof",
+      "Legal stay + in need"
+    ],
+    "proof_needed_zh": [
+      "災難／撤離證明",
+      "合法留港＋有需要"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/emergencyr/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/emergencyr/",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "SWD covers injury/death; Lands/Marine/AFCD other losses",
+      "Relief, not compensation"
+    ],
+    "confirm_zh": [
+      "社署管傷亡；地政／海事／漁護管其他損失",
+      "救濟唔係賠償"
+    ],
+    "why_en": "Disaster just hit — cash and shelter first, questions later.",
+    "why_zh": "啱啱遇災 — 先有現金同收容。"
+  },
+  {
+    "id": "compassionate-rehousing",
+    "title_en": "Compassionate Rehousing (SWD fast-track to PRH)",
+    "title_zh": "體恤安置（社署特快上公屋）",
+    "category": "housing",
+    "value_summary_en": "Genuine imminent long-term housing need on social/medical grounds with no alternative: SWD recommends, HD allocates ASAP (no district choice, refurbished flat OK). Must pass PRH limits.",
+    "value_summary_zh": "有迫切長期住屋需要（社會／醫療原因、別無他法）：社署推薦、房署盡快編配（無得揀區、翻新單位要受）。須過公屋限額。",
+    "deadline": null,
+    "source_url": "https://www.housingauthority.gov.hk/en/flat-application/income-and-asset-limits/",
+    "source_url_zh": "https://www.housingauthority.gov.hk/tc/flat-application/income-and-asset-limits/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "SWD/NGO caseworker + DSWO endorsement",
+      "PRH income/asset + property tests",
+      "Half household 7yr residence"
+    ],
+    "proof_needed_zh": [
+      "社署／機構社工＋專員認可",
+      "公屋入息資產＋物業審查",
+      "半數家人居港7年"
+    ],
+    "apply_link": "https://www.housingauthority.gov.hk/en/flat-application/income-and-asset-limits/",
+    "apply_link_zh": "https://www.housingauthority.gov.hk/tc/flat-application/income-and-asset-limits/",
+    "needs": {
+      "hk_resident": true,
+      "min_hk_years": 7,
+      "no_property": true,
+      "prh_exact": true
+    },
+    "confirm_en": [
+      "Conditional Tenancy path for divorcing persons",
+      "Sibling: prh-apply (normal queue)"
+    ],
+    "confirm_zh": [
+      "離婚待判者走有條件租約",
+      "姊妹：正常輪候（prh-apply）"
+    ],
+    "why_en": "Housing crisis with nowhere else to turn — the fast track exists.",
+    "why_zh": "住屋危機走投無路 — 特快通道喺度。"
+  },
+  {
+    "id": "bmgsno-80k",
+    "title_en": "Building Maintenance Grant $80,000 (needy elderly owners)",
+    "title_zh": "有需要業主維修津貼$80,000（長者業主）",
+    "category": "housing",
+    "value_summary_en": "Owner-occupiers 60+ (or OALA/CSSA/DA with tests): up to $80k per owner/property for flat + common-area safety works. Max 4 claims in 10 years. Via URA. (Old $40k elderly scheme closed 2020.)",
+    "value_summary_zh": "60歲+自住業主（或長生津／綜援／傷殘津貼經審查）：每業主／物業高達$80k做單位＋公用安全工程。10年最多4次。經市建局。（舊$40k長者計劃2020年停。）",
+    "deadline": null,
+    "source_url": "https://brplatform.org.hk/en/faq",
+    "source_url_zh": "https://brplatform.org.hk/tc/faq",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "HKID + owner-occupier + residing spouse",
+      "60+ with income/asset test (or OALA/CSSA/DA)",
+      "Not undischarged bankrupt"
+    ],
+    "proof_needed_zh": [
+      "香港身份證＋自住業主＋同住配偶",
+      "60歲+入息資產審查（或長生津／綜援／傷殘）",
+      "非未解除破產"
+    ],
+    "apply_link": "https://brplatform.org.hk/en/faq",
+    "apply_link_zh": "https://brplatform.org.hk/tc/faq",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 60
+    },
+    "confirm_en": [
+      "Pro-rata by ownership share; repays BD/HKHS/URA loans OK",
+      "Sibling: lad-olas for building disputes"
+    ],
+    "confirm_zh": [
+      "按業權攤分；可還屋宇署／房協／市建局貸款",
+      "大廈糾紛問法援（lad-olas）"
+    ],
+    "why_en": "Elderly owner, crumbling flat — $80k to fix it safe.",
+    "why_zh": "長者業主樓殘 — $80k整返安全。"
+  },
+  {
+    "id": "efas-2026",
+    "title_en": "Express Flat Allocation (self-pick PRH, 50% off stale flats)",
+    "title_zh": "特快公屋編配（自選樓，冷門單位半價租）",
+    "category": "housing",
+    "value_summary_en": "Valid PRH applicants self-pick less-popular flats for early allocation (no district limit). Long-vacancy flats 50% off. EFAS 2026 selection from 2 Sep 2026 (applied Jul 2026). Yearly exercise.",
+    "value_summary_zh": "合資格公屋申請人自選冷門單位早著（唔限區）。長期空置單位半價租。2026年9月2日起揀樓（7月已收表）。每年一期。",
+    "deadline": null,
+    "source_url": "https://www.housingauthority.gov.hk/en/flat-application/express-flat-allocation-scheme/",
+    "source_url_zh": "https://www.housingauthority.gov.hk/tc/flat-application/express-flat-allocation-scheme/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Valid PRH application meeting exercise cutoff",
+      "Half family 7yr residence"
+    ],
+    "proof_needed_zh": [
+      "有效公屋申請＋符合該期截數",
+      "半數家人居港7年"
+    ],
+    "apply_link": "https://www.housingauthority.gov.hk/en/flat-application/express-flat-allocation-scheme/",
+    "apply_link_zh": "https://www.housingauthority.gov.hk/tc/flat-application/express-flat-allocation-scheme/",
+    "needs": {
+      "hk_resident": true,
+      "min_hk_years": 7,
+      "no_property": true,
+      "prh_exact": true
+    },
+    "confirm_en": [
+      "EFAS 2026: batch 1 (2+ persons) then 1-person",
+      "Sibling: prh-apply, transitional-housing, lph-light-housing"
+    ],
+    "confirm_zh": [
+      "2026年：先2人+後單人",
+      "姊妹：輪候／過渡屋／簡約公屋"
+    ],
+    "why_en": "In the PRH queue and flexible — jump it with self-pick.",
+    "why_zh": "排緊公屋又唔揀區 — 自選樓快著。"
+  },
+  {
+    "id": "ird-basic-allowance",
+    "title_en": "Salaries Tax: Basic Allowance ($145,000 from 2026/27)",
+    "title_zh": "薪俸稅：基本免稅額（2026/27起$145,000）",
+    "category": "family",
+    "value_summary_en": "$145,000 off for every salaries-tax/personal-assessment taxpayer from 2026/27 ($132k before). Automatic unless on married allowance. Law passed May 2026.",
+    "value_summary_zh": "2026/27起每名薪俸／個人入息課稅人減$145,000（之前$132k）。除非用已婚免稅額，否則自動有。2026年5月通過。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Salaries-tax / personal-assessment taxpayer"
+    ],
+    "proof_needed_zh": [
+      "薪俸稅／個人入息課稅人"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "No claim needed; BIR60 yearly",
+      "Sibling: ird-married-allowance ($290k if married)"
+    ],
+    "confirm_zh": [
+      "免申請；每年BIR60",
+      "姊妹：已婚$290k（ird-married-allowance）"
+    ],
+    "why_en": "Everyone paying salaries tax — $145k off, automatic.",
+    "why_zh": "有交薪俸稅人人有 — 自動減$145k。"
+  },
+  {
+    "id": "ird-married-allowance",
+    "title_en": "Salaries Tax: Married Allowance ($290,000 from 2026/27)",
+    "title_zh": "薪俸稅：已婚人士免稅額（2026/27起$290,000）",
+    "category": "family",
+    "value_summary_en": "$290,000 off for married taxpayers from 2026/27 ($264k before). Married any time in year, not living apart; spouse no income or joint/personal assessment.",
+    "value_summary_zh": "2026/27起已婚納稅人減$290,000（之前$264k）。年內任何時間已婚、分開報稅除外；配偶無入息或合併／個人入息課稅。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Married in year, not living apart",
+      "Spouse income / assessment choice"
+    ],
+    "proof_needed_zh": [
+      "年內已婚、非分居",
+      "配偶入息／課稅選擇"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "BIR60/IR831 within 6 years",
+      "Replaces basic allowance (can't stack)"
+    ],
+    "confirm_zh": [
+      "BIR60／IR831，6年內",
+      "取代基本免稅額（唔疊得）"
+    ],
+    "why_en": "Married — $290k off the joint burden.",
+    "why_zh": "已婚 — 減$290k。"
+  },
+  {
+    "id": "ird-sibling-allowance",
+    "title_en": "Salaries Tax: Dependent Sibling ($37,500 each)",
+    "title_zh": "薪俸稅：供養兄弟姊妹（每名$37,500）",
+    "category": "family",
+    "value_summary_en": "$37,500 per unmarried sibling you maintain: <18, or 18-24 full-time study, or 18+ unable to work (disability). Sole/predominant care.",
+    "value_summary_zh": "每名供養未婚兄弟姊妹$37,500：未滿18、或18-24全日制讀書、或18歲+因殘疾不能工作。獨力／主要供養。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Sibling age/study/disability proof",
+      "Maintenance proof"
+    ],
+    "proof_needed_zh": [
+      "兄弟姊妹年齡／讀書／殘疾證明",
+      "供養證明"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Unchanged $37,500 since 2020/21",
+      "Stacks with child/parent allowances"
+    ],
+    "confirm_zh": [
+      "2020/21起維持$37,500",
+      "可疊子女／父母免稅額"
+    ],
+    "why_en": "Supporting a sibling — $37.5k recognition.",
+    "why_zh": "供養緊細佬妹 — $37,500認可。"
+  },
+  {
+    "id": "hkic-skill-training",
+    "title_en": "HKIC Construction Training (free + $10,000/mo)",
+    "title_zh": "建造學院技能培訓（免費＋$10,000/月）",
+    "category": "student",
+    "value_summary_en": "Aged 18+, work-eligible: free full-time construction trade training + $10,000/mo attendance allowance + retention bonus (~$12,910/mo avg on 105-day courses). Rolling intakes.",
+    "value_summary_zh": "18歲+可合法工作：免費全日制建造業技能培訓＋$10,000/月出席津貼＋留任獎（105日課程月均約$12,910）。循環招生。",
+    "deadline": null,
+    "source_url": "https://www.hkic.edu.hk/en/programmes/skill-training/czta",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Aged 18+",
+      "Legally employable HK resident",
+      "Chinese literate / Cantonese-speaking"
+    ],
+    "proof_needed_zh": [
+      "年滿18歲",
+      "可合法工作香港居民",
+      "中文讀寫／廣東話"
+    ],
+    "apply_link": "https://www.hkic.edu.hk/en/programmes/skill-training/czta",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18,
+      "edu_max_rank": 1
+    },
+    "confirm_en": [
+      "EN-only site (no TC tree)",
+      "Courses: CZTA/CZMW/CZGG trades; payout by attendance"
+    ],
+    "confirm_zh": [
+      "英文站（無中文版）",
+      "課程：CZTA／CZMW／CZGG工種；按出席率發放"
+    ],
+    "why_en": "Hands-on and 18+ — trained free, paid $10k a month.",
+    "why_zh": "18歲+肯做嘢 — 免費學師兼月拎$10k。"
+  },
+  {
+    "id": "qf-rpl-reimburse",
+    "title_en": "RPL Assessment Fee Back in Full (100%)",
+    "title_zh": "過往資歷認可評估費全額發還（100%）",
+    "category": "student",
+    "value_summary_en": "Working practitioners passing an RPL cluster assessment: 100% of the assessment fee back after the Statement of Attainment. Apply within 2 years of SoA.",
+    "value_summary_zh": "在職人士通過資歷認可組合評估：攞到能力單元證明後發還100%評估費。證明發出2年內申請。",
+    "deadline": null,
+    "source_url": "https://hkqf.gov.hk/en/support-schemes",
+    "source_url_zh": "https://hkqf.gov.hk/tc/support-schemes",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "SoA via appointed Assessment Agency",
+      "Apply within 2 years of SoA"
+    ],
+    "proof_needed_zh": [
+      "經指定評核機構攞證明",
+      "證明發出2年內申請"
+    ],
+    "apply_link": "https://hkqf.gov.hk/en/support-schemes",
+    "apply_link_zh": "https://hkqf.gov.hk/tc/support-schemes",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 18
+    },
+    "confirm_en": [
+      "Experience certified free — fee refunded",
+      "Stacks with CEF-eligible upskilling"
+    ],
+    "confirm_zh": [
+      "經驗認證免費 — 評估費退返",
+      "可配持續進修基金課程"
+    ],
+    "why_en": "Years of skill, no paper — certify it for free.",
+    "why_zh": "多年經驗無文憑 — 免費認證佢。"
+  },
+  {
+    "id": "dh-social-hygiene-free",
+    "title_en": "Social Hygiene Clinics (free STI check + treatment)",
+    "title_zh": "社會衞生科（免費性病檢查＋治療）",
+    "category": "health",
+    "value_summary_en": "Eligible HKID holders: free STI/leprosy check-up, treatment + confidential counselling at 6 clinics (Wan Chai, Yau Ma Tei, Kwun Tong, Tuen Mun, Fanling…). Walk in, no referral.",
+    "value_summary_zh": "合資格香港身份證持有人：6間診所免費性病／痲瘋檢查治療＋保密輔導（灣仔、油麻地、觀塘、屯門、粉嶺…）。免預約免轉介。",
+    "deadline": null,
+    "source_url": "https://www.dh.gov.hk/english/tele/tele_chc/tele_chc_shcf.html",
+    "source_url_zh": "https://www.dh.gov.hk/tc_chi/tele/tele_chc/tele_chc_shcf.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Eligible Person (HKID / <11 HK resident)",
+      "Walk in during session hours"
+    ],
+    "proof_needed_zh": [
+      "合資格人士（香港身份證／11歲以下香港居民）",
+      "應診時間直接去"
+    ],
+    "apply_link": "https://www.dh.gov.hk/english/tele/tele_chc/tele_chc_shcf.html",
+    "apply_link_zh": "https://www.dh.gov.hk/tc_chi/tele/tele_chc/tele_chc_shcf.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "Male/female sessions; all info confidential",
+      "Fee schedule: no charge (updated Jan 2026)"
+    ],
+    "confirm_zh": [
+      "分男女應診時段；資料保密",
+      "收費表：免費（2026年1月更新）"
+    ],
+    "why_en": "Worried and waiting — free, confidential, walk in.",
+    "why_zh": "擔心又唔敢問 — 免費保密，直接去。"
+  }
+]

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- Shared line-art style: ink #26232e strokes, pastel fills, round caps -->
+  <symbol id="art-city" viewBox="0 0 320 120">
+    <g fill="none" stroke="#26232e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="8" y="60" width="26" height="60" rx="4" fill="#fff"/>
+      <rect x="38" y="44" width="30" height="76" rx="4" fill="#ddd6fe"/>
+      <rect x="72" y="66" width="22" height="54" rx="4" fill="#fff"/>
+      <rect x="98" y="30" width="26" height="90" rx="4" fill="#ddd6fe"/>
+      <path d="M128 120 V52 L141 30 L154 120 Z" fill="#fff"/>
+      <rect x="158" y="56" width="28" height="64" rx="4" fill="#a7f3d0"/>
+      <rect x="190" y="40" width="24" height="80" rx="4" fill="#fff"/>
+      <rect x="218" y="64" width="30" height="56" rx="4" fill="#ddd6fe"/>
+      <rect x="252" y="50" width="26" height="70" rx="4" fill="#fff"/>
+      <rect x="282" y="70" width="30" height="50" rx="4" fill="#a7f3d0"/>
+      <circle cx="262" cy="26" r="13" fill="#fcd34d"/>
+    </g>
+  </symbol>
+
+  <symbol id="art-magnet" viewBox="0 0 200 150">
+    <path d="M60 20 h80 v42 h-22 V42 H82 v20 H60 Z" fill="#ddd6fe" stroke="#26232e" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="60" y="62" width="22" height="18" rx="3" fill="#fff" stroke="#26232e" stroke-width="5"/>
+    <rect x="118" y="62" width="22" height="18" rx="3" fill="#fff" stroke="#26232e" stroke-width="5"/>
+    <g fill="none" stroke="#26232e" stroke-width="4" stroke-linecap="round">
+      <path d="M70 94 q5 8 0 16"/><path d="M100 94 q5 8 0 16"/><path d="M130 94 q5 8 0 16"/>
+    </g>
+    <g stroke="#26232e" stroke-width="4">
+      <circle cx="70" cy="126" r="13" fill="#c4b5fd"/><circle cx="100" cy="131" r="13" fill="#a7f3d0"/><circle cx="130" cy="126" r="13" fill="#c4b5fd"/>
+    </g>
+    <g fill="none" stroke="#26232e" stroke-width="4" stroke-linecap="round">
+      <path d="M38 36 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 Z"/>
+      <path d="M164 28 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 Z"/>
+    </g>
+  </symbol>
+
+  <symbol id="art-calm" viewBox="0 0 200 150">
+    <rect x="55" y="32" width="90" height="88" rx="14" fill="#fff" stroke="#26232e" stroke-width="5"/>
+    <path d="M55 46 a14 14 0 0 1 14 -14 h62 a14 14 0 0 1 14 14 v12 H55 Z" fill="#c4b5fd" stroke="#26232e" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="75" y="22" width="10" height="22" rx="5" fill="#fff" stroke="#26232e" stroke-width="5"/>
+    <rect x="115" y="22" width="10" height="22" rx="5" fill="#fff" stroke="#26232e" stroke-width="5"/>
+    <circle cx="100" cy="88" r="20" fill="#a7f3d0" stroke="#26232e" stroke-width="5"/>
+    <path d="M91 88 l7 7 13 -14" fill="none" stroke="#26232e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="none" stroke="#26232e" stroke-width="4" stroke-linecap="round">
+      <path d="M38 62 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 Z"/>
+      <path d="M164 94 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 Z"/>
+    </g>
+  </symbol>
+
+  <symbol id="art-gift" viewBox="0 0 200 150">
+    <rect x="60" y="82" width="80" height="50" rx="10" fill="#a7f3d0" stroke="#26232e" stroke-width="5"/>
+    <rect x="92" y="82" width="16" height="50" fill="#c4b5fd" stroke="#26232e" stroke-width="5"/>
+    <path d="M50 62 h100 l-10 20 H60 Z" fill="#fff" stroke="#26232e" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M100 62 v-14 c-12 0 -20 -6 -18 -16 8 -2 14 4 18 10 4 -6 10 -12 18 -10 2 10 -6 16 -18 16 Z" fill="#ddd6fe" stroke="#26232e" stroke-width="5" stroke-linejoin="round"/>
+    <g stroke="#26232e" stroke-width="4">
+      <circle cx="66" cy="50" r="11" fill="#c4b5fd"/><circle cx="134" cy="46" r="11" fill="#c4b5fd"/><circle cx="154" cy="66" r="9" fill="#fcd34d"/>
+    </g>
+  </symbol>
+
+  <symbol id="art-search" viewBox="0 0 200 150">
+    <rect x="60" y="26" width="76" height="98" rx="10" fill="#fff" stroke="#26232e" stroke-width="5"/>
+    <rect x="74" y="46" width="48" height="8" rx="4" fill="#ddd6fe"/>
+    <rect x="74" y="62" width="48" height="8" rx="4" fill="#ddd6fe"/>
+    <rect x="74" y="78" width="30" height="8" rx="4" fill="#e9e4fb"/>
+    <circle cx="118" cy="96" r="24" fill="#c4b5fd" stroke="#26232e" stroke-width="5"/>
+    <circle cx="118" cy="96" r="13" fill="#fff" stroke="#26232e" stroke-width="4"/>
+    <rect x="132" y="110" width="28" height="11" rx="5.5" fill="#26232e" transform="rotate(45 132 110)"/>
+  </symbol>
+
+  <symbol id="art-shield" viewBox="0 0 200 150">
+    <path d="M100 14 L150 32 v38 c0 34 -22 56 -50 66 C72 126 50 104 50 70 V32 Z" fill="#a7f3d0" stroke="#26232e" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M86 80 l10 10 20 -22" fill="none" stroke="#26232e" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#26232e" stroke-width="4">
+      <circle cx="50" cy="118" r="12" fill="#c4b5fd"/><circle cx="152" cy="116" r="12" fill="#c4b5fd"/>
+    </g>
+  </symbol>
+
+  <symbol id="art-lock" viewBox="0 0 200 150">
+    <circle cx="100" cy="78" r="58" fill="none" stroke="#26232e" stroke-width="4" stroke-dasharray="10 10" stroke-linecap="round"/>
+    <rect x="76" y="66" width="48" height="42" rx="10" fill="#c4b5fd" stroke="#26232e" stroke-width="5"/>
+    <path d="M84 66 V52 a16 16 0 0 1 32 0 v14" fill="none" stroke="#26232e" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="100" cy="84" r="5" fill="#26232e"/>
+    <rect x="97.5" y="84" width="5" height="12" rx="2.5" fill="#26232e"/>
+    <g fill="none" stroke="#26232e" stroke-width="4" stroke-linecap="round">
+      <circle cx="152" cy="48" r="9" fill="#a7f3d0" stroke-width="5"/>
+      <path d="M152 57 v16 m0 0 h10"/>
+    </g>
+  </symbol>
+</svg>

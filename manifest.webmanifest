@@ -1,0 +1,12 @@
+{
+  "name": "WellFairy 援助仙 — 福利配對",
+  "short_name": "WellFairy",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ece7fd",
+  "theme_color": "#967bb6",
+  "description": "Profile once, match HK gov schemes. Offline PWA, local JSON.",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

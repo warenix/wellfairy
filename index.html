@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WellFairy 援助仙 — 應得的福利，自動話你知</title>
+<meta name="description" content="Profile once, match HK gov schemes. Offline PWA, local JSON.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#967bb6">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">🧚</span><div><strong>WellFairy 援助仙</strong><span data-i18n="brandSub">福利配對 · 離線可用</span></div></div>
+  <div class="topact">
+    <button id="langToggle" class="ghostbtn" type="button">EN / 繁中</button>
+    <button id="installBtn" class="solidbtn" type="button" hidden data-i18n="install">⬇ 安裝</button>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="主導航">
+  <button data-tab="match" class="active" type="button">✨ <span data-i18n="tabMatch">配對</span></button>
+  <button data-tab="all" type="button">📚 <span data-i18n="tabAll">全部</span></button>
+  <button data-tab="profile" type="button">👤 <span data-i18n="tabProfile">檔案</span></button>
+  <button data-tab="about" type="button">ℹ️ <span data-i18n="tabAbout">關於</span></button>
+</nav>
+
+<main>
+  <section id="tab-match">
+    <div class="hero">
+      <div class="hero-text">
+        <p class="eyebrow" id="heroEyebrow" data-i18n="heroEyebrow">你符合以下資助</p>
+        <h2><span id="heroCount">0</span> <small>/ <span id="heroTotal">0</span> <span data-i18n="heroUnit">項福利</span></small></h2>
+        <p class="hero-sub" id="heroSub"></p>
+        <div class="hero-stats">
+          <div><strong id="statSoon">0</strong><span data-i18n="statDeadline">30日內截止</span></div>
+          <div><strong id="statSave">0</strong><span data-i18n="statSaved">已收藏</span></div>
+          <div><strong id="statCat">0</strong><span data-i18n="statCat">類別</span></div>
+        </div>
+      </div>
+      <div class="hero-card" aria-hidden="true"><div class="ring"><span id="ringPct">0%</span></div><p data-i18n="matchRate">配對率</p></div>
+    </div>
+
+    <div class="chips" id="chips"></div>
+
+    <section class="sec sec-soon">
+      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg></div><div class="sec-t"><h3 data-i18n="secSoon">即將截止</h3><p data-i18n="secSoonD">這些設有截止日期，敬請及時辦理</p></div><span class="sec-count hot" id="soonCount"></span><button class="linkbtn" data-goto="all" type="button" data-i18n="viewAll">查看全部 →</button></div>
+      <div id="soon" class="hscroll"></div>
+    </section>
+
+    <section class="sec sec-now">
+      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg></div><div class="sec-t"><h3 data-i18n="secNow">符合資格</h3><p data-i18n="secNowD">您符合資格，歡迎直接申請</p></div><span class="sec-count ok" id="nowCount"></span></div>
+      <div id="now" class="grid"></div>
+    </section>
+
+    <section class="sec sec-miss">
+      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 data-i18n="secAlmost">差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可解鎖</p></div><span class="sec-count" id="missCount"></span></div>
+      <div id="miss" class="grid"></div>
+    </section>
+  </section>
+
+  <section id="tab-all" hidden>
+    <div class="searchbar"><span>🔍</span><input id="q" type="search" data-i18n-ph="searchPh" placeholder="搜尋 醫療券 / KCFRS / WFA / 車船津貼…"></div>
+    <div class="chips" id="chipsAll"></div>
+    <div id="all" class="grid"></div>
+  </section>
+
+  <section id="tab-profile" hidden>
+    <div class="sheet">
+      <h3 data-i18n="profileH">👤 2分鐘檔案 · 配對更準</h3>
+      <div class="progress"><div id="pbar"></div></div>
+      <form id="profileForm">
+        <fieldset class="fgroup"><legend data-i18n="g_identity">個人資料</legend>
+        <div class="frow"><label><span data-i18n="fAge">你的年齡</span><input type="number" name="age" min="18" max="100" value="34"></label>
+        <label><span data-i18n="fHousehold">家庭人數</span><input type="number" name="householdN" min="1" max="10" value="4"></label></div>
+        <div class="frow"><label><span data-i18n="fSex">性別 Sex</span><select name="sex"><option value="female" selected data-i18n-opt="os_f">女 Female</option><option value="male" data-i18n-opt="os_m">男 Male</option></select></label>
+        <label><span data-i18n="fEdu">學歷 Education</span><select name="eduRank"><option value="0" data-i18n-opt="oe_sec">中學或以下 Secondary-</option><option value="1" selected data-i18n-opt="oe_sub">副學位 Sub-degree</option><option value="2" data-i18n-opt="oe_deg">學位或以上 Degree+</option></select></label></div>
+        <label class="check"><input type="checkbox" name="hk_resident" checked> <span data-i18n="fResident">香港居民 / 住滿3年</span></label>
+        <label><span data-i18n="fYears">居港年數 Years in HK</span> <span id="hkYearsOut" class="count">7年或以上</span><input type="range" name="hkYears" min="0" max="7" step="1" value="7"></label>
+        <label class="check"><input type="checkbox" name="ehealth"> <span data-i18n="fEhealth">已登記醫健通eHealth</span></label>
+        <label class="check"><input type="checkbox" name="married" checked> <span data-i18n="fMarried">已婚/同居 Married/cohabiting</span> <small data-i18n="fMarriedHint">(夫婦限額)</small></label>
+        </fieldset>
+        <fieldset class="fgroup"><legend data-i18n="g_home">家居經濟</legend>
+        <label><span data-i18n="fDistrict">地區 District</span><select name="district">
+          <optgroup label="香港島 HK Island" data-i18n-og="og_hk">
+            <option value="Central & Western" data-i18n-opt="od_cw">中西區 Central & Western</option>
+            <option value="Eastern" data-i18n-opt="od_east">東區 Eastern</option>
+            <option value="Southern" data-i18n-opt="od_south">南區 Southern</option>
+            <option value="Wan Chai" data-i18n-opt="od_wc">灣仔 Wan Chai</option>
+          </optgroup>
+          <optgroup label="九龍 Kowloon" data-i18n-og="og_kl">
+            <option value="Kowloon City" data-i18n-opt="od_kc">九龍城 Kowloon City</option>
+            <option value="Kwun Tong" data-i18n-opt="od_kt">觀塘 Kwun Tong</option>
+            <option value="Sham Shui Po" data-i18n-opt="od_ssp">深水埗 Sham Shui Po</option>
+            <option value="Wong Tai Sin" data-i18n-opt="od_wts">黃大仙 Wong Tai Sin</option>
+            <option value="Yau Tsim Mong" data-i18n-opt="od_ytm">油尖旺 Yau Tsim Mong</option>
+          </optgroup>
+          <optgroup label="新界 New Territories" data-i18n-og="og_nt">
+            <option value="Islands" data-i18n-opt="od_isl">離島 Islands</option>
+            <option value="Kwai Tsing" data-i18n-opt="od_kwt">葵青 Kwai Tsing</option>
+            <option value="North" data-i18n-opt="od_north">北區 North</option>
+            <option value="Sai Kung" data-i18n-opt="od_sk">西貢 Sai Kung (含將軍澳)</option>
+            <option value="Sha Tin" data-i18n-opt="od_st">沙田 Sha Tin</option>
+            <option value="Tai Po" data-i18n-opt="od_tp">大埔 Tai Po</option>
+            <option value="Tsuen Wan" data-i18n-opt="od_tw">荃灣 Tsuen Wan</option>
+            <option value="Tuen Mun" data-i18n-opt="od_tm">屯門 Tuen Mun</option>
+            <option value="Yuen Long" data-i18n-opt="od_yl">元朗 Yuen Long</option>
+          </optgroup>
+        </select></label>
+        <label><span data-i18n="fHousing">住屋 Housing</span><select name="housing"><option value="private" selected data-i18n-opt="oh_priv">私樓 Private</option><option value="prh" data-i18n-opt="oh_prh">公屋 PRH</option><option value="subsidised" data-i18n-opt="oh_sub">資助房屋 Subsidised</option><option value="other" data-i18n-opt="oh_other">其他 Other</option></select></label>
+        <label class="check sub"><input type="checkbox" name="ownsProperty"> <span data-i18n="fOwns">過去24個月擁有物業 Own property (24mo)</span></label>
+        <div class="frow"><label><span data-i18n="fIncome">家庭每月總入息 (HKD, exact)</span><input type="number" name="monthlyIncome" min="0" max="500000" step="500" value="38000"></label>
+        <label><span data-i18n="fAssets">總資產淨值 Net assets (HKD)</span><input type="number" name="assets" min="0" step="1000" value="200000"></label></div>
+        <div class="frow"><label><span data-i18n="fWorkhrs">全家每月總工時</span><input type="number" name="workHours" value="160"></label>
+        <label><span data-i18n="fTransport">每月車費 Transport/mo (HKD)</span><input type="number" name="transportSpend" min="0" step="50" value="800"></label></div>
+        </fieldset>
+        <fieldset class="fgroup"><legend data-i18n="g_family">子女及家人</legend>
+        <div><span data-i18n="fKids">子女</span>
+          <div class="kidpick">
+            <button type="button" id="kidtoggle" class="kidtoggle" aria-haspopup="true"><span id="kidlabel"></span><span class="caret">▾</span></button>
+            <div class="kidpanel" id="kidpanel" hidden>
+              <div class="kidchips" id="kidchips"></div>
+              <button type="button" id="kiddone" class="btn" data-i18n="kidDone">完成</button>
+            </div>
+          </div>
+          <input type="hidden" name="kids" value="K2,P3">
+        </div>
+        <label class="check sub"><input type="checkbox" name="hasToddler"> <span data-i18n="fToddler">家有未入園幼兒</span></label>
+        <label class="check sub"><input type="checkbox" name="hasTertiary"> <span data-i18n="fTertiary">家有大專生</span></label>
+        <label class="check sub"><input type="checkbox" name="childSEN"> <span data-i18n="fChildSEN">子女有特殊需要/等緊評估 Child SEN / awaiting assessment</span></label>
+        <label class="check sub"><input type="checkbox" name="hasElderly"> <span data-i18n="fElderly">家中有65+長者</span></label>
+        <label class="check sub"><input type="checkbox" name="livesMainland"> <span data-i18n="fLivesMainland">現居廣東／福建</span></label>
+        <label class="check sub"><input type="checkbox" name="isCarer"> <span data-i18n="fCarer">每月照顧長者/殘疾家人80小時+ Carer 80+hrs/mo</span></label>
+        <label class="check sub"><input type="checkbox" name="hasDisability"> <span data-i18n="fDisability">重度殘疾 (持醫生證明) Severely disabled</span></label>
+        <label class="check sub"><input type="checkbox" name="smoker"> <span data-i18n="fSmoker">家有吸煙者</span></label>
+        </fieldset>
+        <fieldset class="fgroup"><legend data-i18n="g_status">領取狀況（只可選一項津貼）</legend>
+        <label class="check sub"><input type="checkbox" name="onAllowance"> <span data-i18n="fOnAllow">正領高齡/傷殘津貼 On OAA/DA</span> <small data-i18n="fOnAllowHint">(長者生活津貼除外)</small></label>
+        <label class="check sub"><input type="checkbox" name="onOALA"> <span data-i18n="fOnOALA">正領長者生活津貼 On OALA</span> <small data-i18n="fOnOALAHint">(可銜接牙科及醫療支援)</small></label>
+        <label class="check sub"><input type="checkbox" name="isCSSA"> <span data-i18n="fCSSA">領綜合社會保障援助(綜援）中</span> <small data-i18n="fCSSAHint">(在職家庭津貼不可同領)</small></label>
+        <label class="check sub"><input type="checkbox" name="unemployed"> <span data-i18n="fUnemployed">現正失業並正尋找工作</span></label>
+        </fieldset>
+        <div class="btnrow">
+          <button type="submit" class="solidbtn big" data-i18n="save">💾 儲存並重新配對</button>
+          <button type="button" id="exportBtn" class="ghostbtn" data-i18n="btnExport">⬆ 匯出</button>
+          <button type="button" id="importBtn" class="ghostbtn" data-i18n="btnImport">⬇ 匯入</button>
+          <input type="file" id="importFile" accept="application/json" hidden>
+        </div>
+      </form>
+      <p class="hint" data-i18n="hintStore">只存手機 localStorage + 你 export 的 profile.json。目錄是 data/benefits.json 純文字。</p>
+    </div>
+  </section>
+
+  <section id="tab-about" hidden>
+    <div class="sheet">
+      <svg class="about-art" aria-hidden="true"><use href="art.svg#art-shield"/></svg>
+      <h3 data-i18n="aboutH">點解信得過？</h3>
+      <ol class="steps">
+        <li data-i18n="ab1">每個配對顯示點解你符合 + 需咩證明</li>
+        <li data-i18n="ab2">每個都附政府來源連結 + 更新日期</li>
+        <li data-i18n="ab3">只提醒、不代交表，錯配以政府為準</li>
+      </ol>
+      <h4 data-i18n="techH">技術</h4>
+      <p class="hint" data-i18n="techP">PWA · Service Worker 離線 · data/benefits.json 即改即生效 · 配對引擎 app.js</p>
+    </div>
+  </section>
+</main>
+
+<dialog id="detail"></dialog>
+<footer><small data-i18n="footer">Prototype — 申請前請以政府網站為準。</small></footer>
+<script src="app.js"></script>
+</body>
+</html>
