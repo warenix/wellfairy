@@ -3,7 +3,7 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (140 schemes, 2026-09-17)
+- Catalog: `data/benefits.json` (141 schemes, 2026-09-17)
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
 - Last full verification: **2026-09-17** (167 URLs checked, 1 transient + 2 soft-404 fixed; all crawl-batch URLs 200)
@@ -300,3 +300,16 @@
   * Foster care: none known
   * Dementia support: no TC version; accept EN fallback
   * Free legal advice: must book via referral agency (not walk-in); case details required at booking or no slot allocated
+
+## S38 · Financial Assistance Scheme for Family Members of Those Who Sacrifice Their Lives to Save Others (LWB)
+- URLs:
+  * EN: https://www.lwb.gov.hk/en/servicedesk/forms/fund.html
+  * TC: https://www.lwb.gov.hk/tc/servicedesk/forms/fund.html
+- Schemes: `fahs-save-2026`
+- Cadence: ad-hoc (press releases announce approvals; formula unchanged unless announced)
+- Extract:
+  * Scheme purpose: one-off grant to families of persons who lost life attempting to save/protect others
+  * Amount formula: based on age, normal retirement age, prevailing median monthly employment earnings; min/max currently $6M/$12M (raised 2024; check press releases)
+  * Application: via LWB committee, form downloadable from page
+- Pitfall:
+  * Amounts updated via press releases — monitor info.gov.hk / news.gov.hk for “Financial Assistance Scheme for Family Members...” updates; min/max can change

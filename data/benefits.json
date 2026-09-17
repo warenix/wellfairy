@@ -5058,5 +5058,36 @@
     ],
     "why_en": "Worried and waiting — free, confidential, walk in.",
     "why_zh": "擔心又唔敢問 — 免費保密，直接去。"
+  },
+  {
+    "id": "fahs-save-2026",
+    "title_en": "Financial Assistance Scheme for Family Members of Those Who Sacrifice Their Lives to Save Others $6M-$12M",
+    "title_zh": "為拯救他人而犧牲生命者家屬的經濟援助計劃 $600萬-$1,200萬",
+    "category": "family",
+    "value_summary_en": "One-off grant $6M-$12M based on age, normal retirement age and prevailing median monthly employment earnings. For families of persons who lost their lives attempting to save or protect others.",
+    "value_summary_zh": "一次性資助 $600萬至$1,200萬，依年齡、正常退休年齡及現行每月就業收入中位數計算。為嘗試拯救或保護他人而犧牲生命者之家屬。",
+    "deadline": null,
+    "source_url": "https://www.lwb.gov.hk/en/servicedesk/forms/fund.html",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "Death certificate",
+      "Proof of relationship to deceased",
+      "Police report/incident evidence",
+      "Completed application form"
+    ],
+    "apply_link": "https://www.lwb.gov.hk/en/servicedesk/forms/fund.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "You are family of someone who died saving or protecting others.",
+    "why_zh": "你是為拯救或保護他人而犧牲生命者的家屬。",
+    "proof_needed_zh": [
+      "死亡證明書",
+      "與死者關係證明",
+      "警方報告/事件證據",
+      "已填妥申請表"
+    ],
+    "source_url_zh": "https://www.lwb.gov.hk/tc/servicedesk/forms/fund.html",
+    "apply_link_zh": "https://www.lwb.gov.hk/tc/servicedesk/forms/fund.html"
   }
 ]
