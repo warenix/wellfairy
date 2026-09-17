@@ -1,5 +1,5 @@
 /* Offline-first SW. Bump CACHE to refresh. No external URLs cached. */
-const CACHE = 'hkbm-v63';
+const CACHE = 'hkbm-v64';
 const ASSETS = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './art.svg', './data/benefits.json', './icons/icon.svg'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));

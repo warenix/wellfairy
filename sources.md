@@ -3,7 +3,7 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (141 schemes, 2026-09-17)
+- Catalog: `data/benefits.json` (142 schemes, 2026-09-17)
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
 - Last full verification: **2026-09-17** (167 URLs checked, 1 transient + 2 soft-404 fixed; all crawl-batch URLs 200)
@@ -313,3 +313,17 @@
   * Application: via LWB committee, form downloadable from page
 - Pitfall:
   * Amounts updated via press releases — monitor info.gov.hk / news.gov.hk for “Financial Assistance Scheme for Family Members...” updates; min/max can change
+
+## S39 · Portable Comprehensive Social Security Assistance (PCSSA)
+- URLs:
+  * EN: https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/portableco/
+  * TC: https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/portableco/
+- Schemes: `pcssa-2026`
+- Cadence: yearly (CSSA standard rates updated annually)
+- Extract:
+  * Eligibility: HK permanent resident, lived HK ≥7 years, aged 65+, CSSA continuously ≥1 year, intends permanent residence in Guangdong/Fujian within 3 months
+  * Payment: monthly standard rate + annual long-term supplement; no rent/special grants; burial grant possible
+  * Payment method: HKD to Mainland Type I account at BoC/ICBC free, or HK account
+- Pitfall:
+  * PRH tenants must surrender/delete tenancy before departure
+  * No special grants payable once ported

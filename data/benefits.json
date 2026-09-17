@@ -5089,5 +5089,39 @@
     ],
     "source_url_zh": "https://www.lwb.gov.hk/tc/servicedesk/forms/fund.html",
     "apply_link_zh": "https://www.lwb.gov.hk/tc/servicedesk/forms/fund.html"
+  },
+  {
+    "id": "pcssa-2026",
+    "title_en": "Portable CSSA (PCSSA) for elderly retiring to Guangdong/Fujian",
+    "title_zh": "可攜綜援(PCSSA)長者移居廣東/福建",
+    "category": "elderly",
+    "value_summary_en": "Monthly CSSA standard rate + annual long-term supplement paid to HK bank account or Mainland Type I account. No rent/special grants; burial grant available.",
+    "value_summary_zh": "每月綜援標準金額＋每年長期補貼，入香港戶口或內地一類戶口。無租金/特別津貼；可獲殮葬津貼。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/portableco/",
+    "updated_at": "2026-09-17",
+    "proof_needed_en": [
+      "HK permanent resident",
+      "Aged 65+",
+      "CSSA receipt for ≥1 year",
+      "Departure date declaration",
+      "PRH surrender if tenant"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/portableco/",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 65
+    },
+    "why_en": "You are 65+, HK permanent resident with ≥7 years residence, and on CSSA ≥1 year intending to retire permanently to Guangdong/Fujian.",
+    "why_zh": "你年滿65歲，香港永久居民住港≥7年，綜援≥1年，計劃永久移居廣東/福建。",
+    "proof_needed_zh": [
+      "香港永久居民",
+      "年滿65歲",
+      "綜援領取≥1年",
+      "離港日期聲明",
+      "若為公屋租戶需交還/註銷"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/portableco/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/portableco/"
   }
 ]
