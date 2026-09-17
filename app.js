@@ -1,7 +1,7 @@
 /* WellFairy 援助仙 — modern match UI, same local JSON storage */
 const LS_KEY = 'hkbm_profile_v1', SAVE_KEY = 'hkbm_saved_v1', HIDE_KEY = 'hkbm_hidden_v1';
 let BENEFITS = [], LANG = localStorage.getItem('hkbm_lang') || 'zh';
-let FILTER = 'all', FILTER_ALL = 'all';
+let FILTER = 'all', FILTER_ALL = 'all', LIFE_FILTER = 'all';
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const t = (en, zh) => LANG === 'zh' ? (zh || en) : (en || zh);
@@ -126,7 +126,23 @@ function applyI18n() {
 function hkYearsOut(){ const f=$('#profileForm'); if(!f||!f.hkYears) return; const v=+f.hkYears.value; const o=$('#hkYearsOut'); if(o) o.textContent = v>=7 ? t('7+ years','7年或以上') : v+t(' yr','年'); }
 const CAT_ICON = { elderly: '👵', student: '🎒', family: '👨‍👩‍👧', health: '🏥', transport: '🚌', housing: '🏠' };
 const CAT_NAME = { elderly: {en:'Elderly',zh:'長者'}, student: {en:'Study',zh:'升學'}, family: {en:'Family',zh:'家庭'}, health: {en:'Health',zh:'健康'}, transport: {en:'Transport',zh:'交通'}, housing: {en:'Housing',zh:'房屋'} };
-
+const LIFE_EVENTS = [
+  {id:'elderly-care',en:'Elderly Care',zh:'長者護理'},
+  {id:'newborn-parenting',en:'Newborn/Parenting',zh:'新生兒/育兒'},
+  {id:'disability',en:'Disability',zh:'殘疾支援'},
+  {id:'unemployment',en:'Unemployment',zh:'失業支援'},
+  {id:'housing-public',en:'Housing/Public Housing',zh:'房屋/公屋'}
+];
+function getLifeEvents(b){
+  const n = b.needs || {};
+  const tags = new Set();
+  if (b.category==='elderly' || n.min_age>=65 || n.requires_elderly_in_house) tags.add('elderly-care');
+  if (n.has_kids_any || n.has_kids_level || n.toddler || n.child_sen || b.category==='family' && /kid|child|parent|toddler|newborn/i.test((b.title_en||'')+(b.title_zh||''))) tags.add('newborn-parenting');
+  if (n.requires_disability || b.category==='health' && /disab/i.test((b.title_en||''))) tags.add('disability');
+  if (n.unemployed) tags.add('unemployment');
+  if (b.category==='housing' || (n.housing_in && n.housing_in.includes('prh')) || /public rental|prh|housing/i.test((b.title_en||''))) tags.add('housing-public');
+  return [...tags];
+}
 const def = () => ({ age: 34, hk_resident: true, hkYears: 7, householdN: 4, monthlyIncome: 38000, assets: 200000, sex: 'female', married: true, housing: 'private', ownsProperty: false, onAllowance: false, onOALA: false, eduRank: 1, transportSpend: 800, hasDisability: false, isCarer: false, childSEN: false, unemployed: false, hasToddler: false, ehealth: false, hasTertiary: false, livesMainland: false, smoker: false, district: 'Sha Tin', hasElderly: false, isCSSA: false, workHours: 160, kids: ['K2','P3'] });
 // eduRank: 0 secondary-or-below · 1 sub-degree · 2 degree-or-above
 // AFI = gross annual income / (household members + 1). SFO 2026/27 bands:
@@ -248,11 +264,13 @@ function openDetail(id) {
   const b = BENEFITS.find(x=>x.id===id); if(!b) return;
   const d = $('#detail');
   const cat = CAT_NAME[b.category] || {en:b.category,zh:b.category};
+  const related = BENEFITS.filter(x=>x.category===b.category && x.id!==b.id).slice(0,5).map(x=>`<a class="relink" href="#" data-open="${esc(x.id)}">${esc(t(x.title_en,x.title_zh))}</a>`).join('');
   d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}">${CAT_ICON[b.category]||'🎁'}</div>
     <div><h3>${esc(t(b.title_en,b.title_zh))}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
     <div class="pills">${deadlinePill(b)}</div>
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
     <div class="why">💡 ${esc(t(b.why_en,b.why_zh))}<br><br>🧾 <strong>${t('Please bring','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please confirm before applying','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br>🔗 <strong>${t('Source','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
+    ${related ? `<div class="relatives"><strong>${t('Related schemes in this category','同類資助')}</strong><br>${related}</div>`:''}
     <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')}</a>
     <button class="btn ghost" id="shareBtn" type="button">🔗 ${t('Share','分享')}</button>
     <button class="btn ghost" id="closeD" type="button">${t('Close','關閉')}</button></div>
@@ -305,12 +323,13 @@ function render() {
   applyI18n();
   const p = loadP();
   const visible = b => !HIDDEN.has(b.id);
+  const lifePass = b => LIFE_FILTER==='all' || getLifeEvents(b).includes(LIFE_FILTER);
   const hitAll = BENEFITS.filter(b=>matches(b,p));
-  const hit = hitAll.filter(visible);
+  const hit = hitAll.filter(visible).filter(lifePass);
   const soonAll = hitAll.filter(b=>{const d=daysTo(b.deadline);return d!=null&&d>=0&&d<=30;});
   const nowAll = hitAll.filter(b=>{const d=daysTo(b.deadline);return d==null||d>30;});
   const missAll = BENEFITS.filter(b=>!matches(b,p));
-  const miss = missAll.filter(visible);
+  const miss = missAll.filter(visible).filter(lifePass);
   const cats = [...new Set(BENEFITS.filter(visible).map(b=>b.category))];
   $('#heroCount').textContent = hit.length; $('#heroTotal').textContent = BENEFITS.filter(visible).length;
   const soonVisible = soonAll.filter(visible);
@@ -320,14 +339,21 @@ function render() {
   document.querySelector('.ring').style.setProperty('--p', pct+'%');
   $('#heroSub').textContent = t(`${distName(p.district)} · kids ${(p.kids||[]).join(',')||'—'} · $${(+p.monthlyIncome||0).toLocaleString()}/mo · AFI ${afiOf(p).toLocaleString()} (${afiLevel(afiOf(p)).en})`,
     `${distName(p.district)} · 子女 ${(p.kids||[]).join(',')||'—'} · 月入$${(+p.monthlyIncome||0).toLocaleString()} · 經調整家庭收入AFI ${afiOf(p).toLocaleString()} (${afiLevel(afiOf(p)).zh})`);
-  $('#nowCount').textContent = `${nowAll.filter(visible).filter(b=>passFilter(b,FILTER)).length} ${t('items','項')}`;
-  $('#soonCount').textContent = soonVisible.length ? `${soonVisible.length} ${t('urgent','件需辦理')}` : '';
+  $('#nowCount').textContent = `${nowAll.filter(visible).filter(lifePass).filter(b=>passFilter(b,FILTER)).length} ${t('items','項')}`;
+  $('#soonCount').textContent = soonVisible.length ? `${soonVisible.filter(lifePass).filter(b=>passFilter(b,FILTER)).length} ${t('urgent','件需辦理')}` : '';
   $('#missCount').textContent = `${miss.length} ${t('items','項')}`;
   chips($('#chips'), cats, FILTER, f=>{FILTER=f;render();});
   chips($('#chipsAll'), cats, FILTER_ALL, f=>{FILTER_ALL=f;render();});
+  // life event filter chips
+  const lifeChipsEl = $('#lifeChips');
+  if (lifeChipsEl) {
+    const lifeList = [{id:'all',en:'All Life Events',zh:'全部人生階段'}, ...LIFE_EVENTS];
+    lifeChipsEl.innerHTML = lifeList.map(c=>`<button type="button" class="chip ${LIFE_FILTER===c.id?'active':''}" data-life="${c.id}">${esc(t(c.en,c.zh))}</button>`).join('');
+    lifeChipsEl.querySelectorAll('button').forEach(b=>b.onclick=()=>{LIFE_FILTER=b.dataset.life;render();});
+  }
   renderKidChips();
-  $('#soon').innerHTML = soonAll.filter(b=>passFilter(b,FILTER)).sort((a,b2)=>daysTo(a.deadline)-daysTo(b2.deadline)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg><p>${t('No urgent deadlines. Nice.','暫無急件。')}</p></div>`;
-  $('#now').innerHTML = nowAll.filter(b=>passFilter(b,FILTER)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg><p>${t('No direct matches yet — complete your profile or check One step away.','目前暫無直接符合的項目 — 不妨先完善檔案資料，或查看「只差一步」。')}</p></div>`;
+  $('#soon').innerHTML = soonAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).sort((a,b2)=>daysTo(a.deadline)-daysTo(b2.deadline)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg><p>${t('No urgent deadlines. Nice.','暫無急件。')}</p></div>`;
+  $('#now').innerHTML = nowAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg><p>${t('No direct matches yet — complete your profile or check One step away.','目前暫無直接符合的項目 — 不妨先完善檔案資料，或查看「只差一步」。')}</p></div>`;
   $('#miss').innerHTML = miss
     .map(b => ({ b, r: audit(b, p) }))
     .sort((x, y) => x.r.length - y.r.length)
@@ -335,7 +361,7 @@ function render() {
     .map(({ b, r }) => card(b, { lock: r[0] || '', more: r.length > 1 ? r.length - 1 : 0 }))
     .join('') || `<p class="hint">—</p>`;
   const q = ($('#q').value||'').toLowerCase();
-  const allItems = BENEFITS.filter(b=>passFilter(b,FILTER_ALL)).filter(b=>!q||(b.title_en+b.title_zh+b.id).toLowerCase().includes(q));
+  const allItems = BENEFITS.filter(lifePass).filter(b=>passFilter(b,FILTER_ALL)).filter(b=>!q||(b.title_en+b.title_zh+b.id).toLowerCase().includes(q));
   const hiddenHeader = FILTER_ALL==='hidden' ? `<div class="hidden-toolbar"><button id="unhideAllBtn" class="btn ghost" type="button">${t('↩ Unhide all','↩ 全部取消隱藏')}</button><span class="hint">${HIDDEN.size} ${t('hidden','已隱藏')}</span></div>` : '';
   $('#all').innerHTML = hiddenHeader + (allItems.map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-search"/></svg><p>${FILTER_ALL==='hidden' ? t('No hidden schemes — tap 🙈 on any card to hide it.','暫無隱藏計劃 — 按任何卡上嘅 🙈 即可隱藏。') : t('No schemes match that search.','無計劃符合呢個搜尋。')}</p></div>`);
   const done = [p.age>0, (p.kids||[]).length>0, !!p.district].filter(Boolean).length;
