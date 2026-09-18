@@ -78,16 +78,16 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 |---|---|---|---|
 | D1 | S04/S31 | SWD `ccf_current` page — standing watch for new CCF batches | recurring |
 | D2 | S40/S41 | EDB/UGC scholarship pages — watch for new streams (HKPF PhD Fellowship is separate P-row, not here) | recurring |
-| D3 | S10/S30/S35 | Next HOS sale exercise — new mini-site URL + limits when announced | waiting (no HOS 2026 announced) |
+| D3 | S10/S30/S35 | Next HOS sale exercise — new mini-site URL + limits when announced | in_progress (lightning) |
 | D4 | S36 | IRD allowances gap check — closed: child/parent/sibling current; rents added S49 (`ird-rent-100k`) | done |
 | D5 | S14/S17 | HA Samaritan Fund — promoted to S42 (`samaritan-fund-2026`) | done |
 | D6 | S26/S34 | VTC Earn & Learn — corroborated existing `vtc-earn-learn` | done |
-| D7 | S27 | Newborn-bonus expiry Oct 2026 + Policy Address extension proposal — revisit, do not pre-encode | waiting |
+| D7 | S27 | Newborn-bonus expiry Oct 2026 + Policy Address extension proposal — revisit, do not pre-encode | in_progress (lightning) |
 | D8 | S05 | CSSA burial grant — promoted to S49 (`cssa-burial-grant`) | done |
 | D9 | S46 | HKMC property-based Reverse Mortgage — promoted to S50 (`reverse-mortgage-property`) | done |
 | D10 | S45 | UGC PGS per-uni rate drift — rates revise each September; re-check `ugc-pgs-2026` yearly | recurring |
 | D11 | S46 | RCSV quota 7,000 (2026-27) + NH-place expansion take-up — re-check values each April | recurring |
-| D12 | S44 | EHC → DHC network integration — may retire/merge `ehc-elderly-check`; watch DH announcements | waiting |
+| D12 | S44 | EHC → DHC network integration — may retire/merge `ehc-elderly-check`; watch DH announcements | in_progress (lightning) |
 
 ## Pending frontier — new sources (BFS candidates)
 
@@ -104,7 +104,7 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P09 | LCSD concessions (leisure facilities, museums, libraries for elderly/disabled/students) | promoted to S49 (`lcsd-concession`) | done |
 | P10 | WSD Water Safety Plan Subsidy Scheme (buildings' internal plumbing) | promoted to S48 (`wsd-wspss-310k`) | done |
 | P11 | Feed-in Tariff solar (CLP/HKE, gov-approved earnings for rooftop solar) | promoted to S48 (`fit-solar-4kwh`) | done |
-| P12 | Power company care funds (CLP Power Connect / HKE Smart Power Care Fund, needy + subdivided units) | BLOCKED: clp.com + hkelectric.com bot-wall curl 403 — needs browser verify, do not guess | blocked |
+| P12 | Power company care funds (CLP Power Connect / HKE Smart Power Care Fund, needy + subdivided units) | BLOCKED: clp.com + hkelectric.com bot-wall curl 403 — needs browser verify, do not guess | in_progress (lightning) |
 | P13 | AFCD loan funds (Fisheries Development Loan Fund, agricultural loans for primary producers) | promoted to S49 (`afcd-fish-loan`, `afcd-farm-loan`) | done |
 | P14 | FEHD fee waivers for needy (cremation/burial-related?) | CLOSED: no standalone scheme — after-death is procedural; costs via `cssa-burial-grant` | done |
 | P15 | HAD owners'-corporation / building-management support | promoted to S48 (`had-bmpass`) | done |
@@ -120,7 +120,7 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P25 | GBA youth entrepreneurship funding (YDC Funding Scheme for Youth Entrepreneurship) | promoted to S47 (`gba-youth-startup-600k`) | done |
 | P26 | ImmD aid to distressed HK residents abroad (emergency loans?) | promoted to S49 (`imm-1868-assist` service; no cash loans found — referrals only) | done |
 | P07 | CCF new batches (standing) | SWD `ccf_current` page each cycle | recurring |
-| P08 | HOS next sale exercise (standing) | websearch `HOS sale exercise Housing Authority` when rumored | waiting |
+| P08 | HOS next sale exercise (standing) | websearch `HOS sale exercise Housing Authority` when rumored | in_progress (lightning) |
 
 ## Expired / do-not-revive
 

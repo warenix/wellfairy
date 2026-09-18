@@ -304,12 +304,18 @@ function openDetail(id) {
   };
 }
 
+function clearSchemeUrl() {
+  if ((location.hash || '').startsWith('#/s/')) {
+    history.replaceState({schemeId:null}, '', location.pathname + location.search);
+  }
+}
+
 function closeDetail() {
   const d = $('#detail');
   if (d.open) d.close();
   delete d.dataset.cur;
   detailStack = [];
-  // keep history entry; user can back to previous page if desired
+  clearSchemeUrl();
 }
 
 function openHash() {
@@ -405,8 +411,7 @@ async function init() {
   $('#exportBtn').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([localStorage.getItem(LS_KEY)||'{}'],{type:'application/json'}));a.download='profile.json';a.click();};
   $('#importBtn').onclick=()=>$('#importFile').click();
   $('#importFile').onchange=e=>{const fl=e.target.files[0];if(!fl)return;fl.text().then(x=>{try{saveP(JSON.parse(x));location.reload();}catch{alert(t('Bad profile.json','profile.json 格式錯誤'));}});};
-  $('#q').oninput=render;
-  if (f.hkYears) f.hkYears.oninput=hkYearsOut;
+  $('#q').oninput=render;  if (f.hkYears) f.hkYears.oninput=hkYearsOut;
   wireKidPick(); renderKidChips();
   const excl = (name, others) => { f[name].onchange = () => { if (f[name].checked) others.forEach(o => { f[o].checked = false; }); }; };
   excl('onAllowance', ['onOALA', 'isCSSA']); excl('onOALA', ['onAllowance', 'isCSSA']); excl('isCSSA', ['onAllowance', 'onOALA']);
@@ -421,6 +426,9 @@ async function init() {
   });
   let d; window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();d=e;$('#installBtn').hidden=false;});
   $('#installBtn').onclick=async()=>{if(d){d.prompt();d=null;}};
+  const topBtn=$('#topBtn');
+  addEventListener('scroll',()=>topBtn.classList.toggle('show',scrollY>600),{passive:true});
+  topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
   if('serviceWorker' in navigator){try{await navigator.serviceWorker.register('sw.js');}catch{}}
   render();
   window.addEventListener('hashchange', openHash);
@@ -434,7 +442,7 @@ async function init() {
       if (d.open) { d.close(); delete d.dataset.cur; }
     }
   });
-  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; });
+  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); });
   openHash();
 }
 init();
