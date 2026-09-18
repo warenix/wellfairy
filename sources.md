@@ -3,10 +3,11 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (187 schemes, 2026-09-18)
+- Catalog: `data/benefits.json` (189 schemes, 2026-09-18)
+- Crawl map (BFS sources / DFS deep-dives / frontier): `crawl-map.md`
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
-- Last full verification: **2026-09-18** (187 schemes: 182 + 5 SPSS/FTSS crawl S41)
+- Last full verification: **2026-09-18** (189 schemes: 187 + HKPFS/Samaritan S42 + ird-child top-up S43)
 - Last refresh run: **2026-09-17** — 4 crawl batches added 57 schemes (83 → 140) + 3 fixes (fare-2dollar wording, poa-2027 deadline 9-26→9-25, spd-job-matching new URL). Batches: S25–S27 (10) · S28–S30 (14) · S31–S33 (16) · S34–S36 (17). Details live in the sections below.
 - Editorial update **2026-09-17** (no re-crawl): added §Deadline watchlist, §Bilingual quirks table, cross-pointers in S04/S05/S06/S10–S13/S16/S20/S22/S24, open queries (EPEM retention line, CDSP Level-1-vs-2, K1 28-Nov provisional), expanded Expired list. Verification dates unchanged.
 
@@ -351,3 +352,22 @@
 - Cadence: yearly (SPSS via institution nomination ~Nov/Jan; FTSS per intake, rolling + interview)
 - Extract: award amounts, CGPA bars (OPS 3.23+, BPA 2-yr completion), one-award-per-year rule, FTSS no-double-benefit (CEF excluded, loans OK), full/part-time both eligible
 - Pitfall: HKMU SPSS page 403 from crawler — do not link institution pages; cspe.edu.hk unreachable — use studyinhongkong + press release instead.
+
+## S42 · PhD Fellowship + Samaritan Fund (added 2026-09-18)
+- URLs:
+  * HKPFS EN: https://www.ugc.edu.hk/eng/rgc/funding_opport/hkpfs/index.html (EN-only; no TC twin claimed)
+  * HKPFS apply: https://cerg1.ugc.edu.hk/hkpfs/index.html
+  * Samaritan EN: https://www.ha.org.hk/haho/ho/sf/SF_e.htm
+  * Samaritan ZH: https://www.ha.org.hk/haho/ho/sf/SF_c.htm
+  * Eligibility EN/ZH: …/sf/eligibility_en.htm · …/sf/eligibility_c.htm
+  * Means test EN/ZH: …/sf/sf_fa_txt_en.htm · …/sf/sf_fa_txt_c.htm
+- Schemes: `hkpfs-2728` (400/yr, $344,400 stipend + $14,400 travel ×3yrs, 1 Sep–1 Dec 2026 for 2027/28), `samaritan-fund-2026` (PPMI/new-tech, MMDHI income limits @28 Feb 2026, 2x/3x asset rule, CSSA auto-full)
+- Cadence: yearly (HKPFS round Sep–Dec; Samaritan income limits track MMDHI quarterly — re-check figures each cycle)
+- Extract: stipend/travel amounts, award count, application window, income-limit table date, asset multiples, referral deadline (30 days, CAP for cardiac)
+- Pitfall: HA uses `_e.htm` ↔ `_c.htm` (not `/en/` ↔ `/tc/`). UGC/RGC pages treated EN-only (FTSS TC 404 precedent — do not guess TC twins).
+
+## S43 · IRD child-allowance top-up (updated 2026-09-18, no new scheme)
+- URLs: https://www.ird.gov.hk/eng/tax/budget.htm (zh: `/chi/…`) · https://www.ird.gov.hk/eng/tax/policyaddress2026.htm (zh twin verified) · FAQ https://www.ird.gov.hk/eng/faq/policyaddress2026.htm (zh twin verified)
+- Schemes: `ird-child-allowance` (updated), `ird-single-parent` + `ird-parent-allowance` (checked — already current, no change)
+- Change: 2nd+ children born on/after 16 Sep 2026 get $160k child + $160k additional ($320k/yr) from YA2026/27 (2026 Policy Address). Base $140k/$280k newborn rule unchanged.
+- Note: IRD family allowances were already in catalog — P04 frontier closed by verification, not by addition.

@@ -2196,12 +2196,12 @@
     "title_en": "Salaries Tax: Child Allowance ($140,000/child)",
     "title_zh": "薪俸稅：子女免稅額（每名$140,000）",
     "category": "family",
-    "value_summary_en": "$140,000 per child + $140,000 extra in birth year; from 2026/27 an additional allowance for the first 2 years after birth.",
-    "value_summary_zh": "每名子女$140,000，出生年度多$140,000；2026/27起出生後首兩年另有額外免稅額。",
+    "value_summary_en": "$140,000 per child (1st-9th) + $140,000 extra in each of the first 2 years after birth ($280k/yr). 2nd+ children born on/after 16 Sep 2026: $160,000 + $160,000 extra ($320k/yr). Auto via tax return.",
+    "value_summary_zh": "每名子女$140,000（第1–9名），出生後首2年每年另加$140,000（每年$280k）。2026年9月16日或之後出生的第2名起子女：$160,000＋另加$160,000（每年$320k）。報稅自動計算。",
     "deadline": null,
     "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
     "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
-    "updated_at": "2026-09-16",
+    "updated_at": "2026-09-18",
     "proof_needed_en": [
       "Child birth cert",
       "Unmarried + (<18 / 18-25 full-time study / disabled)"
@@ -2217,10 +2217,12 @@
       "has_kids_any": true
     },
     "confirm_en": [
-      "Check the 2026/27 first-2-years top-up on IRD"
+      "Check the 2026/27 first-2-years top-up on IRD",
+      "2nd+ children born on/after 16 Sep 2026 get $160k rates (2026 Policy Address, YA2026/27+)"
     ],
     "confirm_zh": [
-      "2026/27首兩年加碼見稅局公布"
+      "2026/27首兩年加碼見稅局公布",
+      "2026年9月16日或之後出生的第2名起子女享$160k（2026施政報告，2026/27課稅年度起）"
     ],
     "why_en": "Kids at home — $140k off taxable income each.",
     "why_zh": "家有細路 — 每名減$140k應課稅入息。"
@@ -6230,6 +6232,82 @@
       "英文來源（無中文版）",
       "不可與同課程其他政府獎學金／持續進修基金同享；政府貸款除外",
       "底線$44,500（2025/26）／$47,000（2026/27）；整個課程上限$10萬"
+    ]
+  },
+  {
+    "id": "hkpfs-2728",
+    "title_en": "Hong Kong PhD Fellowship Scheme ($344k/yr stipend, 400 awards)",
+    "title_zh": "香港博士研究生獎學金計劃（每年$344,000津貼，400名額）",
+    "category": "student",
+    "value_summary_en": "400 fellowships/yr. Annual stipend $344,400 + $14,400 conference/travel allowance, up to 3 years. New full-time PhD at 8 UGC universities, any nationality. Merit: academics + research + communication + leadership.",
+    "value_summary_zh": "每年400名額。每年津貼$344,400＋會議／差旅$14,400，最長3年。8大新入讀全日制博士，任何國籍。按學業＋研究＋溝通＋領袖擇優。",
+    "deadline": "2026-12-01",
+    "source_url": "https://www.ugc.edu.hk/eng/rgc/funding_opport/hkpfs/index.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "New full-time PhD admission at a UGC-funded university",
+      "RGC initial application with HKPFS reference number (1 Sep–1 Dec)",
+      "Full application to university quoting reference"
+    ],
+    "apply_link": "https://cerg1.ugc.edu.hk/hkpfs/index.html",
+    "needs": {
+      "tertiary": true
+    },
+    "why_en": "Top graduate aiming for a HK PhD — $344k a year plus travel.",
+    "why_zh": "擬在港讀博而成績卓越 — 每年$344k另加差旅津貼。",
+    "proof_needed_zh": [
+      "獲教資會資助大學新取錄全日制博士",
+      "經研資局初審取編號（9月1日–12月1日）",
+      "憑編號向大學交正式申請"
+    ],
+    "confirm_en": [
+      "Max 2 programmes across 1–2 universities",
+      "Non-awardees may still get regular PhD place + university studentship",
+      "2027/28 round: 1 Sep–1 Dec 2026 noon HKT"
+    ],
+    "confirm_zh": [
+      "最多報2個課程（1–2間大學）",
+      "落選仍可獲一般博士學額＋大學獎學金",
+      "2027/28輪：2026年9月1日–12月1日正午截止"
+    ]
+  },
+  {
+    "id": "samaritan-fund-2026",
+    "title_en": "Samaritan Fund (subsidised private medical items)",
+    "title_zh": "撒瑪利亞基金（資助自費醫療項目）",
+    "category": "health",
+    "value_summary_en": "Pays for designated privately-purchased medical items / new tech (drugs, implants, proton therapy) not in standard public fees. Household means test: income within MMDHI by size; assets ≤2x item cost = full help, 2–3x = sliding, >3x = none. CSSA = full.",
+    "value_summary_zh": "資助指定自費醫療項目／新科技（藥物、植入物、質子治療等）。家庭經濟審查：入息在家庭住戶入息中位數內；資產≤項目費2倍全資，2–3倍按比例，>3倍不資助。綜援全資。",
+    "deadline": null,
+    "source_url": "https://www.ha.org.hk/haho/ho/sf/SF_e.htm",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "HA patient with doctor-referred item (clinical guideline)",
+      "Eligible-Person status (or HKPR for ultra-expensive drugs)",
+      "Household income + asset proof for MSW assessment (past 6 months)"
+    ],
+    "apply_link": "https://www.ha.org.hk/haho/ho/sf/eligibility_en.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Facing a big self-paid hospital bill — this fund can cover it if you pass the means test.",
+    "why_zh": "面對大額自費醫療賬單 — 通過經濟審查可獲資助。",
+    "proof_needed_zh": [
+      "公院病人＋醫生轉介項目",
+      "符合資格人士（超貴藥物須永居）",
+      "過去6個月家庭入息＋資產證明"
+    ],
+    "source_url_zh": "https://www.ha.org.hk/haho/ho/sf/SF_c.htm",
+    "apply_link_zh": "https://www.ha.org.hk/haho/ho/sf/eligibility_c.htm",
+    "confirm_en": [
+      "Apply via MSW within 30 days of doctor referral (urgent cardiac CAP available)",
+      "Income limits @28 Feb 2026: 1p $15,150 / 2p $23,400 / 3p $40,000 / 4p $52,600 / 5+ $55,000",
+      "Self-check via HA Go MFA app / Means Test Calculator; no backdating or refunds"
+    ],
+    "confirm_zh": [
+      "醫生轉介後30天內經醫務社工申請（心臟急症有條件批核）",
+      "入息限額（2026年2月28日）：1人$15,150／2人$23,400／3人$40,000／4人$52,600／5人+$55,000",
+      "HA Go一站式App自助初核；不設補發或退款"
     ]
   }
 ]
