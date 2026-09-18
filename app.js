@@ -261,7 +261,15 @@ function card(b, opts={}) {
     <button class="btn" data-open="${esc(b.id)}" type="button">${t('View details','查看詳情')}</button></div></article>`;
 }
 
-function openDetail(id) {
+function schemeIdFromHash() {
+  const m = (location.hash || '').match(/^#\/s\/(.+)$/);
+  if (!m) return null;
+  let id = null;
+  try { id = decodeURIComponent(m[1]); } catch { return null; }
+  return BENEFITS.some(b => b.id === id) ? id : null;
+}
+
+function openDetail(id, push = true) {
   const b = BENEFITS.find(x=>x.id===id); if(!b) return;
   const d = $('#detail');
   const cat = CAT_NAME[b.category] || {en:b.category,zh:b.category};
@@ -286,7 +294,7 @@ function openDetail(id) {
   d.dataset.cur = id;
   if (!d.open) d.showModal();
   const url = '#/s/' + encodeURIComponent(id);
-  if (history.state?.schemeId !== id) {
+  if (push && history.state?.schemeId !== id) {
     history.pushState({schemeId:id}, '', url);
   }
   $('#closeD').onclick = () => closeDetail();
@@ -318,9 +326,9 @@ function closeDetail() {
   clearSchemeUrl();
 }
 
-function openHash() {
-  const m = (location.hash || '').match(/^#\/s\/([\w-]+)/);
-  if (m && BENEFITS.some(b => b.id === m[1])) { if ($('#detail').dataset.cur !== m[1]) openDetail(m[1]); }
+function openHash(initial = false) {
+  const id = schemeIdFromHash();
+  if (id) { if ($('#detail').dataset.cur !== id) openDetail(id, !initial); }
   else closeDetail();
 }
 
@@ -431,18 +439,19 @@ async function init() {
   topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
   if('serviceWorker' in navigator){try{await navigator.serviceWorker.register('sw.js');}catch{}}
   render();
-  window.addEventListener('hashchange', openHash);
-  window.addEventListener('popstate', (e) => {
-    const sid = e.state?.schemeId;
+  window.addEventListener('hashchange', () => openHash(false));
+  // URL-driven back/forward: never trust e.state (unreliable on some mobile browsers).
+  window.addEventListener('popstate', () => {
+    const sid = schemeIdFromHash();
     const d = $('#detail');
-    if (sid && BENEFITS.some(b=>b.id===sid)) {
-      if (d.dataset.cur !== sid) openDetail(sid);
+    if (sid) {
+      if (d.dataset.cur !== sid) openDetail(sid, false);
     } else {
-      // no scheme in state, close modal
+      // no scheme in URL, close modal
       if (d.open) { d.close(); delete d.dataset.cur; }
     }
   });
   $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); });
-  openHash();
+  openHash(true);
 }
 init();
