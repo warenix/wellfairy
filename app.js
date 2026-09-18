@@ -452,6 +452,12 @@ async function init() {
     }
   });
   $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); });
+  // Android system-back fires `cancel` on an open modal <dialog> instead of
+  // traversing history (no popstate). Give it back-navigation semantics when
+  // we arrived from another scheme; otherwise let it close natively.
+  $('#detail').addEventListener('cancel', (e) => {
+    if (detailStack.length) { e.preventDefault(); history.back(); }
+  });
   openHash(true);
 }
 init();
