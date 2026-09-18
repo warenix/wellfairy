@@ -418,7 +418,7 @@ async function init() {
     render(); document.querySelector('[data-tab="match"]').click(); };
   $('#exportBtn').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([localStorage.getItem(LS_KEY)||'{}'],{type:'application/json'}));a.download='profile.json';a.click();};
   $('#importBtn').onclick=()=>$('#importFile').click();
-  $('#importFile').onchange=e=>{const fl=e.target.files[0];if(!fl)return;fl.text().then(x=>{try{saveP(JSON.parse(x));location.reload();}catch{alert(t('Bad profile.json','profile.json 格式錯誤'));}});};
+  $('#importFile').onchange=e=>{const fl=e.target.files[0];if(!fl)return;fl.text().then(x=>{try{const cur=localStorage.getItem(LS_KEY); if(cur) localStorage.setItem(LS_KEY+'_bak',cur); saveP(JSON.parse(x));location.reload();}catch{alert(t('Bad profile.json','profile.json 格式錯誤'));}});};
   $('#q').oninput=render;  if (f.hkYears) f.hkYears.oninput=hkYearsOut;
   wireKidPick(); renderKidChips();
   const excl = (name, others) => { f[name].onchange = () => { if (f[name].checked) others.forEach(o => { f[o].checked = false; }); }; };
