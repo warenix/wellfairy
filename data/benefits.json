@@ -7659,5 +7659,110 @@
       "英文舊稿述機制；上限每年按甲類CPI調 — 每年4月覆核（2026年4月約$17,870）",
       "絕大多數個案獲足額"
     ]
+  },
+  {
+    "id": "innotech-scholarship-150k",
+    "title_en": "Innovation & Technology Scholarship (up to $150,000 + overseas attachment)",
+    "title_zh": "創新科技獎學金（高達$150,000＋海外交流）",
+    "category": "student",
+    "value_summary_en": "Up to $150,000 for non-final-year local undergrads (any discipline): overseas/Mainland attachments (≥3 weeks, incl. Mainland leg), mentorship, service project, local tech internship. 25 awards/yr via university nomination (16th year, 400 alumni).",
+    "value_summary_zh": "非應屆畢業本地本科生（任何學科）高達$150,000：海外／內地交流（≥3週，須含內地）、師友、服務計劃、本地科企實習。每年25名，經大學提名（第16屆，累計400人）。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202606/02/P2026060200514.htm",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Non-final-year local undergraduate",
+      "University nomination + interview (usually Oct/Nov applications)"
+    ],
+    "apply_link": "https://www.cityu.edu.hk/sds/innovation-and-technology-scholarship-202526",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Tech-passionate undergrad — $150k plus overseas attachment and mentors.",
+    "why_zh": "熱愛科創的本科生 — $150k加海外交流及師友。",
+    "proof_needed_zh": [
+      "非應屆本地本科生",
+      "大學提名＋面試（多於10／11月報名）"
+    ],
+    "confirm_en": [
+      "EN-only press source; apply via your university (ITC + HSBC + HKFYG organisers)",
+      "At least one trip >3 weeks and at least one Mainland leg required"
+    ],
+    "confirm_zh": [
+      "英文政府稿；經所屬大學申請（創科署＋滙豐＋青協合辦）",
+      "至少一行程逾3週、至少一程內地"
+    ]
+  },
+  {
+    "id": "ha-hdppp-dialysis",
+    "title_en": "Haemodialysis PPP (community dialysis at public fees)",
+    "title_zh": "洗腎公私營協作（社區洗腎收公院費）",
+    "category": "health",
+    "value_summary_en": "Stable ESRD patients on HA haemodialysis: nephrologist invitation to community centres — same gazette fees as HA day procedure ($250/attendance from Jan 2026, waivers apply), HA keeps follow-up/meds/tests. eHealth enrolment required.",
+    "value_summary_zh": "病情穩定的醫管局洗腎病人：腎科醫生邀請轉社區中心 — 同公院程序收費（2026年1月起每次$250，減免適用），醫管局續跟進／藥物／檢查。須登記醫健通。",
+    "deadline": null,
+    "source_url": "https://www4.ha.org.hk/ppp/en/ppp-programmes/hdppp/programme-intro",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "ESRD on HA haemodialysis, clinically suitable (nephrologist invitation)",
+      "eHealth enrolment + signed consent"
+    ],
+    "apply_link": "https://www4.ha.org.hk/ppp/en/ppp-programmes/hdppp/programme-intro",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "On hospital dialysis — same fees closer to home in the community.",
+    "why_zh": "在醫院洗腎 — 社區同價更就近。",
+    "proof_needed_zh": [
+      "末期腎病醫管局洗腎、醫生邀請",
+      "醫健通登記＋簽同意書"
+    ],
+    "confirm_en": [
+      "EN-only HA PPP page (TC tree 404s like CSP)",
+      "Full waiver: CSSA / full-waiver cert / OALA75+ / RCSV-L0; $10k annual cap counts PPP fees"
+    ],
+    "confirm_zh": [
+      "英文頁（中文樹404，同白內障計劃）",
+      "全免：綜援／全免證明／75歲+長生津／長者券第0級；$10k全年上限計入"
+    ]
+  },
+  {
+    "id": "reverse-mortgage-property",
+    "title_en": "Reverse Mortgage on Flat (55+, monthly payouts for life)",
+    "title_zh": "安老按揭（55歲+，終身月收）",
+    "category": "elderly",
+    "value_summary_en": "55+ (60+ for unpaid-premium subsidised flats): pledge HK home (≤50yrs, unrented) for monthly payouts 10/15/20yr or life — e.g. age 60 life $2,000 per $1m value (floating); specified value cap $25m. No lifetime repayment; 2026 fixed-rate 4%/30yr +5% payouts.",
+    "value_summary_zh": "55歲+（未補價資助出售單位60歲+）：以香港住宅（樓齡≤50年、自住）作押，月收10／15／20年或終身 — 如60歲終身每$100萬$2,000（浮息）；指定價值上限$2,500萬。生前免還；2026定息4%三十年＋加5%。",
+    "deadline": null,
+    "source_url": "https://www.hkmc.com.hk/eng/our_business/reverse_mortgage_programme.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Age 55+ (60+ unpaid-premium subsidised flat), HKID, not bankrupt",
+      "Sole-owned HK residential property, ≤50yrs, unrented (consent rules for subsidised)",
+      "Application via bank + counselling; hotline 2536 0136"
+    ],
+    "apply_link": "https://www.hkmc.com.hk/eng/our_business/reverse_mortgage_programme.html",
+    "needs": {
+      "min_age": 55,
+      "hk_resident": true
+    },
+    "why_en": "55+ owning your flat — turn bricks into monthly income for life.",
+    "why_zh": "55歲+有樓 — 化磚頭為終身月入。",
+    "proof_needed_zh": [
+      "55歲+（未補價資助單位60歲+）、身份證、非破產",
+      "全權擁有香港住宅、樓齡≤50年、自住",
+      "經銀行申請＋輔導；熱線2536 0136"
+    ],
+    "source_url_zh": "https://www.hkmc.com.hk/chi/our_business/reverse_mortgage_programme.html",
+    "apply_link_zh": "https://www.hkmc.com.hk/chi/our_business/reverse_mortgage_programme.html",
+    "confirm_en": [
+      "Property < $8m counts 100%; above: $8m + 50% of excess (cap $25m)",
+      "Lump sums allowed (reduce later monthlies); renting out needs retired/care-move + consent"
+    ],
+    "confirm_zh": [
+      "$800萬下計足；超出：$800萬＋超額一半（上限$2,500萬）",
+      "可一筆提取（扣減其後月收）；出租須退休／護理搬遷＋批准"
+    ]
   }
 ]

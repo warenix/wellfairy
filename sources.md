@@ -3,11 +3,11 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (229 schemes, 2026-09-18)
+- Catalog: `data/benefits.json` (232 schemes, 2026-09-18)
 - Crawl map (BFS sources / DFS deep-dives / frontier): `crawl-map.md`
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
-- Last full verification: **2026-09-18** (229 schemes: 209 + 20 DFS crawl S47/S48/S49)
+- Last full verification: **2026-09-18** (232 schemes: 229 + 3 open-lead closes S50)
 - Last refresh run: **2026-09-17** — 4 crawl batches added 57 schemes (83 → 140) + 3 fixes (fare-2dollar wording, poa-2027 deadline 9-26→9-25, spd-job-matching new URL). Batches: S25–S27 (10) · S28–S30 (14) · S31–S33 (16) · S34–S36 (17). Details live in the sections below.
 - Editorial update **2026-09-17** (no re-crawl): added §Deadline watchlist, §Bilingual quirks table, cross-pointers in S04/S05/S06/S10–S13/S16/S20/S22/S24, open queries (EPEM retention line, CDSP Level-1-vs-2, K1 28-Nov provisional), expanded Expired list. Verification dates unchanged.
 
@@ -448,3 +448,12 @@
 - Schemes: `lcsd-concession`, `ha-cataract-ppp` ($8k+$8k, waiver $0), `smartsilver-ict` (2026–28 round), `odcb-deafness` (96/72/48mo + $98k aids), `pcfb-pneumo` (9 items, Cap.360), `ird-rent-100k`, `imm-1868-assist`, `cssa-burial-grant` (cap ~$17,870 Apr 2026, re-check yearly), `afcd-fish-loan` (1–2.5%), `afcd-farm-loan`
 - Not added: P14 FEHD waivers — no standalone scheme found (after-death is procedural; costs covered via `cssa-burial-grant`).
 - Cadence: yearly (burial cap April; ODCB/PCFB levels reviewed biennially; Smart Silver rounds).
+
+## S50 · Open-lead closes: I&T Scholarship + HD PPP + property RMP (added 2026-09-18)
+- URLs:
+  * I&T speech EN-ONLY: https://www.info.gov.hk/gia/general/202606/02/P2026060200514.htm (16th year, 25 awards, 400 alumni)
+  * I&T apply: https://www.cityu.edu.hk/sds/innovation-and-technology-scholarship-202526 (200; HKFYG portal geo-blocked from crawler — use university pages)
+  * HDPPP EN-ONLY: https://www4.ha.org.hk/ppp/en/ppp-programmes/hdppp/programme-intro (TC 404, same as CSP)
+  * RMP EN: https://www.hkmc.com.hk/eng/our_business/reverse_mortgage_programme.html (zh: `/chi/…`, both 200)
+- Schemes: `innotech-scholarship-150k` (non-final-year local undergrad, Oct/Nov via university), `ha-hdppp-dialysis` ($250/attendance Jan 2026 + waivers, nephrologist invite), `reverse-mortgage-property` (55+, $2k per $1m at 60-life floating, $25m cap; Mar 2026 fixed 4%/+5%)
+- Still open: GOPC PPP chronic-disease programme (search 429'd — retry next round); D9 closed by this entry.

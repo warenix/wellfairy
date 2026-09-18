@@ -4,7 +4,7 @@
 > - **Level 1 (BFS):** sweep across sources. When a new source is added, crawl its landing page to discover new schemes.
 > - **Level 2 (DFS):** deep-dive inside one source to enumerate sub-pages / sub-schemes.
 > - URL source of truth lives in `sources.md` (S01–S41). This map tracks **status**, not URLs — see `sources.md` for canonical links.
-> - Catalog: `data/benefits.json` (229 schemes, 2026-09-18). Schema: `data/schema.md`.
+> - Catalog: `data/benefits.json` (232 schemes, 2026-09-18). Schema: `data/schema.md`.
 
 ## Protocol (avoid overlap)
 
@@ -68,6 +68,7 @@
 | S47 | Work & skills DFS | `stem-internship-11790`, `cic-itcts-10200`, `ld-work-trial-9600`, `swd-set-2024`, `gba-youth-startup-600k` | done | 2026-09-18 |
 | S48 | Housing/property DFS | `fit-solar-4kwh`, `wsd-wspss-310k`, `had-bmpass`, `hkhs-senior-residences`, `hkhs-elderly-flats` | done | 2026-09-18 |
 | S49 | Health/legal/money/misc DFS | `lcsd-concession`, `ha-cataract-ppp`, `smartsilver-ict`, `odcb-deafness`, `pcfb-pneumo`, `ird-rent-100k`, `imm-1868-assist`, `cssa-burial-grant`, `afcd-fish-loan`, `afcd-farm-loan` | done | 2026-09-18 |
+| S50 | Open-lead closes (I&T/HDPPP/RMP) | `innotech-scholarship-150k`, `ha-hdppp-dialysis`, `reverse-mortgage-property` | done | 2026-09-18 |
 
 Status values: `pending` → `in_progress (session)` → `done` → re-crawl per cadence in `sources.md`.
 
@@ -83,7 +84,7 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | D6 | S26/S34 | VTC Earn & Learn — corroborated existing `vtc-earn-learn` | done |
 | D7 | S27 | Newborn-bonus expiry Oct 2026 + Policy Address extension proposal — revisit, do not pre-encode | waiting |
 | D8 | S05 | CSSA burial grant — promoted to S49 (`cssa-burial-grant`) | done |
-| D9 | S46 | HKMC property-based Reverse Mortgage (distinct from policy-based `reverse-mortgage-prmp`) — verify page, then split or confirm | pending |
+| D9 | S46 | HKMC property-based Reverse Mortgage — promoted to S50 (`reverse-mortgage-property`) | done |
 | D10 | S45 | UGC PGS per-uni rate drift — rates revise each September; re-check `ugc-pgs-2026` yearly | recurring |
 | D11 | S46 | RCSV quota 7,000 (2026-27) + NH-place expansion take-up — re-check values each April | recurring |
 | D12 | S44 | EHC → DHC network integration — may retire/merge `ehc-elderly-check`; watch DH announcements | waiting |
