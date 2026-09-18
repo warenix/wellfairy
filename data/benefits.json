@@ -6309,5 +6309,662 @@
       "入息限額（2026年2月28日）：1人$15,150／2人$23,400／3人$40,000／4人$52,600／5人+$55,000",
       "HA Go一站式App自助初核；不設補發或退款"
     ]
+  },
+  {
+    "id": "hkcip-vaccine",
+    "title_en": "Childhood Immunisation Programme (free vaccines birth–P6)",
+    "title_zh": "香港兒童免疫接種計劃（出生至小六免費疫苗）",
+    "category": "health",
+    "value_summary_en": "Free BCG, HepB x3, DTaP-IPV x4, pneumococcal, MMR/MMRV, varicella + HPV (P5/P6 girls) at MCHCs (birth–5y) and via School Immunisation Teams (P1/P5/P6).",
+    "value_summary_zh": "母嬰健康院（出生至5歲）及學童免疫注射小組（小一／小五／小六）免費接種：卡介苗、乙肝×3、白喉破傷風百日咳小兒麻痺×4、肺炎球菌、麻疹腮腺炎德國麻疹／水痘、HPV（小五／小六女生）。",
+    "deadline": null,
+    "source_url": "https://www.fhs.gov.hk/english/main_ser/child_health/child_health_recommend.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Child's birth record / immunisation record",
+      "MCHC registration (pre-school) or school enrolment (P1/P5/P6)"
+    ],
+    "apply_link": "https://www.fhs.gov.hk/english/main_ser/child_health/child_health_recommend.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "You have a young child — all scheduled jabs are free.",
+    "why_zh": "你有年幼子女 — 計劃內疫苗全部免費。",
+    "proof_needed_zh": [
+      "子女出生紀錄／免疫接種紀錄",
+      "母嬰健康院登記（學前）或學校就讀（小一／小五／小六）"
+    ],
+    "source_url_zh": "https://www.fhs.gov.hk/tc_chi/main_ser/child_health/child_health_recommend.html",
+    "apply_link_zh": "https://www.fhs.gov.hk/tc_chi/main_ser/child_health/child_health_recommend.html"
+  },
+  {
+    "id": "rcsv-elderly",
+    "title_en": "Residential Care Service Voucher ($17,015–$21,982/mo)",
+    "title_zh": "長者社區照顧服務券（每月$17,015–$21,982）",
+    "category": "elderly",
+    "value_summary_en": "Money-following-the-user voucher: $17,015/mo care-and-attention / $21,982/mo nursing-home (from 1.4.2026). 8 co-payment levels by means test (L0 = $0). 7,000 vouchers from 2026-27. 6-month trial, top-up to 150%.",
+    "value_summary_zh": "錢跟人走：護理安老$17,015／月、護養院$21,982／月（2026年4月1日起）。8級按能力收費（第0級$0）。2026-27起7,000張券。6個月試用，可補差至150%。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_residentcare/psrcsv/",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "SCNAMES assessment recommending residential care",
+      "Waitlisted for subsidised C&A/NH place on CWL",
+      "Individual means test for co-payment level"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_residentcare/psrcsv/",
+    "needs": {
+      "min_age": 65,
+      "hk_resident": true
+    },
+    "why_en": "Waiting for a subsidised care-home place — use the voucher to choose your home now.",
+    "why_zh": "輪候資助院舍 — 用券即時自選院舍。",
+    "proof_needed_zh": [
+      "安老服務統一評估（需院舍照顧）",
+      "輪候資助護理安老／護養院宿位",
+      "個人經濟審查定收費級別"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_residentcare/psrcsv/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_residentcare/psrcsv/",
+    "confirm_en": [
+      "L0 holders: medical fee waiver + full Samaritan/CCF help; care supplement for diapers/special diets",
+      "CWL status goes inactive in trial; resumes if you opt out"
+    ],
+    "confirm_zh": [
+      "第0級：醫療費用減免＋撒瑪利亞／關愛基金全資；尿片／特別餐飲有照顧補助金",
+      "試用期中央輪候冊凍結；退出可復效"
+    ]
+  },
+  {
+    "id": "navigation-youth-care",
+    "title_en": "Navigation Scheme for Young Persons in Care Services (first-hire-then-train)",
+    "title_zh": "青年護理服務啓航計劃（先聘用後培訓）",
+    "category": "student",
+    "value_summary_en": "Ages 17-29, Form 5+: paid care-worker job in elderly/rehab units + 2-year part-time diploma with fees reimbursed on completion (QF L3/L4). Mentorship + first-aid/personal-care orientation.",
+    "value_summary_zh": "17–29歲、中五程度：安老／康復單位有薪護理工作＋2年兼讀文憑（畢業發還學費，資歷架構3／4級）。另有師友及急救／起居照顧迎新。",
+    "deadline": null,
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_ms_ita/nsypcc/",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Age 17-29",
+      "Form 5 or equivalent",
+      "Apply via NGO operators (5 agencies)"
+    ],
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_ms_ita/nsypcc/",
+    "needs": {
+      "min_age": 17,
+      "max_age": 29,
+      "hk_resident": true
+    },
+    "why_en": "Young and job-hunting — get paid to train as a care worker.",
+    "why_zh": "年輕待業 — 受薪受訓做護理員。",
+    "proof_needed_zh": [
+      "年齡17–29歲",
+      "中五或同等學歷",
+      "經5間營辦NGO報名"
+    ],
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_ms_ita/nsypcc/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_ms_ita/nsypcc/"
+  },
+  {
+    "id": "ird-selfedu-100k",
+    "title_en": "Self-education Expenses Deduction ($100,000/yr)",
+    "title_zh": "進修開支扣稅（每年$100,000）",
+    "category": "family",
+    "value_summary_en": "Deduct tuition + exam fees up to $100,000/yr for prescribed employment-related courses. Claim net of employer/CEF reimbursement in the year paid.",
+    "value_summary_zh": "與工作相關的認可課程學費＋考試費，每年高達$100,000。扣除僱主／持續進修基金發還後按實付年份申索。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Fee receipts for prescribed course linked to current/planned employment",
+      "Net amount after CEF/employer reimbursement"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Paying for a work-related course yourself — deduct up to $100k.",
+    "why_zh": "自費讀與工作相關課程 — 高達$100k扣稅。",
+    "proof_needed_zh": [
+      "認可課程收據（與現職／計劃工作相關）",
+      "扣除持續進修基金／僱主發還後淨額"
+    ],
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/selfeducation.htm"
+  },
+  {
+    "id": "vhis-8k",
+    "title_en": "VHIS Premium Deduction ($8,000 per insured person)",
+    "title_zh": "自願醫保保費扣稅（每名受保人$8,000）",
+    "category": "family",
+    "value_summary_en": "Deduct Certified-Plan VHIS premiums up to $8,000 per insured person/yr, no cap on number of persons. Self + spouse, children, parents, grandparents, siblings. Claim on BIR60.",
+    "value_summary_zh": "認可自願醫保保費每名受保人每年高達$8,000，人數不限。本人＋配偶、子女、父母、祖父母、兄弟姊妹。BIR60申索。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/vhis.htm",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Certified-Plan VHIS policy (policyholder self or spouse)",
+      "Premium receipts / annual statement",
+      "Insured person is self or specified relative with HKID"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/vhis.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Paying VHIS premiums for family — $8k off taxable income per person.",
+    "why_zh": "為家人供自願醫保 — 每人$8k扣稅。",
+    "proof_needed_zh": [
+      "認可計劃保單（投保人為本人／配偶）",
+      "保費收據／年結單",
+      "受保人為本人或指明親屬並持身份證"
+    ],
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/vhis.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/vhis.htm",
+    "confirm_en": [
+      "Independent of the $60k QDAP+TVC pool",
+      "Excess over $8k lapses, no carry-forward"
+    ],
+    "confirm_zh": [
+      "與$60k年金／強積金自願供款池分開計算",
+      "超額不設結轉"
+    ]
+  },
+  {
+    "id": "ugc-pgs-2026",
+    "title_en": "Postgraduate Studentship (~$19,100/mo, MPhil/PhD)",
+    "title_zh": "研究生獎學金（每月約$19,100，哲學碩士／博士）",
+    "category": "student",
+    "value_summary_en": "~$19,100/mo basic (up to ~$19,660 post-candidacy PhD) for full-time UGC-funded MPhil/PhD in normative period. Merit-based, no separate application; covers subsistence + tuition.",
+    "value_summary_zh": "全日制資助哲學碩士／博士修業期內每月約$19,100（博士候選後約$19,660）。按優異頒發，隨入學自動考慮，包生活＋學費。",
+    "deadline": null,
+    "source_url": "https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/studentships",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Full-time UGC-funded MPhil/PhD admission",
+      "Satisfactory progress for yearly renewal"
+    ],
+    "apply_link": "https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/studentships",
+    "needs": {
+      "tertiary": true
+    },
+    "why_en": "Starting a funded research degree — ~$19k a month while you study.",
+    "why_zh": "讀資助研究學位 — 每月約$19k助學。",
+    "proof_needed_zh": [
+      "全日制資助哲學碩士／博士取錄",
+      "進度良好逐年續發"
+    ],
+    "confirm_en": [
+      "EN-only university source; rates vary slightly by university and revise each September",
+      "Local RPg students also get full tuition waiver (see tuition-waiver-rpg)"
+    ],
+    "confirm_zh": [
+      "英文大學來源；金額各校略異、每年9月調整",
+      "本地研究學位生另享全額學費豁免（見tuition-waiver-rpg）"
+    ]
+  },
+  {
+    "id": "tuition-waiver-rpg",
+    "title_en": "Tuition Waiver for Local Research Postgraduates (full waiver)",
+    "title_zh": "本地研究學位學費豁免（全免）",
+    "category": "student",
+    "value_summary_en": "Since 2018/19: full tuition waiver for all local students in UGC-funded full-time RPg programmes throughout normative study period. Automatic, no application.",
+    "value_summary_zh": "2018/19起：本地生修讀資助全日制研究學位，修業期內全免學費。自動享有，毋須申請。",
+    "deadline": null,
+    "source_url": "https://gs.eduhk.hk/prospective/rpg/scholarship-and-financial-assistance/",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Local-student status",
+      "Full-time UGC-funded RPg enrolment"
+    ],
+    "apply_link": "https://gs.eduhk.hk/prospective/rpg/scholarship-and-financial-assistance/",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Local doing a funded PhD/MPhil — tuition is fully waived.",
+    "why_zh": "本地讀資助研究學位 — 學費全免。",
+    "proof_needed_zh": [
+      "本地生身份",
+      "全日制資助研究學位在讀"
+    ],
+    "confirm_en": [
+      "EN-only university source; pairs with Postgraduate Studentship (see ugc-pgs-2026)"
+    ],
+    "confirm_zh": [
+      "英文大學來源；可與研究生獎學金並享（見ugc-pgs-2026）"
+    ]
+  },
+  {
+    "id": "tb-chest-free",
+    "title_en": "TB & Chest Service (free diagnosis + treatment)",
+    "title_zh": "胸肺服務（免費診斷＋治療）",
+    "category": "health",
+    "value_summary_en": "Free consultation, X-ray, lab tests, drugs and directly-observed treatment for TB/chest disease at 15 DH chest clinics for HK citizens. Referral recommended, walk-in accepted. Hotline 2572 6024.",
+    "value_summary_zh": "15間胸肺診所為香港市民免費診治結核／胸肺病：診症、X光、化驗、藥物及督導服藥。宜帶轉介信，亦接受求診。熱線2572 6024。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/tb_chest/en/contents/c611.htm",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "HKID",
+      "Cough 3-4 weeks / blood in sputum / fever / weight loss (or referral letter)"
+    ],
+    "apply_link": "https://www.info.gov.hk/tb_chest/en/contents/c611.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Persistent cough or TB contact — free specialist workup and drugs.",
+    "why_zh": "久咳或曾接觸結核 — 免費專科檢查及藥物。",
+    "proof_needed_zh": [
+      "香港身份證",
+      "久咳3–4週／痰帶血／發燒／消瘦（或轉介信）"
+    ],
+    "confirm_en": [
+      "TB Chest site has no separate TC page — EN page is the source"
+    ],
+    "confirm_zh": [
+      "胸肺網站無分流中文頁 — 以英文頁為準"
+    ]
+  },
+  {
+    "id": "slas-topup",
+    "title_en": "Supplementary Legal Aid (sandwich class, resources ≤$2.26m)",
+    "title_zh": "輔助法律援助（夾心階層，資源≤$226萬）",
+    "category": "family",
+    "value_summary_en": "For civil cases where resources exceed OLAS ($452,320) but ≤$2,261,600. Type I (injury/death/compensation): $1,000 fee + $113,080 interim. Type II (professional negligence etc.): $5,000 fee + 10% or $113,080 (higher). Success deduction 20% (15% pre-trial).",
+    "value_summary_zh": "民事案資源超$452,320但≤$2,261,600。第一類（傷亡／僱員補償）：$1,000＋$113,080中期分擔。第二類（專業疏忽等）：$5,000＋10%或$113,080（取高）。勝訴扣20%（審前和解15%）。",
+    "deadline": null,
+    "source_url": "https://www.lad.gov.hk/eng/las/civil/slas.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Financial resources $452,320–$2,261,600 (means test)",
+      "Reasonable grounds (merits test)",
+      "Claim likely >$75,000 in covered case types"
+    ],
+    "apply_link": "https://www.lad.gov.hk/eng/las/civil/slas.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Too rich for ordinary legal aid but can't fund a lawsuit — SLAS bridges the gap.",
+    "why_zh": "超普通法援上限但打不起官司 — 輔助法援補位。",
+    "proof_needed_zh": [
+      "資源$452,320–$2,261,600（經濟審查）",
+      "合理理據（案情審查）",
+      "涵蓋案類、申索逾$75,000"
+    ],
+    "source_url_zh": "https://www.lad.gov.hk/chi/las/civil/slas.html",
+    "apply_link_zh": "https://www.lad.gov.hk/chi/las/civil/slas.html",
+    "confirm_en": [
+      "Self-financing fund; contribution may be paid in ≤6 instalments",
+      "Means Test Calculator on lad.gov.hk for self-check only"
+    ],
+    "confirm_zh": [
+      "自負盈虧基金；分擔費可分≤6期",
+      "法援署網站經濟審查計算機僅供自核"
+    ]
+  },
+  {
+    "id": "reverse-mortgage-prmp",
+    "title_en": "Policy Reverse Mortgage (55+, borrow on life policy)",
+    "title_zh": "保單逆按（55歲+，以壽險借貸）",
+    "category": "elderly",
+    "value_summary_en": "Aged 55+ with HKID: pledge a paid-up HK-authorised life policy (non-investment-linked, death benefits ≤$15m aggregate) for monthly payouts over 5/10/15/20 yrs or life, plus lump sums. No lifetime repayment; shortfall insured by HKMCI.",
+    "value_summary_zh": "55歲+持身份證：以已供滿的香港認可壽險（非投資相連，身故賠償合計≤$1,500萬）作押，每月收款5／10／15／20年或終身，另可一筆提取。生前毋須還款，不足額由按證保險承擔。",
+    "deadline": null,
+    "source_url": "https://www.hkmc.com.hk/eng/our_business/policy_reverse_mortgage_programme.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Age 55+, HKID, not bankrupt",
+      "Eligible life policy (holder = insured, HKD/USD, assignable, premium paid up)",
+      "Application via participating bank/insurer + health questionnaire"
+    ],
+    "apply_link": "https://www.hkmc.com.hk/eng/our_business/policy_reverse_mortgage_programme.html",
+    "needs": {
+      "min_age": 55,
+      "hk_resident": true
+    },
+    "why_en": "55+ with a paid-up life policy — turn it into monthly retirement income.",
+    "why_zh": "55歲+有已供滿壽險 — 化作每月退休收入。",
+    "proof_needed_zh": [
+      "55歲+、身份證、非破產",
+      "合資格壽險（持有人＝受保人、港元／美元、可轉讓、已供滿）",
+      "經參與銀行／保險公司申請＋健康問卷"
+    ],
+    "source_url_zh": "https://www.hkmc.com.hk/chi/our_business/policy_reverse_mortgage_programme.html",
+    "apply_link_zh": "https://www.hkmc.com.hk/chi/our_business/policy_reverse_mortgage_programme.html",
+    "confirm_en": [
+      "Payout rises with age/death-benefit, falls with longer terms; fixed-rate plans pay more",
+      "Hotline HKMC Retire 3: 2536 0833"
+    ],
+    "confirm_zh": [
+      "年紀越大／賠償越高／年期越短，月供越高；定息計劃較高",
+      "按揭證券退休3熱線：2536 0833"
+    ]
+  },
+  {
+    "id": "ehc-elderly-check",
+    "title_en": "Elderly Health Centres ($110/yr check-up + care, 65+)",
+    "title_zh": "長者健康中心（每年$110體檢＋診治，65歲+）",
+    "category": "elderly",
+    "value_summary_en": "18 DH centres: $110/yr membership for health assessment, counselling, health education + members-only curative care. One-centre enrolment; expect long waits — services integrating into district health network in phases.",
+    "value_summary_zh": "18間衛生署中心：年費$110享健康評估、輔導、健康教育＋會員診治。一人只可登記一間；輪候較長 — 服務正分階段併入地區康健網絡。",
+    "deadline": null,
+    "source_url": "https://www.elderly.gov.hk/english/contactus/elderly_health_centres.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Age 65+",
+      "HKID + address proof at one EHC of choice"
+    ],
+    "apply_link": "https://www.elderly.gov.hk/english/contactus/elderly_health_centres.html",
+    "needs": {
+      "min_age": 65,
+      "hk_resident": true
+    },
+    "why_en": "65+ wanting a yearly check-up for $110 — join your district centre.",
+    "why_zh": "65歲+想每年$110體檢 — 登記所屬中心。",
+    "proof_needed_zh": [
+      "年滿65歲",
+      "身份證＋住址證明、選定一間登記"
+    ],
+    "source_url_zh": "https://www.elderly.gov.hk/tc_chi/contactus/elderly_health_centres.html",
+    "apply_link_zh": "https://www.elderly.gov.hk/tc_chi/contactus/elderly_health_centres.html"
+  },
+  {
+    "id": "cas-child-assess",
+    "title_en": "Child Assessment Service (free developmental assessment, under 12)",
+    "title_zh": "兒童體能智力測驗服務（12歲以下免費發展評估）",
+    "category": "family",
+    "value_summary_en": "7 DH Child Assessment Centres: free comprehensive assessment + diagnosis for under-12s with suspected developmental/behavioural issues, follow-up plan + parent interim support. Referral by MCHC/doctor/psychologist.",
+    "value_summary_zh": "7間衛生署中心：12歲以下疑有發展／行為問題免費全面評估＋診斷、跟進計劃＋家長過渡支援。經母嬰健康院／醫生／心理學家轉介。",
+    "deadline": null,
+    "source_url": "https://www.dhcas.gov.hk/en/referral.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Child under 12 with suspected developmental issue",
+      "Referral letter (MCHC / registered doctor / psychologist) — book nurse assessment within 6 months"
+    ],
+    "apply_link": "https://www.dhcas.gov.hk/en/referral.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Worried about your child's development — free specialist assessment.",
+    "why_zh": "擔心子女發展 — 免費專科評估。",
+    "proof_needed_zh": [
+      "12歲以下疑有發展問題",
+      "轉介信（母嬰健康院／註冊醫生／心理學家），6個月內預約護士初評"
+    ],
+    "source_url_zh": "https://www.dhcas.gov.hk/tc/referral.html",
+    "apply_link_zh": "https://www.dhcas.gov.hk/tc/referral.html"
+  },
+  {
+    "id": "kg-edu-scheme",
+    "title_en": "Kindergarten Education Scheme (half-day free)",
+    "title_zh": "幼稚園教育計劃（半日制免費）",
+    "category": "student",
+    "value_summary_en": "Scheme-KGs (NPM, local curriculum): ~90% of half-day places free; whole-day kept low-fee. Enrol K1 with RC/AP. Needy families add KCFRS fee remission on top.",
+    "value_summary_zh": "計劃幼稚園（非牟利、本地課程）：約九成半日制免費；全日制低收費。K1憑註冊證／入學許可入學。有需要家庭另加KCFRS學費減免。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Child eligible to study in HK (RC for subsidy, AP otherwise)",
+      "K1 admission via chosen Scheme-KG"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html",
+    "needs": {
+      "has_kids_level": [
+        "K1",
+        "K2",
+        "K3"
+      ]
+    },
+    "why_en": "Kindergarten-age child — half-day is essentially free at Scheme KGs.",
+    "why_zh": "子女到幼稚園齡 — 計劃園半日制基本免費。",
+    "proof_needed_zh": [
+      "子女可在港入學（資助用註冊證，否則入學許可）",
+      "經心儀計劃園報K1"
+    ],
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html"
+  },
+  {
+    "id": "dss-fee-remission",
+    "title_en": "DSS School Fee Remission (≥ govt SFAA benchmarks)",
+    "title_zh": "直資學校學費減免（不遜於政府資助標準）",
+    "category": "student",
+    "value_summary_en": "Every DSS school must run fee remission/scholarship at least as generous as govt SFAA schemes, setting aside ≥10% of fee income. CSSA/SFAA families in principle offered remission — apply via the school before term.",
+    "value_summary_zh": "每間直資學校必須設不遜於政府學資處標準的學費減免／獎學金，撥出≥10%學費收入。綜援／學資處家庭原則上獲減免 — 開學前經學校申請。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/direct-subsidy-scheme/info-sch.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Child admitted to a DSS school",
+      "SFAA result / CSSA proof + school remission form"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/direct-subsidy-scheme/info-sch.html",
+    "needs": {
+      "has_kids_level": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ]
+    },
+    "why_en": "Child in (or eyeing) a DSS school — don't pay full fees if money is tight.",
+    "why_zh": "子女讀（或想讀）直資 — 家境緊絀毋須付全費。",
+    "proof_needed_zh": [
+      "子女獲直資學校取錄",
+      "學資處結果／綜援證明＋學校減免表"
+    ],
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/direct-subsidy-scheme/info-sch.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/direct-subsidy-scheme/info-sch.html",
+    "confirm_en": [
+      "Only parents' finances may be considered — not grades",
+      "Details must be in prospectus, admission form and school website"
+    ],
+    "confirm_zh": [
+      "只看家長經濟，不看成績",
+      "詳情須載於招生章程、入學表及校網"
+    ]
+  },
+  {
+    "id": "bd-safety-loan",
+    "title_en": "Building Safety Loan (up to $1m/unit, interest-free path)",
+    "title_zh": "樓宇安全貸款（每單位高達$100萬，有免息途徑）",
+    "category": "housing",
+    "value_summary_en": "Private-building owners: loans up to $1m/unit for repairs, fire safety, lifts, drainage, UBW removal, slopes. No means test for interest-bearing; interest-free for CSSA/OALA/low-income (60+ single income ≤$13,455, assets ≤$415k). 60+ hardship may defer to sale/death.",
+    "value_summary_zh": "私人樓宇業主：每單位高達$100萬做維修、消防、升降機、渠務、僭建、斜坡。付息貸款免審查；綜援／長生津／低收入免息（60歲+單人入息≤$13,455、資產≤$415k）。60歲+困難可延至轉售／身故還。",
+    "deadline": null,
+    "source_url": "https://www.bd.gov.hk/en/safety-inspection/financial-assistance/index_bsi_loanscheme.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Registered owner of private building unit",
+      "Statutory order/notice OR voluntary safety works",
+      "Income/asset proof + oath declaration (interest-free path)"
+    ],
+    "apply_link": "https://www.bd.gov.hk/en/safety-inspection/financial-assistance/index_bsi_loanscheme.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Facing a repair order on your flat — borrow up to $1m, interest-free if strapped.",
+    "why_zh": "收到維修令 — 高達$100萬貸款，困難戶免息。",
+    "proof_needed_zh": [
+      "私人樓宇註冊業主",
+      "法定命令／通知或自願安全工程",
+      "入息資產證明＋宣誓（免息途徑）"
+    ],
+    "source_url_zh": "https://www.bd.gov.hk/tc/safety-inspection/financial-assistance/index_bsi_loanscheme.html",
+    "apply_link_zh": "https://www.bd.gov.hk/tc/safety-inspection/financial-assistance/index_bsi_loanscheme.html",
+    "confirm_en": [
+      "Owners' corporations cannot borrow — individuals only",
+      "Sibling: Home Renovation Interest-free Loan up to $50k/unit for interior works (see IBRAS)"
+    ],
+    "confirm_zh": [
+      "業主立案法團不可借 — 只限個人",
+      "姊妹計劃：家居維修免息貸款每單位高達$50k（見IBRAS）"
+    ]
+  },
+  {
+    "id": "whs-outbound",
+    "title_en": "Working Holiday Scheme (13 economies, ages 18–30)",
+    "title_zh": "工作假期計劃（13個經濟體，18–30歲）",
+    "category": "student",
+    "value_summary_en": "Ages 18–30 with HKSAR passport: live + short-term work/study in NZ, Australia, Ireland, Germany, Japan, Canada, Korea, France, UK, Austria, Hungary, Sweden, Netherlands. Annual quotas (Australia/Sweden unlimited for HK). Apply via consulates; insure yourself.",
+    "value_summary_zh": "18–30歲持特區護照：赴紐、澳、愛、德、日、加、韓、法、英、奧、匈、瑞、荷邊度假邊短期工作／讀書。設年度配額（澳／瑞對港不限）。經領館申請，另購保險。",
+    "deadline": null,
+    "source_url": "https://www.whs.gov.hk/en/index.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Age 18-30, ordinarily resident HK with valid HKSAR passport",
+      "Return ticket or funds + initial living funds",
+      "No accompanying dependants"
+    ],
+    "apply_link": "https://www.whs.gov.hk/en/index.php",
+    "needs": {
+      "min_age": 18,
+      "max_age": 30,
+      "hk_resident": true
+    },
+    "why_en": "18–30 and itching to see the world — work legally abroad for a year.",
+    "why_zh": "18–30歲想闖世界 — 合法海外打工度假。",
+    "proof_needed_zh": [
+      "18–30歲、通常居港、有效特區護照",
+      "回程機票或旅費＋初期生活費",
+      "不攜受養人"
+    ],
+    "source_url_zh": "https://www.whs.gov.hk/tc/index.php",
+    "apply_link_zh": "https://www.whs.gov.hk/tc/index.php",
+    "confirm_en": [
+      "Rules/quotas set by each host government — re-check with consulate before applying",
+      "Short courses allowed except Ireland"
+    ],
+    "confirm_zh": [
+      "規則配額由當地政府訂 — 申請前向領館覆核",
+      "短期課程愛爾蘭除外"
+    ]
+  },
+  {
+    "id": "ird-charity-35",
+    "title_en": "Charitable Donations Deduction (up to 35% of income)",
+    "title_zh": "慈善捐款扣稅（高達入息35%）",
+    "category": "family",
+    "value_summary_en": "Cash donations to s88 charities or Govt: deduct aggregate ≥$100 up to 35% of (income − expenses − depreciation). Spouse's unused balance transferable; personal-assessment pooling allowed. Claim on BIR60.",
+    "value_summary_zh": "現金捐予s88慈善團體或政府：總額滿$100可扣，高達（入息−開支−折舊）35%。配偶未用餘額可轉；個人入息課稅可合併。BIR60申索。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Donation receipts from s88 charity / Government",
+      "Aggregate ≥$100 in the year"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Giving to charity — deduct up to 35% of income.",
+    "why_zh": "樂善好施 — 高達入息35%扣稅。",
+    "proof_needed_zh": [
+      "s88團體／政府捐款收據",
+      "全年合計滿$100"
+    ],
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
+    "confirm_en": [
+      "Money donations only — raffle/admission tickets excluded",
+      "Same donation cannot be claimed twice (profits + salaries)"
+    ],
+    "confirm_zh": [
+      "只限現金捐款 — 獎券／門票不計",
+      "同一捐款不可兩稅同扣"
+    ]
+  },
+  {
+    "id": "quit-smoking-1833",
+    "title_en": "Free Smoking Cessation (Quitline 1833 183 + clinics)",
+    "title_zh": "免費戒煙（戒煙熱線1833 183＋診所）",
+    "category": "health",
+    "value_summary_en": "Quitline 1833 183: free nurse counselling + referral. Free: DH clinics, TWGH centres (drugs + counselling), Pok Oi acupuncture (100+ spots), Youth Quitline (<25), postal NRT. HA centres at GOPC rates (free for Eligible Persons). 52-week quit rates 20–60%.",
+    "value_summary_zh": "1833 183：免費護士輔導＋轉介。免費：衛生署診所、東華三院中心（藥物＋輔導）、博愛針灸（逾百點）、青少年熱線（25歲下）、郵遞戒煙藥。醫管局中心收門診費（符合人士免費）。52週戒煙率20–60%。",
+    "deadline": null,
+    "source_url": "https://www.livetobaccofree.hk/en/free-quit-tools/free-cessation-services.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Smoker wanting to quit (or friend/family enquiring)",
+      "Call 1833 183 or HA 2300 7272 for booking"
+    ],
+    "apply_link": "https://www.livetobaccofree.hk/en/free-quit-tools/free-cessation-services.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Want to quit smoking — free counselling, drugs and acupuncture.",
+    "why_zh": "想戒煙 — 免費輔導、藥物及針灸。",
+    "proof_needed_zh": [
+      "吸煙並想戒（親友代問亦可）",
+      "打1833 183或醫管局2300 7272預約"
+    ],
+    "source_url_zh": "https://www.livetobaccofree.hk/tc/free-quit-tools/free-cessation-services.html",
+    "apply_link_zh": "https://www.livetobaccofree.hk/tc/free-quit-tools/free-cessation-services.html"
+  },
+  {
+    "id": "hril-50k",
+    "title_en": "Home Renovation Interest-free Loan ($50,000)",
+    "title_zh": "家居維修免息貸款（$50,000）",
+    "category": "housing",
+    "value_summary_en": "Interest-free loan up to $50,000 per domestic unit for interior repair works (incl. windows) for eligible owners. Companion to the Building Safety Loan under IBRAS.",
+    "value_summary_zh": "合資格業主每單位免息貸款高達$50,000做室內維修（包括窗戶）。樓宇安全貸款的姊妹計劃（IBRAS）。",
+    "deadline": null,
+    "source_url": "https://www.bd.gov.hk/en/safety-inspection/financial-assistance/index_ibras.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Owner-occupier of domestic unit",
+      "Interior repair scope (incl. windows)"
+    ],
+    "apply_link": "https://www.bd.gov.hk/en/safety-inspection/financial-assistance/index_ibras.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Flat interior falling apart — $50k interest-free to fix it.",
+    "why_zh": "屋內殘破 — $50k免息維修。",
+    "proof_needed_zh": [
+      "自住單位業主",
+      "室內維修範圍（包括窗戶）"
+    ],
+    "source_url_zh": "https://www.bd.gov.hk/tc/safety-inspection/financial-assistance/index_ibras.html",
+    "apply_link_zh": "https://www.bd.gov.hk/tc/safety-inspection/financial-assistance/index_ibras.html"
+  },
+  {
+    "id": "ird-mpf-18k",
+    "title_en": "MPF Mandatory Contributions Deduction ($18,000/yr)",
+    "title_zh": "強積金強制供款扣稅（每年$18,000）",
+    "category": "family",
+    "value_summary_en": "Deduct mandatory MPF/ORSO contributions up to $18,000/yr under salaries tax. Automatic via employer; check your BIR60.",
+    "value_summary_zh": "薪俸稅扣除強制強積金／認可職業退休供款，高達每年$18,000。僱主代供，核對BIR60。",
+    "deadline": null,
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/mpf.htm",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Employee MPF/ORSO mandatory contributions",
+      "Contribution records"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/mpf.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Working and paying MPF — $18k off your taxable income.",
+    "why_zh": "打工供強積金 — $18k扣稅。",
+    "proof_needed_zh": [
+      "僱員強積金／認可退休供款",
+      "供款紀錄"
+    ],
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/mpf.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/mpf.htm"
   }
 ]

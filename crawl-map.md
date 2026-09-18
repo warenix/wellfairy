@@ -4,7 +4,7 @@
 > - **Level 1 (BFS):** sweep across sources. When a new source is added, crawl its landing page to discover new schemes.
 > - **Level 2 (DFS):** deep-dive inside one source to enumerate sub-pages / sub-schemes.
 > - URL source of truth lives in `sources.md` (S01–S41). This map tracks **status**, not URLs — see `sources.md` for canonical links.
-> - Catalog: `data/benefits.json` (189 schemes, 2026-09-18). Schema: `data/schema.md`.
+> - Catalog: `data/benefits.json` (209 schemes, 2026-09-18). Schema: `data/schema.md`.
 
 ## Protocol (avoid overlap)
 
@@ -62,6 +62,9 @@
 | S41 | SPSS streams + FTSS | `spss-bpa`, `spss-eds`, `spss-tds`, `spss-roa`, `ftss-2026` | done | 2026-09-18 |
 | S42 | RGC PhD Fellowship + HA Samaritan Fund | `hkpfs-2728`, `samaritan-fund-2026` | done | 2026-09-18 |
 | S43 | IRD child-allowance top-up (update only) | `ird-child-allowance` (updated: $160k 2nd+ rule) | done | 2026-09-18 |
+| S44 | DH community health batch | `hkcip-vaccine`, `tb-chest-free`, `ehc-elderly-check`, `cas-child-assess`, `quit-smoking-1833` | done | 2026-09-18 |
+| S45 | Education batch (KG/DSS/RPg) | `kg-edu-scheme`, `dss-fee-remission`, `ugc-pgs-2026`, `tuition-waiver-rpg` | done | 2026-09-18 |
+| S46 | Care/housing/legal/tax batch | `rcsv-elderly`, `navigation-youth-care`, `bd-safety-loan`, `hril-50k`, `slas-topup`, `reverse-mortgage-prmp`, `ird-selfedu-100k`, `vhis-8k`, `ird-charity-35`, `ird-mpf-18k`, `whs-outbound` | done | 2026-09-18 |
 
 Status values: `pending` → `in_progress (session)` → `done` → re-crawl per cadence in `sources.md`.
 

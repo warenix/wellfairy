@@ -3,11 +3,11 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (189 schemes, 2026-09-18)
+- Catalog: `data/benefits.json` (209 schemes, 2026-09-18)
 - Crawl map (BFS sources / DFS deep-dives / frontier): `crawl-map.md`
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
-- Last full verification: **2026-09-18** (189 schemes: 187 + HKPFS/Samaritan S42 + ird-child top-up S43)
+- Last full verification: **2026-09-18** (209 schemes: 189 + 20 mixed crawl S44/S45/S46)
 - Last refresh run: **2026-09-17** — 4 crawl batches added 57 schemes (83 → 140) + 3 fixes (fare-2dollar wording, poa-2027 deadline 9-26→9-25, spd-job-matching new URL). Batches: S25–S27 (10) · S28–S30 (14) · S31–S33 (16) · S34–S36 (17). Details live in the sections below.
 - Editorial update **2026-09-17** (no re-crawl): added §Deadline watchlist, §Bilingual quirks table, cross-pointers in S04/S05/S06/S10–S13/S16/S20/S22/S24, open queries (EPEM retention line, CDSP Level-1-vs-2, K1 28-Nov provisional), expanded Expired list. Verification dates unchanged.
 
@@ -279,6 +279,9 @@
 - eHealth+ promos (child health-coins to May 2025, newborn gift box to Jul 2025) — expired; eHealth stays an enabler, not a scheme
 - Old Electricity Charges Subsidy/Relief — ended end-2025 (unused credits carried to 31 Dec 2026 only); no new 2026 relief — do not add
 - Trams: no senior-free scheme exists (65+ permanent fare $1.50; Senior-Day free is one-day-only) — do not add
+- $2,500 student grant — ABOLISHED from 2025/26 school year (Budget 2025) — do not add
+- EV-charging at Home Subsidy Scheme — applications closed 31 Dec 2023 — do not add
+- Lift Modernisation Subsidy Scheme 2nd round — closed 30 Sep 2020 — do not add
 
 ## S37 · Foster care, dementia support, free legal advice (added 2026-09-17)
 - URLs: 
@@ -371,3 +374,39 @@
 - Schemes: `ird-child-allowance` (updated), `ird-single-parent` + `ird-parent-allowance` (checked — already current, no change)
 - Change: 2nd+ children born on/after 16 Sep 2026 get $160k child + $160k additional ($320k/yr) from YA2026/27 (2026 Policy Address). Base $140k/$280k newborn rule unchanged.
 - Note: IRD family allowances were already in catalog — P04 frontier closed by verification, not by addition.
+
+## S44 · DH community health batch (added 2026-09-18)
+- URLs (all EN+ZH curl-200 except TB):
+  * HKCIP EN: https://www.fhs.gov.hk/english/main_ser/child_health/child_health_recommend.html (zh: `/tc_chi/…`)
+  * TB EN: https://www.info.gov.hk/tb_chest/en/contents/c611.htm (no TC split — tb_chest has no language tree; EN page is source)
+  * EHC EN: https://www.elderly.gov.hk/english/contactus/elderly_health_centres.html (zh: `/tc_chi/…`)
+  * CAS EN: https://www.dhcas.gov.hk/en/referral.html (zh: `/tc/…`)
+  * Quit EN: https://www.livetobaccofree.hk/en/free-quit-tools/free-cessation-services.html (zh: `/tc/…`)
+- Schemes: `hkcip-vaccine` (free birth–P6 incl. HPV girls), `tb-chest-free` (15 clinics, DOT), `ehc-elderly-check` (18 centres, $110/yr, 65+), `cas-child-assess` (7 centres, under-12 via referral), `quit-smoking-1833` (Quitline + free drugs/acupuncture, HA at GOPC rates)
+- Cadence: yearly (EHC integrating into DHC network — watch for closure/merger notices; HKCIP schedule per SCVPD)
+- Pitfall: FHS/DH-elderly use `/english/` ↔ `/tc_chi/`; livetobaccofree uses `/en/` ↔ `/tc/`; dhcas uses `/en/` ↔ `/tc/`.
+
+## S45 · Education batch: KG + DSS + research postgrad (added 2026-09-18)
+- URLs:
+  * KG EN: https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html (zh: `/tc/…`)
+  * DSS EN: https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/direct-subsidy-scheme/info-sch.html (zh: `/tc/…`)
+  * PGS EN-ONLY: https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/studentships (TC 404 — institution pages vary)
+  * Waiver EN-ONLY: https://gs.eduhk.hk/prospective/rpg/scholarship-and-financial-assistance/ (TC 404)
+- Schemes: `kg-edu-scheme` (~90% half-day free, RC/AP), `dss-fee-remission` (≥SFAA benchmarks, ≥10% fee income, CSSA/SFAA in principle), `ugc-pgs-2026` (~$19.1k/mo basic, normative period), `tuition-waiver-rpg` (full waiver local RPg since 2018/19)
+- Not added (verified dead): $2,500 student grant ABOLISHED from 2025/26 (Budget 2025) — see Expired; PolyU CEE page 404 (use CUHK/EdUHK instead).
+- Cadence: yearly (PGS rates revise each September; KG/DSS per school year).
+
+## S46 · Care / housing / legal / tax batch (added 2026-09-18)
+- URLs (all EN+ZH curl-200):
+  * RCSV: swd `/en/` ↔ `/tc/` `…/elderly/cat_residentcare/psrcsv/`
+  * Navigation: swd `…/elderly/cat_ms_ita/nsypcc/`
+  * BD loan: https://www.bd.gov.hk/en/safety-inspection/financial-assistance/index_bsi_loanscheme.html (zh: `/tc/…`)
+  * IBRAS/HRIL: https://www.bd.gov.hk/en/safety-inspection/financial-assistance/index_ibras.html (zh: `/tc/…`)
+  * SLAS: lad `/eng/` ↔ `/chi/` `…/las/civil/slas.html`
+  * PRMP: hkmc `/eng/` ↔ `/chi/` `…/policy_reverse_mortgage_programme.html`
+  * SEE/VHIS/Charity/MPF: gov.hk `/en/` ↔ `/tc/` deductions pages
+  * WHS: https://www.whs.gov.hk/en/index.php (zh: `/tc/…`)
+- Schemes: `rcsv-elderly` ($17,015 C&A / $21,982 NH from 1.4.2026, 8 levels, 7,000 vouchers), `navigation-youth-care` (17–29, Form 5+, fee reimbursement), `bd-safety-loan` (up to $1m/unit + interest-free path), `hril-50k` (interior, interest-free), `slas-topup` ($452k–$2.26m, $1k/$5k + $113,080), `reverse-mortgage-prmp` (55+, policy-backed, $15m cap), `ird-selfedu-100k`, `vhis-8k` (own pool, cf. $60k QDAP+TVC), `ird-charity-35` (≥$100, ≤35%), `ird-mpf-18k`, `whs-outbound` (13 economies, 18–30)
+- Corroborated (already in catalog, not duplicated): `vtc-earn-learn`, `nsccp-childcare`
+- Not added (verified closed): EHSS applications closed 31 Dec 2023; LIMSS 2nd round closed 30 Sep 2020.
+- Cadence: yearly (RCSV voucher values adjust each April; LAD limits + BD income limits drift).
