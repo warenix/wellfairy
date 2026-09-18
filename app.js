@@ -43,7 +43,7 @@ const L = (b, k) => (LANG === 'zh' && b[k + '_zh']) ? b[k + '_zh'] : (b[k] || b.
 
 // Full-site static UI strings. Add new keys here, reference with data-i18n="key".
 const I18N = {
-  brandSub: ['Benefit matcher · offline-ready', '福利配對 · 離線可用'],
+  brandSub: ['Benefit matcher', '福利配對'],
   install: ['⬇ Install', '⬇ 安裝'],
   tabMatch: ['Match', '配對'], tabAll: ['All', '全部'], tabProfile: ['Profile', '檔案'], tabAbout: ['About', '關於'],
   heroEyebrow: ['Benefits we found for you', '為您找到以下資助'],
@@ -110,8 +110,6 @@ const I18N = {
   ab1: ['Every match explains why you qualify and what proof to bring', '每個配對都會說明您符合的原因，以及需要準備的證明文件'],
   ab2: ['Every scheme links its government source plus update date', '每個計劃均附上政府來源連結及更新日期'],
   ab3: ['Guidance only — we never file for you; the government notice prevails', '我們只作提醒，不會代為申請，一切以政府公布為準'],
-  techH: ['Tech', '技術'],
-  techP: ['PWA · offline Service Worker · data/benefits.json edits go live instantly · matcher in app.js', 'PWA · Service Worker 離線 · data/benefits.json 即改即生效 · 配對引擎 app.js'],
   footer: ['Prototype — please verify with the official source.', 'Prototype — 申請前請以政府網站為準。'],
 };
 function applyI18n() {
