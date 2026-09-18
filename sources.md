@@ -3,11 +3,11 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (209 schemes, 2026-09-18)
+- Catalog: `data/benefits.json` (229 schemes, 2026-09-18)
 - Crawl map (BFS sources / DFS deep-dives / frontier): `crawl-map.md`
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
-- Last full verification: **2026-09-18** (209 schemes: 189 + 20 mixed crawl S44/S45/S46)
+- Last full verification: **2026-09-18** (229 schemes: 209 + 20 DFS crawl S47/S48/S49)
 - Last refresh run: **2026-09-17** — 4 crawl batches added 57 schemes (83 → 140) + 3 fixes (fare-2dollar wording, poa-2027 deadline 9-26→9-25, spd-job-matching new URL). Batches: S25–S27 (10) · S28–S30 (14) · S31–S33 (16) · S34–S36 (17). Details live in the sections below.
 - Editorial update **2026-09-17** (no re-crawl): added §Deadline watchlist, §Bilingual quirks table, cross-pointers in S04/S05/S06/S10–S13/S16/S20/S22/S24, open queries (EPEM retention line, CDSP Level-1-vs-2, K1 28-Nov provisional), expanded Expired list. Verification dates unchanged.
 
@@ -410,3 +410,41 @@
 - Corroborated (already in catalog, not duplicated): `vtc-earn-learn`, `nsccp-childcare`
 - Not added (verified closed): EHSS applications closed 31 Dec 2023; LIMSS 2nd round closed 30 Sep 2020.
 - Cadence: yearly (RCSV voucher values adjust each April; LAD limits + BD income limits drift).
+
+## S47 · Work & skills DFS (added 2026-09-18)
+- URLs:
+  * STEM EN: https://www.itf.gov.hk/en/support-measures/stem-internship-scheme/index.html (zh: `/tc/…`, both 200)
+  * ITCTS EN-ONLY: https://www.hkic.edu.hk/en/partners/cos (hkic.edu.hk has no TC tree)
+  * WTS EN: https://www.jobs.gov.hk/en/info/wts (zh: `/tc/…`, both 200)
+  * SET evidence EN-ONLY: https://www.info.gov.hk/gia/general/202302/15/P2023021500177.htm (LegCo Q&A; TC via toggle, IDs differ)
+  * GBA startup EN: https://www.weventure.gov.hk/en/plan_details/index.html (zh: `/tc/…`, both 200)
+- Schemes: `stem-internship-11790` ($11,790/mo ≤90d/yr from 1.4.2026), `cic-itcts-10200` ($10.2k/mo + $13.4k salary + $10k bonus), `ld-work-trial-9600` ($9.6k trial month, any age), `swd-set-2024` (SE/OJT/Sunnyway merged Apr 2024; trial subsidy ≤$4k×6 + SPED $40k), `gba-youth-startup-600k` (per-team cap via 16 NGOs)
+- Cadence: yearly (STEM rate yearly; ITCTS bonus tiers move).
+- Pitfall: HKIC institution pages are EN-only — same as S36 precedent.
+
+## S48 · Housing/property DFS (added 2026-09-18)
+- URLs:
+  * FiT EN: https://www.gov.hk/en/residents/environment/sustainable/renewable/feedintariff.htm (zh: `/tc/…`, both 200)
+  * WSPSS EN: https://www.wsd.gov.hk/en/water-safety/wspss/index.html (zh: `/tc/…`, both 200)
+  * BMPASS EN: https://www.buildingmgt.gov.hk/en/Support_Services/2_18.html (zh: `/tc/…`, both 200)
+  * SEN EN: https://www.hkhsseniorconnect.com/en/senior-citizen-residences-scheme (zh: `/tc/…`, both 200)
+  * HKHS flats EN: https://www.hkhs.com/en/application/senapply (zh: `/tc/…`, both 200)
+- Schemes: `fit-solar-4kwh` ($4/3/2.5 to end-2033), `wsd-wspss-310k` ($440M fund, cap $310k/bldg), `had-bmpass` (all 18 districts to Jul 2027 + $3k OC formation), `hkhs-senior-residences` (lease-for-life asset bands), `hkhs-elderly-flats` (rental, no-property)
+- Cadence: FiT rates locked per project; WSPSS fund not exhausted (713 apps/1,636 bldgs May 2024) — keep promoting.
+- Pitfall: clp.com/hkelectric.com bot-wall curl (403) — power-company care funds (P12) stay pending for browser verify.
+
+## S49 · Health/legal/money/misc DFS (added 2026-09-18)
+- URLs:
+  * LCSD pools EN: https://www.lcsd.gov.hk/en/beach/swim-intro/swim-admis.html (zh: `/tc/…`)
+  * CSP EN: https://www4.ha.org.hk/ppp/en/ppp-programmes/csp/programme-intro (TC tree 404 — Chinese FAQ https://www4.ha.org.hk/ppp/ppp-programmes/csp/faq used as _zh, 200)
+  * Smart Silver EN: https://www.digitalpolicy.gov.hk/en/our_work/digital_government/digital_inclusion/ict_training_programmes_for_elderly/ (zh: `/tc/…`)
+  * ODCB EN-ONLY: https://odcb.org.hk/en_content.php?sub=1 (TC guess 404)
+  * PCFB: https://pcfb.org.hk/compensate.php?lang=en (zh: `?lang=tc`, both 200)
+  * Rents index EN: https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/ (zh: `/tc/…`; figures per IRD pam61e.pdf, 200)
+  * ImmD EN-ONLY: https://www.immd.gov.hk/eng/services/Assistance_Outside_Hong_Kong.html (both `/chi/` guesses 404)
+  * Burial EN-ONLY: https://www.info.gov.hk/gia/general/200711/28/P200711280179.htm (2007 mechanism; cap re-check yearly)
+  * AFCD FDLF EN: https://www.afcd.gov.hk/english/fisheries/fish_cap/fish_cap_techsup/fish_cap_fdlf.html (zh: `/tc_chi/…`)
+  * AFCD hub EN: https://www.afcd.gov.hk/english/application_form/fund/loans_and_funds.html (some fund pages Chinese-only)
+- Schemes: `lcsd-concession`, `ha-cataract-ppp` ($8k+$8k, waiver $0), `smartsilver-ict` (2026–28 round), `odcb-deafness` (96/72/48mo + $98k aids), `pcfb-pneumo` (9 items, Cap.360), `ird-rent-100k`, `imm-1868-assist`, `cssa-burial-grant` (cap ~$17,870 Apr 2026, re-check yearly), `afcd-fish-loan` (1–2.5%), `afcd-farm-loan`
+- Not added: P14 FEHD waivers — no standalone scheme found (after-death is procedural; costs covered via `cssa-burial-grant`).
+- Cadence: yearly (burial cap April; ODCB/PCFB levels reviewed biennially; Smart Silver rounds).

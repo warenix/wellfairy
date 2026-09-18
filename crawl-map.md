@@ -4,7 +4,7 @@
 > - **Level 1 (BFS):** sweep across sources. When a new source is added, crawl its landing page to discover new schemes.
 > - **Level 2 (DFS):** deep-dive inside one source to enumerate sub-pages / sub-schemes.
 > - URL source of truth lives in `sources.md` (S01–S41). This map tracks **status**, not URLs — see `sources.md` for canonical links.
-> - Catalog: `data/benefits.json` (209 schemes, 2026-09-18). Schema: `data/schema.md`.
+> - Catalog: `data/benefits.json` (229 schemes, 2026-09-18). Schema: `data/schema.md`.
 
 ## Protocol (avoid overlap)
 
@@ -65,6 +65,9 @@
 | S44 | DH community health batch | `hkcip-vaccine`, `tb-chest-free`, `ehc-elderly-check`, `cas-child-assess`, `quit-smoking-1833` | done | 2026-09-18 |
 | S45 | Education batch (KG/DSS/RPg) | `kg-edu-scheme`, `dss-fee-remission`, `ugc-pgs-2026`, `tuition-waiver-rpg` | done | 2026-09-18 |
 | S46 | Care/housing/legal/tax batch | `rcsv-elderly`, `navigation-youth-care`, `bd-safety-loan`, `hril-50k`, `slas-topup`, `reverse-mortgage-prmp`, `ird-selfedu-100k`, `vhis-8k`, `ird-charity-35`, `ird-mpf-18k`, `whs-outbound` | done | 2026-09-18 |
+| S47 | Work & skills DFS | `stem-internship-11790`, `cic-itcts-10200`, `ld-work-trial-9600`, `swd-set-2024`, `gba-youth-startup-600k` | done | 2026-09-18 |
+| S48 | Housing/property DFS | `fit-solar-4kwh`, `wsd-wspss-310k`, `had-bmpass`, `hkhs-senior-residences`, `hkhs-elderly-flats` | done | 2026-09-18 |
+| S49 | Health/legal/money/misc DFS | `lcsd-concession`, `ha-cataract-ppp`, `smartsilver-ict`, `odcb-deafness`, `pcfb-pneumo`, `ird-rent-100k`, `imm-1868-assist`, `cssa-burial-grant`, `afcd-fish-loan`, `afcd-farm-loan` | done | 2026-09-18 |
 
 Status values: `pending` → `in_progress (session)` → `done` → re-crawl per cadence in `sources.md`.
 
@@ -75,10 +78,15 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | D1 | S04/S31 | SWD `ccf_current` page — standing watch for new CCF batches | recurring |
 | D2 | S40/S41 | EDB/UGC scholarship pages — watch for new streams (HKPF PhD Fellowship is separate P-row, not here) | recurring |
 | D3 | S10/S30/S35 | Next HOS sale exercise — new mini-site URL + limits when announced | waiting (no HOS 2026 announced) |
-| D4 | S36 | IRD allowances gap check — child allowance vs `ird-disabled-dep` / `ird-pda-75k` / `ird-sibling-allowance` | pending |
-| D5 | S14/S17 | HA Samaritan Fund — is there a catalogable drug/implant gap beyond `ccf-medical`? (promote to P-row if yes) | pending |
-| D6 | S26/S34 | VTC Earn & Learn / apprenticeship allowances — catalogable? (promote to P-row if yes) | pending |
+| D4 | S36 | IRD allowances gap check — closed: child/parent/sibling current; rents added S49 (`ird-rent-100k`) | done |
+| D5 | S14/S17 | HA Samaritan Fund — promoted to S42 (`samaritan-fund-2026`) | done |
+| D6 | S26/S34 | VTC Earn & Learn — corroborated existing `vtc-earn-learn` | done |
 | D7 | S27 | Newborn-bonus expiry Oct 2026 + Policy Address extension proposal — revisit, do not pre-encode | waiting |
+| D8 | S05 | CSSA burial grant — promoted to S49 (`cssa-burial-grant`) | done |
+| D9 | S46 | HKMC property-based Reverse Mortgage (distinct from policy-based `reverse-mortgage-prmp`) — verify page, then split or confirm | pending |
+| D10 | S45 | UGC PGS per-uni rate drift — rates revise each September; re-check `ugc-pgs-2026` yearly | recurring |
+| D11 | S46 | RCSV quota 7,000 (2026-27) + NH-place expansion take-up — re-check values each April | recurring |
+| D12 | S44 | EHC → DHC network integration — may retire/merge `ehc-elderly-check`; watch DH announcements | waiting |
 
 ## Pending frontier — new sources (BFS candidates)
 
@@ -87,11 +95,29 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | ID | Candidate source | Search hint | Status |
 |---|---|---|---|
 | P01 | RGC Hong Kong PhD Fellowship Scheme | promoted to S42 (`hkpfs-2728`) | done |
-| P02 | UGC postgraduate studentships (8 universities, per-uni pages) | per-university search; institution-administered — decide catalog granularity first | pending |
+| P02 | UGC postgraduate studentships (8 universities, per-uni pages) | DECIDED: single entry `ugc-pgs-2026` kept — per-uni rates drift yearly, revisit via D10 | done |
 | P03 | HA Samaritan Fund | promoted to S42 (`samaritan-fund-2026`) | done |
 | P04 | IRD child allowance (+ dependent parent/grandparent check vs existing) | verified current; 2nd-child top-up applied in S43 | done |
-| P05 | VTC Earn & Learn / apprenticeship | websearch `VTC Earn and Learn allowance site:vtc.edu.hk` | pending |
-| P06 | Construction Industry Council training allowances (beyond `hkic-skill-training`) | `hkic.edu.hk` EN-only; check course allowance pages | pending |
+| P05 | VTC Earn & Learn / apprenticeship | corroborated existing `vtc-earn-learn` (S46 research) | done |
+| P06 | Construction Industry Council training allowances | superseded by P23 (ECMTS) | done |
+| P09 | LCSD concessions (leisure facilities, museums, libraries for elderly/disabled/students) | promoted to S49 (`lcsd-concession`) | done |
+| P10 | WSD Water Safety Plan Subsidy Scheme (buildings' internal plumbing) | promoted to S48 (`wsd-wspss-310k`) | done |
+| P11 | Feed-in Tariff solar (CLP/HKE, gov-approved earnings for rooftop solar) | promoted to S48 (`fit-solar-4kwh`) | done |
+| P12 | Power company care funds (CLP Power Connect / HKE Smart Power Care Fund, needy + subdivided units) | BLOCKED: clp.com + hkelectric.com bot-wall curl 403 — needs browser verify, do not guess | blocked |
+| P13 | AFCD loan funds (Fisheries Development Loan Fund, agricultural loans for primary producers) | promoted to S49 (`afcd-fish-loan`, `afcd-farm-loan`) | done |
+| P14 | FEHD fee waivers for needy (cremation/burial-related?) | CLOSED: no standalone scheme — after-death is procedural; costs via `cssa-burial-grant` | done |
+| P15 | HAD owners'-corporation / building-management support | promoted to S48 (`had-bmpass`) | done |
+| P16 | HKHS housing products (Starter Homes, Senior Citizen Residences, rental estates) | promoted to S48 (`hkhs-senior-residences`, `hkhs-elderly-flats`) | done |
+| P17 | ITIB student schemes (STEM Internship Scheme, Innovation and Technology Scholarship) | promoted to S47 (`stem-internship-11790`); I&T Scholarship still open — re-queue if wanted | done |
+| P18 | HA PPP clinical programmes (cataract surgeries, GOPC PPP, haemodialysis?) | promoted to S49 (`ha-cataract-ppp`); GOPC/haemodialysis PPP still open | done |
+| P19 | Disability youth on-the-job training (SWD/Labour, distinct from `wops-60k`) | promoted to S47 (`swd-set-2024`: SE/OJT/Sunnyway merged Apr 2024) | done |
+| P20 | LD Work Trial Scheme (1-month trial placement) | promoted to S47 (`ld-work-trial-9600`: $9.6k / $57hr) | done |
+| P21 | OGCIO elderly digital inclusion (device lending + Enriched ICT Training courses) | promoted to S49 (`smartsilver-ict`, 2026–28 round) | done |
+| P22 | Occupational compensation boards (deafness ODCB, pneumoconiosis PCFB) | promoted to S49 (`odcb-deafness`, `pcfb-pneumo`) | done |
+| P23 | CIC Enhanced Construction Manpower Training Scheme (trainee allowances) | promoted to S47 (`cic-itcts-10200` + ACMTS notes) | done |
+| P24 | IRD Domestic Rents Deduction landing page ($100k basic per pam61 table; my `/domesticrent.htm` guess 404'd — find real page) | promoted to S49 (`ird-rent-100k` via deductions index + pam61) | done |
+| P25 | GBA youth entrepreneurship funding (YDC Funding Scheme for Youth Entrepreneurship) | promoted to S47 (`gba-youth-startup-600k`) | done |
+| P26 | ImmD aid to distressed HK residents abroad (emergency loans?) | promoted to S49 (`imm-1868-assist` service; no cash loans found — referrals only) | done |
 | P07 | CCF new batches (standing) | SWD `ccf_current` page each cycle | recurring |
 | P08 | HOS next sale exercise (standing) | websearch `HOS sale exercise Housing Authority` when rumored | waiting |
 
