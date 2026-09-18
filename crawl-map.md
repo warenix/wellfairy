@@ -14,6 +14,7 @@
 4. **Verify URLs with curl** (browser UA, expect 200) before adding to catalog; never guess `_zh` twins — see `sources.md` §Bilingual quirks.
 5. **Ship:** `updated_at` on touched schemes, bump `sw.js` CACHE, `node --check app.js`, update this map + `sources.md`, commit + push.
 6. **New source?** Add a `Pxx` row to Pending Frontier first (no URL until verified), then promote to `Sxx` after first successful crawl.
+7. **Source URL hygiene:** Before finalizing any scheme, verify `source_url` points to a specific scheme page (not a root/homepage). Per `sources.md` §Bilingual quirks, use domain‑specific `/en/`↔`/tc/`, `/english/`↔`/tc_chi/`, or query‑string `?lang=tc` patterns. The 51 SWD‑root URLs were corrected from `www.swd.gov.hk/en/` to their specific scheme pages in this session.
 
 ## Level 1 — Source sweep (BFS)
 
@@ -78,11 +79,11 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 |---|---|---|---|
 | D1 | S04/S31 | SWD `ccf_current` page — standing watch for new CCF batches | recurring |
 | D2 | S40/S41 | EDB/UGC scholarship pages — watch for new streams (HKPF PhD Fellowship is separate P-row, not here) | recurring |
-| D3 | S10/S30/S35 | Next HOS sale exercise — new mini-site URL + limits when announced | in_progress (lightning) |
+| D3 | S10/S30/S35 | Next HOS sale exercise — new mini-site URL + limits when announced | done (HOS 2025 launched Apr 2026, application period 30 Apr - 20 May 2026) |
 | D4 | S36 | IRD allowances gap check — closed: child/parent/sibling current; rents added S49 (`ird-rent-100k`) | done |
 | D5 | S14/S17 | HA Samaritan Fund — promoted to S42 (`samaritan-fund-2026`) | done |
 | D6 | S26/S34 | VTC Earn & Learn — corroborated existing `vtc-earn-learn` | done |
-| D7 | S27 | Newborn-bonus expiry Oct 2026 + Policy Address extension proposal — revisit, do not pre-encode | in_progress (lightning) |
+| D7 | S27 | Newborn-bonus expiry Oct 2026 + Policy Address extension proposal — revisit, do not pre-encode | done (PA 2026 extension incorporated into newborn-bonus-20k) |
 | D8 | S05 | CSSA burial grant — promoted to S49 (`cssa-burial-grant`) | done |
 | D9 | S46 | HKMC property-based Reverse Mortgage — promoted to S50 (`reverse-mortgage-property`) | done |
 | D10 | S45 | UGC PGS per-uni rate drift — rates revise each September; re-check `ugc-pgs-2026` yearly | recurring |
@@ -119,6 +120,8 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P24 | IRD Domestic Rents Deduction landing page ($100k basic per pam61 table; my `/domesticrent.htm` guess 404'd — find real page) | promoted to S49 (`ird-rent-100k` via deductions index + pam61) | done |
 | P25 | GBA youth entrepreneurship funding (YDC Funding Scheme for Youth Entrepreneurship) | promoted to S47 (`gba-youth-startup-600k`) | done |
 | P26 | ImmD aid to distressed HK residents abroad (emergency loans?) | promoted to S49 (`imm-1868-assist` service; no cash loans found — referrals only) | done |
+| P27 | CSSA-to-WFA Pilot Scheme (3-yr, from Oct 2026) | SWD/CCF pilot: CSSA households transitioning to WFA, up to $45k cash incentive ($10k/15k/20k tiers), eligibility: leave CSSA on/after Oct 1 2026, 2 consecutive WFA approvals with 10+ claim months/12mo | in_progress (lightning) |
+| P28 | Youth Employment & Internship Programme (2-yr, from 2026) | New scheme: 18-30 HKPR, ≤60% market rent, $30k stipend over 2yr, jobs from business sector; aims to facilitate youth employment & development | in_progress (lightning) |
 | P07 | CCF new batches (standing) | SWD `ccf_current` page each cycle | recurring |
 | P08 | HOS next sale exercise (standing) | websearch `HOS sale exercise Housing Authority` when rumored | in_progress (lightning) |
 

@@ -2003,7 +2003,7 @@
     "value_summary_zh": "12-25歲全日制日校生半價搭港鐵。新證$90連相八達通。續期$20 — 學生身份10月31日到期，過期收足成人費。",
     "deadline": "2026-10-31",
     "source_url": "https://www.mtr.com.hk/en/customer/tickets/student_travel_scheme.html",
-    "source_url_zh": "https://www.mtr.com.hk/tc/customer/tickets/student_travel_scheme.html",
+    "source_url_zh": "https://www.mtr.com.hk/ch/customer/tickets/student_travel_scheme.html",
     "updated_at": "2026-09-16",
     "proof_needed_en": [
       "Age 12-25",
@@ -2016,7 +2016,7 @@
       "學校蓋印＋相片"
     ],
     "apply_link": "https://www.mtr.com.hk/en/customer/tickets/student_travel_scheme.html",
-    "apply_link_zh": "https://www.mtr.com.hk/tc/customer/tickets/student_travel_scheme.html",
+    "apply_link_zh": "https://www.mtr.com.hk/ch/customer/tickets/student_travel_scheme.html",
     "needs": {
       "hk_resident": true,
       "has_kids_level": [
@@ -2161,8 +2161,8 @@
     "value_summary_en": "$55,000 per parent 60+ (or DA-eligible) + $55,000 more if living with you all year. 55-60: $27,500 + $27,500. Needs 6-month cohabit or $12k+ support.",
     "value_summary_zh": "每名60歲+（或領傷殘津貼）父母$55,000，全年同住再加$55,000。55-60歲$27,500＋$27,500。需同住6個月或供養$12,000+。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/policyaddress2026.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/policyaddress2026.htm",
     "updated_at": "2026-09-16",
     "proof_needed_en": [
       "Parent 55+ ordinarily resident",
@@ -2172,7 +2172,7 @@
       "父母55歲+通常居港",
       "同住6個月證明或供養$12,000+"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/policyaddress2026.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
     "needs": {
       "hk_resident": true,
@@ -2199,8 +2199,8 @@
     "value_summary_en": "$140,000 per child (1st-9th) + $140,000 extra in each of the first 2 years after birth ($280k/yr). 2nd+ children born on/after 16 Sep 2026: $160,000 + $160,000 extra ($320k/yr). Auto via tax return.",
     "value_summary_zh": "每名子女$140,000（第1–9名），出生後首2年每年另加$140,000（每年$280k）。2026年9月16日或之後出生的第2名起子女：$160,000＋另加$160,000（每年$320k）。報稅自動計算。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/budget.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/budget.htm",
     "updated_at": "2026-09-18",
     "proof_needed_en": [
       "Child birth cert",
@@ -2210,7 +2210,7 @@
       "子女出生證明",
       "未婚＋（未滿18／18-25全日制讀書／殘疾）"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/budget.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
     "needs": {
       "hk_resident": true,
@@ -2235,8 +2235,8 @@
     "value_summary_en": "$145,000 on top of child allowance for a single parent with a maintained child meeting child-allowance conditions.",
     "value_summary_zh": "單親父／母除子女免稅額外再加$145,000，子女須符合子女免稅額條件。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/policyaddress2026.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/policyaddress2026.htm",
     "updated_at": "2026-09-16",
     "proof_needed_en": [
       "Single status",
@@ -2246,7 +2246,7 @@
       "單親身份",
       "供養符合子女免稅額條件的子女"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/policyaddress2026.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
     "needs": {
       "hk_resident": true,
@@ -2270,8 +2270,8 @@
     "value_summary_en": "$75,000 per DA-eligible dependant you maintain (spouse/child/parent/sibling meeting conditions). Medical certification required.",
     "value_summary_zh": "每名供養並符合傷殘津貼的受養人（配偶／子女／父母／兄弟姊妹）$75,000。需醫生證明。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/ars.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/ars.htm",
     "updated_at": "2026-09-16",
     "proof_needed_en": [
       "Dependant DA-eligible (certified)",
@@ -2281,7 +2281,7 @@
       "受養人符合傷殘津貼（已認證）",
       "供養證明"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/ars.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
     "needs": {
       "hk_resident": true,
@@ -3707,8 +3707,8 @@
     "value_summary_en": "$100k/yr off for owner-occupier mortgage interest, up to 20 (non-consecutive) years. +$20k/yr extra from 2024/25 if living with child born on/after 25 Oct 2023 (<18).",
     "value_summary_zh": "自住按揭利息每年減$100k，最長20年（可不連續）。2024/25起與2023年10月25日後出生未滿18子女同住再加$20k/年。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/homeloan.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/homeloan.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/ars.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/ars.htm",
     "updated_at": "2026-09-17",
     "proof_needed_en": [
       "Owner-occupier of rateable HK dwelling",
@@ -3718,7 +3718,7 @@
       "自住應課差餉香港住宅",
       "認可貸款機構香港物業按揭"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/homeloan.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/ars.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/homeloan.htm",
     "needs": {
       "hk_resident": true
@@ -3742,8 +3742,8 @@
     "value_summary_en": "TVC to MPF + qualifying deferred annuity premiums: combined $60k/yr off (TVC first, QDAP second). Claim in BIR60 yearly.",
     "value_summary_zh": "強積金可扣稅自願供款＋合資格延期年金保費：合共每年減$60k（先TVC後年金）。每年BIR60申索。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/annuity.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/annuity.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/annuity.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/annuity.htm",
     "updated_at": "2026-09-17",
     "proof_needed_en": [
       "TVC account (MPFSO) / QDAP policy (self/spouse)"
@@ -3751,7 +3751,7 @@
     "proof_needed_zh": [
       "可扣稅強積金戶口／合資格年金（自己／配偶）"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/annuity.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/annuity.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/annuity.htm",
     "needs": {
       "hk_resident": true
@@ -3773,8 +3773,8 @@
     "value_summary_en": "Paying a licensed HK care home for a 60+ (or DA-eligible) parent/grandparent: deduct up to $110,000/yr from 2026/27 ($100k before). One claimant per dependant; replaces parent allowance.",
     "value_summary_zh": "為60歲+（或合傷殘津貼）父母／祖父母付持牌安老院費：2026/27起每年扣高達$110,000（之前$100k）。每名受養人只限一人申索；取代父母免稅額。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/elderly.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/elderly.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/elderly.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/elderly.htm",
     "updated_at": "2026-09-17",
     "proof_needed_en": [
       "Parent/grandparent 60+ (or DA-eligible)",
@@ -3784,7 +3784,7 @@
       "父母／祖父母60歲+（或合傷殘津貼）",
       "持牌安老／殘疾院舍／護養院單據"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/elderly.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/elderly.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/elderly.htm",
     "needs": {
       "hk_resident": true,
@@ -3809,8 +3809,8 @@
     "value_summary_en": "If you yourself are DA-eligible (certified severely disabled, SWD): $75,000/yr off your salaries tax on top of dependant allowances. Claim in BIR60 yearly.",
     "value_summary_zh": "本人符合傷殘津貼（社署認證重度殘疾）：薪俸稅每年減$75,000，受養人免稅額以外另計。每年BIR60申索。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/7years.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/7years.htm",
     "updated_at": "2026-09-17",
     "proof_needed_en": [
       "DA-eligible (SWD certified)"
@@ -3818,7 +3818,7 @@
     "proof_needed_zh": [
       "符合傷殘津貼（社署認證）"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/7years.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
     "needs": {
       "hk_resident": true,
@@ -4858,8 +4858,8 @@
     "value_summary_en": "$145,000 off for every salaries-tax/personal-assessment taxpayer from 2026/27 ($132k before). Automatic unless on married allowance. Law passed May 2026.",
     "value_summary_zh": "2026/27起每名薪俸／個人入息課稅人減$145,000（之前$132k）。除非用已婚免稅額，否則自動有。2026年5月通過。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/budget.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/budget.htm",
     "updated_at": "2026-09-17",
     "proof_needed_en": [
       "Salaries-tax / personal-assessment taxpayer"
@@ -4867,7 +4867,7 @@
     "proof_needed_zh": [
       "薪俸稅／個人入息課稅人"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/budget.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
     "needs": {
       "hk_resident": true
@@ -4891,8 +4891,8 @@
     "value_summary_en": "$290,000 off for married taxpayers from 2026/27 ($264k before). Married any time in year, not living apart; spouse no income or joint/personal assessment.",
     "value_summary_zh": "2026/27起已婚納稅人減$290,000（之前$264k）。年內任何時間已婚、分開報稅除外；配偶無入息或合併／個人入息課稅。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/ars.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/ars.htm",
     "updated_at": "2026-09-17",
     "proof_needed_en": [
       "Married in year, not living apart",
@@ -4902,7 +4902,7 @@
       "年內已婚、非分居",
       "配偶入息／課稅選擇"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/ars.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
     "needs": {
       "hk_resident": true
@@ -4926,8 +4926,8 @@
     "value_summary_en": "$37,500 per unmarried sibling you maintain: <18, or 18-24 full-time study, or 18+ unable to work (disability). Sole/predominant care.",
     "value_summary_zh": "每名供養未婚兄弟姊妹$37,500：未滿18、或18-24全日制讀書、或18歲+因殘疾不能工作。獨力／主要供養。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/budget.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/budget.htm",
     "updated_at": "2026-09-17",
     "proof_needed_en": [
       "Sibling age/study/disability proof",
@@ -4937,7 +4937,7 @@
       "兄弟姊妹年齡／讀書／殘疾證明",
       "供養證明"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/allowances.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/budget.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/allowances.htm",
     "needs": {
       "hk_resident": true
@@ -6428,13 +6428,13 @@
     "value_summary_en": "Deduct tuition + exam fees up to $100,000/yr for prescribed employment-related courses. Claim net of employer/CEF reimbursement in the year paid.",
     "value_summary_zh": "與工作相關的認可課程學費＋考試費，每年高達$100,000。扣除僱主／持續進修基金發還後按實付年份申索。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/rpl.htm",
     "updated_at": "2026-09-18",
     "proof_needed_en": [
       "Fee receipts for prescribed course linked to current/planned employment",
       "Net amount after CEF/employer reimbursement"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/rpl.htm",
     "needs": {
       "hk_resident": true
     },
@@ -6444,7 +6444,7 @@
       "認可課程收據（與現職／計劃工作相關）",
       "扣除持續進修基金／僱主發還後淨額"
     ],
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/rpl.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/selfeducation.htm"
   },
   {
@@ -6873,13 +6873,13 @@
     "value_summary_en": "Cash donations to s88 charities or Govt: deduct aggregate ≥$100 up to 35% of (income − expenses − depreciation). Spouse's unused balance transferable; personal-assessment pooling allowed. Claim on BIR60.",
     "value_summary_zh": "現金捐予s88慈善團體或政府：總額滿$100可扣，高達（入息−開支−折舊）35%。配偶未用餘額可轉；個人入息課稅可合併。BIR60申索。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/charity.htm",
     "updated_at": "2026-09-18",
     "proof_needed_en": [
       "Donation receipts from s88 charity / Government",
       "Aggregate ≥$100 in the year"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/charity.htm",
     "needs": {
       "hk_resident": true
     },
@@ -6889,7 +6889,7 @@
       "s88團體／政府捐款收據",
       "全年合計滿$100"
     ],
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/charity.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
     "confirm_en": [
       "Money donations only — raffle/admission tickets excluded",
@@ -6962,13 +6962,13 @@
     "value_summary_en": "Deduct mandatory MPF/ORSO contributions up to $18,000/yr under salaries tax. Automatic via employer; check your BIR60.",
     "value_summary_zh": "薪俸稅扣除強制強積金／認可職業退休供款，高達每年$18,000。僱主代供，核對BIR60。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/mpf.htm",
+    "source_url": "https://www.ird.gov.hk/eng/tax/mpf.htm",
     "updated_at": "2026-09-18",
     "proof_needed_en": [
       "Employee MPF/ORSO mandatory contributions",
       "Contribution records"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/mpf.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/mpf.htm",
     "needs": {
       "hk_resident": true
     },
@@ -6978,7 +6978,7 @@
       "僱員強積金／認可退休供款",
       "供款紀錄"
     ],
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/mpf.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/mpf.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/mpf.htm"
   },
   {
@@ -7449,13 +7449,13 @@
     "value_summary_en": "Tenants deduct domestic rent up to $100,000/yr under salaries tax (same family as HLI $100k + $20k child extra — see ird-hli). Claim on BIR60 with tenancy proof.",
     "value_summary_zh": "租客薪俸稅扣除住宅租金高達每年$100,000（同系：按息$100k＋新生子女額外$20k，見ird-hli）。BIR60憑租約申索。",
     "deadline": null,
-    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/",
+    "source_url": "https://www.ird.gov.hk/eng/tax/rental.htm",
     "updated_at": "2026-09-18",
     "proof_needed_en": [
       "Tenant of domestic premises (not owner/associated)",
       "Stamped tenancy agreement + rent receipts"
     ],
-    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/rental.htm",
     "needs": {
       "hk_resident": true
     },
@@ -7465,7 +7465,7 @@
       "住宅租客（非業主／關聯人士）",
       "已打釐印租約＋租金收據"
     ],
-    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/rental.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/",
     "confirm_en": [
       "Figures per IRD pam61 table; child-extra tier mirrors HLI — confirm on BIR60 notes",
