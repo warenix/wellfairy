@@ -6054,5 +6054,182 @@
     ],
     "source_url_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php",
     "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
+  },
+  {
+    "id": "spss-bpa",
+    "title_en": "SPSS Best Progress Award ($10,000, self-financing)",
+    "title_zh": "自資專上最佳進步獎（$10,000）",
+    "category": "student",
+    "value_summary_en": "$10,000 one-off for self-financing students showing significant progress on completing programme. Full-time locally-accredited sub-degree / bachelor (incl. top-up). Institution-nominated.",
+    "value_summary_zh": "自資課程完成時顯著進步一次性$10,000。全日制經本地評審副學位／學士（含銜接）。院校提名。",
+    "deadline": null,
+    "source_url": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Full-time locally-accredited self-financing place",
+      "Completed 2+ years in same programme with significant improvement",
+      "Institution nomination"
+    ],
+    "apply_link": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Biggest improver finishing your self-financed degree — $10k.",
+    "why_zh": "自資學位大躍進畢業 — $10k獎勵。",
+    "proof_needed_zh": [
+      "全日制經評審自資學額",
+      "同課程讀滿2年＋顯著進步",
+      "院校提名"
+    ],
+    "confirm_en": [
+      "EN-only source (studyinhongkong has no TC tree)",
+      "One SPSS award per year max"
+    ],
+    "confirm_zh": [
+      "英文來源（無中文版）",
+      "每學年只可獲一項SPSS獎"
+    ]
+  },
+  {
+    "id": "spss-eds",
+    "title_en": "SPSS Endeavour Scholarship ($15,000 SEN, self-financing)",
+    "title_zh": "自資專上毅進獎學金（$15,000，特殊學習需要）",
+    "category": "student",
+    "value_summary_en": "$15,000 one-off for self-financing students with special educational needs pursuing excellence. Full-time locally-accredited sub-degree / bachelor.",
+    "value_summary_zh": "自資特殊學習需要學生追求卓越一次性$15,000。全日制經評審副學位／學士。",
+    "deadline": null,
+    "source_url": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Full-time locally-accredited self-financing place",
+      "SEN documentation + institution nomination"
+    ],
+    "apply_link": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true,
+      "requires_disability": true
+    },
+    "why_en": "Overcoming barriers in self-financed study — $15k.",
+    "why_zh": "自資升學克服障礙 — $15k嘉許。",
+    "proof_needed_zh": [
+      "全日制經評審自資學額",
+      "特殊學習需要證明＋院校提名"
+    ],
+    "confirm_en": [
+      "EN-only source (studyinhongkong has no TC tree)",
+      "One SPSS award per year max"
+    ],
+    "confirm_zh": [
+      "英文來源（無中文版）",
+      "每學年只可獲一項SPSS獎"
+    ]
+  },
+  {
+    "id": "spss-tds",
+    "title_en": "SPSS Talent Development Scholarship ($10,000, self-financing)",
+    "title_zh": "自資專上才藝發展獎學金（$10,000）",
+    "category": "student",
+    "value_summary_en": "$10,000 one-off for non-academic talent (sports, arts, innovation, STEM). Full-time locally-accredited self-financing sub-degree / bachelor.",
+    "value_summary_zh": "非學術才藝（體育、藝術、創科）一次性$10,000。全日制經評審自資副學位／學士。",
+    "deadline": null,
+    "source_url": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Full-time locally-accredited self-financing place",
+      "Talent record + institution nomination"
+    ],
+    "apply_link": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Talented beyond exams in self-financed study — $10k.",
+    "why_zh": "自資升學才藝出眾 — $10k助發展。",
+    "proof_needed_zh": [
+      "全日制經評審自資學額",
+      "才藝紀錄＋院校提名"
+    ],
+    "confirm_en": [
+      "EN-only source (studyinhongkong has no TC tree)",
+      "One SPSS award per year max"
+    ],
+    "confirm_zh": [
+      "英文來源（無中文版）",
+      "每學年只可獲一項SPSS獎"
+    ]
+  },
+  {
+    "id": "spss-roa",
+    "title_en": "SPSS Reaching Out Award ($10,000, self-financing)",
+    "title_zh": "自資專上展外之旅獎（$10,000）",
+    "category": "student",
+    "value_summary_en": "$10,000 one-off for outward learning (exchange, internship, competition, service). Full-time locally-accredited self-financing sub-degree / bachelor.",
+    "value_summary_zh": "境外學習（交流、實習、比賽、服務）一次性$10,000。全日制經評審自資副學位／學士。",
+    "deadline": null,
+    "source_url": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Full-time locally-accredited self-financing place",
+      "Outward activity + institution nomination"
+    ],
+    "apply_link": "https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Self-financed and going outward — $10k for the trip.",
+    "why_zh": "自資升學走出去 — $10k助旅費。",
+    "proof_needed_zh": [
+      "全日制經評審自資學額",
+      "境外活動＋院校提名"
+    ],
+    "confirm_en": [
+      "EN-only source (studyinhongkong has no TC tree)",
+      "One SPSS award per year max"
+    ],
+    "confirm_zh": [
+      "英文來源（無中文版）",
+      "每學年只可獲一項SPSS獎"
+    ]
+  },
+  {
+    "id": "ftss-2026",
+    "title_en": "Future Talents Scholarship for Advanced Studies (up to $100k TPg)",
+    "title_zh": "未來人才深造獎學金（授課式碩士高達$10萬）",
+    "category": "student",
+    "value_summary_en": "Up to $100k off TPg tuition for local students in designated programmes (8 priority areas: STEM, digital, finance, law, culture, creative, health, sustainable). Pay floor $47k (2026/27). 1,200 places/yr. Full/part-time.",
+    "value_summary_zh": "指定授課式深造課程學費減免高達$10萬（8大優先範疇：創科、數碼、金融、法律、文化、創意、健康、可持續）。2026/27須付底線$47,000。每年1,200名額。全日制／兼讀皆可。",
+    "deadline": null,
+    "source_url": "https://www.ugc.edu.hk/eng/ugc/activity/ftss.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Local student status",
+      "New admission to designated TPg programme (8 UGC + self-financing universities)",
+      "University invitation to apply"
+    ],
+    "apply_link": "https://www.ugc.edu.hk/eng/ugc/activity/ftss.html",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Local heading to taught postgrad in a priority field — up to $100k off.",
+    "why_zh": "本地讀授課式碩士兼屬優先範疇 — 高達$10萬學費減免。",
+    "proof_needed_zh": [
+      "本地生身份",
+      "獲指定深造課程新取錄（8大＋自資院校）",
+      "經大學邀請申請"
+    ],
+    "confirm_en": [
+      "EN-only UGC source (no TC tree, 404 verified)",
+      "No double benefit: CEF / other gov scholarships for same programme excluded; gov loans OK",
+      "Floor $44.5k (2025/26) / $47k (2026/27); cap $100k whole programme"
+    ],
+    "confirm_zh": [
+      "英文來源（無中文版）",
+      "不可與同課程其他政府獎學金／持續進修基金同享；政府貸款除外",
+      "底線$44,500（2025/26）／$47,000（2026/27）；整個課程上限$10萬"
+    ]
   }
 ]

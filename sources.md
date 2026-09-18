@@ -3,10 +3,10 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (182 schemes, 2026-09-18)
+- Catalog: `data/benefits.json` (187 schemes, 2026-09-18)
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
-- Last full verification: **2026-09-18** (182 schemes: 171 + 11 scholarship crawl S40)
+- Last full verification: **2026-09-18** (187 schemes: 182 + 5 SPSS/FTSS crawl S41)
 - Last refresh run: **2026-09-17** — 4 crawl batches added 57 schemes (83 → 140) + 3 fixes (fare-2dollar wording, poa-2027 deadline 9-26→9-25, spd-job-matching new URL). Batches: S25–S27 (10) · S28–S30 (14) · S31–S33 (16) · S34–S36 (17). Details live in the sections below.
 - Editorial update **2026-09-17** (no re-crawl): added §Deadline watchlist, §Bilingual quirks table, cross-pointers in S04/S05/S06/S10–S13/S16/S20/S22/S24, open queries (EPEM retention line, CDSP Level-1-vs-2, K1 28-Nov provisional), expanded Expired list. Verification dates unchanged.
 
@@ -340,3 +340,14 @@
 - Cadence: yearly (HKSES 100 offers + $300k/$200k caps; GSF streams via institution nomination)
 - Extract: tuition caps, bursary tiers, nomination windows, return-to-HK undertaking, sector-link rules
 - Pitfall: all six URLs curl-verified 200 on 2026-09-18; WFSFAA small funds share the /other/index.php landing — prefer it over deep fund pages that 404.
+
+## S41 · SPSS streams + FTSS (added 2026-09-18)
+- URLs:
+  * SPSS EN-ONLY: https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php (no TC tree — accepted fallback, same as `spss-ops`)
+  * SPSS cross-check press EN: https://www.info.gov.hk/gia/general/202604/23/P2026042200377.htm (EN-only; 6,600 awards ~$210m, 690 SEN)
+  * FTSS EN-ONLY: https://www.ugc.edu.hk/eng/ugc/activity/ftss.html (TC 404 verified)
+  * FTSS FAQ EN-ONLY: https://www.ugc.edu.hk/eng/ugc/activity/ftss/faq.html
+- Schemes: `spss-bpa` ($10k progress), `spss-eds` ($15k SEN), `spss-tds` ($10k talent), `spss-roa` ($10k outward), `ftss-2026` (up to $100k TPg, floor $47k 2026/27, 1,200 places/yr, 8 priority areas)
+- Cadence: yearly (SPSS via institution nomination ~Nov/Jan; FTSS per intake, rolling + interview)
+- Extract: award amounts, CGPA bars (OPS 3.23+, BPA 2-yr completion), one-award-per-year rule, FTSS no-double-benefit (CEF excluded, loans OK), full/part-time both eligible
+- Pitfall: HKMU SPSS page 403 from crawler — do not link institution pages; cspe.edu.hk unreachable — use studyinhongkong + press release instead.
