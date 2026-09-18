@@ -5732,5 +5732,327 @@
     "proof_needed_zh": [],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
+  },
+  {
+    "id": "hkses-2627",
+    "title_en": "Hong Kong Scholarship for Excellence Scheme (up to $300k/yr tuition + $200k bursary)",
+    "title_zh": "香港卓越獎學金計劃（學費高達每年$30萬＋助學金$20萬）",
+    "category": "student",
+    "value_summary_en": "Up to 100 offers/yr. Non-means-tested scholarship up to $300k/yr tuition + means-tested bursary up to $200k/yr living. Renewable to normal programme duration.",
+    "value_summary_zh": "每年高達100名。非經濟審查獎學金高達每年$30萬學費＋經濟審查助學金高達每年$20萬生活費。可續至正常修業期。",
+    "deadline": null,
+    "source_url": "https://hkses.edb.gov.hk/en/abouts.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "HK right of abode / right to land / One-way Permit",
+      "3-year continuous HK residence",
+      "Offer from world-renowned overseas university"
+    ],
+    "apply_link": "https://hkses.edb.gov.hk/en/index.html",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Top grades aiming overseas — up to $300k tuition plus living bursary.",
+    "why_zh": "成績優異擬赴海外升學 — 高達$30萬學費另加生活助學金。",
+    "proof_needed_zh": [
+      "香港居留權／入境權／單程證",
+      "連續3年居港",
+      "世界知名海外大學取錄"
+    ],
+    "source_url_zh": "https://hkses.edb.gov.hk/tc/abouts.html",
+    "apply_link_zh": "https://hkses.edb.gov.hk/tc/index.html",
+    "confirm_en": [
+      "Return to HK work 2 years or scholarship duration whichever longer",
+      "Means-test bursary assessed once via SFO formula"
+    ],
+    "confirm_zh": [
+      "畢業後須回港工作2年或等同受獎年期以較長者為準",
+      "助學金經學生資助處一次過經濟審查"
+    ]
+  },
+  {
+    "id": "gsf-tds-2026",
+    "title_en": "GSF Talent Development Scholarship ($10,000)",
+    "title_zh": "政府獎學基金才藝發展獎學金（$10,000）",
+    "category": "student",
+    "value_summary_en": "$10,000 one-off for non-academic talent (sports, arts, service, innovation). Full-time publicly-funded sub-degree / degree+.",
+    "value_summary_zh": "非學術才藝（體育、藝術、服務、創科）一次性$10,000。全日制資助副學位／學位+。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Full-time publicly-funded place (8 UGC + HKAPA + VTC)",
+      "Institution nomination for non-academic achievement"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Talented beyond exams — $10k for your craft.",
+    "why_zh": "考試以外有才藝 — $10k助你更上一層。",
+    "proof_needed_zh": [
+      "全日制資助學額（8大＋演藝＋職訓局）",
+      "院校提名非學術成就"
+    ],
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html"
+  },
+  {
+    "id": "gsf-roa-2026",
+    "title_en": "GSF Reaching Out Award ($10,000)",
+    "title_zh": "政府獎學基金展外之旅獎（$10,000）",
+    "category": "student",
+    "value_summary_en": "$10,000 one-off for outward learning: exchange, internship, competition, service trip outside HK. Institution-nominated.",
+    "value_summary_zh": "境外學習（交流、實習、比賽、服務團）一次性$10,000。院校提名。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Full-time publicly-funded place",
+      "Outward activity record + institution nomination"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Going outward to learn — $10k for the trip.",
+    "why_zh": "走出去學習 — $10k助旅費。",
+    "proof_needed_zh": [
+      "全日制資助學額",
+      "境外活動紀錄＋院校提名"
+    ],
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html"
+  },
+  {
+    "id": "gsf-ema-2026",
+    "title_en": "GSF Endeavour Merit Award ($15,000, SEN)",
+    "title_zh": "政府獎學基金毅進獎（$15,000，特殊學習需要）",
+    "category": "student",
+    "value_summary_en": "$15,000 one-off for post-secondary students with special educational needs pursuing excellence academically or otherwise.",
+    "value_summary_zh": "特殊學習需要專上學生追求卓越一次性$15,000。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Full-time publicly-funded place",
+      "SEN documentation + institution nomination"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true,
+      "requires_disability": true
+    },
+    "why_en": "Overcoming barriers to excel — $15k recognition.",
+    "why_zh": "克服障礙力臻卓越 — $15k嘉許。",
+    "proof_needed_zh": [
+      "全日制資助學額",
+      "特殊學習需要證明＋院校提名"
+    ],
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html"
+  },
+  {
+    "id": "gsf-belt-road-2026",
+    "title_en": "Belt and Road Scholarship (full tuition)",
+    "title_zh": "一帶一路獎學金（全額學費）",
+    "category": "student",
+    "value_summary_en": "Full tuition for outstanding students from Belt and Road countries/regions studying full-time publicly-funded programmes in HK. 150 new awards 2025/26.",
+    "value_summary_zh": "一帶一路國家／地區優異生在港修讀全日制資助課程全額學費。2025/26共150名新獎。",
+    "deadline": null,
+    "source_url": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Belt and Road country origin",
+      "Full-time publicly-funded offer + institution nomination"
+    ],
+    "apply_link": "https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "needs": {
+      "tertiary": true
+    },
+    "why_en": "From Belt and Road region studying in HK — full tuition covered.",
+    "why_zh": "來自一帶一路地區在港升學 — 全額學費。",
+    "proof_needed_zh": [
+      "一帶一路國家／地區背景",
+      "全日制資助取錄＋院校提名"
+    ],
+    "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html",
+    "apply_link_zh": "https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html"
+  },
+  {
+    "id": "seym-scholarship-2026",
+    "title_en": "Sir Edward Youde Memorial Scholarships (overseas / local)",
+    "title_zh": "尤德爵士紀念基金獎學金（海外／本地）",
+    "category": "student",
+    "value_summary_en": "Merit scholarships for outstanding HK students for overseas or local study. Nominated via institutions. Covers tuition + living in part.",
+    "value_summary_zh": "優異生海外／本地升學獎學金，經院校提名，資助部分學費＋生活費。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "HK permanent residence",
+      "Outstanding academic / leadership record",
+      "Institution nomination"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Outstanding all-rounder — Youde memorial recognition.",
+    "why_zh": "品學兼優 — 尤德爵士紀念嘉許。",
+    "proof_needed_zh": [
+      "香港永久居民",
+      "優異學業／領袖紀錄",
+      "院校提名"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
+  },
+  {
+    "id": "spet-scholarship-2026",
+    "title_en": "Scholarship for Prospective English Teachers (overseas study)",
+    "title_zh": "準英語教師獎學金（海外進修）",
+    "category": "student",
+    "value_summary_en": "For prospective English teachers to pursue overseas enrichment / study. Nominated by teacher-training institutions.",
+    "value_summary_zh": "準英語教師海外增潤／進修獎學金，經師訓院校提名。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Enrolled in English-teacher training programme",
+      "Institution nomination"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Training to teach English — overseas boost funded.",
+    "why_zh": "立志任英語教師 — 海外增潤有資助。",
+    "proof_needed_zh": [
+      "修讀英語師訓課程",
+      "院校提名"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
+  },
+  {
+    "id": "esf-education-scholarship-2026",
+    "title_en": "Education Scholarships Fund",
+    "title_zh": "教育獎學基金",
+    "category": "student",
+    "value_summary_en": "Multiple merit scholarships for local students pursuing tertiary / professional studies locally or overseas. Via institution nomination.",
+    "value_summary_zh": "多項優異獎學金助本地學生本地／海外升學，經院校提名。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "HK student status",
+      "Institution nomination"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Strong grades — education fund award.",
+    "why_zh": "成績優異 — 教育獎學基金嘉許。",
+    "proof_needed_zh": [
+      "香港學生身份",
+      "院校提名"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
+  },
+  {
+    "id": "srb-postgrad-2026",
+    "title_en": "Sir Robert Black Trust Fund Postgraduate Scholarships",
+    "title_zh": "柏立基爵士信託基金研究生獎學金",
+    "category": "student",
+    "value_summary_en": "Postgraduate overseas study scholarships for HK graduates with outstanding merit. Competitive nomination.",
+    "value_summary_zh": "香港畢業生海外研究生獎學金，優異者經提名競逐。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "HK degree graduate",
+      "Overseas postgraduate offer",
+      "Nomination"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Heading to postgraduate overseas — Black Trust support.",
+    "why_zh": "赴海外讀研 — 柏立基信託基金支援。",
+    "proof_needed_zh": [
+      "香港學位畢業",
+      "海外研究生取錄",
+      "提名"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
+  },
+  {
+    "id": "agri-scholarship-2026",
+    "title_en": "Agricultural Products Scholarship Fund",
+    "title_zh": "農產品獎學基金",
+    "category": "student",
+    "value_summary_en": "Sector-linked merit scholarships for students / children in agricultural marketing-related families. Via WFSFAA nomination.",
+    "value_summary_zh": "農產品銷售相關家庭學生優異獎學金，經學生資助處提名。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Sector / family link + merit",
+      "Institution nomination"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Agri-sector family with strong grades — sector award.",
+    "why_zh": "農業界家庭成績優異 — 行業獎學金。",
+    "proof_needed_zh": [
+      "行業／家庭關連＋優異成績",
+      "院校提名"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
+  },
+  {
+    "id": "marine-fish-scholarship-2026",
+    "title_en": "Marine Fish Scholarship Fund",
+    "title_zh": "海魚獎學基金",
+    "category": "student",
+    "value_summary_en": "Sector-linked merit scholarships for students / children in marine fisheries-related families. Via WFSFAA nomination.",
+    "value_summary_zh": "海產漁業相關家庭學生優異獎學金，經學生資助處提名。",
+    "deadline": null,
+    "source_url": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "updated_at": "2026-09-18",
+    "proof_needed_en": [
+      "Sector / family link + merit",
+      "Institution nomination"
+    ],
+    "apply_link": "https://www.wfsfaa.gov.hk/en/other/index.php",
+    "needs": {
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Fisheries family with strong grades — sector award.",
+    "why_zh": "漁業家庭成績優異 — 行業獎學金。",
+    "proof_needed_zh": [
+      "行業／家庭關連＋優異成績",
+      "院校提名"
+    ],
+    "source_url_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php",
+    "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
   }
 ]
