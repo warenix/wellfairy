@@ -290,7 +290,7 @@ function openDetail(id, push = true) {
     detailStack.push(prevId);
   }
   d.dataset.cur = id;
-  if (!d.open) d.showModal();
+  if (!d.open) { lockScroll(); d.showModal(); }
   const url = '#/s/' + encodeURIComponent(id);
   if (push && history.state?.schemeId !== id) {
     history.pushState({schemeId:id}, '', url);
@@ -310,6 +310,19 @@ function openDetail(id, push = true) {
   };
 }
 
+let savedY = 0;
+function lockScroll() {
+  savedY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${savedY}px`;
+  document.body.style.width = '100%';
+}
+function unlockScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, savedY);
+}
 function clearSchemeUrl() {
   if ((location.hash || '').startsWith('#/s/')) {
     history.replaceState({schemeId:null}, '', location.pathname + location.search);
@@ -449,7 +462,7 @@ async function init() {
       if (d.open) { d.close(); delete d.dataset.cur; }
     }
   });
-  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); });
+  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); unlockScroll(); });
   // Android system-back fires `cancel` on an open modal <dialog> instead of
   // traversing history (no popstate). Give it back-navigation semantics when
   // we arrived from another scheme; otherwise let it close natively.

@@ -99,9 +99,9 @@ input[type=range]{padding:0;accent-color:#7c3aed;height:32px}
 .btnrow{display:flex;gap:8px;flex-wrap:wrap}.big{flex:1;padding:12px;font-size:15px}
 .hint{font-size:12px;color:var(--mut)}code{background:#eee;padding:1px 5px;border-radius:6px}
 .steps{margin:8px 0 8px 18px;padding:0;font-size:14px;display:grid;gap:6px}
-dialog{border:0;border-radius:24px;padding:0;max-width:min(92vw,480px);width:100%}
+dialog{border:0;border-radius:24px;padding:0;max-width:min(92vw,480px);width:100%;max-height:88vh;max-height:88dvh}
 dialog::backdrop{background:#0008}
-.detail{padding:16px}
+.detail{padding:16px;max-height:88vh;max-height:88dvh;overflow-y:auto;overscroll-behavior:contain}
 .detail .actions{display:flex;gap:8px;margin-top:12px}
 footer{text-align:center;color:var(--mut);padding:18px;font-size:12px}
 #topBtn{position:fixed;right:16px;bottom:20px;z-index:6;width:48px;height:48px;border-radius:50%;border:0;background:#7e57c2;color:#fff;font-size:22px;font-weight:800;box-shadow:0 10px 26px #7e57c288;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s}
