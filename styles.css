@@ -97,7 +97,7 @@ form{display:grid;gap:10px}
 .kchip.on{background:#5b21b6;border-color:#4c1d95;color:#fff}
 .kchip[aria-pressed="true"]{background:#5b21b6;border-color:#4c1d95;color:#fff}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-label{font-size:13px;display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink)}
+label{font-size:13px;font-weight:700;color:var(--ink)}
 label small{font-weight:400;color:var(--mut)}
 input,select{padding:10px;border-radius:10px;border:2px solid #6f6a80;font-size:15px;width:100%;background:#fff;color:var(--ink);min-height:44px}
 input[type=range]{padding:0;accent-color:#5b21b6;height:44px;border:0}
