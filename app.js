@@ -336,7 +336,7 @@ function openDetail(id, push = true) {
   const relatedHtml = relatedItems.length ? `<section class="relatives" aria-labelledby="relH"><h4 id="relH">${t('Related in this category','同類資助')}</h4><div class="chips" role="group" aria-label="${esc(t('Related in this category','同類資助'))}">${relatedChips}</div><p class="hint">${t('Tap to view related schemes; means-test pass may unlock secondary allowances.','點擊查看同類計劃；通過資助審查可解鎖次要津貼。')}</p></section>` : '';
   d.setAttribute('aria-label', title);
   d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
-    <div><h3 id="detailTitle">${esc(title)}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
+    <div><h3 id="detailTitle" tabindex="-1">${esc(title)}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
     <div class="pills">${deadlinePill(b)}</div>
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
     <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}<br><br><span aria-hidden="true">🧾</span> <strong>${t('Please bring','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please confirm before applying','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br><span aria-hidden="true">🔗</span> <strong>${t('Source','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
@@ -375,8 +375,12 @@ function openDetail(id, push = true) {
     announce(t('Link copied', '已複製連結'));
     setTimeout(() => { btn.innerHTML = old; }, 1600);
   };
-  const closeBtn = $('#closeD');
-  if (closeBtn) closeBtn.focus();
+  // Focus the title (top of dialog), not the Close button (bottom) —
+  // focusing the bottom scrolls the modal down on open.
+  const titleEl = $('#detailTitle');
+  if (titleEl) titleEl.focus({ preventScroll: true });
+  const scroller = d.querySelector('.detail');
+  if (scroller) scroller.scrollTop = 0;
 }
 
 let savedY = 0;
