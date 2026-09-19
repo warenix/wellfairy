@@ -146,7 +146,7 @@ const I18N = {
   ab1: ['Every match explains why you qualify and what proof to bring', '每個配對都會說明您符合的原因，以及需要準備的證明文件'],
   ab2: ['Every scheme links its government source plus update date', '每個計劃均附上政府來源連結及更新日期'],
   ab3: ['Guidance only — we never file for you; the government notice prevails', '我們只作提醒，不會代為申請，一切以政府公布為準'],
-  footer: ['Prototype — please verify with the official source.', 'Prototype — 申請前請以政府網站為準。'],
+  footer: ['Please verify with the official source.', '申請前請以政府網站為準。'],
 };
 function applyI18n() {
   const pick = v => LANG === 'zh' ? v[1] : v[0];
