@@ -76,29 +76,47 @@
       <div class="hero-card" aria-hidden="true"><div class="ring"><span id="ringPct">0%</span></div><p data-i18n="matchRate">配對率</p></div>
     </div>
 
-    <div class="chips" id="lifeChips" role="group" aria-label="人生階段篩選 Life event filters"></div>
-    <div class="chips" id="chips" role="group" aria-label="類別篩選 Category filters"></div>
+    <div class="match-body">
+      <aside class="rail rail-left" aria-label="篩選 Filters">
+        <div class="rail-block">
+          <div class="chips chips-vert" id="lifeChips" role="group" aria-label="人生階段篩選 Life event filters"></div>
+        </div>
+        <div class="rail-block">
+          <div class="chips chips-vert" id="chips" role="group" aria-label="類別篩選 Category filters"></div>
+        </div>
+      </aside>
+      <div class="rail-center">
+        <section class="sec sec-now" aria-labelledby="secNowH">
+          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg></div><div class="sec-t"><h3 id="secNowH" data-i18n="secNow">符合資格</h3><p data-i18n="secNowD">您符合資格，歡迎直接申請</p></div><span class="sec-count ok" id="nowCount" role="status" aria-live="polite"></span></div>
+          <div id="now" class="grid" role="list" aria-label="符合資格 Eligible"></div>
+        </section>
 
-    <section class="sec sec-soon" aria-labelledby="secSoonH">
-      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg></div><div class="sec-t"><h3 id="secSoonH" data-i18n="secSoon">即將截止</h3><p data-i18n="secSoonD">這些設有截止日期，敬請及時辦理</p></div><span class="sec-count hot" id="soonCount" role="status" aria-live="polite"></span><button class="linkbtn" data-goto="all" type="button" data-i18n="viewAll">查看全部 →</button></div>
-      <div id="soon" class="hscroll" role="list" aria-label="即將截止 Closing soon"></div>
-    </section>
-
-    <section class="sec sec-now" aria-labelledby="secNowH">
-      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg></div><div class="sec-t"><h3 id="secNowH" data-i18n="secNow">符合資格</h3><p data-i18n="secNowD">您符合資格，歡迎直接申請</p></div><span class="sec-count ok" id="nowCount" role="status" aria-live="polite"></span></div>
-      <div id="now" class="grid" role="list" aria-label="符合資格 Eligible"></div>
-    </section>
-
-    <section class="sec sec-miss" aria-labelledby="secMissH">
-      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可解鎖</p></div><span class="sec-count" id="missCount" role="status" aria-live="polite"></span></div>
-      <div id="miss" class="grid" role="list" aria-label="差一步 One step away"></div>
-    </section>
+        <section class="sec sec-miss" aria-labelledby="secMissH">
+          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可解鎖</p></div><span class="sec-count" id="missCount" role="status" aria-live="polite"></span></div>
+          <div id="miss" class="grid" role="list" aria-label="差一步 One step away"></div>
+        </section>
+      </div>
+      <aside class="rail rail-right" aria-label="即將截止 Closing soon">
+        <section class="sec sec-soon" aria-labelledby="secSoonH">
+          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg></div><div class="sec-t"><h3 id="secSoonH" data-i18n="secSoon">即將截止</h3><p data-i18n="secSoonD">這些設有截止日期，敬請及時辦理</p></div><span class="sec-count hot" id="soonCount" role="status" aria-live="polite"></span><button class="linkbtn" data-goto="all" type="button" data-i18n="viewAll">查看全部 →</button></div>
+          <div id="soon" class="hscroll hscroll-vert" role="list" aria-label="即將截止 Closing soon"></div>
+        </section>
+      </aside>
+    </div>
   </section>
 
   <section id="tab-all" role="tabpanel" aria-labelledby="tabbtn-all" tabindex="0" hidden>
     <div class="searchbar"><span aria-hidden="true">🔍</span><label class="visually-hidden" for="q" data-i18n="searchLabel">搜尋福利 Search benefits</label><input id="q" type="search" autocomplete="off" data-i18n-ph="searchPh" placeholder="搜尋 醫療券 / KCFRS / WFA / 車船津貼…"></div>
-    <div class="chips" id="chipsAll" role="group" aria-label="類別篩選 Category filters"></div>
-    <div id="all" class="grid" role="list" aria-label="全部福利 All benefits"></div>
+    <div class="all-body">
+      <aside class="rail rail-left" aria-label="篩選 Filters">
+        <div class="rail-block">
+          <div class="chips chips-vert" id="chipsAll" role="group" aria-label="類別篩選 Category filters"></div>
+        </div>
+      </aside>
+      <div class="rail-center">
+        <div id="all" class="grid" role="list" aria-label="全部福利 All benefits"></div>
+      </div>
+    </div>
   </section>
 
   <section id="tab-profile" role="tabpanel" aria-labelledby="tabbtn-profile" tabindex="0" hidden>
@@ -191,6 +209,7 @@
   <section id="tab-about" role="tabpanel" aria-labelledby="tabbtn-about" tabindex="0" hidden>
     <div class="sheet">
       <svg class="about-art" aria-hidden="true"><use href="art.svg#art-shield"/></svg>
+      <p data-i18n="aboutPurpose">WellFairy 幫香港居民配對合資格的政府計劃、津貼同優惠 — 答幾條簡單問題，即睇自己拎到咩，每個配對附官方來源。</p>
       <h2 data-i18n="aboutH">點解信得過？</h2>
       <ol class="steps">
         <li data-i18n="ab1">每個配對顯示點解你符合 + 需咩證明</li>
