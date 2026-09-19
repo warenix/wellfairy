@@ -1,9 +1,9 @@
 {
-  "id": "/wellfairy/",
+  "id": "/",
   "name": "WellFairy 援助仙 — 福利配對",
   "short_name": "WellFairy",
-  "start_url": "/wellfairy/",
-  "scope": "/wellfairy/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "dir": "ltr",
   "lang": "zh-Hant-HK",

@@ -7,7 +7,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SITE = (process.env.SITE_URL || 'https://warenix.github.io/wellfairy').replace(/\/$/, '');
+const SITE = (process.env.SITE_URL || 'https://wellfairy.ivy.hk').replace(/\/$/, '');
 const benefits = JSON.parse(readFileSync(join(root, 'data/benefits.json'), 'utf8'));
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({
@@ -123,16 +123,16 @@ writeFileSync(join(root, '404.html'), `<!doctype html>
 <title>找不到頁面 Page not found｜WellFairy</title><meta name="robots" content="noindex">
 <script>
 (function () {
-  var base = '/wellfairy';
+  var base = '';
   var path = location.pathname;
   var m = path.match(/\\/s\\/([^/.]+)(\\.html)?$/);
   var q = new URLSearchParams(location.search).get('s');
   var id = q || (m && m[1]);
-  if (id) location.replace(base + '/?s=' + encodeURIComponent(id));
-  else location.replace(base + '/');
+  if (id) location.replace('/?s=' + encodeURIComponent(id));
+  else location.replace('/');
 })();
 </script></head>
-<body><p><a href="/wellfairy/">返回 WellFairy Back to app</a></p></body></html>
+<body><p><a href="/">返回 WellFairy Back to app</a></p></body></html>
 `);
 
 console.log(`SEO build done: ${benefits.length} scheme pages, sitemap, robots, llms.txt, 404.html`);

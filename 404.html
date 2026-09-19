@@ -3,13 +3,13 @@
 <title>找不到頁面 Page not found｜WellFairy</title><meta name="robots" content="noindex">
 <script>
 (function () {
-  var base = '/wellfairy';
+  var base = '';
   var path = location.pathname;
   var m = path.match(/\/s\/([^/.]+)(\.html)?$/);
   var q = new URLSearchParams(location.search).get('s');
   var id = q || (m && m[1]);
-  if (id) location.replace(base + '/?s=' + encodeURIComponent(id));
-  else location.replace(base + '/');
+  if (id) location.replace('/?s=' + encodeURIComponent(id));
+  else location.replace('/');
 })();
 </script></head>
-<body><p><a href="/wellfairy/">返回 WellFairy Back to app</a></p></body></html>
+<body><p><a href="/">返回 WellFairy Back to app</a></p></body></html>
