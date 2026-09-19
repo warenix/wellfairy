@@ -148,6 +148,7 @@ const I18N = {
   ab2: ['Every scheme links its government source plus update date', '每個計劃均附上政府來源連結及更新日期'],
   ab3: ['Guidance only — we never file for you; the government notice prevails', '我們只作提醒，不會代為申請，一切以政府公布為準'],
   footer: ['Please verify with the official source.', '申請前請以政府網站為準。'],
+  accessibilityStatement: ['Accessibility Statement', '無障礙聲明'],
 };
 function applyI18n() {
   const pick = v => LANG === 'zh' ? v[1] : v[0];
@@ -446,7 +447,7 @@ const passFilter = (b, f) => {
   if (f === 'all') return true;
   if (f === 'saved') return SAVED.has(b.id);
   if (f === 'hidden') return HIDDEN.has(b.id);
-  return b.category === f;  accessibilityStatement: ['Accessibility Statement', '無障礙聲明'],\n
+  return b.category === f;
 };
 
 function render() {
