@@ -59,29 +59,32 @@ function schemePage(b) {
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"WellFairy 援助仙","item":"${SITE}/"},{"@type":"ListItem","position":2,"name":"${esc(catZh)}","item":"${SITE}/"},{"@type":"ListItem","position":3,"name":${JSON.stringify(b.title_zh)}}]}</script>
 </head>
 <body>
-<main style="max-width:720px;margin:0 auto;padding:16px">
-<p><a href="../">← 返回 WellFairy 配對 Back to matcher</a></p>
+<header class="topbar"><div class="brand"><span class="logo">🧚</span><div><strong>WellFairy 援助仙</strong><span>福利配對 Benefit matcher</span></div></div><div class="topact"><a class="ghostbtn" style="text-decoration:none;display:inline-flex;align-items:center" href="../">開啟配對 Open app</a></div></header>
+<main>
+<div class="sheet">
 <article>
-<p>${esc(catZh)} ${esc(catEn)} · 更新 Updated ${esc(b.updated_at || '')}</p>
-<h1>${esc(b.title_zh)}</h1>
-<p lang="en">${esc(b.title_en || '')}</p>
-<p><strong>${esc(b.value_summary_zh || '')}</strong></p>
-<p lang="en">${esc(b.value_summary_en || '')}</p>
+<p><a href="../">← 返回配對 Back to matcher</a></p>
+<p><span class="pill">${esc(catZh)} ${esc(catEn)}</span> <span class="hint">更新 Updated ${esc(b.updated_at || '')}</span></p>
+<h1 style="margin:6px 0">${esc(b.title_zh)}</h1>
+<p lang="en" class="hint">${esc(b.title_en || '')}</p>
+<div class="why"><strong>${esc(b.value_summary_zh || '')}</strong><br><span lang="en">${esc(b.value_summary_en || '')}</span></div>
 ${deadline}
 <h2>點解符合？Why you may qualify</h2>
 <p>${esc(b.why_zh || '')}</p>
-<p lang="en">${esc(b.why_en || '')}</p>
+<p lang="en" class="hint">${esc(b.why_en || '')}</p>
 <h2>請帶齊文件 Documents to bring</h2>
 <ul>${proof || '<li>請見政府來源頁 See official source page</li>'}</ul>
+<div class="row"><a class="btn" href="${appUrl}">用 WellFairy 檢查我是否符合 Check eligibility →</a></div>
 <h2>官方來源 Official source</h2>
 <ul>
 <li><a href="${esc(sourceUrl)}" rel="noopener">政府來源頁 Official source</a></li>
 <li><a href="${esc(applyUrl)}" rel="noopener">申請 Apply</a></li>
 </ul>
-<p><a href="${appUrl}"><strong>用 WellFairy 檢查我是否符合 Check eligibility in WellFairy →</strong></a></p>
-<p><small>提醒：一切以政府公布為準。Guidance only — the government notice prevails.</small></p>
+<p class="hint">提醒：一切以政府公布為準。Guidance only — the government notice prevails.</p>
 </article>
+</div>
 </main>
+<footer><small>WellFairy 援助仙 — 申請前請以政府網站為準。</small></footer>
 </body>
 </html>
 `;

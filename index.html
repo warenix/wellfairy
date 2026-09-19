@@ -107,14 +107,14 @@
       <div class="progress" role="progressbar" aria-label="檔案完成度 Profile completeness" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40" id="pbarWrap"><div id="pbar"></div></div>
       <form id="profileForm">
         <fieldset class="fgroup"><legend data-i18n="g_identity">個人資料</legend>
-        <div class="frow"><label><span data-i18n="fAge">你的年齡</span><input type="number" name="age" min="18" max="100" value="34"></label>
-        <label><span data-i18n="fHousehold">家庭人數</span><input type="number" name="householdN" min="1" max="10" value="4"></label></div>
-        <div class="frow"><label><span data-i18n="fSex">性別 Sex</span><select name="sex"><option value="female" selected data-i18n-opt="os_f">女 Female</option><option value="male" data-i18n-opt="os_m">男 Male</option></select></label>
-        <label><span data-i18n="fEdu">學歷 Education</span><select name="eduRank"><option value="0" data-i18n-opt="oe_sec">中學或以下 Secondary-</option><option value="1" selected data-i18n-opt="oe_sub">副學位 Sub-degree</option><option value="2" data-i18n-opt="oe_deg">學位或以上 Degree+</option></select></label></div>
-        <label class="check"><input type="checkbox" name="hk_resident" checked> <span data-i18n="fResident">香港居民 / 住滿3年</span></label>
-        <label><span data-i18n="fYears">居港年數 Years in HK</span> <span id="hkYearsOut" class="count" role="status" aria-live="polite">7年或以上</span><input type="range" name="hkYears" min="0" max="7" step="1" value="7" aria-describedby="hkYearsOut"></label>
-        <label class="check"><input type="checkbox" name="ehealth"> <span data-i18n="fEhealth">已登記醫健通eHealth</span></label>
-        <label class="check"><input type="checkbox" name="married" checked> <span data-i18n="fMarried">已婚/同居 Married/cohabiting</span> <small data-i18n="fMarriedHint">(夫婦限額)</small></label>
+        <div class="frow"><label for="age"><span data-i18n="fAge">你的年齡</span><input type="number" name="age" id="age" min="18" max="100" value="34"></label>
+        <label for="householdN"><span data-i18n="fHousehold">家庭人數</span><input type="number" name="householdN" id="householdN" min="1" max="10" value="4"></label></div>
+        <div class="frow"><label for="sex"><span data-i18n="fSex">性別 Sex</span><select name="sex" id="sex"><option value="female" selected data-i18n-opt="os_f">女 Female</option><option value="male" data-i18n-opt="os_m">男 Male</option></select></label>
+        <label for="eduRank"><span data-i18n="fEdu">學歷 Education</span><select name="eduRank" id="eduRank"><option value="0" data-i18n-opt="oe_sec">中學或以下 Secondary-</option><option value="1" selected data-i18n-opt="oe_sub">副學位 Sub-degree</option><option value="2" data-i18n-opt="oe_deg">學位或以上 Degree+</option></select></label></div>
+        <label class="check" for="hk_resident"><input type="checkbox" name="hk_resident" id="hk_resident" checked> <span data-i18n="fResident">香港居民 / 住滿3年</span></label>
+        <label class="check"><input type="range" name="hkYears" id="hkYears" min="0" max="7" step="1" value="7" aria-describedby="hkYearsOut"> <span data-i18n="fYears">居港年數 Years in HK</span> <span id="hkYearsOut" class="count" role="status" aria-live="polite">7年或以上</span></label>
+        <label class="check" for="ehealth"><input type="checkbox" name="ehealth" id="ehealth"> <span data-i18n="fEhealth">已登記醫健通eHealth</span></label>
+        <label class="check" for="married"><input type="checkbox" name="married" id="married" checked> <span data-i18n="fMarried">已婚/同居 Married/cohabiting</span> <small data-i18n="fMarriedHint">(夫婦限額)</small></label>
         </fieldset>
         <fieldset class="fgroup"><legend data-i18n="g_home">家居經濟</legend>
         <label><span data-i18n="fDistrict">地區 District</span><select name="district">
@@ -144,11 +144,11 @@
           </optgroup>
         </select></label>
         <label><span data-i18n="fHousing">住屋 Housing</span><select name="housing"><option value="private" selected data-i18n-opt="oh_priv">私樓 Private</option><option value="prh" data-i18n-opt="oh_prh">公屋 PRH</option><option value="subsidised" data-i18n-opt="oh_sub">資助房屋 Subsidised</option><option value="other" data-i18n-opt="oh_other">其他 Other</option></select></label>
-        <label class="check sub"><input type="checkbox" name="ownsProperty"> <span data-i18n="fOwns">過去24個月擁有物業 Own property (24mo)</span></label>
-        <div class="frow"><label><span data-i18n="fIncome">家庭每月總入息 (HKD, exact)</span><input type="number" name="monthlyIncome" min="0" max="500000" step="500" value="38000"></label>
-        <label><span data-i18n="fAssets">總資產淨值 Net assets (HKD)</span><input type="number" name="assets" min="0" step="1000" value="200000"></label></div>
-        <div class="frow"><label><span data-i18n="fWorkhrs">全家每月總工時</span><input type="number" name="workHours" value="160"></label>
-        <label><span data-i18n="fTransport">每月車費 Transport/mo (HKD)</span><input type="number" name="transportSpend" min="0" step="50" value="800"></label></div>
+        <label class="check sub" for="ownsProperty"><input type="checkbox" name="ownsProperty" id="ownsProperty"> <span data-i18n="fOwns">過去24個月擁有物業 Own property (24mo)</span></label>
+        <div class="frow"><label for="monthlyIncome"><span data-i18n="fIncome">家庭每月總入息 (HKD, exact)</span><input type="number" name="monthlyIncome" id="monthlyIncome" min="0" max="500000" step="500" value="38000"></label>
+        <label for="assets"><span data-i18n="fAssets">總資產淨值 Net assets (HKD)</span><input type="number" name="assets" id="assets" min="0" step="1000" value="200000"></label></div>
+        <div class="frow"><label for="workHours"><span data-i18n="fWorkhrs">全家每月總工時</span><input type="number" name="workHours" id="workHours" value="160"></label>
+        <label for="transportSpend"><span data-i18n="fTransport">每月車費 Transport/mo (HKD)</span><input type="number" name="transportSpend" id="transportSpend" min="0" step="50" value="800"></label></div>
         </fieldset>
         <fieldset class="fgroup"><legend data-i18n="g_family">子女及家人</legend>
         <div><span id="kidsLabel" data-i18n="fKids">子女</span>
@@ -161,20 +161,20 @@
           </div>
           <input type="hidden" name="kids" value="K2,P3">
         </div>
-        <label class="check sub"><input type="checkbox" name="hasToddler"> <span data-i18n="fToddler">家有未入園幼兒</span></label>
-        <label class="check sub"><input type="checkbox" name="hasTertiary"> <span data-i18n="fTertiary">家有大專生</span></label>
-        <label class="check sub"><input type="checkbox" name="childSEN"> <span data-i18n="fChildSEN">子女有特殊需要/等緊評估 Child SEN / awaiting assessment</span></label>
-        <label class="check sub"><input type="checkbox" name="hasElderly"> <span data-i18n="fElderly">家中有65+長者</span></label>
-        <label class="check sub"><input type="checkbox" name="livesMainland"> <span data-i18n="fLivesMainland">現居廣東／福建</span></label>
-        <label class="check sub"><input type="checkbox" name="isCarer"> <span data-i18n="fCarer">每月照顧長者/殘疾家人80小時+ Carer 80+hrs/mo</span></label>
-        <label class="check sub"><input type="checkbox" name="hasDisability"> <span data-i18n="fDisability">重度殘疾 (持醫生證明) Severely disabled</span></label>
-        <label class="check sub"><input type="checkbox" name="smoker"> <span data-i18n="fSmoker">家有吸煙者</span></label>
+        <label class="check sub" for="hasToddler"><input type="checkbox" name="hasToddler" id="hasToddler"> <span data-i18n="fToddler">家有未入園幼兒</span></label>
+        <label class="check sub" for="hasTertiary"><input type="checkbox" name="hasTertiary" id="hasTertiary"> <span data-i18n="fTertiary">家有大專生</span></label>
+        <label class="check sub" for="childSEN"><input type="checkbox" name="childSEN" id="childSEN"> <span data-i18n="fChildSEN">子女有特殊需要/等緊評估 Child SEN / awaiting assessment</span></label>
+        <label class="check sub" for="hasElderly"><input type="checkbox" name="hasElderly" id="hasElderly"> <span data-i18n="fElderly">家中有65+長者</span></label>
+        <label class="check sub" for="livesMainland"><input type="checkbox" name="livesMainland" id="livesMainland"> <span data-i18n="fLivesMainland">現居廣東／福建</span></label>
+        <label class="check sub" for="isCarer"><input type="checkbox" name="isCarer" id="isCarer"> <span data-i18n="fCarer">每月照顧長者/殘疾家人80小時+ Carer 80+hrs/mo</span></label>
+        <label class="check sub" for="hasDisability"><input type="checkbox" name="hasDisability" id="hasDisability"> <span data-i18n="fDisability">重度殘疾 (持醫生證明) Severely disabled</span></label>
+        <label class="check sub" for="smoker"><input type="checkbox" name="smoker" id="smoker"> <span data-i18n="fSmoker">家有吸煙者</span></label>
         </fieldset>
         <fieldset class="fgroup"><legend data-i18n="g_status">領取狀況（只可選一項津貼）</legend>
-        <label class="check sub"><input type="checkbox" name="onAllowance"> <span data-i18n="fOnAllow">正領高齡/傷殘津貼 On OAA/DA</span> <small data-i18n="fOnAllowHint">(長者生活津貼除外)</small></label>
-        <label class="check sub"><input type="checkbox" name="onOALA"> <span data-i18n="fOnOALA">正領長者生活津貼 On OALA</span> <small data-i18n="fOnOALAHint">(可銜接牙科及醫療支援)</small></label>
-        <label class="check sub"><input type="checkbox" name="isCSSA"> <span data-i18n="fCSSA">領綜合社會保障援助(綜援）中</span> <small data-i18n="fCSSAHint">(在職家庭津貼不可同領)</small></label>
-        <label class="check sub"><input type="checkbox" name="unemployed"> <span data-i18n="fUnemployed">現正失業並正尋找工作</span></label>
+        <label class="check sub" for="onAllowance"><input type="checkbox" name="onAllowance" id="onAllowance"> <span data-i18n="fOnAllow">正領高齡/傷殘津貼 On OAA/DA</span> <small data-i18n="fOnAllowHint">(長者生活津貼除外)</small></label>
+        <label class="check sub" for="onOALA"><input type="checkbox" name="onOALA" id="onOALA"> <span data-i18n="fOnOALA">正領長者生活津貼 On OALA</span> <small data-i18n="fOnOALAHint">(可銜接牙科及醫療支援)</small></label>
+        <label class="check sub" for="isCSSA"><input type="checkbox" name="isCSSA" id="isCSSA"> <span data-i18n="fCSSA">領綜合社會保障援助(綜援）中</span> <small data-i18n="fCSSAHint">(在職家庭津貼不可同領)</small></label>
+        <label class="check sub" for="unemployed"><input type="checkbox" name="unemployed" id="unemployed"> <span data-i18n="fUnemployed">現正失業並正尋找工作</span></label>
         </fieldset>
         <div class="btnrow">
           <button type="submit" class="solidbtn big" data-i18n="save">💾 儲存並重新配對</button>
