@@ -380,6 +380,14 @@ function openDetail(id, push = true) {
 }
 
 let savedY = 0;
+function instantScrollTo(y) {
+  // Bypass the global smooth scroll-behavior: lock/unlock restores must be invisible.
+  const el = document.documentElement;
+  const prev = el.style.scrollBehavior;
+  el.style.scrollBehavior = 'auto';
+  window.scrollTo(0, y);
+  el.style.scrollBehavior = prev;
+}
 function lockScroll() {
   savedY = window.scrollY;
   document.body.style.position = 'fixed';
@@ -390,7 +398,7 @@ function unlockScroll() {
   document.body.style.position = '';
   document.body.style.top = '';
   document.body.style.width = '';
-  window.scrollTo(0, savedY);
+  instantScrollTo(savedY);
 }
 function clearSchemeUrl() {
   const hasQ = new URLSearchParams(location.search).has('s');
@@ -407,7 +415,8 @@ function closeDetail(restoreFocus = true) {
   detailStack = [];
   clearSchemeUrl();
   if (restoreFocus && lastFocused && document.contains(lastFocused)) {
-    lastFocused.focus();
+    // Scroll already restored by unlockScroll — don't move it again.
+    lastFocused.focus({ preventScroll: true });
     lastFocused = null;
   }
 }
@@ -561,7 +570,7 @@ async function init() {
       const nm=b?t(b.title_en,b.title_zh):id;
       announce(willSave?t(`Saved: ${nm}`,`已收藏：${nm}`):t(`Unsaved: ${nm}`,`已取消收藏：${nm}`));
       const nb=document.querySelector(`[data-save="${CSS.escape(id)}"]`);
-      if(nb) nb.focus();
+      if(nb) nb.focus({ preventScroll: true });
       return;
     }
     const h=e.target.closest('[data-hide]');
@@ -615,7 +624,7 @@ async function init() {
       if (d.open) { d.close(); delete d.dataset.cur; }
     }
   });
-  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); unlockScroll(); if (lastFocused && document.contains(lastFocused)) { lastFocused.focus(); lastFocused = null; } });
+  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); unlockScroll(); if (lastFocused && document.contains(lastFocused)) { lastFocused.focus({ preventScroll: true }); lastFocused = null; } });
   // Android system-back fires `cancel` on an open modal <dialog> instead of
   // traversing history (no popstate). Give it back-navigation semantics when
   // we arrived from another scheme; otherwise let it close natively.
