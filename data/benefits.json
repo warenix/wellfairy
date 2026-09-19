@@ -5134,16 +5134,24 @@
     "value_summary_en": "Support for eligible persons under Community Care Service Voucher for Elderly",
     "value_summary_zh": "長者社區照顧服務券資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commcare/psccsv/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "min_age": 60,
+      "requires_elderly_in_house": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Community Care Service Voucher for Elderly",
     "why_zh": "符合長者社區照顧服務券資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民",
+      "年齡最低",
+      "家中有長者"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5155,16 +5163,24 @@
     "value_summary_en": "Support for eligible persons under Residential Care Service Voucher for Elderly",
     "value_summary_zh": "長者 residential 護理服務券資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_residentcare/psrcsv/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "min_age": 65,
+      "hk_resident": true,
+      "requires_elderly_in_house": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Residential Care Service Voucher for Elderly",
     "why_zh": "符合長者 residential 護理服務券資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "年齡最低",
+      "香港居民",
+      "家中有長者"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5176,16 +5192,22 @@
     "value_summary_en": "Support for eligible persons under Dental Treatment Voucher for Elderly",
     "value_summary_zh": "長者牙科治療券資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_dental/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "min_age": 60
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Dental Treatment Voucher for Elderly",
     "why_zh": "符合長者牙科治療券資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民",
+      "年齡最低"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5197,12 +5219,14 @@
     "value_summary_en": "Savings-matched accounts and mentoring for children aged 10-14 from low-income families. 1:1 or 1:2 matching on savings up to $10,000/yr, life skills training, goal setting and career exposure. Apply via SWD social workers or NGOs.",
     "value_summary_zh": "10-14歲低收入家庭兒童的儲蓄匹配賬戶和導師計劃。儲蓄最高每年$10,000的1:1或1:2匹配，生活技能訓練，目標設定和職業體驗。經社署社工或NGO申請。",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [
-      "Age 10-14, low-income family, HK resident",
-      "Referral via SWD social worker or NGO"
-    ],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "age_range": "10-14",
+      "low_income": true,
+      "referral": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
     "needs": {
       "hk_resident": true
@@ -5210,8 +5234,10 @@
     "why_en": "Low-income family with child aged 10-14 — savings-matched accounts and mentoring to build future prospects.",
     "why_zh": "低收入家庭10-14歲子女 — 透過匹配儲蓄和導師計劃規劃未來。",
     "proof_needed_zh": [
-      "10-14歲，低收入家庭，香港居民",
-      "經社署社工或NGO轉介"
+      "香港居民",
+      "年齡範圍",
+      "低收入",
+      "經社工轉介"
     ],
     "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/cssa/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/cssa/",
@@ -5232,16 +5258,24 @@
     "value_summary_en": "Support for eligible persons under After School Care Programme Fee Waiving",
     "value_summary_zh": "課後託管服務費豁免資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "is_carer": true,
+      "requires_elderly_in_house": true,
+      "no_other_allowance": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for After School Care Programme Fee Waiving",
     "why_zh": "符合課後託管服務費豁免資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "照顧者",
+      "家中有長者",
+      "無其他津貼"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5253,16 +5287,22 @@
     "value_summary_en": "Support for eligible persons under Kindergarten-cum-Child Care Centre Subsidy",
     "value_summary_zh": "幼稚園照顧服務資助資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "has_kids_any": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Kindergarten-cum-Child Care Centre Subsidy",
     "why_zh": "符合幼稚園照顧服務資助資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民",
+      "有孩子"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5274,16 +5314,22 @@
     "value_summary_en": "Support for eligible persons under Early Education and Training Centre",
     "value_summary_zh": "早期教育及訓練中心資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_serpresch/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "child_sen": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Early Education and Training Centre",
     "why_zh": "符合早期教育及訓練中心資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民",
+      "特殊需要子女"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5295,16 +5341,22 @@
     "value_summary_en": "Support for eligible persons under Special Child Care Centre",
     "value_summary_zh": "特殊幼兒中心資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_fundtrustfinaid/snto/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "child_sen": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Special Child Care Centre",
     "why_zh": "符合特殊幼兒中心資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民",
+      "特殊需要子女"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5316,16 +5368,20 @@
     "value_summary_en": "Support for eligible persons under Integrated Programme in Kindergarten",
     "value_summary_zh": "幼稚園融合教育計劃資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Integrated Programme in Kindergarten",
     "why_zh": "符合幼稚園融合教育計劃資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5337,16 +5393,22 @@
     "value_summary_en": "Support for eligible persons under On-site Pre-school Rehabilitation Services",
     "value_summary_zh": "幼兒院舍內康復服務資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_serpresch/tsp/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "child_sen": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for On-site Pre-school Rehabilitation Services",
     "why_zh": "符合幼兒院舍內康復服務資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民",
+      "特殊需要子女"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5358,16 +5420,20 @@
     "value_summary_en": "Support for eligible persons under School-based After School Care Service",
     "value_summary_zh": "校本課後託管服務資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for School-based After School Care Service",
     "why_zh": "符合校本課後託管服務資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5379,16 +5445,20 @@
     "value_summary_en": "Support for eligible persons under After School Care Programme",
     "value_summary_zh": "課後託管服務計劃資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for After School Care Programme",
     "why_zh": "符合課後託管服務計劃資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5402,14 +5472,18 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Full-time Employment Subsidy",
     "why_zh": "符合全職就業津貼資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5423,14 +5497,18 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Youth Employment Subsidy",
     "why_zh": "符合青年就業津貼資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5442,16 +5520,24 @@
     "value_summary_en": "Support for eligible persons under Pre-employment Training Subsidy",
     "value_summary_zh": "就業前培訓資助資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_serpresch/tsp/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "child_sen": true,
+      "afi_max": 89515
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Pre-employment Training Subsidy",
     "why_zh": "符合就業前培訓資助資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民",
+      "特殊需要子女",
+      "每月最高補貼"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5465,14 +5551,18 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Skills Upgrading Scheme",
     "why_zh": "符合技能提升計劃資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5486,14 +5576,18 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Vocational Training Council Subsidy",
     "why_zh": "符合職業訓練局資助資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5507,14 +5601,18 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Student Finance Assistance Scheme",
     "why_zh": "符合學生資助計劃資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5528,14 +5626,18 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Non-means-tested Loan Scheme",
     "why_zh": "符合非 means-tested 學生貸款資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5591,14 +5693,22 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": [
+      "Aged 60+",
+      "Fit for communal living",
+      "Social worker referral (or direct)"
+    ],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Home Care Service for Elderly",
     "why_zh": "符合長者家居照顧服務資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "年滿60歲",
+      "適合群體生活",
+      "社工轉介(或直接申請)"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5610,16 +5720,22 @@
     "value_summary_en": "Support for eligible persons under Enhanced Home and Community Care Services",
     "value_summary_zh": "加強家居及社區照顧服務資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commcare/psccsv/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true,
+      "min_age": 60
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Enhanced Home and Community Care Services",
     "why_zh": "符合加強家居及社區照顧服務資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民",
+      "年齡最低"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5633,14 +5749,20 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": [
+      "Aged 60+",
+      "Walk in or call the district centre"
+    ],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Day Care Centre for Elderly",
     "why_zh": "符合長者日間護理中心資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "年滿60歲",
+      "親身或致電地區中心"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5654,14 +5776,20 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": [
+      "Aged 60+",
+      "Hong Kong resident"
+    ],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Neighbourhood Elderly Centre",
     "why_zh": "符合鄰舍長者中心資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "年滿60歲",
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5675,14 +5803,20 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": [
+      "Aged 60+",
+      "Hong Kong resident"
+    ],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for District Elderly Community Centre",
     "why_zh": "符合地區長者社區中心資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "年滿60歲",
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5696,14 +5830,20 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/respireservice/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": [
+      "Aged 60+",
+      "Carer temporarily away or ill"
+    ],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Respite Service for Elderly Carers",
     "why_zh": "符合長者喘息服務資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "年滿60歲",
+      "照顧者暫時離開或病倒"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5715,16 +5855,20 @@
     "value_summary_en": "Support for eligible persons under Allowance for Carers of Elderly Persons",
     "value_summary_zh": "照顧長者津貼資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Allowance for Carers of Elderly Persons",
     "why_zh": "符合照顧長者津貼資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
@@ -5736,16 +5880,20 @@
     "value_summary_en": "Support for eligible persons under Registration Card for People with Disabilities",
     "value_summary_zh": "殘疾人士登記證資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_supportcom/scpd/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": [],
+    "proof_needed_en": {
+      "hk_resident": true
+    },
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
     },
     "why_en": "Eligible for Registration Card for People with Disabilities",
     "why_zh": "符合殘疾人士登記證資格",
-    "proof_needed_zh": [],
+    "proof_needed_zh": [
+      "香港居民"
+    ],
     "source_url_zh": "https://www.swd.gov.hk/tc/",
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
