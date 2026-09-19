@@ -562,7 +562,7 @@ async function init() {
   const excl = (name, others) => { f[name].onchange = () => { if (f[name].checked) others.forEach(o => { f[o].checked = false; }); }; };
   excl('onAllowance', ['onOALA', 'isCSSA']); excl('onOALA', ['onAllowance', 'isCSSA']); excl('isCSSA', ['onAllowance', 'onOALA']);
   f.unemployed.onchange = () => { if (f.unemployed.checked && (+f.workHours.value || 0) > 0) f.workHours.value = 0; };
-  $('#langToggle').onclick=()=>{LANG=LANG==='zh'?'en':'zh';localStorage.setItem('hkbm_lang',LANG);render();announce(LANG==='zh'?'已切換至中文':'Switched to English');};
+  $('#langToggle').onclick=()=>{LANG=LANG==='zh'?'en':'zh';localStorage.setItem('hkbm_lang',LANG);render();hkYearsOut();announce(LANG==='zh'?'已切換至中文':'Switched to English');};
   document.body.addEventListener('click',e=>{
     const s=e.target.closest('[data-save]');
     if(s){
