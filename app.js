@@ -143,7 +143,7 @@ const I18N = {
   save: ['💾 Save & re-match', '💾 儲存並重新配對'],
   hintStore: ['Stored on this phone only (localStorage + your exported profile.json). Catalog is plain-text data/benefits.json.', '只存手機 localStorage + 你 export 的 profile.json。目錄是 data/benefits.json 純文字。'],
   aboutH: ['Why you can trust this', '為何值得信賴？'],
-  aboutPurpose: ['WellFairy matches Hong Kong residents with the government schemes, allowances and concessions they qualify for — answer a few simple questions and see what you are entitled to, with the official source behind every match.', 'WellFairy 幫香港居民配對合資格的政府計劃、津貼同優惠 — 答幾條簡單問題，即睇自己拎到咩，每個配對附官方來源。'],
+  aboutPurpose: ['Welcome to WellFairy! Answer a few simple questions about yourself and we will match you with the government schemes, allowances and concessions you qualify for — every match backed by its official source, so you can apply with confidence.', '歡迎使用 WellFairy 援助仙！只要答幾條關於你嘅簡單問題，我哋就會幫你配對合資格嘅政府計劃、津貼同優惠，每個配對都附上官方來源，助你輕鬆掌握應得嘅福利。'],
   ab1: ['Every match explains why you qualify and what proof to bring', '每個配對都會說明您符合的原因，以及需要準備的證明文件'],
   ab2: ['Every scheme links its government source plus update date', '每個計劃均附上政府來源連結及更新日期'],
   ab3: ['Guidance only — we never file for you; the government notice prevails', '我們只作提醒，不會代為申請，一切以政府公布為準'],
