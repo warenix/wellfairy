@@ -11,28 +11,31 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main" data-i18n="skip">跳至主要內容 Skip to main content</a>
+<h1 class="visually-hidden" data-i18n="siteTitle">WellFairy 援助仙 — 香港福利配對</h1>
 <header class="topbar">
   <div class="brand"><span class="logo">🧚</span><div><strong>WellFairy 援助仙</strong><span data-i18n="brandSub">福利配對</span></div></div>
   <div class="topact">
-    <button id="langToggle" class="ghostbtn" type="button">EN / 繁中</button>
+    <button id="langToggle" class="ghostbtn" type="button" aria-label="切換語言 Switch language">EN / 繁中</button>
     <button id="installBtn" class="solidbtn" type="button" hidden data-i18n="install">⬇ 安裝</button>
   </div>
 </header>
 
-<nav class="tabs" role="tablist" aria-label="主導航">
-  <button data-tab="match" class="active" type="button">✨ <span data-i18n="tabMatch">配對</span></button>
-  <button data-tab="all" type="button">📚 <span data-i18n="tabAll">全部</span></button>
-  <button data-tab="profile" type="button">👤 <span data-i18n="tabProfile">檔案</span></button>
-  <button data-tab="about" type="button">ℹ️ <span data-i18n="tabAbout">關於</span></button>
+<nav class="tabs" role="tablist" aria-label="主導航 Main navigation">
+  <button data-tab="match" id="tabbtn-match" role="tab" aria-selected="true" aria-controls="tab-match" class="active" type="button"><span aria-hidden="true">✨</span> <span data-i18n="tabMatch">配對</span></button>
+  <button data-tab="all" id="tabbtn-all" role="tab" aria-selected="false" aria-controls="tab-all" tabindex="-1" type="button"><span aria-hidden="true">📚</span> <span data-i18n="tabAll">全部</span></button>
+  <button data-tab="profile" id="tabbtn-profile" role="tab" aria-selected="false" aria-controls="tab-profile" tabindex="-1" type="button"><span aria-hidden="true">👤</span> <span data-i18n="tabProfile">檔案</span></button>
+  <button data-tab="about" id="tabbtn-about" role="tab" aria-selected="false" aria-controls="tab-about" tabindex="-1" type="button"><span aria-hidden="true">ℹ️</span> <span data-i18n="tabAbout">關於</span></button>
 </nav>
 
-<main>
-  <section id="tab-match">
+<main id="main" tabindex="-1">
+  <p class="visually-hidden" role="status" aria-live="polite" id="liveAnnounce"></p>
+  <section id="tab-match" role="tabpanel" aria-labelledby="tabbtn-match" tabindex="0">
     <div class="hero">
       <div class="hero-text">
         <p class="eyebrow" id="heroEyebrow" data-i18n="heroEyebrow">你符合以下資助</p>
-        <h2><span id="heroCount">0</span> <small>/ <span id="heroTotal">0</span> <span data-i18n="heroUnit">項福利</span></small></h2>
-        <p class="hero-sub" id="heroSub"></p>
+        <h2 class="hero-title"><span id="heroCount">0</span> <small>/ <span id="heroTotal">0</span> <span data-i18n="heroUnit">項福利</span></small></h2>
+        <p class="hero-sub" id="heroSub" aria-live="polite"></p>
         <div class="hero-stats">
           <div><strong id="statSoon">0</strong><span data-i18n="statDeadline">30日內截止</span></div>
           <div><strong id="statSave">0</strong><span data-i18n="statSaved">已收藏</span></div>
@@ -42,35 +45,35 @@
       <div class="hero-card" aria-hidden="true"><div class="ring"><span id="ringPct">0%</span></div><p data-i18n="matchRate">配對率</p></div>
     </div>
 
-    <div class="chips" id="lifeChips"></div>
-    <div class="chips" id="chips"></div>
+    <div class="chips" id="lifeChips" role="group" aria-label="人生階段篩選 Life event filters"></div>
+    <div class="chips" id="chips" role="group" aria-label="類別篩選 Category filters"></div>
 
-    <section class="sec sec-soon">
-      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg></div><div class="sec-t"><h3 data-i18n="secSoon">即將截止</h3><p data-i18n="secSoonD">這些設有截止日期，敬請及時辦理</p></div><span class="sec-count hot" id="soonCount"></span><button class="linkbtn" data-goto="all" type="button" data-i18n="viewAll">查看全部 →</button></div>
-      <div id="soon" class="hscroll"></div>
+    <section class="sec sec-soon" aria-labelledby="secSoonH">
+      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg></div><div class="sec-t"><h3 id="secSoonH" data-i18n="secSoon">即將截止</h3><p data-i18n="secSoonD">這些設有截止日期，敬請及時辦理</p></div><span class="sec-count hot" id="soonCount" role="status" aria-live="polite"></span><button class="linkbtn" data-goto="all" type="button" data-i18n="viewAll">查看全部 →</button></div>
+      <div id="soon" class="hscroll" role="list" aria-label="即將截止 Closing soon"></div>
     </section>
 
-    <section class="sec sec-now">
-      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg></div><div class="sec-t"><h3 data-i18n="secNow">符合資格</h3><p data-i18n="secNowD">您符合資格，歡迎直接申請</p></div><span class="sec-count ok" id="nowCount"></span></div>
-      <div id="now" class="grid"></div>
+    <section class="sec sec-now" aria-labelledby="secNowH">
+      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg></div><div class="sec-t"><h3 id="secNowH" data-i18n="secNow">符合資格</h3><p data-i18n="secNowD">您符合資格，歡迎直接申請</p></div><span class="sec-count ok" id="nowCount" role="status" aria-live="polite"></span></div>
+      <div id="now" class="grid" role="list" aria-label="符合資格 Eligible"></div>
     </section>
 
-    <section class="sec sec-miss">
-      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 data-i18n="secAlmost">差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可解鎖</p></div><span class="sec-count" id="missCount"></span></div>
-      <div id="miss" class="grid"></div>
+    <section class="sec sec-miss" aria-labelledby="secMissH">
+      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可解鎖</p></div><span class="sec-count" id="missCount" role="status" aria-live="polite"></span></div>
+      <div id="miss" class="grid" role="list" aria-label="差一步 One step away"></div>
     </section>
   </section>
 
-  <section id="tab-all" hidden>
-    <div class="searchbar"><span>🔍</span><input id="q" type="search" data-i18n-ph="searchPh" placeholder="搜尋 醫療券 / KCFRS / WFA / 車船津貼…"></div>
-    <div class="chips" id="chipsAll"></div>
-    <div id="all" class="grid"></div>
+  <section id="tab-all" role="tabpanel" aria-labelledby="tabbtn-all" tabindex="0" hidden>
+    <div class="searchbar"><span aria-hidden="true">🔍</span><label class="visually-hidden" for="q" data-i18n="searchLabel">搜尋福利 Search benefits</label><input id="q" type="search" autocomplete="off" data-i18n-ph="searchPh" placeholder="搜尋 醫療券 / KCFRS / WFA / 車船津貼…"></div>
+    <div class="chips" id="chipsAll" role="group" aria-label="類別篩選 Category filters"></div>
+    <div id="all" class="grid" role="list" aria-label="全部福利 All benefits"></div>
   </section>
 
-  <section id="tab-profile" hidden>
+  <section id="tab-profile" role="tabpanel" aria-labelledby="tabbtn-profile" tabindex="0" hidden>
     <div class="sheet">
-      <h3 data-i18n="profileH">👤 2分鐘檔案 · 配對更準</h3>
-      <div class="progress"><div id="pbar"></div></div>
+      <h2 data-i18n="profileH">👤 2分鐘檔案 · 配對更準</h2>
+      <div class="progress" role="progressbar" aria-label="檔案完成度 Profile completeness" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40" id="pbarWrap"><div id="pbar"></div></div>
       <form id="profileForm">
         <fieldset class="fgroup"><legend data-i18n="g_identity">個人資料</legend>
         <div class="frow"><label><span data-i18n="fAge">你的年齡</span><input type="number" name="age" min="18" max="100" value="34"></label>
@@ -78,7 +81,7 @@
         <div class="frow"><label><span data-i18n="fSex">性別 Sex</span><select name="sex"><option value="female" selected data-i18n-opt="os_f">女 Female</option><option value="male" data-i18n-opt="os_m">男 Male</option></select></label>
         <label><span data-i18n="fEdu">學歷 Education</span><select name="eduRank"><option value="0" data-i18n-opt="oe_sec">中學或以下 Secondary-</option><option value="1" selected data-i18n-opt="oe_sub">副學位 Sub-degree</option><option value="2" data-i18n-opt="oe_deg">學位或以上 Degree+</option></select></label></div>
         <label class="check"><input type="checkbox" name="hk_resident" checked> <span data-i18n="fResident">香港居民 / 住滿3年</span></label>
-        <label><span data-i18n="fYears">居港年數 Years in HK</span> <span id="hkYearsOut" class="count">7年或以上</span><input type="range" name="hkYears" min="0" max="7" step="1" value="7"></label>
+        <label><span data-i18n="fYears">居港年數 Years in HK</span> <span id="hkYearsOut" class="count" role="status" aria-live="polite">7年或以上</span><input type="range" name="hkYears" min="0" max="7" step="1" value="7" aria-describedby="hkYearsOut"></label>
         <label class="check"><input type="checkbox" name="ehealth"> <span data-i18n="fEhealth">已登記醫健通eHealth</span></label>
         <label class="check"><input type="checkbox" name="married" checked> <span data-i18n="fMarried">已婚/同居 Married/cohabiting</span> <small data-i18n="fMarriedHint">(夫婦限額)</small></label>
         </fieldset>
@@ -117,10 +120,10 @@
         <label><span data-i18n="fTransport">每月車費 Transport/mo (HKD)</span><input type="number" name="transportSpend" min="0" step="50" value="800"></label></div>
         </fieldset>
         <fieldset class="fgroup"><legend data-i18n="g_family">子女及家人</legend>
-        <div><span data-i18n="fKids">子女</span>
+        <div><span id="kidsLabel" data-i18n="fKids">子女</span>
           <div class="kidpick">
-            <button type="button" id="kidtoggle" class="kidtoggle" aria-haspopup="true"><span id="kidlabel"></span><span class="caret">▾</span></button>
-            <div class="kidpanel" id="kidpanel" hidden>
+            <button type="button" id="kidtoggle" class="kidtoggle" aria-haspopup="true" aria-expanded="false" aria-controls="kidpanel" aria-labelledby="kidsLabel kidlabel"><span id="kidlabel"></span><span class="caret" aria-hidden="true">▾</span></button>
+            <div class="kidpanel" id="kidpanel" role="group" aria-label="選擇子女級別 Select child levels" hidden>
               <div class="kidchips" id="kidchips"></div>
               <button type="button" id="kiddone" class="btn" data-i18n="kidDone">完成</button>
             </div>
@@ -144,19 +147,20 @@
         </fieldset>
         <div class="btnrow">
           <button type="submit" class="solidbtn big" data-i18n="save">💾 儲存並重新配對</button>
-          <button type="button" id="exportBtn" class="ghostbtn" data-i18n="btnExport">⬆ 匯出</button>
-          <button type="button" id="importBtn" class="ghostbtn" data-i18n="btnImport">⬇ 匯入</button>
-          <input type="file" id="importFile" accept="application/json" hidden>
+          <button type="button" id="exportBtn" class="ghostbtn dark" data-i18n="btnExport">⬆ 匯出</button>
+          <button type="button" id="importBtn" class="ghostbtn dark" data-i18n="btnImport">⬇ 匯入</button>
+          <label class="visually-hidden" for="importFile" data-i18n="importLabel">匯入檔案 Import profile file</label>
+          <input type="file" id="importFile" accept="application/json" hidden tabindex="-1">
         </div>
       </form>
       <p class="hint" data-i18n="hintStore">只存手機 localStorage + 你 export 的 profile.json。目錄是 data/benefits.json 純文字。</p>
     </div>
   </section>
 
-  <section id="tab-about" hidden>
+  <section id="tab-about" role="tabpanel" aria-labelledby="tabbtn-about" tabindex="0" hidden>
     <div class="sheet">
       <svg class="about-art" aria-hidden="true"><use href="art.svg#art-shield"/></svg>
-      <h3 data-i18n="aboutH">點解信得過？</h3>
+      <h2 data-i18n="aboutH">點解信得過？</h2>
       <ol class="steps">
         <li data-i18n="ab1">每個配對顯示點解你符合 + 需咩證明</li>
         <li data-i18n="ab2">每個都附政府來源連結 + 更新日期</li>
@@ -166,8 +170,8 @@
   </section>
 </main>
 
-<dialog id="detail"></dialog>
-<button id="topBtn" type="button" aria-label="Back to top">↑</button>
+<dialog id="detail" aria-labelledby="detailTitle" aria-modal="true"></dialog>
+<button id="topBtn" type="button" aria-label="回到頂部 Back to top" tabindex="-1">↑</button>
 <footer><small data-i18n="footer">Prototype — 申請前請以政府網站為準。</small></footer>
 <script src="app.js"></script>
 </body>

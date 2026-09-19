@@ -3,9 +3,16 @@ const LS_KEY = 'hkbm_profile_v1', SAVE_KEY = 'hkbm_saved_v1', HIDE_KEY = 'hkbm_h
 let BENEFITS = [], LANG = localStorage.getItem('hkbm_lang') || 'zh';
 let FILTER = 'all', FILTER_ALL = 'all', LIFE_FILTER = 'all';
 let detailStack = [];
+let lastFocused = null;
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const t = (en, zh) => LANG === 'zh' ? (zh || en) : (en || zh);
+function announce(msg) {
+  const el = $('#liveAnnounce');
+  if (!el) return;
+  el.textContent = '';
+  setTimeout(() => { el.textContent = msg; }, 50);
+}
 // Language-aware link: _zh twin when UI is Chinese, else base URL
 const DIST_ZH = {'Central & Western':'中西區',Eastern:'東區',Southern:'南區','Wan Chai':'灣仔','Kowloon City':'九龍城','Kwun Tong':'觀塘','Sham Shui Po':'深水埗','Wong Tai Sin':'黃大仙','Yau Tsim Mong':'油尖旺',Islands:'離島','Kwai Tsing':'葵青',North:'北區','Sai Kung':'西貢','Sha Tin':'沙田','Tai Po':'大埔','Tsuen Wan':'荃灣','Tuen Mun':'屯門','Yuen Long':'元朗'};
 const KID_GROUPS = [['K', ['K1','K2','K3']], ['P', ['P1','P2','P3','P4','P5','P6']], ['S', ['S1','S2','S3','S4','S5','S6']]];
@@ -15,8 +22,8 @@ function renderKidChips() {
   const cur = kidSet();
   const gl = { K: t('Kindergarten', '幼稚園'), P: t('Primary', '小學'), S: t('Secondary', '中學') };
   $('#kidchips').innerHTML = KID_GROUPS.map(([g, lv]) =>
-    `<div class="kgroup"><span>${gl[g]}</span>` + lv.map(l =>
-      `<button type="button" class="kchip${cur.has(l) ? ' on' : ''}" data-k="${l}">${l}</button>`).join('') + `</div>`).join('');
+    `<div class="kgroup" role="group" aria-label="${esc(gl[g])}">` + lv.map(l =>
+      `<button type="button" class="kchip${cur.has(l) ? ' on' : ''}" data-k="${l}" aria-pressed="${cur.has(l) ? 'true' : 'false'}" aria-label="${l} ${esc(gl[g])}">${l}</button>`).join('') + `</div>`).join('');
   const arr = [...cur].sort((a, c) => KID_ORDER(a) - KID_ORDER(c));
   $('#kidlabel').textContent = arr.length ? arr.join('、') + ` (${arr.length}${t(' selected', '已選')})` : t('Select levels', '選擇級別');
 }
@@ -30,12 +37,30 @@ function wireKidPick() {
     set.has(b.dataset.k) ? set.delete(b.dataset.k) : set.add(b.dataset.k);
     f.kids.value = [...set].sort((a, c) => KID_ORDER(a) - KID_ORDER(c)).join(',');
     renderKidChips();
+    const updated = $(`[data-k="${b.dataset.k}"]`);
+    if (updated) updated.focus();
   });
-  $('#kidtoggle').addEventListener('click', e => { e.preventDefault(); $('#kidpanel').hidden = !$('#kidpanel').hidden; });
-  $('#kiddone').addEventListener('click', e => { e.preventDefault(); $('#kidpanel').hidden = true; });
+  const setKidPanel = (open) => {
+    const panel = $('#kidpanel'), toggle = $('#kidtoggle');
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      const first = panel.querySelector('[data-k]');
+      if (first) first.focus();
+    }
+  };
+  $('#kidtoggle').addEventListener('click', e => { e.preventDefault(); setKidPanel($('#kidpanel').hidden); });
+  $('#kidtoggle').addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' && $('#kidpanel').hidden) { e.preventDefault(); setKidPanel(true); }
+  });
+  $('#kiddone').addEventListener('click', e => { e.preventDefault(); setKidPanel(false); $('#kidtoggle').focus(); });
   document.addEventListener('click', e => {
     const panel = $('#kidpanel');
-    if (!panel.hidden && !e.target.closest('.kidpick') && !e.target.closest('[data-k]')) panel.hidden = true;
+    if (!panel.hidden && !e.target.closest('.kidpick') && !e.target.closest('[data-k]')) setKidPanel(false);
+  });
+  document.addEventListener('keydown', e => {
+    const panel = $('#kidpanel');
+    if (e.key === 'Escape' && panel && !panel.hidden) { setKidPanel(false); $('#kidtoggle').focus(); }
   });
 }
 const distName = d => LANG==='zh' ? (DIST_ZH[d]||d) : d;
@@ -43,6 +68,8 @@ const L = (b, k) => (LANG === 'zh' && b[k + '_zh']) ? b[k + '_zh'] : (b[k] || b.
 
 // Full-site static UI strings. Add new keys here, reference with data-i18n="key".
 const I18N = {
+  skip: ['Skip to main content', '跳至主要內容'],
+  siteTitle: ['WellFairy — HK benefit matcher', 'WellFairy 援助仙 — 香港福利配對'],
   brandSub: ['Benefit matcher', '福利配對'],
   install: ['⬇ Install', '⬇ 安裝'],
   tabMatch: ['Match', '配對'], tabAll: ['All', '全部'], tabProfile: ['Profile', '檔案'], tabAbout: ['About', '關於'],
@@ -50,8 +77,8 @@ const I18N = {
   heroUnit: ['benefits', '項福利'],
   statDeadline: ['Due in 30 days', '30日內截止'], statSaved: ['Saved', '已收藏'], statCat: ['Categories', '類別'],
   chipHidden: ['Hidden', '已隱藏'],
-  hide: ['🙈 Hide', '🙈 隱藏'], unhide: ['↩ Unhide', '↩ 取消隱藏'], unhideAll: ['↩ Unhide all', '↩ 全部取消隱藏'],
-  hiddenEmpty: ['No hidden schemes — tap 🙈 on any card to hide it.', '暫無隱藏計劃 — 按任何卡上嘅 🙈 即可隱藏。'],
+  hide: ['Hide', '隱藏'], unhide: ['Unhide', '取消隱藏'], unhideAll: ['↩ Unhide all', '↩ 全部取消隱藏'],
+  hiddenEmpty: ['No hidden schemes — tap Hide on any card to hide it.', '暫無隱藏計劃 — 按任何卡上嘅隱藏即可隱藏。'],
   matchRate: ['Match rate', '配對率'],
   secSoon: ['Closing soon', '即將截止'],
   secSoonD: ['These have deadlines — please apply in good time.', '這些設有截止日期，敬請及時辦理。'],
@@ -61,9 +88,18 @@ const I18N = {
   secAlmost: ['One step away', '只差一步'],
   secMissD: ['Closest first — meet the condition to unlock.', '按接近程度排序，符合條件即可解鎖。'],
   urgent: ['needing action', '件需辦理'],
+  items: ['items', '項'],
   missSub: ['A document or a birthday away', '補交文件或年滿歲數即可申請'],
+  searchLabel: ['Search benefits', '搜尋福利'],
   searchPh: ['Search HCV / KCFRS / WFA / transport…', '搜尋 醫療券 / KCFRS / WFA / 車船津貼…'],
-  profileH: ['👤 A 2-minute profile gives sharper matches', '👤 用2分鐘建立檔案，配對更準確'],
+  profileH: ['2-minute profile gives sharper matches', '用2分鐘建立檔案，配對更準確'],
+  importLabel: ['Import profile file', '匯入檔案'],
+  saveLabel: ['Save', '收藏'], savedLabel: ['Saved', '已收藏'],
+  viewDetails: ['View details', '查看詳情'],
+  close: ['Close', '關閉'], share: ['Share', '分享'], applyNow: ['Apply now', '立即申請'],
+  relatedTitle: ['Related in this category', '同類資助'],
+  langToggle: ['Switch language', '切換語言'],
+  topBtn: ['Back to top', '回到頂部'],
   fAge: ['Your age', '你的年齡'], fHousehold: ['Household size', '家庭人數'],
   g_identity: ['Personal details', '個人資料'],
   g_home: ['Household finances', '家居經濟'],
@@ -115,12 +151,19 @@ const I18N = {
 function applyI18n() {
   const pick = v => LANG === 'zh' ? v[1] : v[0];
   document.querySelectorAll('[data-i18n]').forEach(el => { const v = I18N[el.dataset.i18n]; if (v) el.textContent = pick(v); });
-  document.querySelectorAll('[data-i18n-ph]').forEach(el => { const v = I18N[el.dataset.i18nPh]; if (v) el.placeholder = pick(v); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => { const v = I18N[el.dataset.i18nPh]; if (v) { el.placeholder = pick(v); el.setAttribute('aria-label', pick(v)); } });
   document.querySelectorAll('[data-i18n-opt]').forEach(el => { const v = I18N[el.dataset.i18nOpt]; if (v) el.textContent = pick(v); });
   document.querySelectorAll('[data-i18n-og]').forEach(el => { const v = I18N[el.dataset.i18nOg]; if (v) el.label = pick(v); });
   document.documentElement.lang = LANG === 'zh' ? 'zh-Hant-HK' : 'en-HK';
   document.title = LANG === 'zh' ? 'WellFairy 援助仙 — 應得的福利，自動話你知' : 'WellFairy — benefits you qualify for, auto-matched';
   const nav = document.querySelector('nav.tabs'); if (nav) nav.setAttribute('aria-label', t('Main navigation', '主導航'));
+  const lt = $('#langToggle'); if (lt) lt.setAttribute('aria-label', t('Switch language, current: Chinese', '切換語言，目前：中文') && (LANG === 'zh' ? '切換語言 Switch language，目前中文' : '切換語言 Switch language, current English'));
+  const tb = $('#topBtn'); if (tb) tb.setAttribute('aria-label', t('Back to top', '回到頂部'));
+  const q = $('#q'); if (q && !q.getAttribute('aria-label')) q.setAttribute('aria-label', t('Search benefits', '搜尋福利'));
+  const imp = $('#importFile'); if (imp) imp.setAttribute('aria-label', t('Import profile file', '匯入檔案'));
+  const lc = $('#lifeChips'); if (lc) lc.setAttribute('aria-label', t('Life event filters', '人生階段篩選'));
+  const cc = $('#chips'); if (cc) cc.setAttribute('aria-label', t('Category filters', '類別篩選'));
+  const ca = $('#chipsAll'); if (ca) ca.setAttribute('aria-label', t('Category filters', '類別篩選'));
 }
 function hkYearsOut(){ const f=$('#profileForm'); if(!f||!f.hkYears) return; const v=+f.hkYears.value; const o=$('#hkYearsOut'); if(o) o.textContent = v>=7 ? t('7+ years','7年或以上') : v+t(' yr','年'); }
 const CAT_ICON = { elderly: '👵', student: '🎒', family: '👨‍👩‍👧', health: '🏥', transport: '🚌', housing: '🏠' };
@@ -238,25 +281,31 @@ function deadlinePill(b) {
 }
 
 function card(b, opts={}) {
-  const on = SAVED.has(b.id) ? 'on' : '';
-  const hidden = HIDDEN.has(b.id) ? 'on' : '';
+  const isSaved = SAVED.has(b.id);
+  const isHidden = HIDDEN.has(b.id);
+  const on = isSaved ? 'on' : '';
+  const hidden = isHidden ? 'on' : '';
   const cat = CAT_NAME[b.category] || {en:b.category,zh:b.category};
+  const title = t(b.title_en, b.title_zh);
   const wv = (b.needs && b.needs.wfa_exact) ? (()=>{ const lv0=wfaLevel(loadP()); return lv0?`<span class="pill">${esc(t(lv0.en,lv0.zh))}</span>`:''; })() : '';
   const lv = (b.needs && b.needs.afi_max != null) ? `<span class="pill">${esc(t(afiLevel(afiOf(loadP())).en, afiLevel(afiOf(loadP())).zh))} · AFI ${afiOf(loadP()).toLocaleString()}</span>` : '';
-  const decl = (b.needs && b.needs.no_property) ? `<span class="pill info">📝 ${t('property declaration needed','須聲明無物業')}</span>` : '';
+  const decl = (b.needs && b.needs.no_property) ? `<span class="pill info"><span aria-hidden="true">📝</span> ${t('property declaration needed','須聲明無物業')}</span>` : '';
   const conf = (b.confirm_en && b.confirm_en.length) ? `<span class="pill info">☑ ${b.confirm_en.length}${t(' to confirm','項待確認')}</span>` : '';
-  const ehp = (b.needs_ehealth && !loadP().ehealth) ? `<span class="pill info">🏥 ${t('eHealth sign-up needed','需登記醫健通')}</span>` : '';
-  const hideLabel = HIDDEN.has(b.id) ? t('unhide','取消隱藏') : t('hide','隱藏');
-  const hideIcon = HIDDEN.has(b.id) ? '↩' : '🙈';
-  return `<article class="card${opts.lock ? ' locked' : ''}" data-id="${esc(b.id)}">
-    ${opts.lock ? `<div class="lockbar">🔒 ${esc(opts.lock)}${opts.more ? ` <span class="more">+${opts.more}</span>` : ''}</div>` : ''}
-    <div class="top"><div class="badge cat-${esc(b.category)}">${CAT_ICON[b.category]||'🎁'}</div>
-    <div><h3>${esc(t(b.title_en,b.title_zh))}</h3><div class="meta">${esc(t(cat.en,cat.zh))} · ${t('updated','更新')} ${esc(b.updated_at||'')}</div></div></div>
+  const ehp = (b.needs_ehealth && !loadP().ehealth) ? `<span class="pill info"><span aria-hidden="true">🏥</span> ${t('eHealth sign-up needed','需登記醫健通')}</span>` : '';
+  const hideLabel = (isHidden ? t('Unhide ', '取消隱藏 ') : t('Hide ', '隱藏 ')) + title;
+  const saveLabel = (isSaved ? t('Saved, activate to unsave: ', '已收藏，按此取消：') : t('Save: ', '收藏：')) + title;
+  const viewLabel = t('View details: ', '查看詳情：') + title;
+  const hideIcon = isHidden ? '<span aria-hidden="true">↩</span>' : '<span aria-hidden="true">🙈</span>';
+  const saveIcon = isSaved ? '<span aria-hidden="true">⭐</span>' : '<span aria-hidden="true">☆</span>';
+  return `<article class="card${opts.lock ? ' locked' : ''}" data-id="${esc(b.id)}" role="listitem">
+    ${opts.lock ? `<div class="lockbar"><span aria-hidden="true">🔒</span> ${esc(opts.lock)}${opts.more ? ` <span class="more">+${opts.more}</span>` : ''}</div>` : ''}
+    <div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
+    <div><h3>${esc(title)}</h3><div class="meta">${esc(t(cat.en,cat.zh))} · ${t('updated','更新')} ${esc(b.updated_at||'')}</div></div></div>
     <div class="pills">${deadlinePill(b)}${lv}${wv}${decl}${conf}${ehp}<span class="pill">${esc((b.proof_needed_en||[]).length)}${t(' documents','份文件')}</span></div>
-    <div class="why">💡 ${esc(t(b.why_en,b.why_zh))}</div>
-    <div class="row"><button class="savebtn ${on}" data-save="${esc(b.id)}" type="button">${on?'⭐':'☆'}</button>
-    <button class="hidebtn ${hidden}" data-hide="${esc(b.id)}" type="button" title="${esc(hideLabel)}">${hideIcon}</button>
-    <button class="btn" data-open="${esc(b.id)}" type="button">${t('View details','查看詳情')}</button></div></article>`;
+    <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}</div>
+    <div class="row"><button class="savebtn ${on}" data-save="${esc(b.id)}" type="button" aria-pressed="${isSaved ? 'true' : 'false'}" aria-label="${esc(saveLabel)}">${saveIcon}</button>
+    <button class="hidebtn ${hidden}" data-hide="${esc(b.id)}" type="button" aria-pressed="${isHidden ? 'true' : 'false'}" aria-label="${esc(hideLabel)}" title="${esc(hideLabel)}">${hideIcon}</button>
+    <button class="btn" data-open="${esc(b.id)}" type="button" aria-label="${esc(viewLabel)}">${t('View details','查看詳情')}</button></div></article>`;
 }
 
 function schemeIdFromHash() {
@@ -269,19 +318,22 @@ function schemeIdFromHash() {
 
 function openDetail(id, push = true) {
   const b = BENEFITS.find(x=>x.id===id); if(!b) return;
+  if (!$('#detail').open) lastFocused = document.activeElement;
   const d = $('#detail');
   const cat = CAT_NAME[b.category] || {en:b.category,zh:b.category};
+  const title = t(b.title_en, b.title_zh);
   const relatedItems = BENEFITS.filter(x=>x.category===b.category && x.id!==b.id).slice(0,5);
-  const relatedChips = relatedItems.map(x=>`<button type="button" class="chip relchip" data-open="${esc(x.id)}"><span>${CAT_ICON[x.category]||'🎁'}</span> ${esc(t(x.title_en,x.title_zh))}</button>`).join('');
-  const relatedHtml = relatedItems.length ? `<section class="relatives"><h4>${t('Related in this category','同類資助')}</h4><div class="chips">${relatedChips}</div><p class="hint">${t('Tap to view related schemes; means-test pass may unlock secondary allowances.','點擊查看同類計劃；通過資助審查可解鎖次要津貼。')}</p></section>` : '';
-  d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}">${CAT_ICON[b.category]||'🎁'}</div>
-    <div><h3>${esc(t(b.title_en,b.title_zh))}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
+  const relatedChips = relatedItems.map(x=>`<button type="button" class="chip relchip" data-open="${esc(x.id)}" aria-label="${esc(t('View details: ','查看詳情：') + t(x.title_en, x.title_zh))}"><span aria-hidden="true">${CAT_ICON[x.category]||'🎁'}</span> ${esc(t(x.title_en,x.title_zh))}</button>`).join('');
+  const relatedHtml = relatedItems.length ? `<section class="relatives" aria-labelledby="relH"><h4 id="relH">${t('Related in this category','同類資助')}</h4><div class="chips" role="group" aria-label="${esc(t('Related in this category','同類資助'))}">${relatedChips}</div><p class="hint">${t('Tap to view related schemes; means-test pass may unlock secondary allowances.','點擊查看同類計劃；通過資助審查可解鎖次要津貼。')}</p></section>` : '';
+  d.setAttribute('aria-label', title);
+  d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
+    <div><h3 id="detailTitle">${esc(title)}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
     <div class="pills">${deadlinePill(b)}</div>
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
-    <div class="why">💡 ${esc(t(b.why_en,b.why_zh))}<br><br>🧾 <strong>${t('Please bring','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please confirm before applying','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br>🔗 <strong>${t('Source','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
+    <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}<br><br><span aria-hidden="true">🧾</span> <strong>${t('Please bring','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please confirm before applying','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br><span aria-hidden="true">🔗</span> <strong>${t('Source','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
     ${relatedHtml}
-    <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')}</a>
-    <button class="btn ghost" id="shareBtn" type="button">🔗 ${t('Share','分享')}</button>
+    <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')} <span class="visually-hidden">${esc(title)}</span></a>
+    <button class="btn ghost" id="shareBtn" type="button"><span aria-hidden="true">🔗</span> ${t('Share','分享')}</button>
     <button class="btn ghost" id="closeD" type="button">${t('Close','關閉')}</button></div>
     <p class="hint">${t('Please verify with the official source before applying.','申請前請以政府網站為準。')}</p></div>`;
   // manage history stack before overwriting current id
@@ -305,9 +357,12 @@ function openDetail(id, push = true) {
       const ta = document.createElement('textarea'); ta.value = url; document.body.appendChild(ta);
       ta.select(); try { document.execCommand('copy'); } catch {} ta.remove();
     }
-    const old = btn.textContent; btn.textContent = t('✓ Link copied','✓ 已複製連結');
-    setTimeout(() => { btn.textContent = old; }, 1600);
+    const old = btn.innerHTML; btn.textContent = t('✓ Link copied','✓ 已複製連結');
+    announce(t('Link copied', '已複製連結'));
+    setTimeout(() => { btn.innerHTML = old; }, 1600);
   };
+  const closeBtn = $('#closeD');
+  if (closeBtn) closeBtn.focus();
 }
 
 let savedY = 0;
@@ -329,12 +384,16 @@ function clearSchemeUrl() {
   }
 }
 
-function closeDetail() {
+function closeDetail(restoreFocus = true) {
   const d = $('#detail');
   if (d.open) d.close();
   delete d.dataset.cur;
   detailStack = [];
   clearSchemeUrl();
+  if (restoreFocus && lastFocused && document.contains(lastFocused)) {
+    lastFocused.focus();
+    lastFocused = null;
+  }
 }
 
 function openHash(initial = false) {
@@ -344,8 +403,12 @@ function openHash(initial = false) {
 }
 
 function chips(el, list, cur, cb) {
-  el.innerHTML = [{id:'all',zh:'全部',en:'All'},...list.map(c=>({id:c,...(CAT_NAME[c]||{en:c,zh:c})})),{id:'saved',zh:'⭐ 收藏',en:'⭐ Saved'},{id:'hidden',zh:`🙈 ${t('Hidden','已隱藏')} (${HIDDEN.size})`,en:`🙈 ${t('Hidden','已隱藏')} (${HIDDEN.size})`}]
-    .map(c=>`<button type="button" class="chip ${cur===c.id?'active':''}" data-c="${c.id}">${c.id==='all'?'✨':c.id==='saved'?'':c.id==='hidden'?'':(CAT_ICON[c.id]||'')} ${esc(t(c.en,c.zh))}</button>`).join('');
+  el.innerHTML = [{id:'all',zh:'全部',en:'All'},...list.map(c=>({id:c,...(CAT_NAME[c]||{en:c,zh:c})})),{id:'saved',zh:'已收藏',en:'Saved'},{id:'hidden',zh:`${t('Hidden','已隱藏')} (${HIDDEN.size})`,en:`${t('Hidden','已隱藏')} (${HIDDEN.size})`}]
+    .map(c=>{
+      const active = cur===c.id;
+      const icon = c.id==='all'?'<span aria-hidden="true">✨</span> ':c.id==='saved'?'<span aria-hidden="true">⭐</span> ':c.id==='hidden'?'<span aria-hidden="true">🙈</span> ':((CAT_ICON[c.id]||'')?`<span aria-hidden="true">${CAT_ICON[c.id]}</span> `:'');
+      return `<button type="button" class="chip ${active?'active':''}" data-c="${c.id}" aria-pressed="${active?'true':'false'}">${icon}${esc(t(c.en,c.zh))}</button>`;
+    }).join('');
   el.querySelectorAll('button').forEach(b=>b.onclick=()=>cb(b.dataset.c));
 }
 const passFilter = (b, f) => {
@@ -385,7 +448,10 @@ function render() {
   const lifeChipsEl = $('#lifeChips');
   if (lifeChipsEl) {
     const lifeList = [{id:'all',en:'All Life Events',zh:'全部人生階段'}, ...LIFE_EVENTS];
-    lifeChipsEl.innerHTML = lifeList.map(c=>`<button type="button" class="chip ${LIFE_FILTER===c.id?'active':''}" data-life="${c.id}">${esc(t(c.en,c.zh))}</button>`).join('');
+    lifeChipsEl.innerHTML = lifeList.map(c=>{
+      const active = LIFE_FILTER===c.id;
+      return `<button type="button" class="chip ${active?'active':''}" data-life="${c.id}" aria-pressed="${active?'true':'false'}">${esc(t(c.en,c.zh))}</button>`;
+    }).join('');
     lifeChipsEl.querySelectorAll('button').forEach(b=>b.onclick=()=>{LIFE_FILTER=b.dataset.life;render();});
   }
   renderKidChips();
@@ -399,18 +465,45 @@ function render() {
     .join('') || `<p class="hint">—</p>`;
   const q = ($('#q').value||'').toLowerCase();
   const allItems = BENEFITS.filter(lifePass).filter(b=>passFilter(b,FILTER_ALL)).filter(b=>!q||(b.title_en+b.title_zh+b.id).toLowerCase().includes(q));
-  const hiddenHeader = FILTER_ALL==='hidden' ? `<div class="hidden-toolbar"><button id="unhideAllBtn" class="btn ghost" type="button">${t('↩ Unhide all','↩ 全部取消隱藏')}</button><span class="hint">${HIDDEN.size} ${t('hidden','已隱藏')}</span></div>` : '';
-  $('#all').innerHTML = hiddenHeader + (allItems.map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-search"/></svg><p>${FILTER_ALL==='hidden' ? t('No hidden schemes — tap 🙈 on any card to hide it.','暫無隱藏計劃 — 按任何卡上嘅 🙈 即可隱藏。') : t('No schemes match that search.','無計劃符合呢個搜尋。')}</p></div>`);
+  const hiddenHeader = FILTER_ALL==='hidden' ? `<div class="hidden-toolbar"><button id="unhideAllBtn" class="btn ghost" type="button">${t('Unhide all','全部取消隱藏')}</button><span class="hint">${HIDDEN.size} ${t('hidden','已隱藏')}</span></div>` : '';
+  $('#all').innerHTML = hiddenHeader + (allItems.map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-search"/></svg><p>${FILTER_ALL==='hidden' ? t('No hidden schemes — tap Hide on any card to hide it.','暫無隱藏計劃 — 按任何卡上嘅隱藏即可隱藏。') : t('No schemes match that search.','無計劃符合呢個搜尋。')}</p></div>`);
   const done = [p.age>0, (p.kids||[]).length>0, !!p.district].filter(Boolean).length;
-  $('#pbar').style.width = (30+done*23)+'%';
+  const pctDone = 30+done*23;
+  $('#pbar').style.width = pctDone+'%';
+  const wrap = $('#pbarWrap');
+  if (wrap) wrap.setAttribute('aria-valuenow', String(pctDone));
 }
 
 async function init() {
   BENEFITS = await (await fetch('data/benefits.json',{cache:'no-store'})).json();
-  document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
-    document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active')); b.classList.add('active');
-    ['match','profile','all','about'].forEach(n=>$('#tab-'+n).hidden = n!==b.dataset.tab);
-    window.scrollTo({top:0,behavior:'smooth'});
+  const tabBtns = [...document.querySelectorAll('.tabs [role="tab"]')];
+  const activateTab = (btn, focusPanel = false) => {
+    tabBtns.forEach(x => {
+      const active = x === btn;
+      x.classList.toggle('active', active);
+      x.setAttribute('aria-selected', active ? 'true' : 'false');
+      x.tabIndex = active ? 0 : -1;
+      $('#tab-' + x.dataset.tab).hidden = !active;
+    });
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if (focusPanel) {
+      const panel = $('#tab-' + btn.dataset.tab);
+      if (panel) panel.focus({preventScroll:true});
+    }
+    const label = btn.textContent.trim();
+    announce(t(`Switched to ${label}`, `已切換至${label}`));
+  };
+  tabBtns.forEach((b, i) => {
+    b.onclick = () => activateTab(b);
+    b.onkeydown = (e) => {
+      let idx = null;
+      if (e.key === 'ArrowRight') idx = (i + 1) % tabBtns.length;
+      else if (e.key === 'ArrowLeft') idx = (i - 1 + tabBtns.length) % tabBtns.length;
+      else if (e.key === 'Home') idx = 0;
+      else if (e.key === 'End') idx = tabBtns.length - 1;
+      if (idx != null) { e.preventDefault(); tabBtns[idx].focus(); activateTab(tabBtns[idx]); }
+    };
   });
   document.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>document.querySelector(`[data-tab="${b.dataset.goto}"]`).click());
   const f = $('#profileForm'), p = loadP();
@@ -426,28 +519,72 @@ async function init() {
       district:f.district.value,hasElderly:f.hasElderly.checked,isCSSA:f.isCSSA.checked,workHours:+f.workHours.value||0,
       kids:f.kids.value.split(/[,，\s]+/).map(s=>s.trim().toUpperCase()).filter(Boolean),
       eduRank:+f.eduRank.value ?? 1, ownsProperty:f.ownsProperty.checked, onAllowance:f.onAllowance.checked, onOALA:f.onOALA.checked, isCarer:f.isCarer.checked, childSEN:f.childSEN.checked, unemployed:f.unemployed.checked, hasToddler:f.hasToddler.checked, ehealth:f.ehealth.checked, hasTertiary:f.hasTertiary.checked, livesMainland:f.livesMainland.checked, smoker:f.smoker.checked});
-    render(); document.querySelector('[data-tab="match"]').click(); };
-  $('#exportBtn').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([localStorage.getItem(LS_KEY)||'{}'],{type:'application/json'}));a.download='profile.json';a.click();};
+    render();
+    document.querySelector('[data-tab="match"]').click();
+    announce(t('Profile saved. Matches updated.', '已儲存檔案，配對已更新。')); };
+  $('#exportBtn').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([localStorage.getItem(LS_KEY)||'{}'],{type:'application/json'}));a.download='profile.json';a.click();announce(t('Profile exported.', '已匯出檔案。'));};
   $('#importBtn').onclick=()=>$('#importFile').click();
   $('#importFile').onchange=e=>{const fl=e.target.files[0];if(!fl)return;fl.text().then(x=>{try{const cur=localStorage.getItem(LS_KEY); if(cur) localStorage.setItem(LS_KEY+'_bak',cur); saveP(JSON.parse(x));location.reload();}catch{alert(t('Bad profile.json','profile.json 格式錯誤'));}});};
-  $('#q').oninput=render;  if (f.hkYears) f.hkYears.oninput=hkYearsOut;
+  const qInput = $('#q');
+  let qTimer = null;
+  if (qInput) qInput.addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(render, 150); });
+  if (f.hkYears) f.hkYears.oninput=hkYearsOut;
   wireKidPick(); renderKidChips();
   const excl = (name, others) => { f[name].onchange = () => { if (f[name].checked) others.forEach(o => { f[o].checked = false; }); }; };
   excl('onAllowance', ['onOALA', 'isCSSA']); excl('onOALA', ['onAllowance', 'isCSSA']); excl('isCSSA', ['onAllowance', 'onOALA']);
   f.unemployed.onchange = () => { if (f.unemployed.checked && (+f.workHours.value || 0) > 0) f.workHours.value = 0; };
-  $('#langToggle').onclick=()=>{LANG=LANG==='zh'?'en':'zh';localStorage.setItem('hkbm_lang',LANG);render();};
+  $('#langToggle').onclick=()=>{LANG=LANG==='zh'?'en':'zh';localStorage.setItem('hkbm_lang',LANG);render();announce(LANG==='zh'?'已切換至中文':'Switched to English');};
   document.body.addEventListener('click',e=>{
-    const s=e.target.closest('[data-save]'); if(s){const id=s.dataset.save;SAVED.has(id)?SAVED.delete(id):SAVED.add(id);saveS(SAVED);render();return;}
-    const h=e.target.closest('[data-hide]'); if(h){const id=h.dataset.hide; HIDDEN.has(id)?unhideScheme(id):hideScheme(id); render(); return;}
-    if(e.target.id==='unhideAllBtn'){unhideAll();render();return;}
+    const s=e.target.closest('[data-save]');
+    if(s){
+      const id=s.dataset.save;
+      const willSave = !SAVED.has(id);
+      willSave?SAVED.add(id):SAVED.delete(id);
+      saveS(SAVED);render();
+      const b=BENEFITS.find(x=>x.id===id);
+      const nm=b?t(b.title_en,b.title_zh):id;
+      announce(willSave?t(`Saved: ${nm}`,`已收藏：${nm}`):t(`Unsaved: ${nm}`,`已取消收藏：${nm}`));
+      const nb=document.querySelector(`[data-save="${CSS.escape(id)}"]`);
+      if(nb) nb.focus();
+      return;
+    }
+    const h=e.target.closest('[data-hide]');
+    if(h){
+      const id=h.dataset.hide;
+      const willHide = !HIDDEN.has(id);
+      willHide?hideScheme(id):unhideScheme(id);
+      render();
+      announce(willHide?t('Scheme hidden','已隱藏計劃'):t('Scheme unhidden','已取消隱藏'));
+      return;
+    }
+    if(e.target.id==='unhideAllBtn'){unhideAll();render();announce(t('All hidden schemes restored','已還原全部隱藏計劃'));return;}
     const o=e.target.closest('[data-open]'); if(o){openDetail(o.dataset.open);return;}
     const c=e.target.closest('.card'); if(c&&!e.target.closest('a,button')) openDetail(c.dataset.id);
+  });
+  document.body.addEventListener('keydown',e=>{
+    if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('card')&&!e.target.closest('a,button')){
+      const c=e.target.closest('.card');
+      if(c&&e.target===c){e.preventDefault();openDetail(c.dataset.id);}
+    }
   });
   let d; window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();d=e;$('#installBtn').hidden=false;});
   $('#installBtn').onclick=async()=>{if(d){d.prompt();d=null;}};
   const topBtn=$('#topBtn');
-  addEventListener('scroll',()=>topBtn.classList.toggle('show',scrollY>600),{passive:true});
-  topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+  const updateTopBtn = () => {
+    const show = scrollY>600;
+    topBtn.classList.toggle('show',show);
+    topBtn.tabIndex = show ? 0 : -1;
+    topBtn.setAttribute('aria-hidden', show ? 'false' : 'true');
+  };
+  addEventListener('scroll',updateTopBtn,{passive:true});
+  updateTopBtn();
+  topBtn.onclick=()=>{const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});};
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== qInput && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName||'')) {
+      const allTab = document.querySelector('[data-tab="all"]');
+      if (allTab && !$('#tab-all').hidden) { e.preventDefault(); qInput.focus(); }
+    }
+  });
   if('serviceWorker' in navigator){try{await navigator.serviceWorker.register('sw.js');}catch{}}
   render();
   window.addEventListener('hashchange', () => openHash(false));
@@ -462,7 +599,7 @@ async function init() {
       if (d.open) { d.close(); delete d.dataset.cur; }
     }
   });
-  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); unlockScroll(); });
+  $('#detail').addEventListener('close', () => { delete $('#detail').dataset.cur; detailStack = []; clearSchemeUrl(); unlockScroll(); if (lastFocused && document.contains(lastFocused)) { lastFocused.focus(); lastFocused = null; } });
   // Android system-back fires `cancel` on an open modal <dialog> instead of
   // traversing history (no popstate). Give it back-navigation semantics when
   // we arrived from another scheme; otherwise let it close natively.
