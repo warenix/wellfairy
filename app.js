@@ -446,7 +446,7 @@ const passFilter = (b, f) => {
   if (f === 'all') return true;
   if (f === 'saved') return SAVED.has(b.id);
   if (f === 'hidden') return HIDDEN.has(b.id);
-  return b.category === f;
+  return b.category === f;  accessibilityStatement: ['Accessibility Statement', '無障礙聲明'],\n
 };
 
 function render() {
