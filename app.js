@@ -310,10 +310,19 @@ function card(b, opts={}) {
 
 function schemeIdFromHash() {
   const m = (location.hash || '').match(/^#\/s\/(.+)$/);
-  if (!m) return null;
-  let id = null;
-  try { id = decodeURIComponent(m[1]); } catch { return null; }
-  return BENEFITS.some(b => b.id === id) ? id : null;
+  if (m) {
+    try { const id = decodeURIComponent(m[1]); if (BENEFITS.some(b => b.id === id)) return id; } catch {}
+  }
+  return null;
+}
+
+// Canonical deep link is ?s=<id> (crawlable, shareable). #/s/<id> kept for backwards compat.
+function schemeIdFromUrl() {
+  try {
+    const q = new URLSearchParams(location.search).get('s');
+    if (q && BENEFITS.some(b => b.id === q)) return q;
+  } catch {}
+  return schemeIdFromHash();
 }
 
 function openDetail(id, push = true) {
@@ -343,14 +352,19 @@ function openDetail(id, push = true) {
   }
   d.dataset.cur = id;
   if (!d.open) { lockScroll(); d.showModal(); }
-  const url = '#/s/' + encodeURIComponent(id);
-  if (push && history.state?.schemeId !== id) {
-    history.pushState({schemeId:id}, '', url);
+  const canon = new URL(location.href);
+  canon.searchParams.set('s', id);
+  canon.hash = '';
+  if (push && new URLSearchParams(location.search).get('s') !== id) {
+    history.pushState({schemeId:id}, '', canon.pathname + canon.search);
   }
   $('#closeD').onclick = () => closeDetail();
   d.onclick = e => { if (e.target === d) closeDetail(); };
   $('#shareBtn').onclick = async e => {
-    const url = location.origin + location.pathname + '#/s/' + id;
+    const canon = new URL(location.href);
+    canon.searchParams.set('s', id);
+    canon.hash = '';
+    const url = canon.toString();
     const btn = e.currentTarget;
     try { await navigator.clipboard.writeText(url); }
     catch {
@@ -379,8 +393,10 @@ function unlockScroll() {
   window.scrollTo(0, savedY);
 }
 function clearSchemeUrl() {
-  if ((location.hash || '').startsWith('#/s/')) {
-    history.replaceState({schemeId:null}, '', location.pathname + location.search);
+  const hasQ = new URLSearchParams(location.search).has('s');
+  const hasH = (location.hash || '').startsWith('#/s/');
+  if (hasQ || hasH) {
+    history.replaceState({schemeId:null}, '', location.pathname);
   }
 }
 
@@ -397,9 +413,9 @@ function closeDetail(restoreFocus = true) {
 }
 
 function openHash(initial = false) {
-  const id = schemeIdFromHash();
+  const id = schemeIdFromUrl();
   if (id) { if ($('#detail').dataset.cur !== id) openDetail(id, !initial); }
-  else closeDetail();
+  else closeDetail(false);
 }
 
 function chips(el, list, cur, cb) {
@@ -590,7 +606,7 @@ async function init() {
   window.addEventListener('hashchange', () => openHash(false));
   // URL-driven back/forward: never trust e.state (unreliable on some mobile browsers).
   window.addEventListener('popstate', () => {
-    const sid = schemeIdFromHash();
+    const sid = schemeIdFromUrl();
     const d = $('#detail');
     if (sid) {
       if (d.dataset.cur !== sid) openDetail(sid, false);
@@ -606,6 +622,11 @@ async function init() {
   $('#detail').addEventListener('cancel', (e) => {
     if (detailStack.length) { e.preventDefault(); history.back(); }
   });
+  // Normalize legacy #/s/<id> links to canonical ?s=<id>
+  if ((location.hash || '').startsWith('#/s/')) {
+    const legacy = schemeIdFromHash();
+    if (legacy) history.replaceState({schemeId:legacy}, '', location.pathname + '?s=' + encodeURIComponent(legacy));
+  }
   openHash(true);
 }
 init();

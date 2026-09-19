@@ -1,6 +1,7 @@
-/* Offline-first SW. Bump CACHE to refresh. No external URLs cached. */
-const CACHE = 'hkbm-v84';
-const ASSETS = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './art.svg', './data/benefits.json', './icons/icon.svg'];
+/* Offline-first SW. Bump CACHE to refresh. No external URLs cached.
+ * Scheme pages (/s/*.html) are cached on demand (runtime), not precached. */
+const CACHE = 'hkbm-v85';
+const ASSETS = ['./', './index.html', './404.html', './styles.css', './app.js', './manifest.webmanifest', './robots.txt', './llms.txt', './sitemap.xml', './art.svg', './data/benefits.json', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });

@@ -1,12 +1,20 @@
 {
+  "id": "/wellfairy/",
   "name": "WellFairy 援助仙 — 福利配對",
   "short_name": "WellFairy",
-  "start_url": "./index.html",
+  "start_url": "/wellfairy/",
+  "scope": "/wellfairy/",
   "display": "standalone",
+  "dir": "ltr",
+  "lang": "zh-Hant-HK",
   "background_color": "#ece7fd",
-  "theme_color": "#967bb6",
-  "description": "Profile once, match HK gov schemes. Offline PWA, local JSON.",
+  "theme_color": "#4c1d95",
+  "description": "一次建立檔案，自動配對 200+ 項香港政府福利。Match 200+ HK gov welfare schemes in 2 minutes.",
+  "categories": ["lifestyle", "utilities", "government"],
   "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
     { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
 }

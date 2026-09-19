@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build SEO pages (sitemap, per-scheme pages, llms.txt)
+        run: node scripts/build-seo.mjs
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

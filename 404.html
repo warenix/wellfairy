@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-Hant-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>找不到頁面 Page not found｜WellFairy</title><meta name="robots" content="noindex">
+<script>
+(function () {
+  var base = '/wellfairy';
+  var path = location.pathname;
+  var m = path.match(/\/s\/([^/.]+)(\.html)?$/);
+  var q = new URLSearchParams(location.search).get('s');
+  var id = q || (m && m[1]);
+  if (id) location.replace(base + '/?s=' + encodeURIComponent(id));
+  else location.replace(base + '/');
+})();
+</script></head>
+<body><p><a href="/wellfairy/">返回 WellFairy Back to app</a></p></body></html>
