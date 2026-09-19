@@ -102,7 +102,10 @@ label small{font-weight:400;color:var(--mut)}
 input,select{padding:10px;border-radius:10px;border:2px solid #6f6a80;font-size:15px;width:100%;background:#fff;color:var(--ink);min-height:44px}
 input[type=range]{padding:0;accent-color:#5b21b6;height:44px;border:0}
 .check{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:8px;background:#f6f4fd;padding:10px;border-radius:12px;border:1px solid transparent}
-.check input{width:24px;height:24px;min-height:24px;accent-color:#4c1d95}
+.check input[type=checkbox]{width:24px;height:24px;min-height:24px;accent-color:#4c1d95}
+.check-range{grid-template-columns:1fr auto;row-gap:4px}
+.check-range input[type=range]{grid-column:1/-1;grid-row:2;width:100%;min-height:44px}
+.check-range .count{font-weight:800;color:var(--mut)}
 .btnrow{display:flex;gap:8px;flex-wrap:wrap}.big{flex:1;padding:12px;font-size:15px}
 .hint{font-size:12px;color:var(--mut)}code{background:#eee;padding:1px 5px;border-radius:6px}
 .steps{margin:8px 0 8px 18px;padding:0;font-size:14px;display:grid;gap:6px}

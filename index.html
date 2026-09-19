@@ -130,7 +130,7 @@
         <div class="frow"><label for="sex"><span data-i18n="fSex">性別 Sex</span><select name="sex" id="sex"><option value="female" selected data-i18n-opt="os_f">女 Female</option><option value="male" data-i18n-opt="os_m">男 Male</option></select></label>
         <label for="eduRank"><span data-i18n="fEdu">學歷 Education</span><select name="eduRank" id="eduRank"><option value="0" data-i18n-opt="oe_sec">中學或以下 Secondary-</option><option value="1" selected data-i18n-opt="oe_sub">副學位 Sub-degree</option><option value="2" data-i18n-opt="oe_deg">學位或以上 Degree+</option></select></label></div>
         <label class="check" for="hk_resident"><input type="checkbox" name="hk_resident" id="hk_resident" checked> <span data-i18n="fResident">香港居民 / 住滿3年</span></label>
-        <label class="check"><input type="range" name="hkYears" id="hkYears" min="0" max="7" step="1" value="7" aria-describedby="hkYearsOut"> <span data-i18n="fYears">居港年數 Years in HK</span> <span id="hkYearsOut" class="count" role="status" aria-live="polite">7年或以上</span></label>
+        <label class="check check-range"><span data-i18n="fYears">居港年數 Years in HK</span> <span id="hkYearsOut" class="count" role="status" aria-live="polite">7年或以上</span><input type="range" name="hkYears" id="hkYears" min="0" max="7" step="1" value="7" aria-describedby="hkYearsOut"></label>
         <label class="check" for="ehealth"><input type="checkbox" name="ehealth" id="ehealth"> <span data-i18n="fEhealth">已登記醫健通eHealth</span></label>
         <label class="check" for="married"><input type="checkbox" name="married" id="married" checked> <span data-i18n="fMarried">已婚/同居 Married/cohabiting</span> <small data-i18n="fMarriedHint">(夫婦限額)</small></label>
         </fieldset>
