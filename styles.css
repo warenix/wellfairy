@@ -5,14 +5,16 @@
 .skip-link:focus{top:12px;color:#000}
 :focus-visible{outline:3px solid var(--focus)!important;outline-offset:2px;border-radius:6px}
 @media (forced-colors:active){:focus-visible{outline:3px solid Highlight!important}}
+button,a,select,input[type=checkbox],input[type=radio],label.check{cursor:pointer}
+button:disabled{cursor:default}
 body{margin:0;font-family:system-ui,-apple-system,"Noto Sans HK","PingFang HK",Segoe UI,sans-serif;background:linear-gradient(180deg,var(--bg),var(--bg2));background-attachment:fixed;color:var(--ink);padding-bottom:40px}
 .topbar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:linear-gradient(135deg,#4c1d95,#5b21b6);color:#fff;backdrop-filter:blur(8px);border-radius:0 0 20px 20px;box-shadow:0 8px 24px #4c1d9555}
 .brand{display:flex;gap:10px;align-items:center}
 .brand strong{display:block;font-size:16px}.brand span{font-size:12px;opacity:1;color:#ede9fe}
 .topact{display:flex;gap:8px}
-.ghostbtn{border:2px solid #ffffffcc;background:transparent;color:#fff;border-radius:10px;padding:8px 10px;font-weight:700;min-height:44px;min-width:44px}
+.ghostbtn{border:2px solid #ffffffcc;background:transparent;color:#fff;border-radius:10px;padding:8px 10px;font-weight:700;min-height:44px;min-width:44px;cursor:pointer}
 .ghostbtn.dark{border:2px solid #4c1d95;background:#fff;color:#4c1d95;border-radius:12px;padding:10px 12px;font-size:14px;font-weight:800}
-.solidbtn{border:0;background:#fff;color:#26232e;border-radius:10px;padding:8px 12px;font-weight:800;min-height:44px;min-width:44px}
+.solidbtn{border:0;background:#fff;color:#26232e;border-radius:10px;padding:8px 12px;font-weight:800;min-height:44px;min-width:44px;cursor:pointer}
 .tabs{display:flex;gap:8px;padding:10px 12px;position:sticky;top:57px;z-index:4;}
 .tabs button{flex:1;border:2px solid transparent;background:#fff;border-radius:999px;padding:10px 4px;font-weight:800;color:var(--ink);font-size:14px;box-shadow:0 4px 14px #26232e22;min-height:44px}
 .tabs button.active{background:#5b21b6;color:#fff;border-color:#4c1d95}
@@ -48,7 +50,7 @@ main{max-width:780px;margin:0 auto;padding:2px 12px}
 .card.locked{border:2px dashed #c4b5fd;background:#faf9ff}
 .lockbar{background:#7e57c2;color:#fff;font-size:13px;font-weight:700;border-radius:12px;padding:8px 10px;margin-bottom:8px}
 .lockbar .more{opacity:.7;font-weight:400}
-.linkbtn{border:0;background:none;color:#4c1d95;font-weight:800;min-height:44px;min-width:44px;text-decoration:underline;text-underline-offset:3px}
+.linkbtn{border:0;background:none;color:#4c1d95;font-weight:800;min-height:44px;min-width:44px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .hscroll{display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,320px);gap:10px;overflow-x:auto;padding:4px 2px 10px;scroll-snap-type:x mandatory}
 .hscroll .card{scroll-snap-align:start}
 .grid{display:grid;gap:10px;margin:6px 0 18px}
@@ -67,7 +69,7 @@ main{max-width:780px;margin:0 auto;padding:2px 12px}
 .why{font-size:13px;color:var(--ink);background:#f6f4fd;border-radius:10px;padding:8px;margin-top:8px;border:1px dashed var(--line);overflow-wrap:anywhere;word-break:break-word}
 .srclink{word-break:break-all;overflow-wrap:anywhere;color:#4c1d95;display:inline-block;max-width:100%}
 .row{display:flex;gap:8px;margin-top:10px}
-.btn{flex:1;text-align:center;text-decoration:none;background:#5b21b6;color:#fff;padding:10px;border-radius:12px;font-size:14px;font-weight:800;border:2px solid #4c1d95;min-height:44px}
+.btn{flex:1;text-align:center;text-decoration:none;background:#5b21b6;color:#fff;padding:10px;border-radius:12px;font-size:14px;font-weight:800;border:2px solid #4c1d95;min-height:44px;cursor:pointer}
 .btn.ghost{background:#fff;color:#4c1d95;border:2px solid #4c1d95}
 .savebtn{border:2px solid var(--line);background:#fff;border-radius:10px;padding:10px;font-size:15px;min-height:44px;min-width:44px}
 .savebtn.on{background:#fef9c3;border-color:#854d0e}
