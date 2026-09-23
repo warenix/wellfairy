@@ -30,8 +30,11 @@ git status --porcelain
 
 ```bash
 node --check app.js
+node --check admin.js
 node --check scripts/build-seo.mjs
+node --check scripts/diff-benefits.mjs
 node -e "JSON.parse(require('fs').readFileSync('data/benefits.json','utf8'))"
+node -e "JSON.parse(require('fs').readFileSync('data/benefits.staging.json','utf8'))"
 ```
 
 Fix any error and re-run until all three pass. Do not continue on failure.

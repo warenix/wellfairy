@@ -12,7 +12,7 @@
 2. **One row per session:** never crawl two rows concurrently in the same session; spawn parallel sessions only on different rows.
 3. **Record scheme ids** in the row when done (e.g. `hkses-2627` + 10 more).
 4. **Verify URLs with curl** (browser UA, expect 200) before adding to catalog; never guess `_zh` twins — see `sources.md` §Bilingual quirks.
-5. **Ship:** `updated_at` on touched schemes, bump `sw.js` CACHE, `node --check app.js`, update this map + `sources.md`, commit + push.
+5. **Ship to staging, never live:** write new/updated schemes to `data/benefits.staging.json` ONLY — never touch `data/benefits.json` directly. Set `updated_at` on touched schemes, run `node scripts/diff-benefits.mjs` + `node --check admin.js`, update this map + `sources.md`, commit + push. Going live happens separately in `admin.html` review (approve → export live → `node scripts/build-seo.mjs` → bump `sw.js` CACHE → deploy).
 6. **New source?** Add a `Pxx` row to Pending Frontier first (no URL until verified), then promote to `Sxx` after first successful crawl.
 7. **Source URL hygiene:** Before finalizing any scheme, verify `source_url` points to a specific scheme page (not a root/homepage). Per `sources.md` §Bilingual quirks, use domain‑specific `/en/`↔`/tc/`, `/english/`↔`/tc_chi/`, or query‑string `?lang=tc` patterns. The 51 SWD‑root URLs were corrected from `www.swd.gov.hk/en/` to their specific scheme pages in this session.
 

@@ -5,7 +5,15 @@ Evolving schema — edit freely, app tolerates missing fields.
 
 ## Files
 
-- `data/benefits.json` — master catalog. Array of benefits. This is the ONLY file you edit to add schemes.
+- `data/benefits.json` — LIVE catalog. Array of benefits. This is what `app.js` and
+  `scripts/build-seo.mjs` read. Never edit by crawling — only by publishing from review.
+- `data/benefits.staging.json` — STAGING catalog. Crawlers write here. Same schema as
+  live. Going live requires review in `admin.html` first.
+- `admin.html` + `admin.js` — maintainer review queue (noindex, not linked from the app).
+  Loads live + staging, diffs per scheme (added / modified / removed), validates fields,
+  records approve/reject per scheme, allows inline JSON edits, and exports the new live file.
+- `scripts/diff-benefits.mjs` — terminal equivalent of the admin diff:
+  `node scripts/diff-benefits.mjs` (or `--json` for machine output).
 - User profile — stored in browser `localStorage` key `hkbm_profile_v1`. Export/import via UI as `profile.json` file. No server.
 
 ## benefits.json schema (v1)
@@ -63,8 +71,17 @@ Matcher logic (`app.js: matches()`):
   Future gates: POA school nets, DHC catchment, district NGO pilots.
 - Unknown future keys are ignored so schema can evolve.
 
-## How to add a scheme
+## How to add a scheme (reviewed flow)
 
-1. Append object to `data/benefits.json`
-2. Bump `sw.js CACHE` version so offline copy refreshes
-3. Reload. No build step.
+1. Crawler writes the new/updated object to `data/benefits.staging.json` only.
+2. Quick check: `node scripts/diff-benefits.mjs`
+3. Open `admin.html` (serve the repo root, e.g. `python3 -m http.server`), filter by
+   added/modified/removed, inspect the field diff, fix validation errors inline.
+4. Per scheme: **Approve** to ship it, **Reject** to keep live as-is.
+5. **Export live benefits.json** → overwrite `data/benefits.json`.
+6. `node scripts/build-seo.mjs` to rebuild scheme pages + sitemap + llms.txt.
+7. Bump `sw.js` CACHE version so offline copy refreshes.
+8. Reload. No other build step.
+
+Direct edits to `data/benefits.json` are reserved for hotfixes. Normal crawls must
+never touch it — unreviewed data going live is exactly what staging prevents.

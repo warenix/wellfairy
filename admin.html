@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WellFairy Admin — 內容審核 Content Review</title>
+<meta name="description" content="WellFairy maintainer-only review queue: compare staging vs live schemes before publishing.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="stylesheet" href="styles.css">
+<style>
+.admin-wrap{max-width:1060px;margin:0 auto;padding:2px 12px 120px}
+.toolbar{position:sticky;top:0;z-index:6;background:#16121f;color:#fff;border-radius:0 0 18px 18px;padding:10px 12px;display:grid;gap:8px;box-shadow:0 8px 24px #0006}
+.toolbar .row1{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.toolbar strong{font-size:15px}
+.statbar{display:flex;gap:8px;flex-wrap:wrap}
+.stat{background:#ffffff18;border:1px solid #ffffff33;border-radius:10px;padding:6px 10px;font-size:12px;font-weight:700}
+.stat b{font-size:15px;margin-right:4px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;background:#fff;border-radius:16px;padding:10px;margin:12px 0;box-shadow:0 10px 26px #26232e1a}
+.filters label{display:grid;gap:4px;font-size:12px;flex:1;min-width:140px}
+.filters input,.filters select{color:#26232e}
+.st-pill{font-size:11px;font-weight:800;border-radius:999px;padding:4px 10px;border:1px solid}
+.st-added{background:#dcfce7;color:#064e3b;border-color:#047857}
+.st-modified{background:#dbeafe;color:#1e40af;border-color:#2563eb}
+.st-removed{background:#ffe4e6;color:#881337;border-color:#9f1239}
+.st-unchanged{background:#f1f0f6;color:#59545f;border-color:#d6d2e3}
+.dec-approved{background:#064e3b;color:#fff;border-color:#064e3b}
+.dec-rejected{background:#881337;color:#fff;border-color:#881337}
+.adm-card{background:#fff;border-radius:18px;padding:14px;margin:10px 0;box-shadow:0 10px 26px #26232e1a;border:2px solid transparent}
+.adm-card.s-added{border-color:#047857}.adm-card.s-modified{border-color:#2563eb}.adm-card.s-removed{border-color:#9f1239}
+.adm-card .head{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap}
+.adm-card h3{margin:0;font-size:15px}
+.adm-card .id{font-family:monospace;font-size:12px;color:#59545f}
+.diff-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+.diff-table th,.diff-table td{text-align:left;padding:6px 8px;border-bottom:1px solid #e5e1f5;vertical-align:top;word-break:break-word}
+.diff-table th{color:#59545f;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.diff-table .before{color:#881337;background:#fff1f2;border-radius:8px}
+.diff-table .after{color:#064e3b;background:#ecfdf5;border-radius:8px}
+.val-err{background:#fff1f2;border:1px solid #9f1239;color:#881337;border-radius:10px;padding:8px;margin-top:8px;font-size:12px}
+.val-warn{background:#fffbeb;border:1px solid #b45309;color:#78350f;border-radius:10px;padding:8px;margin-top:8px;font-size:12px}
+.dec-row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.dec-row button{border-radius:10px;padding:8px 12px;font-weight:800;min-height:40px;cursor:pointer;border:2px solid #4c1d95}
+.btn-approve{background:#064e3b;border-color:#064e3b!important;color:#fff}
+.btn-reject{background:#fff;color:#881337;border-color:#9f1239!important}
+.btn-clear{background:#fff;color:#4c1d95}
+.btn-small{background:#fff;color:#26232e;border-color:#d6d2e3!important;font-weight:700}
+.dec-row button[aria-pressed="true"]{outline:3px solid #0033cc;outline-offset:2px}
+.publish{position:fixed;left:0;right:0;bottom:0;z-index:7;background:#16121fee;color:#fff;padding:10px 12px;backdrop-filter:blur(8px);border-top:2px solid #4c1d95}
+.publish .inner{max-width:1060px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.publish .btn{flex:0 1 auto}
+#editBox{width:100%;min-height:300px;font-family:monospace;font-size:12px}
+.empty{padding:24px;text-align:center;color:#59545f}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <div class="row1">
+    <strong>🧚 WellFairy Admin — 內容審核</strong>
+    <span class="hint" style="color:#ede9fe">staging → review → live．此頁 noindex，不對外連結。</span>
+  </div>
+  <div class="statbar" id="stats" role="status" aria-live="polite"></div>
+  <div class="row1">
+    <button class="ghostbtn" id="reloadBtn" type="button">↻ 重新載入</button>
+    <label class="ghostbtn" for="stageFile" style="display:inline-flex;align-items:center;cursor:pointer">⬆ 載入 staging 檔<input type="file" id="stageFile" accept="application/json" hidden></label>
+    <button class="ghostbtn" id="approveAllBtn" type="button">✓ 全部批准</button>
+    <button class="ghostbtn" id="rejectAllBtn" type="button">✗ 全部拒絕</button>
+    <button class="ghostbtn" id="clearBtn" type="button">↩ 清除決定</button>
+  </div>
+</div>
+
+<div class="admin-wrap">
+  <div class="sheet">
+    <h2 style="margin:0">審核流程 Review workflow</h2>
+    <ol class="steps">
+      <li>爬蟲只寫 <code>data/benefits.staging.json</code>，絕不直接改 <code>data/benefits.json</code>（live）。</li>
+      <li>在此頁逐項 <strong>批准 Approve</strong> / <strong>拒絕 Reject</strong>，可點「編輯」即場修正 JSON。</li>
+      <li>按底部 <strong>匯出 live</strong>，覆蓋 <code>data/benefits.json</code>，再跑 <code>node scripts/build-seo.mjs</code> + deploy。</li>
+      <li>終端快速檢查：<code>node scripts/diff-benefits.mjs</code></li>
+    </ol>
+    <p class="hint" id="srcInfo">載入中…</p>
+  </div>
+
+  <div class="filters">
+    <label>狀態 Status<select id="fStatus"><option value="all">全部</option><option value="added">新增 added</option><option value="modified">修改 modified</option><option value="removed">刪除 removed</option><option value="unchanged">無變動 unchanged</option></select></label>
+    <label>決定 Decision<select id="fDec"><option value="all">全部</option><option value="pending">待審 pending</option><option value="approved">已批准 approved</option><option value="rejected">已拒絕 rejected</option></select></label>
+    <label>類別 Category<select id="fCat"><option value="all">全部</option><option value="elderly">長者 elderly</option><option value="student">升學 student</option><option value="family">家庭 family</option><option value="health">健康 health</option><option value="transport">交通 transport</option><option value="housing">房屋 housing</option></select></label>
+    <label>搜尋 Search<input id="fQ" type="search" placeholder="id / 標題 title…"></label>
+  </div>
+
+  <div id="list"></div>
+</div>
+
+<div class="publish"><div class="inner">
+  <span id="pubSummary" role="status" aria-live="polite">…</span>
+  <span style="flex:1"></span>
+  <button class="btn" id="exportLiveBtn" type="button">⬇ 匯出 live benefits.json</button>
+  <button class="btn ghost" id="exportStageBtn" type="button" style="background:#fff">⬇ 匯出 staging（含編輯）</button>
+  <button class="btn ghost" id="copyMsgBtn" type="button" style="background:#fff">⧉ 複製 commit 訊息</button>
+</div></div>
+
+<dialog id="editDlg" aria-labelledby="editTitle">
+  <div class="detail">
+    <h3 id="editTitle">編輯 scheme</h3>
+    <p class="hint" id="editId"></p>
+    <label class="visually-hidden" for="editBox">Scheme JSON</label>
+    <textarea id="editBox" spellcheck="false"></textarea>
+    <p class="hint">存檔只保存在此瀏覽器（localStorage），匯出時才寫入檔案。Save stays in this browser until you export.</p>
+    <div class="actions">
+      <button class="btn" id="editSave" type="button">儲存 Save</button>
+      <button class="btn ghost" id="editCancel" type="button">取消 Cancel</button>
+    </div>
+    <p class="hint" id="editErr" role="alert"></p>
+  </div>
+</dialog>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,7 +1,9 @@
 /* Offline-first SW. Bump CACHE to refresh. No external URLs cached.
- * Scheme pages (/s/*.html) are cached on demand (runtime), not precached. */
+ * Scheme pages (/s/*.html) are cached on demand (runtime), not precached.
+ * admin.html is precached for the maintainer; benefits.staging.json is NOT
+ * precached on purpose — the review queue must always read it fresh. */
 const CACHE = 'hkbm-v98';
-const ASSETS = ['./', './index.html', './404.html', './styles.css', './app.js', './manifest.webmanifest', './robots.txt', './llms.txt', './sitemap.xml', './art.svg', './data/benefits.json', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png'];
+const ASSETS = ['./', './index.html', './admin.html', './404.html', './styles.css', './app.js', './admin.js', './manifest.webmanifest', './robots.txt', './llms.txt', './sitemap.xml', './art.svg', './data/benefits.json', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });

@@ -273,6 +273,19 @@ function audit(b, p) {
 }
 function matches(b, p) { return audit(b, p).length === 0; }
 const daysTo = d => { if(!d) return null; return Math.ceil((new Date(d+'T23:59:59+08:00')-Date.now())/86400000); };
+// Days since updated_at (HK timezone). Null when missing/invalid or dated in the future.
+const FRESH_DAYS = 30;
+const daysSinceUpdate = u => {
+  if (!u) return null;
+  const ms = Date.now() - new Date(u + 'T23:59:59+08:00').getTime();
+  if (Number.isNaN(ms) || ms < 0) return null;
+  return Math.floor(ms / 86400000);
+};
+const isFresh = b => { const s = daysSinceUpdate(b.updated_at); return s != null && s <= FRESH_DAYS; };
+function freshPill(b) {
+  if (!isFresh(b)) return '';
+  return `<span class="pill fresh">✨ ${t('Recently updated', '近期更新')}</span>`;
+}
 
 function deadlinePill(b) {
   const d = daysTo(b.deadline);
@@ -303,7 +316,7 @@ function card(b, opts={}) {
     ${opts.lock ? `<div class="lockbar"><span aria-hidden="true">🔒</span> ${esc(opts.lock)}${opts.more ? ` <span class="more">+${opts.more}</span>` : ''}</div>` : ''}
     <div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
     <div><h3>${esc(title)}</h3><div class="meta">${esc(t(cat.en,cat.zh))} · ${t('updated','更新')} ${esc(b.updated_at||'')}</div></div></div>
-    <div class="pills">${deadlinePill(b)}${lv}${wv}${decl}${conf}${ehp}<span class="pill">${esc((b.proof_needed_en||[]).length)}${t(' documents','份文件')}</span></div>
+    <div class="pills">${deadlinePill(b)}${freshPill(b)}${lv}${wv}${decl}${conf}${ehp}<span class="pill">${esc((b.proof_needed_en||[]).length)}${t(' documents','份文件')}</span></div>
     <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}</div>
     <div class="row"><button class="savebtn ${on}" data-save="${esc(b.id)}" type="button" aria-pressed="${isSaved ? 'true' : 'false'}" aria-label="${esc(saveLabel)}">${saveIcon}</button>
     <button class="hidebtn ${hidden}" data-hide="${esc(b.id)}" type="button" aria-pressed="${isHidden ? 'true' : 'false'}" aria-label="${esc(hideLabel)}" title="${esc(hideLabel)}">${hideIcon}</button>
@@ -339,7 +352,7 @@ function openDetail(id, push = true) {
   d.setAttribute('aria-label', title);
   d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
     <div><h3 id="detailTitle" tabindex="-1">${esc(title)}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
-    <div class="pills">${deadlinePill(b)}</div>
+    <div class="pills">${deadlinePill(b)}${freshPill(b)}</div>
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
     <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}<br><br><span aria-hidden="true">🧾</span> <strong>${t('Please bring','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please confirm before applying','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br><span aria-hidden="true">🔗</span> <strong>${t('Source','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
     ${relatedHtml}
