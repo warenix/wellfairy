@@ -4,7 +4,7 @@
 > - **Level 1 (BFS):** sweep across sources. When a new source is added, crawl its landing page to discover new schemes.
 > - **Level 2 (DFS):** deep-dive inside one source to enumerate sub-pages / sub-schemes.
 > - URL source of truth lives in `sources.md` (S01–S41). This map tracks **status**, not URLs — see `sources.md` for canonical links.
-> - Catalog: `data/benefits.json` (232 schemes, 2026-09-18). Schema: `data/schema.md`.
+> - Catalog: `data/benefits.json` (238 schemes, 2026-09-24). Schema: `data/schema.md`.
 
 ## Protocol (avoid overlap)
 
@@ -12,7 +12,7 @@
 2. **One row per session:** never crawl two rows concurrently in the same session; spawn parallel sessions only on different rows.
 3. **Record scheme ids** in the row when done (e.g. `hkses-2627` + 10 more).
 4. **Verify URLs with curl** (browser UA, expect 200) before adding to catalog; never guess `_zh` twins — see `sources.md` §Bilingual quirks.
-5. **Ship to staging, never live:** write new/updated schemes to `data/benefits.staging.json` ONLY — never touch `data/benefits.json` directly. Set `updated_at` on touched schemes, run `node scripts/diff-benefits.mjs` + `node --check admin.js`, update this map + `sources.md`, commit + push. Going live happens separately in `admin.html` review (approve → export live → `node scripts/build-seo.mjs` → bump `sw.js` CACHE → deploy).
+5. **Ship to staging, never live:** write new/updated schemes to `data/benefits.staging.json` ONLY — never touch `data/benefits.json` directly. Set `updated_at` on touched schemes, run `node scripts/review.mjs` (validates) + `node --check admin.js`, update this map + `sources.md`, commit + push. Going live happens separately via review (`review.mjs` approve → `publish.mjs` → deploy).
 6. **New source?** Add a `Pxx` row to Pending Frontier first (no URL until verified), then promote to `Sxx` after first successful crawl.
 7. **Source URL hygiene:** Before finalizing any scheme, verify `source_url` points to a specific scheme page (not a root/homepage). Per `sources.md` §Bilingual quirks, use domain‑specific `/en/`↔`/tc/`, `/english/`↔`/tc_chi/`, or query‑string `?lang=tc` patterns. The 51 SWD‑root URLs were corrected from `www.swd.gov.hk/en/` to their specific scheme pages in this session.
 
@@ -122,8 +122,11 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P26 | ImmD aid to distressed HK residents abroad (emergency loans?) | promoted to S49 (`imm-1868-assist` service; no cash loans found — referrals only) | done |
 | P27 | CSSA-to-WFA Pilot Scheme (3-yr, from Oct 2026) | SWD/CCF pilot: CSSA households transitioning to WFA, up to $45k cash incentive ($10k/15k/20k tiers), eligibility: leave CSSA on/after Oct 1 2026, 2 consecutive WFA approvals with 10+ claim months/12mo | in_progress (lightning) |
 | P28 | Youth Employment & Internship Programme (2-yr, from 2026) | New scheme: 18-30 HKPR, ≤60% market rent, $30k stipend over 2yr, jobs from business sector; aims to facilitate youth employment & development | in_progress (lightning) |
-| P07 | CCF new batches (standing) | SWD `ccf_current` page each cycle | recurring |
+| P07 | CCF new batches (standing) | SWD `ccf_current` page each cycle | recurring (checked 2026-09-23: 4 programmes all known, no new batch) |
 | P08 | HOS next sale exercise (standing) | websearch `HOS sale exercise Housing Authority` when rumored | in_progress (lightning) |
+| P29 | Budget 2026 one-month extra allowance (CSSA/OAA/OALA/DA + WFA one-off) | staged `budget-onemonth-2026` → approved + live 2026-09-24 | done |
+| P30 | HA GOPC PPP chronic-disease programme (co-care retry, was 429'd) | staged `ha-gopc-ppp` → approved + live 2026-09-24 | done |
+| P31 | Labour Dept Employees' Compensation Ordinance Cap.282 (work-injury/death statutory compensation) | staged `eco-work-injury` → approved + live 2026-09-24 (first review→publish pipeline test) | done |
 
 ## Expired / do-not-revive
 

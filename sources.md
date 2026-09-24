@@ -3,12 +3,12 @@
 > Machine-readable source catalog for the benefits engine.
 > Scheduling prompt (paste to your agent): "Read hk-benefits-pwa/sources.md and run a full refresh: link-check every URL, re-crawl each source per its instructions, update data/benefits.json (amounts, thresholds, deadlines, eligibility), refresh updated_at, verify zh twins, bump sw.js CACHE, report a diff."
 
-- Catalog: `data/benefits.json` (232 schemes, 2026-09-18)
+- Catalog: `data/benefits.json` (238 schemes, 2026-09-24)
 - Crawl map (BFS sources / DFS deep-dives / frontier): `crawl-map.md`
 - Schema: `data/schema.md`
 - Engine gates: `needs.*` in `app.js: audit()`
-- Last full verification: **2026-09-18** (232 schemes: 229 + 3 open-lead closes S50)
-- Last refresh run: **2026-09-17** — 4 crawl batches added 57 schemes (83 → 140) + 3 fixes (fare-2dollar wording, poa-2027 deadline 9-26→9-25, spd-job-matching new URL). Batches: S25–S27 (10) · S28–S30 (14) · S31–S33 (16) · S34–S36 (17). Details live in the sections below.
+- Last full verification: **2026-09-24** (238 schemes: P31 `eco-work-injury` crawled → reviewed → published via new pipeline, SEO rebuilt, sw.js v101; refresh sweep: link-health 375 URLs, deadline watchlist + CCF/HOS watches — no other changes)
+- Last refresh run: **2026-09-23** — link-health 376 URLs (19 non-2xx: 7 IRD moves fixed to gov.hk, SWD dental/respite + HYAB mediation fixed), deadline watchlist verified (musss-mainland closed 9-21, poa-2027 closes 9-25, dse 10-08→10-07, k1 11-28→11-30, hcv-reward extended to 2028-12-31, hcv cap $4k→$8k, RMP example $2,000→$1,840, CDSP Level 1-or-2, newborn twins/funding flags). 17 schemes touched, SEO rebuilt, sw.js v99. Previous: **2026-09-17** — 4 crawl batches added 57 schemes (83 → 140) + 3 fixes (fare-2dollar wording, poa-2027 deadline 9-26→9-25, spd-job-matching new URL). Batches: S25–S27 (10) · S28–S30 (14) · S31–S33 (16) · S34–S36 (17). Details live in the sections below.
 - Editorial update **2026-09-17** (no re-crawl): added §Deadline watchlist, §Bilingual quirks table, cross-pointers in S04/S05/S06/S10–S13/S16/S20/S22/S24, open queries (EPEM retention line, CDSP Level-1-vs-2, K1 28-Nov provisional), expanded Expired list. Verification dates unchanged.
 
 ## Refresh workflow (for the agent)
@@ -17,7 +17,7 @@
 2. **Re-crawl each source below** at its cadence; extract into the listed fields.
 3. **Diff against catalog:** only change `value_*`, `deadline`, `needs`, `proof_needed_*`, `confirm_*` when the source actually changed. Never invent numbers — every figure needs a source line.
 4. **Bilingual:** any new/changed EN URL gets a `_zh` twin (see §Bilingual quirks table for per-site patterns — there is no single rule). Curl-verify 200 before adding. EN-only exceptions on record: Rehabus site, info.gov.hk press releases (TC via toggle with sometimes-different IDs), cspe.edu.hk (unreachable from crawler), cmhhk.org (unreachable), studyinhongkong.edu.hk (no TC tree), hkic.edu.hk (no TC tree).
-5. **Stamp + ship:** set `updated_at` (YYYY-MM-DD) on touched schemes, bump `CACHE` in `sw.js`, `node --check app.js`, report a diff table (scheme → field → old → new → source).
+5. **Stamp + ship:** set `updated_at` (YYYY-MM-DD) on touched schemes, bump `CACHE` in `sw.js`, `node --check app.js`, report a diff table (scheme → field → old → new → source). Going live is a separate gated step: `review.mjs` approve → `publish.mjs` → deploy.
 
 ## Global crawl rules
 

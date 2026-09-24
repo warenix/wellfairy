@@ -4,11 +4,11 @@
     "title_en": "Elderly Health Care Voucher Scheme $2,000/yr",
     "title_zh": "長者醫療券計劃 $2,000/年",
     "category": "elderly",
-    "value_summary_en": "$2,000/yr, cap $4,000. +$500 reward if $1,000 spent on designated PHC in same year.",
-    "value_summary_zh": "每年$2,000，上限$4,000。同年指定基層醫療用滿$1,000再賞$500。",
+    "value_summary_en": "$2,000/yr, cap $8,000. +$500 reward if $1,000 spent on designated PHC in same year.",
+    "value_summary_zh": "每年$2,000，上限$8,000。同年指定基層醫療用滿$1,000再賞$500。",
     "deadline": null,
     "source_url": "https://www.hcv.gov.hk/en/hcvs/background.html",
-    "updated_at": "2026-09-16",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "HKID",
       "Electronic Health System (eHealth) consent"
@@ -30,14 +30,14 @@
   },
   {
     "id": "hcv-reward-2026",
-    "title_en": "HCV Pilot Reward Scheme $500 (2026)",
-    "title_zh": "長者醫療券獎賞先導計劃 $500 (2026)",
+    "title_en": "HCV Pilot Reward Scheme $500/yr (2024-2028)",
+    "title_zh": "長者醫療券獎賞先導計劃 $500/年 (2024-2028)",
     "category": "elderly",
-    "value_summary_en": "Spend $1,000 on designated PHC in 2026 → $500 reward, use by end 2027.",
-    "value_summary_zh": "2026年內指定基層醫療用滿$1,000 → 賞$500，2027年底前用。",
-    "deadline": "2026-12-31",
+    "value_summary_en": "Spend $1,000 on designated PHC each year 2026/2027/2028 → $500 reward, usable to end of following year. Max once/yr; $2,500 max over 2024-2028.",
+    "value_summary_zh": "2026／2027／2028每年指定基層醫療用滿$1,000 → 賞$500，翌年底前可用。每年一次；2024-2028最多$2,500。",
+    "deadline": "2028-12-31",
     "source_url": "https://www.hcv.gov.hk/en/use_of_vouchers/pilot_reward_scheme.html",
-    "updated_at": "2026-09-16",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "HCV account with $1,000 PHC spend"
     ],
@@ -46,8 +46,8 @@
       "min_age": 65,
       "hk_resident": true
     },
-    "why_en": "Same as HCV, plus 2026 spend window.",
-    "why_zh": "同醫療券資格，並在2026年有用券。",
+    "why_en": "Same as HCV, plus yearly spend window (extended to end-2028).",
+    "why_zh": "同醫療券資格，並在該年有用券（已延至2028年底）。",
     "proof_needed_zh": [
       "醫療券戶口同年指定基層醫療用滿$1,000"
     ],
@@ -1168,11 +1168,11 @@
     "title_en": "Community Dental Support (CDSP, any age)",
     "title_zh": "社區牙科支援計劃 (任何年齡)",
     "category": "health",
-    "value_summary_en": "Replaces CCF dental (ended Jan 2026). Subsidised checkup/scale/extract/fill/X-ray/root canal. Admin fee waived for 75+ OALA, Level-1 home care, full-waiver holders. Hotline 2111 3403.",
-    "value_summary_zh": "取代關愛基金長者牙科服務資助(2026年1月停)。資助洗牙補牙杜牙根等。75歲+長者生活津貼/一級家居照顧/全免醫療費用者免行政費。熱線2111 3403。",
+    "value_summary_en": "Replaces CCF dental (ended Jan 2026). Subsidised checkup/scale/extract/fill/X-ray/root canal. Admin fee waived for 75+ OALA, Level-1 or Level-2 home care, full-waiver holders. Hotline 2111 3403.",
+    "value_summary_zh": "取代關愛基金長者牙科服務資助(2026年1月停)。資助洗牙補牙杜牙根等。75歲+長者生活津貼/一級或二級家居照顧/全免醫療費用者免行政費。熱線2111 3403。",
     "deadline": null,
     "source_url": "https://www.communitydental.gov.hk/en/cdsp/public/faq.html",
-    "updated_at": "2026-09-16",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "HKID",
       "OALA 3-mo bank proof / waiver cert",
@@ -1184,11 +1184,11 @@
       "oala_or_waiver": true
     },
     "confirm_en": [
-      "OALA recipient / CCSV co-pay II / Level-1 home care / HA fee waiver / referred homeless",
+      "OALA recipient / CCSV co-pay II / Level-1 or Level-2 home care / HA fee waiver / referred homeless",
       "Registered in eHealth"
     ],
     "confirm_zh": [
-      "長者生活津貼/社區照顧服務券第二級/一級家居照顧/醫療費用減免/轉介露宿者",
+      "長者生活津貼/社區照顧服務券第二級/一級或二級家居照顧/醫療費用減免/轉介露宿者",
       "已登記醫健通eHealth"
     ],
     "why_en": "You hold OALA or a fee waiver — dental covered.",
@@ -1539,10 +1539,10 @@
     "category": "student",
     "value_summary_en": "No RC/AP = no Scheme-KG K1 place. RC brings subsidy, AP pays full fee. Apply Sep–Nov, 6–8 weeks processing, e-RC QR for Jan Centralised Registration.",
     "value_summary_zh": "無註冊證入唔到資助幼稚園K1。註冊證有資助，許可證交全費。9–11月申請，6–8星期處理，電子證QR碼1月統一註冊用。",
-    "deadline": "2026-11-28",
+    "deadline": "2026-11-30",
     "source_url": "https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/kindergarten-k1-admission-arrangements/2728_admission_arrangements.html",
     "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/preprimary-kindergarten/kindergarten-k1-admission-arrangements/2728_admission_arrangements.html",
-    "updated_at": "2026-09-16",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "Child birth cert + residence proof",
       "Parent HKID",
@@ -1561,12 +1561,12 @@
     },
     "confirm_en": [
       "Child born on/before 31 Dec 2024 for 27/28 K1",
-      "Apply by 28 Nov for Jan Centralised Registration",
+      "Apply by 30 Nov for Jan Centralised Registration (7-9 Jan 2027)",
       "Student-visa holders ineligible"
     ],
     "confirm_zh": [
       "27/28年度K1須2024年12月31日或之前出生",
-      "11月28日前申請趕及1月統一註冊",
+      "11月30日前申請趕及1月統一註冊（2027年1月7-9日）",
       "學生簽證不合資格"
     ],
     "why_en": "Toddler at home — the Sep–Nov window is open now.",
@@ -2779,11 +2779,11 @@
     "title_en": "HKDSE Exam Fee Remission (Full = free, Half = 50%)",
     "title_zh": "文憑試考試費減免（全免／半免）",
     "category": "student",
-    "value_summary_en": "S6 first-time school candidates with SFO Full/Half: fees free or halved ($777 languages, $519 others). School applies Sep-Oct; late = pay first, refund later.",
-    "value_summary_zh": "中六首次應考＋資助全額／半額：考試費全免或半價（語文$777，其他$519）。經學校9-10月申請；遲申請先付後退。",
-    "deadline": "2026-10-08",
-    "source_url": "https://www.hkeaa.edu.hk/DocLibrary/Circulars/HKDSE/HKDSE_Examination_Circular_No_3_Applications_for_Examination_Fee_Remission_in_HKDSE_E.pdf",
-    "updated_at": "2026-09-16",
+    "value_summary_en": "S6 first-time school candidates with SFO Full/Half: fees free or halved ($777 languages, $519 others). School applies 11 Sep-7 Oct via HKEAA system; late = pay first, refund later.",
+    "value_summary_zh": "中六首次應考＋資助全額／半額：考試費全免或半價（語文$777，其他$519）。經學校9月11日至10月7日申請；遲申請先付後退。",
+    "deadline": "2026-10-07",
+    "source_url": "https://www.hkeaa.edu.hk/DocLibrary/Circulars/HKDSE/HKDSE_2026_2027_Examination_Circular_No_3_Applications_for_Examination_Fee_Remission_in_HKDSE_E.pdf",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "S6 first-time school candidate",
       "SFO Full/Half EC"
@@ -2792,7 +2792,7 @@
       "中六首次應考",
       "資助全額／半額資格證明"
     ],
-    "apply_link": "https://www.hkeaa.edu.hk/DocLibrary/Circulars/HKDSE/HKDSE_Examination_Circular_No_3_Applications_for_Examination_Fee_Remission_in_HKDSE_E.pdf",
+    "apply_link": "https://www.hkeaa.edu.hk/DocLibrary/Circulars/HKDSE/HKDSE_2026_2027_Examination_Circular_No_3_Applications_for_Examination_Fee_Remission_in_HKDSE_E.pdf",
     "needs": {
       "hk_resident": true,
       "has_kids_level": [
@@ -3328,15 +3328,15 @@
   },
   {
     "id": "newborn-bonus-20k",
-    "title_en": "Newborn Baby Bonus $20,000 (births to 24 Oct 2026!)",
-    "title_zh": "新生嬰兒獎勵金$20,000（2026年10月24日前出生！）",
+    "title_en": "Newborn Baby Bonus $20,000/$30,000 (births to 24 Oct 2029)",
+    "title_zh": "新生嬰兒獎勵金$20,000／$30,000（2029年10月24日前出生）",
     "category": "family",
-    "value_summary_en": "$20,000 per baby (first child); $30,000 for second and subsequent children, born on or after 16 Sep 2026. 3-year extension from 16 Sep 2026. Apply at birth registration within 42 days.",
-    "value_summary_zh": "首子$20,000；次子$30,000，2026年9月16日或之後出生。16年9月16日起延續3年。出生登記後42天內申請。",
+    "value_summary_en": "$20,000 per baby (first child); $30,000 for second and subsequent children born 16 Sep 2026-24 Oct 2029. Apply at birth registration within 42 days (late within 6 calendar months).",
+    "value_summary_zh": "首子$20,000；2026年9月16日至2029年10月24日出生次子或以上$30,000。出生登記後42天內申請（遲交6個月內補交）。",
     "deadline": "2029-10-24",
     "source_url": "https://www.cso.gov.hk/newbornbabybonus/eng/index.htm",
-    "source_url_zh": "https://www.cso.gov.hk/newbornbabybonus/eng/index.htm",
-    "updated_at": "2026-09-18",
+    "source_url_zh": "https://www.cso.gov.hk/newbornbabybonus/chi/index.htm",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "HKID",
       "Birth certificate",
@@ -3354,15 +3354,17 @@
       "has_kids_any": true
     },
     "confirm_en": [
-      "Twins = $40,000 (per baby)",
+      "Twins: $50,000 if first HK birth, $60,000 if elder HK sibling exists",
+      "$30k tier + extension pending LegCo Finance Committee funding approval",
       "Hotline 2810 3568"
     ],
     "confirm_zh": [
-      "孖胎＝$40,000（按嬰計）",
+      "孖胎：首次在港出生$50,000；已有兄姊在港出生$60,000",
+      "$30,000層級及延期待立法會財委會撥款批准",
       "熱線2810 3568"
     ],
-    "why_en": "You have given birth in Hong Kong on or after 16 September 2026, or your second+ child was born on or after that date. The ,000 newborn bonus has been extended for 3 years; second+ children receive ,000.",
-    "why_zh": "你在2026年9月16日或之後在香港生產，或你的二胎或以上於同日或之後出生。,000新生兒獎金已延長3年；二胎或以上子女獲發,000。"
+    "why_en": "You gave birth in Hong Kong with the baby born 16 Sep 2026-24 Oct 2029 ($20,000 first child; $30,000 second+).",
+    "why_zh": "你在2026年9月16日至2029年10月24日在香港生產（首子$20,000；二胎或以上$30,000）。"
   },
   {
     "id": "ccf-clr",
@@ -3742,16 +3744,16 @@
     "value_summary_en": "TVC to MPF + qualifying deferred annuity premiums: combined $60k/yr off (TVC first, QDAP second). Claim in BIR60 yearly.",
     "value_summary_zh": "強積金可扣稅自願供款＋合資格延期年金保費：合共每年減$60k（先TVC後年金）。每年BIR60申索。",
     "deadline": null,
-    "source_url": "https://www.ird.gov.hk/eng/tax/annuity.htm",
-    "source_url_zh": "https://www.ird.gov.hk/chi/tax/annuity.htm",
-    "updated_at": "2026-09-17",
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/annuity.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/annuity.htm",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "TVC account (MPFSO) / QDAP policy (self/spouse)"
     ],
     "proof_needed_zh": [
       "可扣稅強積金戶口／合資格年金（自己／配偶）"
     ],
-    "apply_link": "https://www.ird.gov.hk/eng/tax/annuity.htm",
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/annuity.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/annuity.htm",
     "needs": {
       "hk_resident": true
@@ -3773,9 +3775,9 @@
     "value_summary_en": "Paying a licensed HK care home for a 60+ (or DA-eligible) parent/grandparent: deduct up to $110,000/yr from 2026/27 ($100k before). One claimant per dependant; replaces parent allowance.",
     "value_summary_zh": "為60歲+（或合傷殘津貼）父母／祖父母付持牌安老院費：2026/27起每年扣高達$110,000（之前$100k）。每名受養人只限一人申索；取代父母免稅額。",
     "deadline": null,
-    "source_url": "https://www.ird.gov.hk/eng/tax/elderly.htm",
-    "source_url_zh": "https://www.ird.gov.hk/chi/tax/elderly.htm",
-    "updated_at": "2026-09-17",
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/elderly.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/elderly.htm",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "Parent/grandparent 60+ (or DA-eligible)",
       "Licensed HK RCHE/RCHD/nursing home receipts"
@@ -3784,7 +3786,7 @@
       "父母／祖父母60歲+（或合傷殘津貼）",
       "持牌安老／殘疾院舍／護養院單據"
     ],
-    "apply_link": "https://www.ird.gov.hk/eng/tax/elderly.htm",
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/elderly.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/elderly.htm",
     "needs": {
       "hk_resident": true,
@@ -3809,16 +3811,16 @@
     "value_summary_en": "If you yourself are DA-eligible (certified severely disabled, SWD): $75,000/yr off your salaries tax on top of dependant allowances. Claim in BIR60 yearly.",
     "value_summary_zh": "本人符合傷殘津貼（社署認證重度殘疾）：薪俸稅每年減$75,000，受養人免稅額以外另計。每年BIR60申索。",
     "deadline": null,
-    "source_url": "https://www.ird.gov.hk/eng/tax/7years.htm",
-    "source_url_zh": "https://www.ird.gov.hk/chi/tax/7years.htm",
-    "updated_at": "2026-09-17",
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "DA-eligible (SWD certified)"
     ],
     "proof_needed_zh": [
       "符合傷殘津貼（社署認證）"
     ],
-    "apply_link": "https://www.ird.gov.hk/eng/tax/7years.htm",
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm",
     "needs": {
       "hk_resident": true,
@@ -5192,24 +5194,25 @@
     "value_summary_en": "Support for eligible persons under Dental Treatment Voucher for Elderly",
     "value_summary_zh": "長者牙科治療券資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_dental/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
+    "source_url": "https://www.communitydental.gov.hk/en/odcp/faq.html",
+    "updated_at": "2026-09-23",
+    "proof_needed_en": [
+      "HKID",
+      "Aged 60+"
+    ],
+    "apply_link": "https://www.communitydental.gov.hk/en/odcp/faq.html",
+    "needs": {
       "hk_resident": true,
       "min_age": 60
-    },
-    "apply_link": "https://www.swd.gov.hk/en/",
-    "needs": {
-      "hk_resident": true
     },
     "why_en": "Eligible for Dental Treatment Voucher for Elderly",
     "why_zh": "符合長者牙科治療券資格",
     "proof_needed_zh": [
       "香港居民",
-      "年齡最低"
+      "年滿60歲"
     ],
-    "source_url_zh": "https://www.swd.gov.hk/tc/",
-    "apply_link_zh": "https://www.swd.gov.hk/tc/"
+    "source_url_zh": "https://www.communitydental.gov.hk/tc/odcp/faq.html",
+    "apply_link_zh": "https://www.communitydental.gov.hk/tc/odcp/faq.html"
   },
   {
     "id": "child-development-fund",
@@ -5828,13 +5831,13 @@
     "value_summary_en": "Support for eligible persons under Respite Service for Elderly Carers",
     "value_summary_zh": "長者喘息服務資格人士支援",
     "deadline": null,
-    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/respireservice/",
-    "updated_at": "2026-09-18",
+    "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/respiteser/",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "Aged 60+",
       "Carer temporarily away or ill"
     ],
-    "apply_link": "https://www.swd.gov.hk/en/",
+    "apply_link": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/respiteser/",
     "needs": {
       "hk_resident": true
     },
@@ -5844,8 +5847,8 @@
       "年滿60歲",
       "照顧者暫時離開或病倒"
     ],
-    "source_url_zh": "https://www.swd.gov.hk/tc/",
-    "apply_link_zh": "https://www.swd.gov.hk/tc/"
+    "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_careersupp/drrr/respiteser/",
+    "apply_link_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_careersupp/drrr/respiteser/"
   },
   {
     "id": "carer-support-allowance",
@@ -6576,13 +6579,13 @@
     "value_summary_en": "Deduct tuition + exam fees up to $100,000/yr for prescribed employment-related courses. Claim net of employer/CEF reimbursement in the year paid.",
     "value_summary_zh": "與工作相關的認可課程學費＋考試費，每年高達$100,000。扣除僱主／持續進修基金發還後按實付年份申索。",
     "deadline": null,
-    "source_url": "https://www.ird.gov.hk/eng/tax/rpl.htm",
-    "updated_at": "2026-09-18",
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "Fee receipts for prescribed course linked to current/planned employment",
       "Net amount after CEF/employer reimbursement"
     ],
-    "apply_link": "https://www.ird.gov.hk/eng/tax/rpl.htm",
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
     "needs": {
       "hk_resident": true
     },
@@ -6592,7 +6595,7 @@
       "認可課程收據（與現職／計劃工作相關）",
       "扣除持續進修基金／僱主發還後淨額"
     ],
-    "source_url_zh": "https://www.ird.gov.hk/chi/tax/rpl.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/selfeducation.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/selfeducation.htm"
   },
   {
@@ -7021,13 +7024,13 @@
     "value_summary_en": "Cash donations to s88 charities or Govt: deduct aggregate ≥$100 up to 35% of (income − expenses − depreciation). Spouse's unused balance transferable; personal-assessment pooling allowed. Claim on BIR60.",
     "value_summary_zh": "現金捐予s88慈善團體或政府：總額滿$100可扣，高達（入息−開支−折舊）35%。配偶未用餘額可轉；個人入息課稅可合併。BIR60申索。",
     "deadline": null,
-    "source_url": "https://www.ird.gov.hk/eng/tax/charity.htm",
-    "updated_at": "2026-09-18",
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "Donation receipts from s88 charity / Government",
       "Aggregate ≥$100 in the year"
     ],
-    "apply_link": "https://www.ird.gov.hk/eng/tax/charity.htm",
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
     "needs": {
       "hk_resident": true
     },
@@ -7037,7 +7040,7 @@
       "s88團體／政府捐款收據",
       "全年合計滿$100"
     ],
-    "source_url_zh": "https://www.ird.gov.hk/chi/tax/charity.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/approveddonation.htm",
     "confirm_en": [
       "Money donations only — raffle/admission tickets excluded",
@@ -7110,13 +7113,13 @@
     "value_summary_en": "Deduct mandatory MPF/ORSO contributions up to $18,000/yr under salaries tax. Automatic via employer; check your BIR60.",
     "value_summary_zh": "薪俸稅扣除強制強積金／認可職業退休供款，高達每年$18,000。僱主代供，核對BIR60。",
     "deadline": null,
-    "source_url": "https://www.ird.gov.hk/eng/tax/mpf.htm",
-    "updated_at": "2026-09-18",
+    "source_url": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/mpf.htm",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "Employee MPF/ORSO mandatory contributions",
       "Contribution records"
     ],
-    "apply_link": "https://www.ird.gov.hk/eng/tax/mpf.htm",
+    "apply_link": "https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/mpf.htm",
     "needs": {
       "hk_resident": true
     },
@@ -7126,7 +7129,7 @@
       "僱員強積金／認可退休供款",
       "供款紀錄"
     ],
-    "source_url_zh": "https://www.ird.gov.hk/chi/tax/mpf.htm",
+    "source_url_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/mpf.htm",
     "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/mpf.htm"
   },
   {
@@ -7597,13 +7600,13 @@
     "value_summary_en": "Tenants deduct domestic rent up to $100,000/yr under salaries tax (same family as HLI $100k + $20k child extra — see ird-hli). Claim on BIR60 with tenancy proof.",
     "value_summary_zh": "租客薪俸稅扣除住宅租金高達每年$100,000（同系：按息$100k＋新生子女額外$20k，見ird-hli）。BIR60憑租約申索。",
     "deadline": null,
-    "source_url": "https://www.ird.gov.hk/eng/tax/rental.htm",
-    "updated_at": "2026-09-18",
+    "source_url": "https://www.ird.gov.hk/eng/tax/drd.htm",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "Tenant of domestic premises (not owner/associated)",
       "Stamped tenancy agreement + rent receipts"
     ],
-    "apply_link": "https://www.ird.gov.hk/eng/tax/rental.htm",
+    "apply_link": "https://www.ird.gov.hk/eng/tax/drd.htm",
     "needs": {
       "hk_resident": true
     },
@@ -7613,8 +7616,8 @@
       "住宅租客（非業主／關聯人士）",
       "已打釐印租約＋租金收據"
     ],
-    "source_url_zh": "https://www.ird.gov.hk/chi/tax/rental.htm",
-    "apply_link_zh": "https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/drd.htm",
+    "apply_link_zh": "https://www.ird.gov.hk/chi/tax/drd.htm",
     "confirm_en": [
       "Figures per IRD pam61 table; child-extra tier mirrors HLI — confirm on BIR60 notes",
       "Cannot claim if employer reimburses rent"
@@ -7894,11 +7897,11 @@
     "title_en": "Reverse Mortgage on Flat (55+, monthly payouts for life)",
     "title_zh": "安老按揭（55歲+，終身月收）",
     "category": "elderly",
-    "value_summary_en": "55+ (60+ for unpaid-premium subsidised flats): pledge HK home (≤50yrs, unrented) for monthly payouts 10/15/20yr or life — e.g. age 60 life $2,000 per $1m value (floating); specified value cap $25m. No lifetime repayment; 2026 fixed-rate 4%/30yr +5% payouts.",
-    "value_summary_zh": "55歲+（未補價資助出售單位60歲+）：以香港住宅（樓齡≤50年、自住）作押，月收10／15／20年或終身 — 如60歲終身每$100萬$2,000（浮息）；指定價值上限$2,500萬。生前免還；2026定息4%三十年＋加5%。",
+    "value_summary_en": "55+ (60+ for unpaid-premium subsidised flats): pledge HK home (≤50yrs, unrented) for monthly payouts 10/15/20yr or life — e.g. age 60 life $1,840 per $1m value (floating, 1 borrower); specified value cap $25m. No lifetime repayment; 2026 fixed-rate 4%/30yr +5% payouts.",
+    "value_summary_zh": "55歲+（未補價資助出售單位60歲+）：以香港住宅（樓齡≤50年、自住）作押，月收10／15／20年或終身 — 如60歲終身每$100萬$1,840（浮息、單借款人）；指定價值上限$2,500萬。生前免還；2026定息4%三十年＋加5%。",
     "deadline": null,
     "source_url": "https://www.hkmc.com.hk/eng/our_business/reverse_mortgage_programme.html",
-    "updated_at": "2026-09-18",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "Age 55+ (60+ unpaid-premium subsidised flat), HKID, not bankrupt",
       "Sole-owned HK residential property, ≤50yrs, unrented (consent rules for subsidised)",
@@ -7920,11 +7923,13 @@
     "apply_link_zh": "https://www.hkmc.com.hk/chi/our_business/reverse_mortgage_programme.html",
     "confirm_en": [
       "Property < $8m counts 100%; above: $8m + 50% of excess (cap $25m)",
-      "Lump sums allowed (reduce later monthlies); renting out needs retired/care-move + consent"
+      "Lump sums allowed (reduce later monthlies); renting out needs retired/care-move + consent",
+      "Green Promotion 17 Mar-31 Dec 2026 — check expiry"
     ],
     "confirm_zh": [
       "$800萬下計足；超出：$800萬＋超額一半（上限$2,500萬）",
-      "可一筆提取（扣減其後月收）；出租須退休／護理搬遷＋批准"
+      "可一筆提取（扣減其後月收）；出租須退休／護理搬遷＋批准",
+      "綠色推廣2026年3月17日至12月31日 — 注意屆滿"
     ]
   },
   {
@@ -7935,13 +7940,13 @@
     "value_summary_en": "Free mediation services on maintenance for eligible persons via Community Care Fund; no application fee",
     "value_summary_zh": "透過關愛基金提供免費調解維修服務，合資格人士無需繳費",
     "deadline": "2027-10-31",
-    "source_url": "https://www.hyab.gov.hk/en/story/2024091920185069798.html",
-    "updated_at": "2026-09-18",
+    "source_url": "https://www.familyandwomen.gov.hk/en/story/2024091920185069798.html",
+    "updated_at": "2026-09-23",
     "proof_needed_en": [
       "HKID",
       "Income proof for low-income assessment"
     ],
-    "apply_link": "https://www.hyab.gov.hk/en/story/2024091920185069798.html",
+    "apply_link": "https://www.familyandwomen.gov.hk/en/story/2024091920185069798.html",
     "needs": {
       "hk_resident": true,
       "low_income": true,
@@ -7953,8 +7958,8 @@
       "香港身份證",
       "入息證明文件"
     ],
-    "source_url_zh": "https://www.hyab.gov.hk/zh/story/2024091920185069798.html",
-    "apply_link_zh": "https://www.hyab.gov.hk/zh/story/2024091920185069798.html",
+    "source_url_zh": "https://www.familyandwomen.gov.hk/tc/story/2024091920185069798.html",
+    "apply_link_zh": "https://www.familyandwomen.gov.hk/tc/story/2024091920185069798.html",
     "needs_ehealth": false
   },
   {
@@ -8020,5 +8025,137 @@
     "source_url_zh": "https://www.itf.gov.hk/tc/funding-programmes/supporting-research/ess/",
     "apply_link_zh": "https://www.itf.gov.hk/tc/funding-programmes/supporting-research/ess/",
     "needs_ehealth": false
+  },
+  {
+    "id": "ha-gopc-ppp",
+    "title_en": "HA GOPC PPP (stable chronic patients: 10 subsidised private visits/yr)",
+    "title_zh": "普通科門診公私營協作計劃（病情穩定病人：每年10次資助私家診症）",
+    "category": "health",
+    "value_summary_en": "Stable HA clinic patients invited to see a chosen private doctor: up to 10 subsidised visits/yr (chronic + episodic care, drugs dispensed at the clinic, referred labs/X-ray). Pay HA FMC rates: $150/visit + $5 per programme drug item (4 weeks); basic labs free. Invitation only; ends 2028 with transition to CDCC.",
+    "value_summary_zh": "病情穩定的醫管局門診病人獲邀轉看自選私家醫生：每年最多10次資助診症（慢性＋偶發疾病，診所即時配藥，轉介化驗/X光），收費與醫管局家庭醫學診所相同：$150/次＋每種計劃藥物$5（4星期）；基礎化驗免費。只限獲邀參加；計劃預計2028年結束並過渡至慢病共治計劃。",
+    "deadline": null,
+    "source_url": "https://www4.ha.org.hk/ppp/en/ppp-programmes/gopcppp/programme-intro",
+    "source_url_zh": "https://www4.ha.org.hk/ppp/ppp-programmes/gopcppp/programme-intro",
+    "updated_at": "2026-09-23",
+    "proof_needed_en": [
+      "HKID (carry to each private-doctor visit)",
+      "HA invitation (attending HA FMC/SOPC ≥12 months, clinically stable)",
+      "eHealth enrolment (mandatory)"
+    ],
+    "proof_needed_zh": [
+      "香港身份證（每次求診攜帶）",
+      "醫管局邀請（於家庭醫學/專科門診覆診≥12個月、病情穩定）",
+      "醫健通登記（必須）"
+    ],
+    "apply_link": "https://www4.ha.org.hk/ppp/en/ppp-programmes/gopcppp/faq",
+    "apply_link_zh": "https://www4.ha.org.hk/ppp/ppp-programmes/gopcppp/faq",
+    "needs": {
+      "hk_resident": true
+    },
+    "confirm_en": [
+      "10 subsidised visits/yr counted from first private visit; unused quota does not roll over",
+      "+2 extra visits during HA-designated flu-surge periods (same fees, no deduction from yearly 10)",
+      "Thyroglobulin / Anti-thyroglobulin tests: $50/item copay; all other basic labs/investigations free",
+      "Same fee waiver as HA services: CSSA, medical-fee-waiver cert holders, 75+ OALA, RCSV level-0 voucher holders",
+      "Co-care Model since 2021 extends to stable designated SOPC patients; one private doctor at a time (switch via Cluster PPP Office written request)",
+      "All 18 districts; participating-doctor directory on list-of-psp page",
+      "Planned to conclude 2028; from 2026 participants invited in phases into CDCC Treatment Phase (invitation letter + reply slip via DHC); non-joiners return to HA FMCs",
+      "Hotline 2300 7300 (Mon-Sat 9am-9pm), gopcppp@ha.org.hk; HCV usable only for non-programme extras"
+    ],
+    "confirm_zh": [
+      "每年10次資助額由首次見私家醫生起計一年；餘額不累積",
+      "醫管局指定流感高峰期另加2次資助診症（同收費，不扣年度10次）",
+      "Thyroglobulin/Anti-thyroglobulin每項自付$50；其餘基礎化驗檢查免費",
+      "費用減免與醫管局服務相同：綜援、醫療費用減免證、75歲+長生津、院舍券0級持有人",
+      "2021年起共同醫治模式擴至病情穩定的指定專科門診病人；同一時間只可登記一位私家醫生（轉醫生須書面經聯網辦事處）",
+      "覆蓋全港18區；私家醫生名單見list-of-psp頁",
+      "預計2028年結束；2026年起分批獲邀轉入慢病共治計劃治療階段（邀請信＋回條經地區康健中心）；不參加者回家庭醫學診所",
+      "熱線2300 7300（週一至六9am-9pm），gopcppp@ha.org.hk；醫療券只可用於計劃外自費項目"
+    ],
+    "why_en": "Already stable at an HA clinic and got the letter — same $150 fee, private doctor near home.",
+    "why_zh": "在醫管局覆診病情穩定又收到邀請 — 同樣$150，屋企附近睇私家醫生。",
+    "needs_ehealth": true
+  },
+  {
+    "id": "budget-onemonth-2026",
+    "title_en": "Budget 2026 one-month extra allowance (CSSA/OAA/OALA/DA + WFA, paid May 2026 — closed)",
+    "title_zh": "《2026年預算案》一次性額外一個月津貼（綜援／高齡／長生／傷殘＋職津，已於2026年5月發放——已截止）",
+    "category": "family",
+    "value_summary_en": "One extra month: CSSA standard rate, or OAA $1,675 / OALA $4,345 / Normal DA $2,140 / Higher DA $4,280, or average-month WFA; auto-credited from 22 May 2026, no application. Closed — eligibility froze 29 Apr 2026.",
+    "value_summary_zh": "額外發放一個月：綜援標準金額，或高齡津貼$1,675／長者生活津貼$4,345／普通傷殘津貼$2,140／高額傷殘津貼$4,280，或職津平均每月金額；2026年5月22日起自動存入銀行，無須申請。已截止——資格以2026年4月29日為準。",
+    "deadline": "2026-04-29",
+    "source_url": "https://www.info.gov.hk/gia/general/202605/22/P2026052100590.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202605/22/P2026052100591.htm",
+    "updated_at": "2026-09-23",
+    "proof_needed_en": [
+      "No application — auto-payment to designated bank account"
+    ],
+    "proof_needed_zh": [
+      "無須申請——自動存入指定銀行戶口"
+    ],
+    "apply_link": "https://www.info.gov.hk/gia/general/202605/22/P2026052100590.htm",
+    "apply_link_zh": "https://www.info.gov.hk/gia/general/202605/22/P2026052100591.htm",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "You were receiving CSSA (standard rate), OAA, OALA or DA on 29 Apr 2026, or your WFA application (submitted 1 Oct 2025–29 Apr 2026) was approved — the Government auto-paid one extra month from 22 May 2026.",
+    "why_zh": "如你在2026年4月29日正領取綜援（標準金額）、高齡津貼、長者生活津貼或傷殘津貼，或你在2025年10月1日至2026年4月29日期間提交的職津申請獲批，政府已於2026年5月22日起自動發放額外一個月款項。",
+    "confirm_en": [
+      "Auto-payment, no application needed",
+      "SWD hotline 2343 2255 (social security); WFA hotline 2558 3000",
+      "Already disbursed — closed to new applicants"
+    ],
+    "confirm_zh": [
+      "自動發放，無須申請",
+      "社署熱線2343 2255（社會保障）；職津熱線2558 3000",
+      "款項已發放，新申請人不再符合資格"
+    ]
+  },
+  {
+    "id": "eco-work-injury",
+    "title_en": "Employees’ Compensation (work injury/death: no-fault statutory payout)",
+    "title_zh": "僱員補償（工傷／死亡：無過失法定補償）",
+    "category": "family",
+    "value_summary_en": "No-fault statutory compensation from your employer for injury/death in the course of work (Cap. 282): death 84/60/36 months’ earnings by age (min $514,510); permanent total incapacity 96/72/48 months (min $584,220); 4/5-pay sick-leave payments up to 24+12 months; medical $300/$500/$700 per day; funeral+medical attendance refund up to $98,950. Levels for accidents on/after 17 Apr 2025.",
+    "value_summary_zh": "僱員在受僱工作期間因工受傷／死亡，僱主須按《僱員補償條例》（第282章）作無過失法定補償：死亡按年齡84/60/36個月工資（最低$514,510）；永久完全喪失工作能力96/72/48個月（最低$584,220）；工傷病假按4/5工資最多24+12個月；醫療費每日$300/$500/$700；殮葬＋醫護費發還上限$98,950。2025年4月17日或之後意外適用。",
+    "deadline": null,
+    "source_url": "https://www.labour.gov.hk/eng/legislat/content1.htm",
+    "source_url_zh": "https://www.labour.gov.hk/tc/legislat/content1.htm",
+    "updated_at": "2026-09-24",
+    "proof_needed_en": [
+      "HKID",
+      "Medical certificates + receipts for all treatment",
+      "Employer accident report (Form 2/2A/2B via employer/insurer)",
+      "Proof of employment (contract, payslips)",
+      "Fatal cases: death certificate + relationship proof (marriage/birth cert)"
+    ],
+    "proof_needed_zh": [
+      "香港身份證",
+      "所有治療的醫生證明＋收據",
+      "僱主意外呈報（經僱主／保險公司交表格2/2A/2B）",
+      "受僱證明（合約、糧單）",
+      "死亡個案：死亡證＋親屬關係證明（結婚證／出生證）"
+    ],
+    "apply_link": "https://www.gov.hk/en/residents/employment/employee/workinjury.htm",
+    "apply_link_zh": "https://www.gov.hk/tc/residents/employment/employee/workinjury.htm",
+    "needs": {
+      "hk_employee": true
+    },
+    "confirm_en": [
+      "No-fault: employer liable even if you were at fault (except deliberate self-injury, false representation, serious wilful misconduct)",
+      "Report to employer immediately; employer must notify Labour Dept within 14 days (7 days if fatal)",
+      "Loss of earning capacity assessed by two-tier Assessment Board; settlement by direct payment, agreement, certificate or court",
+      "Employer must hold valid employees’ compensation insurance — criminal offence not to insure",
+      "Excludes casual non-trade workers, outworkers, live-in family members"
+    ],
+    "confirm_zh": [
+      "無過失：即使僱員有錯失僱主仍須負責（蓄意自傷、虛假陳述、嚴重故意不當行為除外）",
+      "即時通知僱主；僱主須14日內呈報勞工處（死亡7日）",
+      "喪失工作能力由兩級評估委員會評定；可直接付款、協議、證明書或法庭解決",
+      "僱主必須購買有效僱員補償保險——無保險屬刑事罪行",
+      "不包括臨時非行業工人、外發工、同住家庭成員"
+    ],
+    "why_en": "Hurt at work and on sick leave — 4/5 pay plus a statutory lump sum assessed free.",
+    "why_zh": "工傷放病假——除4/5工資外，還有法定一筆過補償，免費評定。"
   }
 ]

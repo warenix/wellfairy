@@ -9,4 +9,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://wellfairy.ivy.hk/sitemap.xml
+Sitemap: https://warenix.github.io/wellfairy/sitemap.xml

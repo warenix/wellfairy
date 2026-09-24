@@ -8,10 +8,15 @@ Evolving schema — edit freely, app tolerates missing fields.
 - `data/benefits.json` — LIVE catalog. Array of benefits. This is what `app.js` and
   `scripts/build-seo.mjs` read. Never edit by crawling — only by publishing from review.
 - `data/benefits.staging.json` — STAGING catalog. Crawlers write here. Same schema as
-  live. Going live requires review in `admin.html` first.
-- `admin.html` + `admin.js` — maintainer review queue (noindex, not linked from the app).
-  Loads live + staging, diffs per scheme (added / modified / removed), validates fields,
-  records approve/reject per scheme, allows inline JSON edits, and exports the new live file.
+  live. Going live requires review first (see below).
+- `data/review.json` — REVIEW decisions in git (`{ "<id>": { decision, by, at } }`).
+  Missing entry = pending. Written only via `scripts/review.mjs`, never by crawlers.
+- `scripts/review.mjs` — terminal review queue: `status` | `show <id>` |
+  `approve|reject|clear <id...>` | `approve-all`. Same status model + validation as admin.
+- `scripts/publish.mjs` — applies APPROVED decisions to live, rebuilds SEO, bumps
+  `sw.js` CACHE. `--dry-run` previews; validation-failed approvals block (exit 1).
+- `admin.html` + `admin.js` — legacy browser review queue (kept as fallback; decisions
+  there live in localStorage and are NOT shared — prefer `review.mjs`).
 - `scripts/diff-benefits.mjs` — terminal equivalent of the admin diff:
   `node scripts/diff-benefits.mjs` (or `--json` for machine output).
 - User profile — stored in browser `localStorage` key `hkbm_profile_v1`. Export/import via UI as `profile.json` file. No server.
@@ -74,14 +79,15 @@ Matcher logic (`app.js: matches()`):
 ## How to add a scheme (reviewed flow)
 
 1. Crawler writes the new/updated object to `data/benefits.staging.json` only.
-2. Quick check: `node scripts/diff-benefits.mjs`
-3. Open `admin.html` (serve the repo root, e.g. `python3 -m http.server`), filter by
-   added/modified/removed, inspect the field diff, fix validation errors inline.
-4. Per scheme: **Approve** to ship it, **Reject** to keep live as-is.
-5. **Export live benefits.json** → overwrite `data/benefits.json`.
-6. `node scripts/build-seo.mjs` to rebuild scheme pages + sitemap + llms.txt.
-7. Bump `sw.js` CACHE version so offline copy refreshes.
-8. Reload. No other build step.
+2. Quick check: `node scripts/review.mjs` (pending table + validation flags).
+3. Inspect: `node scripts/review.mjs show <id>` (field diff vs live, URLs, validation).
+4. Per scheme: `node scripts/review.mjs approve <id>` to ship it,
+   `reject <id>` to keep live as-is. Decisions land in `data/review.json` (git-tracked).
+   In Discord, the agent posts the same diff and records your approve/reject for you.
+5. Preview: `node scripts/publish.mjs --dry-run`.
+6. Publish: `node scripts/publish.mjs` → writes `data/benefits.json`, rebuilds SEO
+   (scheme pages + sitemap + llms.txt), bumps `sw.js` CACHE, prints a commit message.
+7. Deploy: commit + push (see the `deploy` skill). Reload. No other build step.
 
 Direct edits to `data/benefits.json` are reserved for hotfixes. Normal crawls must
 never touch it — unreviewed data going live is exactly what staging prevents.
