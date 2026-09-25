@@ -1286,6 +1286,43 @@
     "why_zh": "住屋危機走投無路 — 特快通道喺度。"
   },
   {
+    "id": "cpp-community-pharmacy",
+    "title_en": "Community Pharmacy Programme (affordable primary-care drugs nearby)",
+    "title_zh": "社區藥房計劃（就近取可負擔基層醫療藥物）",
+    "category": "health",
+    "value_summary_en": "From Q4 2026: collect Community Drug Formulary primary-care drugs (100+ items at launch, growing to 200-400) at community pharmacies below market via HA joint procurement. HA Family Medicine outpatients get batch refills before next follow-up; CDCC-type programme enrollees can use a pharmacy instead of the family-doctor clinic with a prescription, plus counselling. Residential-care-home arm from Q1 2027 (dispensing, reconciling, prepacked daily doses + pharmacist drug-safety support). First phase 4 districts x 4-5 pharmacies, all 18 districts by Q4 2027.",
+    "value_summary_zh": "2026年第四季起：在社區藥房以低於市價取社區藥物名冊基層醫療藥物（推出時100多項，逐步增至200-400項，醫管局統籌採購）。醫管局家庭醫學門診病人下次覆診前分期取藥；慢病共治等計劃參加者可憑醫生處方選擇在社區藥房取藥及接受用藥輔導。院舍模式2027年第一季起（配藥、整合、預先包裝每日藥量＋藥劑師藥物安全支援）。首階段4區x4-5間藥房，2027年第四季擴至全港18區。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202510/30/P2025103000223.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202510/30/P2025103000222.htm",
+    "updated_at": "2026-09-25",
+    "proof_needed_en": [
+      "Doctor prescription",
+      "HA Family Medicine / primary-care programme enrolment"
+    ],
+    "proof_needed_zh": [
+      "醫生處方",
+      "醫管局家庭醫學門診／基層醫療計劃參加資格"
+    ],
+    "apply_link": "https://www.healthbureau.gov.hk/phcc/main/home_page.html?lang=2",
+    "apply_link_zh": "https://www.healthbureau.gov.hk/phcc/main/home_page.html?lang=1",
+    "needs": {},
+    "confirm_en": [
+      "Launching Q4 2026 (Community); RCH arm phased from Q1 2027 — check pharmacy list at launch, no walk-in drug sales without a prescription",
+      "Community access is HA Family Medicine outpatients eligible for drug refills, or primary-care programme enrollees (e.g. CDCC Pilot Scheme) with a doctor prescription under a co-payment model",
+      "Formulary has 3 tiers (Tier 1 mostly non-patented; Tier 2 patented/specified; Tier 3 special) with different co-payment rules",
+      "HA tender names first-batch districts Eastern, Yau Tsim Mong, Yuen Long, Sha Tin (up to 5 pharmacies each)"
+    ],
+    "confirm_zh": [
+      "社區模式2026年第四季推出；院舍模式2027年第一季起分階段推行——推出時查藥房名單，無處方不能直接買藥",
+      "社區模式對象為合資格醫管局家庭醫學門診藥物重配病人，或基層醫療計劃（如慢病共治先導計劃）參加者，憑醫生處方按共付模式取藥",
+      "名冊設三個層級（第一層以非專利藥為主；第二層專利／指定藥物；第三層特別藥物），共付模式各異",
+      "醫管局招標文件首批4區為東區、油尖旺、元朗、沙田（每區最多5間藥房）"
+    ],
+    "why_en": "On HA or CDCC meds — refills near home instead of queuing at the clinic.",
+    "why_zh": "要長期取醫管局或慢病共治藥物——在住所附近藥房續配，毋須回診所排隊。"
+  },
+  {
     "id": "crc-screen",
     "title_en": "Colorectal Cancer Screening Programme (50-75)",
     "title_zh": "大腸癌篩查計劃 (50-75歲)",
