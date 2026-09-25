@@ -70,6 +70,7 @@
 | S48 | Housing/property DFS | `fit-solar-4kwh`, `wsd-wspss-310k`, `had-bmpass`, `hkhs-senior-residences`, `hkhs-elderly-flats` | done | 2026-09-18 |
 | S49 | Health/legal/money/misc DFS | `lcsd-concession`, `ha-cataract-ppp`, `smartsilver-ict`, `odcb-deafness`, `pcfb-pneumo`, `ird-rent-100k`, `imm-1868-assist`, `cssa-burial-grant`, `afcd-fish-loan`, `afcd-farm-loan` | done | 2026-09-18 |
 | S50 | Open-lead closes (I&T/HDPPP/RMP) | `innotech-scholarship-150k`, `ha-hdppp-dialysis`, `reverse-mortgage-property` | done | 2026-09-18 |
+| S51 | Community Pharmacy Programme + Drug Formulary (PHC Commission/HA) | `cpp-community-pharmacy` (staged 2026-09-25, pending review) | done | 2026-09-25 |
 
 Status values: `pending` → `in_progress (session)` → `done` → re-crawl per cadence in `sources.md`.
 
@@ -127,6 +128,7 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P29 | Budget 2026 one-month extra allowance (CSSA/OAA/OALA/DA + WFA one-off) | staged `budget-onemonth-2026` → approved + live 2026-09-24 | done |
 | P30 | HA GOPC PPP chronic-disease programme (co-care retry, was 429'd) | staged `ha-gopc-ppp` → approved + live 2026-09-24 | done |
 | P31 | Labour Dept Employees' Compensation Ordinance Cap.282 (work-injury/death statutory compensation) | staged `eco-work-injury` → approved + live 2026-09-24 (first review→publish pipeline test) | done |
+| P32 | Community Pharmacy Programme + Community Drug Formulary (PHC Commission/HA) | staged `cpp-community-pharmacy` 2026-09-25 → pending review (EN/TC press 200, PHCC apply lang=2/1 200); promote to S51 on publish | done |
 
 ## Expired / do-not-revive
 

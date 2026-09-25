@@ -457,3 +457,13 @@
   * RMP EN: https://www.hkmc.com.hk/eng/our_business/reverse_mortgage_programme.html (zh: `/chi/…`, both 200)
 - Schemes: `innotech-scholarship-150k` (non-final-year local undergrad, Oct/Nov via university), `ha-hdppp-dialysis` ($250/attendance Jan 2026 + waivers, nephrologist invite), `reverse-mortgage-property` (55+, $2k per $1m at 60-life floating, $25m cap; Mar 2026 fixed 4%/+5%)
 - Still open: GOPC PPP chronic-disease programme (search 429'd — retry next round); D9 closed by this entry.
+
+## S51 · Community Pharmacy Programme + Community Drug Formulary (added 2026-09-25, staged — pending review)
+- URLs:
+  * CPP/CDF press EN: https://www.info.gov.hk/gia/general/202510/30/P2025103000223.htm (200; TC twin P2025103000222.htm, IDs differ by language — never guess)
+  * CPP/CDF press TC: https://www.info.gov.hk/gia/general/202510/30/P2025103000222.htm (200, title verified)
+  * PHCC apply EN: https://www.healthbureau.gov.hk/phcc/main/home_page.html?lang=2 (200)
+  * PHCC apply TC: https://www.healthbureau.gov.hk/phcc/main/home_page.html?lang=1 (200)
+- Schemes: `cpp-community-pharmacy` (staged 2026-09-25: CDF 100+ items at launch → 200–400, HA joint procurement below market; CPP Community from Q4 2026 — HA Family Medicine batch refills + CDCC-type prescription pick-up with counselling; CPP RCH from Q1 2027 — dispensing/reconciling/prepackaging + pharmacist drug-safety support; first phase 4 districts × 4–5 pharmacies → 18 districts by Q4 2027)
+- Cadence: half-yearly (launch watch Q4 2026: pharmacy list per district; CDF list expansions; RCH tender/service dates). HA tender doc names first-batch districts Eastern / Yau Tsim Mong / Yuen Long / Sha Tin (up to 5 pharmacies each) — confirm against launch list.
+- Pitfall: info.gov.hk press TC IDs differ from EN (0223→0222 here) — always copy the toggle href, never guess. Programme is pre-launch at staging time — keep launch phrasing in confirms until pharmacies open; `needs` stays empty (access paths are HA/programme-enrolment, no invented gates).
