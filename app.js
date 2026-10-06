@@ -36,7 +36,53 @@ function wireKidPick() {
     const set = kidSet();
     set.has(b.dataset.k) ? set.delete(b.dataset.k) : set.add(b.dataset.k);
     f.kids.value = [...set].sort((a, c) => KID_ORDER(a) - KID_ORDER(c)).join(',');
-    renderKidChips();
+  // Citizen-first: moments + quick-check + Top 3 (uses forgiving quick profile)
+  const qp = quickProfile();
+  const qHit = BENEFITS.filter(b=>matches(b,qp)).filter(momentPass);
+  const isLoan = b => /loan|貸款|借貸/i.test(`${b.title_en||''} ${b.title_zh||''} ${b.id||''}`);
+  const rankAmt = b => { const a = estimateAmount(b); return (isMonthlyAmt(b) && a > 30000) ? 0 : a; };
+  const qTop = [...qHit].sort((a,b2)=>{
+    const la = isLoan(a) ? 1 : 0, lb = isLoan(b2) ? 1 : 0;
+    if (la !== lb) return la - lb; // loans last — citizens want grants first
+    const ma = isMonthlyAmt(a) ? 0 : 1, mb = isMonthlyAmt(b2) ? 0 : 1;
+    if (ma !== mb) return ma - mb; // monthly allowances first
+    return rankAmt(b2) - rankAmt(a);
+  }).slice(0,3);
+  const qMonthly = qTop.filter(isMonthlyAmt).reduce((s,b)=>s+estimateAmount(b),0);
+  const mg = $('#momentGrid');
+  if (mg) {
+    mg.innerHTML = MOMENTS.map(m=>{
+      const n = BENEFITS.filter(b=>matches(b,qp)&&m.test(b)).length;
+      return `<button type="button" class="moment${QUICK.moment===m.id?' on':''}" data-moment="${m.id}" aria-pressed="${QUICK.moment===m.id?'true':'false'}"><span class="moment-ico" aria-hidden="true">${m.icon}</span><span class="moment-t">${esc(t(m.en,m.zh))}</span><span class="moment-n">${n}</span></button>`;
+    }).join('');
+    mg.querySelectorAll('[data-moment]').forEach(btn=>btn.onclick=()=>{QUICK.moment=btn.dataset.moment;render();});
+  }
+  const qn = $('#quickN');
+  if (qn) qn.querySelectorAll('[data-qn]').forEach(btn=>{
+    btn.classList.toggle('on', +btn.dataset.qn === QUICK.n || (btn.dataset.qn==='4' && QUICK.n>=4));
+    btn.onclick=()=>{QUICK.n=+btn.dataset.qn;render();};
+  });
+  const qb = $('#quickBand');
+  if (qb) qb.querySelectorAll('[data-qb]').forEach(btn=>{
+    btn.classList.toggle('on', btn.dataset.qb===QUICK.band);
+    btn.onclick=()=>{QUICK.band=btn.dataset.qb;render();};
+  });
+  const qr = $('#quickResult');
+  if (qr) qr.innerHTML = qMonthly
+    ? (LANG==='zh' ? `你每月可能多 <strong>$${qMonthly.toLocaleString()}</strong>（Top 3估算，未計一次性）` : `You could gain <strong>$${qMonthly.toLocaleString()}/mo</strong> (Top 3 estimate, excl. one-offs)`)
+    : (LANG==='zh' ? `呢個情況有 <strong>${qHit.length}</strong> 項可能合資格，睇下面Top 3` : `<strong>${qHit.length}</strong> possible matches — see Top 3 below`);
+  const qs = $('#quickStep');
+  if (qs) qs.textContent = `${qHit.length} ${t('matches','項可能合資格')}`;
+  const top3 = $('#top3');
+  if (top3) top3.innerHTML = qTop.map(b=>card(b)).join('') || `<div class="empty"><p>${t('Answer the 60-second check to see your Top 3.','答完60秒檢查就睇到你嘅Top 3。')}</p></div>`;
+  // Next tab: saved schemes as action tickets with Done
+  const nl = $('#nextList');
+  if (nl) {
+    const items = BENEFITS.filter(b=>SAVED.has(b.id));
+    nl.innerHTML = items.length ? items.map(b=>`<div class="next-item">${card(b)}<button type="button" class="btn ghost donebtn" data-done="${esc(b.id)}">✅ ${t('Done','搞掂')}</button></div>`).join('')
+      : `<div class="empty"><p>${t('Nothing saved yet — tap ☆ on any Top 3 card.','未收藏任何項目 — 喺Top 3卡上㩒 ☆ 啦。')}</p></div>`;
+  }
+  renderKidChips();
     const updated = $(`[data-k="${b.dataset.k}"]`);
     if (updated) updated.focus();
   });
@@ -70,9 +116,45 @@ const L = (b, k) => (LANG === 'zh' && b[k + '_zh']) ? b[k + '_zh'] : (b[k] || b.
 const I18N = {
   skip: ['Skip to main content', '跳至主要內容'],
   siteTitle: ['WellFairy — HK benefit matcher', 'WellFairy 援助仙 — 香港福利配對'],
-  brandSub: ['Benefit matcher', '福利配對'],
+  brandSub: ['Welfare navigator · Find support', '援助仙 · 福利導航'],
+  trustTop: ['Free · Data stays on your device', '免費 · 資料留在你手機'],
+  heroKicker: ['Support you may have missed', '你可能未曾發現的支援'],
+  heroLead: ['Some support should find you.', '有啲福利，唔係你搵佢，係佢應該搵你。'],
+  heroPromise: ['WellFairy looks at your family, income, housing and life situation to uncover support you may qualify for.', 'WellFairy 根據你嘅家庭、收入、住屋同生活狀況，幫你搵出可能合資格嘅支援。'],
+  heroCTA: ['Start my benefit check', '開始我的福利檢查'],
+  heroNote: ['build your profile · no sign-up', '建立檔案 · 不需登記'],
+  discoveryLabel: ['YOUR SUPPORT MAP', '你的支援地圖'],
+  profileStripTitle: ['The more WellFairy knows, the sharper your matches.', '你的資料越完整，WellFairy 越懂你。'],
+  profileStripText: ['Income, children, housing and caring details stay on your device.', '收入、子女、住屋、長者照顧等資料，都只會留在你的裝置。'],
+  profileStripCTA: ['Complete profile', '完善檔案'],
   install: ['⬇ Install', '⬇ 安裝'],
-  tabMatch: ['Match', '配對'], tabAll: ['All', '全部'], tabProfile: ['Profile', '檔案'], tabAbout: ['About', '關於'],
+  tabMatch: ['Match', '配對'], tabAll: ['All', '全部'], tabNext: ['Next', '下一步'], tabProfile: ['Profile', '檔案'], tabAbout: ['About', '關於'],
+  momentsH: ['How are things right now? Pick one to start', '你而家咩情況？揀一個開始'],
+  quickH: ['60-second quick check', '60秒快速檢查'],
+  quickWhy: ['Answer 3 — no exact figures needed. See your monthly upside first.', '答3條，不用填實際銀碼 — 先睇你每月可能多幾多。'],
+  quickQ1: ['Who lives together?', '幾多人住埋一齊？'],
+  quickQ2: ['Roughly which income band?', '家庭收入大概邊格？'],
+  whyAsk: ['Why ask?', '點解問？'], whyAsk2: ['Why ask?', '點解問？'],
+  whyQ1: ['Many allowances set caps by household size — no names needed.', '好多津貼（在職家庭津貼、公屋）按人數定限額，唔使填名。'],
+  whyQ2: ['Only a rough band is matched against income caps. Give exact figures later for precision.', '只係用大概範圍對入息限額，唔使填糧單數字。之後想準啲先填實際銀碼。'],
+  qbTight: ['Tight', '唔夠食'], qbSoso: ['Just enough', '僅夠'], qbMid: ['Middle', '中等'], qbOk: ['Comfortable', '唔錯'],
+  secTop: ['Top 3 worth doing', '最值得搞掂嘅3樣'],
+  secTopD: ['Ranked by monthly amount; amounts are estimates', '按每月金額排，金額係估算'],
+  expectH: ['What happens next?', '會發生咩事？'],
+  ex1: ['Pick from the Top 3, tap Apply to go to the government site', '睇Top 3，㩒「立即申請」去政府網站'],
+  ex2: ['Bring the listed proof documents (usually 1–3)', '帶齊下面寫住嘅證明文件（一般1–3份）'],
+  ex3: ['Wait for the government decision — WellFairy never files for you', '交表後等政府批，WellFairy唔會代交表'],
+  browseAll: ['Prefer to browse yourself? See all 200+ schemes →', '想自己慢慢搵？瀏覽全部 200+ 項 →'],
+  nextH: ['My next steps', '我的下一步'],
+  nextD: ['Everything you saved, with its next step. Tap Done when finished.', '你收藏嘅每樣嘢，下一步寫晒喺度。做完一樣，㩒「搞掂」。'],
+  nextEmpty: ['Nothing saved yet — tap ☆ on any Top 3 card.', '未收藏任何項目 — 喺Top 3卡上㩒 ☆ 啦。'],
+  doneBtn: ['Done', '搞掂'],
+  estMo: ['/mo est.', '/月（估算）'],
+  lumpEst: ['est.', '（估算）'],
+  nextStepDefault: ['Apply on the official site, bring proof docs', '去官網申請，帶齊證明文件'],
+  whyMatch: ['Why you match', '點解你符合'],
+  unlockBy: ['Unlock by:', '做埋呢樣就攞到：'],
+  topEmpty: ['Answer the 60-second check to see your Top 3.', '答完60秒檢查就睇到你嘅Top 3。'],
   heroEyebrow: ['Benefits we found for you', '為您找到以下資助'],
   heroUnit: ['benefits', '項福利'],
   statDeadline: ['Due in 30 days', '30日內截止'], statSaved: ['Saved', '已收藏'], statCat: ['Categories', '類別'],
@@ -149,6 +231,8 @@ const I18N = {
   ab3: ['Guidance only — we never file for you; the government notice prevails', '我們只作提醒，不會代為申請，一切以政府公布為準'],
   footer: ['Please verify with the official source.', '申請前請以政府網站為準。'],
   accessibilityStatement: ['Accessibility Statement', '無障礙聲明'],
+  expand: ['Expand ▾', '展開 ▾'],
+  collapse: ['Collapse ▴', '收起 ▴'],
 };
 function applyI18n() {
   const pick = v => LANG === 'zh' ? v[1] : v[0];
@@ -177,6 +261,55 @@ const LIFE_EVENTS = [
   {id:'unemployment',en:'Unemployment',zh:'失業支援'},
   {id:'housing-public',en:'Housing/Public Housing',zh:'房屋/公屋'}
 ];
+// Citizen-first moments (home entry). Each maps to a predicate over needs/category.
+const MOMENTS = [
+  {id:'baby',    icon:'🍼', en:'Baby / kids',      zh:'生咗仔 / 有細路', test:b=>{const n=b.needs||{};return !!(n.has_kids_any||n.has_kids_level||n.toddler||n.child_sen||n.tertiary||n.single_parent);}},
+  {id:'job',     icon:'💼', en:'Out of work',      zh:'失業搵工',       test:b=>{const n=b.needs||{};return !!(n.unemployed||n.requires_work_hours!=null||n.wfa_exact);}},
+  {id:'carer',   icon:'🧑‍⚕️', en:'Caring for someone', zh:'照顧老人/病人', test:b=>{const n=b.needs||{};return !!(n.is_carer||n.carer_context||n.requires_elderly_in_house||n.requires_disability);}},
+  {id:'housing', icon:'🏠', en:'Rent / mortgage',  zh:'交租供樓',       test:b=>b.category==='housing'||!!(b.needs||{}).prh_exact,},
+  {id:'health',  icon:'🏥', en:'Seeing a doctor',  zh:'睇醫生食藥',     test:b=>b.category==='health'||b.category==='elderly'||!!(b.needs||{}).oala_or_waiver,},
+  {id:'study',   icon:'🎒', en:'Study / courses',  zh:'返學進修',       test:b=>b.category==='student'||(b.needs||{}).edu_max_rank!=null||!!(b.needs||{}).afi_max,},
+];
+let QUICK = { moment:'baby', n:4, band:'soso' };
+const BAND_INCOME = { tight:12000, soso:22000, mid:38000, ok:65000 };
+// Quick-check pseudo-profile: band midpoints + forgiving defaults (assets low,
+// work hours full) so citizens see upside before giving exact figures.
+function quickProfile() {
+  const p = loadP();
+  p.householdN = QUICK.n;
+  p.monthlyIncome = BAND_INCOME[QUICK.band] ?? 22000;
+  p.assets = 100000; p.workHours = 160;
+  return p;
+}
+function momentPass(b) { const m = MOMENTS.find(x=>x.id===QUICK.moment); return m ? m.test(b) : true; }
+// Amount heuristic: biggest $ figure in value summaries; monthly if 每月/monthly//mo near.
+function estimateAmount(b) {
+  const s = `${b.value_summary_zh||''} ${b.value_summary_en||''}`;
+  const ms = s.match(/[\$＄]\s?[\d,]+(\.\d+)?/g) || [];
+  let best = 0;
+  for (const m of ms) { const v = parseFloat(m.replace(/[^\d.]/g,'')); if (v>best) best = v; }
+  if (!best) { const m2 = s.match(/(\d[\d,]{3,})/); if (m2) best = parseFloat(m2[1].replace(/,/g,'')) || 0; }
+  if (best >= 1000000 && /萬/.test(s) === false) best = best; // keep raw figure
+  return best;
+}
+function isMonthlyAmt(b) { return /每月|每月|month|\/mo|per month/i.test(`${b.value_summary_zh||''} ${b.value_summary_en||''}`); }
+function humanDeadline(b) {
+  const d = daysTo(b.deadline);
+  if (d == null) return t('Ongoing', '長期辦理');
+  if (d < 0) return t('Closed', '已截止');
+  if (d === 0) return t('Closes today', '今日截止');
+  if (d === 1) return t('Closes tomorrow', '聽日截止');
+  if (d <= 30) return LANG==='zh' ? `剩${d}日` : `${d} days left`;
+  return b.deadline;
+}
+function nextStepText(b) {
+  const docs = (LANG==='zh' ? (b.proof_needed_zh||b.proof_needed_en) : b.proof_needed_en) || [];
+  const first = docs.length ? docs.slice(0,2).join('、') : '';
+  const host = (()=>{ try { return new URL(b.apply_link||b.source_url).hostname.replace(/^www\./,''); } catch { return ''; } })();
+  if (first && host) return LANG==='zh' ? `去 ${host} 交表，帶齊${first}` : `Apply at ${host}, bring ${first}`;
+  if (host) return LANG==='zh' ? `去 ${host} 交表` : `Apply at ${host}`;
+  return t('Apply on the official site, bring proof docs', '去官網申請，帶齊證明文件');
+}
 function getLifeEvents(b){
   const n = b.needs || {};
   const tags = new Set();
@@ -297,30 +430,30 @@ function deadlinePill(b) {
 
 function card(b, opts={}) {
   const isSaved = SAVED.has(b.id);
-  const isHidden = HIDDEN.has(b.id);
   const on = isSaved ? 'on' : '';
-  const hidden = isHidden ? 'on' : '';
-  const cat = CAT_NAME[b.category] || {en:b.category,zh:b.category};
   const title = t(b.title_en, b.title_zh);
-  const wv = (b.needs && b.needs.wfa_exact) ? (()=>{ const lv0=wfaLevel(loadP()); return lv0?`<span class="pill">${esc(t(lv0.en,lv0.zh))}</span>`:''; })() : '';
-  const lv = (b.needs && b.needs.afi_max != null) ? `<span class="pill">${esc(t(afiLevel(afiOf(loadP())).en, afiLevel(afiOf(loadP())).zh))} · AFI ${afiOf(loadP()).toLocaleString()}</span>` : '';
-  const decl = (b.needs && b.needs.no_property) ? `<span class="pill info"><span aria-hidden="true">📝</span> ${t('property declaration needed','須聲明無物業')}</span>` : '';
-  const conf = (b.confirm_en && b.confirm_en.length) ? `<span class="pill info">☑ ${b.confirm_en.length}${t(' to confirm','項待確認')}</span>` : '';
-  const ehp = (b.needs_ehealth && !loadP().ehealth) ? `<span class="pill info"><span aria-hidden="true">🏥</span> ${t('eHealth sign-up needed','需登記醫健通')}</span>` : '';
-  const hideLabel = (isHidden ? t('Unhide ', '取消隱藏 ') : t('Hide ', '隱藏 ')) + title;
+  const amt = estimateAmount(b);
+  // Sanity: monthly figures above $30k are almost always asset/income caps
+  // misread as payouts — hide rather than misinform. Ranking uses same guard.
+  const amtOk = amt && (!isMonthlyAmt(b) || amt <= 30000);
+  const amtLine = amtOk ? `<div class="ticket-amt">${amt >= 10000 ? '💰' : '🎁'} ${amt.toLocaleString()}${isMonthlyAmt(b) ? esc(t('/mo est.','/月（估算）')) : esc(t(' est.','（估算）'))}</div>` : '';
+  const step = nextStepText(b);
+  const dl = humanDeadline(b);
+  const dleft = daysTo(b.deadline);
+  const dlHot = dleft != null && dleft >= 0 && dleft <= 30;
+  const blockers = opts.lock ? `<div class="lockbar slim"><span aria-hidden="true">🔒</span> ${esc(t('Unlock by:','做埋呢樣就攞到：'))} ${esc(opts.lock)}${opts.more ? ` <span class="more">+${opts.more}</span>` : ''}</div>` : '';
   const saveLabel = (isSaved ? t('Saved, activate to unsave: ', '已收藏，按此取消：') : t('Save: ', '收藏：')) + title;
   const viewLabel = t('View details: ', '查看詳情：') + title;
-  const hideIcon = isHidden ? '<span aria-hidden="true">↩</span>' : '<span aria-hidden="true">🙈</span>';
   const saveIcon = isSaved ? '<span aria-hidden="true">⭐</span>' : '<span aria-hidden="true">☆</span>';
-  return `<article class="card${opts.lock ? ' locked' : ''}" data-id="${esc(b.id)}" role="listitem">
-    ${opts.lock ? `<div class="lockbar"><span aria-hidden="true">🔒</span> ${esc(opts.lock)}${opts.more ? ` <span class="more">+${opts.more}</span>` : ''}</div>` : ''}
-    <div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
-    <div><h3>${esc(title)}</h3><div class="meta">${esc(t(cat.en,cat.zh))} · ${t('updated','更新')} ${esc(b.updated_at||'')}</div></div></div>
-    <div class="pills">${deadlinePill(b)}${freshPill(b)}${lv}${wv}${decl}${conf}${ehp}<span class="pill">${esc((b.proof_needed_en||[]).length)}${t(' documents','份文件')}</span></div>
-    <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}</div>
+  return `<article class="card ticket${opts.lock ? ' locked' : ''}" data-id="${esc(b.id)}" role="listitem">
+    ${blockers}
+    <div class="top"><h3>${esc(title)}</h3></div>
+    ${amtLine}
+    <div class="ticket-step"><span aria-hidden="true">👉</span> ${esc(step)}</div>
+    <div class="pills"><span class="pill${dlHot ? ' hot' : ''}">${dlHot ? '⏰ ' : '🗓 '}${esc(dl)}</span>${freshPill(b)}</div>
     <div class="row"><button class="savebtn ${on}" data-save="${esc(b.id)}" type="button" aria-pressed="${isSaved ? 'true' : 'false'}" aria-label="${esc(saveLabel)}">${saveIcon}</button>
-    <button class="hidebtn ${hidden}" data-hide="${esc(b.id)}" type="button" aria-pressed="${isHidden ? 'true' : 'false'}" aria-label="${esc(hideLabel)}" title="${esc(hideLabel)}">${hideIcon}</button>
-    <button class="btn" data-open="${esc(b.id)}" type="button" aria-label="${esc(viewLabel)}">${t('View details','查看詳情')}</button></div></article>`;
+    <a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')}</a>
+    <button class="btn ghost" data-open="${esc(b.id)}" type="button" aria-label="${esc(viewLabel)}">${t('Why me?','點解我符合')}</button></div></article>`;
 }
 
 function schemeIdFromHash() {
@@ -348,6 +481,9 @@ function openDetail(id, push = true) {
   const title = t(b.title_en, b.title_zh);
   const relatedItems = BENEFITS.filter(x=>x.category===b.category && x.id!==b.id).slice(0,5);
   const relatedChips = relatedItems.map(x=>`<button type="button" class="chip relchip" data-open="${esc(x.id)}" aria-label="${esc(t('View details: ','查看詳情：') + t(x.title_en, x.title_zh))}"><span aria-hidden="true">${CAT_ICON[x.category]||'🎁'}</span> ${esc(t(x.title_en,x.title_zh))}</button>`).join('');
+  const docs = ((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]);
+  const docSteps = docs.length ? `<ol class="claim-steps">${docs.slice(0,4).map(x=>`<li>${esc(x)}</li>`).join('')}</ol>` : '';
+  const claimHtml = `<section class="claimbox" aria-label="${esc(t('How to claim','點樣申請'))}"><h4>📋 ${t('How to claim','點樣申請')}</h4><ol class="claim-steps"><li>${esc(nextStepText(b))}</li></ol>${docSteps}<p class="hint">${t('Usually 10–20 min online. Bring 1–3 proof documents.','一般網上10–20分鐘。帶1–3份證明文件。')}</p></section>`;
   const relatedHtml = relatedItems.length ? `<section class="relatives" aria-labelledby="relH"><h4 id="relH">${t('Related in this category','同類資助')}</h4><div class="chips" role="group" aria-label="${esc(t('Related in this category','同類資助'))}">${relatedChips}</div><p class="hint">${t('Tap to view related schemes; means-test pass may unlock secondary allowances.','點擊查看同類計劃；通過資助審查可解鎖次要津貼。')}</p></section>` : '';
   d.setAttribute('aria-label', title);
   d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
@@ -355,6 +491,7 @@ function openDetail(id, push = true) {
     <div class="pills">${deadlinePill(b)}${freshPill(b)}</div>
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
     <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}<br><br><span aria-hidden="true">🧾</span> <strong>${t('Please bring','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please confirm before applying','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br><span aria-hidden="true">🔗</span> <strong>${t('Source','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
+    ${claimHtml}
     ${relatedHtml}
     <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')} <span class="visually-hidden">${esc(title)}</span></a>
     <button class="btn ghost" id="shareBtn" type="button"><span aria-hidden="true">🔗</span> ${t('Share','分享')}</button>
@@ -480,12 +617,15 @@ function render() {
   $('#statSoon').textContent = soonVisible.length; $('#statSave').textContent = SAVED.size; $('#statCat').textContent = cats.length;
   const pct = BENEFITS.length?Math.round(hit.length/BENEFITS.length*100):0;
   $('#ringPct').textContent = pct+'%';
-  document.querySelector('.ring').style.setProperty('--p', pct+'%');
-  $('#heroSub').textContent = t(`${distName(p.district)} · kids ${(p.kids||[]).join(',')||'—'} · $${(+p.monthlyIncome||0).toLocaleString()}/mo · AFI ${afiOf(p).toLocaleString()} (${afiLevel(afiOf(p)).en})`,
+  const ring = document.querySelector('.ring'); if (ring) ring.style.setProperty('--p', pct+'%');
+  const mini = document.querySelector('.mini-ring'); if (mini) mini.style.setProperty('--p', pct+'%');
+  const heroSub = $('#heroSub'); if (heroSub) heroSub.textContent = t(`${distName(p.district)} · kids ${(p.kids||[]).join(',')||'—'} · $${(+p.monthlyIncome||0).toLocaleString()}/mo · AFI ${afiOf(p).toLocaleString()} (${afiLevel(afiOf(p)).en})`,
     `${distName(p.district)} · 子女 ${(p.kids||[]).join(',')||'—'} · 月入$${(+p.monthlyIncome||0).toLocaleString()} · 經調整家庭收入AFI ${afiOf(p).toLocaleString()} (${afiLevel(afiOf(p)).zh})`);
   $('#nowCount').textContent = `${nowAll.filter(visible).filter(lifePass).filter(b=>passFilter(b,FILTER)).length} ${t('items','項')}`;
   $('#soonCount').textContent = soonVisible.length ? `${soonVisible.filter(lifePass).filter(b=>passFilter(b,FILTER)).length} ${t('urgent','件需辦理')}` : '';
-  $('#missCount').textContent = `${miss.length} ${t('items','項')}`;
+  const missLabel = `${miss.length} ${t('items','項')}`;
+  $('#missCount').textContent = missLabel;
+  const missBarCount = $('#missCountBar'); if (missBarCount) missBarCount.textContent = missLabel;
   chips($('#chips'), cats, FILTER, f=>{FILTER=f;render();});
   chips($('#chipsAll'), cats, FILTER_ALL, f=>{FILTER_ALL=f;render();});
   // life event filter chips
@@ -522,6 +662,7 @@ async function init() {
   BENEFITS = await (await fetch('data/benefits.json',{cache:'no-store'})).json();
   const tabBtns = [...document.querySelectorAll('.tabs [role="tab"]')];
   const activateTab = (btn, focusPanel = false) => {
+    const allPanel = $('#tab-all'); if (allPanel) allPanel.hidden = true;
     tabBtns.forEach(x => {
       const active = x === btn;
       x.classList.toggle('active', active);
@@ -538,6 +679,23 @@ async function init() {
     const label = btn.textContent.trim();
     announce(t(`Switched to ${label}`, `已切換至${label}`));
   };
+  document.querySelectorAll('[data-start-profile]').forEach(btn => {
+    btn.onclick = () => {
+      const profileBtn = document.querySelector('[data-tab="profile"]');
+      if (profileBtn) { activateTab(profileBtn); profileBtn.scrollIntoView({behavior:'smooth', block:'start'}); }
+    };
+  });
+  // "One step away" collapsed to a slim bar by default; the whole section
+  // (card + list) hides so users can scroll straight to the bottom.
+  const secMiss = $('#secMiss'), missBar = $('#missBar'), missToggle = $('#missToggle');
+  const setMissOpen = (open) => {
+    if (secMiss) secMiss.hidden = !open;
+    if (missBar) { missBar.hidden = open; missBar.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+    if (missToggle) missToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) announce(t('One step away expanded', '已展開「差一步」'));
+  };
+  if (missBar) missBar.onclick = () => setMissOpen(true);
+  if (missToggle) missToggle.onclick = () => setMissOpen(false);
   tabBtns.forEach((b, i) => {
     b.onclick = () => activateTab(b);
     b.onkeydown = (e) => {
@@ -550,6 +708,14 @@ async function init() {
     };
   });
   document.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>document.querySelector(`[data-tab="${b.dataset.goto}"]`).click());
+  // Demoted "browse all": full list lives outside the tabs (social-worker drawer).
+  const allBtn = $('#browseAllBtn');
+  if (allBtn) allBtn.onclick = () => {
+    tabBtns.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');x.tabIndex=-1;});
+    document.querySelectorAll('main > section[id^="tab-"]').forEach(s=>{s.hidden = s.id!=='tab-all';});
+    window.scrollTo({top:0,behavior:'smooth'});
+    announce(t('Showing all schemes','顯示全部計劃'));
+  };
   const f = $('#profileForm'), p = loadP();
   f.age.value=p.age; f.hk_resident.checked=p.hk_resident; f.hkYears.value=(p.hkYears ?? 7); hkYearsOut(); f.householdN.value=p.householdN;
   f.monthlyIncome.value=p.monthlyIncome; f.assets.value=p.assets; f.sex.value=p.sex; f.housing.value=p.housing;
@@ -602,6 +768,10 @@ async function init() {
       return;
     }
     if(e.target.id==='unhideAllBtn'){unhideAll();render();announce(t('All hidden schemes restored','已還原全部隱藏計劃'));return;}
+    const done=e.target.closest('[data-done]');
+    if(done){SAVED.delete(done.dataset.done);saveS(SAVED);render();announce(t('Marked done','已搞掂'));return;}
+    const why=e.target.closest('.mini-why');
+    if(why){const w=$('#why-'+why.dataset.why);if(w)w.hidden=!w.hidden;return;}
     const o=e.target.closest('[data-open]'); if(o){openDetail(o.dataset.open);return;}
     const c=e.target.closest('.card'); if(c&&!e.target.closest('a,button')) openDetail(c.dataset.id);
   });

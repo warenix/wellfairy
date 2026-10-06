@@ -45,16 +45,20 @@
 <a class="skip-link" href="#main" data-i18n="skip">跳至主要內容 Skip to main content</a>
 <h1 class="visually-hidden" data-i18n="siteTitle">WellFairy 援助仙 — 香港福利配對</h1>
 <header class="topbar">
-  <div class="brand"><div><strong>WellFairy 援助仙</strong><span data-i18n="brandSub">福利配對</span></div></div>
+  <a class="brand" href="./" aria-label="WellFairy home">
+    <span class="brand-mark" aria-hidden="true">✦</span>
+    <div><strong>WellFairy</strong><span data-i18n="brandSub">援助仙 · 福利導航</span></div>
+  </a>
   <div class="topact">
+    <span class="trust-chip">● <span data-i18n="trustTop">免費 · 資料留在你手機</span></span>
     <button id="langToggle" class="ghostbtn" type="button" aria-label="切換語言 Switch language">EN / 繁中</button>
     <button id="installBtn" class="solidbtn" type="button" hidden data-i18n="install">⬇ 安裝</button>
   </div>
 </header>
 
 <nav class="tabs" role="tablist" aria-label="主導航 Main navigation">
-  <button data-tab="match" id="tabbtn-match" role="tab" aria-selected="true" aria-controls="tab-match" class="active" type="button"><span aria-hidden="true">✨</span> <span data-i18n="tabMatch">配對</span></button>
-  <button data-tab="all" id="tabbtn-all" role="tab" aria-selected="false" aria-controls="tab-all" tabindex="-1" type="button"><span aria-hidden="true">📚</span> <span data-i18n="tabAll">全部</span></button>
+  <button data-tab="match" id="tabbtn-match" role="tab" aria-selected="true" aria-controls="tab-match" class="active" type="button"><span aria-hidden="true">✨</span> <span data-i18n="tabMatch">主頁</span></button>
+  <button data-tab="next" id="tabbtn-next" role="tab" aria-selected="false" aria-controls="tab-next" tabindex="-1" type="button"><span aria-hidden="true">✅</span> <span data-i18n="tabNext">下一步</span></button>
   <button data-tab="profile" id="tabbtn-profile" role="tab" aria-selected="false" aria-controls="tab-profile" tabindex="-1" type="button"><span aria-hidden="true">👤</span> <span data-i18n="tabProfile">檔案</span></button>
   <button data-tab="about" id="tabbtn-about" role="tab" aria-selected="false" aria-controls="tab-about" tabindex="-1" type="button"><span aria-hidden="true">ℹ️</span> <span data-i18n="tabAbout">關於</span></button>
 </nav>
@@ -62,19 +66,70 @@
 <main id="main" tabindex="-1">
   <p class="visually-hidden" role="status" aria-live="polite" id="liveAnnounce"></p>
   <section id="tab-match" role="tabpanel" aria-labelledby="tabbtn-match" tabindex="0">
-    <div class="hero">
+    <div class="hero hero-bold">
+      <div class="hero-orb orb-one" aria-hidden="true"></div><div class="hero-orb orb-two" aria-hidden="true"></div>
       <div class="hero-text">
-        <p class="eyebrow" id="heroEyebrow" data-i18n="heroEyebrow">你符合以下資助</p>
-        <h2 class="hero-title"><span id="heroCount">0</span> <small>/ <span id="heroTotal">0</span> <span data-i18n="heroUnit">項福利</span></small></h2>
-        <p class="hero-sub" id="heroSub" aria-live="polite"></p>
-        <div class="hero-stats">
-          <div><strong id="statSoon">0</strong><span data-i18n="statDeadline">30日內截止</span></div>
-          <div><strong id="statSave">0</strong><span data-i18n="statSaved">已收藏</span></div>
-          <div><strong id="statCat">0</strong><span data-i18n="statCat">類別</span></div>
+        <div class="hero-kicker"><span>✦</span> <span data-i18n="heroKicker">你可能未曾發現的支援</span></div>
+        <h2 class="hero-title"><span data-i18n="heroLead">有啲福利，唔係你搵佢，係佢應該搵你。</span></h2>
+        <p class="hero-sub hero-sub-large" data-i18n="heroPromise">WellFairy 根據你嘅家庭、收入、住屋同生活狀況，幫你搵出可能合資格嘅支援。</p>
+        <div class="hero-actions">
+          <button type="button" class="hero-cta" data-start-profile><span data-i18n="heroCTA">開始我的福利檢查</span><span aria-hidden="true">→</span></button>
+          <span class="hero-note"><strong>2 min</strong> <span data-i18n="heroNote">建立檔案 · 不需登記</span></span>
         </div>
       </div>
-      <div class="hero-card" aria-hidden="true"><div class="ring"><span id="ringPct">0%</span></div><p data-i18n="matchRate">配對率</p></div>
+      <div class="hero-discovery" aria-label="你的福利配對摘要">
+        <div class="discovery-label"><span data-i18n="discoveryLabel">你的支援地圖</span><span class="spark">✦</span></div>
+        <div class="discovery-number"><span id="heroCount">0</span><small><span data-i18n="heroUnit">項可能合資格</span></small><span id="heroTotal" class="visually-hidden">0</span></div>
+        <div class="discovery-rule"></div>
+        <div class="discovery-row"><span>⏰ <span data-i18n="statDeadline">30日內截止</span></span><strong id="statSoon">0</strong></div>
+        <div class="discovery-row"><span>★ <span data-i18n="statSaved">已收藏</span></span><strong id="statSave">0</strong><span id="statCat" class="visually-hidden">0</span></div>
+        <div class="discovery-foot"><span class="mini-ring"><span id="ringPct">0%</span></span><span data-i18n="matchRate">目前配對率</span></div>
+      </div>
     </div>
+    <div class="profile-strip">
+      <div class="profile-strip-icon" aria-hidden="true">◎</div>
+      <div><strong data-i18n="profileStripTitle">你的資料越完整，WellFairy 越懂你。</strong><p data-i18n="profileStripText">收入、子女、住屋、長者照顧等資料，都只會留在你的裝置。</p></div>
+      <button type="button" class="strip-link" data-start-profile><span data-i18n="profileStripCTA">完善檔案</span> →</button>
+    </div>
+
+    <section class="moments" aria-labelledby="momentsH">
+      <h3 id="momentsH" data-i18n="momentsH">你而家咩情況？揀一個開始</h3>
+      <div class="moment-grid" id="momentGrid" role="group" aria-label="人生階段 Life moments"></div>
+    </section>
+
+    <section class="quickcheck" id="quickcheck" aria-labelledby="quickH">
+      <div class="quick-head"><h3 id="quickH" data-i18n="quickH">60秒快速檢查</h3><span class="quick-step" id="quickStep"></span></div>
+      <p class="quick-why" data-i18n="quickWhy">答3條，不用填實際銀碼 — 先睇你每月可能多幾多。</p>
+      <div class="quick-q" id="quickQ1" role="group" aria-label="幾多人住埋">
+        <p><strong data-i18n="quickQ1">幾多人住埋一齊？</strong> <button type="button" class="mini-why" data-why="q1" data-i18n="whyAsk">點解問？</button></p>
+        <div class="quick-opts" id="quickN">
+          <button type="button" data-qn="1">1</button><button type="button" data-qn="2">2</button><button type="button" data-qn="3">3</button><button type="button" data-qn="4" class="on">4+</button>
+        </div>
+        <p class="why-text" id="why-q1" hidden data-i18n="whyQ1">好多津貼（在職家庭津貼、公屋）按人數定限額，唔使填名。</p>
+      </div>
+      <div class="quick-q" id="quickQ2" role="group" aria-label="收入大概邊格">
+        <p><strong data-i18n="quickQ2">家庭收入大概邊格？</strong> <button type="button" class="mini-why" data-why="q2" data-i18n="whyAsk2">點解問？</button></p>
+        <div class="quick-opts quick-bands" id="quickBand">
+          <button type="button" data-qb="tight" data-i18n="qbTight">唔夠食</button><button type="button" data-qb="soso" class="on" data-i18n="qbSoso">僅夠</button><button type="button" data-qb="mid" data-i18n="qbMid">中等</button><button type="button" data-qb="ok" data-i18n="qbOk">唔錯</button>
+        </div>
+        <p class="why-text" id="why-q2" hidden data-i18n="whyQ2">只係用大概範圍對入息限額，唔使填糧單數字。之後想準啲先填實際銀碼。</p>
+      </div>
+      <div class="quick-result" id="quickResult" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="sec sec-top3" aria-labelledby="secTopH">
+      <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg></div><div class="sec-t"><h3 id="secTopH" data-i18n="secTop">最值得搞掂嘅3樣</h3><p data-i18n="secTopD">按每月金額排，金額係估算</p></div></div>
+      <div id="top3" class="grid grid-top3" role="list" aria-label="最值得 Top 3"></div>
+    </section>
+
+    <section class="expect" aria-labelledby="expectH">
+      <h3 id="expectH" data-i18n="expectH">會發生咩事？</h3>
+      <ol>
+        <li data-i18n="ex1">睇Top 3，㩒「立即申請」去政府網站</li>
+        <li data-i18n="ex2">帶齊下面寫住嘅證明文件（一般1–3份）</li>
+        <li data-i18n="ex3">交表後等政府批，WellFairy唔會代交表</li>
+      </ol>
+    </section>
 
     <div class="match-body">
       <aside class="rail rail-left" aria-label="篩選 Filters">
@@ -91,8 +146,11 @@
           <div id="now" class="grid" role="list" aria-label="符合資格 Eligible"></div>
         </section>
 
-        <section class="sec sec-miss" aria-labelledby="secMissH">
-          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可解鎖</p></div><span class="sec-count" id="missCount" role="status" aria-live="polite"></span></div>
+        <button id="missBar" type="button" class="miss-bar" aria-expanded="false" aria-controls="secMiss">
+          <span aria-hidden="true">🔒</span><strong data-i18n="secAlmost">差一步</strong><span class="sec-count" id="missCountBar"></span><span class="miss-bar-toggle" data-i18n="expand">展開 ▾</span>
+        </button>
+        <section class="sec sec-miss" id="secMiss" aria-labelledby="secMissH" hidden>
+          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可解鎖</p></div><span class="sec-count" id="missCount" role="status" aria-live="polite"></span><button class="linkbtn" id="missToggle" type="button" aria-expanded="false" aria-controls="secMiss" data-i18n="collapse">收起 ▴</button></div>
           <div id="miss" class="grid" role="list" aria-label="差一步 One step away"></div>
         </section>
       </div>
@@ -102,6 +160,14 @@
           <div id="soon" class="hscroll hscroll-vert" role="list" aria-label="即將截止 Closing soon"></div>
         </section>
       </aside>
+    </div>
+  </section>
+
+  <section id="tab-next" role="tabpanel" aria-labelledby="tabbtn-next" tabindex="0" hidden>
+    <div class="sheet sheet-next">
+      <h2 data-i18n="nextH">✅ 我的下一步</h2>
+      <p class="hint" data-i18n="nextD">你收藏嘅每樣嘢，下一步寫晒喺度。做完一樣，㩒「搞掂」。</p>
+      <div id="nextList" class="grid" role="list" aria-label="下一步 Next steps"></div>
     </div>
   </section>
 
@@ -118,6 +184,8 @@
       </div>
     </div>
   </section>
+
+  <p class="all-link"><button type="button" class="linkbtn" id="browseAllBtn" data-i18n="browseAll">想自己慢慢搵？瀏覽全部 200+ 項 →</button></p>
 
   <section id="tab-profile" role="tabpanel" aria-labelledby="tabbtn-profile" tabindex="0" hidden>
     <div class="sheet">
