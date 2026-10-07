@@ -73,62 +73,62 @@ const I18N = {
   brandSub: ['Welfare navigator · Find support', '支援里 · 福利導航'],
   trustTop: ['Free · Data stays on your device', '免費 · 資料留在你手機'],
   heroKicker: ['Support you may have missed', '你可能未曾發現的支援'],
-  heroLead: ['Some support should find you.', '有啲福利，唔係你搵佢，係佢應該搵你。'],
-  heroPromise: ['Welly looks at your family, income, housing and life situation to uncover support you may qualify for.', 'Welly 根據你嘅家庭、收入、住屋同生活狀況，幫你搵出可能合資格嘅支援。'],
-  heroCTA: ['Start my benefit check', '開始我的福利檢查'],
-  heroNote: ['build your profile · no sign-up', '建立檔案 · 不需登記'],
-  discoveryLabel: ['YOUR SUPPORT MAP', '你的支援地圖'],
-  profileStripTitle: ['The more Welly knows, the sharper your matches.', '你的資料越完整，Welly 越懂你。'],
-  profileStripText: ['Income, children, housing and caring details stay on your device.', '收入、子女、住屋、長者照顧等資料，都只會留在你的裝置。'],
-  profileStripCTA: ['Complete profile', '完善檔案'],
+  heroLead: ['Some support may be made for you — worth a look.', '有些福利，可能正是為你而設，不妨了解一下。'],
+  heroPromise: ['Welly checks your family, income, housing and life situation to find support you may qualify for.', 'Welly 會根據你的家庭、收入、住屋和生活狀況，幫你找出可能符合資格的支援。'],
+  heroCTA: ['Check my benefits', '開始檢查我的福利'],
+  heroNote: ['Build your profile · no sign-up needed', '建立檔案 · 不用登記'],
+  discoveryLabel: ['Your support map', '你的支援地圖'],
+  profileStripTitle: ['The more complete your profile, the more accurate your matches.', '資料越完整，配對越準確。'],
+  profileStripText: ['Your income, children, housing and caring details stay on your device.', '收入、子女、住屋和照顧家人的資料，只會留在你的裝置裡。'],
+  profileStripCTA: ['Complete my profile', '完善我的檔案'],
   install: ['⬇ Install', '⬇ 安裝'],
-  tabMatch: ['Match', '配對'], tabAll: ['All', '全部'], tabNext: ['Next', '下一步'], tabProfile: ['Profile', '檔案'], tabAbout: ['About', '關於'],
-  momentsH: ['How are things right now? Pick one to start', '你而家咩情況？揀一個開始'],
-  quickH: ['60-second quick check', '60秒快速檢查'],
-  quickWhy: ['Answer 3 — no exact figures needed. See your monthly upside first.', '答3條，不用填實際銀碼 — 先睇你每月可能多幾多。'],
-  quickQ1: ['Who lives together?', '幾多人住埋一齊？'],
-  quickQ2: ['Roughly which income band?', '家庭收入大概邊格？'],
-  whyAsk: ['Why ask?', '點解問？'], whyAsk2: ['Why ask?', '點解問？'],
-  whyQ1: ['Many allowances set caps by household size — no names needed.', '好多津貼（在職家庭津貼、公屋）按人數定限額，唔使填名。'],
-  whyQ2: ['Only a rough band is matched against income caps. Give exact figures later for precision.', '只係用大概範圍對入息限額，唔使填糧單數字。之後想準啲先填實際銀碼。'],
-  qbTight: ['Tight', '唔夠食'], qbSoso: ['Just enough', '僅夠'], qbMid: ['Middle', '中等'], qbOk: ['Comfortable', '唔錯'],
-  secTop: ['Top 3 worth doing', '最值得搞掂嘅3樣'],
-  secTopD: ['Ranked by monthly amount; amounts are estimates', '按每月金額排，金額係估算'],
-  expectH: ['What happens next?', '會發生咩事？'],
-  ex1: ['Pick from the Top 3, tap Apply to go to the government site', '睇Top 3，㩒「立即申請」去政府網站'],
-  ex2: ['Bring the listed proof documents (usually 1–3)', '帶齊下面寫住嘅證明文件（一般1–3份）'],
-  ex3: ['Wait for the government decision — Welly never files for you', '交表後等政府批，Welly唔會代交表'],
-  browseAll: ['Prefer to browse yourself? See all 200+ schemes →', '想自己慢慢搵？瀏覽全部 200+ 項 →'],
+  tabMatch: ['Match', '配對'], tabAll: ['All', '全部'], tabNext: ['Next steps', '下一步'], tabProfile: ['Profile', '檔案'], tabAbout: ['About', '關於'],
+  momentsH: ['How are things for you right now? Pick one to start', '你現在的情況是？選一項開始吧'],
+  quickH: ['60-second quick check', '60 秒快速檢查'],
+  quickWhy: ['Answer 3 questions — no exact figures needed. See how much more you could get each month.', '回答 3 條問題，不用填寫實際金額 — 先看看你每月可能多出多少。'],
+  quickQ1: ['How many people live together?', '同住有幾多人？'],
+  quickQ2: ['Roughly which income range?', '家庭收入大概屬於哪個範圍？'],
+  whyAsk: ['Why do we ask?', '為甚麼這樣問？'], whyAsk2: ['Why do we ask?', '為甚麼這樣問？'],
+  whyQ1: ['Many allowances set limits by household size — no names needed.', '不少津貼（例如在職家庭津貼、公屋）會按家庭人數定限額，不用填寫姓名。'],
+  whyQ2: ['We only use a rough range to check income limits. You can give exact figures later for a more precise match.', '這裡只用大概範圍對照入息限額，不用填寫糧單數字。之後想配對得更準確，才填寫實際金額。'],
+  qbTight: ['A bit tight', '比較緊絀'], qbSoso: ['Just enough', '剛好夠用'], qbMid: ['Average', '一般'], qbOk: ['Comfortable', '比較寬裕'],
+  secTop: ['Top 3 to prioritise', '最值得優先處理的 3 項'],
+  secTopD: ['Ranked by monthly amount; amounts are estimates', '按每月金額排序，金額為估算'],
+  expectH: ['What happens next?', '接下來會怎樣？'],
+  ex1: ['Look at your Top 3, then press “Apply now” to go to the government website', '看看 Top 3，按「立即申請」前往政府網站'],
+  ex2: ['Prepare the proof documents listed below (usually 1–3)', '準備好下面列出的證明文件（一般 1–3 份）'],
+  ex3: ['Wait for the government’s decision — Welly does not submit applications for you', '遞交申請後等候政府審批，Welly 不會代你遞表'],
+  browseAll: ['Prefer to look around yourself? Browse all 200+ schemes →', '想自己慢慢找？瀏覽全部 200+ 項 →'],
   nextH: ['My next steps', '我的下一步'],
-  nextD: ['Everything you saved, with its next step. Tap Done when finished.', '你收藏嘅每樣嘢，下一步寫晒喺度。做完一樣，㩒「搞掂」。'],
-  nextEmpty: ['Nothing saved yet — tap ☆ on any Top 3 card.', '未收藏任何項目 — 喺Top 3卡上㩒 ☆ 啦。'],
-  doneBtn: ['Done', '搞掂'],
-  estMo: ['/mo est.', '/月（估算）'],
-  lumpEst: ['est.', '（估算）'],
-  nextStepDefault: ['Apply on the official site, bring proof docs', '去官網申請，帶齊證明文件'],
-  whyMatch: ['Why you match', '點解你符合'],
-  unlockBy: ['Unlock by:', '做埋呢樣就攞到：'],
-  topEmpty: ['Answer the 60-second check to see your Top 3.', '答完60秒檢查就睇到你嘅Top 3。'],
-  heroEyebrow: ['Benefits we found for you', '為您找到以下資助'],
+  nextD: ['Everything you saved, with its next step. Press “Done” when you finish one.', '你收藏的項目，下一步都寫在這裡。完成一項，就按「完成」。'],
+  nextEmpty: ['Nothing saved yet — press ☆ on any Top 3 card to save it.', '還沒有收藏 — 在 Top 3 卡上按 ☆ 即可收藏。'],
+  doneBtn: ['Done', '完成'],
+  estMo: ['/mo (estimate)', '/月（估算）'],
+  lumpEst: ['(estimate)', '（估算）'],
+  nextStepDefault: ['Apply on the official website, and bring your proof documents', '前往官方網站申請，並帶齊證明文件'],
+  whyMatch: ['Why you qualify', '你符合的原因'],
+  unlockBy: ['One step left:', '還差這一步：'],
+  topEmpty: ['Answer the 60-second check to see your Top 3.', '完成 60 秒快速檢查，即可看到你的 Top 3。'],
+  heroEyebrow: ['Benefits we found for you', '為你找到以下資助'],
   heroUnit: ['benefits', '項福利'],
   statDeadline: ['Due in 30 days', '30日內截止'], statSaved: ['Saved', '已收藏'], statCat: ['Categories', '類別'],
   chipHidden: ['Hidden', '已隱藏'],
   hide: ['Hide', '隱藏'], unhide: ['Unhide', '取消隱藏'], unhideAll: ['↩ Unhide all', '↩ 全部取消隱藏'],
-  hiddenEmpty: ['No hidden schemes — tap Hide on any card to hide it.', '暫無隱藏計劃 — 按任何卡上嘅隱藏即可隱藏。'],
+  hiddenEmpty: ['No hidden schemes — press Hide on any card to hide it.', '暫時沒有隱藏的計劃 — 在任何卡片上按「隱藏」即可隱藏。'],
   matchRate: ['Match rate', '配對率'],
   secSoon: ['Closing soon', '即將截止'],
-  secSoonD: ['These have deadlines — please apply in good time.', '這些設有截止日期，敬請及時辦理。'],
+  secSoonD: ['These have deadlines — please apply early.', '這些項目設有截止日期，請盡早辦理。'],
   viewAll: ['See all →', '查看全部 →'],
   secNow: ['Eligible', '符合資格'],
-  secNowD: ['You qualify — you are welcome to apply directly.', '您符合資格，歡迎直接申請。'],
+  secNowD: ['You qualify — you can apply directly.', '你符合資格，可以直接申請。'],
   secAlmost: ['One step away', '只差一步'],
-  secMissD: ['Closest first — meet the condition to unlock.', '按接近程度排序，符合條件即可解鎖。'],
-  urgent: ['needing action', '件需辦理'],
+  secMissD: ['Shown closest first — meet the condition to qualify.', '按接近程度排序，符合條件即可申請。'],
+  urgent: ['need action', '項需辦理'],
   items: ['items', '項'],
-  missSub: ['A document or a birthday away', '補交文件或年滿歲數即可申請'],
+  missSub: ['A document or an age requirement away', '補交文件或符合年齡便可申請'],
   searchLabel: ['Search benefits', '搜尋福利'],
   searchPh: ['Search HCV / KCFRS / WFA / transport…', '搜尋 醫療券 / KCFRS / WFA / 車船津貼…'],
-  profileH: ['2-minute profile gives sharper matches', '用2分鐘建立檔案，配對更準確'],
+  profileH: ['A 2-minute profile gives more accurate matches', '花 2 分鐘建立檔案，配對更準確'],
   importLabel: ['Import profile file', '匯入檔案'],
   saveLabel: ['Save', '收藏'], savedLabel: ['Saved', '已收藏'],
   viewDetails: ['View details', '查看詳情'],
@@ -149,24 +149,24 @@ const I18N = {
   fAssets: ['Net assets (HKD)', '總資產淨值（港元）'],
   fTransport: ['Transport/mo (HKD)', '每月車費（港元）'],
   fSex: ['Sex', '性別'], fHousing: ['Housing', '住屋'],
-  fMarried: ['Married / cohabiting', '已婚／同居'], fMarriedHint: ['(couple caps)', '（夫婦限額）'],
-  fDisability: ['Severely disabled (with medical proof)', '重度殘疾（持醫生證明）'],
+  fMarried: ['Married / living together', '已婚／同居'], fMarriedHint: ['(couples have a shared limit)', '（夫婦限額）'],
+  fDisability: ['Severe disability (with a doctor’s letter)', '重度殘疾（持醫生證明）'],
   fEdu: ['Education', '學歷'],
   fOwns: ['Owned property in the past 24 months', '過去24個月曾擁有物業'],
-  fOnAllow: ['Receiving Old Age / Disability Allowance', '正領取高齡／傷殘津貼'], fOnAllowHint: ['(excl. OALA)', '（長者生活津貼除外）'],
-  fOnOALA: ['Receiving Old Age Living Allowance', '正領取長者生活津貼'], fOnOALAHint: ['(links dental & medical support)', '（可銜接牙科及醫療支援）'],
-  fWorkhrs: ['Total household work hrs/mo', '全家每月總工時'],
-  fKids: ['Kids', '子女'], fKidsHint: ['K1-K3,P1-P6,S1-S6 comma-separated', 'K1-K3,P1-P6,S1-S6 逗號分隔'],
-  fElderly: ['Elderly 65+ at home', '家中有65+長者'],
-  fCarer: ['Caring for elderly/disabled family 80+ hrs/mo', '每月照顧長者／殘疾家人80小時以上'],
-  fUnemployed: ['Currently unemployed and seeking work', '現正失業並正尋找工作'],
-  fToddler: ['Toddler not yet in kindergarten at home', '家有未入園幼兒'],
-  fTertiary: ['Tertiary student at home', '家有大專生'],
-  fSmoker: ['Smoker at home', '家有吸煙者'], 
-  fLivesMainland: ['Living in Guangdong/Fujian', '現居廣東／福建'], 
+  fOnAllow: ['Getting Old Age / Disability Allowance', '正領取高齡／傷殘津貼'], fOnAllowHint: ['(not counting OALA)', '（長者生活津貼除外）'],
+  fOnOALA: ['Getting Old Age Living Allowance', '正領取長者生活津貼'], fOnOALAHint: ['(can lead to dental & medical help)', '（可銜接牙科及醫療支援）'],
+  fWorkhrs: ['Total family work hours per month', '全家每月總工時'],
+  fKids: ['Children', '子女'], fKidsHint: ['K1-K3,P1-P6,S1-S6 comma-separated', 'K1-K3,P1-P6,S1-S6 逗號分隔'],
+  fElderly: ['Someone 65+ at home', '家中有65+長者'],
+  fCarer: ['Looking after an older or disabled family member, 80+ hours a month', '每月照顧長者／殘疾家人80小時以上'],
+  fUnemployed: ['Currently out of work and looking for a job', '現正失業並正尋找工作'],
+  fToddler: ['A little one at home, not yet in kindergarten', '家有未入園幼兒'],
+  fTertiary: ['A college or university student at home', '家有大專生'],
+  fSmoker: ['Someone at home smokes', '家有吸煙者'], 
+  fLivesMainland: ['Living in Guangdong or Fujian', '現居廣東／福建'], 
   kidDone: ['Done', '完成'],
-  fChildSEN: ['Child with SEN / awaiting assessment', '子女有特殊需要／正等候評估'],
-  fCSSA: ['On CSSA', '領綜合社會保障援助(綜援）中'], fCSSAHint: ['(excl. WFA)', '(在職家庭津貼不可同領)'],
+  fChildSEN: ['A child with special needs / waiting for assessment', '子女有特殊需要／正等候評估'],
+  fCSSA: ['Getting CSSA', '領綜合社會保障援助(綜援）中'], fCSSAHint: ['(cannot get WFA at the same time)', '(在職家庭津貼不可同領)'],
   od_cw: ['Central & Western', '中西區'], od_east: ['Eastern', '東區'], od_south: ['Southern', '南區'], od_wc: ['Wan Chai', '灣仔'],
   od_kc: ['Kowloon City', '九龍城'], od_kt: ['Kwun Tong', '觀塘'], od_ssp: ['Sham Shui Po', '深水埗'], od_wts: ['Wong Tai Sin', '黃大仙'], od_ytm: ['Yau Tsim Mong', '油尖旺'],
   od_isl: ['Islands', '離島'], od_kwt: ['Kwai Tsing', '葵青'], od_north: ['North', '北區'], od_sk: ['Sai Kung (incl. TKO)', '西貢（含將軍澳）'], od_st: ['Sha Tin', '沙田'],
@@ -177,13 +177,13 @@ const I18N = {
   oe_sec: ['Secondary or below', '中學或以下'], oe_sub: ['Sub-degree', '副學位'], oe_deg: ['Degree or above', '學位或以上'],
   btnExport: ['⬆ Export', '⬆ 匯出'], btnImport: ['⬇ Import', '⬇ 匯入'],
   save: ['💾 Save & re-match', '💾 儲存並重新配對'],
-  hintStore: ['Stored on this phone only (localStorage + your exported profile.json). Catalog is plain-text data/benefits.json.', '只存手機 localStorage + 你 export 的 profile.json。目錄是 data/benefits.json 純文字。'],
-  aboutH: ['Why you can trust this', '為何值得信賴？'],
-  aboutPurpose: ['Welcome to Welly! Answer a few simple questions about yourself and we will match you with the government schemes, allowances and concessions you qualify for — every match backed by its official source, so you can apply with confidence.', '歡迎使用 Welly 支援里！只要答幾條關於你嘅簡單問題，我哋就會幫你配對合資格嘅政府計劃、津貼同優惠，每個配對都附上官方來源，助你輕鬆掌握應得嘅福利。'],
-  ab1: ['Every match explains why you qualify and what proof to bring', '每個配對都會說明您符合的原因，以及需要準備的證明文件'],
-  ab2: ['Every scheme links its government source plus update date', '每個計劃均附上政府來源連結及更新日期'],
-  ab3: ['Guidance only — we never file for you; the government notice prevails', '我們只作提醒，不會代為申請，一切以政府公布為準'],
-  footer: ['Please verify with the official source.', '申請前請以政府網站為準。'],
+  hintStore: ['Kept on this phone only (localStorage and your exported profile.json). The catalogue is plain-text data/benefits.json.', '只會存放在你的手機裡（localStorage 和你匯出的 profile.json）。計劃目錄是純文字 data/benefits.json。'],
+  aboutH: ['Why you can trust Welly', '為甚麼可以放心使用？'],
+  aboutPurpose: ['Welcome to Welly! Answer a few simple questions and we will match you with government schemes, allowances and discounts you may qualify for — every match shows its official source, so you can apply with confidence.', '歡迎使用 Welly 支援里！只要回答幾條簡單問題，我們便會幫你配對符合資格的政府計劃、津貼和優惠，每個配對都附上官方來源，讓你清楚掌握應得的福利。'],
+  ab1: ['Every match explains why you qualify and what proof to prepare', '每個配對都會說明你符合的原因，以及需要準備的證明文件'],
+  ab2: ['Every scheme links to its government source and update date', '每個計劃均附上政府來源連結及更新日期'],
+  ab3: ['Guidance only — we don’t submit for you; please follow the government’s notice', '我們只作提醒，不會代為申請，一切以政府公布為準'],
+  footer: ['Please check the government website before applying.', '申請前請以政府網站為準。'],
   accessibilityStatement: ['Accessibility Statement', '無障礙聲明'],
   expand: ['Expand ▾', '展開 ▾'],
   collapse: ['Collapse ▴', '收起 ▴'],
@@ -195,7 +195,7 @@ function applyI18n() {
   document.querySelectorAll('[data-i18n-opt]').forEach(el => { const v = I18N[el.dataset.i18nOpt]; if (v) el.textContent = pick(v); });
   document.querySelectorAll('[data-i18n-og]').forEach(el => { const v = I18N[el.dataset.i18nOg]; if (v) el.label = pick(v); });
   document.documentElement.lang = LANG === 'zh' ? 'zh-Hant-HK' : 'en-HK';
-  document.title = LANG === 'zh' ? 'Welly 支援里 — 應得的福利，自動話你知' : 'Welly — benefits you qualify for, auto-matched';
+  document.title = LANG === 'zh' ? 'Welly 支援里 — 應得的福利，幫你一次找齊' : 'Welly — find benefits you may qualify for';
   const nav = document.querySelector('nav.tabs'); if (nav) nav.setAttribute('aria-label', t('Main navigation', '主導航'));
   const lt = $('#langToggle'); if (lt) lt.setAttribute('aria-label', t('Switch language, current: Chinese', '切換語言，目前：中文') && (LANG === 'zh' ? '切換語言 Switch language，目前中文' : '切換語言 Switch language, current English'));
   const tb = $('#topBtn'); if (tb) tb.setAttribute('aria-label', t('Back to top', '回到頂部'));
@@ -205,9 +205,9 @@ function applyI18n() {
   const cc = $('#chips'); if (cc) cc.setAttribute('aria-label', t('Category filters', '類別篩選'));
   const ca = $('#chipsAll'); if (ca) ca.setAttribute('aria-label', t('Category filters', '類別篩選'));
 }
-function hkYearsOut(){ const f=$('#profileForm'); if(!f||!f.hkYears) return; const v=+f.hkYears.value; const o=$('#hkYearsOut'); if(o) o.textContent = v>=7 ? t('7+ years','7年或以上') : v+t(' yr','年'); }
+function hkYearsOut(){ const f=$('#profileForm'); if(!f||!f.hkYears) return; const v=+f.hkYears.value; const o=$('#hkYearsOut'); if(o) o.textContent = v>=7 ? t('7 or more years','7年或以上') : v+t(' years','年'); }
 const CAT_ICON = { elderly: '👵', student: '🎒', family: '👨‍👩‍👧', health: '🏥', transport: '🚌', housing: '🏠' };
-const CAT_NAME = { elderly: {en:'Elderly',zh:'長者'}, student: {en:'Study',zh:'升學'}, family: {en:'Family',zh:'家庭'}, health: {en:'Health',zh:'健康'}, transport: {en:'Transport',zh:'交通'}, housing: {en:'Housing',zh:'房屋'} };
+const CAT_NAME = { elderly: {en:'Older adults',zh:'長者'}, student: {en:'Education',zh:'升學'}, family: {en:'Family',zh:'家庭'}, health: {en:'Health',zh:'健康'}, transport: {en:'Transport',zh:'交通'}, housing: {en:'Housing',zh:'房屋'} };
 const LIFE_EVENTS = [
   {id:'elderly-care',en:'Elderly Care',zh:'長者護理'},
   {id:'newborn-parenting',en:'Newborn/Parenting',zh:'新生兒/育兒'},
@@ -217,12 +217,12 @@ const LIFE_EVENTS = [
 ];
 // Citizen-first moments (home entry). Each maps to a predicate over needs/category.
 const MOMENTS = [
-  {id:'baby',    icon:'🍼', en:'Baby / kids',      zh:'生咗仔 / 有細路', test:b=>{const n=b.needs||{};return !!(n.has_kids_any||n.has_kids_level||n.toddler||n.child_sen||n.tertiary||n.single_parent);}},
-  {id:'job',     icon:'💼', en:'Out of work',      zh:'失業搵工',       test:b=>{const n=b.needs||{};return !!(n.unemployed||n.requires_work_hours!=null||n.wfa_exact);}},
-  {id:'carer',   icon:'🧑‍⚕️', en:'Caring for someone', zh:'照顧老人/病人', test:b=>{const n=b.needs||{};return !!(n.is_carer||n.carer_context||n.requires_elderly_in_house||n.requires_disability);}},
-  {id:'housing', icon:'🏠', en:'Rent / mortgage',  zh:'交租供樓',       test:b=>b.category==='housing'||!!(b.needs||{}).prh_exact,},
-  {id:'health',  icon:'🏥', en:'Seeing a doctor',  zh:'睇醫生食藥',     test:b=>b.category==='health'||b.category==='elderly'||!!(b.needs||{}).oala_or_waiver,},
-  {id:'study',   icon:'🎒', en:'Study / courses',  zh:'返學進修',       test:b=>b.category==='student'||(b.needs||{}).edu_max_rank!=null||!!(b.needs||{}).afi_max,},
+  {id:'baby',    icon:'🍼', en:'Baby / kids',      zh:'初生嬰兒 / 育兒', test:b=>{const n=b.needs||{};return !!(n.has_kids_any||n.has_kids_level||n.toddler||n.child_sen||n.tertiary||n.single_parent);}},
+  {id:'job',     icon:'💼', en:'Out of work',      zh:'失業 / 求職',       test:b=>{const n=b.needs||{};return !!(n.unemployed||n.requires_work_hours!=null||n.wfa_exact);}},
+  {id:'carer',   icon:'🧑‍⚕️', en:'Caring for someone', zh:'照顧長者 / 病人', test:b=>{const n=b.needs||{};return !!(n.is_carer||n.carer_context||n.requires_elderly_in_house||n.requires_disability);}},
+  {id:'housing', icon:'🏠', en:'Rent / mortgage',  zh:'交租 / 供樓',       test:b=>b.category==='housing'||!!(b.needs||{}).prh_exact,},
+  {id:'health',  icon:'🏥', en:'Seeing a doctor',  zh:'求醫 / 用藥',     test:b=>b.category==='health'||b.category==='elderly'||!!(b.needs||{}).oala_or_waiver,},
+  {id:'study',   icon:'🎒', en:'Study / courses',  zh:'升學 / 進修',       test:b=>b.category==='student'||(b.needs||{}).edu_max_rank!=null||!!(b.needs||{}).afi_max,},
 ];
 let QUICK = { moment:'baby', n:4, band:'soso' };
 const BAND_INCOME = { tight:12000, soso:22000, mid:38000, ok:65000 };
@@ -257,20 +257,20 @@ function estimateAmount(b) {
 function isMonthlyAmt(b) { return /每月|每月|month|\/mo|per month/i.test(`${b.value_summary_zh||''} ${b.value_summary_en||''}`); }
 function humanDeadline(b) {
   const d = daysTo(b.deadline);
-  if (d == null) return t('Ongoing', '長期辦理');
+  if (d == null) return t('No deadline', '長期辦理');
   if (d < 0) return t('Closed', '已截止');
   if (d === 0) return t('Closes today', '今日截止');
-  if (d === 1) return t('Closes tomorrow', '聽日截止');
-  if (d <= 30) return LANG==='zh' ? `剩${d}日` : `${d} days left`;
+  if (d === 1) return t('Closes tomorrow', '明日截止');
+  if (d <= 30) return LANG==='zh' ? `尚餘 ${d} 日` : `${d} days left`;
   return b.deadline;
 }
 function nextStepText(b) {
   const docs = (LANG==='zh' ? (b.proof_needed_zh||b.proof_needed_en) : b.proof_needed_en) || [];
   const first = docs.length ? docs.slice(0,2).join('、') : '';
   const host = (()=>{ try { return new URL(b.apply_link||b.source_url).hostname.replace(/^www\./,''); } catch { return ''; } })();
-  if (first && host) return LANG==='zh' ? `去 ${host} 交表，帶齊${first}` : `Apply at ${host}, bring ${first}`;
-  if (host) return LANG==='zh' ? `去 ${host} 交表` : `Apply at ${host}`;
-  return t('Apply on the official site, bring proof docs', '去官網申請，帶齊證明文件');
+  if (first && host) return LANG==='zh' ? `前往 ${host} 遞交申請，帶齊${first}` : `Apply at ${host} — please bring ${first}`;
+  if (host) return LANG==='zh' ? `前往 ${host} 遞交申請` : `Apply at ${host}`;
+  return t('Apply on the official website, and bring your proof documents', '前往官方網站申請，並帶齊證明文件');
 }
 function getLifeEvents(b){
   const n = b.needs || {};
@@ -287,7 +287,7 @@ const def = () => ({ age: 34, hk_resident: true, hkYears: 7, householdN: 4, mont
 // AFI = gross annual income / (household members + 1). SFO 2026/27 bands:
 // 0–46,292 full · 46,293–56,707 3/4 · 56,708–89,515 half · >89,515 ineligible
 const afiOf = p => Math.round(((+p.monthlyIncome || 0) * 12) / ((+p.householdN || 1) + 1));
-const afiLevel = afi => afi <= 46292 ? {en:'Full 100%',zh:'全額 100%'} : afi <= 56707 ? {en:'3/4 75%',zh:'3/4級 75%'} : afi <= 89515 ? {en:'Half 50%',zh:'半額 50%'} : {en:'Over limit',zh:'超入息限額'};
+const afiLevel = afi => afi <= 46292 ? {en:'Full (100%)',zh:'全額 100%'} : afi <= 56707 ? {en:'Three-quarters (75%)',zh:'3/4級 75%'} : afi <= 89515 ? {en:'Half (50%)',zh:'半額 50%'} : {en:'Over the limit',zh:'超出入息限額'};
 // WFA monthly income caps (Apr 2026–Mar 2027) rise with household size; v1 uses
 // conservative single figure and always links official table. Raise per-size later.
 // WFA 2026-27 exact table (Apr 2026–Mar 2027): [full, 3/4, half monthly income, assets] by household size
@@ -298,7 +298,7 @@ const CARER26 = {1:18000,2:24225,3:30750,4:38700,5:47925,6:52800};
 const PRH26 = {1:[13230,295000],2:[20680,400000],3:[25870,521000],4:[32020,608000],5:[40150,675000],6:[46620,731000],7:[51400,781000],8:[57470,816000],9:[63380,904000],10:[69150,974000]};
 function wfaLevel(p){ const r=WFA26[Math.min(+p.householdN||1,6)]; const m=+p.monthlyIncome||0, a2=+p.assets||0;
   if(m>r[2]||a2>r[3]) return null;
-  return m<=r[0]?{en:'Full rate',zh:'全額'}:m<=r[1]?{en:'3/4 rate',zh:'四分三額'}:{en:'Half rate',zh:'半額'}; }
+  return m<=r[0]?{en:'Full rate',zh:'全額'}:m<=r[1]?{en:'Three-quarters rate',zh:'四分三額'}:{en:'Half rate',zh:'半額'}; }
 const loadP = () => { try { const p = JSON.parse(localStorage.getItem(LS_KEY)); if (p && typeof p==='object') {
   const m = {...def(), ...p};
   if (m.monthlyIncome == null && p.incomeBand) m.monthlyIncome = {low:20000,'lower-mid':38000,'upper-mid':60000,high:100000}[p.incomeBand] ?? 38000;
@@ -320,50 +320,50 @@ function audit(b, p) {
   // Returns list of human-readable blockers (already in UI language). Empty = match.
   const n = b.needs || {}, r = [];
   const R = (en, zh) => r.push(t(en, zh));
-  if (n.min_age != null && (p.age||0) < n.min_age) R(`Age ${p.age||0}, need ${n.min_age}`, `差${n.min_age-(p.age||0)}歲先到${n.min_age}歲`);
-  if (n.max_age != null && (p.age||0) > n.max_age) R(`Over age ${n.max_age}`, `超齡${n.max_age}歲`);
-  if (n.sex && (p.sex||'') !== n.sex) R(n.sex==='female'?'Women only':'Men only', n.sex==='female'?'限女性':'限男性');
-  if (n.hk_resident && !p.hk_resident) R('Needs HK resident', '需香港居民');
-  if (n.min_hk_years != null && (+p.hkYears ?? 0) < n.min_hk_years) R(`HK years short by ${n.min_hk_years-(+p.hkYears??0)}`, `居港年數差${n.min_hk_years-(+p.hkYears??0)}年`);
-  if (n.districts && !n.districts.includes(p.district)) R('Wrong district', '地區不合');
-  if (n.housing_in && !n.housing_in.includes(p.housing||'private')) R(n.housing_in.includes('prh')?'Needs PRH tenancy':'Needs private housing', n.housing_in.includes('prh')?'需公屋戶':'需私樓戶');
-  if (n.min_transport_spend != null && (+p.transportSpend||0) < n.min_transport_spend) R(`Transport $${p.transportSpend||0}, need $${n.min_transport_spend}`, `車費$${p.transportSpend||0}，需滿$${n.min_transport_spend}`);
-  if (n.requires_disability && !p.hasDisability) R('Needs disabled member', '需殘疾成員');
-  if (n.is_carer && !p.isCarer) R('Needs 80+hrs/mo carer', '需每月照顧80小時以上');
+  if (n.min_age != null && (p.age||0) < n.min_age) R(`Age ${p.age||0} — needs ${n.min_age}`, `還差 ${n.min_age-(p.age||0)} 歲才滿 ${n.min_age} 歲`);
+  if (n.max_age != null && (p.age||0) > n.max_age) R(`Over the age limit of ${n.max_age}`, `已超過 ${n.max_age} 歲上限`);
+  if (n.sex && (p.sex||'') !== n.sex) R(n.sex==='female'?'For women only':'For men only', n.sex==='female'?'限女性':'限男性');
+  if (n.hk_resident && !p.hk_resident) R('Hong Kong resident status needed', '需要香港居民身份');
+  if (n.min_hk_years != null && (+p.hkYears ?? 0) < n.min_hk_years) R(`Living in HK ${n.min_hk_years-(+p.hkYears??0)} year(s) short`, `居港年數還差 ${n.min_hk_years-(+p.hkYears??0)} 年`);
+  if (n.districts && !n.districts.includes(p.district)) R('Different district required', '地區不符');
+  if (n.housing_in && !n.housing_in.includes(p.housing||'private')) R(n.housing_in.includes('prh')?'Public rental housing tenant needed':'Private housing needed', n.housing_in.includes('prh')?'需要是公屋住戶':'需要是私樓住戶');
+  if (n.min_transport_spend != null && (+p.transportSpend||0) < n.min_transport_spend) R(`Transport $${p.transportSpend||0} — needs $${n.min_transport_spend}`, `車費 $${p.transportSpend||0}，需要滿 $${n.min_transport_spend}`);
+  if (n.requires_disability && !p.hasDisability) R('A disabled family member needed', '需要有殘疾成員');
+  if (n.is_carer && !p.isCarer) R('Carer of 80+ hours a month needed', '需要每月照顧 80 小時以上');
   if (n.prh_exact){ const r=PRH26[Math.min(Math.max(+p.householdN||1,1),10)];
-    if((+p.monthlyIncome||0)>r[0]||(+p.assets||0)>r[1]) R(`Over PRH line $${r[0].toLocaleString()}/mo or assets $${r[1].toLocaleString()}`, `超公屋線（月入$${r[0].toLocaleString()}／資產$${r[1].toLocaleString()}）`); }
+    if((+p.monthlyIncome||0)>r[0]||(+p.assets||0)>r[1]) R(`Over the public housing line ($${r[0].toLocaleString()}/mo or assets $${r[1].toLocaleString()})`, `超出公屋申請線（月入 $${r[0].toLocaleString()}／資產 $${r[1].toLocaleString()}）`); }
   if (n.carer_income_exact){ const cap=CARER26[Math.min(+p.householdN||1,6)];
-    if((+p.monthlyIncome||0)>cap) R(`Over carer income line $${cap.toLocaleString()}/mo`, `超護老者津貼入息線（月入$${cap.toLocaleString()}）`); }
-  if (n.unemployed && !p.unemployed) R('Needs current unemployment', '需現正失業');
-  if (n.toddler && !p.hasToddler) R('Needs pre-K1 toddler at home', '需家有未入園幼兒');
-  if (n.lives_mainland && !p.livesMainland) R('Needs GD/Fujian residence', '需現居廣東／福建');
-  if (n.smoker && !p.smoker) R('Needs a smoker at home', '需家有吸煙者');
-  if (n.has_kids_any && !((p.kids||[]).length || p.hasToddler || p.hasTertiary)) R('Needs a child at home', '需家有子女');
-  if (n.single_parent && (p.married || !((p.kids||[]).length || p.hasToddler || p.hasTertiary))) R('Needs single parenthood', '需單親身份');
-  if (n.tertiary && !p.hasTertiary) R('Needs tertiary student at home', '需家有大專生');
-  if (n.child_sen && !p.childSEN) R('Needs SEN child', '需SEN子女');
-  if (n.carer_context && !(p.hasElderly || p.hasDisability || p.isCarer || (p.age||0) >= 60)) R('No care context at home', '家中暫無照顧情境');
-  if (n.no_property && p.ownsProperty) R('Owns property', '擁有物業');
-  if (n.no_other_allowance && (p.onAllowance || p.isCSSA)) R('On other allowance', '已領其他津貼');
-  if (n.oala_or_waiver && !(p.onOALA || p.isCSSA)) R('Needs OALA / fee waiver', '需長者生活津貼/醫療減免');
-  if (n.edu_max_rank != null && (+p.eduRank ?? 1) > n.edu_max_rank) R('Education above line', '學歷超線');
-  if (n.requires_elderly_in_house && !p.hasElderly && !(p.age>=65)) R('No elderly 65+ at home', '無65歲+長者同住');
-  if (n.requires_work_hours != null && (p.workHours||0) < n.requires_work_hours) R(`Work hrs short by ${n.requires_work_hours-(p.workHours||0)}`, `工時差${n.requires_work_hours-(p.workHours||0)}小時`);
-  if (n.afi_max != null && afiOf(p) > n.afi_max) R(`AFI ${afiOf(p).toLocaleString()} over ${n.afi_max.toLocaleString()}`, `經調整家庭收入${afiOf(p).toLocaleString()}，超出限額${n.afi_max.toLocaleString()}`);
+    if((+p.monthlyIncome||0)>cap) R(`Over the carer income line ($${cap.toLocaleString()}/mo)`, `超出護老者津貼入息線（月入 $${cap.toLocaleString()}）`); }
+  if (n.unemployed && !p.unemployed) R('Currently out of work needed', '需要現時失業');
+  if (n.toddler && !p.hasToddler) R('A pre-kindergarten child at home needed', '需要家中有未入園幼兒');
+  if (n.lives_mainland && !p.livesMainland) R('Living in Guangdong / Fujian needed', '需要現居廣東／福建');
+  if (n.smoker && !p.smoker) R('Someone who smokes at home needed', '需要家中有吸煙者');
+  if (n.has_kids_any && !((p.kids||[]).length || p.hasToddler || p.hasTertiary)) R('A child at home needed', '需要家中有子女');
+  if (n.single_parent && (p.married || !((p.kids||[]).length || p.hasToddler || p.hasTertiary))) R('Single-parent status needed', '需要是單親身份');
+  if (n.tertiary && !p.hasTertiary) R('A college / university student at home needed', '需要家中有大專生');
+  if (n.child_sen && !p.childSEN) R('A child with special needs needed', '需要有特殊學習需要子女');
+  if (n.carer_context && !(p.hasElderly || p.hasDisability || p.isCarer || (p.age||0) >= 60)) R('No one needing care at home', '家中暫無需要照顧的成員');
+  if (n.no_property && p.ownsProperty) R('No property in your name', '名下擁有物業');
+  if (n.no_other_allowance && (p.onAllowance || p.isCSSA)) R('Already getting another allowance', '已領取其他津貼');
+  if (n.oala_or_waiver && !(p.onOALA || p.isCSSA)) R('OALA or medical fee waiver needed', '需要領取長者生活津貼／醫療費用減免');
+  if (n.edu_max_rank != null && (+p.eduRank ?? 1) > n.edu_max_rank) R('Education above the limit', '學歷超出上限');
+  if (n.requires_elderly_in_house && !p.hasElderly && !(p.age>=65)) R('No one 65+ living with you', '家中沒有 65 歲以上長者同住');
+  if (n.requires_work_hours != null && (p.workHours||0) < n.requires_work_hours) R(`${n.requires_work_hours-(p.workHours||0)} work hours short`, `工作時數還差 ${n.requires_work_hours-(p.workHours||0)} 小時`);
+  if (n.afi_max != null && afiOf(p) > n.afi_max) R(`Adjusted family income $${afiOf(p).toLocaleString()} is over the $${n.afi_max.toLocaleString()} limit`, `經調整家庭收入 $${afiOf(p).toLocaleString()}，超出限額 $${n.afi_max.toLocaleString()}`);
   if (n.wfa_exact){ const lv=wfaLevel(p); const nn=Math.min(+p.householdN||1,6);
-    if(!lv){ const r=WFA26[nn]; R(`Over WFA half-rate line $${r[2].toLocaleString()}/mo or assets $${r[3].toLocaleString()} (${nn}-person)`, `超在職家庭津貼半額線（月入$${r[2].toLocaleString()}／資產$${r[3].toLocaleString()}，${nn}人戶）`); } }
-  if (n.max_monthly_income_single != null && !p.married && (+p.monthlyIncome||0) > n.max_monthly_income_single) R(`Income over $${n.max_monthly_income_single.toLocaleString()}/mo`, `月入超$${n.max_monthly_income_single.toLocaleString()}`);
-  if (n.max_monthly_income_couple != null && p.married && (+p.monthlyIncome||0) > n.max_monthly_income_couple) R(`Income over $${n.max_monthly_income_couple.toLocaleString()}/mo`, `月入超$${n.max_monthly_income_couple.toLocaleString()}`);
-  if (n.max_assets_single != null && !p.married && (+p.assets||0) > n.max_assets_single) R(`Assets over $${n.max_assets_single.toLocaleString()}`, `資產超$${n.max_assets_single.toLocaleString()}`);
-  if (n.max_assets_couple != null && p.married && (+p.assets||0) > n.max_assets_couple) R(`Assets over $${n.max_assets_couple.toLocaleString()}`, `資產超$${n.max_assets_couple.toLocaleString()}`);
+    if(!lv){ const r=WFA26[nn]; R(`Over the WFA half-rate line ($${r[2].toLocaleString()}/mo or assets $${r[3].toLocaleString()}, ${nn}-person)`, `超出在職家庭津貼半額線（月入 $${r[2].toLocaleString()}／資產 $${r[3].toLocaleString()}，${nn} 人家庭）`); } }
+  if (n.max_monthly_income_single != null && !p.married && (+p.monthlyIncome||0) > n.max_monthly_income_single) R(`Income over $${n.max_monthly_income_single.toLocaleString()}/mo`, `月入超出 $${n.max_monthly_income_single.toLocaleString()}`);
+  if (n.max_monthly_income_couple != null && p.married && (+p.monthlyIncome||0) > n.max_monthly_income_couple) R(`Income over $${n.max_monthly_income_couple.toLocaleString()}/mo`, `月入超出 $${n.max_monthly_income_couple.toLocaleString()}`);
+  if (n.max_assets_single != null && !p.married && (+p.assets||0) > n.max_assets_single) R(`Assets over $${n.max_assets_single.toLocaleString()}`, `資產超出 $${n.max_assets_single.toLocaleString()}`);
+  if (n.max_assets_couple != null && p.married && (+p.assets||0) > n.max_assets_couple) R(`Assets over $${n.max_assets_couple.toLocaleString()}`, `資產超出 $${n.max_assets_couple.toLocaleString()}`);
   const big = (+p.householdN||1) >= 2;
-  if (n.max_monthly_income_1p != null && !big && (+p.monthlyIncome||0) > n.max_monthly_income_1p) R(`Income over $${n.max_monthly_income_1p.toLocaleString()}/mo`, `月入超$${n.max_monthly_income_1p.toLocaleString()}`);
-  if (n.max_monthly_income_2p != null && big && (+p.monthlyIncome||0) > n.max_monthly_income_2p) R(`Income over $${n.max_monthly_income_2p.toLocaleString()}/mo`, `月入超$${n.max_monthly_income_2p.toLocaleString()}`);
-  if (n.max_assets_1p != null && !big && (+p.assets||0) > n.max_assets_1p) R(`Assets over $${n.max_assets_1p.toLocaleString()}`, `資產超$${n.max_assets_1p.toLocaleString()}`);
-  if (n.max_assets_2p != null && big && (+p.assets||0) > n.max_assets_2p) R(`Assets over $${n.max_assets_2p.toLocaleString()}`, `資產超$${n.max_assets_2p.toLocaleString()}`);
-  if (n.has_kids_level && !(p.kids||[]).some(k => n.has_kids_level.includes(k))) R('Needs K/P/S schoolchild', '需幼小中子女');
-  if (b.id==='wfa' && p.isCSSA) R('CSSA excludes WFA', '綜援不可同領在職家庭津貼');
-  if (b.id==='cssa-note' && !p.isCSSA && (p.workHours||0) >= 144) R('Working enough for WFA', '工時夠申請在職家庭津貼');
+  if (n.max_monthly_income_1p != null && !big && (+p.monthlyIncome||0) > n.max_monthly_income_1p) R(`Income over $${n.max_monthly_income_1p.toLocaleString()}/mo`, `月入超出 $${n.max_monthly_income_1p.toLocaleString()}`);
+  if (n.max_monthly_income_2p != null && big && (+p.monthlyIncome||0) > n.max_monthly_income_2p) R(`Income over $${n.max_monthly_income_2p.toLocaleString()}/mo`, `月入超出 $${n.max_monthly_income_2p.toLocaleString()}`);
+  if (n.max_assets_1p != null && !big && (+p.assets||0) > n.max_assets_1p) R(`Assets over $${n.max_assets_1p.toLocaleString()}`, `資產超出 $${n.max_assets_1p.toLocaleString()}`);
+  if (n.max_assets_2p != null && big && (+p.assets||0) > n.max_assets_2p) R(`Assets over $${n.max_assets_2p.toLocaleString()}`, `資產超出 $${n.max_assets_2p.toLocaleString()}`);
+  if (n.has_kids_level && !(p.kids||[]).some(k => n.has_kids_level.includes(k))) R('A kindergarten / primary / secondary child needed', '需要有幼稚園／中小學子女');
+  if (b.id==='wfa' && p.isCSSA) R('CSSA cannot be combined with WFA', '領取綜援不可同時領取在職家庭津貼');
+  if (b.id==='cssa-note' && !p.isCSSA && (p.workHours||0) >= 144) R('Your hours already meet the WFA requirement', '工作時數已符合在職家庭津貼要求');
   return r;
 }
 function matches(b, p) { return audit(b, p).length === 0; }
@@ -384,9 +384,9 @@ function freshPill(b) {
 
 function deadlinePill(b) {
   const d = daysTo(b.deadline);
-  if (d==null) return `<span class="pill info">♾ ${t('ongoing','長期')}</span>`;
-  if (d<0) return `<span class="pill hot">⛔ ${t('expired','已截止')}</span>`;
-  if (d<=30) return `<span class="pill hot">⏰ ${d}${t(' days left','日截止')}</span>`;
+  if (d==null) return `<span class="pill info">♾ ${t('No deadline','長期辦理')}</span>`;
+  if (d<0) return `<span class="pill hot">⛔ ${t('Closed','已截止')}</span>`;
+  if (d<=30) return `<span class="pill hot">⏰ ${LANG==='zh' ? `尚餘 ${d} 日` : `${d} days left`}</span>`;
   return `<span class="pill">🗓 ${esc(b.deadline)}</span>`;
 }
 
@@ -398,13 +398,13 @@ function card(b, opts={}) {
   // Sanity: monthly figures above $30k are almost always asset/income caps
   // misread as payouts — hide rather than misinform. Ranking uses same guard.
   const amtOk = amt && (!isMonthlyAmt(b) || amt <= 30000);
-  const amtLine = amtOk ? `<div class="ticket-amt">${amt >= 10000 ? '💰' : '🎁'} ${amt.toLocaleString()}${isMonthlyAmt(b) ? esc(t('/mo est.','/月（估算）')) : esc(t(' est.','（估算）'))}</div>` : '';
+  const amtLine = amtOk ? `<div class="ticket-amt">${amt >= 10000 ? '💰' : '🎁'} ${amt.toLocaleString()}${isMonthlyAmt(b) ? esc(t('/mo (estimate)','/月（估算）')) : esc(t(' (estimate)','（估算）'))}</div>` : '';
   const step = nextStepText(b);
   const dl = humanDeadline(b);
   const dleft = daysTo(b.deadline);
   const dlHot = dleft != null && dleft >= 0 && dleft <= 30;
-  const blockers = opts.lock ? `<div class="lockbar slim"><span aria-hidden="true">🔒</span> ${esc(t('Unlock by:','做埋呢樣就攞到：'))} ${esc(opts.lock)}${opts.more ? ` <span class="more">+${opts.more}</span>` : ''}</div>` : '';
-  const saveLabel = (isSaved ? t('Saved, activate to unsave: ', '已收藏，按此取消：') : t('Save: ', '收藏：')) + title;
+  const blockers = opts.lock ? `<div class="lockbar slim"><span aria-hidden="true">🔒</span> ${esc(t('One step left:','還差這一步：'))} ${esc(opts.lock)}${opts.more ? ` <span class="more">+${opts.more}</span>` : ''}</div>` : '';
+  const saveLabel = (isSaved ? t('Saved. Press to unsave: ', '已收藏，按一下可取消：') : t('Save: ', '收藏：')) + title;
   const viewLabel = t('View details: ', '查看詳情：') + title;
   const saveIcon = isSaved ? '<span aria-hidden="true">⭐</span>' : '<span aria-hidden="true">☆</span>';
   return `<article class="card ticket${opts.lock ? ' locked' : ''}" data-id="${esc(b.id)}" role="listitem">
@@ -415,7 +415,7 @@ function card(b, opts={}) {
     <div class="pills"><span class="pill${dlHot ? ' hot' : ''}">${dlHot ? '⏰ ' : '🗓 '}${esc(dl)}</span>${freshPill(b)}</div>
     <div class="row"><button class="savebtn ${on}" data-save="${esc(b.id)}" type="button" aria-pressed="${isSaved ? 'true' : 'false'}" aria-label="${esc(saveLabel)}">${saveIcon}</button>
     <a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')}</a>
-    <button class="btn ghost" data-open="${esc(b.id)}" type="button" aria-label="${esc(viewLabel)}">${t('Why me?','點解我符合')}</button></div></article>`;
+    <button class="btn ghost" data-open="${esc(b.id)}" type="button" aria-label="${esc(viewLabel)}">${t('Why do I qualify?','為何我符合')}</button></div></article>`;
 }
 
 function schemeIdFromHash() {
@@ -445,20 +445,20 @@ function openDetail(id, push = true) {
   const relatedChips = relatedItems.map(x=>`<button type="button" class="chip relchip" data-open="${esc(x.id)}" aria-label="${esc(t('View details: ','查看詳情：') + t(x.title_en, x.title_zh))}"><span aria-hidden="true">${CAT_ICON[x.category]||'🎁'}</span> ${esc(t(x.title_en,x.title_zh))}</button>`).join('');
   const docs = ((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]);
   const docSteps = docs.length ? `<ol class="claim-steps">${docs.slice(0,4).map(x=>`<li>${esc(x)}</li>`).join('')}</ol>` : '';
-  const claimHtml = `<section class="claimbox" aria-label="${esc(t('How to claim','點樣申請'))}"><h4>📋 ${t('How to claim','點樣申請')}</h4><ol class="claim-steps"><li>${esc(nextStepText(b))}</li></ol>${docSteps}<p class="hint">${t('Usually 10–20 min online. Bring 1–3 proof documents.','一般網上10–20分鐘。帶1–3份證明文件。')}</p></section>`;
-  const relatedHtml = relatedItems.length ? `<section class="relatives" aria-labelledby="relH"><h4 id="relH">${t('Related in this category','同類資助')}</h4><div class="chips" role="group" aria-label="${esc(t('Related in this category','同類資助'))}">${relatedChips}</div><p class="hint">${t('Tap to view related schemes; means-test pass may unlock secondary allowances.','點擊查看同類計劃；通過資助審查可解鎖次要津貼。')}</p></section>` : '';
+  const claimHtml = `<section class="claimbox" aria-label="${esc(t('How to apply','如何申請'))}"><h4>📋 ${t('How to apply','如何申請')}</h4><ol class="claim-steps"><li>${esc(nextStepText(b))}</li></ol>${docSteps}<p class="hint">${t('Usually takes 10–20 minutes online. Prepare 1–3 proof documents.','一般在網上 10–20 分鐘完成。準備 1–3 份證明文件。')}</p></section>`;
+  const relatedHtml = relatedItems.length ? `<section class="relatives" aria-labelledby="relH"><h4 id="relH">${t('Related in this category','同類資助')}</h4><div class="chips" role="group" aria-label="${esc(t('Related in this category','同類資助'))}">${relatedChips}</div><p class="hint">${t('Press to view related schemes — passing one assessment may open up other allowances.','按一下可查看同類計劃；通過審查後，或可同時申請其他津貼。')}</p></section>` : '';
   d.setAttribute('aria-label', title);
   d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
     <div><h3 id="detailTitle" tabindex="-1">${esc(title)}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
     <div class="pills">${deadlinePill(b)}${freshPill(b)}</div>
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
-    <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}<br><br><span aria-hidden="true">🧾</span> <strong>${t('Please bring','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please confirm before applying','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br><span aria-hidden="true">🔗</span> <strong>${t('Source','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
+    <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}<br><br><span aria-hidden="true">🧾</span> <strong>${t('Please prepare:','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please check before applying:','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br><span aria-hidden="true">🔗</span> <strong>${t('Source:','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
     ${claimHtml}
     ${relatedHtml}
     <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')} <span class="visually-hidden">${esc(title)}</span></a>
     <button class="btn ghost" id="shareBtn" type="button"><span aria-hidden="true">🔗</span> ${t('Share','分享')}</button>
     <button class="btn ghost" id="closeD" type="button">${t('Close','關閉')}</button></div>
-    <p class="hint">${t('Please verify with the official source before applying.','申請前請以政府網站為準。')}</p></div>`;
+    <p class="hint">${t('Please check the government website before applying.','申請前請以政府網站為準。')}</p></div>`;
   // manage history stack before overwriting current id
   const prevId = d.dataset.cur;
   if (prevId && prevId !== id) {
@@ -596,18 +596,18 @@ function renderQuick() {
   });
   const qr = $('#quickResult');
   if (qr) qr.innerHTML = qMonthly
-    ? (LANG==='zh' ? `你每月可能多 <strong>$${qMonthly.toLocaleString()}</strong>（Top 3估算，未計一次性）` : `You could gain <strong>$${qMonthly.toLocaleString()}/mo</strong> (Top 3 estimate, excl. one-offs)`)
-    : (LANG==='zh' ? `呢個情況有 <strong>${qHit.length}</strong> 項可能合資格，睇下面Top 3` : `<strong>${qHit.length}</strong> possible matches — see Top 3 below`);
+    ? (LANG==='zh' ? `你每月可能多出 <strong>$${qMonthly.toLocaleString()}</strong>（Top 3 估算，未計一次性款項）` : `You could get <strong>$${qMonthly.toLocaleString()} more a month</strong> (Top 3 estimate, not counting one-off payments)`)
+    : (LANG==='zh' ? `這個情況有 <strong>${qHit.length}</strong> 項可能符合資格，請看下面的 Top 3` : `<strong>${qHit.length}</strong> possible matches — see your Top 3 below`);
   const qs = $('#quickStep');
-  if (qs) qs.textContent = `${qHit.length} ${t('matches','項可能合資格')}`;
+  if (qs) qs.textContent = `${qHit.length} ${t('possible matches','項可能符合資格')}`;
   const top3 = $('#top3');
-  if (top3) top3.innerHTML = qTop.map(b=>card(b)).join('') || `<div class="empty"><p>${t('Answer the 60-second check to see your Top 3.','答完60秒檢查就睇到你嘅Top 3。')}</p></div>`;
+  if (top3) top3.innerHTML = qTop.map(b=>card(b)).join('') || `<div class="empty"><p>${t('Answer the 60-second check to see your Top 3.','完成 60 秒快速檢查，即可看到你的 Top 3。')}</p></div>`;
   // Next tab: saved schemes as action tickets with Done
   const nl = $('#nextList');
   if (nl) {
     const items = BENEFITS.filter(b=>SAVED.has(b.id));
-    nl.innerHTML = items.length ? items.map(b=>`<div class="next-item">${card(b)}<button type="button" class="btn ghost donebtn" data-done="${esc(b.id)}">✅ ${t('Done','搞掂')}</button></div>`).join('')
-      : `<div class="empty"><p>${t('Nothing saved yet — tap ☆ on any Top 3 card.','未收藏任何項目 — 喺Top 3卡上㩒 ☆ 啦。')}</p></div>`;
+    nl.innerHTML = items.length ? items.map(b=>`<div class="next-item">${card(b)}<button type="button" class="btn ghost donebtn" data-done="${esc(b.id)}">✅ ${t('Done','完成')}</button></div>`).join('')
+      : `<div class="empty"><p>${t('Nothing saved yet — press ☆ on any Top 3 card to save it.','還沒有收藏 — 在 Top 3 卡上按 ☆ 即可收藏。')}</p></div>`;
   }
 }
 
@@ -651,8 +651,8 @@ function render() {
   }
   renderQuick();
   renderKidChips();
-  $('#soon').innerHTML = soonAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).sort((a,b2)=>daysTo(a.deadline)-daysTo(b2.deadline)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg><p>${t('No urgent deadlines. Nice.','暫無急件。')}</p></div>`;
-  $('#now').innerHTML = nowAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg><p>${t('No direct matches yet — complete your profile or check One step away.','目前暫無直接符合的項目 — 不妨先完善檔案資料，或查看「只差一步」。')}</p></div>`;
+  $('#soon').innerHTML = soonAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).sort((a,b2)=>daysTo(a.deadline)-daysTo(b2.deadline)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg><p>${t('No urgent deadlines.','暫無急件。')}</p></div>`;
+  $('#now').innerHTML = nowAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg><p>${t('No direct matches yet — complete your profile, or look at “One step away”.','目前暫時沒有直接符合的項目 — 不妨先完善檔案資料，或看看「只差一步」。')}</p></div>`;
   $('#miss').innerHTML = miss
     .map(b => ({ b, r: audit(b, p) }))
     .sort((x, y) => x.r.length - y.r.length)
@@ -662,7 +662,7 @@ function render() {
   const q = ($('#q').value||'').toLowerCase();
   const allItems = BENEFITS.filter(lifePass).filter(b=>passFilter(b,FILTER_ALL)).filter(b=>!q||(b.title_en+b.title_zh+b.id).toLowerCase().includes(q));
   const hiddenHeader = FILTER_ALL==='hidden' ? `<div class="hidden-toolbar"><button id="unhideAllBtn" class="btn ghost" type="button">${t('Unhide all','全部取消隱藏')}</button><span class="hint">${HIDDEN.size} ${t('hidden','已隱藏')}</span></div>` : '';
-  $('#all').innerHTML = hiddenHeader + (allItems.map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-search"/></svg><p>${FILTER_ALL==='hidden' ? t('No hidden schemes — tap Hide on any card to hide it.','暫無隱藏計劃 — 按任何卡上嘅隱藏即可隱藏。') : t('No schemes match that search.','無計劃符合呢個搜尋。')}</p></div>`);
+  $('#all').innerHTML = hiddenHeader + (allItems.map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-search"/></svg><p>${FILTER_ALL==='hidden' ? t('No hidden schemes — press Hide on any card to hide it.','暫時沒有隱藏的計劃 — 在任何卡片上按「隱藏」即可隱藏。') : t('Nothing matches that search.','沒有計劃符合這個搜尋條件。')}</p></div>`);
   const done = [p.age>0, (p.kids||[]).length>0, !!p.district].filter(Boolean).length;
   const pctDone = 30+done*23;
   $('#pbar').style.width = pctDone+'%';
@@ -704,7 +704,7 @@ async function init() {
     if (secMiss) secMiss.hidden = !open;
     if (missBar) { missBar.hidden = open; missBar.setAttribute('aria-expanded', open ? 'true' : 'false'); }
     if (missToggle) missToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (open) announce(t('One step away expanded', '已展開「差一步」'));
+    if (open) announce(t('One step away expanded', '已展開「只差一步」'));
   };
   if (missBar) missBar.onclick = () => setMissOpen(true);
   if (missToggle) missToggle.onclick = () => setMissOpen(false);
@@ -743,10 +743,10 @@ async function init() {
       eduRank:+f.eduRank.value ?? 1, ownsProperty:f.ownsProperty.checked, onAllowance:f.onAllowance.checked, onOALA:f.onOALA.checked, isCarer:f.isCarer.checked, childSEN:f.childSEN.checked, unemployed:f.unemployed.checked, hasToddler:f.hasToddler.checked, ehealth:f.ehealth.checked, hasTertiary:f.hasTertiary.checked, livesMainland:f.livesMainland.checked, smoker:f.smoker.checked});
     render();
     document.querySelector('[data-tab="match"]').click();
-    announce(t('Profile saved. Matches updated.', '已儲存檔案，配對已更新。')); };
+    announce(t('Your profile is saved. Matches updated.', '已儲存檔案，配對已更新。')); };
   $('#exportBtn').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([localStorage.getItem(LS_KEY)||'{}'],{type:'application/json'}));a.download='profile.json';a.click();announce(t('Profile exported.', '已匯出檔案。'));};
   $('#importBtn').onclick=()=>$('#importFile').click();
-  $('#importFile').onchange=e=>{const fl=e.target.files[0];if(!fl)return;fl.text().then(x=>{try{const cur=localStorage.getItem(LS_KEY); if(cur) localStorage.setItem(LS_KEY+'_bak',cur); saveP(JSON.parse(x));location.reload();}catch{alert(t('Bad profile.json','profile.json 格式錯誤'));}});};
+  $('#importFile').onchange=e=>{const fl=e.target.files[0];if(!fl)return;fl.text().then(x=>{try{const cur=localStorage.getItem(LS_KEY); if(cur) localStorage.setItem(LS_KEY+'_bak',cur); saveP(JSON.parse(x));location.reload();}catch{alert(t('That profile.json file looks broken','profile.json 格式錯誤'));}});};
   const qInput = $('#q');
   let qTimer = null;
   if (qInput) qInput.addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(render, 150); });
@@ -765,7 +765,7 @@ async function init() {
       saveS(SAVED);render();
       const b=BENEFITS.find(x=>x.id===id);
       const nm=b?t(b.title_en,b.title_zh):id;
-      announce(willSave?t(`Saved: ${nm}`,`已收藏：${nm}`):t(`Unsaved: ${nm}`,`已取消收藏：${nm}`));
+      announce(willSave?t(`Saved: ${nm}`,`已收藏：${nm}`):t(`Removed: ${nm}`,`已取消收藏：${nm}`));
       const nb=document.querySelector(`[data-save="${CSS.escape(id)}"]`);
       if(nb) nb.focus({ preventScroll: true });
       return;
@@ -776,12 +776,12 @@ async function init() {
       const willHide = !HIDDEN.has(id);
       willHide?hideScheme(id):unhideScheme(id);
       render();
-      announce(willHide?t('Scheme hidden','已隱藏計劃'):t('Scheme unhidden','已取消隱藏'));
+      announce(willHide?t('Scheme hidden','已隱藏計劃'):t('Scheme back in the list','已取消隱藏'));
       return;
     }
-    if(e.target.id==='unhideAllBtn'){unhideAll();render();announce(t('All hidden schemes restored','已還原全部隱藏計劃'));return;}
+    if(e.target.id==='unhideAllBtn'){unhideAll();render();announce(t('All hidden schemes are back','已還原全部隱藏計劃'));return;}
     const done=e.target.closest('[data-done]');
-    if(done){SAVED.delete(done.dataset.done);saveS(SAVED);render();announce(t('Marked done','已搞掂'));return;}
+    if(done){SAVED.delete(done.dataset.done);saveS(SAVED);render();announce(t('Marked as done','已完成'));return;}
     const why=e.target.closest('.mini-why');
     if(why){const w=$('#why-'+why.dataset.why);if(w)w.hidden=!w.hidden;return;}
     const o=e.target.closest('[data-open]'); if(o){openDetail(o.dataset.open);return;}
