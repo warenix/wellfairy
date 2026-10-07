@@ -594,6 +594,13 @@ const passFilter = (b, f) => {
   if (f === 'hidden') return HIDDEN.has(b.id);
   return b.category === f;
 };
+// Keyword search across titles, id, category and value summaries (both languages).
+const matchesQuery = (b, q) => {
+  if (!q) return true;
+  const norm = s => (s || '').toLowerCase().replace(/,/g, '');
+  const hay = norm(`${b.title_en||''} ${b.title_zh||''} ${b.id||''} ${b.category||''} ${b.value_summary_en||''} ${b.value_summary_zh||''}`);
+  return norm(q).split(/\s+/).filter(Boolean).every(w => hay.includes(w));
+};
 
 // Citizen-first: moments + quick-check + Top 3 (uses forgiving quick profile)
 function renderQuick() {
@@ -656,6 +663,8 @@ function render() {
   const missAll = BENEFITS.filter(b=>!matches(b,p));
   const miss = missAll.filter(visible).filter(lifePass);
   const cats = [...new Set(BENEFITS.filter(visible).map(b=>b.category))];
+  const qm = (($('#qMatch') || {}).value || '').trim().toLowerCase();
+  const queryPass = b => matchesQuery(b, qm);
   $('#heroCount').textContent = hit.length; $('#heroTotal').textContent = BENEFITS.filter(visible).length;
   const soonVisible = soonAll.filter(visible);
   $('#statSoon').textContent = soonVisible.length; $('#statSave').textContent = SAVED.size; $('#statCat').textContent = cats.length;
@@ -665,9 +674,10 @@ function render() {
   const mini = document.querySelector('.mini-ring'); if (mini) mini.style.setProperty('--p', pct+'%');
   const heroSub = $('#heroSub'); if (heroSub) heroSub.textContent = t(`${distName(p.district)} · kids ${(p.kids||[]).join(',')||'—'} · $${(+p.monthlyIncome||0).toLocaleString()}/mo · AFI ${afiOf(p).toLocaleString()} (${afiLevel(afiOf(p)).en})`,
     `${distName(p.district)} · 子女 ${(p.kids||[]).join(',')||'—'} · 月入$${(+p.monthlyIncome||0).toLocaleString()} · 經調整家庭收入AFI ${afiOf(p).toLocaleString()} (${afiLevel(afiOf(p)).zh})`);
-  $('#nowCount').textContent = `${nowAll.filter(visible).filter(lifePass).filter(b=>passFilter(b,FILTER)).length} ${t('items','項')}`;
-  $('#soonCount').textContent = soonVisible.length ? `${soonVisible.filter(lifePass).filter(b=>passFilter(b,FILTER)).length} ${t('urgent','件需辦理')}` : '';
-  const missLabel = `${miss.length} ${t('items','項')}`;
+  $('#nowCount').textContent = `${nowAll.filter(visible).filter(lifePass).filter(b=>passFilter(b,FILTER)).filter(queryPass).length} ${t('items','項')}`;
+  $('#soonCount').textContent = soonVisible.length ? `${soonVisible.filter(lifePass).filter(b=>passFilter(b,FILTER)).filter(queryPass).length} ${t('urgent','件需辦理')}` : '';
+  const missFiltered = miss.filter(queryPass);
+  const missLabel = `${missFiltered.length} ${t('items','項')}`;
   $('#missCount').textContent = missLabel;
   const missBarCount = $('#missCountBar'); if (missBarCount) missBarCount.textContent = missLabel;
   chips($('#chips'), cats, FILTER, f=>{FILTER=f;render();});
@@ -684,16 +694,16 @@ function render() {
   }
   renderQuick();
   renderKidChips();
-  $('#soon').innerHTML = soonAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).sort((a,b2)=>daysTo(a.deadline)-daysTo(b2.deadline)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg><p>${t('No urgent deadlines.','暫無急件。')}</p></div>`;
-  $('#now').innerHTML = nowAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg><p>${t('No direct matches yet — complete your profile, or look at “One step away”.','目前暫時沒有直接符合的項目 — 不妨先完善檔案資料，或看看「只差一步」。')}</p></div>`;
-  $('#miss').innerHTML = miss
+  $('#soon').innerHTML = soonAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).filter(queryPass).sort((a,b2)=>daysTo(a.deadline)-daysTo(b2.deadline)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg><p>${qm ? t('Nothing matches that search.','沒有計劃符合這個搜尋條件。') : t('No urgent deadlines.','暫無急件。')}</p></div>`;
+  $('#now').innerHTML = nowAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).filter(queryPass).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg><p>${qm ? t('Nothing matches that search.','沒有計劃符合這個搜尋條件。') : t('No direct matches yet — complete your profile, or look at “One step away”.','目前暫時沒有直接符合的項目 — 不妨先完善檔案資料，或看看「只差一步」。')}</p></div>`;
+  $('#miss').innerHTML = missFiltered
     .map(b => ({ b, r: audit(b, p) }))
     .sort((x, y) => x.r.length - y.r.length)
     .slice(0, 8)
     .map(({ b, r }) => card(b, { lock: r[0] || '', more: r.length > 1 ? r.length - 1 : 0 }))
     .join('') || `<p class="hint">—</p>`;
-  const q = ($('#q').value||'').toLowerCase();
-  const allItems = BENEFITS.filter(lifePass).filter(b=>passFilter(b,FILTER_ALL)).filter(b=>!q||(b.title_en+b.title_zh+b.id).toLowerCase().includes(q));
+  const q = (($('#q') || {}).value||'').trim().toLowerCase();
+  const allItems = BENEFITS.filter(lifePass).filter(b=>passFilter(b,FILTER_ALL)).filter(b=>matchesQuery(b,q));
   const hiddenHeader = FILTER_ALL==='hidden' ? `<div class="hidden-toolbar"><button id="unhideAllBtn" class="btn ghost" type="button">${t('Unhide all','全部取消隱藏')}</button><span class="hint">${HIDDEN.size} ${t('hidden','已隱藏')}</span></div>` : '';
   $('#all').innerHTML = hiddenHeader + (allItems.map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-search"/></svg><p>${FILTER_ALL==='hidden' ? t('No hidden schemes — press Hide on any card to hide it.','暫時沒有隱藏的計劃 — 在任何卡片上按「隱藏」即可隱藏。') : t('Nothing matches that search.','沒有計劃符合這個搜尋條件。')}</p></div>`);
   const done = [p.age>0, (p.kids||[]).length>0, !!p.district].filter(Boolean).length;
@@ -783,6 +793,9 @@ async function init() {
   const qInput = $('#q');
   let qTimer = null;
   if (qInput) qInput.addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(render, 150); });
+  const qMatchInput = $('#qMatch');
+  let qmTimer = null;
+  if (qMatchInput) qMatchInput.addEventListener('input', () => { clearTimeout(qmTimer); qmTimer = setTimeout(render, 150); });
   if (f.hkYears) f.hkYears.oninput=hkYearsOut;
   wireKidPick(); renderKidChips();
   const excl = (name, others) => { f[name].onchange = () => { if (f[name].checked) others.forEach(o => { f[o].checked = false; }); }; };
@@ -839,9 +852,9 @@ async function init() {
   updateTopBtn();
   topBtn.onclick=()=>{const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});};
   document.addEventListener('keydown', e => {
-    if (e.key === '/' && document.activeElement !== qInput && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName||'')) {
-      const allTab = document.querySelector('[data-tab="all"]');
-      if (allTab && !$('#tab-all').hidden) { e.preventDefault(); qInput.focus(); }
+    if (e.key === '/' && document.activeElement !== qInput && document.activeElement !== qMatchInput && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName||'')) {
+      if (qMatchInput && !$('#tab-match').hidden) { e.preventDefault(); qMatchInput.focus(); return; }
+      if (qInput && !$('#tab-all').hidden) { e.preventDefault(); qInput.focus(); }
     }
   });
   if('serviceWorker' in navigator){try{await navigator.serviceWorker.register('sw.js');}catch{}}
