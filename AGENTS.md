@@ -26,6 +26,25 @@ This file describes how data sources are added, scheduled for crawling using BFS
   - `KMB monthly pass`: one bilingual page (TC/EN toggle on page)
   - EN-only (no twin): rehabusociety, info.gov.hk fallback, cspe.edu.hk, cmhhk.org, studyinhongkong.edu.hk, hkic.edu.hk
 
+### Money-value hygiene (k/M shorthand) — IMPORTANT
+
+The matcher (`app.js: estimateAmount()`) ranks schemes by the biggest `$` figure,
+and users read amounts literally. Shorthand kills both: `$25k` parsed as `$25`
+instead of `$25,000`. Never write k/M shorthand in ANY text field
+(`title_*`, `value_summary_*`, `why_*`, `proof_*`, `confirm_*`).
+
+- **Expand always:** `$25k` → `$25,000` · `$10k` → `$10,000` · `$23.5k` → `$23,500`
+  · `$1.23M` → `$1,230,000` · `$6M` → `$6,000,000` · `$10 million` → `$10,000,000`.
+  Rule: `k` = ×1,000, `M`/`million` = ×1,000,000.
+- **Ranges expand both ends:** `$16–19k` → `$16,000–$19,000` ·
+  `$6M-$12M` → `$6,000,000-$12,000,000` · `$9k-$40k` → `$9,000-$40,000`.
+- **`/mo` is not million:** `$200/mo`, `$10,200/mo` stay as-is (per-month marker).
+- **Chinese units are fine:** `$600萬`, `$4.4億` are unambiguous and parser-handled —
+  leave them; only expand Latin k/M.
+- **IDs are immutable:** `cef-25k`, `wops-60k` keep shorthand in the `id` only.
+- `estimateAmount()` also expands suffixes as a safety net, but data must carry
+  full digits first — never rely on the parser to fix shorthand.
+
 ### Eligibility-gate capture (matching engine) — IMPORTANT
 
 When crawling a scheme, capturing its **eligibility constraints** is as important as

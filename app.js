@@ -249,13 +249,40 @@ function quickProfile() {
 }
 function momentPass(b) { const m = MOMENTS.find(x=>x.id===QUICK.moment); return m ? m.test(b) : true; }
 // Amount heuristic: biggest $ figure in value summaries; monthly if 每月/monthly//mo near.
+// Money rule: $25k = $25,000 (×1,000), $1.23M = $1,230,000 (×1,000,000).
+// Shorthand k/K/m/M/million/萬/億 must be expanded — never read the bare digits.
 function estimateAmount(b) {
   const s = `${b.value_summary_zh||''} ${b.value_summary_en||''}`;
-  const ms = s.match(/[\$＄]\s?[\d,]+(\.\d+)?/g) || [];
+  const mult = (suf) => {
+    if (!suf) return 1;
+    const t = suf.trim().toLowerCase();
+    if (t === 'k') return 1000;
+    if (t === 'm' || t === 'million' || t === 'mn') return 1000000;
+    if (t === 'b' || t === 'billion') return 1000000000;
+    if (t === '萬') return 10000;
+    if (t === '億') return 100000000;
+    return 1;
+  };
   let best = 0;
-  for (const m of ms) { const v = parseFloat(m.replace(/[^\d.]/g,'')); if (v>best) best = v; }
+  // $16–19k style: k applies to both ends — expand the bare first number too.
+  const rangeFix = s.replace(/([\$＄]\s?\d[\d,]*\.?\d*)\s*[–—-]\s*(\d[\d,]*\.?\d*)\s*([kKmM])/g, '$1$3–$$$2$3');
+  const re = /[\$＄]\s?(\d[\d,]*\.?\d*)\s*(billion|million|mn|[kKmMbB萬億])?(?![a-zA-Z])/g;
+  let m;
+  while ((m = re.exec(rangeFix))) {
+    const num = parseFloat(m[1].replace(/,/g, ''));
+    if (!Number.isFinite(num)) continue;
+    const v = Math.round(num * mult(m[2]));
+    if (v > best) best = v;
+  }
+  // Chinese 1000萬 (no $ sign) — e.g. ESS 每項最高1000萬港元.
+  const re2 = /(\d[\d,]*\.?\d*)\s*([萬億])(?![\d])/g;
+  while ((m = re2.exec(s))) {
+    const num = parseFloat(m[1].replace(/,/g, ''));
+    if (!Number.isFinite(num)) continue;
+    const v = Math.round(num * mult(m[2]));
+    if (v > best) best = v;
+  }
   if (!best) { const m2 = s.match(/(\d[\d,]{3,})/); if (m2) best = parseFloat(m2[1].replace(/,/g,'')) || 0; }
-  if (best >= 1000000 && /萬/.test(s) === false) best = best; // keep raw figure
   return best;
 }
 function isMonthlyAmt(b) { return /每月|每月|month|\/mo|per month/i.test(`${b.value_summary_zh||''} ${b.value_summary_en||''}`); }
