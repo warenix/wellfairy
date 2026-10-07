@@ -77,9 +77,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -164,11 +162,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "is_carer": true,
-      "requires_elderly_in_house": true,
-      "no_other_allowance": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -548,15 +542,13 @@
     "id": "carer-support-allowance",
     "title_en": "Allowance for Carers of Elderly Persons",
     "title_zh": "照顧長者津貼",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Allowance for Carers of Elderly Persons",
     "value_summary_zh": "照顧長者津貼資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -862,17 +854,13 @@
     "id": "ccsv-2026",
     "title_en": "Community Care Service Voucher for Elderly",
     "title_zh": "長者社區照顧服務券",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Community Care Service Voucher for Elderly",
     "value_summary_zh": "長者社區照顧服務券資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commcare/psccsv/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true,
-      "min_age": 60,
-      "requires_elderly_in_house": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -1071,12 +1059,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true,
-      "age_range": "10-14",
-      "low_income": true,
-      "referral": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
     "needs": {
       "hk_resident": true
@@ -1524,12 +1507,12 @@
     "id": "day-care-centre-elderly",
     "title_en": "Day Care Centre for Elderly",
     "title_zh": "長者日間護理中心",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Day Care Centre for Elderly",
     "value_summary_zh": "長者日間護理中心資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
-    "updated_at": "2026-09-18",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "Aged 60+",
       "Walk in or call the district centre"
@@ -1583,12 +1566,12 @@
     "id": "dental-voucher-elderly",
     "title_en": "Dental Treatment Voucher for Elderly",
     "title_zh": "長者牙科治療券",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Dental Treatment Voucher for Elderly",
     "value_summary_zh": "長者牙科治療券資格人士支援",
     "deadline": null,
     "source_url": "https://www.communitydental.gov.hk/en/odcp/faq.html",
-    "updated_at": "2026-09-23",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "HKID",
       "Aged 60+"
@@ -1680,15 +1663,13 @@
     "id": "disabled-registration-card",
     "title_en": "Registration Card for People with Disabilities",
     "title_zh": "殘疾人士登記證",
-    "category": "family",
+    "category": "health",
     "value_summary_en": "Support for eligible persons under Registration Card for People with Disabilities",
     "value_summary_zh": "殘疾人士登記證資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_supportcom/scpd/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -1705,12 +1686,12 @@
     "id": "district-elderly-community-centre",
     "title_en": "District Elderly Community Centre",
     "title_zh": "地區長者社區中心",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under District Elderly Community Centre",
     "value_summary_zh": "地區長者社區中心資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
-    "updated_at": "2026-09-18",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "Aged 60+",
       "Hong Kong resident"
@@ -1823,10 +1804,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_serpresch/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true,
-      "child_sen": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -2100,16 +2078,13 @@
     "id": "enhanced-home-community-care",
     "title_en": "Enhanced Home and Community Care Services",
     "title_zh": "加強家居及社區照顧服務",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Enhanced Home and Community Care Services",
     "value_summary_zh": "加強家居及社區照顧服務資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commcare/psccsv/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true,
-      "min_age": 60
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -2162,13 +2137,13 @@
     "id": "epem-40plus",
     "title_en": "Employment Programme for the Elderly and Middle-aged (40+, retention up to $12,000)",
     "title_zh": "中高齡就業計劃（40歲+，留任津貼高達$12,000）",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Unemployed 40+ hired via LD vacancies get mentor + training; employers get up to $4k–$5k/mo. Age 60+: retention allowance up to $12,000.",
     "value_summary_zh": "失業40歲+經勞工處空缺受聘有師傅帶+培訓，僱主獲$4k–$5k/月。60歲+留任津貼高達$12,000。",
     "deadline": null,
     "source_url": "https://www2.jobs.gov.hk/0/en/information/epem/jsfaq/",
     "source_url_zh": "https://www2.jobs.gov.hk/0/tc/information/epem/jsfaq/",
-    "updated_at": "2026-09-16",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "Aged 40+",
       "1+ month unemployed in past year",
@@ -2708,15 +2683,13 @@
     "id": "full-time-employment-subsidy",
     "title_en": "Full-time Employment Subsidy",
     "title_zh": "全職就業津貼",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Support for eligible persons under Full-time Employment Subsidy",
     "value_summary_zh": "全職就業津貼資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -2733,13 +2706,13 @@
     "id": "gba-yes-2026",
     "title_en": "Greater Bay Area Youth Employment Scheme 2026 (employer $12k/mo)",
     "title_zh": "大灣區青年就業計劃2026（僱主月補$12,000）",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Aged ≤29, sub-degree+: work in GBA Mainland via HK employer (pay ≥$18k if degree). Employer gets 60% salary up to $12k/mo for 18 months.",
     "value_summary_zh": "29歲或以下、副學位+：經香港僱主派往大灣區內地工作（學位$18k+月薪）。僱主獲6成薪金、上限$12k/月、為期18個月。",
     "deadline": "2026-12-31",
     "source_url": "https://www2.jobs.gov.hk/0/en/information/gbayes/",
     "source_url_zh": "https://www2.jobs.gov.hk/0/tc/information/gbayes/",
-    "updated_at": "2026-09-17",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "HK resident aged 29 or below",
       "Sub-degree or above",
@@ -3180,13 +3153,13 @@
     "id": "ha-ivf-public",
     "title_en": "HA Public IVF (up to 3 cycles, capped fees)",
     "title_zh": "公營試管嬰兒（最多3個周期，收費封頂）",
-    "category": "family",
+    "category": "health",
     "value_summary_en": "Married couples, female <40 to start: up to 3 stimulation cycles at QMH/PWH/KWH. $135 first visit + $80 follow-ups, $4,000 drug pack, lab $9k-$40k/cycle. Quota rising to 1,800/yr.",
     "value_summary_zh": "已婚夫婦、女方未滿40歲開始：瑪麗／威爾斯／廣華最多3個周期。$135首次＋$80覆診，$4,000藥包，化驗每周期$9k-$40k。名額增至每年1,800。",
     "deadline": null,
     "source_url": "https://www.info.gov.hk/gia/general/202304/26/P2023042600401.htm",
     "source_url_zh": "https://www.info.gov.hk/gia/general/202304/26/P2023042600398.htm",
-    "updated_at": "2026-09-17",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "Legally married",
       "Female under 40",
@@ -3591,12 +3564,12 @@
     "id": "home-care-service-elderly",
     "title_en": "Home Care Service for Elderly",
     "title_zh": "長者家居照顧服務",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Home Care Service for Elderly",
     "value_summary_zh": "長者家居照顧服務資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
-    "updated_at": "2026-09-18",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "Aged 60+",
       "Fit for communal living",
@@ -3839,9 +3812,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -4549,10 +4520,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true,
-      "has_kids_any": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -5260,12 +5228,12 @@
     "id": "neighbourhood-elderly-centre",
     "title_en": "Neighbourhood Elderly Centre",
     "title_zh": "鄰舍長者中心",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Neighbourhood Elderly Centre",
     "value_summary_zh": "鄰舍長者中心資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_commsupp/elderly_centres/",
-    "updated_at": "2026-09-18",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "Aged 60+",
       "Hong Kong resident"
@@ -5399,15 +5367,13 @@
     "id": "non-means-tested-loan-scheme",
     "title_en": "Non-means-tested Loan Scheme",
     "title_zh": "非 means-tested 學生貸款",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Support for eligible persons under Non-means-tested Loan Scheme",
     "value_summary_zh": "非 means-tested 學生貸款資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -5611,10 +5577,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_serpresch/tsp/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true,
-      "child_sen": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -5826,17 +5789,13 @@
     "id": "pre-employment-training",
     "title_en": "Pre-employment Training Subsidy",
     "title_zh": "就業前培訓資助",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Support for eligible persons under Pre-employment Training Subsidy",
     "value_summary_zh": "就業前培訓資助資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_serpresch/tsp/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true,
-      "child_sen": true,
-      "afi_max": 89515
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -5961,12 +5920,12 @@
     "id": "public-transport-concession-disabled",
     "title_en": "Public Transport Fare Concession for Disabled",
     "title_zh": "殘疾人士交通優惠",
-    "category": "family",
+    "category": "transport",
     "value_summary_en": "Support for eligible persons under Public Transport Fare Concession for Disabled",
     "value_summary_zh": "殘疾人士交通優惠資格人士支援",
     "deadline": null,
     "source_url": "https://www.td.gov.hk/en/gov_public_transport_fare_concession/index.html",
-    "updated_at": "2026-09-18",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
@@ -6120,17 +6079,13 @@
     "id": "rcsv-2026",
     "title_en": "Residential Care Service Voucher for Elderly",
     "title_zh": "長者 residential 護理服務券",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Residential Care Service Voucher for Elderly",
     "value_summary_zh": "長者 residential 護理服務券資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_residentcare/psrcsv/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "min_age": 65,
-      "hk_resident": true,
-      "requires_elderly_in_house": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -6187,13 +6142,13 @@
     "id": "rdep-em",
     "title_en": "Racial Diversity Employment (free EM job support, 6mo)",
     "title_zh": "種族多元就業計劃（免費少數族裔就業支援，6個月）",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Free one-stop help for ethnic-minority jobseekers: NGO case manager, counselling, job matching, post-placement support. 6 months per enrolment. Hotline 2150 6359.",
     "value_summary_zh": "免費一站式少數族裔求職支援：NGO個案經理、輔導、配對、入職跟進。每期6個月。熱線2150 6359。",
     "deadline": null,
     "source_url": "https://www2.jobs.gov.hk/0/en/information/Rdep/Intro",
     "source_url_zh": "https://www2.jobs.gov.hk/0/tc/information/Rdep/Intro/",
-    "updated_at": "2026-09-17",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "Ethnic-minority jobseeker",
       "Enrol via site / NGO / LD Job Centre"
@@ -6372,12 +6327,12 @@
     "id": "respite-service-elderly",
     "title_en": "Respite Service for Elderly Carers",
     "title_zh": "長者喘息服務",
-    "category": "family",
+    "category": "elderly",
     "value_summary_en": "Support for eligible persons under Respite Service for Elderly Carers",
     "value_summary_zh": "長者喘息服務資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/drrr/respiteser/",
-    "updated_at": "2026-09-23",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [
       "Aged 60+",
       "Carer temporarily away or ill"
@@ -6609,9 +6564,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -6726,15 +6679,13 @@
     "id": "skills-upgrading-scheme",
     "title_en": "Skills Upgrading Scheme",
     "title_zh": "技能提升計劃",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Support for eligible persons under Skills Upgrading Scheme",
     "value_summary_zh": "技能提升計劃資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -6900,10 +6851,7 @@
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_fundtrustfinaid/snto/",
     "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true,
-      "child_sen": true
-    },
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -7340,15 +7288,13 @@
     "id": "student-finance-assistance",
     "title_en": "Student Finance Assistance Scheme",
     "title_zh": "學生資助計劃",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Support for eligible persons under Student Finance Assistance Scheme",
     "value_summary_zh": "學生資助計劃資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -7596,12 +7542,12 @@
     "id": "transport-fare-subsidy-scheme",
     "title_en": "Public Transport Fare Subsidy Scheme",
     "title_zh": "公共交通費用補貼計劃",
-    "category": "family",
+    "category": "transport",
     "value_summary_en": "Support for eligible persons under Public Transport Fare Subsidy Scheme",
     "value_summary_zh": "公共交通費用補貼計劃資格人士支援",
     "deadline": null,
     "source_url": "https://www.td.gov.hk/en/gov_public_transport_fare_concession/index.html",
-    "updated_at": "2026-09-18",
+    "updated_at": "2026-10-07",
     "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
@@ -7830,15 +7776,13 @@
     "id": "vocational-training-subsidy",
     "title_en": "Vocational Training Council Subsidy",
     "title_zh": "職業訓練局資助",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Support for eligible persons under Vocational Training Council Subsidy",
     "value_summary_zh": "職業訓練局資助資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
@@ -8134,15 +8078,13 @@
     "id": "youth-employment-subsidy",
     "title_en": "Youth Employment Subsidy",
     "title_zh": "青年就業津貼",
-    "category": "family",
+    "category": "student",
     "value_summary_en": "Support for eligible persons under Youth Employment Subsidy",
     "value_summary_zh": "青年就業津貼資格人士支援",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/cssa/",
-    "updated_at": "2026-09-18",
-    "proof_needed_en": {
-      "hk_resident": true
-    },
+    "updated_at": "2026-10-07",
+    "proof_needed_en": [],
     "apply_link": "https://www.swd.gov.hk/en/",
     "needs": {
       "hk_resident": true
