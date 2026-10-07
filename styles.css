@@ -169,7 +169,7 @@ footer{text-align:center;color:#3f3b48;background:#ffffffee;padding:18px;font-si
 }
 
 /* ================================================================
-   WellFairy Bold Product Direction v3
+   Welly Bold Product Direction v3
    Product shell only — matching engine/data remain unchanged.
    ================================================================ */
 :root{
@@ -247,3 +247,104 @@ footer{max-width:1180px;margin:30px auto 0;padding:0 18px;color:var(--wf-muted)}
 .claimbox{border:1px solid var(--wf-line);border-radius:14px;padding:12px;margin-top:12px;background:#f4f5ef}.claimbox h4{margin:0 0 6px;font-size:14px}.claim-steps{margin:0;padding-left:20px;font-size:13px;display:grid;gap:4px}
 .next-item{display:grid;gap:8px}.donebtn{flex:none}
 .sheet-next .card{cursor:default}
+
+/* ================================================================
+   Welly Bold Poster Direction v5 — terracotta + teal tablet
+   Reference: coral wall, mint tablet panel, navy frame, bold white
+   condensed headline, peach floor. Shell only — engine untouched.
+   ================================================================ */
+:root{
+  --wf-ink:#1e2d36;
+  --wf-muted:#77665c;
+  --wf-paper:#c4714b;
+  --wf-white:#fffbf1;
+  --wf-cream:#fff3e2;
+  --wf-green:#cf4229;
+  --wf-green-dark:#8fc2b8;
+  --wf-mint:#d3e9e4;
+  --wf-lime:#ffc79e;
+  --wf-coral:#d94832;
+  --wf-yellow:#ffe69a;
+  --wf-line:#e9c29f;
+  --wf-frame:#1e2d36;
+  --bg:var(--wf-paper);
+  --bg2:#b45f3c;
+  --ink:var(--wf-ink);
+  --mut:var(--wf-muted);
+  --pri:var(--wf-green);
+  --lavsoft:#fbeedf;
+  --line:var(--wf-line);
+}
+html{background:#8e3e2b}
+body{
+  background:
+    linear-gradient(180deg,#8e3e2b 0 46px,rgba(0,0,0,0) 46px),
+    linear-gradient(180deg,#cd7a52,#c06a42 60%,#b35f3a);
+  background-attachment:fixed;
+  color:var(--wf-ink);
+}
+/* peach floor + maroon foot band, like the reference room */
+body:after{content:"";position:fixed;left:0;right:0;bottom:0;height:56px;z-index:-1;
+  background:linear-gradient(180deg,#f2a97e,#efa06f 70%,#7e3125 70%,#7e3125);}
+.topbar{background:var(--wf-white);color:var(--wf-ink);border-bottom:3px solid var(--wf-frame);box-shadow:0 4px 0 rgba(30,45,54,.25)}
+.brand{color:var(--wf-ink)}.brand span:not(.brand-mark){color:var(--wf-muted)}
+.brand-mark{background:var(--wf-coral)!important;color:#fff!important;border:3px solid var(--wf-frame);box-shadow:4px 4px 0 var(--wf-frame);border-radius:14px}
+.trust-chip{background:var(--wf-cream);border:2px solid var(--wf-frame);color:var(--wf-muted)}
+.ghostbtn{border:2px solid var(--wf-frame);background:var(--wf-white);color:var(--wf-ink);box-shadow:3px 3px 0 var(--wf-frame)}
+.solidbtn{background:var(--wf-coral);border:2px solid var(--wf-frame);box-shadow:3px 3px 0 var(--wf-frame)}
+.tabs button{border:2px solid var(--wf-frame);background:var(--wf-white);color:var(--wf-ink);box-shadow:3px 3px 0 var(--wf-frame)}
+.tabs button.active{background:var(--wf-frame);border-color:var(--wf-frame);color:#fff}
+/* hero = the rounded tablet: mint panel, 5px navy frame, hard offset */
+.hero-bold{background:linear-gradient(180deg,#a9d3cb 0%,#9cc9c0 55%,#8fbdb4 100%);border:5px solid var(--wf-frame);border-radius:34px;box-shadow:10px 10px 0 var(--wf-frame);color:var(--wf-ink)}
+.hero-bold:after{background:
+  radial-gradient(circle at 88% 12%,rgba(255,255,255,.85) 0 26px,rgba(255,255,255,0) 27px),
+  radial-gradient(circle at 93% 14%,rgba(255,255,255,.85) 0 18px,rgba(255,255,255,0) 19px),
+  radial-gradient(circle at 30% 42%,rgba(255,255,255,.7) 0 20px,rgba(255,255,255,0) 21px),
+  radial-gradient(circle at 8% 30%,#ffc79e 0 44px,rgba(255,199,158,0) 45px),
+  radial-gradient(circle at 72% 20%,rgba(255,199,158,.35),transparent 26%)}
+.hero-bold:before{content:"";position:absolute;left:26px;right:26px;bottom:0;height:44%;pointer-events:none;opacity:.5;
+  background:linear-gradient(transparent 40%,rgba(30,45,54,.28)),
+  repeating-linear-gradient(90deg,rgba(30,45,54,.30) 0 34px,transparent 34px 48px,rgba(30,45,54,.22) 48px 70px,transparent 70px 92px);
+  clip-path:polygon(0 100%,0 45%,6% 45%,6% 20%,12% 20%,12% 45%,18% 45%,18% 60%,26% 60%,26% 30%,32% 30%,32% 60%,40% 60%,40% 40%,48% 40%,48% 65%,56% 65%,56% 25%,62% 25%,62% 10%,64% 10%,64% 25%,70% 25%,70% 65%,78% 65%,78% 45%,86% 45%,86% 60%,94% 60%,94% 50%,100% 50%,100% 100%);}
+.orb-one{background:#ffc79e;opacity:.8}.orb-two{background:var(--wf-coral);opacity:.25}
+.hero-kicker{display:inline-block;background:var(--wf-frame);color:#ffc79e;border-radius:999px;padding:7px 14px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.hero-title,.hero h1.hero-title,.hero h2.hero-title{font-family:"Arial Black",system-ui,"Noto Sans HK",sans-serif;font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-.015em;color:#fff;text-shadow:3px 3px 0 var(--wf-frame),-1px -1px 0 var(--wf-frame)}
+.hero-sub-large{color:var(--wf-ink);font-weight:600;background:rgba(255,251,241,.72);display:inline-block;padding:8px 12px;border-radius:12px}
+.hero-cta{background:var(--wf-coral)!important;color:#fff!important;border:3px solid var(--wf-frame);box-shadow:6px 6px 0 var(--wf-frame);text-transform:uppercase;letter-spacing:.02em}
+.hero-cta:hover{transform:translate(-1px,-1px);box-shadow:7px 7px 0 var(--wf-frame)}
+.hero-note{color:var(--wf-ink);font-weight:700}.hero-note strong{color:var(--wf-ink)}
+.hero-discovery{background:var(--wf-white);border:3px solid var(--wf-frame);box-shadow:8px 8px 0 var(--wf-frame)}
+.spark{color:var(--wf-coral)}
+.mini-ring{background:conic-gradient(var(--wf-coral) var(--p,20%),#efe0cd 0)}
+.profile-strip{background:var(--wf-white);border:3px solid var(--wf-frame);box-shadow:6px 6px 0 var(--wf-frame)}
+.profile-strip-icon{background:#a9d3cb;color:var(--wf-frame);border:2px solid var(--wf-frame)}
+.strip-link{color:var(--wf-green)}
+.sec,.sheet,.quickcheck,.expect,.claimbox{background:var(--wf-white);border:2px solid var(--wf-frame);box-shadow:6px 6px 0 rgba(30,45,54,.9)}
+.sec-head{border-bottom:2px solid var(--wf-frame)}
+.sec-ico{background:#ffc79e!important;border:2px solid var(--wf-frame)}
+.sec-count{background:var(--wf-cream);border:2px solid var(--wf-frame)}
+.sec-count.hot{background:var(--wf-coral);border-color:var(--wf-frame)}
+.sec-count.ok{background:#a9d3cb;color:var(--wf-ink);border:2px solid var(--wf-frame)}
+.card{border:2px solid var(--wf-frame);background:var(--wf-white);box-shadow:5px 5px 0 rgba(30,45,54,.9)}
+.card:hover{box-shadow:7px 7px 0 rgba(30,45,54,.9)}
+.chips-vert .chip{border:2px solid var(--wf-frame);background:var(--wf-white);color:var(--wf-ink);box-shadow:3px 3px 0 var(--wf-frame)}
+.chips-vert .chip.active{background:var(--wf-frame);color:#fff}
+.moment{border:2px solid var(--wf-frame);box-shadow:3px 3px 0 var(--wf-frame)}
+.moment.on{background:var(--wf-frame)}.moment.on .moment-n{background:#ffc79e;color:var(--wf-ink)}
+.moment-n{background:#a9d3cb;color:var(--wf-ink)}
+.quick-opts button{border:2px solid var(--wf-frame);background:var(--wf-cream);box-shadow:3px 3px 0 var(--wf-frame)}
+.quick-opts button.on{background:var(--wf-coral);border-color:var(--wf-frame)}
+.quick-result{background:#a9d3cb;border:2px solid var(--wf-frame)}
+.sec-top3{border:3px solid var(--wf-frame)}.grid-top3 .card{border:3px solid var(--wf-frame)}
+.btn{background:var(--wf-coral);border:2px solid var(--wf-frame);box-shadow:4px 4px 0 var(--wf-frame)}
+.btn.ghost{background:var(--wf-white);color:var(--wf-ink);border:2px solid var(--wf-frame)}
+.savebtn,.hidebtn{border:2px solid var(--wf-frame)}.savebtn.on{background:#ffe69a;border-color:var(--wf-frame)}
+.searchbar{border:2px solid var(--wf-frame);box-shadow:4px 4px 0 var(--wf-frame)}
+.fgroup{border:2px solid var(--wf-frame)}.fgroup legend{color:var(--wf-green)}
+.kchip{border:2px solid var(--wf-frame)}.kchip.on{background:var(--wf-coral)!important;border-color:var(--wf-frame)!important}
+.miss-bar{border:2px dashed var(--wf-frame);background:var(--wf-white);box-shadow:4px 4px 0 rgba(30,45,54,.35)}
+.miss-bar-toggle{color:var(--wf-green)}
+.pill{border:2px solid var(--wf-frame)}.pill.hot{background:#ffd9cd;color:#7e2313}.pill.info{background:#d3e9e4;color:#17403d}.pill.fresh{background:#ffe69a;color:#5c3d00}
+.detail{background:var(--wf-white);border:3px solid var(--wf-frame)}
+#topBtn{background:var(--wf-coral);border:3px solid #fff;box-shadow:4px 4px 0 var(--wf-frame)}
+footer{background:#7e3125;color:#ffe9d2;border-top:3px solid var(--wf-frame)}

@@ -1,4 +1,4 @@
-# WellFairy — Agent Runbook (AGENTS.md)
+# Welly — Agent Runbook (AGENTS.md)
 
 This file describes how data sources are added, scheduled for crawling using BFS and DFS, and the `admin` review process that enforces the data pipeline.
 
@@ -25,6 +25,54 @@ This file describes how data sources are added, scheduled for crawling using BFS
   - `info.gov.hk press`: TC via toggle link; ID often differs by language (never guess)
   - `KMB monthly pass`: one bilingual page (TC/EN toggle on page)
   - EN-only (no twin): rehabusociety, info.gov.hk fallback, cspe.edu.hk, cmhhk.org, studyinhongkong.edu.hk, hkic.edu.hk
+
+### Eligibility-gate capture (matching engine) — IMPORTANT
+
+When crawling a scheme, capturing its **eligibility constraints** is as important as
+capturing amounts. The matcher (`app.js: audit()`) filters users ONLY on `needs.*`
+gates — anything left in prose never filters. For every eligibility condition on the
+source page: if an engine gate exists, encode it in `needs` with the exact figure;
+if none exists, put the rule in `confirm_en` + `confirm_zh` so users can self-check.
+
+**Enforced gates** (filter users — source of truth is `app.js: audit()`):
+
+| Gate | Profile field | Meaning |
+|---|---|---|
+| `min_age` / `max_age` | age | age floor / ceiling |
+| `sex` | sex | `female` / male only |
+| `hk_resident` | hk_resident | must be HK resident |
+| `min_hk_years` | hkYears | minimum years living in HK |
+| `districts[]` | district | 18-district allow-list (English values) |
+| `housing_in[]` | housing | `private` / `prh` tenancy |
+| `min_transport_spend` | transportSpend | min monthly transport spend |
+| `requires_disability` / `is_carer` | hasDisability / isCarer | disability / 80+hrs carer |
+| `prh_exact` / `carer_income_exact` | income+assets × household | PRH / carer-allowance income lines |
+| `unemployed` | unemployed | currently unemployed |
+| `toddler` / `has_kids_any` / `has_kids_level` / `single_parent` / `tertiary` / `child_sen` | kids profile | child-related gates |
+| `lives_mainland` | livesMainland | GD/Fujian residence |
+| `smoker` | smoker | smoker at home |
+| `carer_context` / `requires_elderly_in_house` | hasElderly etc. | care-context gates |
+| `no_property` / `no_other_allowance` / `oala_or_waiver` | ownsProperty / allowances | exclusion gates |
+| `edu_max_rank` | eduRank | education ceiling |
+| `requires_work_hours` | workHours | min monthly work hours |
+| `afi_max` / `wfa_exact` / `max_monthly_income_*` / `max_assets_*` | income+assets | AFI / WFA / income / asset caps |
+
+**NOT enforced — documentary only** (matcher ignores them; `review.mjs` warns, never
+blocks): `hk_employee`, `employment_terminated_after_may_2025`,
+`affected_by_mpf_offseting`, `hk_company`, `incorporated_in_hk`, `not_gov_subvented`,
+`hasElderly`, `low_income`, `maintenance_dispute`. Use only with justification in
+`confirms`. (`needs_ehealth` is a top-level sign-up nudge, not a filter.)
+
+**Pitfalls:**
+- **Amount scalers are NOT eligibility.** If payouts vary by age/income (e.g. ECO
+  death compensation 84/60/36 months by age <40/40–56/56+), do NOT encode
+  `min_age`/`max_age` — that would wrongly hide the scheme from eligible users.
+  Scalers belong in `value_*`; gates are only for who qualifies at all.
+- **ECO worked example** (`eco-work-injury`): eligibility = any employee under a
+  contract of service — no age bar exists on the source, so no `min_age`/`max_age`.
+  Employment itself has no enforced gate (`hk_employee` is documentary only), so the
+  employee-only rule lives in `confirms`, and the review warning records the
+  consciously accepted gap.
 
 ---
 

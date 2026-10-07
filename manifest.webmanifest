@@ -1,14 +1,14 @@
 {
   "id": "/",
-  "name": "WellFairy 援助仙 — 福利配對",
-  "short_name": "WellFairy",
+  "name": "Welly 支援里 — 福利配對",
+  "short_name": "Welly",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "dir": "ltr",
   "lang": "zh-Hant-HK",
-  "background_color": "#ece7fd",
-  "theme_color": "#4c1d95",
+  "background_color": "#c4714b",
+  "theme_color": "#c4714b",
   "description": "一次建立檔案，自動配對 200+ 項香港政府福利。Match 200+ HK gov welfare schemes in 2 minutes.",
   "categories": ["lifestyle", "utilities", "government"],
   "icons": [

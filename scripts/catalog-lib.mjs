@@ -22,6 +22,15 @@ export const KNOWN_NEEDS = new Set(('min_age,max_age,sex,hk_resident,min_hk_year
 
 export const loadJson = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
+// Keys in KNOWN_NEEDS that app.js audit() does NOT enforce. A scheme carrying
+// one of these matches users who fail it — the key is documentary only.
+// Validation warns (never blocks) so the reviewer consciously accepts the gap.
+export const UNENFORCED_NEEDS = new Set([
+  'hasElderly', 'low_income', 'maintenance_dispute', 'hk_employee',
+  'employment_terminated_after_may_2025', 'affected_by_mpf_offseting',
+  'hk_company', 'incorporated_in_hk', 'not_gov_subvented',
+]);
+
 export function loadDecisions(p = DECISIONS_PATH) {
   if (!existsSync(p)) return {};
   try {
@@ -73,7 +82,10 @@ export function validate(b, ids) {
   if (b.confirm_en && !b.confirm_zh) warns.push('confirm_en without confirm_zh');
   if (b.confirm_zh && !b.confirm_en) warns.push('confirm_zh without confirm_en');
   if (b.needs && typeof b.needs === 'object') {
-    for (const k of Object.keys(b.needs)) if (!KNOWN_NEEDS.has(k)) warns.push(`unknown needs.${k} (matcher ignores it)`);
+    for (const k of Object.keys(b.needs)) {
+      if (!KNOWN_NEEDS.has(k)) warns.push(`unknown needs.${k} (matcher ignores it)`);
+      else if (UNENFORCED_NEEDS.has(k)) warns.push(`needs.${k} is NOT enforced by the matcher — scheme matches users who fail it; keep only with justification in confirms`);
+    }
   }
   return { errs, warns };
 }

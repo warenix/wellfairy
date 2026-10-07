@@ -1,7 +1,7 @@
 ---
 name: deploy
 description: >
-  Deploy the WellFairy static site. Validate syntax, then only if working-tree
+  Deploy the Welly static site. Validate syntax, then only if working-tree
   changes exist: bump the service worker cache version, commit, and push to
   main. Use when the user says deploy, commit and push, or ship changes.
 ---

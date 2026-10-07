@@ -1,4 +1,4 @@
-/* WellFairy 援助仙 — modern match UI, same local JSON storage */
+/* Welly 支援里 — modern match UI, same local JSON storage */
 const LS_KEY = 'hkbm_profile_v1', SAVE_KEY = 'hkbm_saved_v1', HIDE_KEY = 'hkbm_hidden_v1';
 let BENEFITS = [], LANG = localStorage.getItem('hkbm_lang') || 'zh';
 let FILTER = 'all', FILTER_ALL = 'all', LIFE_FILTER = 'all';
@@ -36,53 +36,7 @@ function wireKidPick() {
     const set = kidSet();
     set.has(b.dataset.k) ? set.delete(b.dataset.k) : set.add(b.dataset.k);
     f.kids.value = [...set].sort((a, c) => KID_ORDER(a) - KID_ORDER(c)).join(',');
-  // Citizen-first: moments + quick-check + Top 3 (uses forgiving quick profile)
-  const qp = quickProfile();
-  const qHit = BENEFITS.filter(b=>matches(b,qp)).filter(momentPass);
-  const isLoan = b => /loan|貸款|借貸/i.test(`${b.title_en||''} ${b.title_zh||''} ${b.id||''}`);
-  const rankAmt = b => { const a = estimateAmount(b); return (isMonthlyAmt(b) && a > 30000) ? 0 : a; };
-  const qTop = [...qHit].sort((a,b2)=>{
-    const la = isLoan(a) ? 1 : 0, lb = isLoan(b2) ? 1 : 0;
-    if (la !== lb) return la - lb; // loans last — citizens want grants first
-    const ma = isMonthlyAmt(a) ? 0 : 1, mb = isMonthlyAmt(b2) ? 0 : 1;
-    if (ma !== mb) return ma - mb; // monthly allowances first
-    return rankAmt(b2) - rankAmt(a);
-  }).slice(0,3);
-  const qMonthly = qTop.filter(isMonthlyAmt).reduce((s,b)=>s+estimateAmount(b),0);
-  const mg = $('#momentGrid');
-  if (mg) {
-    mg.innerHTML = MOMENTS.map(m=>{
-      const n = BENEFITS.filter(b=>matches(b,qp)&&m.test(b)).length;
-      return `<button type="button" class="moment${QUICK.moment===m.id?' on':''}" data-moment="${m.id}" aria-pressed="${QUICK.moment===m.id?'true':'false'}"><span class="moment-ico" aria-hidden="true">${m.icon}</span><span class="moment-t">${esc(t(m.en,m.zh))}</span><span class="moment-n">${n}</span></button>`;
-    }).join('');
-    mg.querySelectorAll('[data-moment]').forEach(btn=>btn.onclick=()=>{QUICK.moment=btn.dataset.moment;render();});
-  }
-  const qn = $('#quickN');
-  if (qn) qn.querySelectorAll('[data-qn]').forEach(btn=>{
-    btn.classList.toggle('on', +btn.dataset.qn === QUICK.n || (btn.dataset.qn==='4' && QUICK.n>=4));
-    btn.onclick=()=>{QUICK.n=+btn.dataset.qn;render();};
-  });
-  const qb = $('#quickBand');
-  if (qb) qb.querySelectorAll('[data-qb]').forEach(btn=>{
-    btn.classList.toggle('on', btn.dataset.qb===QUICK.band);
-    btn.onclick=()=>{QUICK.band=btn.dataset.qb;render();};
-  });
-  const qr = $('#quickResult');
-  if (qr) qr.innerHTML = qMonthly
-    ? (LANG==='zh' ? `你每月可能多 <strong>$${qMonthly.toLocaleString()}</strong>（Top 3估算，未計一次性）` : `You could gain <strong>$${qMonthly.toLocaleString()}/mo</strong> (Top 3 estimate, excl. one-offs)`)
-    : (LANG==='zh' ? `呢個情況有 <strong>${qHit.length}</strong> 項可能合資格，睇下面Top 3` : `<strong>${qHit.length}</strong> possible matches — see Top 3 below`);
-  const qs = $('#quickStep');
-  if (qs) qs.textContent = `${qHit.length} ${t('matches','項可能合資格')}`;
-  const top3 = $('#top3');
-  if (top3) top3.innerHTML = qTop.map(b=>card(b)).join('') || `<div class="empty"><p>${t('Answer the 60-second check to see your Top 3.','答完60秒檢查就睇到你嘅Top 3。')}</p></div>`;
-  // Next tab: saved schemes as action tickets with Done
-  const nl = $('#nextList');
-  if (nl) {
-    const items = BENEFITS.filter(b=>SAVED.has(b.id));
-    nl.innerHTML = items.length ? items.map(b=>`<div class="next-item">${card(b)}<button type="button" class="btn ghost donebtn" data-done="${esc(b.id)}">✅ ${t('Done','搞掂')}</button></div>`).join('')
-      : `<div class="empty"><p>${t('Nothing saved yet — tap ☆ on any Top 3 card.','未收藏任何項目 — 喺Top 3卡上㩒 ☆ 啦。')}</p></div>`;
-  }
-  renderKidChips();
+    renderKidChips();
     const updated = $(`[data-k="${b.dataset.k}"]`);
     if (updated) updated.focus();
   });
@@ -115,16 +69,16 @@ const L = (b, k) => (LANG === 'zh' && b[k + '_zh']) ? b[k + '_zh'] : (b[k] || b.
 // Full-site static UI strings. Add new keys here, reference with data-i18n="key".
 const I18N = {
   skip: ['Skip to main content', '跳至主要內容'],
-  siteTitle: ['WellFairy — HK benefit matcher', 'WellFairy 援助仙 — 香港福利配對'],
-  brandSub: ['Welfare navigator · Find support', '援助仙 · 福利導航'],
+  siteTitle: ['Welly — HK benefit matcher', 'Welly 支援里 — 香港福利配對'],
+  brandSub: ['Welfare navigator · Find support', '支援里 · 福利導航'],
   trustTop: ['Free · Data stays on your device', '免費 · 資料留在你手機'],
   heroKicker: ['Support you may have missed', '你可能未曾發現的支援'],
   heroLead: ['Some support should find you.', '有啲福利，唔係你搵佢，係佢應該搵你。'],
-  heroPromise: ['WellFairy looks at your family, income, housing and life situation to uncover support you may qualify for.', 'WellFairy 根據你嘅家庭、收入、住屋同生活狀況，幫你搵出可能合資格嘅支援。'],
+  heroPromise: ['Welly looks at your family, income, housing and life situation to uncover support you may qualify for.', 'Welly 根據你嘅家庭、收入、住屋同生活狀況，幫你搵出可能合資格嘅支援。'],
   heroCTA: ['Start my benefit check', '開始我的福利檢查'],
   heroNote: ['build your profile · no sign-up', '建立檔案 · 不需登記'],
   discoveryLabel: ['YOUR SUPPORT MAP', '你的支援地圖'],
-  profileStripTitle: ['The more WellFairy knows, the sharper your matches.', '你的資料越完整，WellFairy 越懂你。'],
+  profileStripTitle: ['The more Welly knows, the sharper your matches.', '你的資料越完整，Welly 越懂你。'],
   profileStripText: ['Income, children, housing and caring details stay on your device.', '收入、子女、住屋、長者照顧等資料，都只會留在你的裝置。'],
   profileStripCTA: ['Complete profile', '完善檔案'],
   install: ['⬇ Install', '⬇ 安裝'],
@@ -143,7 +97,7 @@ const I18N = {
   expectH: ['What happens next?', '會發生咩事？'],
   ex1: ['Pick from the Top 3, tap Apply to go to the government site', '睇Top 3，㩒「立即申請」去政府網站'],
   ex2: ['Bring the listed proof documents (usually 1–3)', '帶齊下面寫住嘅證明文件（一般1–3份）'],
-  ex3: ['Wait for the government decision — WellFairy never files for you', '交表後等政府批，WellFairy唔會代交表'],
+  ex3: ['Wait for the government decision — Welly never files for you', '交表後等政府批，Welly唔會代交表'],
   browseAll: ['Prefer to browse yourself? See all 200+ schemes →', '想自己慢慢搵？瀏覽全部 200+ 項 →'],
   nextH: ['My next steps', '我的下一步'],
   nextD: ['Everything you saved, with its next step. Tap Done when finished.', '你收藏嘅每樣嘢，下一步寫晒喺度。做完一樣，㩒「搞掂」。'],
@@ -225,7 +179,7 @@ const I18N = {
   save: ['💾 Save & re-match', '💾 儲存並重新配對'],
   hintStore: ['Stored on this phone only (localStorage + your exported profile.json). Catalog is plain-text data/benefits.json.', '只存手機 localStorage + 你 export 的 profile.json。目錄是 data/benefits.json 純文字。'],
   aboutH: ['Why you can trust this', '為何值得信賴？'],
-  aboutPurpose: ['Welcome to WellFairy! Answer a few simple questions about yourself and we will match you with the government schemes, allowances and concessions you qualify for — every match backed by its official source, so you can apply with confidence.', '歡迎使用 WellFairy 援助仙！只要答幾條關於你嘅簡單問題，我哋就會幫你配對合資格嘅政府計劃、津貼同優惠，每個配對都附上官方來源，助你輕鬆掌握應得嘅福利。'],
+  aboutPurpose: ['Welcome to Welly! Answer a few simple questions about yourself and we will match you with the government schemes, allowances and concessions you qualify for — every match backed by its official source, so you can apply with confidence.', '歡迎使用 Welly 支援里！只要答幾條關於你嘅簡單問題，我哋就會幫你配對合資格嘅政府計劃、津貼同優惠，每個配對都附上官方來源，助你輕鬆掌握應得嘅福利。'],
   ab1: ['Every match explains why you qualify and what proof to bring', '每個配對都會說明您符合的原因，以及需要準備的證明文件'],
   ab2: ['Every scheme links its government source plus update date', '每個計劃均附上政府來源連結及更新日期'],
   ab3: ['Guidance only — we never file for you; the government notice prevails', '我們只作提醒，不會代為申請，一切以政府公布為準'],
@@ -241,7 +195,7 @@ function applyI18n() {
   document.querySelectorAll('[data-i18n-opt]').forEach(el => { const v = I18N[el.dataset.i18nOpt]; if (v) el.textContent = pick(v); });
   document.querySelectorAll('[data-i18n-og]').forEach(el => { const v = I18N[el.dataset.i18nOg]; if (v) el.label = pick(v); });
   document.documentElement.lang = LANG === 'zh' ? 'zh-Hant-HK' : 'en-HK';
-  document.title = LANG === 'zh' ? 'WellFairy 援助仙 — 應得的福利，自動話你知' : 'WellFairy — benefits you qualify for, auto-matched';
+  document.title = LANG === 'zh' ? 'Welly 支援里 — 應得的福利，自動話你知' : 'Welly — benefits you qualify for, auto-matched';
   const nav = document.querySelector('nav.tabs'); if (nav) nav.setAttribute('aria-label', t('Main navigation', '主導航'));
   const lt = $('#langToggle'); if (lt) lt.setAttribute('aria-label', t('Switch language, current: Chinese', '切換語言，目前：中文') && (LANG === 'zh' ? '切換語言 Switch language，目前中文' : '切換語言 Switch language, current English'));
   const tb = $('#topBtn'); if (tb) tb.setAttribute('aria-label', t('Back to top', '回到頂部'));
@@ -274,11 +228,19 @@ let QUICK = { moment:'baby', n:4, band:'soso' };
 const BAND_INCOME = { tight:12000, soso:22000, mid:38000, ok:65000 };
 // Quick-check pseudo-profile: band midpoints + forgiving defaults (assets low,
 // work hours full) so citizens see upside before giving exact figures.
+// The moment tap IS the user's self-declared situation, so fill the fields the
+// 3 questions don't cover: a baby tap implies a child at home, a carer tap
+// implies someone to care for, a job tap implies job-seeking. Without this the
+// quick check inherits the stored profile (e.g. no kids) and shows 0 matches.
 function quickProfile() {
   const p = loadP();
+  if (typeof p.kids === 'string') p.kids = p.kids.split(/[,，\s]+/).map(s => s.trim().toUpperCase()).filter(Boolean);
   p.householdN = QUICK.n;
   p.monthlyIncome = BAND_INCOME[QUICK.band] ?? 22000;
   p.assets = 100000; p.workHours = 160;
+  if (QUICK.moment === 'baby' && !((p.kids || []).length || p.hasToddler || p.hasTertiary)) p.kids = ['P3'];
+  if (QUICK.moment === 'carer' && !(p.hasElderly || p.hasDisability || p.isCarer || (p.age || 0) >= 60)) p.hasElderly = true;
+  if (QUICK.moment === 'job' && !p.unemployed) p.unemployed = true;
   return p;
 }
 function momentPass(b) { const m = MOMENTS.find(x=>x.id===QUICK.moment); return m ? m.test(b) : true; }
@@ -600,6 +562,55 @@ const passFilter = (b, f) => {
   return b.category === f;
 };
 
+// Citizen-first: moments + quick-check + Top 3 (uses forgiving quick profile)
+function renderQuick() {
+  const qp = quickProfile();
+  const qHit = BENEFITS.filter(b=>matches(b,qp)).filter(momentPass);
+  const isLoan = b => /loan|貸款|借貸/i.test(`${b.title_en||''} ${b.title_zh||''} ${b.id||''}`);
+  const rankAmt = b => { const a = estimateAmount(b); return (isMonthlyAmt(b) && a > 30000) ? 0 : a; };
+  const qTop = [...qHit].sort((a,b2)=>{
+    const la = isLoan(a) ? 1 : 0, lb = isLoan(b2) ? 1 : 0;
+    if (la !== lb) return la - lb; // loans last — citizens want grants first
+    const ma = isMonthlyAmt(a) ? 0 : 1, mb = isMonthlyAmt(b2) ? 0 : 1;
+    if (ma !== mb) return ma - mb; // monthly allowances first
+    return rankAmt(b2) - rankAmt(a);
+  }).slice(0,3);
+  const qMonthly = qTop.filter(isMonthlyAmt).reduce((s,b)=>s+estimateAmount(b),0);
+  const mg = $('#momentGrid');
+  if (mg) {
+    mg.innerHTML = MOMENTS.map(m=>{
+      const n = BENEFITS.filter(b=>matches(b,qp)&&m.test(b)).length;
+      return `<button type="button" class="moment${QUICK.moment===m.id?' on':''}" data-moment="${m.id}" aria-pressed="${QUICK.moment===m.id?'true':'false'}"><span class="moment-ico" aria-hidden="true">${m.icon}</span><span class="moment-t">${esc(t(m.en,m.zh))}</span><span class="moment-n">${n}</span></button>`;
+    }).join('');
+    mg.querySelectorAll('[data-moment]').forEach(btn=>btn.onclick=()=>{QUICK.moment=btn.dataset.moment;render();});
+  }
+  const qn = $('#quickN');
+  if (qn) qn.querySelectorAll('[data-qn]').forEach(btn=>{
+    btn.classList.toggle('on', +btn.dataset.qn === QUICK.n || (btn.dataset.qn==='4' && QUICK.n>=4));
+    btn.onclick=()=>{QUICK.n=+btn.dataset.qn;render();};
+  });
+  const qb = $('#quickBand');
+  if (qb) qb.querySelectorAll('[data-qb]').forEach(btn=>{
+    btn.classList.toggle('on', btn.dataset.qb===QUICK.band);
+    btn.onclick=()=>{QUICK.band=btn.dataset.qb;render();};
+  });
+  const qr = $('#quickResult');
+  if (qr) qr.innerHTML = qMonthly
+    ? (LANG==='zh' ? `你每月可能多 <strong>$${qMonthly.toLocaleString()}</strong>（Top 3估算，未計一次性）` : `You could gain <strong>$${qMonthly.toLocaleString()}/mo</strong> (Top 3 estimate, excl. one-offs)`)
+    : (LANG==='zh' ? `呢個情況有 <strong>${qHit.length}</strong> 項可能合資格，睇下面Top 3` : `<strong>${qHit.length}</strong> possible matches — see Top 3 below`);
+  const qs = $('#quickStep');
+  if (qs) qs.textContent = `${qHit.length} ${t('matches','項可能合資格')}`;
+  const top3 = $('#top3');
+  if (top3) top3.innerHTML = qTop.map(b=>card(b)).join('') || `<div class="empty"><p>${t('Answer the 60-second check to see your Top 3.','答完60秒檢查就睇到你嘅Top 3。')}</p></div>`;
+  // Next tab: saved schemes as action tickets with Done
+  const nl = $('#nextList');
+  if (nl) {
+    const items = BENEFITS.filter(b=>SAVED.has(b.id));
+    nl.innerHTML = items.length ? items.map(b=>`<div class="next-item">${card(b)}<button type="button" class="btn ghost donebtn" data-done="${esc(b.id)}">✅ ${t('Done','搞掂')}</button></div>`).join('')
+      : `<div class="empty"><p>${t('Nothing saved yet — tap ☆ on any Top 3 card.','未收藏任何項目 — 喺Top 3卡上㩒 ☆ 啦。')}</p></div>`;
+  }
+}
+
 function render() {
   applyI18n();
   const p = loadP();
@@ -638,6 +649,7 @@ function render() {
     }).join('');
     lifeChipsEl.querySelectorAll('button').forEach(b=>b.onclick=()=>{LIFE_FILTER=b.dataset.life;render();});
   }
+  renderQuick();
   renderKidChips();
   $('#soon').innerHTML = soonAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).sort((a,b2)=>daysTo(a.deadline)-daysTo(b2.deadline)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg><p>${t('No urgent deadlines. Nice.','暫無急件。')}</p></div>`;
   $('#now').innerHTML = nowAll.filter(lifePass).filter(b=>passFilter(b,FILTER)).map(b=>card(b)).join('') || `<div class="empty"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg><p>${t('No direct matches yet — complete your profile or check One step away.','目前暫無直接符合的項目 — 不妨先完善檔案資料，或查看「只差一步」。')}</p></div>`;

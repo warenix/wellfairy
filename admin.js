@@ -1,4 +1,4 @@
-/* WellFairy Admin — staging vs live review queue (static, no backend).
+/* Welly Admin — staging vs live review queue (static, no backend).
  * Live:    data/benefits.json         (what app.js + SEO build read)
  * Staging: data/benefits.staging.json (what crawlers write — never goes live unreviewed)
  * Decisions + inline edits persist in localStorage; publishing = download a new

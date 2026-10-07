@@ -45,21 +45,21 @@ function schemePage(b) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(b.title_zh)}｜WellFairy 援助仙</title>
+<title>${esc(b.title_zh)}｜Welly 支援里</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="WellFairy 援助仙">
+<meta property="og:site_name" content="Welly 支援里">
 <meta property="og:title" content="${esc(b.title_zh)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="../styles.css">
 <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"WellFairy 援助仙","item":"${SITE}/"},{"@type":"ListItem","position":2,"name":"${esc(catZh)}","item":"${SITE}/"},{"@type":"ListItem","position":3,"name":${JSON.stringify(b.title_zh)}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Welly 支援里","item":"${SITE}/"},{"@type":"ListItem","position":2,"name":"${esc(catZh)}","item":"${SITE}/"},{"@type":"ListItem","position":3,"name":${JSON.stringify(b.title_zh)}}]}</script>
 </head>
 <body>
-<header class="topbar"><div class="brand"><span class="logo">🧚</span><div><strong>WellFairy 援助仙</strong><span>福利配對 Benefit matcher</span></div></div><div class="topact"><a class="ghostbtn" style="text-decoration:none;display:inline-flex;align-items:center" href="../">開啟配對 Open app</a></div></header>
+<header class="topbar"><div class="brand"><span class="logo">🧚</span><div><strong>Welly 支援里</strong><span>福利配對 Benefit matcher</span></div></div><div class="topact"><a class="ghostbtn" style="text-decoration:none;display:inline-flex;align-items:center" href="../">開啟配對 Open app</a></div></header>
 <main>
 <div class="sheet">
 <article>
@@ -74,7 +74,7 @@ ${deadline}
 <p lang="en" class="hint">${esc(b.why_en || '')}</p>
 <h2>請帶齊文件 Documents to bring</h2>
 <ul>${proof || '<li>請見政府來源頁 See official source page</li>'}</ul>
-<div class="row"><a class="btn" href="${appUrl}">用 WellFairy 檢查我是否符合 Check eligibility →</a></div>
+<div class="row"><a class="btn" href="${appUrl}">用 Welly 檢查我是否符合 Check eligibility →</a></div>
 <h2>官方來源 Official source</h2>
 <ul>
 <li><a href="${esc(sourceUrl)}" rel="noopener">政府來源頁 Official source</a></li>
@@ -84,7 +84,7 @@ ${deadline}
 </article>
 </div>
 </main>
-<footer><small>WellFairy 援助仙 — 申請前請以政府網站為準。</small></footer>
+<footer><small>Welly 支援里 — 申請前請以政府網站為準。</small></footer>
 </body>
 </html>
 `;
@@ -118,12 +118,12 @@ writeFileSync(join(root, 'robots.txt'),
 const byCat = {};
 for (const b of benefits) (byCat[b.category] ||= []).push(b);
 writeFileSync(join(root, 'llms.txt'),
-  `# WellFairy 援助仙 — Hong Kong welfare benefit matcher\n\n> 2 分鐘檔案，自動配對 ${benefits.length} 項香港政府福利。Free, offline-first, data stays on device.\n> App: ${SITE}/\n> Machine-readable catalog: ${SITE}/data/benefits.json\n> Sitemap: ${SITE}/sitemap.xml\n\n## How to check eligibility\n\n1. Open ${SITE}/ and complete the profile (age, household, income, district).\n2. Or open a scheme page below, then follow "Check eligibility in WellFairy".\n3. Always verify against the linked official government source before applying.\n\n${Object.entries(byCat).map(([c, list]) => `## ${c} (${list.length})\n\n${list.map((b) => `- [${b.title_zh} | ${b.title_en}](${SITE}/s/${b.id}.html) — ${b.value_summary_zh || ''}`).join('\n')}`).join('\n\n')}\n`);
+  `# Welly 支援里 — Hong Kong welfare benefit matcher\n\n> 2 分鐘檔案，自動配對 ${benefits.length} 項香港政府福利。Free, offline-first, data stays on device.\n> App: ${SITE}/\n> Machine-readable catalog: ${SITE}/data/benefits.json\n> Sitemap: ${SITE}/sitemap.xml\n\n## How to check eligibility\n\n1. Open ${SITE}/ and complete the profile (age, household, income, district).\n2. Or open a scheme page below, then follow "Check eligibility in Welly".\n3. Always verify against the linked official government source before applying.\n\n${Object.entries(byCat).map(([c, list]) => `## ${c} (${list.length})\n\n${list.map((b) => `- [${b.title_zh} | ${b.title_en}](${SITE}/s/${b.id}.html) — ${b.value_summary_zh || ''}`).join('\n')}`).join('\n\n')}\n`);
 
 // 5. 404.html — GitHub Pages SPA fallback (deep links + scheme pages)
 writeFileSync(join(root, '404.html'), `<!doctype html>
 <html lang="zh-Hant-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>找不到頁面 Page not found｜WellFairy</title><meta name="robots" content="noindex">
+<title>找不到頁面 Page not found｜Welly</title><meta name="robots" content="noindex">
 <script>
 (function () {
   var base = '';
@@ -135,7 +135,7 @@ writeFileSync(join(root, '404.html'), `<!doctype html>
   else location.replace('/');
 })();
 </script></head>
-<body><p><a href="/">返回 WellFairy Back to app</a></p></body></html>
+<body><p><a href="/">返回 Welly Back to app</a></p></body></html>
 `);
 
 console.log(`SEO build done: ${benefits.length} scheme pages, sitemap, robots, llms.txt, 404.html`);

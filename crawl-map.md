@@ -1,4 +1,4 @@
-# WellFairy Crawl Map — BFS Level 1 / DFS Level 2
+# Welly Crawl Map — BFS Level 1 / DFS Level 2
 
 > Goal: discover as many HK benefit schemes as possible without overlapping work.
 > - **Level 1 (BFS):** sweep across sources. When a new source is added, crawl its landing page to discover new schemes.

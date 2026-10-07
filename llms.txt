@@ -1,4 +1,4 @@
-# WellFairy 援助仙 — Hong Kong welfare benefit matcher
+# Welly 支援里 — Hong Kong welfare benefit matcher
 
 > 2 分鐘檔案，自動配對 239 項香港政府福利。Free, offline-first, data stays on device.
 > App: https://warenix.github.io/wellfairy/
@@ -8,7 +8,7 @@
 ## How to check eligibility
 
 1. Open https://warenix.github.io/wellfairy/ and complete the profile (age, household, income, district).
-2. Or open a scheme page below, then follow "Check eligibility in WellFairy".
+2. Or open a scheme page below, then follow "Check eligibility in Welly".
 3. Always verify against the linked official government source before applying.
 
 ## family (92)
