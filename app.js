@@ -215,14 +215,18 @@ const LIFE_EVENTS = [
   {id:'unemployment',en:'Unemployment',zh:'失業支援'},
   {id:'housing-public',en:'Housing/Public Housing',zh:'房屋/公屋'}
 ];
-// Citizen-first moments (home entry). Each maps to a predicate over needs/category.
+// Citizen-first moments (home entry). Needs/category first, title-keyword
+// fallback so hk_resident-only schemes (no meaningful gate) still surface.
+// (tertiary removed from baby: adult self-study loans belong in study;
+// afi_max removed from study: it also gates food/CSSA/cash aid.)
+const TITLE_OF = b => `${b.title_en||''} ${b.title_zh||''}`;
 const MOMENTS = [
-  {id:'baby',    icon:'🍼', en:'Baby / kids',      zh:'初生嬰兒 / 育兒', test:b=>{const n=b.needs||{};return !!(n.has_kids_any||n.has_kids_level||n.toddler||n.child_sen||n.tertiary||n.single_parent);}},
-  {id:'job',     icon:'💼', en:'Out of work',      zh:'失業 / 求職',       test:b=>{const n=b.needs||{};return !!(n.unemployed||n.requires_work_hours!=null||n.wfa_exact);}},
-  {id:'carer',   icon:'🧑‍⚕️', en:'Caring for someone', zh:'照顧長者 / 病人', test:b=>{const n=b.needs||{};return !!(n.is_carer||n.carer_context||n.requires_elderly_in_house||n.requires_disability);}},
+  {id:'baby',    icon:'🍼', en:'Baby / kids',      zh:'初生嬰兒 / 育兒', test:b=>{const n=b.needs||{};return !!(n.has_kids_any||n.has_kids_level||n.toddler||n.child_sen||n.single_parent||/child|kid|newborn|kindergarten|preschool|pre-school|after.school|childcare|foster|parenting|MCHC|nursery|playgroup|early education/i.test(TITLE_OF(b)));}},
+  {id:'job',     icon:'💼', en:'Out of work',      zh:'失業 / 求職',       test:b=>{const n=b.needs||{};return !!(n.unemployed||n.requires_work_hours!=null||n.wfa_exact||/unemploy|re-employ|employment|job|work trial|earn & learn|retraining|placement/i.test(TITLE_OF(b)));}},
+  {id:'carer',   icon:'🧑‍⚕️', en:'Caring for someone', zh:'照顧長者 / 病人', test:b=>{const n=b.needs||{};return !!(n.is_carer||n.carer_context||n.requires_elderly_in_house||n.requires_disability||/carer|respite|dementia/i.test(TITLE_OF(b)));}},
   {id:'housing', icon:'🏠', en:'Rent / mortgage',  zh:'交租 / 供樓',       test:b=>b.category==='housing'||!!(b.needs||{}).prh_exact,},
-  {id:'health',  icon:'🏥', en:'Seeing a doctor',  zh:'求醫 / 用藥',     test:b=>b.category==='health'||b.category==='elderly'||!!(b.needs||{}).oala_or_waiver,},
-  {id:'study',   icon:'🎒', en:'Study / courses',  zh:'升學 / 進修',       test:b=>b.category==='student'||(b.needs||{}).edu_max_rank!=null||!!(b.needs||{}).afi_max,},
+  {id:'health',  icon:'🏥', en:'Seeing a doctor',  zh:'求醫 / 用藥',     test:b=>b.category==='health'||b.category==='elderly'||!!(b.needs||{}).oala_or_waiver||/ivf|vaccin|screening|dental|mental|clinic|hospital|medical|health|smok|doctor|pharmacy|cancer|hepatitis|tuberculosis|diabetes|oral health|chinese medicine/i.test(TITLE_OF(b))},
+  {id:'study',   icon:'🎒', en:'Study / courses',  zh:'升學 / 進修',       test:b=>b.category==='student'||(b.needs||{}).edu_max_rank!=null,},
 ];
 let QUICK = { moment:'baby', n:4, band:'soso' };
 const BAND_INCOME = { tight:12000, soso:22000, mid:38000, ok:65000 };
@@ -274,12 +278,14 @@ function nextStepText(b) {
 }
 function getLifeEvents(b){
   const n = b.needs || {};
+  const hay = `${b.title_en||''} ${b.title_zh||''}`;
   const tags = new Set();
-  if (b.category==='elderly' || n.min_age>=65 || n.requires_elderly_in_house) tags.add('elderly-care');
-  if (n.has_kids_any || n.has_kids_level || n.toddler || n.child_sen || b.category==='family' && /kid|child|parent|toddler|newborn/i.test((b.title_en||'')+(b.title_zh||''))) tags.add('newborn-parenting');
-  if (n.requires_disability || b.category==='health' && /disab/i.test((b.title_en||''))) tags.add('disability');
-  if (n.unemployed) tags.add('unemployment');
-  if (b.category==='housing' || (n.housing_in && n.housing_in.includes('prh')) || /public rental|prh|housing/i.test((b.title_en||''))) tags.add('housing-public');
+  // hasElderly is documentary-only for matching but valid for tagging.
+  if (b.category==='elderly' || n.min_age>=65 || n.requires_elderly_in_house || n.hasElderly || /elderly|elder care|senior|old age|OAA|OALA|dementia|respite/i.test(hay)) tags.add('elderly-care');
+  if (n.has_kids_any || n.has_kids_level || n.toddler || n.child_sen || /kid|child|parent|toddler|newborn|kindergarten|preschool|after.school|childcare|foster|MCHC|nursery|playgroup/i.test(hay)) tags.add('newborn-parenting');
+  if (n.requires_disability || /disab|deaf|pneumo|rehab|special needs|SEN/i.test(hay)) tags.add('disability');
+  if (n.unemployed || /unemploy|re-employ|employment|job|work trial|earn & learn|retraining/i.test(hay)) tags.add('unemployment');
+  if (b.category==='housing' || (n.housing_in && n.housing_in.includes('prh')) || /public rental|prh|housing/i.test(hay)) tags.add('housing-public');
   return [...tags];
 }
 const def = () => ({ age: 34, hk_resident: true, hkYears: 7, householdN: 4, monthlyIncome: 38000, assets: 200000, sex: 'female', married: true, housing: 'private', ownsProperty: false, onAllowance: false, onOALA: false, eduRank: 1, transportSpend: 800, hasDisability: false, isCarer: false, childSEN: false, unemployed: false, hasToddler: false, ehealth: false, hasTertiary: false, livesMainland: false, smoker: false, district: 'Sha Tin', hasElderly: false, isCSSA: false, workHours: 160, kids: ['K2','P3'] });
