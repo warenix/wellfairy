@@ -659,13 +659,86 @@ function renderQuick() {
   if (qs) qs.textContent = `${qHit.length} ${t('possible matches','項可能符合資格')}`;
   const top3 = $('#top3');
   if (top3) top3.innerHTML = qTop.map(b=>card(b)).join('') || `<div class="empty"><p>${t('Answer the 60-second check to see your Top 3.','完成 60 秒快速檢查，即可看到你的 Top 3。')}</p></div>`;
-  // Next tab: saved schemes as action tickets with Done
-  const nl = $('#nextList');
-  if (nl) {
-    const items = BENEFITS.filter(b=>SAVED.has(b.id));
-    nl.innerHTML = items.length ? items.map(b=>`<div class="next-item">${card(b)}<button type="button" class="btn ghost donebtn" data-done="${esc(b.id)}">✅ ${t('Done','完成')}</button></div>`).join('')
-      : `<div class="empty"><p>${t('Nothing saved yet — press ☆ on any Top 3 card to save it.','還沒有收藏 — 在 Top 3 卡上按 ☆ 即可收藏。')}</p></div>`;
+  renderNext();
+}
+// Next tab: supermarket-checkout basket. Saved schemes are the basket;
+// the receipt header totals monthly vs one-off estimates, rows group by
+// category with amount + next step + docs + Apply/Done per line.
+function renderNext() {
+  const nl = $('#nextList'), sum = $('#nextSummary');
+  if (!nl) return;
+  const items = BENEFITS.filter(b => SAVED.has(b.id));
+  if (!items.length) {
+    if (sum) sum.innerHTML = '';
+    nl.innerHTML = `<div class="empty receipt-empty"><p>${t('Nothing saved yet — press ☆ on any Top 3 card to save it.', '還沒有收藏 — 在 Top 3 卡上按 ☆ 即可收藏。')}</p><button type="button" class="btn ghost" data-goto="match">${t('See my Top 3 →', '看看我的 Top 3 →')}</button></div>`;
+    return;
   }
+  let monthly = 0, oneoff = 0, urgent = 0;
+  const docSet = new Set();
+  items.forEach(b => {
+    const amt = estimateAmount(b), m = isMonthlyAmt(b);
+    if (amt && (!m || amt <= 30000)) { if (m) monthly += amt; else oneoff += amt; }
+    const d = daysTo(b.deadline);
+    if (d != null && d >= 0 && d <= 30) urgent++;
+    (((LANG === 'zh' ? (b.proof_needed_zh || b.proof_needed_en) : b.proof_needed_en) || [])).forEach(x => docSet.add(x));
+  });
+  const ORDER = ['elderly', 'family', 'health', 'housing', 'transport', 'student'];
+  const groups = new Map();
+  items.forEach(b => {
+    if (!groups.has(b.category)) groups.set(b.category, []);
+    groups.get(b.category).push(b);
+  });
+  const rankVal = b => { const a = estimateAmount(b); return (isMonthlyAmt(b) && a > 30000) ? 0 : a; };
+  const cats = [...groups.keys()].sort((a, b2) => {
+    const ia = ORDER.indexOf(a), ib = ORDER.indexOf(b2);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+  const catName = c => { const n = CAT_NAME[c]; return n ? t(n.en, n.zh) : c; };
+  if (sum) {
+    sum.innerHTML = `<div class="receipt" aria-label="${esc(t('Basket summary', '結算摘要'))}">
+      <div class="receipt-head"><span aria-hidden="true">🧾</span><strong>${t('Checkout basket', '結算籃')}</strong><span class="receipt-count">${items.length} ${t('items', '項')}</span>
+      <button type="button" class="linkbtn receipt-clear" id="clearBasketBtn">${t('Clear', '清空')}</button></div>
+      <div class="receipt-totals">
+        <div class="receipt-total"><span>${t('Per month (est.)', '每月合計（估算）')}</span><strong>$${monthly.toLocaleString()}</strong></div>
+        <div class="receipt-total"><span>${t('One-off (est.)', '一次性合計（估算）')}</span><strong>$${oneoff.toLocaleString()}</strong></div>
+      </div>
+      <div class="receipt-meta">${urgent ? `⏰ ${urgent} ${t('closing within 30 days', '項 30 日內截止')} · ` : ''}🧾 ${docSet.size} ${t('kinds of proof to prepare', '種證明文件待備')}<br><span class="hint">${t('Amounts are estimates — check the government page before applying.', '金額為估算，申請前請以政府頁面為準。')}</span></div>
+    </div>`;
+  }
+  nl.innerHTML = cats.map(c => {
+    const list = groups.get(c).sort((a, b2) => {
+      const ma = isMonthlyAmt(a) ? 0 : 1, mb = isMonthlyAmt(b2) ? 0 : 1;
+      return ma - mb || rankVal(b2) - rankVal(a);
+    });
+    let subM = 0, subO = 0;
+    list.forEach(b => {
+      const a = estimateAmount(b), m = isMonthlyAmt(b);
+      if (a && (!m || a <= 30000)) { if (m) subM += a; else subO += a; }
+    });
+    const sub = subM ? `$${subM.toLocaleString()}${t('/mo', '/月')}` + (subO ? ` + $${subO.toLocaleString()}` : '') : (subO ? `$${subO.toLocaleString()}` : '');
+    const rows = list.map(b => {
+      const title = t(b.title_en, b.title_zh);
+      const amt = estimateAmount(b), m = isMonthlyAmt(b);
+      const amtOk = amt && (!m || amt <= 30000);
+      const amtTxt = amtOk ? `$${amt.toLocaleString()}${m ? t('/mo (est.)', '/月（估算）') : t(' (est.)', '（估算）')}` : humanDeadline(b);
+      const step = nextStepText(b);
+      const docs = ((LANG === 'zh' ? (b.proof_needed_zh || b.proof_needed_en) : b.proof_needed_en) || []).slice(0, 3);
+      const dleft = daysTo(b.deadline);
+      const hot = dleft != null && dleft >= 0 && dleft <= 30;
+      return `<div class="checkout-row${hot ? ' hot' : ''}" role="listitem" data-id="${esc(b.id)}">
+        <button type="button" class="checkout-check" data-done="${esc(b.id)}" aria-label="${esc(t('Mark as done: ', '完成並移除：') + title)}"><span aria-hidden="true">☐</span></button>
+        <div class="checkout-main" data-open="${esc(b.id)}" role="button" tabindex="0" aria-label="${esc(t('View details: ', '查看詳情：') + title)}">
+          <div class="checkout-title">${esc(title)}</div>
+          <div class="checkout-sub"><span class="checkout-amt">${esc(amtTxt)}</span><span class="checkout-dl">${hot ? '⏰ ' : '🗓 '}${esc(humanDeadline(b))}</span></div>
+          <div class="checkout-step"><span aria-hidden="true">👉</span> ${esc(step)}</div>
+          ${docs.length ? `<div class="checkout-docs"><span aria-hidden="true">🧾</span> ${esc(docs.join(' · '))}</div>` : ''}
+        </div>
+        <div class="checkout-actions"><a class="btn checkout-apply" target="_blank" rel="noopener" href="${esc(L(b, 'apply_link'))}">${t('Apply', '申請')}</a>
+        <button type="button" class="btn ghost checkout-done" data-done="${esc(b.id)}">✅ ${t('Done', '完成')}</button></div>
+      </div>`;
+    }).join('');
+    return `<section class="checkout-group"><div class="checkout-grouphead"><span aria-hidden="true">${CAT_ICON[c] || '🎁'}</span><strong>${esc(catName(c))}</strong><span class="checkout-groupn">${list.length} ${t('items', '項')}</span>${sub ? `<span class="checkout-groupsub">${esc(sub)}</span>` : ''}</div>${rows}</section>`;
+  }).join('');
 }
 
 function render() {
@@ -946,10 +1019,12 @@ async function init() {
       return;
     }
     if(e.target.id==='unhideAllBtn'){unhideAll();render();announce(t('All hidden schemes are back','已還原全部隱藏計劃'));return;}
+    if(e.target.closest('#clearBasketBtn')){SAVED.clear();saveS(SAVED);render();announce(t('Basket cleared','已清空結算籃'));return;}
     const done=e.target.closest('[data-done]');
     if(done){SAVED.delete(done.dataset.done);saveS(SAVED);render();announce(t('Marked as done','已完成'));return;}
     const why=e.target.closest('.mini-why');
     if(why){const w=$('#why-'+why.dataset.why);if(w)w.hidden=!w.hidden;return;}
+    const g=e.target.closest('[data-goto]'); if(g){const tb=document.querySelector(`[data-tab="${g.dataset.goto}"]`); if(tb) tb.click(); return;}
     const o=e.target.closest('[data-open]'); if(o){openDetail(o.dataset.open);return;}
     const c=e.target.closest('.card'); if(c&&!e.target.closest('a,button')) openDetail(c.dataset.id);
   });
@@ -957,6 +1032,9 @@ async function init() {
     if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('card')&&!e.target.closest('a,button')){
       const c=e.target.closest('.card');
       if(c&&e.target===c){e.preventDefault();openDetail(c.dataset.id);}
+    }
+    if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('checkout-main')){
+      e.preventDefault();openDetail(e.target.dataset.open);
     }
   });
   let d; window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();d=e;$('#installBtn').hidden=false;});
