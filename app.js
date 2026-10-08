@@ -1,4 +1,4 @@
-/* Welly 支援里 — modern match UI, same local JSON storage */
+/* Welly 惠您 — modern match UI, same local JSON storage */
 const LS_KEY = 'hkbm_profile_v1', SAVE_KEY = 'hkbm_saved_v1', HIDE_KEY = 'hkbm_hidden_v1';
 let BENEFITS = [], LANG = localStorage.getItem('hkbm_lang') || 'zh';
 let FILTER = 'all', FILTER_ALL = 'all', LIFE_FILTER = 'all';
@@ -69,8 +69,8 @@ const L = (b, k) => (LANG === 'zh' && b[k + '_zh']) ? b[k + '_zh'] : (b[k] || b.
 // Full-site static UI strings. Add new keys here, reference with data-i18n="key".
 const I18N = {
   skip: ['Skip to main content', '跳至主要內容'],
-  siteTitle: ['Welly — HK benefit matcher', 'Welly 支援里 — 香港福利配對'],
-  brandSub: ['Welfare navigator · Find support', '支援里 · 福利導航'],
+  siteTitle: ['Welly — HK benefit matcher', 'Welly 惠您 — 香港福利配對'],
+  brandSub: ['Welfare navigator · Find support', '惠您 · 福利導航'],
   trustTop: ['Free · Data stays on your device', '免費 · 資料留在你手機'],
   heroKicker: ['Support you may have missed', '你可能未曾發現的支援'],
   heroLead: ['Some support may be made for you — worth a look.', '有些福利，可能正是為你而設，不妨了解一下。'],
@@ -181,7 +181,7 @@ const I18N = {
   save: ['💾 Save & re-match', '💾 儲存並重新配對'],
   hintStore: ['Kept on this phone only (localStorage and your exported profile.json). The catalogue is plain-text data/benefits.json.', '只會存放在你的手機裡（localStorage 和你匯出的 profile.json）。計劃目錄是純文字 data/benefits.json。'],
   aboutH: ['Why you can trust Welly', '為甚麼可以放心使用？'],
-  aboutPurpose: ['Welcome to Welly! Answer a few simple questions and we will match you with government schemes, allowances and discounts you may qualify for — every match shows its official source, so you can apply with confidence.', '歡迎使用 Welly 支援里！只要回答幾條簡單問題，我們便會幫你配對符合資格的政府計劃、津貼和優惠，每個配對都附上官方來源，讓你清楚掌握應得的福利。'],
+  aboutPurpose: ['Welcome to Welly! Answer a few simple questions and we will match you with government schemes, allowances and discounts you may qualify for — every match shows its official source, so you can apply with confidence.', '歡迎使用 Welly 惠您！只要回答幾條簡單問題，我們便會幫你配對符合資格的政府計劃、津貼和優惠，每個配對都附上官方來源，讓你清楚掌握應得的福利。'],
   ab1: ['Every match explains why you qualify and what proof to prepare', '每個配對都會說明你符合的原因，以及需要準備的證明文件'],
   ab2: ['Every scheme links to its government source and update date', '每個計劃均附上政府來源連結及更新日期'],
   ab3: ['Guidance only — we don’t submit for you; please follow the government’s notice', '我們只作提醒，不會代為申請，一切以政府公布為準'],
@@ -197,7 +197,7 @@ function applyI18n() {
   document.querySelectorAll('[data-i18n-opt]').forEach(el => { const v = I18N[el.dataset.i18nOpt]; if (v) el.textContent = pick(v); });
   document.querySelectorAll('[data-i18n-og]').forEach(el => { const v = I18N[el.dataset.i18nOg]; if (v) el.label = pick(v); });
   document.documentElement.lang = LANG === 'zh' ? 'zh-Hant-HK' : 'en-HK';
-  document.title = LANG === 'zh' ? 'Welly 支援里 — 應得的福利，幫你一次找齊' : 'Welly — find benefits you may qualify for';
+  document.title = LANG === 'zh' ? 'Welly 惠您 — 應得的福利，幫你一次找齊' : 'Welly — find benefits you may qualify for';
   const nav = document.querySelector('nav.tabs'); if (nav) nav.setAttribute('aria-label', t('Main navigation', '主導航'));
   const lt = $('#langToggle'); if (lt) lt.setAttribute('aria-label', t('Switch language, current: Chinese', '切換語言，目前：中文') && (LANG === 'zh' ? '切換語言 Switch language，目前中文' : '切換語言 Switch language, current English'));
   const tb = $('#topBtn'); if (tb) tb.setAttribute('aria-label', t('Back to top', '回到頂部'));

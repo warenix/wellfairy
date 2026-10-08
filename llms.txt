@@ -1,4 +1,4 @@
-# Welly 支援里 — Hong Kong welfare benefit matcher
+# Welly 惠您 — Hong Kong welfare benefit matcher
 
 > 2 分鐘檔案，自動配對 222 項香港政府福利。Free, offline-first, data stays on device.
 > App: https://warenix.github.io/wellfairy/

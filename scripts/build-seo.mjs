@@ -45,21 +45,21 @@ function schemePage(b) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(b.title_zh)}｜Welly 支援里</title>
+<title>${esc(b.title_zh)}｜Welly 惠您</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Welly 支援里">
+<meta property="og:site_name" content="Welly 惠您">
 <meta property="og:title" content="${esc(b.title_zh)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="../styles.css">
 <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Welly 支援里","item":"${SITE}/"},{"@type":"ListItem","position":2,"name":"${esc(catZh)}","item":"${SITE}/"},{"@type":"ListItem","position":3,"name":${JSON.stringify(b.title_zh)}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Welly 惠您","item":"${SITE}/"},{"@type":"ListItem","position":2,"name":"${esc(catZh)}","item":"${SITE}/"},{"@type":"ListItem","position":3,"name":${JSON.stringify(b.title_zh)}}]}</script>
 </head>
 <body>
-<header class="topbar"><div class="brand"><span class="logo">🧚</span><div><strong>Welly 支援里</strong><span>福利配對 Benefit matcher</span></div></div><div class="topact"><a class="ghostbtn" style="text-decoration:none;display:inline-flex;align-items:center" href="../">開啟配對 Open app</a></div></header>
+<header class="topbar"><div class="brand"><span class="logo">🧚</span><div><strong>Welly 惠您</strong><span>福利配對 Benefit matcher</span></div></div><div class="topact"><a class="ghostbtn" style="text-decoration:none;display:inline-flex;align-items:center" href="../">開啟配對 Open app</a></div></header>
 <main>
 <div class="sheet">
 <article>
@@ -84,7 +84,7 @@ ${deadline}
 </article>
 </div>
 </main>
-<footer><small>Welly 支援里 — 申請前請以政府網站為準。</small></footer>
+<footer><small>Welly 惠您 — 申請前請以政府網站為準。</small></footer>
 </body>
 </html>
 `;
@@ -118,7 +118,7 @@ writeFileSync(join(root, 'robots.txt'),
 const byCat = {};
 for (const b of benefits) (byCat[b.category] ||= []).push(b);
 writeFileSync(join(root, 'llms.txt'),
-  `# Welly 支援里 — Hong Kong welfare benefit matcher\n\n> 2 分鐘檔案，自動配對 ${benefits.length} 項香港政府福利。Free, offline-first, data stays on device.\n> App: ${SITE}/\n> Machine-readable catalog: ${SITE}/data/benefits.json\n> Sitemap: ${SITE}/sitemap.xml\n\n## How to check eligibility\n\n1. Open ${SITE}/ and complete the profile (age, household, income, district).\n2. Or open a scheme page below, then follow "Check eligibility in Welly".\n3. Always verify against the linked official government source before applying.\n\n${Object.entries(byCat).map(([c, list]) => `## ${c} (${list.length})\n\n${list.map((b) => `- [${b.title_zh} | ${b.title_en}](${SITE}/s/${b.id}.html) — ${b.value_summary_zh || ''}`).join('\n')}`).join('\n\n')}\n`);
+  `# Welly 惠您 — Hong Kong welfare benefit matcher\n\n> 2 分鐘檔案，自動配對 ${benefits.length} 項香港政府福利。Free, offline-first, data stays on device.\n> App: ${SITE}/\n> Machine-readable catalog: ${SITE}/data/benefits.json\n> Sitemap: ${SITE}/sitemap.xml\n\n## How to check eligibility\n\n1. Open ${SITE}/ and complete the profile (age, household, income, district).\n2. Or open a scheme page below, then follow "Check eligibility in Welly".\n3. Always verify against the linked official government source before applying.\n\n${Object.entries(byCat).map(([c, list]) => `## ${c} (${list.length})\n\n${list.map((b) => `- [${b.title_zh} | ${b.title_en}](${SITE}/s/${b.id}.html) — ${b.value_summary_zh || ''}`).join('\n')}`).join('\n\n')}\n`);
 
 // 5. 404.html — GitHub Pages SPA fallback (deep links + scheme pages)
 writeFileSync(join(root, '404.html'), `<!doctype html>
