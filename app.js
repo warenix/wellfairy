@@ -437,11 +437,14 @@ function card(b, opts={}) {
   const dleft = daysTo(b.deadline);
   const dlHot = dleft != null && dleft >= 0 && dleft <= 30;
   const blockers = opts.lock ? `<div class="lockbar slim"><span aria-hidden="true">🔒</span> ${esc(t('One step left:','還差這一步：'))} ${esc(opts.lock)}${opts.more ? ` <span class="more">+${opts.more}</span>` : ''}</div>` : '';
+  const nConf = (b.conflicts||[]).length;
+  const confBar = nConf ? `<div class="lockbar slim confbar"><span aria-hidden="true">⚠</span> ${esc(LANG==='zh' ? `不可與 ${nConf} 項同領` : `Exclusive with ${nConf}`)}</div>` : '';
   const saveLabel = (isSaved ? t('Saved. Press to unsave: ', '已收藏，按一下可取消：') : t('Save: ', '收藏：')) + title;
   const viewLabel = t('View details: ', '查看詳情：') + title;
   const saveIcon = isSaved ? '<span aria-hidden="true">⭐</span>' : '<span aria-hidden="true">☆</span>';
   return `<article class="card ticket${opts.lock ? ' locked' : ''}" data-id="${esc(b.id)}" role="listitem">
     ${blockers}
+    ${confBar}
     <div class="top"><h3>${esc(title)}</h3></div>
     ${amtLine}
     <div class="ticket-step"><span aria-hidden="true">👉</span> ${esc(step)}</div>
@@ -479,6 +482,14 @@ function openDetail(id, push = true) {
   const docs = ((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]);
   const docSteps = docs.length ? `<ol class="claim-steps">${docs.slice(0,4).map(x=>`<li>${esc(x)}</li>`).join('')}</ol>` : '';
   const claimHtml = `<section class="claimbox" aria-label="${esc(t('How to apply','如何申請'))}"><h4>📋 ${t('How to apply','如何申請')}</h4><ol class="claim-steps"><li>${esc(nextStepText(b))}</li></ol>${docSteps}<p class="hint">${t('Usually takes 10–20 minutes online. Prepare 1–3 proof documents.','一般在網上 10–20 分鐘完成。準備 1–3 份證明文件。')}</p></section>`;
+  const confRows = (b.conflicts||[]).filter(c=>BENEFITS.some(x=>x.id===c.with)).map(c=>{
+    const o = BENEFITS.find(x=>x.id===c.with);
+    const t2 = t(o.title_en, o.title_zh);
+    const note = (LANG==='zh' ? (c.note_zh||c.note_en) : c.note_en) || '';
+    const tag = c.type==='sequential' ? t('Move in phases: ','分階段銜接：') : t('Cannot combine: ','不可同領：');
+    return `<div class="confrow"><button type="button" class="chip relchip" data-open="${esc(c.with)}" aria-label="${esc(t('View details: ','查看詳情：') + t2)}">⚠ ${esc(t2)}</button><span class="confnote">${esc(tag)}${esc(note)}</span></div>`;
+  }).join('');
+  const confHtml = confRows ? `<section class="confbox" aria-labelledby="confH"><h4 id="confH">⚠ ${t('Check before applying for both','同時申請前請留意')}</h4><div class="confrows">${confRows}</div></section>` : '';
   const relatedHtml = relatedItems.length ? `<section class="relatives" aria-labelledby="relH"><h4 id="relH">${t('Related in this category','同類資助')}</h4><div class="chips" role="group" aria-label="${esc(t('Related in this category','同類資助'))}">${relatedChips}</div><p class="hint">${t('Press to view related schemes — passing one assessment may open up other allowances.','按一下可查看同類計劃；通過審查後，或可同時申請其他津貼。')}</p></section>` : '';
   d.setAttribute('aria-label', title);
   d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
@@ -487,6 +498,7 @@ function openDetail(id, push = true) {
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
     <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}<br><br><span aria-hidden="true">🧾</span> <strong>${t('Please prepare:','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please check before applying:','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br><span aria-hidden="true">🔗</span> <strong>${t('Source:','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
     ${claimHtml}
+    ${confHtml}
     ${relatedHtml}
     <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')} <span class="visually-hidden">${esc(title)}</span></a>
     <button class="btn ghost" id="shareBtn" type="button"><span aria-hidden="true">🔗</span> ${t('Share','分享')}</button>

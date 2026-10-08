@@ -245,6 +245,9 @@ footer{max-width:1180px;margin:30px auto 0;padding:0 18px;color:var(--wf-muted)}
 .expect{border:1px dashed var(--wf-line);border-radius:18px;padding:14px 16px;margin:0 0 14px;background:rgba(255,253,249,.7)}.expect h3{margin:0 0 6px;font-size:14px}.expect ol{margin:0;padding-left:20px;font-size:13px;display:grid;gap:4px;color:var(--wf-muted)}
 .all-link{text-align:center;margin:18px 0 6px}
 .claimbox{border:1px solid var(--wf-line);border-radius:14px;padding:12px;margin-top:12px;background:#f4f5ef}.claimbox h4{margin:0 0 6px;font-size:14px}.claim-steps{margin:0;padding-left:20px;font-size:13px;display:grid;gap:4px}
+.confbox{border:1px solid #b45309;border-radius:14px;padding:12px;margin-top:12px;background:#fef6e7}.confbox h4{margin:0 0 6px;font-size:14px}
+.confrows{display:grid;gap:8px}.confrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.confnote{font-size:12px;color:var(--wf-muted)}
+.confbar{background:#fef6e7;border:1px dashed #b45309;color:#7c3f0c}
 .next-item{display:grid;gap:8px}.donebtn{flex:none}
 .sheet-next .card{cursor:default}
 

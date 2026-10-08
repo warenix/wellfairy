@@ -62,13 +62,22 @@ Evolving schema — edit freely, app tolerates missing fields.
     "districts": ["Sha Tin", "Sai Kung"]
   },
   "why_en": "Because you are 65+ ...",
-  "why_zh": "因為你年滿65歲..."
+  "why_zh": "因為你年滿65歲...",
+  "conflicts": [
+    { "with": "oala-2026", "type": "exclusive | sequential", "note_en": "...", "note_zh": "..." }
+  ]
 }
 ```
 
 Matcher logic (`app.js: matches()`):
 - Every key in `needs` must pass. Missing `needs` key = ignored (forward compatible).
 - `deadline` only affects Soon/Expired buckets, never eligibility.
+- `conflicts` is display-only guidance (never filters): `with` = another scheme id,
+  `type` = `exclusive` (choose one) or `sequential` (move in phases). Rendered as a
+  ⚠ warning bar on cards + a linked section in the detail modal. Keep entries
+  symmetric (both sides link each other). Genuine same-person exclusions verified
+  against official sources stay here; conditional cases (e.g. one-carer-two-recipients,
+  scholarship terms that allow co-holding) stay in prose `confirm_*` only.
 - `districts` gates on the 18-district profile value (English values, e.g. `Sai Kung` covers TKO).
   None of the current 37 schemes are district-gated — all are territory-wide.
   District-relevant-but-not-gated cases stay in text: CDSP/food-aid apply via district
