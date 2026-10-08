@@ -2,13 +2,16 @@
  * Scheme pages (/s/*.html) are cached on demand (runtime), not precached.
  * admin.html is precached for the maintainer; benefits.staging.json is NOT
  * precached on purpose — the review queue must always read it fresh. */
-const CACHE = 'hkbm-v113';
+const CACHE = 'hkbm-v114';
 const ASSETS = ['./', './index.html', './admin.html', './404.html', './styles.css', './app.js', './admin.js', './manifest.webmanifest', './robots.txt', './llms.txt', './sitemap.xml', './art.svg', './data/benefits.json', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+});
+self.addEventListener('message', e => {
+  if (e.data && e.data.type === 'SKIP_WAITING') self.skipWaiting();
 });
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;

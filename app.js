@@ -912,6 +912,73 @@ function initSpy() {
   }, { threshold: 0.2 }).observe(res);
 }
 
+// PWA update manager: detect a new SW version and auto-reload to it.
+// The SW uses skipWaiting()+clients.claim(), so a fresh deploy activates on
+// the next navigation check — controllerchange is the reload signal. Periodic
+// update() covers long-lived standalone sessions that never navigate.
+// Profile drafts live only in the form until Save, so never force-reload while
+// the user is typing or a dialog is open — show a tap-to-refresh bar instead.
+let swRefreshing = false;
+let swUpdateBar = null;
+function swSafeToReload() {
+  const ae = document.activeElement;
+  if (ae && /^(INPUT|TEXTAREA|SELECT)$/.test(ae.tagName || '')) return false;
+  const dlg = $('#detail');
+  if (dlg && dlg.open) return false;
+  return true;
+}
+function swShowBar(transient) {
+  if (swUpdateBar) return swUpdateBar;
+  const bar = document.createElement('div');
+  bar.id = 'swUpdateBar';
+  bar.setAttribute('role', 'status');
+  if (transient) bar.classList.add('transient');
+  bar.innerHTML = `<span>${esc(t('New version found — updating…', '發現新版本 — 正在更新…'))}</span>` +
+    (transient ? '' : `<button type="button" class="sw-update-btn">${esc(t('Refresh', '立即更新'))}</button>`);
+  const btn = bar.querySelector('button');
+  if (btn) btn.onclick = () => window.location.reload();
+  document.body.appendChild(bar);
+  swUpdateBar = bar;
+  return bar;
+}
+function swOnNewVersion(reg) {
+  // Safe moment: brief notice, controllerchange reloads us anyway.
+  // Unsafe moment (typing / dialog open): persistent tap-to-refresh bar.
+  if (swSafeToReload()) {
+    swShowBar(true);
+  } else {
+    swShowBar(false);
+  }
+  // If the worker is still waiting (future no-skipWaiting SW), take it now
+  // when safe so the update isn't stuck behind the open page.
+  try {
+    const w = reg && reg.waiting;
+    if (w && swSafeToReload()) w.postMessage({ type: 'SKIP_WAITING' });
+  } catch {}
+}
+function setupSwUpdates(reg) {
+  if (!reg) return;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (swRefreshing) return;
+    if (!swSafeToReload()) { swShowBar(false); return; } // banner taps reload
+    swRefreshing = true;
+    window.location.reload();
+  });
+  const track = (w) => {
+    if (!w) return;
+    w.addEventListener('statechange', () => {
+      if (w.state === 'installed' && navigator.serviceWorker.controller) swOnNewVersion(reg);
+    });
+    if (w.state === 'installed' && navigator.serviceWorker.controller) swOnNewVersion(reg);
+  };
+  if (reg.waiting) swOnNewVersion(reg);
+  reg.addEventListener('updatefound', () => track(reg.installing));
+  track(reg.installing);
+  const check = () => { try { reg.update(); } catch {} };
+  setInterval(check, 60 * 60 * 1000); // hourly while open
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) check(); });
+  window.addEventListener('focus', check);
+}
 async function init() {
   BENEFITS = await (await fetch('data/benefits.json',{cache:'no-store'})).json();
   const tabBtns = [...document.querySelectorAll('.tabs [role="tab"]')];
@@ -1050,7 +1117,12 @@ async function init() {
       if (qInput && !$('#tab-all').hidden) { e.preventDefault(); qInput.focus(); }
     }
   });
-  if('serviceWorker' in navigator){try{await navigator.serviceWorker.register('sw.js');}catch{}}
+  if ('serviceWorker' in navigator) {
+    try {
+      const reg = await navigator.serviceWorker.register('sw.js');
+      setupSwUpdates(reg);
+    } catch {}
+  }
   render();
   window.addEventListener('hashchange', () => openHash(false));
   // URL-driven back/forward: never trust e.state (unreliable on some mobile browsers).
