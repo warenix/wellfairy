@@ -982,7 +982,7 @@ function setupSwUpdates(reg) {
 async function init() {
   BENEFITS = await (await fetch('data/benefits.json',{cache:'no-store'})).json();
   const tabBtns = [...document.querySelectorAll('.tabs [role="tab"]')];
-  const activateTab = (btn, focusPanel = false) => {
+  const activateTab = (btn, focusPanel = false, scrollTarget = null) => {
     tabBtns.forEach(x => {
       const active = x === btn;
       x.classList.toggle('active', active);
@@ -991,7 +991,10 @@ async function init() {
       $('#tab-' + x.dataset.tab).hidden = !active;
     });
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    // Single scroll per tab switch: a follow-up scrollTo would race the
+    // smooth top-scroll animation and lose, so land directly on target.
+    if (scrollTarget) scrollToEl(scrollTarget);
+    else window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
     if (focusPanel) {
       const panel = $('#tab-' + btn.dataset.tab);
       if (panel) panel.focus({preventScroll:true});
@@ -1045,9 +1048,8 @@ async function init() {
       kids:f.kids.value.split(/[,，\s]+/).map(s=>s.trim().toUpperCase()).filter(Boolean),
       eduRank:+f.eduRank.value ?? 1, ownsProperty:f.ownsProperty.checked, onAllowance:f.onAllowance.checked, onOALA:f.onOALA.checked, isCarer:f.isCarer.checked, childSEN:f.childSEN.checked, unemployed:f.unemployed.checked, hasToddler:f.hasToddler.checked, ehealth:f.ehealth.checked, hasTertiary:f.hasTertiary.checked, livesMainland:f.livesMainland.checked, smoker:f.smoker.checked});
     render();
-    document.querySelector('[data-tab="match"]').click();
-    // Land on the eligible section so users see their updated matches.
-    requestAnimationFrame(() => scrollToEl($('#secNow')));
+    // Land directly on the eligible section — one scroll, no race with top.
+    activateTab(document.querySelector('[data-tab="match"]'), false, $('#secNow'));
     announce(t('Your profile is saved. Matches updated.', '已儲存檔案，配對已更新。')); };
   $('#exportBtn').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([localStorage.getItem(LS_KEY)||'{}'],{type:'application/json'}));a.download='profile.json';a.click();announce(t('Profile exported.', '已匯出檔案。'));};
   $('#importBtn').onclick=()=>$('#importFile').click();
