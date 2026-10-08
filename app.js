@@ -1046,6 +1046,8 @@ async function init() {
       eduRank:+f.eduRank.value ?? 1, ownsProperty:f.ownsProperty.checked, onAllowance:f.onAllowance.checked, onOALA:f.onOALA.checked, isCarer:f.isCarer.checked, childSEN:f.childSEN.checked, unemployed:f.unemployed.checked, hasToddler:f.hasToddler.checked, ehealth:f.ehealth.checked, hasTertiary:f.hasTertiary.checked, livesMainland:f.livesMainland.checked, smoker:f.smoker.checked});
     render();
     document.querySelector('[data-tab="match"]').click();
+    // Land on the eligible section so users see their updated matches.
+    requestAnimationFrame(() => scrollToEl($('#secNow')));
     announce(t('Your profile is saved. Matches updated.', '已儲存檔案，配對已更新。')); };
   $('#exportBtn').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([localStorage.getItem(LS_KEY)||'{}'],{type:'application/json'}));a.download='profile.json';a.click();announce(t('Profile exported.', '已匯出檔案。'));};
   $('#importBtn').onclick=()=>$('#importFile').click();
