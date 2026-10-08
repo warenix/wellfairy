@@ -730,6 +730,7 @@ function render() {
   if (wrap) wrap.setAttribute('aria-valuenow', String(pctDone));
   const badge = $('#tabSavedBadge');
   if (badge) { badge.hidden = SAVED.size === 0; badge.textContent = SAVED.size > 99 ? '99+' : String(SAVED.size); }
+  placeSubNav();
   updateFab();
 }
 
@@ -762,13 +763,44 @@ function updateFab() {
 }
 function goFab() {
   const fab = $('#topBtn');
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (fab && fab.dataset.mode === 'results') {
     flowDirty = false;
-    const el = $('#flowResults');
-    if (el) { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); updateFab(); return; }
+    scrollToEl($('#flowResults'));
+    updateFab();
+    return;
   }
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+}
+// Measured clearance below the sticky header stack (topbar + tabs + subnav),
+// so jumped-to sections never land hidden under sticky bars. Measured live —
+// no hardcoded pixel guesses, survives tab wraps and badge growth.
+function stickyClearance() {
+  let c = 8;
+  ['.topbar', '.tabs', '#subNav'].forEach(sel => {
+    const el = document.querySelector(sel);
+    if (!el || el.hidden) return;
+    const r = el.getBoundingClientRect();
+    if (r && r.bottom > 0) c = Math.max(c, r.bottom + 8);
+  });
+  return c;
+}
+// Page-level jump: unlike el.scrollIntoView(), this never gets trapped inside
+// a nested scroller (e.g. the sticky closing-soon rail on desktop).
+function scrollToEl(el) {
+  if (!el) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const y = el.getBoundingClientRect().top + window.scrollY - stickyClearance();
+  window.scrollTo({ top: Math.max(0, y), behavior: reduce ? 'auto' : 'smooth' });
+}
+// Pin the sticky subnav exactly below the tab bar, whatever height it wraps to.
+function placeSubNav() {
+  const match = $('#tab-match');
+  const sub = document.getElementById('subNav');
+  const tabs = document.querySelector('.tabs');
+  if (!match || match.hidden || !sub || !tabs) return;
+  const r = tabs.getBoundingClientRect();
+  sub.style.top = Math.max(0, Math.round(r.bottom + 6)) + 'px';
 }
 function resolveSpyTarget(key) {
   if (key === 'miss') {
@@ -786,10 +818,7 @@ function initSpy() {
   nav.addEventListener('click', e => {
     const a = e.target.closest('[data-spy]'); if (!a) return;
     e.preventDefault();
-    const el = resolveSpyTarget(a.dataset.spy);
-    if (!el) return;
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    scrollToEl(resolveSpyTarget(a.dataset.spy));
     links.forEach(x => { const on = x === a; x.classList.toggle('active', on); if (on) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
   });
   if (!('IntersectionObserver' in window)) { if (links[0]) links[0].classList.add('active'); return; }
@@ -829,6 +858,7 @@ async function init() {
     }
     const label = btn.textContent.trim();
     announce(t(`Switched to ${label}`, `已切換至${label}`));
+    placeSubNav();
     updateFab();
   };
   document.querySelectorAll('[data-start-profile]').forEach(btn => {
@@ -933,6 +963,7 @@ async function init() {
   $('#installBtn').onclick=async()=>{if(d){d.prompt();d=null;}};
   const topBtn=$('#topBtn');
   addEventListener('scroll',updateFab,{passive:true});
+  addEventListener('resize',()=>placeSubNav(),{passive:true});
   updateFab();
   if (topBtn) topBtn.onclick=()=>goFab();
   document.addEventListener('keydown', e => {
