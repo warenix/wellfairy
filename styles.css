@@ -211,7 +211,9 @@ main{max-width:1180px;padding:0 18px}
 .searchbar{border:1px solid var(--wf-line);background:var(--wf-white);border-radius:17px;box-shadow:0 8px 22px rgba(23,34,31,.04);padding:13px 15px}.searchbar input{background:transparent}.sheet{border:1px solid var(--wf-line);background:var(--wf-white);border-radius:28px;box-shadow:0 14px 40px rgba(23,34,31,.06);padding:25px}.fgroup{border:1px solid var(--wf-line);border-radius:18px}.fgroup legend{color:var(--wf-green)}.progress{height:7px;background:#e9eee9}.progress div{background:var(--wf-green)}
 #detail{border:0;border-radius:28px;background:transparent;padding:0;max-width:min(720px,calc(100% - 28px));width:100%;box-shadow:0 30px 90px rgba(0,0,0,.22)}#detail::backdrop{background:rgba(7,24,20,.55);backdrop-filter:blur(5px)}.detail{background:var(--wf-white);border-radius:28px;padding:25px}.detail .why{background:#f2f5ef}.detail .actions{display:flex;gap:8px;flex-wrap:wrap}.detail .actions .btn{flex:1;min-width:130px}
 footer{max-width:1180px;margin:30px auto 0;padding:0 18px;color:var(--wf-muted)}
-#topBtn{background:var(--wf-ink);border:0;color:#fff;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,.15)}
+#topBtn{background:var(--wf-coral);border:3px solid #fff;box-shadow:4px 4px 0 var(--wf-frame)}
+/* dynamic FAB result-pill mode (same element, morphed by JS) */
+#topBtn.pill{width:auto;height:auto;min-height:52px;border-radius:999px;padding:12px 20px;font-size:14px;font-weight:900;white-space:nowrap;max-width:calc(100vw - 32px);overflow:hidden;text-overflow:ellipsis}
 @media(max-width:760px){.trust-chip{display:none}.topbar{padding:13px 15px}.brand strong{font-size:17px}.tabs{top:64px;padding:10px 10px}.tabs button{font-size:12px}.hero-bold{grid-template-columns:1fr;min-height:auto;padding:36px 23px 28px;border-radius:28px;gap:30px}.hero-title,.hero h2.hero-title{font-size:46px}.hero-sub-large{font-size:15px}.hero-discovery{justify-self:stretch;width:auto;transform:none}.discovery-number span{font-size:55px}.profile-strip{align-items:flex-start}.strip-link{display:none}.rail-left{position:static}.match-body{display:block}.rail-left{margin-bottom:10px}.chips-vert{display:flex;overflow:auto}.chips-vert .chip{flex:0 0 auto}.rail-right{margin-top:14px}}
 @media(min-width:761px){.match-body{grid-template-columns:190px minmax(0,1fr) 300px}.rail-right .sec-head .linkbtn{display:none}}
 /* hidden must always win over layout classes (.grid/.kidpanel set display) */
@@ -243,7 +245,6 @@ footer{max-width:1180px;margin:30px auto 0;padding:0 18px;color:var(--wf-muted)}
 .ticket-step{font-size:13px;font-weight:700;margin:4px 0 6px}
 .lockbar.slim{font-size:12px;padding:6px 10px}
 .expect{border:1px dashed var(--wf-line);border-radius:18px;padding:14px 16px;margin:0 0 14px;background:rgba(255,253,249,.7)}.expect h3{margin:0 0 6px;font-size:14px}.expect ol{margin:0;padding-left:20px;font-size:13px;display:grid;gap:4px;color:var(--wf-muted)}
-.all-link{text-align:center;margin:18px 0 6px}
 .claimbox{border:1px solid var(--wf-line);border-radius:14px;padding:12px;margin-top:12px;background:#f4f5ef}.claimbox h4{margin:0 0 6px;font-size:14px}.claim-steps{margin:0;padding-left:20px;font-size:13px;display:grid;gap:4px}
 .confbox{border:1px solid #b45309;border-radius:14px;padding:12px;margin-top:12px;background:#fef6e7}.confbox h4{margin:0 0 6px;font-size:14px}
 .confrows{display:grid;gap:8px}.confrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.confnote{font-size:12px;color:var(--wf-muted)}
@@ -351,3 +352,26 @@ body:after{content:"";position:fixed;left:0;right:0;bottom:0;height:56px;z-index
 .detail{background:var(--wf-white);border:3px solid var(--wf-frame)}
 #topBtn{background:var(--wf-coral);border:3px solid #fff;box-shadow:4px 4px 0 var(--wf-frame)}
 footer{background:#7e3125;color:#ffe9d2;border-top:3px solid var(--wf-frame)}
+
+/* ================================================================
+   Match reorg v6 — sticky subnav, merged quick-check flow,
+   saved badge, collapsible guide. Engine untouched.
+   ================================================================ */
+.tab-badge{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--wf-coral);color:#fff;font-size:11px;font-weight:900;margin-left:6px;vertical-align:2px}
+.subnav{position:sticky;top:132px;z-index:9;display:flex;gap:8px;overflow-x:auto;padding:10px 12px;margin:2px 0 10px;border-radius:16px;background:rgba(255,251,241,.93);backdrop-filter:blur(12px);border:2px solid var(--wf-frame);box-shadow:3px 3px 0 var(--wf-frame);scrollbar-width:none}
+.subnav::-webkit-scrollbar{display:none}
+.subnav a{flex:0 0 auto;display:inline-flex;align-items:center;min-height:44px;text-decoration:none;border:2px solid var(--wf-frame);background:var(--wf-white);color:var(--wf-ink);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:800;box-shadow:2px 2px 0 var(--wf-frame)}
+.subnav a.active{background:var(--wf-frame);color:#fff}
+@media(min-width:761px){.subnav{top:146px}}
+/* anchor landing clearance for sticky bars */
+#flow,#flowResults,#secNow,#secSoon,#secMiss,#missBar{scroll-margin-top:188px}
+@media(min-width:761px){#flow,#flowResults,#secNow,#secSoon,#secMiss,#missBar{scroll-margin-top:202px}}
+.flow .moments{margin:0 0 4px}
+.moments h4{margin:0 2px 10px;font-size:16px;letter-spacing:-.01em}
+.flow-body{display:grid;gap:16px}
+@media(min-width:761px){.flow-body{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}.flow-controls{position:sticky;top:202px}}
+.results-sub{margin:14px 0 2px;font-size:15px}
+.results-sub-d{margin:0 0 8px}
+details.expect summary{cursor:pointer;font-weight:800;font-size:14px;min-height:44px;display:flex;align-items:center}
+details.expect summary::marker{color:var(--wf-green)}
+.all-h{margin:14px 2px 4px;font-size:17px}

@@ -83,6 +83,8 @@ const I18N = {
   profileStripCTA: ['Complete my profile', '完善我的檔案'],
   install: ['⬇ Install', '⬇ 安裝'],
   tabMatch: ['Match', '配對'], tabAll: ['All', '全部'], tabNext: ['Next steps', '下一步'], tabProfile: ['Profile', '檔案'], tabAbout: ['About', '關於'],
+  allH: ['Browse all schemes', '瀏覽全部計劃'],
+  subFlow: ['Quick check', '快速檢查'], subTop3: ['Top 3', 'Top 3'],
   momentsH: ['How are things for you right now? Pick one to start', '你現在的情況是？選一項開始吧'],
   quickH: ['60-second quick check', '60 秒快速檢查'],
   quickWhy: ['Answer 3 questions — no exact figures needed. See how much more you could get each month.', '回答 3 條問題，不用填寫實際金額 — 先看看你每月可能多出多少。'],
@@ -229,6 +231,8 @@ const MOMENTS = [
   {id:'study',   icon:'🎒', en:'Study / courses',  zh:'升學 / 進修',       test:b=>b.category==='student'||(b.needs||{}).edu_max_rank!=null,},
 ];
 let QUICK = { moment:'baby', n:4, band:'soso' };
+let QUICK_SUM = { monthly: 0, n: 0 };
+let flowDirty = false, resultsInView = false;
 const BAND_INCOME = { tight:12000, soso:22000, mid:38000, ok:65000 };
 // Quick-check pseudo-profile: band midpoints + forgiving defaults (assets low,
 // work hours full) so citizens see upside before giving exact figures.
@@ -628,23 +632,24 @@ function renderQuick() {
     return rankAmt(b2) - rankAmt(a);
   }).slice(0,3);
   const qMonthly = qTop.filter(isMonthlyAmt).reduce((s,b)=>s+estimateAmount(b),0);
+  QUICK_SUM = { monthly: qMonthly, n: qHit.length };
   const mg = $('#momentGrid');
   if (mg) {
     mg.innerHTML = MOMENTS.map(m=>{
       const n = BENEFITS.filter(b=>matches(b,qp)&&m.test(b)).length;
       return `<button type="button" class="moment${QUICK.moment===m.id?' on':''}" data-moment="${m.id}" aria-pressed="${QUICK.moment===m.id?'true':'false'}"><span class="moment-ico" aria-hidden="true">${m.icon}</span><span class="moment-t">${esc(t(m.en,m.zh))}</span><span class="moment-n">${n}</span></button>`;
     }).join('');
-    mg.querySelectorAll('[data-moment]').forEach(btn=>btn.onclick=()=>{QUICK.moment=btn.dataset.moment;render();});
+    mg.querySelectorAll('[data-moment]').forEach(btn=>btn.onclick=()=>{QUICK.moment=btn.dataset.moment;flowDirty=true;render();});
   }
   const qn = $('#quickN');
   if (qn) qn.querySelectorAll('[data-qn]').forEach(btn=>{
     btn.classList.toggle('on', +btn.dataset.qn === QUICK.n || (btn.dataset.qn==='4' && QUICK.n>=4));
-    btn.onclick=()=>{QUICK.n=+btn.dataset.qn;render();};
+    btn.onclick=()=>{QUICK.n=+btn.dataset.qn;flowDirty=true;render();};
   });
   const qb = $('#quickBand');
   if (qb) qb.querySelectorAll('[data-qb]').forEach(btn=>{
     btn.classList.toggle('on', btn.dataset.qb===QUICK.band);
-    btn.onclick=()=>{QUICK.band=btn.dataset.qb;render();};
+    btn.onclick=()=>{QUICK.band=btn.dataset.qb;flowDirty=true;render();};
   });
   const qr = $('#quickResult');
   if (qr) qr.innerHTML = qMonthly
@@ -723,13 +728,92 @@ function render() {
   $('#pbar').style.width = pctDone+'%';
   const wrap = $('#pbarWrap');
   if (wrap) wrap.setAttribute('aria-valuenow', String(pctDone));
+  const badge = $('#tabSavedBadge');
+  if (badge) { badge.hidden = SAVED.size === 0; badge.textContent = SAVED.size > 99 ? '99+' : String(SAVED.size); }
+  updateFab();
+}
+
+function fabLabel() {
+  if (QUICK_SUM.monthly > 0) return LANG === 'zh' ? `↓ Top 3 · 每月約 $${QUICK_SUM.monthly.toLocaleString()}` : `↓ Top 3 · ~$${QUICK_SUM.monthly.toLocaleString()}/mo`;
+  return LANG === 'zh' ? `↓ Top 3 · ${QUICK_SUM.n} 項` : `↓ Top 3 · ${QUICK_SUM.n} matches`;
+}
+
+// Dynamic floating button: after a quick-check change it offers a jump to the
+// updated Top 3; otherwise it behaves as back-to-top; else it stays hidden.
+function updateFab() {
+  const fab = $('#topBtn'); if (!fab) return;
+  const onMatch = $('#tab-match') && !$('#tab-match').hidden;
+  const showResults = !!(onMatch && flowDirty && !resultsInView);
+  const showTop = !showResults && window.scrollY > 600;
+  const show = showResults || showTop;
+  fab.classList.toggle('show', show);
+  fab.classList.toggle('pill', showResults);
+  fab.tabIndex = show ? 0 : -1;
+  fab.setAttribute('aria-hidden', show ? 'false' : 'true');
+  if (showResults) {
+    fab.textContent = fabLabel();
+    fab.setAttribute('aria-label', t('See updated Top 3', '看更新後的 Top 3'));
+    fab.dataset.mode = 'results';
+  } else {
+    fab.textContent = '↑';
+    fab.setAttribute('aria-label', t('Back to top', '回到頂部'));
+    fab.dataset.mode = 'top';
+  }
+}
+function goFab() {
+  const fab = $('#topBtn');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (fab && fab.dataset.mode === 'results') {
+    flowDirty = false;
+    const el = $('#flowResults');
+    if (el) { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); updateFab(); return; }
+  }
+  window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+}
+function resolveSpyTarget(key) {
+  if (key === 'miss') {
+    const sec = $('#secMiss'), bar = $('#missBar');
+    if (sec && !sec.hidden) return sec;
+    if (bar && !bar.hidden) return bar;
+    return sec || bar;
+  }
+  const map = { flow: '#flow', top3: '#flowResults', now: '#secNow', soon: '#secSoon' };
+  return map[key] ? document.querySelector(map[key]) : null;
+}
+function initSpy() {
+  const nav = $('#subNav'); if (!nav) return;
+  const links = [...nav.querySelectorAll('[data-spy]')];
+  nav.addEventListener('click', e => {
+    const a = e.target.closest('[data-spy]'); if (!a) return;
+    e.preventDefault();
+    const el = resolveSpyTarget(a.dataset.spy);
+    if (!el) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    links.forEach(x => { const on = x === a; x.classList.toggle('active', on); if (on) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
+  });
+  if (!('IntersectionObserver' in window)) { if (links[0]) links[0].classList.add('active'); return; }
+  const setActive = key => links.forEach(x => { const on = x.dataset.spy === key; x.classList.toggle('active', on); if (on) x.setAttribute('aria-current', 'true'); else x.removeAttribute('aria-current'); });
+  const io = new IntersectionObserver(es => { es.forEach(en => { if (en.isIntersecting) setActive(en.target.dataset.spyKey); }); }, { rootMargin: '-30% 0px -60% 0px' });
+  [['flow', 'flow'], ['flowResults', 'top3'], ['secNow', 'now'], ['secSoon', 'soon'], ['secMiss', 'miss'], ['missBar', 'miss']].forEach(([id, key]) => {
+    const el = document.getElementById(id);
+    if (el) { el.dataset.spyKey = key; io.observe(el); }
+  });
+  // Results visibility drives the dynamic FAB: arriving at the results clears the nudge.
+  const res = document.getElementById('flowResults');
+  if (res) new IntersectionObserver(es => {
+    es.forEach(en => {
+      resultsInView = en.isIntersecting;
+      if (en.isIntersecting) flowDirty = false;
+      updateFab();
+    });
+  }, { threshold: 0.2 }).observe(res);
 }
 
 async function init() {
   BENEFITS = await (await fetch('data/benefits.json',{cache:'no-store'})).json();
   const tabBtns = [...document.querySelectorAll('.tabs [role="tab"]')];
   const activateTab = (btn, focusPanel = false) => {
-    const allPanel = $('#tab-all'); if (allPanel) allPanel.hidden = true;
     tabBtns.forEach(x => {
       const active = x === btn;
       x.classList.toggle('active', active);
@@ -745,6 +829,7 @@ async function init() {
     }
     const label = btn.textContent.trim();
     announce(t(`Switched to ${label}`, `已切換至${label}`));
+    updateFab();
   };
   document.querySelectorAll('[data-start-profile]').forEach(btn => {
     btn.onclick = () => {
@@ -775,14 +860,7 @@ async function init() {
     };
   });
   document.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>document.querySelector(`[data-tab="${b.dataset.goto}"]`).click());
-  // Demoted "browse all": full list lives outside the tabs (social-worker drawer).
-  const allBtn = $('#browseAllBtn');
-  if (allBtn) allBtn.onclick = () => {
-    tabBtns.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');x.tabIndex=-1;});
-    document.querySelectorAll('main > section[id^="tab-"]').forEach(s=>{s.hidden = s.id!=='tab-all';});
-    window.scrollTo({top:0,behavior:'smooth'});
-    announce(t('Showing all schemes','顯示全部計劃'));
-  };
+  initSpy();
   const f = $('#profileForm'), p = loadP();
   f.age.value=p.age; f.hk_resident.checked=p.hk_resident; f.hkYears.value=(p.hkYears ?? 7); hkYearsOut(); f.householdN.value=p.householdN;
   f.monthlyIncome.value=p.monthlyIncome; f.assets.value=p.assets; f.sex.value=p.sex; f.housing.value=p.housing;
@@ -854,15 +932,9 @@ async function init() {
   let d; window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();d=e;$('#installBtn').hidden=false;});
   $('#installBtn').onclick=async()=>{if(d){d.prompt();d=null;}};
   const topBtn=$('#topBtn');
-  const updateTopBtn = () => {
-    const show = scrollY>600;
-    topBtn.classList.toggle('show',show);
-    topBtn.tabIndex = show ? 0 : -1;
-    topBtn.setAttribute('aria-hidden', show ? 'false' : 'true');
-  };
-  addEventListener('scroll',updateTopBtn,{passive:true});
-  updateTopBtn();
-  topBtn.onclick=()=>{const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});};
+  addEventListener('scroll',updateFab,{passive:true});
+  updateFab();
+  if (topBtn) topBtn.onclick=()=>goFab();
   document.addEventListener('keydown', e => {
     if (e.key === '/' && document.activeElement !== qInput && document.activeElement !== qMatchInput && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName||'')) {
       if (qMatchInput && !$('#tab-match').hidden) { e.preventDefault(); qMatchInput.focus(); return; }
