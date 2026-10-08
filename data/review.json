@@ -503,5 +503,155 @@
     "decision": "approved",
     "by": "ses_ee9b92e8dffegkt5qUOMaghRKx",
     "at": "2026-10-07"
+  },
+  "carer-disabled-3000": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "ccsv": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "cdcc-cocare": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "cdf-savings": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "cssa-note": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "da-note": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "dae-reimburse": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "faeaec-evening": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "fare-2dollar": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "fasp": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "gd-scheme": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "gsf-belt-road-2026": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "ha-gopc-ppp": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "ird-single-parent": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "kg-edu-scheme": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "kg-scheme-base": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "oaa-2026": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "oala-2026": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "pcssa-2026": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "ptfss": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "quit-smoking-1833": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "quit-smoking-free": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "rcsv": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "rcsv-elderly": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "respite-day": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "respite-residential": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "samaritan-fund": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "samaritan-fund-2026": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "tsfs": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
+  },
+  "wfa": {
+    "decision": "approved",
+    "by": "warenix",
+    "at": "2026-10-08"
   }
 }

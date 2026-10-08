@@ -1,6 +1,6 @@
 # Welly 支援里 — Hong Kong welfare benefit matcher
 
-> 2 分鐘檔案，自動配對 239 項香港政府福利。Free, offline-first, data stays on device.
+> 2 分鐘檔案，自動配對 222 項香港政府福利。Free, offline-first, data stays on device.
 > App: https://warenix.github.io/wellfairy/
 > Machine-readable catalog: https://warenix.github.io/wellfairy/data/benefits.json
 > Sitemap: https://warenix.github.io/wellfairy/sitemap.xml
@@ -11,11 +11,10 @@
 2. Or open a scheme page below, then follow "Check eligibility in Welly".
 3. Always verify against the linked official government source before applying.
 
-## family (68)
+## family (65)
 
 - [農戶貸款基金（嘉道理／菜統處低息） | Farm Loan Funds (Kadoorie / VMO low-interest)](https://warenix.github.io/wellfairy/s/afcd-farm-loan.html) — 經嘉道理農業輔助貸款、菜統處貸款等基金向本港農戶提供低息生產貸款。全年申請，條款按基金而異。
 - [漁業發展貸款基金（1–2.5%貸款） | Fisheries Development Loan Fund (1–2.5% loans)](https://warenix.github.io/wellfairy/s/afcd-fish-loan.html) — 全年接受申請：持牌漁民／魚農／合作社低息貸款 — 拖網禁令一次過1%、可持續轉型2.5%、水產養殖約1.4%。自資≥項目一成。
-- [課後託管服務計劃 | After School Care Programme](https://warenix.github.io/wellfairy/s/after-school-care-programme.html) — 課後託管服務計劃資格人士支援
 - [課餘託管計劃收費減免 (小學) | After School Care Programme Fee-Waiving (primary)](https://warenix.github.io/wellfairy/s/ascp.html) — 家長工作/求職未能照顧，減免全費/半費/三分一。
 - [課後託管服務費豁免 | After School Care Programme Fee Waiving](https://warenix.github.io/wellfairy/s/ascp-fee-waiving.html) — 課後託管服務費豁免資格人士支援
 - [《2026年預算案》一次性額外一個月津貼（綜援／高齡／長生／傷殘＋職津，已於2026年5月發放——已截止） | Budget 2026 one-month extra allowance (CSSA/OAA/OALA/DA + WFA, paid May 2026 — closed)](https://warenix.github.io/wellfairy/s/budget-onemonth-2026.html) — 額外發放一個月：綜援標準金額，或高齡津貼$1,675／長者生活津貼$4,345／普通傷殘津貼$2,140／高額傷殘津貼$4,280，或職津平均每月金額；2026年5月22日起自動存入銀行，無須申請。已截止——資格以2026年4月29日為準。
@@ -26,7 +25,6 @@
 - [關愛基金在校課後託管（免費，小一至小六，2026/27學年） | CCF School-based After School Care (free, P1-P6, 2026/27)](https://warenix.github.io/wellfairy/s/ccf-sba-care.html) — 平日免費託管至6點／6點半（3小時+，可延至7點）＋假期，18區名額不限。綜援／全額在職家庭津貼／全額學生資助／入息≤住戶每月入息中位數55%，免資產審查。
 - [踏出一步：就業殘疾綜援受助人每月+$500 | Stepping Stone: $500/mo for Employed Disabled CSSA Recipients](https://warenix.github.io/wellfairy/s/ccf-stepping-stone.html) — 有工開殘疾綜援受助人每月多$500就業補助＋豁免計算部份入息。3年試驗2024年9月至2027年8月。
 - [兒童發展基金（$14,400配對儲蓄，小三至小六） | Child Development Fund ($14,400 matched savings, P3-P6)](https://warenix.github.io/wellfairy/s/cdf-savings.html) — 月存$200×24個月（$4,800）→ 1:1:1配對至$14,400實踐孩子發展計劃，另有師友。第十一批約4,600個小三至小六名額，經學校/機構參加。
-- [兒童發展基金 | Child Development Fund](https://warenix.github.io/wellfairy/s/child-development-fund.html) — 10-14歲低收入家庭兒童的儲蓄匹配賬戶和導師計劃。儲蓄最高每年$10,000的1:1或1:2匹配，生活技能訓練，目標設定和職業體驗。經社署社工或NGO申請。
 - [暴力及執法傷亡賠償（特惠金，免審查） | Crime Victims Compensation (ex-gratia, no means test)](https://warenix.github.io/wellfairy/s/cleic-2026.html) — 暴力罪行／執法武器傷亡受害人：按普通法損害基準特惠賠償（死亡／傷殘／受傷表）。非供款、免審查。事發3年內申請。
 - [綜援殮葬津貼（實報實銷至上限） | CSSA Burial Grant (actual costs to ERF-pegged cap)](https://warenix.github.io/wellfairy/s/cssa-burial-grant.html) — 綜援離世者：辦喪親友申領實際開支（死亡證、棺木、火化、禮堂）減帛金，以緊急救濟基金掛鈎上限為準（2026年4月起約$17,870）。憑死亡證＋單據向社署社會保障辦事處申請。
 - [綜合社會保障援助(綜援)安全網 | Comprehensive Social Security Assistance Safety Net](https://warenix.github.io/wellfairy/s/cssa-note.html) — 經濟審查基本金 + 租金/學費/醫療特別津貼，不可與WFA同領。
@@ -70,7 +68,6 @@
 - [到校學前康復服務 (約10,000名額) | On-site Pre-school Rehab (OPRS, ~10,000 places)](https://warenix.github.io/wellfairy/s/oprs.html) — 約900間幼稚園到校康復，6歲以下輕度殘疾免費。經CRSRehab+兒科/心理醫生轉介申請。
 - [肺塵埃沉着病／間皮瘤補償（月補＋9項） | Pneumoconiosis/Mesothelioma Compensation (monthly + 9 items)](https://warenix.github.io/wellfairy/s/pcfb-pneumo.html) — 矽肺／石棉肺（1981年後確診）／間皮瘤（2008年後）＋居港5年：9項 — 月傷殘＋痛楚、補發、照顧、醫療（每日$300）、儀器、死亡／殮葬。1,370人月領，年付$2.42億。Cap.360。
 - [再就業津貼高達$20,000（40歲+，3年試驗） | Re-employment Allowance up to $20,000 (40+, 3-yr pilot)](https://warenix.github.io/wellfairy/s/rea-pilot.html) — 全職連續做滿6個月$10,000、12個月再$10,000（兼職半額）。40歲+並連續3個月無受薪工作。開工前／開工1個月內登記。
-- [校本課後託管服務 | School-based After School Care Service](https://warenix.github.io/wellfairy/s/school-based-after-school-care.html) — 校本課後託管服務資格人士支援
 - [輔助法律援助（夾心階層，資源≤$226萬） | Supplementary Legal Aid (sandwich class, resources ≤$2,261,600)](https://warenix.github.io/wellfairy/s/slas-topup.html) — 民事案資源超$452,320但≤$2,261,600。第一類（傷亡／僱員補償）：$1,000＋$113,080中期分擔。第二類（專業疏忽等）：$5,000＋10%或$113,080（取高）。勝訴扣20%（審前和解15%）。
 - [展能就業科：殘疾求職者就業配對 | Selective Placement: job matching for disabled jobseekers](https://warenix.github.io/wellfairy/s/spd-job-matching.html) — 勞工處免費就業配對、實地探訪、試工聯繫及入職跟進。通往WOPS／SPED僱主津貼之門。
 - [特殊幼兒中心 | Special Child Care Centre](https://warenix.github.io/wellfairy/s/special-child-care-centre.html) — 特殊幼兒中心資格人士支援
@@ -82,7 +79,7 @@
 - [在職家庭津貼計劃及兒童津貼 | Working Family Allowance Scheme + Child Allowance](https://warenix.github.io/wellfairy/s/wfa.html) — 基本$575-1,150／中額$690-1,380／高額$805-1,610＋每名兒童$805-1,610，按2026-27入息×人數表發全額/四分三/半額。
 - [展能就業科工作展能計劃（僱主高達$60,000） | Work Orientation and Placement Scheme (employer up to $60,000)](https://warenix.github.io/wellfairy/s/wops-60k.html) — 經展能就業科聘用，僱主9個月高達$6萬（首3月薪金-$500上限$8,000，後6月三分二上限$6,000）。師傅獲$500獎。
 
-## student (68)
+## student (67)
 
 - [農產品獎學基金 | Agricultural Products Scholarship Fund](https://warenix.github.io/wellfairy/s/agri-scholarship-2026.html) — 農產品銷售相關家庭學生優異獎學金，經學生資助處提名。
 - [關愛基金貧窮大學生宿舍津貼 | CCF Hostel Subsidy for Needy Undergraduates](https://warenix.github.io/wellfairy/s/ccf-hostel.html) — 通過TSFS/FASP審查並住滿宿舍75%以上學期的大學生獲宿舍津貼。無需另行申請。
@@ -114,7 +111,6 @@
 - [幼稚園入學註冊證／入學許可證（9–11月申請！） | K1 Registration Certificate / Admission Pass (apply Sep–Nov!)](https://warenix.github.io/wellfairy/s/k1-rc-ap.html) — 無註冊證入唔到資助幼稚園K1。註冊證有資助，許可證交全費。9–11月申請，6–8星期處理，電子證QR碼1月統一註冊用。
 - [幼稚園及幼兒中心學費減免計劃 | Kindergarten and Child Care Centre Fee Remission Scheme](https://warenix.github.io/wellfairy/s/kcfrs-2026.html) — K1-K3學費減免100%/75%/50%，家庭入息限額AFI。
 - [幼稚園教育計劃（半日制免費） | Kindergarten Education Scheme (half-day free)](https://warenix.github.io/wellfairy/s/kg-edu-scheme.html) — 計劃幼稚園（非牟利、本地課程）：約九成半日制免費；全日制低收費。K1憑註冊證／入學許可入學。有需要家庭另加KCFRS學費減免。
-- [幼稚園教育計劃（半日制免費） | Kindergarten Education Scheme (half-day free)](https://warenix.github.io/wellfairy/s/kg-scheme-base.html) — 計劃幼稚園本地課程半日制免費；全日制收費封頂（資助後$30,540/年）。須持註冊證。註冊費上限$970/$1,570。
 - [工作試驗計劃（一個月試工$9,600，不限年齡） | Work Trial Scheme ($9,600 one-month trial, any age)](https://warenix.github.io/wellfairy/s/ld-work-trial-9600.html) — 求職困難人士：一個月全職試工（無僱傭關係、師友＋勞工處保險） — 完成高達$9,600（機構付$500）；兼職$57／時。僱主常試後聘用。2024年約237人次。
 - [海魚獎學基金 | Marine Fish Scholarship Fund](https://warenix.github.io/wellfairy/s/marine-fish-scholarship-2026.html) — 海產漁業相關家庭學生優異獎學金，經學生資助處提名。
 - [內地升學資助（高達$19,400/年，217間院校） | Mainland Study Subsidy (up to $19,400/yr, 217 institutions)](https://warenix.github.io/wellfairy/s/musss-mainland.html) — 經審查全額／半額（按距離$8,900–$19,400）或免審查$5,900–$6,500（DSE 3322／校長推薦／華僑大學），在內地升學港生。
@@ -175,7 +171,7 @@
 - [水安全計劃資助（每幢高達$310,000） | Water Safety Plan Subsidy (up to $310,000/building)](https://warenix.github.io/wellfairy/s/wsd-wspss-310k.html) — $4.4億基金（約5,000幢）：私人住宅／綜合樓宇（差餉限額內） — 風險評估＋計劃（$10,000）、兩輪2年保養（$32,500＋$10,000）、審核（$5,000＋$2,500）、整改額外至$250,000。每幢上限$310,000。法團／委員會／合作社申請。
 - [青年宿舍計劃（六折租金，18-30歲） | Youth Hostel Scheme (≤60% market rent, 18-30)](https://warenix.github.io/wellfairy/s/youth-hostel-yhs.html) — 在職青年18-30歲（香港永久居民、無物業）：宿舍六折租金，首約2年、最長5年。單人入息≤$29,600資產≤$411,000。約3,700宿位。
 
-## health (37)
+## health (35)
 
 - [乳癌篩查先導計劃第二期 (高風險35-74歲) | Breast Cancer Screening Pilot Programme Phase II (high-risk 35-74)](https://warenix.github.io/wellfairy/s/breast-pilot2.html) — 高風險35-74歲女性(家族史/BRCA)：NGO+衛生署資助造影。無病徵、過去一年無照過。
 - [低收入家庭殘疾人士照顧者生活津貼 ($3,000/月) | Living Allowance for Low-income Carers of Persons with Disabilities ($3,000/mo)](https://warenix.github.io/wellfairy/s/carer-disabled-3000.html) — 每月$3,000。照顧80小時+/月。殘疾人士需輪候康復/特殊學校住宿/療養服務，在社區居住。
@@ -205,55 +201,43 @@
 - [基層長者免費白內障手術（公益金） | Free Cataract Surgery for Underprivileged Elders (Community Chest)](https://warenix.github.io/wellfairy/s/maf-cataract.html) — 經香港盲人輔導會免費私家白內障手術，幫有經濟困難長者（公院輪候約3年）。2026年1月起亦支援人工耳蝸。
 - [18111精神健康支援熱線（24小時免費） | 18111 Mental Health Support Hotline (24/7, free)](https://warenix.github.io/wellfairy/s/mh-18111.html) — 免費24小時一站式電話＋WhatsApp輔導轉介，情緒困擾者及照顧者適用。12種語言。打18111就得。
 - [學前兒童外展口腔健康（免費，32個月+，每年一次） | Preschool Oral Health Outreach (free, 32mo+, yearly)](https://warenix.github.io/wellfairy/s/oohp-preschool-2026.html) — 參與幼稚園32個月+學童每年免費校內口腔檢查＋風險評估＋氟化物＋家長報告（680/949間已參加）。2026年9月1日起。
-- [免費戒煙（戒煙熱線1833 183＋診所） | Free Smoking Cessation (Quitline 1833 183 + clinics)](https://warenix.github.io/wellfairy/s/quit-smoking-1833.html) — 1833 183：免費護士輔導＋轉介。免費：衛生署診所、東華三院中心（藥物＋輔導）、博愛針灸（逾百點）、青少年熱線（25歲下）、郵遞戒煙藥。醫管局中心收門診費（符合人士免費）。52週戒煙率20–60%。
-- [免費戒煙支援（熱線1833 183） | Free Quit-Smoking Support (hotline 1833 183)](https://warenix.github.io/wellfairy/s/quit-smoking-free.html) — 免費護士輔導、戒煙藥郵寄試用裝、針灸選擇及醫管局診所。24小時廣東話／普通話／英語資訊。
+- [免費戒煙支援（熱線1833 183） | Free Quit-Smoking Support (hotline 1833 183)](https://warenix.github.io/wellfairy/s/quit-smoking-free.html) — 戒煙熱線1833 183免費護士輔導、戒煙藥郵寄試用裝、針灸選擇及衛生署／東華／醫管局診所。24小時廣東話／普通話／英語資訊。52週戒煙率20-60%。
 - [撒瑪利亞基金（自費藥物及儀器，醫管局病人） | Samaritan Fund (self-financed drugs & devices, HA patients)](https://warenix.github.io/wellfairy/s/samaritan-fund.html) — 1950年成立安全網：醫管局病人需自費藥物儀器，經醫務社工家庭經濟審查（ADFR累進分擔）。綜援自動受保。2026年1月已放寬。
-- [撒瑪利亞基金（資助自費醫療項目） | Samaritan Fund (subsidised private medical items)](https://warenix.github.io/wellfairy/s/samaritan-fund-2026.html) — 資助指定自費醫療項目／新科技（藥物、植入物、質子治療等）。家庭經濟審查：入息在家庭住戶入息中位數內；資產≤項目費2倍全資，2–3倍按比例，>3倍不資助。綜援全資。
 - [學童牙科保健服務（小學，每年$45） | School Dental Care Service ($45/yr, primary)](https://warenix.github.io/wellfairy/s/school-dental.html) — 合資格小學生每年$45：檢查洗牙補牙加校巴。非合資格$970。10月起#DH-PAYMENT短訊繳費。
 - [胸肺服務（免費診斷＋治療） | TB & Chest Service (free diagnosis + treatment)](https://warenix.github.io/wellfairy/s/tb-chest-free.html) — 15間胸肺診所為香港市民免費診治結核／胸肺病：診症、X光、化驗、藥物及督導服藥。宜帶轉介信，亦接受求診。熱線2572 6024。
 - [東華免費門診（中西醫，1870年至今） | Tung Wah Free Clinics (Chinese + Western, since 1870)](https://warenix.github.io/wellfairy/s/twgh-free-clinic.html) — 東華／廣華免費中醫內科＋跌打（排籌、免預約），每年逾百萬人次免費西醫門診。綜援住院費全免。
 - [疫苗資助計劃 | Vaccination Subsidy Scheme](https://warenix.github.io/wellfairy/s/vss-elderly.html) — 指定診所享流感/肺炎球菌資助，去前先問有無貨。
 - [女性健康衛星中心（64歲或以下，分擔收費篩查） | Women Wellness Satellites (≤64, co-pay screening)](https://warenix.github.io/wellfairy/s/wws-women.html) — 預防為本婦女檢查（評估、子宮頸＋乳房篩查、護士診所），經地區康健中心轉介、分擔收費。先入會DHC。柴灣2025年6月開；藍田＋屯門9月起。
 
-## elderly (35)
+## elderly (25)
 
 - [低收入家庭護老者生活津貼 ($3,000/月) | Living Allowance for Carers of Elderly Persons from Low-income Families ($3,000/mo)](https://warenix.github.io/wellfairy/s/carer-elderly-3000.html) — 每月$3,000。照顧80小時+/月(2老120小時+)。長者需經安老服務統一評估機制輪候資助長期護理、在社區居住。
 - [照顧者支援專線 182 183 (24小時免費) | Carer Hotline 182 183 (24hr, free)](https://warenix.github.io/wellfairy/s/carer-hotline.html) — 24小時社工專線：輔導、暫託配對、外展探訪、暫託交通津貼。聽障/言語障礙WhatsApp 5322 2183。
-- [照顧長者津貼 | Allowance for Carers of Elderly Persons](https://warenix.github.io/wellfairy/s/carer-support-allowance.html) — 照顧長者津貼資格人士支援
 - [廣東院舍試驗每月$5,000（長者綜援，名額1,000） | Guangdong Care-Home Pilot $5,000/mo (elderly CSSA, quota 1,000)](https://warenix.github.io/wellfairy/s/ccf-gd-rche-5000.html) — 可攜綜援（單人約$4,600）外每月多$5,000入住指定廣東院舍。3年試驗2025年10月1日至2028年9月30日，名額1,000。公屋戶可保留單位6個月。
 - [長者社區照顧服務券 (最高$10,824/月) | Community Care Service Voucher (up to $10,824/mo)](https://warenix.github.io/wellfairy/s/ccsv.html) — 經統一評估後，體弱長者自選服務單位，政府按負擔能力共同付款。
-- [長者社區照顧服務券 | Community Care Service Voucher for Elderly](https://warenix.github.io/wellfairy/s/ccsv-2026.html) — 長者社區照顧服務券資格人士支援
 - [長者日間護理中心 | Day Care Centre for Elderly](https://warenix.github.io/wellfairy/s/day-care-centre-elderly.html) — 長者日間護理中心資格人士支援
 - [智友醫社同行計劃（綜援／長生津／減免免費） | Dementia Community Support (free for CSSA/OALA/waiver)](https://warenix.github.io/wellfairy/s/dcss-dementia.html) — 輕中度認知障礙經長者中心支援：綜援／長生津／減免免費，其他$150/月。需老人科／醫管局轉介；酌情減免。
-- [長者牙科治療券 | Dental Treatment Voucher for Elderly](https://warenix.github.io/wellfairy/s/dental-voucher-elderly.html) — 長者牙科治療券資格人士支援
-- [地區長者社區中心 | District Elderly Community Centre](https://warenix.github.io/wellfairy/s/district-elderly-community-centre.html) — 地區長者社區中心資格人士支援
 - [長者健康中心（每年$110體檢＋診治，65歲+） | Elderly Health Centres ($110/yr check-up + care, 65+)](https://warenix.github.io/wellfairy/s/ehc-elderly-check.html) — 18間衛生署中心：年費$110享健康評估、輔導、健康教育＋會員診治。一人只可登記一間；輪候較長 — 服務正分階段併入地區康健網絡。
 - [長者學苑（校園上課，約200間） | Elder Academy (learn on real campuses, ~200)](https://warenix.github.io/wellfairy/s/elder-academy.html) — 中小大專校園上課：約200間學苑，NGO＋學校合辦，多數免費或象徵收費。逐間報名。
 - [長者中心會籍（$21/年，膳食＋輔導） | Elderly Centre Membership ($21/yr, meals + counselling)](https://warenix.github.io/wellfairy/s/elderly-centre.html) — 地區／鄰舍中心：60歲+$21/年（55-59學舍$20，照顧者免費）。膳食、輔導、轉介、長期護理申請、復康用品借用。
-- [加強家居及社區照顧服務 | Enhanced Home and Community Care Services](https://warenix.github.io/wellfairy/s/enhanced-home-community-care.html) — 加強家居及社區照顧服務資格人士支援
 - [廣東／福建計劃高齡／長者生活津貼（北上退休） | Guangdong/Fujian OAA/OALA (retire on the Mainland)](https://warenix.github.io/wellfairy/s/gd-scheme.html) — 居廣東／福建照領高齡／長者生活津貼（每年住滿60日）。居港7年＋申請前連續住滿1年；親身來港辦手續＋面談。
 - [長者醫療券計劃 $2,000/年 | Elderly Health Care Voucher Scheme $2,000/yr](https://warenix.github.io/wellfairy/s/hcv-2026.html) — 每年$2,000，上限$8,000。同年指定基層醫療用滿$1,000再賞$500。
 - [長者醫療券獎賞先導計劃 $500/年 (2024-2028) | HCV Pilot Reward Scheme $500/yr (2024-2028)](https://warenix.github.io/wellfairy/s/hcv-reward-2026.html) — 2026／2027／2028每年指定基層醫療用滿$1,000 → 賞$500，翌年底前可用。每年一次；2024-2028最多$2,500。
 - [房協長者安居單位（租住，60歲+、無物業） | HKHS Elderly Persons' Flats (rental, 60+, no property)](https://warenix.github.io/wellfairy/s/hkhs-elderly-flats.html) — 自理60歲+租住單位（居港7年、居留權）：1–3人，24個月內無本港住宅物業＋從未擁有資助房屋。輪候編配。
 - [房協長者安居樂（終身租住，60歲+） | HKHS Senior Citizen Residences (lease-for-life, 60+)](https://warenix.github.io/wellfairy/s/hkhs-senior-residences.html) — 中等入息60歲+（居港7年，資產單人60–69歲$5,760,000–$10,490,000／70歲+$4,440,000–$8,100,000，不足可擔保）：一次過入住費終身租住＋月管理／照顧費。抽籤＋面試，申請免費。
-- [長者家居照顧服務 | Home Care Service for Elderly](https://warenix.github.io/wellfairy/s/home-care-service-elderly.html) — 長者家居照顧服務資格人士支援
-- [鄰舍長者中心 | Neighbourhood Elderly Centre](https://warenix.github.io/wellfairy/s/neighbourhood-elderly-centre.html) — 鄰舍長者中心資格人士支援
 - [高齡津貼 $1,675/月 (免審查) | Old Age Allowance $1,675/mo (non-means-tested)](https://warenix.github.io/wellfairy/s/oaa-2026.html) — 70歲+每月$1,675，免入息資產審查，需居港7年。
 - [長者生活津貼 $4,345/月 | Old Age Living Allowance $4,345/mo](https://warenix.github.io/wellfairy/s/oala-2026.html) — 每月$4,345。單人入息≤$10,900資產≤$415,000；夫婦≤$16,680/≤$630,000。不可同領高齡/傷殘/綜援。
 - [長者牙科外展（院舍免費上門） | Outreach Dental for Care-Home Elderly (free, on-site)](https://warenix.github.io/wellfairy/s/odcp-elderly.html) — 持牌安老／護養／盲人院舍院友（任何年齡＋香港身份證）或60歲+日間中心用家免費上門檢查＋治療。25隊NGO，約48萬人次。免審查。
 - [可攜綜援(PCSSA)長者移居廣東/福建 | Portable CSSA (PCSSA) for elderly retiring to Guangdong/Fujian](https://warenix.github.io/wellfairy/s/pcssa-2026.html) — 每月綜援標準金額＋每年長期補貼，入香港戶口或內地一類戶口。無租金/特別津貼；可獲殮葬津貼。
 - [安老院舍照顧服務券（每月$17,015–$21,982） | Residential Care Service Voucher ($17,015–$21,982/mo)](https://warenix.github.io/wellfairy/s/rcsv.html) — 2026年4月起：照顧$17,015/月、護養$21,982/月。經統一評估需院舍並輪候冊等候長者；分批邀請，可經VISE申請。
-- [長者 residential 護理服務券 | Residential Care Service Voucher for Elderly](https://warenix.github.io/wellfairy/s/rcsv-2026.html) — 長者 residential 護理服務券資格人士支援
-- [長者社區照顧服務券（每月$17,015–$21,982） | Residential Care Service Voucher ($17,015–$21,982/mo)](https://warenix.github.io/wellfairy/s/rcsv-elderly.html) — 錢跟人走：護理安老$17,015／月、護養院$21,982／月（2026年4月1日起）。8級按能力收費（第0級$0）。2026-27起7,000張券。6個月試用，可補差至150%。
 - [長者日間暫託服務 (60歲+) | Day Respite Service for the Elderly (60+)](https://warenix.github.io/wellfairy/s/respite-day.html) — 短暫日間照顧，讓照顧者稍事休息。經182 183、綜合家庭服務中心或直接向中心申請。全港349個服務點。
 - [長者住宿暫託服務 (60歲+) | Residential Respite Service for the Elderly (60+)](https://warenix.github.io/wellfairy/s/respite-residential.html) — 照顧者暫時未能照顧時短期入住。免統一評估，上VES查空位，經社工轉介。
-- [長者喘息服務 | Respite Service for Elderly Carers](https://warenix.github.io/wellfairy/s/respite-service-elderly.html) — 長者喘息服務資格人士支援
 - [保單逆按（55歲+，以壽險借貸） | Policy Reverse Mortgage (55+, borrow on life policy)](https://warenix.github.io/wellfairy/s/reverse-mortgage-prmp.html) — 55歲+持身份證：以已供滿的香港認可壽險（非投資相連，身故賠償合計≤$1,500萬）作押，每月收款5／10／15／20年或終身，另可一筆提取。生前毋須還款，不足額由按證保險承擔。
 - [安老按揭（55歲+，終身月收） | Reverse Mortgage on Flat (55+, monthly payouts for life)](https://warenix.github.io/wellfairy/s/reverse-mortgage-property.html) — 55歲+（未補價資助出售單位60歲+）：以香港住宅（樓齡≤50年、自住）作押，月收10／15／20年或終身 — 如60歲終身每$100萬$1,840（浮息、單借款人）；指定價值上限$2,500萬。生前免還；2026定息4%三十年＋加5%。
 - [長者咭 (65歲+) | Senior Citizen Card (65+)](https://warenix.github.io/wellfairy/s/senior-card.html) — 年齡證明，享交通、政府及商戶優惠。
 - [智齡長者數碼課程＋平板借用（免費，60歲+） | Smart Silver Elderly ICT Courses + Tablet Lending (free, 60+)](https://warenix.github.io/wellfairy/s/smartsilver-ict.html) — 經長者學苑／NGO免費：智方便、電子錢包、內地App、AI助手、防騙；全港流動外展＋平板借用。2026–2028新一輪（加AI、區塊鏈、編程）。
 
-## transport (12)
+## transport (11)
 
 - [$2優惠計劃 (60歲以下殘疾人士) | $2 Scheme for Disabled Persons (<60)](https://warenix.github.io/wellfairy/s/fare-2-disabled.html) — 同享$2/8折，用殘疾身份個人八達通。批出傷殘津貼/綜援時社署會寄已核實申請表。
 - [$2優惠計劃 (60歲+ 樂悠咭) | $2 Scheme (60+, JoyYou Card)](https://warenix.github.io/wellfairy/s/fare-2dollar.html) — $2或兩折(2026年4月3日改制)。60歲+用JoyYou卡；60歲以下殘疾經傷殘津貼/綜援100%個人八達通。
@@ -266,4 +250,3 @@
 - [公共交通費用補貼計劃 (最高$400/月) | Public Transport Fare Subsidy Scheme (up to $400/mo)](https://warenix.github.io/wellfairy/s/ptfss.html) — 月費超$500部份回贈1/3，上限$400/月。免申請，每月16日起拍卡領取。
 - [殘疾人士交通優惠 | Public Transport Fare Concession for Disabled](https://warenix.github.io/wellfairy/s/public-transport-concession-disabled.html) — 殘疾人士交通優惠資格人士支援
 - [復康巴士月票 ($184/$264) | Rehabus Monthly Pass ($184/$264)](https://warenix.github.io/wellfairy/s/rehabus-pass.html) — 行動不便持香港身份證者月票(11歲以下香港居民都得)。可有人陪搭。綜援/RCSV坐電召半價。
-- [公共交通費用補貼計劃 | Public Transport Fare Subsidy Scheme](https://warenix.github.io/wellfairy/s/transport-fare-subsidy-scheme.html) — 公共交通費用補貼計劃資格人士支援
