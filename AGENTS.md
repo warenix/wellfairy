@@ -71,6 +71,30 @@ parser and users — misranks the scheme and misleads readers.
   HA clinic `$10,000` annual user-spend cap). `value_summary` keeps only the
   benefit $ plus the user cost directly tied to using it.
 
+### Scheme ID year-suffix policy (annual vs evergreen) — IMPORTANT
+
+Details change every year, so the ID must say which round a record describes.
+But `id` is the key everywhere (`review.json`, `conflicts.with`, SEO
+`s/<id>.html`, sitemap) — renaming a live ID orphans history and 404s links.
+So: **suffix by scheme nature, roll over by add + retire, never rename.**
+
+- **Annual-round schemes get a year-suffixed ID.** Any scheme whose amounts /
+  thresholds / deadlines reset each cycle: WFA, PTFSS, KCFRS, NLS/ENLS,
+  HOS sale exercises, IRD allowances, budget one-offs, school-year programmes.
+  Formats already in use: `-2026` (calendar year), `-2627` (school year
+  Sep–Aug), `-2728`, plus amount hybrids (`cef-25k`, `wops-60k` — keep as-is).
+- **Evergreen schemes keep a stable ID** (`cssa-note`, `senior-card`,
+  `rehabus-pass`, `ccsv` ...). No annual round exists — update in place with
+  `updated_at` + `confirm_*`. Do NOT invent a year suffix for these.
+- **Rollover = add + retire, never rename.** When a new round lands, stage a
+  NEW record with the new ID; retire the old round via a staged removal
+  (publish `-1`) or a past `deadline` once its window closes. Link the two
+  with a `sequential` entry in `conflicts` where users could confuse rounds.
+- **Apply at the next rollover, not retroactively.** Do not bulk-rename the
+  ~180 unsuffixed live IDs — that breaks URLs and review history for zero
+  user gain. Convert an annual scheme to a suffixed ID only when its next
+  round is crawled (e.g. next WFA cycle stages `wfa-2728`, retires `wfa`).
+
 ### Eligibility-gate capture (matching engine) — IMPORTANT
 
 When crawling a scheme, capturing its **eligibility constraints** is as important as
