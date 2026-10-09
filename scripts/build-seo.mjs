@@ -7,7 +7,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SITE = (process.env.SITE_URL || 'https://wellfairy.ivy.hk').replace(/\/$/, '');
+const SITE = (process.env.SITE_URL || 'https://welly.ivy.hk').replace(/\/$/, '');
 const benefits = JSON.parse(readFileSync(join(root, 'data/benefits.json'), 'utf8'));
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({
