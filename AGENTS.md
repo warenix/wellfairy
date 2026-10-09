@@ -45,6 +45,28 @@ instead of `$25,000`. Never write k/M shorthand in ANY text field
 - `estimateAmount()` also expands suffixes as a safety net, but data must carry
   full digits first — never rely on the parser to fix shorthand.
 
+### Text field language mixing — IMPORTANT
+
+Never mix Chinese and English within the same text field. Each field has a dedicated
+`*_en` and `*_zh` pair:
+
+- `title_en` / `title_zh` — scheme titles must be purely English or purely Chinese
+- `value_summary_en` / `value_summary_zh` — benefit summaries must not mix languages
+- `why_en` / `why_zh` — eligibility explanations must not mix languages
+- `confirm_en` / `confirm_zh` — confirmation notes must not mix languages
+
+**Expansion rule:** If a field contains both Chinese and English characters, it is
+considered mixed and must be split into the language-specific fields. Financial
+amounts with `$` are preserved per the Chinese units hygiene rule (e.g. `$25,000`
+stays as-is, not `$25k`). Chinese units like `$600萬`, `$4.4億` are unambiguous
+and parser-handled — leave them; only expand Latin k/M.
+
+**Examples of violations fixed in this session:**
+- `title_zh`: `擴展免入息審查貸款ENLS` → `擴展免入息審查貸款` (removed `ENLS`)
+- `title_zh`: `大灣區青年創業（經NGO高達$600,000）` → `大灣區青年創業（經資助高達$600,000）` (removed `NGO`)
+- `title_zh`: `HPV疫苗補種計劃（免費2針，2026年12月截止！）` → kept (already clean)
+- `heroPromise` in `app.js`: `'Welly 會根據...'` → `'會根據...'` (removed English brand name from Chinese)
+
 ### Benefit-vs-expense ($ value) — IMPORTANT
 
 `estimateAmount()` ranks schemes by the biggest `$` figure in `value_summary_*`.
