@@ -74,7 +74,7 @@ const I18N = {
   trustTop: ['Free · Data stays on your device', '免費 · 資料留在你手機'],
   heroKicker: ['Support you may have missed', '你可能未曾發現的支援'],
   heroLead: ['Some support may be made for you — worth a look.', '有些福利，可能正是為你而設，不妨了解一下。'],
-  heroPromise: ['Welly checks your family, income, housing and life situation to find support you may qualify for.', 'Welly 會根據你的家庭、收入、住屋和生活狀況，幫你找出可能符合資格的支援。'],
+  heroPromise: ['Welly checks your family, income, housing and life situation to find support you may qualify for.', '會根據你的家庭、收入、住屋和生活狀況，幫你找出可能符合資格的支援。'],
   heroCTA: ['Check my benefits', '開始檢查我的福利'],
   heroNote: ['Build your profile · no sign-up needed', '建立檔案 · 不用登記'],
   discoveryLabel: ['Your support map', '你的支援地圖'],
