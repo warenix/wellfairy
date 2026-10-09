@@ -78,14 +78,14 @@
           <span class="hero-note"><strong>2 min</strong> <span data-i18n="heroNote">建立檔案 · 不用登記</span></span>
         </div>
       </div>
-      <div class="hero-discovery" aria-label="你的福利配對摘要">
-        <div class="discovery-label"><span data-i18n="discoveryLabel">你的支援地圖</span><span class="spark">✦</span></div>
+      <section class="hero-discovery" aria-labelledby="discoveryLabel">
+        <div class="discovery-label"><span id="discoveryLabel" data-i18n="discoveryLabel">你的支援地圖</span><span class="spark" aria-hidden="true">✦</span></div>
         <div class="discovery-number"><span id="heroCount">0</span><small><span data-i18n="heroUnit">項可能合資格</span></small><span id="heroTotal" class="visually-hidden">0</span></div>
         <div class="discovery-rule"></div>
         <div class="discovery-row"><span>⏰ <span data-i18n="statDeadline">30日內截止</span></span><strong id="statSoon">0</strong></div>
         <div class="discovery-row"><span>★ <span data-i18n="statSaved">已收藏</span></span><strong id="statSave">0</strong><span id="statCat" class="visually-hidden">0</span></div>
         <div class="discovery-foot"><span class="mini-ring"><span id="ringPct">0%</span></span><span data-i18n="matchRate">目前配對率</span></div>
-      </div>
+      </section>
     </div>
     <div class="profile-strip">
       <div class="profile-strip-icon" aria-hidden="true">◎</div>
@@ -144,17 +144,20 @@
 
     <div class="searchbar match-searchbar"><span aria-hidden="true">🔍</span><label class="visually-hidden" for="qMatch" data-i18n="searchLabel">搜尋福利 Search benefits</label><input id="qMatch" type="search" autocomplete="off" data-i18n-ph="searchPh" placeholder="搜尋 醫療券 / KCFRS / WFA / 車船津貼…"></div>
     <div class="match-body">
-      <aside class="rail rail-left" aria-label="篩選 Filters">
+      <aside class="rail rail-left" aria-labelledby="filterH">
+        <h2 class="rail-title" id="filterH" data-i18n="filterH">篩選</h2>
         <div class="rail-block">
-          <div class="chips chips-vert" id="lifeChips" role="group" aria-label="人生階段篩選 Life event filters"></div>
+          <h3 class="rail-sub" id="lifeH" data-i18n="lifeH">人生階段</h3>
+          <div class="chips chips-vert" id="lifeChips" role="group" aria-labelledby="lifeH"></div>
         </div>
         <div class="rail-block">
-          <div class="chips chips-vert" id="chips" role="group" aria-label="類別篩選 Category filters"></div>
+          <h3 class="rail-sub" id="catH" data-i18n="catH">類別</h3>
+          <div class="chips chips-vert" id="chips" role="group" aria-labelledby="catH"></div>
         </div>
       </aside>
       <div class="rail-center">
         <section class="sec sec-now" id="secNow" aria-labelledby="secNowH">
-          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg></div><div class="sec-t"><h3 id="secNowH" data-i18n="secNow">符合資格</h3><p data-i18n="secNowD">你符合資格，可以直接申請</p></div><span class="sec-count ok" id="nowCount" role="status" aria-live="polite"></span></div>
+          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-gift"/></svg></div><div class="sec-t"><h3 id="secNowH" data-i18n="secNow">符合資格</h3><p data-i18n="secNowD">你符合資格，可以直接申請</p></div><span class="sec-count ok" id="nowCount"></span></div>
           <div id="now" class="grid" role="list" aria-label="符合資格 Eligible"></div>
         </section>
 
@@ -162,13 +165,13 @@
           <span aria-hidden="true">🔒</span><strong data-i18n="secAlmost">只差一步</strong><span class="sec-count" id="missCountBar"></span><span class="miss-bar-toggle" data-i18n="expand">展開 ▾</span>
         </button>
         <section class="sec sec-miss" id="secMiss" aria-labelledby="secMissH" hidden>
-          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">只差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可申請</p></div><span class="sec-count" id="missCount" role="status" aria-live="polite"></span><button class="linkbtn" id="missToggle" type="button" aria-expanded="false" aria-controls="secMiss" data-i18n="collapse">收起 ▴</button></div>
+          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">只差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可申請</p></div><span class="sec-count" id="missCount"></span><button class="linkbtn" id="missToggle" type="button" aria-expanded="false" aria-controls="secMiss" data-i18n="collapse">收起 ▴</button></div>
           <div id="miss" class="grid" role="list" aria-label="差一步 One step away"></div>
         </section>
       </div>
-      <aside class="rail rail-right" aria-label="即將截止 Closing soon">
+      <aside class="rail rail-right" aria-labelledby="secSoonH">
         <section class="sec sec-soon" id="secSoon" aria-labelledby="secSoonH">
-          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg></div><div class="sec-t"><h3 id="secSoonH" data-i18n="secSoon">即將截止</h3><p data-i18n="secSoonD">這些項目設有截止日期，請盡早辦理</p></div><span class="sec-count hot" id="soonCount" role="status" aria-live="polite"></span><button class="linkbtn" data-goto="all" type="button" data-i18n="viewAll">查看全部 →</button></div>
+          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-calm"/></svg></div><div class="sec-t"><h3 id="secSoonH" data-i18n="secSoon">即將截止</h3><p data-i18n="secSoonD">這些項目設有截止日期，請盡早辦理</p></div><span class="sec-count hot" id="soonCount"></span><button class="linkbtn" data-goto="all" type="button" data-i18n="viewAll">查看全部 →</button></div>
           <div id="soon" class="hscroll hscroll-vert" role="list" aria-label="即將截止 Closing soon"></div>
         </section>
       </aside>
@@ -188,9 +191,11 @@
     <h2 class="all-h" data-i18n="allH">瀏覽全部計劃</h2>
     <div class="searchbar"><span aria-hidden="true">🔍</span><label class="visually-hidden" for="q" data-i18n="searchLabel">搜尋福利 Search benefits</label><input id="q" type="search" autocomplete="off" data-i18n-ph="searchPh" placeholder="搜尋 醫療券 / KCFRS / WFA / 車船津貼…"></div>
     <div class="all-body">
-      <aside class="rail rail-left" aria-label="篩選 Filters">
+      <aside class="rail rail-left" aria-labelledby="filterHAll">
+        <h2 class="rail-title" id="filterHAll" data-i18n="filterH">篩選</h2>
         <div class="rail-block">
-          <div class="chips chips-vert" id="chipsAll" role="group" aria-label="類別篩選 Category filters"></div>
+          <h3 class="rail-sub" id="catHAll" data-i18n="catH">類別</h3>
+          <div class="chips chips-vert" id="chipsAll" role="group" aria-labelledby="catHAll"></div>
         </div>
       </aside>
       <div class="rail-center">

@@ -129,6 +129,9 @@ const I18N = {
   items: ['items', '項'],
   missSub: ['A document or an age requirement away', '補交文件或符合年齡便可申請'],
   searchLabel: ['Search benefits', '搜尋福利'],
+  filterH: ['Filters', '篩選'],
+  catH: ['Category', '類別'],
+  lifeH: ['Life stage', '人生階段'],
   searchPh: ['Search HCV / KCFRS / WFA / transport…', '搜尋 醫療券 / KCFRS / WFA / 車船津貼…'],
   profileH: ['A 2-minute profile gives more accurate matches', '花 2 分鐘建立檔案，配對更準確'],
   importLabel: ['Import profile file', '匯入檔案'],
@@ -203,9 +206,6 @@ function applyI18n() {
   const tb = $('#topBtn'); if (tb) tb.setAttribute('aria-label', t('Back to top', '回到頂部'));
   const q = $('#q'); if (q && !q.getAttribute('aria-label')) q.setAttribute('aria-label', t('Search benefits', '搜尋福利'));
   const imp = $('#importFile'); if (imp) imp.setAttribute('aria-label', t('Import profile file', '匯入檔案'));
-  const lc = $('#lifeChips'); if (lc) lc.setAttribute('aria-label', t('Life event filters', '人生階段篩選'));
-  const cc = $('#chips'); if (cc) cc.setAttribute('aria-label', t('Category filters', '類別篩選'));
-  const ca = $('#chipsAll'); if (ca) ca.setAttribute('aria-label', t('Category filters', '類別篩選'));
 }
 function hkYearsOut(){ const f=$('#profileForm'); if(!f||!f.hkYears) return; const v=+f.hkYears.value; const o=$('#hkYearsOut'); if(o) o.textContent = v>=7 ? t('7 or more years','7年或以上') : v+t(' years','年'); }
 const CAT_ICON = { elderly: '👵', student: '🎒', family: '👨‍👩‍👧', health: '🏥', transport: '🚌', housing: '🏠' };
@@ -454,7 +454,7 @@ function card(b, opts={}) {
     <div class="ticket-step"><span aria-hidden="true">👉</span> ${esc(step)}</div>
     <div class="pills"><span class="pill${dlHot ? ' hot' : ''}">${dlHot ? '⏰ ' : '🗓 '}${esc(dl)}</span>${freshPill(b)}</div>
     <div class="row"><button class="savebtn ${on}" data-save="${esc(b.id)}" type="button" aria-pressed="${isSaved ? 'true' : 'false'}" aria-label="${esc(saveLabel)}">${saveIcon}</button>
-    <a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')}</a>
+    <a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}" aria-label="${esc(t('Apply now: ','立即申請：') + title)}">${t('Apply now','立即申請')}</a>
     <button class="btn ghost" data-open="${esc(b.id)}" type="button" aria-label="${esc(viewLabel)}">${t('Why do I qualify?','為何我符合')}</button></div></article>`;
 }
 
@@ -485,7 +485,7 @@ function openDetail(id, push = true) {
   const relatedChips = relatedItems.map(x=>`<button type="button" class="chip relchip" data-open="${esc(x.id)}" aria-label="${esc(t('View details: ','查看詳情：') + t(x.title_en, x.title_zh))}"><span aria-hidden="true">${CAT_ICON[x.category]||'🎁'}</span> ${esc(t(x.title_en,x.title_zh))}</button>`).join('');
   const docs = ((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]);
   const docSteps = docs.length ? `<ol class="claim-steps">${docs.slice(0,4).map(x=>`<li>${esc(x)}</li>`).join('')}</ol>` : '';
-  const claimHtml = `<section class="claimbox" aria-label="${esc(t('How to apply','如何申請'))}"><h4>📋 ${t('How to apply','如何申請')}</h4><ol class="claim-steps"><li>${esc(nextStepText(b))}</li></ol>${docSteps}<p class="hint">${t('Usually takes 10–20 minutes online. Prepare 1–3 proof documents.','一般在網上 10–20 分鐘完成。準備 1–3 份證明文件。')}</p></section>`;
+  const claimHtml = `<section class="claimbox" aria-label="${esc(t('How to apply','如何申請'))}"><h3>📋 ${t('How to apply','如何申請')}</h3><ol class="claim-steps"><li>${esc(nextStepText(b))}</li></ol>${docSteps}<p class="hint">${t('Usually takes 10–20 minutes online. Prepare 1–3 proof documents.','一般在網上 10–20 分鐘完成。準備 1–3 份證明文件。')}</p></section>`;
   const confRows = (b.conflicts||[]).filter(c=>BENEFITS.some(x=>x.id===c.with)).map(c=>{
     const o = BENEFITS.find(x=>x.id===c.with);
     const t2 = t(o.title_en, o.title_zh);
@@ -493,18 +493,18 @@ function openDetail(id, push = true) {
     const tag = c.type==='sequential' ? t('Move in phases: ','分階段銜接：') : t('Cannot combine: ','不可同領：');
     return `<div class="confrow"><button type="button" class="chip relchip" data-open="${esc(c.with)}" aria-label="${esc(t('View details: ','查看詳情：') + t2)}">⚠ ${esc(t2)}</button><span class="confnote">${esc(tag)}${esc(note)}</span></div>`;
   }).join('');
-  const confHtml = confRows ? `<section class="confbox" aria-labelledby="confH"><h4 id="confH">⚠ ${t('Check before applying for both','同時申請前請留意')}</h4><div class="confrows">${confRows}</div></section>` : '';
-  const relatedHtml = relatedItems.length ? `<section class="relatives" aria-labelledby="relH"><h4 id="relH">${t('Related in this category','同類資助')}</h4><div class="chips" role="group" aria-label="${esc(t('Related in this category','同類資助'))}">${relatedChips}</div><p class="hint">${t('Press to view related schemes — passing one assessment may open up other allowances.','按一下可查看同類計劃；通過審查後，或可同時申請其他津貼。')}</p></section>` : '';
+  const confHtml = confRows ? `<section class="confbox" aria-labelledby="confH"><h3 id="confH">⚠ ${t('Check before applying for both','同時申請前請留意')}</h3><div class="confrows">${confRows}</div></section>` : '';
+  const relatedHtml = relatedItems.length ? `<section class="relatives" aria-labelledby="relH"><h3 id="relH">${t('Related in this category','同類資助')}</h3><div class="chips" role="group" aria-label="${esc(t('Related in this category','同類資助'))}">${relatedChips}</div><p class="hint">${t('Press to view related schemes — passing one assessment may open up other allowances.','按一下可查看同類計劃；通過審查後，或可同時申請其他津貼。')}</p></section>` : '';
   d.setAttribute('aria-label', title);
   d.innerHTML = `<div class="detail"><div class="top"><div class="badge cat-${esc(b.category)}" aria-hidden="true">${CAT_ICON[b.category]||'🎁'}</div>
-    <div><h3 id="detailTitle" tabindex="-1">${esc(title)}</h3><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
+    <div><h2 id="detailTitle" tabindex="-1">${esc(title)}</h2><div class="meta">${esc(b.id)} · ${esc(t(cat.en,cat.zh))}</div></div></div>
     <div class="pills">${deadlinePill(b)}${freshPill(b)}</div>
     <p>${esc(t(b.value_summary_en,b.value_summary_zh))}</p>
     <div class="why"><span aria-hidden="true">💡</span> ${esc(t(b.why_en,b.why_zh))}<br><br><span aria-hidden="true">🧾</span> <strong>${t('Please prepare:','請帶齊')}:</strong> ${esc(((LANG==='zh'?(b.proof_needed_zh||b.proof_needed_en):b.proof_needed_en)||[]).join(' · '))}${(b.confirm_en&&b.confirm_en.length)?`<br><br>☑ <strong>${t('Please check before applying:','申請前請確認')}:</strong><br>— `+((LANG==='zh'?(b.confirm_zh||b.confirm_en):b.confirm_en).map(esc).join('<br>— ')):''}<br><span aria-hidden="true">🔗</span> <strong>${t('Source:','來源')}:</strong> <a class="srclink" target="_blank" rel="noopener" href="${esc(L(b,'source_url'))}">${esc(L(b,'source_url'))}</a></div>
     ${claimHtml}
     ${confHtml}
     ${relatedHtml}
-    <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}">${t('Apply now','立即申請')} <span class="visually-hidden">${esc(title)}</span></a>
+    <div class="actions"><a class="btn" target="_blank" rel="noopener" href="${esc(L(b,'apply_link'))}" aria-label="${esc(t('Apply now: ','立即申請：') + title)}">${t('Apply now','立即申請')} <span class="visually-hidden">${esc(title)}</span></a>
     <button class="btn ghost" id="shareBtn" type="button"><span aria-hidden="true">🔗</span> ${t('Share','分享')}</button>
     <button class="btn ghost" id="closeD" type="button">${t('Close','關閉')}</button></div>
     <p class="hint">${t('Please check the government website before applying.','申請前請以政府網站為準。')}</p></div>`;
@@ -643,12 +643,16 @@ function renderQuick() {
   }
   const qn = $('#quickN');
   if (qn) qn.querySelectorAll('[data-qn]').forEach(btn=>{
-    btn.classList.toggle('on', +btn.dataset.qn === QUICK.n || (btn.dataset.qn==='4' && QUICK.n>=4));
+    const on = +btn.dataset.qn === QUICK.n || (btn.dataset.qn==='4' && QUICK.n>=4);
+    btn.classList.toggle('on', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     btn.onclick=()=>{QUICK.n=+btn.dataset.qn;flowDirty=true;render();};
   });
   const qb = $('#quickBand');
   if (qb) qb.querySelectorAll('[data-qb]').forEach(btn=>{
-    btn.classList.toggle('on', btn.dataset.qb===QUICK.band);
+    const on = btn.dataset.qb===QUICK.band;
+    btn.classList.toggle('on', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     btn.onclick=()=>{QUICK.band=btn.dataset.qb;flowDirty=true;render();};
   });
   const qr = $('#quickResult');
@@ -733,7 +737,7 @@ function renderNext() {
           <div class="checkout-step"><span aria-hidden="true">👉</span> ${esc(step)}</div>
           ${docs.length ? `<div class="checkout-docs"><span aria-hidden="true">🧾</span> ${esc(docs.join(' · '))}</div>` : ''}
         </div>
-        <div class="checkout-actions"><a class="btn checkout-apply" target="_blank" rel="noopener" href="${esc(L(b, 'apply_link'))}">${t('Apply', '申請')}</a>
+        <div class="checkout-actions"><a class="btn checkout-apply" target="_blank" rel="noopener" href="${esc(L(b, 'apply_link'))}" aria-label="${esc(t('Apply now: ', '立即申請：') + title)}">${t('Apply', '申請')}</a>
         <button type="button" class="btn ghost checkout-done" data-done="${esc(b.id)}">✅ ${t('Done', '完成')}</button></div>
       </div>`;
     }).join('');
@@ -1100,10 +1104,10 @@ async function init() {
     const c=e.target.closest('.card'); if(c&&!e.target.closest('a,button')) openDetail(c.dataset.id);
   });
   document.body.addEventListener('keydown',e=>{
-    if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('card')&&!e.target.closest('a,button')){
-      const c=e.target.closest('.card');
-      if(c&&e.target===c){e.preventDefault();openDetail(c.dataset.id);}
-    }
+    // Cards themselves stay out of the tab order (nested Apply/Save buttons
+    // inside would violate the button-in-button rule) — keyboard users get
+    // the same destinations via the explicit Why / Apply / Save buttons.
+    // Only the Next-tab checkout rows expose a keyboard-operable container.
     if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('checkout-main')){
       e.preventDefault();openDetail(e.target.dataset.open);
     }
