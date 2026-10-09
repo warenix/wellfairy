@@ -45,6 +45,32 @@ instead of `$25,000`. Never write k/M shorthand in ANY text field
 - `estimateAmount()` also expands suffixes as a safety net, but data must carry
   full digits first — never rely on the parser to fix shorthand.
 
+### Benefit-vs-expense ($ value) — IMPORTANT
+
+`estimateAmount()` ranks schemes by the biggest `$` figure in `value_summary_*`.
+But source pages mix **government benefit $** with **user-paid $**: application
+fees, co-pays, non-eligible prices, spend-to-unlock thresholds, annual payment
+caps, income/asset eligibility caps. A bare `$X` reads as benefit to both the
+parser and users — misranks the scheme and misleads readers.
+
+- **Lead with the benefit:** `Up to $X subsidy / reward / waiver ...` /
+  `最高$X資助 / 發還 / 減免 / 賞...`.
+- **Mark every user-paid figure with a cost verb in the SAME clause, EN + ZH:**
+  `fee` / `co-pay` / `pay` / `non-eligible pays` /
+  `自付` / `繳費` / `費用` / `非合資格`.
+  e.g. `Non-eligible pays $970` / `非合資格自付$970`;
+  `copay capped $8,000` / `自付上限$8,000`;
+  `Annual spending cap $10,000 you pay` / `全年自付上限$10,000`.
+- **Spend-to-unlock pattern:** `Spend $1,000 → $500 reward` /
+  `用滿$1,000 → 賞$500` — threshold first with `Spend`/`用滿`, benefit second.
+- **Never let a non-benefit figure be the biggest `$` in `value_summary`:**
+  move income/asset caps to `needs` gates + `confirm_*`, and move dwarfing
+  non-benefit prices/fees to `confirm_*` (e.g. HOS `$1,230,000` asset cap +
+  `$350` fee where the benefit is a flat not cash; school-dental non-eligible
+  `$970` vs eligible `$45/yr`; student-health non-eligible `$680/yr`;
+  HA clinic `$10,000` annual user-spend cap). `value_summary` keeps only the
+  benefit $ plus the user cost directly tied to using it.
+
 ### Eligibility-gate capture (matching engine) — IMPORTANT
 
 When crawling a scheme, capturing its **eligibility constraints** is as important as
