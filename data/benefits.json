@@ -2080,7 +2080,7 @@
   {
     "id": "enls-2627",
     "title_en": "Extended Non-means-tested Loan ENLS ($419,400, to Jul 2027)",
-    "title_zh": "擴展免入息審查貸款ENLS（$419,400，至2027年7月）",
+    "title_zh": "擴展免入息審查貸款（$419,400，至2027年7月）",
     "category": "student",
     "value_summary_en": "Tuition loan for eligible post-secondary/continuing/professional courses in HK (incl. CEF-type). Own lifetime pot $419,400 (2026/27), 2.173%. Apply by 31 Jul 2027 before lectures end.",
     "value_summary_zh": "香港合資格專上／持續／專業課程學費貸款（含持續進修類）。獨立終身限額$419,400（2026/27），2.173%。2027年7月31日前、完課前申請。",
@@ -2813,7 +2813,7 @@
     "source_url": "https://www.weventure.gov.hk/en/plan_details/index.html",
     "source_url_zh": "https://www.weventure.gov.hk/tc/plan_details/index.html",
     "title_en": "GBA Youth Start-ups (up to $600,000 via NGOs)",
-    "title_zh": "大灣區青年創業（經NGO高達$600,000）",
+    "title_zh": "大灣區青年創業（經資助高達$600,000）",
     "updated_at": "2026-10-09",
     "value_summary_en": "HK youth startups in HK/GBA: up to $600,000 capital subsidy per team + incubation, mentoring, market/network help via 16 funded NGOs (2024–27 round; 217 teams last round). Apply through NGO programmes (WeVenture portal).",
     "value_summary_zh": "本港青年在港／大灣區創業：每隊高達$600,000啟動資助＋孵化、師友、市場網絡，經16間資助NGO（2024–27輪；上輪217隊）。經NGO計劃申請（WeVenture平台）。",
@@ -3754,7 +3754,7 @@
   {
     "id": "hpv-catchup-2026",
     "title_en": "HPV Vaccination Catch-up (free 2 doses, ends Dec 2026!)",
-    "title_zh": "HPV疫苗補種計劃（免費2針，2026年12月截止！）",
+    "title_zh": "疫苗補種計劃（免費2針，2026年12月截止！）",
     "category": "health",
     "value_summary_en": "Females born 2004-2008 not yet vaccinated: 2 free doses (3 if immunocompromised). Enrol now - ENDS END 2026. Needs eHealth.",
     "value_summary_zh": "2004-2008年出生未打齊HPV疫苗女性：免費2針（免疫力弱3針）。立即參加——2026年底截止。需醫健通。",
@@ -5251,7 +5251,7 @@
   {
     "id": "mtr-fare-saver-2",
     "title_en": "MTR Fare Saver $2 Off + Green-Minibus Interchange",
-    "title_zh": "港鐵特惠站減$2＋綠Van轉乘優惠",
+    "title_zh": "港鐵特惠站減$2＋綠轉乘優惠",
     "category": "transport",
     "value_summary_en": "Tap a Fare Saver reader then ride same day: $2 off (Adult Octopus). Plus $0.5+ off interchanging MTR ↔ all green-minibus routes on Octopus.",
     "value_summary_zh": "撳特惠站讀卡器同日搭港鐵：成人八達通減$2。另港鐵↔全部綠Van線八達通轉乘減$0.5+。",
@@ -5480,7 +5480,7 @@
   {
     "id": "nls-loan-2627",
     "title_en": "NLS Tuition Loans NLSFT+NLSPS ($419,400 lifetime, 2.173%)",
-    "title_zh": "免入息審查專上貸款NLSFT+NLSPS（終身$419,400，2.173%）",
+    "title_zh": "免入息審查專上貸款（終身$419,400，2.173%）",
     "category": "student",
     "value_summary_en": "No-means-test tuition loan up to 100% fees: NLSFT (publicly-funded places) + NLSPS (self-financing). Shared lifetime cap $419,400 (2026/27), interest 2.173%. Apply by 31 Dec 2026.",
     "value_summary_zh": "免審查學費貸款最高100%學費：NLSFT（資助學額）＋NLSPS（自資）。共用終身限額$419,400（2026/27），利息2.173%。2026年12月31日前申請。",
@@ -5989,7 +5989,7 @@
   {
     "id": "pcssa-2026",
     "title_en": "Portable CSSA (PCSSA) for elderly retiring to Guangdong/Fujian",
-    "title_zh": "可攜綜援(PCSSA)長者移居廣東/福建",
+    "title_zh": "可攜綜援長者移居廣東/福建",
     "category": "elderly",
     "value_summary_en": "Monthly CSSA standard rate + annual long-term supplement paid to HK bank account or Mainland Type I account. No rent/special grants; burial grant available.",
     "value_summary_zh": "每月綜援標準金額＋每年長期補貼，入香港戶口或內地一類戶口。無租金/特別津貼；可獲殮葬津貼。",
@@ -7082,7 +7082,7 @@
   {
     "id": "special-needs-trust",
     "title_en": "Special Needs Trust (estate planning for SEN kids)",
-    "title_zh": "特殊需要信託 (為SEN子女安排身後財產)",
+    "title_zh": "特殊需要信託 (為子女安排身後財產)",
     "category": "family",
     "value_summary_en": "DSW as trustee manages deceased parents' assets, disburses to carers per wishes. For ID/autism/mental-disorder beneficiaries. 18+ HKPR settlor, not bankrupt.",
     "value_summary_zh": "社署署長做法定受託人，按父母意願定期發放財產給照顧者。受益人為智障/自閉/精神障礙。委託人須18歲+香港永久居民、非破產。",
@@ -7424,7 +7424,7 @@
   {
     "id": "stem-internship-11790",
     "title_en": "STEM Internship Allowance ($11,790/mo, ≤90 days/yr)",
-    "title_zh": "STEM實習津貼（每月$11,790，每年≤90天）",
+    "title_zh": "實習津貼（每月$11,790，每年≤90天）",
     "category": "student",
     "value_summary_en": "$11,790 per 30-day month (from 1.4.2026), cap $35,370/yr (90 days). Full-time STEM undergrad/postgrad (local + non-local) at designated universities; I&T-related placement ≥28 days via university. Cannot overlap other govt internship subsidies.",
     "value_summary_zh": "每30天$11,790（2026年4月1日起），每年上限$35,370（90天）。指定大學全日制STEM本科／研究生（本地＋非本地）；經大學安排創科相關實習≥28天。不可與其他政府實習資助重疊。",
@@ -7461,7 +7461,7 @@
   {
     "id": "strive-rise-teen",
     "title_en": "Strive and Rise: Teen Mentoring + $10,000 (S1-S4)",
-    "title_zh": "共創明Teen：師友＋$10,000（中一至中四）",
+    "title_zh": "共創明：師友＋$10,000（中一至中四）",
     "category": "student",
     "value_summary_en": "Underprivileged S1-S4 (esp. subdivided-unit families): 1-yr mentor + development plan + $5,000 start-up + $5,000 completion scholarship. 4,000 places/cohort via school.",
     "value_summary_zh": "基層中一至中四（特別劏房戶）：1年師友＋發展計劃＋$5,000啟動＋$5,000畢業獎學金。每屆4,000名額，經學校。",
@@ -8281,7 +8281,7 @@
   {
     "id": "yetp",
     "title_en": "Youth Employment & Training Programme",
-    "title_zh": "展翅青見計劃 YETP",
+    "title_zh": "展翅青見計劃",
     "category": "student",
     "value_summary_en": "Age 15-29, sub-degree or below: paid workplace attachment ($8,000 allowance), training $333/day, career advisor. Free.",
     "value_summary_zh": "15-29歲副學位或以下：有薪實習($8,000津貼)、培訓$333/日、就業顧問跟進。免費。",
