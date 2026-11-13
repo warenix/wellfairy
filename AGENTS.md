@@ -9,7 +9,7 @@ This file describes how data sources are added, scheduled for crawling using BFS
 ### Adding a new data source
 - **Pending frontier (BFS):** New candidate sources are first added as `Pxx` rows in `crawl-map.md` Pending Frontier section. No URL is stored until curl-verified to 200.
 - **Promotion to scheme (Sxx):** After first successful crawl, the source is promoted to an `Sxx` entry in the Level 1 crawl map. Schemes are listed with their IDs, titles, categories, and cadence.
-- **Schema:** Each scheme follows the JSON schema defined in `data/schema.md`. Fields include `id`, `title_en`, `title_zh`, `category`, `value_summary_en`, `value_summary_zh`, `deadline`, `source_url`, `updated_at`, `proof_needed_en`, `apply_link`, and `needs` (eligibility criteria).
+- **Schema:** Each scheme follows the JSON schema defined in `data/schema.md`. Fields include `id`, `title_en`, `title_zh`, `category`, `kind`, `payment`, `audience`, `value_summary_en`, `value_summary_zh`, `deadline`, `source_url`, `updated_at`, `proof_needed_en`, `apply_link`, and `needs` (eligibility criteria). Optional `event_based: true` marks schemes that only apply after a specific event the profile cannot capture.
 
 ### Source URL hygiene
 - Before finalizing any scheme, verify `source_url` points to a specific scheme page (not a root/homepage).
@@ -120,23 +120,25 @@ So: **suffix by scheme nature, roll over by add + retire, never rename.**
 ### Eligibility-gate capture (matching engine) — IMPORTANT
 
 When crawling a scheme, capturing its **eligibility constraints** is as important as
-capturing amounts. The matcher (`app.js: audit()`) filters users ONLY on `needs.*`
+capturing amounts. The matcher (`app.js: auditGates()`) filters users ONLY on `needs.*`
 gates — anything left in prose never filters. For every eligibility condition on the
 source page: if an engine gate exists, encode it in `needs` with the exact figure;
 if none exists, put the rule in `confirm_en` + `confirm_zh` so users can self-check.
 
-**Enforced gates** (filter users — source of truth is `app.js: audit()`):
+**Enforced gates** (filter users — source of truth is `app.js: auditGates()`):
 
 | Gate | Profile field | Meaning |
 |---|---|---|
 | `min_age` / `max_age` | age | age floor / ceiling |
 | `sex` | sex | `female` / male only |
+| `married` | married | married-only tax allowances |
 | `hk_resident` | hk_resident | must be HK resident |
 | `min_hk_years` | hkYears | minimum years living in HK |
 | `districts[]` | district | 18-district allow-list (English values) |
 | `housing_in[]` | housing | `private` / `prh` tenancy |
 | `min_transport_spend` | transportSpend | min monthly transport spend |
-| `requires_disability` / `is_carer` | hasDisability / isCarer | disability / 80+hrs carer |
+| `self_disability` / `household_disability` / `child_disability` | hasDisability / hasDisabledFamily / childSEN | whose disability it is |
+| `is_carer` | isCarer | 80+ hours a month caring |
 | `prh_exact` / `carer_income_exact` | income+assets × household | PRH / carer-allowance income lines |
 | `unemployed` | unemployed | currently unemployed |
 | `toddler` / `has_kids_any` / `has_kids_level` / `single_parent` / `tertiary` / `child_sen` | kids profile | child-related gates |
@@ -164,6 +166,38 @@ blocks): `hk_employee`, `employment_terminated_after_may_2025`,
   Employment itself has no enforced gate (`hk_employee` is documentary only), so the
   employee-only rule lives in `confirms`, and the review warning records the
   consciously accepted gap.
+- **Unknown `needs.*` keys are validation errors, not warnings.** A typo used to be
+  ignored by the matcher, silently over-matching. Add the gate to `app.js` and
+  `catalog-lib.mjs` / `admin.js` before using it in data.
+
+### Ranking fields — `kind`, `payment`, `audience`, `event_based` — IMPORTANT
+
+Every record must declare these; `review.mjs` / `admin.js` reject records without them.
+
+- `kind`: `entitlement` (cash, fee waiver, tax deduction), `service` (free/subsidised
+  service), `opportunity` (competitive/participation scheme, amount is a maximum),
+  `loan` (repayable). Only `entitlement` records enter Top 3, cash totals and the hero
+  monthly count. Services, loans and business money never do.
+- `payment`: `monthly` / `annual` / `one_off` / `varies`. Drives `/mo`, `/yr`, one-off
+  labels and totals. Never infer it from prose — "6 calendar months" once made a
+  one-off $30,000 bonus display as `$30,000/mo`.
+- `audience`: `self` / `household` / `business`. `business` means an employer or merchant
+  receives the money, not the user; it is excluded from personal Top 3 and totals.
+- `event_based: true`: the scheme only applies after a specific event the profile
+  cannot capture (bereavement, work injury, traffic accident, occupational disease).
+  It stays in All with a "special circumstances" note, but is excluded from Top 3,
+  "one step away", the hero count and cash totals. Do not fake an age/income gate to
+  suppress it.
+
+**"One step away" rule:** only entitlement schemes whose every blocker is actionable
+(income, assets, work hours) and whose gap is small — ≤50% over a money line or ≤40
+work hours short. Identity gaps (age, sex, disability, children, district, tenure)
+never appear there: ranking them as "one step" is what told users to acquire a
+disability for an allowance.
+
+**Cash totals:** entitlements only; exclude tax deductions, services, loans,
+opportunities, `varies` and event-based schemes. Resolve `conflicts` so mutually
+exclusive schemes are never summed — keep the best combination.
 
 ---
 
@@ -224,7 +258,7 @@ no browser, no `file://` fetch issues, no localStorage.
 ### Key enforcement points:
 - **Staging-only writes:** Crawlers must write to `data/benefits.staging.json` only. Direct edits to `data/benefits.json` are reserved for hotfixes.
 - **Decisions in git:** `data/review.json` is the single source of review truth. Missing entry = pending.
-- **Validation blocks publish:** same rules as `admin.js` (required fields, id format, category, https URLs, date formats). Warnings (missing `_zh` twins, unknown `needs.*` keys) never block.
+- **Validation blocks publish:** same rules as `admin.js` (required fields including `kind`/`payment`/`audience`, id format, category, enum values, https URLs, date formats, unknown `needs.*` keys). Warnings (missing `_zh` twins, stale `updated_at`) never block.
 - **Legacy fallback:** `admin.html` still works (serve repo root via `python3 -m http.server` — never `file://`), but its decisions live in browser localStorage and are not shared. Prefer `review.mjs`.
 
 ### Commit message format:
@@ -242,10 +276,11 @@ Session: ses_f323f95d7ffeB7j7GZ0JXJfQ0x
 | Diff staging vs live | `node scripts/diff-benefits.mjs` |
 | Diff staging vs live (JSON) | `node scripts/diff-benefits.mjs --json` |
 | Review queue (pending + validation) | `node scripts/review.mjs` |
+| Matcher regression tests | `node scripts/test-matcher.mjs` |
 | Inspect one scheme | `node scripts/review.mjs show <id>` |
 | Approve / reject | `node scripts/review.mjs approve <id...> \| reject <id...> [--by <who>]` |
 | Publish (dry-run first) | `node scripts/publish.mjs --dry-run` then `node scripts/publish.mjs` |
-| Build SEO pages | `SITE_URL=https://warenix.github.io/wellfairy node scripts/build-seo.mjs` |
+| Build SEO pages | `SITE_URL=https://welly.ivy.hk node scripts/build-seo.mjs` |
 | Legacy browser review UI | Serve repo root (`python3 -m http.server`), open `admin.html` — never `file://` |
 
 ---
@@ -259,8 +294,8 @@ When tasked to add a new data source, follow this order:
 3. **Crawl the source URL** using browser UA (`curl -L`); verify 200 response.
 4. **Extract scheme data** per the cadence and fields described in `sources.md` (or create a new section if novel).
 5. **Write to `data/benefits.staging.json`** only — never directly to `data/benefits.json`.
-6. **Run `node scripts/diff-benefits.mjs`** to verify changes.
-7. **Open `admin.html`**, approve the new scheme(s), then **export live**.
-8. **Run `node scripts/build-seo.mjs`** and bump `sw.js` CACHE.
+6. **Run `node scripts/diff-benefits.mjs`** and `node scripts/test-matcher.mjs` to verify changes.
+7. **Get review decisions:** `node scripts/review.mjs present <id>` in Discord, then `approve <id...>` / `reject <id...>`.
+8. **Publish:** `node scripts/publish.mjs --dry-run` then `node scripts/publish.mjs` (rebuilds SEO and bumps `sw.js` CACHE).
 9. **Update `crawl-map.md`**: promote `Pxx` → `Sxx`, mark status `done`, record last crawled date.
 10. **Commit + push** with session ID in commit message.

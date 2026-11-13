@@ -80,11 +80,11 @@
       </div>
       <section class="hero-discovery" aria-labelledby="discoveryLabel">
         <div class="discovery-label"><span id="discoveryLabel" data-i18n="discoveryLabel">你的支援地圖</span><span class="spark" aria-hidden="true">✦</span></div>
-        <div class="discovery-number"><span id="heroCount">0</span><small><span data-i18n="heroUnit">項可能合資格</span></small><span id="heroTotal" class="visually-hidden">0</span></div>
+        <div class="discovery-number"><span id="heroCount">0</span><small><span data-i18n="heroUnit">項每月支援</span></small><span id="heroTotal" class="visually-hidden">0</span></div>
         <div class="discovery-rule"></div>
         <div class="discovery-row"><span>⏰ <span data-i18n="statDeadline">30日內截止</span></span><strong id="statSoon">0</strong></div>
         <div class="discovery-row"><span>★ <span data-i18n="statSaved">已收藏</span></span><strong id="statSave">0</strong><span id="statCat" class="visually-hidden">0</span></div>
-        <div class="discovery-foot"><span class="mini-ring"><span id="ringPct">0%</span></span><span data-i18n="matchRate">目前配對率</span></div>
+        <div class="discovery-foot"><span class="mini-ring"><span id="ringPct">0</span></span><span data-i18n="heroFound">項現金支援</span></div>
       </section>
     </div>
     <div class="profile-strip">
@@ -165,7 +165,7 @@
           <span aria-hidden="true">🔒</span><strong data-i18n="secAlmost">只差一步</strong><span class="sec-count" id="missCountBar"></span><span class="miss-bar-toggle" data-i18n="expand">展開 ▾</span>
         </button>
         <section class="sec sec-miss" id="secMiss" aria-labelledby="secMissH" hidden>
-          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">只差一步</h3><p data-i18n="secMissD">按接近程度排序，符合條件即可申請</p></div><span class="sec-count" id="missCount"></span><button class="linkbtn" id="missToggle" type="button" aria-expanded="false" aria-controls="secMiss" data-i18n="collapse">收起 ▴</button></div>
+          <div class="sec-head"><div class="sec-ico"><svg aria-hidden="true"><use href="art.svg#art-lock"/></svg></div><div class="sec-t"><h3 id="secMissH" data-i18n="secAlmost">只差一步</h3><p data-i18n="secMissD">只顯示可透過入息、資產或工時達到的計劃</p></div><span class="sec-count" id="missCount"></span><button class="linkbtn" id="missToggle" type="button" aria-expanded="false" aria-controls="secMiss" data-i18n="collapse">收起 ▴</button></div>
           <div id="miss" class="grid" role="list" aria-label="差一步 One step away"></div>
         </section>
       </div>
@@ -270,7 +270,8 @@
         <label class="check sub" for="hasElderly"><input type="checkbox" name="hasElderly" id="hasElderly"> <span data-i18n="fElderly">家中有65+長者</span></label>
         <label class="check sub" for="livesMainland"><input type="checkbox" name="livesMainland" id="livesMainland"> <span data-i18n="fLivesMainland">現居廣東／福建</span></label>
         <label class="check sub" for="isCarer"><input type="checkbox" name="isCarer" id="isCarer"> <span data-i18n="fCarer">每月照顧長者/殘疾家人80小時+ Carer 80+hrs/mo</span></label>
-        <label class="check sub" for="hasDisability"><input type="checkbox" name="hasDisability" id="hasDisability"> <span data-i18n="fDisability">重度殘疾 (持醫生證明) Severely disabled</span></label>
+        <label class="check sub" for="hasDisability"><input type="checkbox" name="hasDisability" id="hasDisability"> <span data-i18n="fDisability">你本人有重度殘疾（持醫生證明）You have a severe disability</span></label>
+        <label class="check sub" for="hasDisabledFamily"><input type="checkbox" name="hasDisabledFamily" id="hasDisabledFamily"> <span data-i18n="fDisabledFamily">家中有殘疾成員 A family member has a disability</span></label>
         <label class="check sub" for="smoker"><input type="checkbox" name="smoker" id="smoker"> <span data-i18n="fSmoker">家有吸煙者</span></label>
         </fieldset>
         <fieldset class="fgroup"><legend data-i18n="g_status">領取狀況（只可選一項津貼）</legend>

@@ -29,6 +29,10 @@ Evolving schema — edit freely, app tolerates missing fields.
   "title_en": "...",
   "title_zh": "...",
   "category": "elderly | student | family | health | transport | housing",
+  "kind": "entitlement | service | opportunity | loan",
+  "payment": "monthly | annual | one_off | varies",
+  "audience": "self | household | business",
+  "event_based": true,
   "value_summary_en": "...",
   "value_summary_zh": "...",
   "deadline": "2026-12-31 | null (ongoing)",
@@ -40,6 +44,7 @@ Evolving schema — edit freely, app tolerates missing fields.
     "min_age": 65,
     "max_age": 75,
     "sex": "female",
+    "married": true,
     "hk_resident": true,
     "housing_in": ["private", "prh"],
     "no_property": true,
@@ -48,9 +53,11 @@ Evolving schema — edit freely, app tolerates missing fields.
     "min_transport_spend": 500,
     "requires_work_hours": 144,
     "requires_elderly_in_house": true,
-    "requires_disability": true,
+    "self_disability": true,
+    "household_disability": true,
+    "child_disability": true,
     "afi_max": 89515,
-    "wfa_monthly_check": true,
+    "wfa_exact": true,
     "max_monthly_income_single": 10900,
     "max_monthly_income_couple": 16680,
     "max_assets_single": 415000,
@@ -69,21 +76,44 @@ Evolving schema — edit freely, app tolerates missing fields.
 }
 ```
 
-Matcher logic (`app.js: matches()`):
-- Every key in `needs` must pass. Missing `needs` key = ignored (forward compatible).
+## Field meaning (ranking + display)
+
+- `kind` — what the record is. `entitlement` = cash/waiver/tax benefit for a person or
+  household; `service` = free or subsidised service; `opportunity` = competitive or
+  participation scheme (amount is a maximum, not guaranteed); `loan` = repayable.
+  Only `entitlement` records enter Top 3, cash totals and the hero count. Services,
+  loans and employer/business money never do.
+- `payment` — how it pays. Drives `/mo`, `/yr`, one-off labels and totals. Never infer
+  from prose: a summary mentioning "6 calendar months" is not monthly.
+- `audience` — who receives the money. `business` means the employer/merchant gets it,
+  not the user.
+- `event_based` — optional `true` for schemes that only apply after a specific event the
+  profile cannot capture (bereavement, work injury, traffic accident, occupational
+  disease). They stay in All with a "special circumstances" note, but are excluded
+  from Top 3, "one step away", the hero count and cash totals.
+
+Matcher logic (`app.js: matches()` / `auditGates()`):
+- Every key in `needs` must pass. Unknown keys are validation **errors** (a typo would
+  otherwise be silently ignored and the scheme would over-match).
+- Gates split disability by whose it is: `self_disability`, `household_disability`,
+  `child_disability`. Child schemes may use `child_sen` instead. Never use one shared
+  boolean for all three.
+- `married` gates married-only tax allowances. `is_carer` is the 80+ hours carer test.
 - `deadline` only affects Soon/Expired buckets, never eligibility.
-- `conflicts` is display-only guidance (never filters): `with` = another scheme id,
-  `type` = `exclusive` (choose one) or `sequential` (move in phases). Rendered as a
-  ⚠ warning bar on cards + a linked section in the detail modal. Keep entries
-  symmetric (both sides link each other). Genuine same-person exclusions verified
-  against official sources stay here; conditional cases (e.g. one-carer-two-recipients,
-  scholarship terms that allow co-holding) stay in prose `confirm_*` only.
-- `districts` gates on the 18-district profile value (English values, e.g. `Sai Kung` covers TKO).
-  None of the current 37 schemes are district-gated — all are territory-wide.
-  District-relevant-but-not-gated cases stay in text: CDSP/food-aid apply via district
-  service units, OPRS via school network, respite vacancy by home cluster.
-  Future gates: POA school nets, DHC catchment, district NGO pilots.
-- Unknown future keys are ignored so schema can evolve.
+- `conflicts` is display guidance and also protects totals: `exclusive` schemes are
+  never summed (the basket keeps the best combination); `sequential` phases do not
+  block each other. Rendered as a ⚠ warning bar on cards + a linked section in the
+  detail modal. Keep entries symmetric. Genuine same-person exclusions verified
+  against official sources stay here; conditional cases stay in prose `confirm_*`.
+- "One step away" only lists entitlement schemes whose every blocker is a figure the
+  user can change (income, assets, work hours), and only when the gap is small:
+  ≤50% over a money line or ≤40 work hours short. Identity gaps (age, sex, disability,
+  children, district, tenure) and event-only schemes never appear there.
+- `districts` gates on the 18-district profile value (English values, e.g. `Sai Kung`
+  covers TKO). Most schemes are territory-wide; district-specific application routes
+  stay in `confirm_*`.
+- Run `node scripts/test-matcher.mjs` after changing `app.js` or the data. It checks
+  catalogue validation, amount parsing, persona Top 3s, one-step-away and totals.
 
 ## How to add a scheme (reviewed flow)
 

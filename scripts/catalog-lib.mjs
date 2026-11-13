@@ -10,8 +10,15 @@ export const STAGING_PATH = 'data/benefits.staging.json';
 export const DECISIONS_PATH = 'data/review.json';
 
 export const CATS = ['elderly', 'student', 'family', 'health', 'transport', 'housing'];
-export const KNOWN_NEEDS = new Set(('min_age,max_age,sex,hk_resident,min_hk_years,districts,housing_in,' +
-  'min_transport_spend,requires_disability,is_carer,prh_exact,carer_income_exact,unemployed,' +
+// What the scheme is, so ranking never compares a hotline with a cash allowance.
+export const KINDS = ['entitlement', 'service', 'opportunity', 'loan'];
+// How it pays. Never inferred from prose: "6 calendar months" once made a
+// $30,000 one-off bonus display as $30,000/mo.
+export const PAYMENTS = ['monthly', 'annual', 'one_off', 'varies'];
+// Who receives the money.
+export const AUDIENCES = ['self', 'household', 'business'];
+export const KNOWN_NEEDS = new Set(('min_age,max_age,sex,married,hk_resident,min_hk_years,districts,housing_in,' +
+  'min_transport_spend,self_disability,household_disability,child_disability,is_carer,prh_exact,carer_income_exact,unemployed,' +
   'toddler,lives_mainland,smoker,has_kids_any,single_parent,tertiary,child_sen,carer_context,' +
   'no_property,no_other_allowance,oala_or_waiver,edu_max_rank,requires_elderly_in_house,' +
   'requires_work_hours,afi_max,wfa_exact,max_monthly_income_single,max_monthly_income_couple,' +
@@ -65,11 +72,15 @@ export function fieldDiff(live, staging, prefix = '') {
 // Port of admin.js validate(). Returns { errs, warns }.
 export function validate(b, ids) {
   const errs = [], warns = [];
-  const req = ['id', 'title_en', 'title_zh', 'category', 'value_summary_en', 'value_summary_zh', 'source_url', 'apply_link', 'updated_at', 'why_en', 'why_zh'];
+  const req = ['id', 'title_en', 'title_zh', 'category', 'kind', 'payment', 'audience', 'value_summary_en', 'value_summary_zh', 'source_url', 'apply_link', 'updated_at', 'why_en', 'why_zh'];
   for (const k of req) if (!b[k] || !String(b[k]).trim()) errs.push(`missing ${k}`);
   if (b.id && !/^[a-z0-9][a-z0-9-]*$/.test(b.id)) errs.push(`bad id: ${b.id}`);
   if (b.id && ids.filter((x) => x === b.id).length > 1) errs.push(`duplicate id: ${b.id}`);
   if (b.category && !CATS.includes(b.category)) errs.push(`bad category: ${b.category}`);
+  if (b.kind && !KINDS.includes(b.kind)) errs.push(`bad kind: ${b.kind}`);
+  if (b.payment && !PAYMENTS.includes(b.payment)) errs.push(`bad payment: ${b.payment}`);
+  if (b.audience && !AUDIENCES.includes(b.audience)) errs.push(`bad audience: ${b.audience}`);
+  if (b.event_based != null && typeof b.event_based !== 'boolean') errs.push('event_based must be boolean');
   if (!Array.isArray(b.proof_needed_en)) errs.push('proof_needed_en must be array');
   if (b.needs == null || typeof b.needs !== 'object' || Array.isArray(b.needs)) errs.push('needs must be object');
   for (const u of ['source_url', 'apply_link']) {
@@ -79,11 +90,15 @@ export function validate(b, ids) {
   if (!dOk(b.deadline)) errs.push(`deadline must be YYYY-MM-DD or null: ${b.deadline}`);
   if (b.updated_at && !/^\d{4}-\d{2}-\d{2}$/.test(b.updated_at)) errs.push(`updated_at must be YYYY-MM-DD: ${b.updated_at}`);
   for (const z of ['source_url_zh', 'apply_link_zh', 'proof_needed_zh']) if (b[z] == null) warns.push(`missing twin ${z}`);
+  if (b.updated_at && /^\d{4}-\d{2}-\d{2}$/.test(b.updated_at)) {
+    const days = Math.floor((Date.now() - new Date(b.updated_at + 'T23:59:59+08:00').getTime()) / 86400000);
+    if (Number.isFinite(days) && days > 365) warns.push(`updated_at is ${days} days old — re-verify the source`);
+  }
   if (b.confirm_en && !b.confirm_zh) warns.push('confirm_en without confirm_zh');
   if (b.confirm_zh && !b.confirm_en) warns.push('confirm_zh without confirm_en');
   if (b.needs && typeof b.needs === 'object') {
     for (const k of Object.keys(b.needs)) {
-      if (!KNOWN_NEEDS.has(k)) warns.push(`unknown needs.${k} (matcher ignores it)`);
+      if (!KNOWN_NEEDS.has(k)) errs.push(`unknown needs.${k} (matcher would ignore it — typo or unsupported gate)`);
       else if (UNENFORCED_NEEDS.has(k)) warns.push(`needs.${k} is NOT enforced by the matcher — scheme matches users who fail it; keep only with justification in confirms`);
     }
   }

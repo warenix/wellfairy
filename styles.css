@@ -67,6 +67,8 @@ main{max-width:780px;margin:0 auto;padding:2px 12px}
 .pill.hot{background:#ffe4e6;color:#881337;border-color:#9f1239}
 .pill.info{background:#dcfce7;color:#064e3b;border-color:#047857}
 .pill.fresh{background:#dbeafe;color:#1e40af;border-color:#2563eb}
+.pill.kind{background:#fff7ed;color:#9a3412}
+.pill.kind.event{background:#fef2f2;color:#991b1b}
 .why{font-size:13px;color:var(--ink);background:#f6f4fd;border-radius:10px;padding:8px;margin-top:8px;border:1px dashed var(--line);overflow-wrap:anywhere;word-break:break-word}
 .srclink{word-break:break-all;overflow-wrap:anywhere;color:#4c1d95;display:inline-block;max-width:100%}
 .row{display:flex;gap:8px;margin-top:10px}

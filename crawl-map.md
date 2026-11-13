@@ -20,57 +20,57 @@
 
 | ID | Source | Schemes in catalog | Status | Last crawled |
 |---|---|---|---|---|
-| S01 | Elderly Health Care Voucher (hcv.gov.hk) | `hcv-2026`, `hcv-reward-2026` | done | 2026-10-09
-| S02 | gov.hk service hubs (elderly/employment) | `senior-card`, `ccsv`, `ascp`, `yetp` (source only) | done | 2026-10-09
-| S03 | $2 Scheme — Transport Dept | `fare-2dollar` (+`fare-2-disabled` cross-check) | done | 2026-10-09
-| S04 | WFSFAA pre-primary + WFA + CEF + tertiary aid | `kcfrs-2026`, `grant-kg-2026`, `ta-sts-sia`, `wfa`, `cef-25k`, `nmtss-35120`, `tsfs`, `fasp`, `dae-reimburse`, `faeaec-evening`, `dse-fee-remission` | done | 2026-10-09
-| S05 | SWD core (CSSA/SSA/OALA mini-site) | `cssa-note`, `oaa-2026`, `da-note` (+ pilots in S25/S28/S35) | done | 2026-10-09
-| S06 | 1823 FAQs (OALA + OAA) | `oala-2026`, `oaa-2026`, `da-note` | done | 2026-10-09
-| S07 | SWD carer + respite cluster | `carer-elderly-3000`, `carer-disabled-3000`, `carer-hotline`, `respite-day`, `respite-residential` | done | 2026-10-09
-| S08 | SWD rehab/preschool + family support | `tsp-waitlist`, `oprs`, `food-assist-8wk`, `special-needs-trust` | done | 2026-10-09
-| S09 | Public Transport Fare Subsidy | `ptfss` | done | 2026-10-09
-| S10 | Housing Authority (HOS sales + eligibility) | `hos-white`, `hos-green` | done | 2026-10-09
-| S11 | ERB + Labour (training/allowances) | `erb-allowance`, `yetp` | done | 2026-10-09
-| S12 | Cancer screening (DH/CHP/FHS/UCN) | `crc-screen`, `cervical-screen`, `breast-pilot2`, `mchc-child-health`, `hpv-catchup-2026` | done | 2026-10-09
-| S13 | Community dental (CDSP) | `cdsp-dental` | done | 2026-10-09
-| S14 | HA fee waiver (press release) | `ha-fee-waiver` | done | 2026-10-09
-| S15 | Rehabus | `rehabus-pass` | done | 2026-10-09
-| S16 | EDB Primary One Admission | `poa-2027` | done | 2026-10-09
-| S17 | HA CCF Medical Assistance | `ccf-medical` | done | 2026-10-09
-| S18 | Community Chest Medical Assistance Fund | `maf-cataract`, `maf-cochlear`, `maf-macular` | done | 2026-10-09
-| S19 | EDB After-school Learning & Support | `salsp-afterschool` | done | 2026-10-09
-| S20 | Labour EPEM (40+ employment) | `epem-40plus` | done | 2026-10-09
-| S21 | Labour Re-employment Allowance Pilot | `rea-pilot` (ends ~Jul 2027) | done | 2026-10-09
-| S22 | EDB K1 Admission + RC/AP | `k1-rc-ap` | done | 2026-10-09
-| S23 | DH Student Health + School Dental | `student-health-service`, `school-dental` | done | 2026-10-09
-| S24 | Primary healthcare (CDCC + DHC) | `cdcc-cocare`, `dhc-member`, `hepb-cocare-2026` | done | 2026-10-09
-| S25 | CCF pilots + school-based care | `cssa-wfa-45k`, `ccf-sba-care`, `lph-special-allowance` | done | 2026-10-09
-| S26 | Labour youth + disability employment | `gba-yes-2026`, `wops-60k` | done | 2026-10-09
-| S27 | Health / transport / family catch-ups | `hpv-catchup-2026`, `mh-18111`, `mtr-city-saver`, `newborn-bonus-20k`, `sssdp-2627` | done | 2026-10-09
-| S28 | CCF community pilots | `ccf-clr`, `ccf-stepping-stone`, `ccf-gd-rche-5000` | done | 2026-10-09
-| S29 | Health newcomers | `hepb-cocare-2026`, `oohp-preschool-2026`, `cmhk-subsidised` | done | 2026-10-09
-| S30 | Housing / tax / commuter gaps | `prh-ras`, `letting-wf-pilot-3000`, `flat-for-flat-elderly`, `ird-hli`, `ird-tvc-qdap-60k`, `ird-erce-110k`, `ird-pda-75k`, `mtr-monthly-pass` | done | 2026-10-09
-| S31 | Student loans + scholarships + EM employment | `nls-loan-2627`, `enls-2627`, `rdep-em`, `hksar-gov-scholarship`, `spss-ops` | done | 2026-10-09
-| S32 | Health depth (dental/WWS/IVF/fees) | `odcp-elderly`, `wws-women`, `ha-ivf-public`, `ird-ar-100k`, `ha-fmc-cap` | done | 2026-10-09
-| S33 | Commuter + Budget one-offs + legal aid | `kmb-monthly-834`, `mtr-early-bird-25`, `mtr-fare-saver-2`, `budget-tax-3000`, `budget-rates-500`, `lad-olas` | done | 2026-10-09
-| S34 | Youth / elderly learning / EM integration | `strive-rise-teen`, `youth-hostel-yhs`, `elder-academy`, `smhss-student-mental`, `em-support-centres` | done | 2026-10-09
-| S35 | Safety net (victims/relief/housing) | `tava-2026`, `cleic-2026`, `erf-relief`, `compassionate-rehousing`, `bmgsno-80k`, `efas-2026` | done | 2026-10-09
-| S36 | Tax allowances + construction training + hygiene | `ird-basic-allowance`, `ird-married-allowance`, `ird-sibling-allowance`, `hkic-skill-training`, `qf-rpl-reimburse`, `dh-social-hygiene-free` | done | 2026-10-09
-| S37 | Foster care / dementia / free legal advice | `foster-parent`, `dcss-dementia`, `free-legal-advice` | done | 2026-10-09
-| S38 | LWB sacrifice-family fund | `fahs-save-2026` | done | 2026-10-09
-| S39 | Portable CSSA (Guangdong/Fujian) | `pcssa-2026` | done | 2026-10-09
-| S40 | Scholarships (HKSES + GSF streams + WFSFAA funds) | `hkses-2627`, `gsf-tds-2026`, `gsf-roa-2026`, `gsf-ema-2026`, `gsf-belt-road-2026`, `seym-scholarship-2026`, `spet-scholarship-2026`, `esf-education-scholarship-2026`, `srb-postgrad-2026`, `agri-scholarship-2026`, `marine-fish-scholarship-2026` | done | 2026-10-09
-| S41 | SPSS streams + FTSS | `spss-bpa`, `spss-eds`, `spss-tds`, `spss-roa`, `ftss-2026` | done | 2026-10-09
-| S42 | RGC PhD Fellowship + HA Samaritan Fund | `hkpfs-2728`, `samaritan-fund-2026` | done | 2026-10-09
-| S43 | IRD child-allowance top-up (update only) | `ird-child-allowance` (updated: $160k 2nd+ rule) | done | 2026-10-09
-| S44 | DH community health batch | `hkcip-vaccine`, `tb-chest-free`, `ehc-elderly-check`, `cas-child-assess`, `quit-smoking-1833` | done | 2026-10-09
-| S45 | Education batch (KG/DSS/RPg) | `kg-edu-scheme`, `dss-fee-remission`, `ugc-pgs-2026`, `tuition-waiver-rpg` | done | 2026-10-09
-| S46 | Care/housing/legal/tax batch | `rcsv-elderly`, `navigation-youth-care`, `bd-safety-loan`, `hril-50k`, `slas-topup`, `reverse-mortgage-prmp`, `ird-selfedu-100k`, `vhis-8k`, `ird-charity-35`, `ird-mpf-18k`, `whs-outbound` | done | 2026-10-09
-| S47 | Work & skills DFS | `stem-internship-11790`, `cic-itcts-10200`, `ld-work-trial-9600`, `swd-set-2024`, `gba-youth-startup-600k` | done | 2026-10-09
-| S48 | Housing/property DFS | `fit-solar-4kwh`, `wsd-wspss-310k`, `had-bmpass`, `hkhs-senior-residences`, `hkhs-elderly-flats` | done | 2026-10-09
-| S49 | Health/legal/money/misc DFS | `lcsd-concession`, `ha-cataract-ppp`, `smartsilver-ict`, `odcb-deafness`, `pcfb-pneumo`, `ird-rent-100k`, `imm-1868-assist`, `cssa-burial-grant`, `afcd-fish-loan`, `afcd-farm-loan` | done | 2026-10-09
-| S50 | Open-lead closes (I&T/HDPPP/RMP) | `innotech-scholarship-150k`, `ha-hdppp-dialysis`, `reverse-mortgage-property` | done | 2026-10-09
-| S51 | Community Pharmacy Programme + Drug Formulary (PHC Commission/HA) | `cpp-community-pharmacy` (staged 2026-09-25, pending review) | done | 2026-10-09
+| S01 | Elderly Health Care Voucher (hcv.gov.hk) | `hcv-2026`, `hcv-reward-2026` | in_progress (B1) | 2026-10-09
+| S02 | gov.hk service hubs (elderly/employment) | `senior-card`, `ccsv`, `ascp`, `yetp` (source only) | in_progress (B1) | 2026-10-09
+| S03 | $2 Scheme — Transport Dept | `fare-2dollar` (+`fare-2-disabled` cross-check) | in_progress (B1) | 2026-10-09
+| S04 | WFSFAA pre-primary + WFA + CEF + tertiary aid | `kcfrs-2026`, `grant-kg-2026`, `ta-sts-sia`, `wfa`, `cef-25k`, `nmtss-35120`, `tsfs`, `fasp`, `dae-reimburse`, `faeaec-evening`, `dse-fee-remission` | in_progress (B1) | 2026-10-09
+| S05 | SWD core (CSSA/SSA/OALA mini-site) | `cssa-note`, `oaa-2026`, `da-note` (+ pilots in S25/S28/S35) | in_progress (B1) | 2026-10-09
+| S06 | 1823 FAQs (OALA + OAA) | `oala-2026`, `oaa-2026`, `da-note` | in_progress (B1) | 2026-10-09
+| S07 | SWD carer + respite cluster | `carer-elderly-3000`, `carer-disabled-3000`, `carer-hotline`, `respite-day`, `respite-residential` | in_progress (B2) | 2026-10-09
+| S08 | SWD rehab/preschool + family support | `tsp-waitlist`, `oprs`, `food-assist-8wk`, `special-needs-trust` | in_progress (B2) | 2026-10-09
+| S09 | Public Transport Fare Subsidy | `ptfss` | in_progress (B2) | 2026-10-09
+| S10 | Housing Authority (HOS sales + eligibility) | `hos-white`, `hos-green` | in_progress (B2) | 2026-10-09
+| S11 | ERB + Labour (training/allowances) | `erb-allowance`, `yetp` | in_progress (B2) | 2026-10-09
+| S12 | Cancer screening (DH/CHP/FHS/UCN) | `crc-screen`, `cervical-screen`, `breast-pilot2`, `mchc-child-health`, `hpv-catchup-2026` | in_progress (B2) | 2026-10-09
+| S13 | Community dental (CDSP) | `cdsp-dental` | in_progress (B3) | 2026-10-09
+| S14 | HA fee waiver (press release) | `ha-fee-waiver` | in_progress (B3) | 2026-10-09
+| S15 | Rehabus | `rehabus-pass` | in_progress (B3) | 2026-10-09
+| S16 | EDB Primary One Admission | `poa-2027` | in_progress (B3) | 2026-10-09
+| S17 | HA CCF Medical Assistance | `ccf-medical` | in_progress (B3) | 2026-10-09
+| S18 | Community Chest Medical Assistance Fund | `maf-cataract`, `maf-cochlear`, `maf-macular` | in_progress (B3) | 2026-10-09
+| S19 | EDB After-school Learning & Support | `salsp-afterschool` | in_progress (B3) | 2026-10-09
+| S20 | Labour EPEM (40+ employment) | `epem-40plus` | in_progress (B3) | 2026-10-09
+| S21 | Labour Re-employment Allowance Pilot | `rea-pilot` (ends ~Jul 2027) | in_progress (B3) | 2026-10-09
+| S22 | EDB K1 Admission + RC/AP | `k1-rc-ap` | in_progress (B3) | 2026-10-09
+| S23 | DH Student Health + School Dental | `student-health-service`, `school-dental` | in_progress (B4) | 2026-10-09
+| S24 | Primary healthcare (CDCC + DHC) | `cdcc-cocare`, `dhc-member`, `hepb-cocare-2026` | in_progress (B4) | 2026-10-09
+| S25 | CCF pilots + school-based care | `cssa-wfa-45k`, `ccf-sba-care`, `lph-special-allowance` | in_progress (B4) | 2026-10-09
+| S26 | Labour youth + disability employment | `gba-yes-2026`, `wops-60k` | in_progress (B4) | 2026-10-09
+| S27 | Health / transport / family catch-ups | `hpv-catchup-2026`, `mh-18111`, `mtr-city-saver`, `newborn-bonus-20k`, `sssdp-2627` | in_progress (B4) | 2026-10-09
+| S28 | CCF community pilots | `ccf-clr`, `ccf-stepping-stone`, `ccf-gd-rche-5000` | in_progress (B4) | 2026-10-09
+| S29 | Health newcomers | `hepb-cocare-2026`, `oohp-preschool-2026`, `cmhk-subsidised` | in_progress (B4) | 2026-10-09
+| S30 | Housing / tax / commuter gaps | `prh-ras`, `letting-wf-pilot-3000`, `flat-for-flat-elderly`, `ird-hli`, `ird-tvc-qdap-60k`, `ird-erce-110k`, `ird-pda-75k`, `mtr-monthly-pass` | in_progress (B4) | 2026-10-09
+| S31 | Student loans + scholarships + EM employment | `nls-loan-2627`, `enls-2627`, `rdep-em`, `hksar-gov-scholarship`, `spss-ops` | in_progress (B5) | 2026-10-09
+| S32 | Health depth (dental/WWS/IVF/fees) | `odcp-elderly`, `wws-women`, `ha-ivf-public`, `ird-ar-100k`, `ha-fmc-cap` | in_progress (B5) | 2026-10-09
+| S33 | Commuter + Budget one-offs + legal aid | `kmb-monthly-834`, `mtr-early-bird-25`, `mtr-fare-saver-2`, `budget-tax-3000`, `budget-rates-500`, `lad-olas` | in_progress (B5) | 2026-10-09
+| S34 | Youth / elderly learning / EM integration | `strive-rise-teen`, `youth-hostel-yhs`, `elder-academy`, `smhss-student-mental`, `em-support-centres` | in_progress (B5) | 2026-10-09
+| S35 | Safety net (victims/relief/housing) | `tava-2026`, `cleic-2026`, `erf-relief`, `compassionate-rehousing`, `bmgsno-80k`, `efas-2026` | in_progress (B5) | 2026-10-09
+| S36 | Tax allowances + construction training + hygiene | `ird-basic-allowance`, `ird-married-allowance`, `ird-sibling-allowance`, `hkic-skill-training`, `qf-rpl-reimburse`, `dh-social-hygiene-free` | in_progress (B6) | 2026-10-09
+| S37 | Foster care / dementia / free legal advice | `foster-parent`, `dcss-dementia`, `free-legal-advice` | in_progress (B6) | 2026-10-09
+| S38 | LWB sacrifice-family fund | `fahs-save-2026` | in_progress (B6) | 2026-10-09
+| S39 | Portable CSSA (Guangdong/Fujian) | `pcssa-2026` | in_progress (B6) | 2026-10-09
+| S40 | Scholarships (HKSES + GSF streams + WFSFAA funds) | `hkses-2627`, `gsf-tds-2026`, `gsf-roa-2026`, `gsf-ema-2026`, `gsf-belt-road-2026`, `seym-scholarship-2026`, `spet-scholarship-2026`, `esf-education-scholarship-2026`, `srb-postgrad-2026`, `agri-scholarship-2026`, `marine-fish-scholarship-2026` | in_progress (B6) | 2026-10-09
+| S41 | SPSS streams + FTSS | `spss-bpa`, `spss-eds`, `spss-tds`, `spss-roa`, `ftss-2026` | in_progress (B6) | 2026-10-09
+| S42 | RGC PhD Fellowship + HA Samaritan Fund | `hkpfs-2728`, `samaritan-fund-2026` | in_progress (B7) | 2026-10-09
+| S43 | IRD child-allowance top-up (update only) | `ird-child-allowance` (updated: $160k 2nd+ rule) | in_progress (B7) | 2026-10-09
+| S44 | DH community health batch | `hkcip-vaccine`, `tb-chest-free`, `ehc-elderly-check`, `cas-child-assess`, `quit-smoking-1833` | in_progress (B7) | 2026-10-09
+| S45 | Education batch (KG/DSS/RPg) | `kg-edu-scheme`, `dss-fee-remission`, `ugc-pgs-2026`, `tuition-waiver-rpg` | in_progress (B7) | 2026-10-09
+| S46 | Care/housing/legal/tax batch | `rcsv-elderly`, `navigation-youth-care`, `bd-safety-loan`, `hril-50k`, `slas-topup`, `reverse-mortgage-prmp`, `ird-selfedu-100k`, `vhis-8k`, `ird-charity-35`, `ird-mpf-18k`, `whs-outbound` | in_progress (B7) | 2026-10-09
+| S47 | Work & skills DFS | `stem-internship-11790`, `cic-itcts-10200`, `ld-work-trial-9600`, `swd-set-2024`, `gba-youth-startup-600k` | in_progress (B8) | 2026-10-09
+| S48 | Housing/property DFS | `fit-solar-4kwh`, `wsd-wspss-310k`, `had-bmpass`, `hkhs-senior-residences`, `hkhs-elderly-flats` | in_progress (B8) | 2026-10-09
+| S49 | Health/legal/money/misc DFS | `lcsd-concession`, `ha-cataract-ppp`, `smartsilver-ict`, `odcb-deafness`, `pcfb-pneumo`, `ird-rent-100k`, `imm-1868-assist`, `cssa-burial-grant`, `afcd-fish-loan`, `afcd-farm-loan` | in_progress (B8) | 2026-10-09
+| S50 | Open-lead closes (I&T/HDPPP/RMP) | `innotech-scholarship-150k`, `ha-hdppp-dialysis`, `reverse-mortgage-property` | in_progress (B8) | 2026-10-09
+| S51 | Community Pharmacy Programme + Drug Formulary (PHC Commission/HA) | `cpp-community-pharmacy` (staged 2026-09-25, pending review) | in_progress (B8) | 2026-10-09
 
 Status values: `pending` → `in_progress (session)` → `done` → re-crawl per cadence in `sources.md`.
 

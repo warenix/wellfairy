@@ -122,6 +122,7 @@ if (cmd === 'status' || args.length === 0) {
   lines.push(`## ${it.id} — ${it.status.toUpperCase()} (decision: ${it.decision})`);
   lines.push(`Title: ${s.title_en} / ${s.title_zh}`);
   lines.push(`Category: ${s.category} · deadline: ${s.deadline ?? 'null (ongoing)'} · updated: ${s.updated_at}`);
+  lines.push(`Ranking: kind=${s.kind ?? 'MISSING'} · payment=${s.payment ?? 'MISSING'} · audience=${s.audience ?? 'MISSING'}${s.event_based ? ' · event_based=true' : ''}`);
   lines.push(`Needs gates: ${JSON.stringify(s.needs)}`);
   lines.push('');
   lines.push(`Value EN: ${s.value_summary_en}`);

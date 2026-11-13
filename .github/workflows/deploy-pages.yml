@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Matcher regression tests (personas, gates, amounts, totals)
+        run: node scripts/test-matcher.mjs
+
       - name: Build SEO pages (sitemap, per-scheme pages, llms.txt)
         run: node scripts/build-seo.mjs
 

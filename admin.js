@@ -7,8 +7,11 @@
 const LS_DEC = 'hkbm_admin_decisions_v1';
 const LS_EDIT = 'hkbm_admin_edits_v1';
 const CATS = ['elderly', 'student', 'family', 'health', 'transport', 'housing'];
-const KNOWN_NEEDS = new Set(('min_age,max_age,sex,hk_resident,min_hk_years,districts,housing_in,' +
-  'min_transport_spend,requires_disability,is_carer,prh_exact,carer_income_exact,unemployed,' +
+const KINDS = ['entitlement', 'service', 'opportunity', 'loan'];
+const PAYMENTS = ['monthly', 'annual', 'one_off', 'varies'];
+const AUDIENCES = ['self', 'household', 'business'];
+const KNOWN_NEEDS = new Set(('min_age,max_age,sex,married,hk_resident,min_hk_years,districts,housing_in,' +
+  'min_transport_spend,self_disability,household_disability,child_disability,is_carer,prh_exact,carer_income_exact,unemployed,' +
   'toddler,lives_mainland,smoker,has_kids_any,single_parent,tertiary,child_sen,carer_context,' +
   'no_property,no_other_allowance,oala_or_waiver,edu_max_rank,requires_elderly_in_house,' +
   'requires_work_hours,afi_max,wfa_exact,max_monthly_income_single,max_monthly_income_couple,' +
@@ -50,11 +53,15 @@ function fieldDiff(live, staging, prefix = '') {
 
 function validate(b, ids) {
   const errs = [], warns = [];
-  const req = ['id', 'title_en', 'title_zh', 'category', 'value_summary_en', 'value_summary_zh', 'source_url', 'apply_link', 'updated_at', 'why_en', 'why_zh'];
+  const req = ['id', 'title_en', 'title_zh', 'category', 'kind', 'payment', 'audience', 'value_summary_en', 'value_summary_zh', 'source_url', 'apply_link', 'updated_at', 'why_en', 'why_zh'];
   for (const k of req) if (!b[k] || !String(b[k]).trim()) errs.push(`缺少必填 ${k} missing`);
   if (b.id && !/^[a-z0-9][a-z0-9-]*$/.test(b.id)) errs.push(`id 格式非法 bad id: ${b.id}`);
   if (b.id && ids.filter((x) => x === b.id).length > 1) errs.push(`id 重複 duplicate: ${b.id}`);
   if (b.category && !CATS.includes(b.category)) errs.push(`category 非法 bad category: ${b.category}`);
+  if (b.kind && !KINDS.includes(b.kind)) errs.push(`kind 非法 bad kind: ${b.kind}`);
+  if (b.payment && !PAYMENTS.includes(b.payment)) errs.push(`payment 非法 bad payment: ${b.payment}`);
+  if (b.audience && !AUDIENCES.includes(b.audience)) errs.push(`audience 非法 bad audience: ${b.audience}`);
+  if (b.event_based != null && typeof b.event_based !== 'boolean') errs.push('event_based 必須是 boolean');
   if (!Array.isArray(b.proof_needed_en)) errs.push('proof_needed_en 必須是陣列 must be array');
   if (b.needs == null || typeof b.needs !== 'object' || Array.isArray(b.needs)) errs.push('needs 必須是物件 must be object');
   for (const u of ['source_url', 'apply_link']) {
@@ -67,7 +74,7 @@ function validate(b, ids) {
   if (b.confirm_en && !b.confirm_zh) warns.push('有 confirm_en 但缺 confirm_zh');
   if (b.confirm_zh && !b.confirm_en) warns.push('有 confirm_zh 但缺 confirm_en');
   if (b.needs && typeof b.needs === 'object') {
-    for (const k of Object.keys(b.needs)) if (!KNOWN_NEEDS.has(k)) warns.push(`未知 needs.${k}（matcher 會忽略，確認是否拼錯 unknown key）`);
+    for (const k of Object.keys(b.needs)) if (!KNOWN_NEEDS.has(k)) errs.push(`未知 needs.${k}（matcher 會忽略，必須修正 unknown key）`);
   }
   return { errs, warns };
 }
