@@ -186,8 +186,8 @@
   },
   "budget-tax-3000": {
     "decision": "approved",
-    "by": "ses_ee9b92e8dffegkt5qUOMaghRKx",
-    "at": "2026-10-07"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "carer-elderly-3000": {
     "decision": "approved",
@@ -201,8 +201,8 @@
   },
   "cef-25k": {
     "decision": "approved",
-    "by": "ses_ee9b92e8dffegkt5qUOMaghRKx",
-    "at": "2026-10-07"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "cic-itcts-10200": {
     "decision": "approved",
@@ -301,8 +301,8 @@
   },
   "hos-white": {
     "decision": "approved",
-    "by": "full-recrawl-2026-10-09 (user pre-authorized publish-if-valid)",
-    "at": "2026-10-09"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "hril-50k": {
     "decision": "approved",
@@ -321,8 +321,8 @@
   },
   "ird-basic-allowance": {
     "decision": "approved",
-    "by": "ses_ee9b92e8dffegkt5qUOMaghRKx",
-    "at": "2026-10-07"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "ird-child-allowance": {
     "decision": "approved",
@@ -346,8 +346,8 @@
   },
   "ird-married-allowance": {
     "decision": "approved",
-    "by": "ses_ee9b92e8dffegkt5qUOMaghRKx",
-    "at": "2026-10-07"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "ird-mpf-18k": {
     "decision": "approved",
@@ -416,8 +416,8 @@
   },
   "reverse-mortgage-property": {
     "decision": "approved",
-    "by": "ses_ee9b92e8dffegkt5qUOMaghRKx",
-    "at": "2026-10-07"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "slas-topup": {
     "decision": "approved",
@@ -531,8 +531,8 @@
   },
   "da-note": {
     "decision": "approved",
-    "by": "warenix",
-    "at": "2026-10-08"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "dae-reimburse": {
     "decision": "approved",
@@ -546,8 +546,8 @@
   },
   "fare-2dollar": {
     "decision": "approved",
-    "by": "warenix",
-    "at": "2026-10-08"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "fasp": {
     "decision": "approved",
@@ -651,8 +651,8 @@
   },
   "wfa": {
     "decision": "approved",
-    "by": "warenix",
-    "at": "2026-10-08"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "cahk-food-aid": {
     "decision": "approved",
@@ -756,8 +756,8 @@
   },
   "poa-2027": {
     "decision": "approved",
-    "by": "full-recrawl-2026-10-09 (user pre-authorized publish-if-valid)",
-    "at": "2026-10-09"
+    "by": "manual",
+    "at": "2026-11-20"
   },
   "school-dental": {
     "decision": "approved",
@@ -793,5 +793,25 @@
     "decision": "approved",
     "by": "full-recrawl-2026-10-09 (user pre-authorized publish-if-valid)",
     "at": "2026-10-09"
+  },
+  "budget-rates-500": {
+    "decision": "approved",
+    "by": "manual",
+    "at": "2026-11-20"
+  },
+  "ha-fee-waiver": {
+    "decision": "approved",
+    "by": "manual",
+    "at": "2026-11-20"
+  },
+  "hcv-2026": {
+    "decision": "approved",
+    "by": "manual",
+    "at": "2026-11-20"
+  },
+  "hos-green": {
+    "decision": "approved",
+    "by": "manual",
+    "at": "2026-11-20"
   }
 }
