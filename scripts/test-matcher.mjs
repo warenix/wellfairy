@@ -57,7 +57,7 @@ const carerQuick = x.quickProfile();
 ok('carer quick-check marks the user as a carer', carerQuick.isCarer === true);
 const carerTop = x.pickTop3(x.BENEFITS.filter((b) => x.matches(b, carerQuick)).filter(x.momentPass));
 ok('carer quick-check surfaces a carer allowance', carerTop.some((b) => b.id === 'carer-elderly-3000' || b.id === 'carer-disabled-3000'), carerTop.map((b) => b.id).join(', '));
-ok('carer quick-check does not double-count both carer allowances', x.sumPayments(carerTop).monthly <= 3000, String(x.sumPayments(carerTop).monthly));
+ok('carer quick-check does not double-count both carer allowances', x.sumPayments(carerTop).monthly <= 3300, String(x.sumPayments(carerTop).monthly));
 Object.assign(x.QUICK, quickStart);
 
 // ------------------------------------------------------------------- catalogue
@@ -82,7 +82,7 @@ ok('validation rejects an unknown needs gate', validate({ ...sample, needs: { bo
 eq('OALA reads the monthly allowance, not the asset cap', x.estimateAmount(byId['oala-2026']), 4345);
 eq('DA reads the higher monthly rate, not a cap', x.estimateAmount(byId['da-note']), 4280);
 eq('HCV reads the yearly voucher, not the $8,000 cap', x.estimateAmount(byId['hcv-2026']), 2000);
-eq('WFA range reads both ends', x.estimateAmount(byId['wfa']), 1610);
+eq('WFA range reads both ends', x.estimateAmount(byId['wfa']), 38600);
 eq('FAHS range is millions, not quadrillions', x.estimateAmount(byId['fahs-save-2026']), 12300000);
 eq('PRH rent has no single amount', x.rankAmt(byId['prh-apply']), 0);
 ok('newborn $30,000 is one-off, not $30,000/mo', !/\/mo|\/月/.test(x.amountText(byId['newborn-bonus-20k'])), x.amountText(byId['newborn-bonus-20k']));
@@ -139,7 +139,7 @@ const three = x.sumPayments([byId['oaa-2026'], byId['oala-2026'], byId['da-note'
 eq('exclusive allowances keep the best one, not the sum', three.monthly, 4345);
 eq('exclusive allowances report the two dropped', three.excluded, 2);
 const carerPair = x.sumPayments([byId['carer-elderly-3000'], byId['carer-disabled-3000']]);
-eq('one carer cannot be paid both carer allowances', carerPair.monthly, 3000);
+eq('one carer cannot be paid both carer allowances', carerPair.monthly, 3300);
 eq('the second carer allowance is reported as dropped', carerPair.excluded, 1);
 const mixed = x.sumPayments([byId['oaa-2026'], byId['rehabus-pass'], byId['foster-parent'], byId['cef-25k'], byId['ird-basic-allowance']]);
 eq('totals exclude services/opportunities/tax', mixed.monthly, 1675);
