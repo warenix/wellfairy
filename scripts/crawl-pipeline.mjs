@@ -52,7 +52,6 @@ const FLAGS = {
 // This mirrors sources.md structure but in machine-readable form.
 // Each source has: id, name, urls (array of {en, zh, type}), schemes (expected ids), cadence, extractor hint.
 const SOURCES = [
-  // S01–S51 from sources.md (abridged for pipeline; full details in sources.md)
   { id: 'S01', name: 'Elderly Health Care Voucher', urls: [{en: 'https://www.hcv.gov.hk/en/hcvs/background.html', zh: 'https://www.hcv.gov.hk/tc/hcvs/background.html', type: 'landing'}], schemes: ['hcv-2026', 'hcv-reward-2026'], cadence: 'yearly' },
   { id: 'S02', name: 'gov.hk service hubs', urls: [{en: 'https://www.gov.hk/en/residents/housing/socialservices/', zh: 'https://www.gov.hk/tc/residents/housing/socialservices/', type: 'hub'}], schemes: ['senior-card', 'ccsv', 'ascp', 'yetp'], cadence: 'yearly' },
   { id: 'S03', name: '$2 Scheme — Transport Dept', urls: [{en: 'https://www.td.gov.hk/en/gov_public_transport_fare_concession/index.html', zh: 'https://www.td.gov.hk/tc/gov_public_transport_fare_concession/index.html', type: 'landing'}], schemes: ['fare-2dollar'], cadence: 'on-reform' },
@@ -71,25 +70,211 @@ const SOURCES = [
     {en: 'https://www.1823.gov.hk/en/faq/what-are-the-eligibility-criteria-of-old-age-allowance-what-is-the-amount-of-assistance-payable.html', zh: 'https://www.1823.gov.hk/tc/faq/what-are-the-eligibility-criteria-of-old-age-allowance-what-is-the-amount-of-assistance-payable.html', type: 'oaa'},
     {en: 'https://www.1823.gov.hk/en/faq/what-are-the-eligibility-criteria-of-disability-allowance-what-is-the-amount-of-assistance-payable.html', zh: 'https://www.1823.gov.hk/tc/faq/what-are-the-eligibility-criteria-of-disability-allowance-what-is-the-amount-of-assistance-payable.html', type: 'da'},
   ], schemes: ['oala-2026', 'oaa-2026', 'da-note'], cadence: 'yearly (Feb)' },
+  { id: 'S07', name: 'SWD carer + respite cluster', urls: [
+    {en: 'https://www.swd.gov.hk/en/elderly/cat_careersupp/allowanceforcarersoftheelderly/', zh: 'https://www.swd.gov.hk/tc/elderly/cat_careersupp/allowanceforcarersoftheelderly/', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/rehab/cat_supportcom/scpd/alcpd/', zh: 'https://www.swd.gov.hk/tc/rehab/cat_supportcom/scpd/alcpd/', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/rehab/cat_supportcom/scpd/dhcs/', zh: 'https://www.swd.gov.hk/tc/rehab/cat_supportcom/scpd/dhcs/', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/elderly/cat_careersupp/drrr/dayrespite', zh: 'https://www.swd.gov.hk/tc/elderly/cat_careersupp/drrr/dayrespite', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/elderly/cat_careersupp/drrr/respiteser', zh: 'https://www.swd.gov.hk/tc/elderly/cat_careersupp/drrr/respiteser', type: 'landing'},
+  ], schemes: ['carer-elderly-3000', 'carer-disabled-3000', 'carer-hotline', 'respite-day', 'respite-residential'], cadence: 'half-yearly' },
+  { id: 'S08', name: 'SWD rehab/preschool + family support', urls: [
+    {en: 'https://www.swd.gov.hk/en/rehab/cat_serpresch/tsp/', zh: 'https://www.swd.gov.hk/tc/rehab/cat_serpresch/tsp/', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/oprs/index_en.htm', zh: 'https://www.swd.gov.hk/tc/oprs/index_tc.htm', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/family/cat_support/foodassist/', zh: 'https://www.swd.gov.hk/tc/family/cat_support/foodassist/', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/rehab/cat_fundtrustfinaid/snto/', zh: 'https://www.swd.gov.hk/tc/rehab/cat_fundtrustfinaid/snto/', type: 'landing'},
+  ], schemes: ['tsp-waitlist', 'oprs', 'food-assist-8wk', 'special-needs-trust'], cadence: 'half-yearly' },
   { id: 'S09', name: 'Public Transport Fare Subsidy', urls: [{en: 'https://www.ptfss.gov.hk/en-main.html', zh: 'https://www.ptfss.gov.hk/tc-main.html', type: 'landing'}], schemes: ['ptfss'], cadence: 'on-budget' },
   { id: 'S10', name: 'Housing Authority (HOS sales)', urls: [{en: 'https://hos.housingauthority.gov.hk/mini-site/hos2025/en/general-information.html', zh: 'https://hos.housingauthority.gov.hk/mini-site/hos2025/tc/general-information.html', type: 'hos2025'}], schemes: ['hos-white', 'hos-green'], cadence: 'per-exercise' },
+  { id: 'S11', name: 'ERB + Labour', urls: [
+    {en: 'https://www.erb.org/en/about-erb/faqs', zh: 'https://www.erb.org/tc/about-erb/faqs', type: 'landing'},
+    {en: 'https://www.gov.hk/en/residents/employment/retraining/', zh: 'https://www.gov.hk/tc/residents/employment/retraining/', type: 'landing'},
+    {en: 'https://www.yes.labour.gov.hk/', zh: null, type: 'landing'},
+  ], schemes: ['erb-allowance', 'yetp'], cadence: 'yearly' },
+  { id: 'S12', name: 'Cancer screening (DH/CHP/FHS/UCN)', urls: [
+    {en: 'https://www.colonscreen.gov.hk/en/public/programme/who_may_enrol.html', zh: 'https://www.colonscreen.gov.hk/tc/public/programme/who_may_enrol.html', type: 'landing'},
+    {en: 'https://www.fhs.gov.hk', zh: 'https://www.fhs.gov.hk/tc', type: 'landing'},
+    {en: 'https://www.ucn.org.hk/', zh: null, type: 'landing'},
+  ], schemes: ['crc-screen', 'cervical-screen', 'breast-pilot2', 'mchc-child-health'], cadence: 'yearly' },
+  { id: 'S13', name: 'Community dental (CDSP)', urls: [{en: 'https://www.communitydental.gov.hk/en/cdsp/public/faq.html', zh: 'https://www.communitydental.gov.hk/tc/cdsp/public/faq.html', type: 'landing'}], schemes: ['cdsp-dental'], cadence: 'half-yearly' },
   { id: 'S14', name: 'HA fee waiver (press release)', urls: [{en: 'https://www.info.gov.hk/gia/general/202510/31/P2025103100494.htm', zh: null, type: 'press'}], schemes: ['ha-fee-waiver'], cadence: 'on-reform' },
+  { id: 'S15', name: 'Rehabus (EN-only site)', urls: [{en: 'https://www.rehabsociety.org.hk/transport/rehabus/our-services/rehabus-charge-table/', zh: null, type: 'landing'}], schemes: ['rehabus-pass'], cadence: 'yearly' },
   { id: 'S16', name: 'EDB Primary One Admission', urls: [{en: 'https://www.edb.gov.hk/en/edu-system/primary-secondary/spa-systems/primary-1-admission/index.html', zh: 'https://www.edb.gov.hk/tc/edu-system/primary-secondary/spa-systems/primary-1-admission/index.html', type: 'landing'}], schemes: ['poa-2027'], cadence: 'yearly (Sep)' },
+  { id: 'S17', name: 'HA CCF Medical Assistance', urls: [
+    {en: 'https://www.ha.org.hk/haho/ho/ccf/CCF_e.html', zh: 'https://www.ha.org.hk/haho/ho/ccf/CCF_c.html', type: 'landing'},
+  ], schemes: ['ccf-medical'], cadence: 'on HA/CCF news' },
+  { id: 'S18', name: 'Community Chest Medical Assistance Fund', urls: [
+    {en: 'https://www.commchest.org/en/page/medical-assistance-fund-2-1', zh: 'https://www.commchest.org/tc/page/medical-assistance-fund-2-1', type: 'landing'},
+  ], schemes: ['maf-cataract'], cadence: 'yearly' },
+  { id: 'S19', name: 'EDB After-school Learning & Support (SALSP)', urls: [
+    {en: 'https://www.edb.gov.hk/en/student-parents/support-subsidies/after-sch-learning-support-program/index.html', zh: 'https://www.edb.gov.hk/tc/student-parents/support-subsidies/after-sch-learning-support-program/index.html', type: 'landing'},
+  ], schemes: ['salsp-afterschool'], cadence: 'per school year' },
+  { id: 'S20', name: 'Labour EPEM (elderly & middle-aged employment)', urls: [
+    {en: 'https://www2.jobs.gov.hk/0/en/information/epem/jsfaq/', zh: 'https://www2.jobs.gov.hk/0/tc/information/epem/jsfaq/', type: 'landing'},
+  ], schemes: ['epem-40plus'], cadence: 'on LD news' },
+  { id: 'S21', name: 'Labour Re-employment Allowance Pilot', urls: [
+    {en: 'https://www1.jobs.gov.hk/0/en/information/rea/', zh: 'https://www1.jobs.gov.hk/0/tc/information/rea/', type: 'landing'},
+  ], schemes: ['rea-pilot'], cadence: 'check pilot status each cycle' },
+  { id: 'S22', name: 'EDB K1 Admission + RC/AP', urls: [
+    {en: 'https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/kindergarten-k1-admission-arrangements/2728_admission_arrangements.html', zh: 'https://www.edb.gov.hk/tc/edu-system/preprimary-kindergarten/kindergarten-k1-admission-arrangements/2728_admission_arrangements.html', type: 'landing'},
+    {en: 'https://www.edb.gov.hk/applyRC/en/', zh: 'https://www.edb.gov.hk/tc/applyRC/', type: 'landing'},
+  ], schemes: ['k1-rc-ap'], cadence: 'every Sep' },
+  { id: 'S23', name: 'DH Student Health + School Dental', urls: [
+    {en: 'https://www.studenthealth.gov.hk/english/faq/faq.html', zh: null, type: 'landing'},
+    {en: 'https://www.schooldental.gov.hk/', zh: null, type: 'landing'},
+    {en: 'https://www.dh.gov.hk/english/useful/useful_fee/useful_fee_sdcs.html', zh: 'https://www.dh.gov.hk/tc_chi/useful/useful_fee/sdcs.html', type: 'landing'},
+  ], schemes: ['student-health-service', 'school-dental'], cadence: 'every Aug' },
+  { id: 'S24', name: 'Primary healthcare: CDCC Co-Care + DHC membership', urls: [
+    {en: 'https://www.primaryhealthcare.gov.hk/cdcc/en/hp/eligibility.html', zh: 'https://www.primaryhealthcare.gov.hk/tc/hp/eligibility.html', type: 'landing'},
+    {en: 'https://www.dhc.gov.hk/en/general_public.html', zh: 'https://www.dhc.gov.hk/tc/general_public.html', type: 'landing'},
+  ], schemes: ['cdcc-cocare', 'dhc-member'], cadence: 'half-yearly' },
+  { id: 'S25', name: 'CCF pilots + school-based care', urls: [
+    {en: 'https://www.wfsfaa.gov.hk/wfao/cssatowfa/en/index.html', zh: 'https://www.wfsfaa.gov.hk/tc/wfao/cssatowfa/en/index.html', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/svcdesk/funds/ccf/ccf_current/index.html', zh: 'https://www.swd.gov.hk/tc/svcdesk/funds/ccf/ccf_current/index.html', type: 'landing'},
+  ], schemes: ['cssa-wfa-45k', 'ccf-sba-care', 'lph-special-allowance'], cadence: 'half-yearly' },
+  { id: 'S26', name: 'Labour youth + disability employment', urls: [
+    {en: 'https://www2.jobs.gov.hk/0/en/information/gbayes/', zh: 'https://www2.jobs.gov.hk/0/tc/information/gbayes/', type: 'landing'},
+    {en: 'https://www1.jobs.gov.hk/isps/WebForm/WOPS/Introduction/', zh: 'https://www1.jobs.gov.hk/isps/WebForm/WOPS/Introduction/?lang=tc', type: 'landing'},
+  ], schemes: ['gba-yes-2026', 'wops-60k'], cadence: 'yearly' },
+  { id: 'S27', name: 'Health / transport / family catch-ups', urls: [
+    {en: 'https://www.chp.gov.hk/en/features/108084.html', zh: 'https://www.chp.gov.hk/tc/features/108084.html', type: 'landing'},
+    {en: 'https://www.shallwetalk.hk/en/get-help/mental-health-support-hotline-18111', zh: 'https://www.shallwetalk.hk/zh/get-help/mental-health-support-hotline-18111', type: 'landing'},
+    {en: 'https://www.mtr.com.hk/en/customer/tickets/citysaver.html', zh: 'https://www.mtr.com.hk/ch/customer/tickets/citysaver.html', type: 'landing'},
+    {en: 'https://www.cso.gov.hk/newbornbabybonus/eng/index.htm', zh: 'https://www.cso.gov.hk/chi/newbornbabybonus/index.htm', type: 'landing'},
+  ], schemes: ['hpv-catchup-2026', 'mh-18111', 'mtr-city-saver', 'newborn-bonus-20k'], cadence: 'deadline-driven' },
+  { id: 'S28', name: 'CCF community pilots (batch 2)', urls: [
+    {en: 'https://www.swd.gov.hk/en/svcdesk/funds/ccf/ccf_current/index.html', zh: 'https://www.swd.gov.hk/tc/svcdesk/funds/ccf/ccf_current/index.html', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/portableco/pilot_scheme', zh: 'https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/portableco/pilot_scheme', type: 'landing'},
+  ], schemes: ['ccf-clr', 'ccf-stepping-stone', 'ccf-gd-rche-5000'], cadence: 'half-yearly' },
+  { id: 'S29', name: 'Health newcomers', urls: [
+    {en: 'https://www.info.gov.hk/gia/general/202601/26/P2026012600288.htm', zh: 'https://www.info.gov.hk/gia/general/202601/26/P2026012600284.htm', type: 'press'},
+    {en: 'https://www.info.gov.hk/gia/general/202608/24/P2026082400327.htm', zh: 'https://www.info.gov.hk/gia/general/202608/24/P2026082400322.htm', type: 'press'},
+    {en: 'https://www.info.gov.hk/gia/general/202510/15/P2025101500325.htm', zh: 'https://www.info.gov.hk/gia/general/202510/15/P2025101500329.htm', type: 'press'},
+  ], schemes: ['hepb-cocare-2026', 'oohp-preschool-2026', 'cmhk-subsidised'], cadence: 'yearly' },
+  { id: 'S30', name: 'Housing / tax / commuter gaps', urls: [
+    {en: 'https://www.housingauthority.gov.hk/en/public-housing/rent-related-matters/rent-assistance-scheme/index.html', zh: 'https://www.housingauthority.gov.hk/tc/public-housing/rent-related-matters/rent-assistance-scheme/index.html', type: 'landing'},
+    {en: 'https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/homeloan.htm', zh: 'https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/homeloan.htm', type: 'landing'},
+    {en: 'https://www.mtr.com.hk/en/customer/tickets/monthly_pass_extra.html', zh: 'https://www.mtr.com.hk/ch/customer/tickets/monthly_pass_extra.html', type: 'landing'},
+  ], schemes: ['prh-ras', 'letting-wf-pilot-3000', 'flat-for-flat-elderly', 'ird-hli', 'ird-tvc-qdap-60k', 'ird-erce-110k', 'ird-pda-75k', 'mtr-monthly-pass'], cadence: 'IRD per Budget' },
+  { id: 'S31', name: 'Student loans + scholarships + EM employment', urls: [
+    {en: 'https://www.wfsfaa.gov.hk/en/sfo/postsecondary/nlsft/overview.php', zh: 'https://www.wfsfaa.gov.hk/tc/sfo/postsecondary/nlsft/overview.php', type: 'landing'},
+    {en: 'https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html', zh: 'https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html', type: 'landing'},
+    {en: 'https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php', zh: null, type: 'landing'},
+  ], schemes: ['nls-loan-2627', 'enls-2627', 'rdep-em', 'hksar-gov-scholarship', 'spss-ops'], cadence: 'loan limits + scholarships yearly' },
+  { id: 'S32', name: 'Health depth', urls: [
+    {en: 'https://www.dh.gov.hk/english/main/main_ds/main_ds_dcp.html', zh: 'https://www.dh.gov.hk/tc_chi/main/main_ds/main_ds_dcp.html', type: 'landing'},
+    {en: 'https://www.dhc.gov.hk/en/wws.html', zh: 'https://www.dhc.gov.hk/tc/wws.html', type: 'landing'},
+  ], schemes: ['odcp-elderly', 'wws-women', 'ha-ivf-public', 'ird-ar-100k', 'ha-fmc-cap'], cadence: 'HA fees per gazette' },
   { id: 'S33', name: 'Commuter + Budget one-offs + legal aid', urls: [
     {en: 'https://www.budget.gov.hk/2026/eng/budget55.html', zh: 'https://www.budget.gov.hk/2026/chi/budget55.html', type: 'budget-tax'},
     {en: 'https://www.ird.gov.hk/eng/faq/budget2026_27.htm', zh: 'https://www.ird.gov.hk/chi/faq/budget2026_27.htm', type: 'budget-rates'},
   ], schemes: ['budget-tax-3000', 'budget-rates-500', 'mtr-early-bird-25', 'mtr-fare-saver-2', 'kmb-monthly-834', 'lad-olas'], cadence: 'yearly (Budget)' },
+  { id: 'S34', name: 'Youth / elderly learning / EM integration', urls: [
+    {en: 'https://striveandrise.gov.hk/en', zh: 'https://striveandrise.gov.hk/tc', type: 'landing'},
+    {en: 'https://www.hyab.gov.hk/en/policy_responsibilities/Social_Harmony_and_Civic_Education/youth_hostel_scheme.htm', zh: 'https://www.hyab.gov.hk/tc/policy_responsibilities/Social_Harmony_and_Civic_Education/youth_hostel_scheme.htm', type: 'landing'},
+    {en: 'https://www.elderacademy.org.hk/about-elder-academy/', zh: 'https://www.elderacademy.org.hk/tc/about-elder-academy/', type: 'landing'},
+    {en: 'https://mentalhealth.edb.gov.hk/en/support-programmes/student-mental-health-support-scheme.html', zh: 'https://mentalhealth.edb.gov.hk/tc/support-programmes/student-mental-health-support-scheme.html', type: 'landing'},
+    {en: 'https://www.had.gov.hk/rru/en/programmes/support_service_centres.php', zh: 'https://www.had.gov.hk/tc_chi/rru/programmes/support_service_centres.php', type: 'landing'},
+  ], schemes: ['strive-rise-teen', 'youth-hostel-yhs', 'elder-academy', 'smhss-student-mental', 'em-support-centres'], cadence: 'yearly' },
+  { id: 'S35', name: 'Safety net: victims, relief, compassionate housing', urls: [
+    {en: 'https://www.swd.gov.hk/en/pubsvc/socsecu/trafficacc/', zh: 'https://www.swd.gov.hk/tc/pubsvc/socsecu/trafficacc/', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/pubsvc/socsecu/criminalan/', zh: 'https://www.swd.gov.hk/tc/pubsvc/socsecu/criminalan/', type: 'landing'},
+    {en: 'https://www.swd.gov.hk/en/pubsvc/socsecu/emergencyr/', zh: 'https://www.swd.gov.hk/tc/pubsvc/socsecu/emergencyr/', type: 'landing'},
+    {en: 'https://www.housingauthority.gov.hk/en/flat-application/express-flat-allocation-scheme/', zh: 'https://www.housingauthority.gov.hk/tc/flat-application/express-flat-allocation-scheme/', type: 'landing'},
+  ], schemes: ['tava-2026', 'cleic-2026', 'erf-relief', 'compassionate-rehousing', 'bmgsno-80k', 'efas-2026'], cadence: 'EFAS yearly' },
   { id: 'S36', name: 'Core tax allowances + construction training + social hygiene', urls: [
     {en: 'https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances/7years.htm', zh: 'https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances/7years.htm', type: 'allowances'},
     {en: 'https://www.gov.hk/en/residents/taxes/salaries/allowances/allowances.htm', zh: 'https://www.gov.hk/tc/residents/taxes/salaries/allowances/allowances.htm', type: 'allowances2'},
+    {en: 'https://www.hkic.edu.hk/en/programmes/skill-training/czta', zh: null, type: 'landing'},
   ], schemes: ['ird-basic-allowance', 'ird-married-allowance', 'ird-sibling-allowance', 'hkic-skill-training', 'qf-rpl-reimburse', 'dh-social-hygiene-free'], cadence: 'yearly (Budget)' },
+  { id: 'S37', name: 'Foster care, dementia support, free legal aid', urls: [
+    {en: 'https://www.swd.gov.hk/en/pubsvc/family/cat_childcareservice/fostercare/', zh: 'https://www.swd.gov.hk/tc/pubsvc/family/cat_childcareservice/fostercare/', type: 'landing'},
+    {en: 'https://www.healthbureau.gov.hk/en/press_and_publications/otherinfo/180500_dcss/dcss_fees.html', zh: null, type: 'landing'},
+    {en: 'https://www.gov.hk/en/residents/government/legal/advice/advice.htm', zh: 'https://www.gov.hk/tc/residents/government/legal/advice/advice.htm', type: 'landing'},
+  ], schemes: ['foster-parent', 'dcss-dementia', 'free-legal-advice'], cadence: 'foster: half-yearly, dementia: yearly, legal: yearly' },
+  { id: 'S38', name: 'Financial Assistance Scheme for Family Members of Those Who Sacrifice Their Lives to Save Others', urls: [
+    {en: 'https://www.lwb.gov.hk/en/servicedesk/forms/fund.html', zh: 'https://www.lwb.gov.hk/tc/servicedesk/forms/fund.html', type: 'landing'},
+  ], schemes: ['fahs-save-2026'], cadence: 'ad-hoc' },
+  { id: 'S39', name: 'Portable Comprehensive Social Security Assistance (PCSSA)', urls: [
+    {en: 'https://www.swd.gov.hk/en/pubsvc/socsecu/comprehens/portableco/', zh: 'https://www.swd.gov.hk/tc/pubsvc/socsecu/comprehens/portableco/', type: 'landing'},
+  ], schemes: ['pcssa-2026'], cadence: 'yearly' },
+  { id: 'S40', name: 'Scholarships crawl', urls: [
+    {en: 'https://hkses.edb.gov.hk/en/abouts.html', zh: 'https://hkses.edb.gov.hk/tc/abouts.html', type: 'landing'},
+    {en: 'https://www.edb.gov.hk/en/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html', zh: 'https://www.edb.gov.hk/tc/edu-system/postsecondary/local-higher-edu/publicly-funded-programmes/scholarship.html', type: 'landing'},
+    {en: 'https://www.wfsfaa.gov.hk/en/other/index.php', zh: 'https://www.wfsfaa.gov.hk/tc/other/index.php', type: 'landing'},
+  ], schemes: ['hkses-2627', 'gsf-tds-2026', 'gsf-roa-2026', 'gsf-ema-2026', 'gsf-belt-road-2026', 'seym-scholarship-2026', 'spet-scholarship-2026', 'esf-education-scholarship-2026', 'srb-postgrad-2026', 'agri-scholarship-2026', 'marine-fish-scholarship-2026'], cadence: 'yearly' },
+  { id: 'S41', name: 'SPSS streams + FTSS', urls: [
+    {en: 'https://www.studyinhongkong.edu.hk/en/hong-kong-education/scholarships.php', zh: null, type: 'landing'},
+    {en: 'https://www.ugc.edu.hk/eng/ugc/activity/ftss.html', zh: 'https://www.ugc.edu.hk/tc/ugc/activity/ftss.html', type: 'landing'},
+    {en: 'https://www.info.gov.hk/gia/general/202604/23/P2026042200377.htm', zh: null, type: 'press'},
+  ], schemes: ['spss-bpa', 'spss-eds', 'spss-tds', 'spss-roa', 'ftss-2026'], cadence: 'yearly' },
+  { id: 'S42', name: 'PhD Fellowship + Samaritan Fund', urls: [
+    {en: 'https://www.ugc.edu.hk/eng/rgc/funding_opportunity/hkpfs/index.html', zh: null, type: 'landing'},
+    {en: 'https://www.ha.org.hk/haho/ho/sf/SF_e.htm', zh: 'https://www.ha.org.hk/haho/ho/sf/SF_c.htm', type: 'landing'},
+    {en: 'https://www.ha.org.hk/haho/ho/eligibility_en.htm', zh: 'https://www.ha.org.hk/haho/ho/eligibility_c.htm', type: 'landing'},
+    {en: 'https://www.ha.org.hk/haho/ho/sf_fa_txt_en.htm', zh: 'https://www.ha.org.hk/haho/ho/sf_fa_txt_c.htm', type: 'landing'},
+  ], schemes: ['hkpfs-2728', 'samaritan-fund-2026'], cadence: 'yearly' },
+  { id: 'S43', name: 'IRD child-allowance top-up', urls: [
+    {en: 'https://www.ird.gov.hk/eng/tax/budget.htm', zh: 'https://www.ird.gov.hk/chi/tax/budget.htm', type: 'landing'},
+    {en: 'https://www.ird.gov.hk/eng/tax/policyaddress2026.htm', zh: 'https://www.ird.gov.hk/chi/tax/policyaddress2026.htm', type: 'landing'},
+    {en: 'https://www.ird.gov.hk/eng/faq/policyaddress2026.htm', zh: 'https://www.ird.gov.hk/chi/faq/policyaddress2026.htm', type: 'landing'},
+  ], schemes: ['ird-child-allowance', 'ird-single-parent', 'ird-parent-allowance'], cadence: 'no change' },
+  { id: 'S44', name: 'DH community health batch', urls: [
+    {en: 'https://www.fhs.gov.hk/english/main_ser/child_health/child_health_recommend.html', zh: 'https://www.fhs.gov.hk/tc_chi/main_ser/child_health/child_health_recommend.html', type: 'landing'},
+    {en: 'https://www.info.gov.hk/tb_chest/en/contents/c611.htm', zh: null, type: 'landing'},
+    {en: 'https://www.elderly.gov.hk/english/contactus/elderly_health_centres.html', zh: 'https://www.elderly.gov.hk/tc_chi/contactus/elderly_health_centres.html', type: 'landing'},
+    {en: 'https://www.dhcas.gov.hk/en/referral.html', zh: 'https://www.dhcas.gov.hk/tc/referral.html', type: 'landing'},
+    {en: 'https://www.livetobaccofree.hk/en/free-quit-tools/free-cessation-services.html', zh: 'https://www.livetobaccofree.hk/tc/free-quit-tools/free-cessation-services.html', type: 'landing'},
+  ], schemes: ['hkcip-vaccine', 'tb-chest-free', 'ehc-elderly-check', 'cas-child-assess', 'quit-smoking-1833'], cadence: 'yearly' },
+  { id: 'S45', name: 'Education batch: KG + DSS + research postgrad', urls: [
+    {en: 'https://www.edb.gov.hk/en/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html', zh: 'https://www.edb.gov.hk/tc/edu-system/preprimary-kindergarten/free-quality-kg-edu/index.html', type: 'landing'},
+    {en: 'https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/direct-subsidy-scheme/info-sch.html', zh: 'https://www.edb.gov.hk/tc/edu-system/primary-secondary/applicable-to-primary-secondary/direct-subsidy-scheme/info-sch.html', type: 'landing'},
+    {en: 'https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/studentships', zh: null, type: 'landing'},
+  ], schemes: ['kg-edu-scheme', 'dss-fee-remission', 'ugc-pgs-2026', 'tuition-waiver-rpg'], cadence: 'yearly' },
   { id: 'S46', name: 'Care / housing / legal / tax batch', urls: [
     {en: 'https://www.swd.gov.hk/en/elderly/cat_residentcare/psrcsv/', zh: 'https://www.swd.gov.hk/tc/elderly/cat_residentcare/psrcsv/', type: 'rcsv'},
+    {en: 'https://www.swd.gov.hk/en/elderly/cat_ms_ita/nsypcc/', zh: 'https://www.swd.gov.hk/tc/elderly/cat_ms_ita/nsypcc/', type: 'landing'},
+    {en: 'https://www.bd.gov.hk/en/safety-inspection/financial-assistance/index_bsi_loanscheme.html', zh: 'https://www.bd.gov.hk/tc/safety-inspection/financial-assistance/index_bsi_loanscheme.html', type: 'landing'},
+    {en: 'https://www.bd.gov.hk/en/safety-inspection/financial-assistance/index_ibras.html', zh: 'https://www.bd.gov.hk/tc/safety-inspection/financial-assistance/index_ibras.html', type: 'landing'},
+    {en: 'https://www.lad.gov.hk/eng/las/civil/slas.html', zh: 'https://www.lad.gov.hk/tc_chi/las/civil/slas.html', type: 'landing'},
     {en: 'https://www.hkmc.com.hk/eng/our_business/reverse_mortgage_programme.html', zh: 'https://www.hkmc.com.hk/chi/our_business/reverse_mortgage_programme.html', type: 'rm-property'},
+    {en: 'https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/', zh: 'https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/', type: 'landing'},
+    {en: 'https://www.whs.gov.hk/en/index.php', zh: 'https://www.whs.gov.hk/tc/index.php', type: 'landing'},
   ], schemes: ['rcsv-elderly', 'navigation-youth-care', 'bd-safety-loan', 'hril-50k', 'slas-topup', 'reverse-mortgage-prmp', 'ird-selfedu-100k', 'vhis-8k', 'ird-charity-35', 'ird-mpf-18k', 'whs-outbound', 'reverse-mortgage-property'], cadence: 'yearly' },
-  { id: 'S50', name: 'Open-lead closes (I&T/HDPPP/RMP)', urls: [
+  { id: 'S47', name: 'Work & skills DFS', urls: [
+    {en: 'https://www.itf.gov.hk/en/support-measures/stem-internship-scheme/index.html', zh: 'https://www.itf.gov.hk/tc/support-measures/stem-internship-scheme/index.html', type: 'landing'},
+    {en: 'https://www.hkic.edu.hk/en/partners/cos', zh: null, type: 'landing'},
+    {en: 'https://www.jobs.gov.hk/en/info/wts', zh: 'https://www.jobs.gov.hk/tc/info/wts', type: 'landing'},
+    {en: 'https://www.info.gov.hk/gia/general/202302/15/P2023021500177.htm', zh: null, type: 'press'},
+    {en: 'https://www.weventure.gov.hk/en/plan_details/index.html', zh: 'https://www.weventure.gov.hk/tc/plan_details/index.html', type: 'landing'},
+  ], schemes: ['stem-internship-11790', 'cic-itcts-10200', 'ld-work-trial-9600', 'swd-set-2024', 'gba-youth-startup-600k'], cadence: 'yearly' },
+  { id: 'S48', name: 'Housing/property DFS', urls: [
+    {en: 'https://www.gov.hk/en/residents/environment/sustainable/renewable/feedintariff.htm', zh: 'https://www.gov.hk/tc/feedintariff.html', type: 'landing'},
+    {en: 'https://www.wsd.gov.hk/en/water-safety/wspss/index.html', zh: 'https://www.wsd.gov.hk/tc/water-safety/wspss/index.html', type: 'landing'},
+    {en: 'https://www.buildingmgt.gov.hk/en/Support_Services/2_18.html', zh: 'https://www.buildingmgt.gov.hk/tc/Support_Services/2_18.html', type: 'landing'},
+    {en: 'https://www.hkhsseniorconnect.com/en/senior-citizen-residences-scheme', zh: 'https://www.hkhsseniorconnect.com/tc/senior-citizen-residences-scheme', type: 'landing'},
+    {en: 'https://www.hkhs.com/en/application/senapply', zh: 'https://www.hkhs.com/tc/application/senapply', type: 'landing'},
+  ], schemes: ['fit-solar-4kwh', 'wsd-wspss-310k', 'had-bmpass', 'hkhs-senior-residences', 'hkhs-elderly-flats'], cadence: 'FiT locked per project' },
+  { id: 'S49', name: 'Health/legal/money/misc DFS', urls: [
+    {en: 'https://www.lcsd.gov.hk/en/beach/swim-intro/swim-admis.html', zh: 'https://www.lcsd.gov.hk/tc/beach/swim-intro/swim-admis.html', type: 'landing'},
+    {en: 'https://www4.ha.org.hk/ppp/en/ppp-programmes/csp/programme-intro', zh: 'https://www4.ha.org.hk/ppp/ppp-programmes/csp/faq', type: 'landing'},
+    {en: 'https://www.digitalpolicy.gov.hk/en/our_work/digital_government/digital_inclusion/ict_training_programmes_for_elderly/', zh: 'https://www.digitalpolicy.gov.hk/tc/our_work/digital_government/digital_inclusion/ict_training_programmes_for_elderly/', type: 'landing'},
+    {en: 'https://odcb.org.hk/en_content.php?sub=1', zh: 'https://odcb.org.hk/?lang=tc', type: 'landing'},
+    {en: 'https://pcfb.org.hk/compensate.php?lang=en', zh: 'https://pcfb.org.hk/compensate.php?lang=tc', type: 'landing'},
+    {en: 'https://www.gov.hk/en/residents/taxes/salaries/allowances/deductions/', zh: 'https://www.gov.hk/tc/residents/taxes/salaries/allowances/deductions/', type: 'landing'},
+    {en: 'https://www.immd.gov.hk/eng/services/Assistance_Outside_Hong_Kong.html', zh: null, type: 'landing'},
+    {en: 'https://www.info.gov.hk/gia/general/200711/28/P200711280179.htm', zh: null, type: 'landing'},
+    {en: 'https://www.afcd.gov.hk/english/fisheries/fish_cap/fish_cap_techsup/fish_cap_fdlf.html', zh: 'https://www.afcd.gov.hk/tc_chi/fisheries/fish_cap/fish_cap_techsup/fish_cap_fdlf.html', type: 'landing'},
+  ], schemes: ['lcsd-concession', 'ha-cataract-ppp', 'smartsilver-ict', 'odcb-deafness', 'pcfb-pneumo', 'ird-rent-100k', 'imm-1868-assist', 'cssa-burial-grant', 'afcd-fish-loan', 'afcd-farm-loan'], cadence: 'yearly' },
+  { id: 'S50', name: 'Open-lead closes: I&T Scholarship + HD PPP + property RMP', urls: [
+    {en: 'https://www.info.gov.hk/gia/general/202606/02/P2026060200514.htm', zh: null, type: 'press'},
+    {en: 'https://www.cityu.edu.hk/sds/innovation-and-technology-scholarship-202526', zh: null, type: 'landing'},
+    {en: 'https://www4.ha.org.hk/ppp/en/ppp-programmes/hdppp/programme-intro', zh: null, type: 'landing'},
     {en: 'https://www.hkmc.com.hk/eng/our_business/reverse_mortgage_programme.html', zh: 'https://www.hkmc.com.hk/chi/our_business/reverse_mortgage_programme.html', type: 'rm-property'},
   ], schemes: ['innotech-scholarship-150k', 'ha-hdppp-dialysis', 'reverse-mortgage-property'], cadence: 'yearly' },
+  { id: 'S51', name: 'Community Pharmacy Programme + Community Drug Formulary', urls: [
+    {en: 'https://www.info.gov.hk/gia/general/202510/30/P2025103000223.htm', zh: 'https://www.info.gov.hk/gia/general/202510/30/P2025103000222.htm', type: 'press'},
+    {en: 'https://www.healthbureau.gov.hk/phcc/main/home_page.html?lang=2', zh: 'https://www.healthbureau.gov.hk/phcc/main/home_page.html?lang=1', type: 'landing'},
+  ], schemes: ['cpp-community-pharmacy'], cadence: 'staged 2026-09-25: pending review' },
 ];
 
 // Deep-dive tasks from crawl-map.md

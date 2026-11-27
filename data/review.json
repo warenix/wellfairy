@@ -186,8 +186,8 @@
   },
   "budget-tax-3000": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "carer-elderly-3000": {
     "decision": "approved",
@@ -201,8 +201,8 @@
   },
   "cef-25k": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "cic-itcts-10200": {
     "decision": "approved",
@@ -301,8 +301,8 @@
   },
   "hos-white": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "hril-50k": {
     "decision": "approved",
@@ -321,8 +321,8 @@
   },
   "ird-basic-allowance": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "ird-child-allowance": {
     "decision": "approved",
@@ -346,8 +346,8 @@
   },
   "ird-married-allowance": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "ird-mpf-18k": {
     "decision": "approved",
@@ -531,8 +531,8 @@
   },
   "da-note": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "dae-reimburse": {
     "decision": "approved",
@@ -546,8 +546,8 @@
   },
   "fare-2dollar": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "fasp": {
     "decision": "approved",
@@ -651,8 +651,8 @@
   },
   "wfa": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "cahk-food-aid": {
     "decision": "approved",
@@ -756,8 +756,8 @@
   },
   "poa-2027": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "school-dental": {
     "decision": "approved",
@@ -796,22 +796,22 @@
   },
   "budget-rates-500": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "ha-fee-waiver": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "hcv-2026": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   },
   "hos-green": {
     "decision": "approved",
-    "by": "manual",
-    "at": "2026-11-20"
+    "by": "routine",
+    "at": "2026-11-24"
   }
 }

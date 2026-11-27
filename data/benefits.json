@@ -357,7 +357,7 @@
     "deadline": "2026-09-30",
     "source_url": "https://www.budget.gov.hk/2026/eng/budget55.html",
     "source_url_zh": "https://www.budget.gov.hk/2026/chi/budget55.html",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "Ratepayer (demand note holder)"
     ],
@@ -393,7 +393,7 @@
     "deadline": null,
     "source_url": "https://www.ird.gov.hk/eng/faq/budget2026_27.htm",
     "source_url_zh": "https://www.ird.gov.hk/chi/faq/budget2026_27.htm",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "YA2025/26 taxpayer",
       "File BIR60 as usual"
@@ -1075,7 +1075,7 @@
     "value_summary_zh": "每位申請人最高$25,000（政府80%／自付20%）合資格課程；設終身上限",
     "deadline": null,
     "source_url": "https://www.wfsfaa.gov.hk/en/ce/cef/faq.php",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "HKID",
       "70% attendance + 50% marks proof"
@@ -1566,7 +1566,7 @@
     "value_summary_zh": "普通$2,140/月，較高$4,280/月（12至64歲，經殘疾證明）；無入息審查",
     "deadline": null,
     "source_url": "https://www.1823.gov.hk/en/faq/what-are-the-eligibility-criteria-of-disability-allowance-what-is-the-amount-of-assistance-payable",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "Medical assessment (HA/DH)"
     ],
@@ -2644,7 +2644,7 @@
     "value_summary_zh": "每程$2或八折優惠（以較低者計算），需用悠遊咭；無悠遊咭為$2固定",
     "deadline": null,
     "source_url": "https://www.td.gov.hk/en/gov_public_transport_fare_concession/index.html",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "JoyYou Card (60+) / Disability-status Octopus (<60)"
     ],
@@ -3381,7 +3381,7 @@
     "value_summary_zh": "全免費用：家庭收入≤100% MMDHI（2人+）或≤150% MMDHI（1人）；資產限制=公屋上限；18個月有效",
     "deadline": null,
     "source_url": "https://www.info.gov.hk/gia/general/202510/31/P2025103100494.htm",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "Income + asset proof (or CSSA/OALA75 auto)",
       "Apply at MSSU / IFSC / HA Go"
@@ -3633,7 +3633,7 @@
     "value_summary_zh": "每年$2,000，上限$8,000。同年指定基層醫療用滿$1,000再賞$500。",
     "deadline": null,
     "source_url": "https://www.hcv.gov.hk/en/hcvs/background.html",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "HKID",
       "Electronic Health System (eHealth) consent"
@@ -4004,7 +4004,7 @@
     "value_summary_zh": "綠表：公屋住戶3年+，無入息資產審查；優先家庭、長者",
     "deadline": null,
     "source_url": "https://www.housingauthority.gov.hk/en/home-ownership/hos-flats/eligibility/index.html",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "PRH tenancy",
       "No-property 24mo declaration"
@@ -4038,7 +4038,7 @@
     "value_summary_zh": "白表：1人入息≤$30,000、資產≤$615,000；2人≤$60,000/≤$1,230,000；$350申請費",
     "deadline": null,
     "source_url": "https://hos.housingauthority.gov.hk/mini-site/hos2025/en/general-information.html",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "HKID",
       "7-yr residence",
@@ -4315,7 +4315,7 @@
     "deadline": null,
     "source_url": "https://www.ird.gov.hk/eng/tax/budget.htm",
     "source_url_zh": "https://www.ird.gov.hk/chi/tax/budget.htm",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "Salaries-tax / personal-assessment taxpayer"
     ],
@@ -4552,7 +4552,7 @@
     "deadline": null,
     "source_url": "https://www.ird.gov.hk/eng/tax/ars.htm",
     "source_url_zh": "https://www.ird.gov.hk/chi/tax/ars.htm",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "Married in year, not living apart",
       "Spouse income / assessment choice"
@@ -6578,7 +6578,7 @@
     "deadline": "2026-09-25",
     "source_url": "https://www.edb.gov.hk/en/edu-system/primary-secondary/spa-systems/primary-1-admission/index.html",
     "source_url_zh": "https://www.edb.gov.hk/tc/edu-system/primary-secondary/spa-systems/primary-1-admission/index.html",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "Child born on/before 31 Dec 2021",
       "HK resident, never allocated P1",
@@ -8767,11 +8767,11 @@
     "kind": "entitlement",
     "payment": "monthly",
     "audience": "household",
-    "value_summary_en": "Basic $575–$1,150 / Medium $690–$1,380 / Higher $805–$1,610 per household + per child $805–$1,610 at full/¾/half rates (2026-27).",
-    "value_summary_zh": "基本$575–$1,150／中額$690–$1,380／高額$805–$1,610＋每名兒童$805–$1,610，按2026-27入息×人數表發全額/四分三/半額。",
+    "value_summary_en": "Hourly tiers: $50/$58/$65 (1p) up to $27,600/$33,100/$38,600 monthly; asset limits apply",
+    "value_summary_zh": "時薪級別：$50/$58/$65（1人）至$27,600/$33,100/$38,600每月；設資產限制",
     "deadline": null,
     "source_url": "https://www.wfsfaa.gov.hk/en/wfao/wfas/eligibility.php",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "6-month work hours proof",
       "Income + assets proof",
