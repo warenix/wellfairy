@@ -139,8 +139,8 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P40 | CCSV + RCSV quota increases (LWB) | `ccsv`, `rcsv` | done (nemotron-ultra) | 2026-11-27 |
 | P41 | Young-Old Mentorship Programme (LWB/SWD) | `young-old-mentorship-2027` | done (nemotron-ultra) | 2026-11-27 |
 | P42 | Mobile JoyYou Card (LWB/Octopus) | `mobile-joyyou-card-2026` | done (nemotron-ultra) | 2026-11-27 |
-| P43 | Foreign Domestic Carers pilot (LWB/ImmD) | Pilot H2 2027: admit FDCs with ≥3yr elderly care experience + 150hr accredited training (origin country), assessed by HK-commissioned body. Min wage > FDH MAW. Initial few hundred/yr. | pending |
-| P44 | HA IVF quota increase (HHB) | +300 cycles over 3 years from 2026-27: 1,600→1,900/yr. Update `ha-ivf-public`. | pending |
+| P43 | Foreign Domestic Carers pilot (LWB/ImmD) | `foreign-domestic-carers-pilot-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P44 | HA IVF quota increase (HHB) | `ha-ivf-quota-increase-2027` | done (nemotron-ultra) | 2026-11-27 |
 | P45 | Free pre/ante/postnatal classes at all DHCs (PHC Commission) | Gradual extension to all DHCs/DHC Expresses. FPAHK publicity. | pending |
 | P46 | Artificial Intelligence Subsidy Scheme additional $1B (ITIB) | Further injection to support AIRDI using high-performance computing for frontier AI research. Cyberport AISC. Existing AISS launched 2024, $3B/3yr, >30 projects approved. | pending |
 | P47 | SSSDP 2027/28 sub-degree (EDB) | 2,196 places, 35 programmes, 5 institutions. Lab-based $40,730/yr; non-lab $23,390/yr. 7 disciplines. Announced 2026-11-19. | pending |

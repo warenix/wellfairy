@@ -1,6 +1,6 @@
 # Welly 惠您 — Hong Kong welfare benefit matcher
 
-> 2 分鐘檔案，自動配對 235 項香港政府福利。Free, offline-first, data stays on device.
+> 2 分鐘檔案，自動配對 237 項香港政府福利。Free, offline-first, data stays on device.
 > App: https://warenix.github.io/wellfairy/
 > Machine-readable catalog: https://warenix.github.io/wellfairy/data/benefits.json
 > Sitemap: https://warenix.github.io/wellfairy/sitemap.xml
@@ -179,7 +179,7 @@
 - [水安全計劃資助（每幢高達$310,000） | Water Safety Plan Subsidy (up to $310,000/building)](https://warenix.github.io/wellfairy/s/wsd-wspss-310k.html) — 每幢高達$310,000資助推行水安全計劃：風險評估＋計劃（$10,000）、兩輪2年保養（$32,500＋$10,000）、審核（$5,000＋$2,500）、整改工程至$250,000。私人住宅／綜合樓宇（差餉限額內）；法團／委員會／合作社申請。
 - [青年宿舍計劃（六折租金，18-30歲） | Youth Hostel Scheme (≤60% market rent, 18-30)](https://warenix.github.io/wellfairy/s/youth-hostel-yhs.html) — 在職青年18-30歲（香港永久居民、無物業）：宿舍六折租金，首約2年、最長5年。申請時入息資產審查。約3,700宿位。
 
-## health (38)
+## health (39)
 
 - [乳癌篩查先導計劃第二期 (高風險35-74歲) | Breast Cancer Screening Pilot Programme Phase II (high-risk 35-74)](https://warenix.github.io/wellfairy/s/breast-pilot2.html) — 高風險35-74歲女性(家族史/BRCA)：NGO+衛生署資助造影。無病徵、過去一年無照過。
 - [低收入家庭殘疾人士照顧者生活津貼 ($3,300/月) | Living Allowance for Low-income Carers of Persons with Disabilities ($3,300/mo)](https://warenix.github.io/wellfairy/s/carer-disabled-3000.html) — 每月$3,300 (施政報告加幅10%)。照顧80小時+/月。殘疾人士需輪候康復/特殊學校住宿/療養服務，在社區居住。
@@ -204,6 +204,7 @@
 - [普通科門診公私營協作計劃（病情穩定病人：每年10次資助私家診症） | HA GOPC PPP (stable chronic patients: 10 subsidised private visits/yr)](https://warenix.github.io/wellfairy/s/ha-gopc-ppp.html) — 病情穩定的醫管局門診病人獲邀轉看自選私家醫生：每年最多10次資助診症（慢性＋偶發疾病，診所即時配藥，轉介化驗/X光），收費與醫管局家庭醫學診所相同：$150/次＋每種計劃藥物$5（4星期）；基礎化驗免費。只限獲邀參加；計劃預計2028年結束並過渡至慢病共治計劃。
 - [洗腎公私營協作（社區洗腎收公院費） | Haemodialysis PPP (community dialysis at public fees)](https://warenix.github.io/wellfairy/s/ha-hdppp-dialysis.html) — 病情穩定的醫管局洗腎病人：腎科醫生邀請轉社區中心 — 同公院程序收費（2026年1月起每次$250，減免適用），醫管局續跟進／藥物／檢查。須登記醫健通。
 - [公營試管嬰兒（最多3個周期，收費封頂） | HA Public IVF (up to 3 cycles, capped fees)](https://warenix.github.io/wellfairy/s/ha-ivf-public.html) — 已婚夫婦、女方未滿40歲開始：瑪麗／威爾斯／廣華最多3個周期。自付$135首次＋$80覆診，自付$4,000藥包，自付化驗每周期$9,000-$40,000。2026/27名額1,600，增至每年1,800。
+- [醫管局體外授精名額增至每年1,900個 (2028-29) | HA IVF Quota Increase (to 1,900/yr by 2028-29)](https://warenix.github.io/wellfairy/s/ha-ivf-quota-increase-2027.html) — 三年逐步由1,600(2026-27)增至1,900個體外授精周期/年(共+300)。瑪麗醫院2027年首季增100。適用於不育夫婦/癌症患者。瑪麗/威爾斯親王/廣華醫院提供公營資助服務。
 - [乙型肝炎共治計劃（篩查$180，抗病毒藥免費） | Hepatitis B Co-care ($180 screening, free antivirals)](https://warenix.github.io/wellfairy/s/hepb-cocare-2026.html) — 1988年或之前出生、家人／伴侶有慢性乙肝：地區康健中心免費快測，自付$180篩查費（政府資助2次診金$136），治療每年最多4次（每次自付$150）＋免費抗病毒藥。2026年2月7日起。
 - [香港兒童免疫接種計劃（出生至小六免費疫苗） | Childhood Immunisation Programme (free vaccines birth–P6)](https://warenix.github.io/wellfairy/s/hkcip-vaccine.html) — 母嬰健康院（出生至5歲）及學童免疫注射小組（小一／小五／小六）免費接種：卡介苗、乙肝×3、白喉破傷風百日咳小兒麻痺×4、肺炎球菌、麻疹腮腺炎德國麻疹／水痘、HPV（小五／小六女生）。
 - [疫苗補種計劃（免費2針，2026年12月截止！） | HPV Vaccination Catch-up (free 2 doses, ends Dec 2026!)](https://warenix.github.io/wellfairy/s/hpv-catchup-2026.html) — 2004-2008年出生未打齊HPV疫苗女性：免費2針（免疫力弱3針）。立即參加——2026年底截止。需醫健通。
@@ -220,7 +221,7 @@
 - [疫苗資助計劃 | Vaccination Subsidy Scheme](https://warenix.github.io/wellfairy/s/vss-elderly.html) — 指定診所享流感/肺炎球菌資助，去前先問有無貨。
 - [女性健康衛星中心（64歲或以下，分擔收費篩查） | Women Wellness Satellites (≤64, co-pay screening)](https://warenix.github.io/wellfairy/s/wws-women.html) — 預防為本婦女檢查（評估、子宮頸＋乳房篩查、護士診所），經地區康健中心轉介、分擔收費。先入會DHC。柴灣2025年6月開；藍田＋屯門9月起。
 
-## elderly (26)
+## elderly (27)
 
 - [低收入家庭護老者生活津貼 ($3,300/月) | Living Allowance for Carers of Elderly Persons from Low-income Families ($3,300/mo)](https://warenix.github.io/wellfairy/s/carer-elderly-3000.html) — 每月$3,300 (施政報告加幅10%)。照顧80小時+/月(2老120小時+)。長者需經安老服務統一評估機制輪候資助長期護理、在社區居住。
 - [照顧者支援專線 182 183 (24小時免費) | Carer Hotline 182 183 (24hr, free)](https://warenix.github.io/wellfairy/s/carer-hotline.html) — 24小時社工專線：輔導、暫託配對、外展探訪、暫託交通津貼。聽障/言語障礙WhatsApp 5322 2183。
@@ -231,6 +232,7 @@
 - [長者健康中心（每年$110體檢＋診治，65歲+） | Elderly Health Centres ($110/yr check-up + care, 65+)](https://warenix.github.io/wellfairy/s/ehc-elderly-check.html) — 18間衛生署中心：年費$110享健康評估、輔導、健康教育＋會員診治。一人只可登記一間；輪候較長 — 服務正分階段併入地區康健網絡。
 - [長者學苑（校園上課，約200間） | Elder Academy (learn on real campuses, ~200)](https://warenix.github.io/wellfairy/s/elder-academy.html) — 中小大專校園上課：約200間學苑，NGO＋學校合辦，多數免費或象徵收費。逐間報名。
 - [長者中心會籍（$21/年，膳食＋輔導） | Elderly Centre Membership ($21/yr, meals + counselling)](https://warenix.github.io/wellfairy/s/elderly-centre.html) — 地區／鄰舍中心：60歲+$21/年（55-59學舍$20，照顧者免費）。膳食、輔導、轉介、長期護理申請、復康用品借用。
+- [外籍家庭照顧者先導計劃 (2027下半年, 每年數百名額) | Foreign Domestic Carers Pilot (H2 2027, few hundred/yr)](https://warenix.github.io/wellfairy/s/foreign-domestic-carers-pilot-2027.html) — 2027下半年試行：輸入外籍家庭照顧者，需≥3年長者照顧經驗+150小時認可培訓(原居地)，經港府委託機構評核合格。最低工資比外傭最低工資高10-20%。首年數百名額。現職外傭須返鄉受訓。詳情2027年中公布。
 - [廣東／福建計劃高齡／長者生活津貼（北上退休） | Guangdong/Fujian OAA/OALA (retire on the Mainland)](https://warenix.github.io/wellfairy/s/gd-scheme.html) — 居廣東／福建照領高齡津貼$1,675/月（70歲+免審查）或長者生活津貼$4,345/月（65歲+須審查），每年住滿60日。居港7年＋申請前連續住滿1年；親身來港辦手續＋面談。
 - [長者醫療券計劃 $2,000/年 | Elderly Health Care Voucher Scheme $2,000/yr](https://warenix.github.io/wellfairy/s/hcv-2026.html) — 每年$2,000，上限$8,000。同年指定基層醫療用滿$1,000再賞$500。
 - [長者醫療券獎賞先導計劃 $500/年 (2024-2028) | HCV Pilot Reward Scheme $500/yr (2024-2028)](https://warenix.github.io/wellfairy/s/hcv-reward-2026.html) — 2026／2027／2028每年指定基層醫療用滿$1,000 → 賞$500，翌年底前可用。每年一次；2024-2028最多$2,500。

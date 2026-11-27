@@ -9556,5 +9556,100 @@
       "實體樂悠咭並未停發 — 可自行選擇"
     ],
     "event_based": false
+  },
+  {
+    "id": "foreign-domestic-carers-pilot-2027",
+    "title_en": "Foreign Domestic Carers Pilot (H2 2027, few hundred/yr)",
+    "title_zh": "外籍家庭照顧者先導計劃 (2027下半年, 每年數百名額)",
+    "category": "elderly",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "household",
+    "value_summary_en": "Pilot H2 2027: admit foreign domestic carers (FDCs) with ≥3yr elderly care experience + 150hr accredited training (origin country), assessed by HK-commissioned body. Min wage 10-20% > FDH MAW. Initial few hundred/yr. FDHs must return to origin for training. Details mid-2027.",
+    "value_summary_zh": "2027下半年試行：輸入外籍家庭照顧者，需≥3年長者照顧經驗+150小時認可培訓(原居地)，經港府委託機構評核合格。最低工資比外傭最低工資高10-20%。首年數百名額。現職外傭須返鄉受訓。詳情2027年中公布。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202610/21/P2026102100251.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202610/21/P2026102100251.htm",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "≥3 years elderly care experience",
+      "150hr accredited training in origin country",
+      "Pass HK-commissioned assessment",
+      "Valid HK visa under new FDC category"
+    ],
+    "apply_link": "https://www.lwb.gov.hk/",
+    "apply_link_zh": "https://www.lwb.gov.hk/",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Elderly at home needing advanced care — new FDC category with 150hr training, higher wage.",
+    "why_zh": "家中長者需專業照顧 — 新增外籍家庭照顧者，150小時培訓、較高薪金。",
+    "proof_needed_zh": [
+      "≥3年長者照顧經驗",
+      "原居地完成150小時認可培訓",
+      "通過港府委託機構評核",
+      "持有新FDC類別有效簽證"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 395; LCQ16 Oct 2026 details",
+      "Pilot H2 2027, few hundred/yr, min wage 10-20% > FDH MAW",
+      "FDHs must return to origin for training, then re-enter as FDC",
+      "Not for residential care home workers — home-based care only",
+      "Details to be announced mid-2027"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第395段宣佈；2026年10月立法會會議第16號文件詳情",
+      "2027下半年試行，每年數百名額，最低工資比外傭高10-20%",
+      "現職外傭須返鄉受訓再以FDC身份入境",
+      "不適用於院舍醫護人員 — 只供家居照顧",
+      "詳情待2027年中公布"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "ha-ivf-quota-increase-2027",
+    "title_en": "HA IVF Quota Increase (to 1,900/yr by 2028-29)",
+    "title_zh": "醫管局體外授精名額增至每年1,900個 (2028-29)",
+    "category": "health",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "self",
+    "value_summary_en": "Progressive increase from 1,600 (2026-27) to 1,900 IVF cycles/yr over 3 years (+300 total). QMH +100 by 1Q27. For infertile couples/cancer patients. Subsidised public service at QMH, PWH, KWH.",
+    "value_summary_zh": "三年逐步由1,600(2026-27)增至1,900個體外授精周期/年(共+300)。瑪麗醫院2027年首季增100。適用於不育夫婦/癌症患者。瑪麗/威爾斯親王/廣華醫院提供公營資助服務。",
+    "deadline": null,
+    "source_url": "https://www.ha.org.hk/haho/ho/pad/260916PAE.pdf",
+    "source_url_zh": "https://www.ha.org.hk/haho/ho/pad/260916PAC.pdf",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "HK resident couple, infertile or cancer patient facing infertility",
+      "Referral from HA gynaecology clinic",
+      "Meets AR service eligibility (HRTO licensed centre)"
+    ],
+    "apply_link": "https://www.ha.org.hk/visitor/ha_visitor_text_index.asp?Content_ID=10078&Lang=ENG",
+    "apply_link_zh": "https://www.ha.org.hk/visitor/ha_visitor_text_index.asp?Content_ID=10078&Lang=CHI",
+    "needs": {
+      "hk_resident": true,
+      "married": true
+    },
+    "why_en": "Couple needing IVF — HA adding 300 more cycles over 3 years, wait time cut from 24-36 to 12-24 weeks.",
+    "why_zh": "夫婦需體外授精 — 醫管局3年增300個名額，輪候由24-36周縮減至12-24周。",
+    "proof_needed_zh": [
+      "香港居民夫婦、不育或面臨不育風險癌症患者",
+      "醫管局婦科診所轉介",
+      "符合輔助生殖服務資格(人類生殖科技條例持牌中心)"
+    ],
+    "confirm_en": [
+      "Policy Address 2026 measure 7; Annex indicator 121: +300 over 3 yrs from 2026-27",
+      "HA press release 260916PAE.pdf confirms 1,900 target",
+      "Current 2026-27: 1,600 total (QMH 700, PWH 650, KWH 650)",
+      "Updates existing ha-ivf-public scheme"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第7項措施；附件指標121：2026-27起三年增300",
+      "醫管局260916PAE.pdf確認1,900目標",
+      "現時2026-27：共1,600(瑪麗700、威爾斯親王650、廣華650)",
+      "更新現有ha-ivf-public計劃"
+    ],
+    "event_based": false
   }
 ]
