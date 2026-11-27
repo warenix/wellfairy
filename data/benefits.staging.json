@@ -9074,5 +9074,214 @@
     ],
     "why_en": "Young and working but priced out — halve the rent, save the rest.",
     "why_zh": "後生打工租唔起樓 — 半價宿舍儲錢。"
+  },
+  {
+    "id": "grad-employment-launch-2027",
+    "title_en": "Graduate Employment Launch (2027–28)",
+    "title_zh": "畢業生就業啟航計劃 (2027–28)",
+    "category": "student",
+    "kind": "entitlement",
+    "payment": "monthly",
+    "audience": "business",
+    "value_summary_en": "Employer subsidy: 1/3 of monthly salary up to $6,000/month for 6 months per graduate. 10,000 full-time posts over 2 years from Q1 2027. For HK residents ≤29 with ≤6 months full-time experience, not in full-time employment.",
+    "value_summary_zh": "僱主資助：每月薪金三分一，上限$6,000/月，資助期6個月。2027年首季起兩年增設10,000全職職位。香港居民，29歲或以下，全職經驗≤6個月，非全職受僱。",
+    "deadline": null,
+    "source_url": "https://www.lwb.gov.hk/eng/grad_employment_launch.htm",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "HKID + proof of ≤6 months full-time experience",
+      "Employer must be registered business, posts additional to regular recruitment"
+    ],
+    "apply_link": "https://www.lwb.gov.hk/eng/grad_employment_launch.htm",
+    "needs": {
+      "max_age": 29,
+      "hk_resident": true,
+      "unemployed": true
+    },
+    "why_en": "Fresh graduates with little experience — employer gets subsidy to hire you.",
+    "why_zh": "剛畢業經驗少 — 僱主有補貼願意聘用你。",
+    "proof_needed_zh": [
+      "香港身份證＋全職經驗≤6個月證明",
+      "僱主須為註冊商號，職位須為額外增設而非常規招聘"
+    ],
+    "confirm_en": [
+      "Scheme page not yet live — will launch Q1 2027 subject to LegCo FC approval",
+      "Subsidy paid to employer, not directly to graduate",
+      "Posts must be ≥6 months, market-rate salary"
+    ],
+    "confirm_zh": [
+      "計劃網頁尚未上線 — 須待立法會財委會撥款後，2027年首季推出",
+      "補貼發予僱主，非直接發予畢業生",
+      "職位需≥6個月，薪金須達市場水平"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "stem-internship-expanded-2027",
+    "title_en": "STEM Internship Scheme (Expanded, 2027–28)",
+    "title_zh": "STEM 實習計劃 (擴展版, 2027–28)",
+    "category": "student",
+    "kind": "entitlement",
+    "payment": "monthly",
+    "audience": "self",
+    "value_summary_en": "Student intern allowance $11,790/month (from Apr 2026), cap ≤90 days/academic year. Expanded: ~10,000 quotas over 2 years from 2027. For STEM undergrads/postgrads in 9 designated unis + R&D centres/HKPC. Non-local students eligible for HK internships only.",
+    "value_summary_zh": "學生實習津貼$11,790/月(由2026年4月起)，上限每學年≤90天。擴展：2027年起兩年約10,000名額。9所指定大學STEM本科/研究生 + 研發中心/生產力局。非本地生只可參與香港實習。",
+    "deadline": null,
+    "source_url": "https://www.itf.gov.hk/en/support-measures/stem-internship-scheme/index.html",
+    "source_url_zh": "https://www.itf.gov.hk/tc/support-measures/stem-internship-scheme/index.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Full-time STEM student at participating uni (CityU, HKBU, HKMU, LU, CUHK, EdUHK, PolyU, HKUST, HKU)",
+      "Internship ≥28 days, I&T-related, vetted by university"
+    ],
+    "apply_link": "https://www.itf.gov.hk/en/support-measures/stem-internship-scheme/index.html",
+    "apply_link_zh": "https://www.itf.gov.hk/tc/support-measures/stem-internship-scheme/index.html",
+    "needs": {
+      "tertiary": true,
+      "hk_resident": true
+    },
+    "why_en": "STEM student wanting I&T experience — monthly allowance while you intern.",
+    "why_zh": "STEM學生想累積I&T經驗 — 實習期間有月津貼。",
+    "proof_needed_zh": [
+      "9所參與大學全日制STEM學生(城大、浸大、都大、嶺大、中大、教大、理大、科大、港大)",
+      "實習≥28天、I&T相關、經大學審核"
+    ],
+    "confirm_en": [
+      "Existing scheme (stem-internship-11790) expanded from 2027 under 30k Youth Programme",
+      "Allowance $11,790/month from Apr 2026; non-local students HK internships only",
+      "Cannot stack with other govt internship subsidies"
+    ],
+    "confirm_zh": [
+      "現有計劃(stem-internship-11790)於2027年擴展，納入3萬青年計劃",
+      "津貼由2026年4月起$11,790/月；非本地生僅限香港實習",
+      "不可與其他政府實習補貼疊加"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "hyab-youth-startup-internship-2027",
+    "title_en": "HYAB Youth Start-up Internship Programme (Enhanced, 2027)",
+    "title_zh": "青年發展局青年創業實習計劃 (優化版, 2027)",
+    "category": "student",
+    "kind": "entitlement",
+    "payment": "monthly",
+    "audience": "self",
+    "value_summary_en": "Salary subsidy ≥$11,000/month (2026 rate $11,490). 3–6 month internships at Cyberport/HKSTP start-ups + new HK-Shenzhen I&T Park. Quota increased from 200 to 300 in 2027. For HKPR/local students 18–30 in full-time post-secondary (sub-degree/undergrad/postgrad).",
+    "value_summary_zh": "薪金資助≥$11,000/月(2026年$11,490)。3–6個月於數碼港/科大園區創業公司 + 新設港深創科園實習。2027年名額由200增至300。18–30歲香港永久居民/本地生，全日制專上課程(副學位/學士/研究生)。",
+    "deadline": null,
+    "source_url": "https://www.ydc.gov.hk/en/programmes/ip/ip_ysip.html",
+    "source_url_zh": "https://www.ydc.gov.hk/tc/programmes/ip/ip_ysip.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "HKPR or HKID holder, 18–30, full-time post-secondary student",
+      "Internship at participating start-up via Cyberport/HKSTP"
+    ],
+    "apply_link": "https://www.ydc.gov.hk/en/programmes/ip/ip_ysip.html",
+    "apply_link_zh": "https://www.ydc.gov.hk/tc/programmes/ip/ip_ysip.html",
+    "needs": {
+      "max_age": 30,
+      "tertiary": true,
+      "hk_resident": true
+    },
+    "why_en": "Student wanting start-up/I&T experience — monthly subsidy plus Mainland visit opportunities.",
+    "why_zh": "想體驗創業/I&T工作 — 有月津貼，還可到內地創業公司參觀。",
+    "proof_needed_zh": [
+      "香港永久居民或身份證持有人，18–30歲，全日制專上學生",
+      "透過數碼港/科大園區參與創業公司實習"
+    ],
+    "confirm_en": [
+      "Existing programme enhanced under 30k Youth Programme from 2027",
+      "New placements at Hong Kong-Shenzhen Innovation and Technology Park",
+      "Subsidy paid to employer who passes to intern; includes training/entrepreneurship activities"
+    ],
+    "confirm_zh": [
+      "現有計劃2027年優化，納入3萬青年計劃",
+      "新增港深創科園實習崗位",
+      "資助發予僱主轉交實習生；含培訓/創業活動"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "cic-pdgotss-2027",
+    "title_en": "CIC Professional Degree Graduates On-the-Job Training Subsidy Scheme (2027–28)",
+    "title_zh": "建造業專業畢業生在職培訓資助計劃 (2027–28)",
+    "category": "student",
+    "kind": "entitlement",
+    "payment": "monthly",
+    "audience": "business",
+    "value_summary_en": "Employer subsidy: $5,000/month ×12 months per graduate. 5,000 quotas/year (10,000 over 2 years 2027–28). For main contractors/consultancy firms in 6 disciplines (engineering, architecture, surveying, planning, landscape, environment). Graduates <35, HKID, relevant recognised degree, not yet professionally qualified.",
+    "value_summary_zh": "僱主資助：$5,000/月 ×12個月/畢業生。每年5,000名額(兩年共10,000)。適用於6專業(工程、建築、測量、規劃、園境、環境)總承建商/顧問公司。畢業生<35歲、香港身份證、認可相關學位、未取得專業資格。",
+    "deadline": null,
+    "source_url": "https://www.cic.hk/pdgotss/en/",
+    "source_url_zh": "https://www.cic.hk/zh-hk/pdgotss/",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Employer: levy-paying main contractor or listed consultancy firm",
+      "Graduate: HKID <35, full-time employee, recognised degree in 6 disciplines, not yet professionally qualified"
+    ],
+    "apply_link": "https://www.cic.hk/pdgotss/en/",
+    "apply_link_zh": "https://www.cic.hk/zh-hk/pdgotss/",
+    "needs": {
+      "max_age": 34,
+      "hk_resident": true,
+      "tertiary": true
+    },
+    "why_en": "Construction professional graduate — employer gets $5k/mo to train you toward qualification.",
+    "why_zh": "建造業專業畢業生 — 僱主獲$5k/月資助培訓你考專業資格。",
+    "proof_needed_zh": [
+      "僱主：繳付徵款總承建商或名冊顧問公司",
+      "畢業生：香港身份證<35歲、全職受僱、6專業認可學位、未獲專業資格"
+    ],
+    "confirm_en": [
+      "Existing scheme (pdgotss) extended 2027–28 under 30k Youth Programme; $300M/yr joint CIC+Gov funding",
+      "Subsidy period 1 Jul 2027 – 30 Jun 2028; application ~Q2 2027",
+      "Associate member (higher diploma) quotas for main contractors only (400/yr)"
+    ],
+    "confirm_zh": [
+      "現有計劃2027–28延續，納入3萬青年計劃；建造業議會+政府每年合資$3億",
+      "資助期2027年7月1日至2028年6月30日；申請約2027年第二季",
+      "副學位/高級文憑(準會員)名額僅限總承建商(每年400)"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "fsdc-financial-services-youth-internship-2027",
+    "title_en": "Financial Services Industry Youth Internship Programme (2027–28)",
+    "title_zh": "金融服務業青年實習計劃 (2027–28)",
+    "category": "student",
+    "kind": "entitlement",
+    "payment": "monthly",
+    "audience": "self",
+    "value_summary_en": "1,000 internship placements over 2 years from H1 2027. FSDC + industry partners. Financial services roles. Subsidy details TBA. For youth 18–30 (details TBD).",
+    "value_summary_zh": "兩年(2027上半年起)提供1,000實習名額。金發局+業界合作。金融服務崗位。資助詳情待公布。青年18–30歲(詳情待定)。",
+    "deadline": null,
+    "source_url": "https://www.fsdc.org.hk/en/media/from-annual-measures-to-a-five-year-horizon-fsdc-welcomes-hong-kong-s-first-five-year-plan-and-2026-policy-address",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Details to be announced by FSDC in 2027",
+      "Likely: HK resident, 18–30, tertiary student/graduate"
+    ],
+    "apply_link": "https://www.fsdc.org.hk/en/media/from-annual-measures-to-a-five-year-horizon-fsdc-welcomes-hong-kong-s-first-five-year-plan-and-2026-policy-address",
+    "needs": {
+      "max_age": 30,
+      "hk_resident": true
+    },
+    "why_en": "Youth wanting finance career — 1,000 internships with industry partners from 2027.",
+    "why_zh": "想投身金融業 — 2027年起業界合作提供1,000實習機會。",
+    "proof_needed_zh": [
+      "詳情待金發局2027年公布",
+      "預計：香港居民、18–30歲、專上學生/畢業生"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address; launch H1 2027; details not yet published",
+      "Part of 30,000 Youth Employment and Internship Programme",
+      "Will have dedicated one-stop portal + Youth Employment Link for applications"
+    ],
+    "confirm_zh": [
+      "2026年施政報告宣佈；2027上半年推出；詳情尚未公布",
+      "屬3萬青年就業實習計劃一部分",
+      "將設專題網頁+「青年就業通」申請"
+    ],
+    "event_based": false
   }
 ]

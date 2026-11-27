@@ -129,6 +129,29 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P30 | HA GOPC PPP chronic-disease programme (co-care retry, was 429'd) | staged `ha-gopc-ppp` → approved + live 2026-09-24 | done |
 | P31 | Labour Dept Employees' Compensation Ordinance Cap.282 (work-injury/death statutory compensation) | staged `eco-work-injury` → approved + live 2026-09-24 (first review→publish pipeline test) | done |
 | P32 | Community Pharmacy Programme + Community Drug Formulary (PHC Commission/HA) | staged `cpp-community-pharmacy` 2026-09-25 → pending review (EN/TC press 200, PHCC apply lang=2/1 200); promote to S51 on publish | done |
+| P33 | 30,000 Youth Employment and Internship Programme (2027-28) | `grad-employment-launch-2027`, `stem-internship-expanded-2027`, `hyab-youth-startup-internship-2027`, `cic-pdgotss-2027`, `fsdc-financial-services-youth-internship-2027` | done (nemotron-ultra) | 2026-11-27
+| P34 | Gerontechnology Promotion Scheme (ITIB) | $100M earmarked, launch H1 2027. Support local tech enterprises developing elderly-care products/solutions. Details TBD. | pending |
+| P35 | HA Gerontechnology Pilot (HB) | Household gerontech equipment for elderly singletons & all-elderly households in selected PRH estates with high elderly population. Gradual extension. | pending |
+| P36 | Newborn Baby Bonus extension + 2nd-child boost (DCSO) | $20k extended 3 years to Oct 2029; 2nd+ child born ≥16 Sep 2026: $30k for 3 years. Update `newborn-bonus-20k`. | pending |
+| P37 | Child tax allowance increases (FSTB) | 2nd+ child born ≥16 Sep 2026: basic allowance $140k→$160k (YA 2026/27); additional allowance (1st 2 yrs) $140k→$160k (YA 2026/27). | pending |
+| P38 | Stamp duty waiver for newborn families (FSTB) | Up to $20k AVD waiver for property purchased 1yr before–2yr after birth of child born ≥16 Sep 2026 in HK, either parent HKPR. Bill → LegCo H1 2027. | pending |
+| P39 | Carer allowance increase 10% (LWB) | Living Allowance for Carers of Elderly (Low-income) + Carers of PWDs (Low-income): $3,000→$3,300/mo. Expected >10k families. Update existing carer schemes. | pending |
+| P40 | CCSV + RCSV quota increases (LWB) | CCSV +2,000 →18,000; RCSV +1,000 →8,000 in 2027-28. Update `ccsv` and `rcsv-elderly`. | pending |
+| P41 | Young-Old Mentorship Programme (LWB/SWD) | 3-year programme: mutual support network for young-olds to share skills/experience, raise self-worth, active ageing. | pending |
+| P42 | Mobile JoyYou Card (LWB/Octopus) | Launch end of 2026: $2 flat rate / 80% discount without physical card. Push notifications for elderly info. | pending |
+| P43 | Foreign Domestic Carers pilot (LWB/ImmD) | Pilot H2 2027: admit FDCs with ≥3yr elderly care experience + 150hr accredited training (origin country), assessed by HK-commissioned body. Min wage > FDH MAW. Initial few hundred/yr. | pending |
+| P44 | HA IVF quota increase (HHB) | +300 cycles over 3 years from 2026-27: 1,600→1,900/yr. Update `ha-ivf-public`. | pending |
+| P45 | Free pre/ante/postnatal classes at all DHCs (PHC Commission) | Gradual extension to all DHCs/DHC Expresses. FPAHK publicity. | pending |
+| P46 | Artificial Intelligence Subsidy Scheme additional $1B (ITIB) | Further injection to support AIRDI using high-performance computing for frontier AI research. Cyberport AISC. Existing AISS launched 2024, $3B/3yr, >30 projects approved. | pending |
+| P47 | SSSDP 2027/28 sub-degree (EDB) | 2,196 places, 35 programmes, 5 institutions. Lab-based $40,730/yr; non-lab $23,390/yr. 7 disciplines. Announced 2026-11-19. | pending |
+| P48 | Self-financed RCHE premises pilot (LWB) | Newly built govt RCHE premises for self-financed operation by sector, pilot basis, diversified services. | pending |
+| P49 | End-of-life care for subvented RCHEs (LWB) | Additional resources for subvented RCHEs to offer end-of-life care over 3 years. | pending |
+| P50 | GBA Elderly Health Care Voucher expansion (HHB) | Extend service points to "community health centres" of current participating institutions + add more pilot institutions. Update `hcv-2026`. | pending |
+| P51 | RCHE premises incentive enhancement (HB/DEVB) | Allow developers to use GFA-exempt floor area for elderly day-care facilities. | pending |
+| P52 | Regularise FDH elderly/disability care training (LWB) | Pilot Scheme on Training for FDH in Elderly Care + Care for PWDs regularised from Apr 2027. | pending |
+| P53 | Three new aided standalone CCCs (LWB/EDB) | ~1,800 additional day-care places for children <3 by end 2030. | pending |
+| P54 | School-based After School Care regularised (EDB/SWD) | From 2027/28 school year, no quota. Continuous support for primary students' families. | pending |
+| P55 | After School Care Programme for Pre-primary Children strengthened (SWD) | Professional support enhanced: escort services + increased publicity. | pending |
 
 ## Expired / do-not-revive
 

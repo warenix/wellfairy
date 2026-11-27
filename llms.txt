@@ -1,6 +1,6 @@
 # Welly 惠您 — Hong Kong welfare benefit matcher
 
-> 2 分鐘檔案，自動配對 224 項香港政府福利。Free, offline-first, data stays on device.
+> 2 分鐘檔案，自動配對 229 項香港政府福利。Free, offline-first, data stays on device.
 > App: https://warenix.github.io/wellfairy/
 > Machine-readable catalog: https://warenix.github.io/wellfairy/data/benefits.json
 > Sitemap: https://warenix.github.io/wellfairy/sitemap.xml
@@ -79,12 +79,13 @@
 - [在職家庭津貼計劃及兒童津貼 | Working Family Allowance Scheme + Child Allowance](https://warenix.github.io/wellfairy/s/wfa.html) — 時薪級別：$50/$58/$65（1人）至$27,600/$33,100/$38,600每月；設資產限制
 - [展能就業科工作展能計劃（僱主高達$60,000） | Work Orientation and Placement Scheme (employer up to $60,000)](https://warenix.github.io/wellfairy/s/wops-60k.html) — 經展能就業科聘用，僱主9個月高達$60,000（首3月薪金-$500上限$8,000，後6月三分二上限$6,000）。師傅獎$1,500（就業困難軌）或$500。
 
-## student (67)
+## student (72)
 
 - [農產品獎學基金 | Agricultural Products Scholarship Fund](https://warenix.github.io/wellfairy/s/agri-scholarship-2026.html) — 農產品銷售相關家庭學生優異獎學金，經學生資助處提名。
 - [關愛基金貧窮大學生宿舍津貼 | CCF Hostel Subsidy for Needy Undergraduates](https://warenix.github.io/wellfairy/s/ccf-hostel.html) — 通過TSFS/FASP審查並住滿宿舍75%以上學期的大學生獲宿舍津貼。無需另行申請。
 - [持續進修基金 $25,000 | Continuing Education Fund $25,000](https://warenix.github.io/wellfairy/s/cef-25k.html) — 每位申請人最高$25,000（政府80%／自付20%）合資格課程；設終身上限
 - [建造業合作培訓（每月$10,200＋$10,000獎金） | Construction Collaborative Training ($10,200/mo + $10,000 bonus)](https://warenix.github.io/wellfairy/s/cic-itcts-10200.html) — 18歲+、香港居民、先聘後訓：初期每月$10,200津貼，地盤期僱主薪金≥$13,400，考牌＋註冊獎$10,000。進階／技能提升$16,000–$19,000；失業欠就業免學費。
+- [建造業專業畢業生在職培訓資助計劃 (2027–28) | CIC Professional Degree Graduates On-the-Job Training Subsidy Scheme (2027–28)](https://warenix.github.io/wellfairy/s/cic-pdgotss-2027.html) — 僱主資助：$5,000/月 ×12個月/畢業生。每年5,000名額(兩年共10,000)。適用於6專業(工程、建築、測量、規劃、園境、環境)總承建商/顧問公司。畢業生<35歲、香港身份證、認可相關學位、未取得專業資格。
 - [應用教育文憑／毅進學費發還（30–100%） | DAE / Yi Jin Tuition Reimbursement (30–100%)](https://warenix.github.io/wellfairy/s/dae-reimburse.html) — 按入息審查發還DAE/毅進學費30/50/100%（全額／半額憑資格證明；有及格＋80%出席率保底30%）。夜中學只能二選一。
 - [文憑試考試費減免（全免／半免） | HKDSE Exam Fee Remission (Full = free, Half = 50%)](https://warenix.github.io/wellfairy/s/dse-fee-remission.html) — 中六首次應考＋資助全額／半額：考試費全免或半價（語文$777，其他$519）。經學校9月11日至10月7日申請；遲申請先付後退。
 - [直資學校學費減免（不遜於政府資助標準） | DSS School Fee Remission (≥ govt SFAA benchmarks)](https://warenix.github.io/wellfairy/s/dss-fee-remission.html) — 每間直資學校必須設不遜於政府學資處標準的學費減免／獎學金，撥出≥10%學費收入。綜援／學資處家庭原則上獲減免 — 開學前經學校申請。
@@ -94,10 +95,12 @@
 - [教育獎學基金 | Education Scholarships Fund](https://warenix.github.io/wellfairy/s/esf-education-scholarship-2026.html) — 多項優異獎學金助本地學生本地／海外升學，經院校提名。
 - [指定夜間成人教育學費發還（30–100%，17歲+） | Evening Adult Education Reimbursement (30–100%, 17+)](https://warenix.github.io/wellfairy/s/faeaec-evening.html) — 按入息審查發還夜中學費30/50/100%（全額／半額憑資格證明；有出席率保底30%）。17歲+、指定中心。夜中學與DAE只能二選一。
 - [專上學生獎學金計劃（自資課程） | Financial Assistance Scheme for Post-secondary Students (self-financing)](https://warenix.github.io/wellfairy/s/fasp.html) — 全日制自資副學位／高級文憑／學位（30歲或以下、經評審）經審查助學金／貸款。與TSFS同一入息審查。
+- [金融服務業青年實習計劃 (2027–28) | Financial Services Industry Youth Internship Programme (2027–28)](https://warenix.github.io/wellfairy/s/fsdc-financial-services-youth-internship-2027.html) — 兩年(2027上半年起)提供1,000實習名額。金發局+業界合作。金融服務崗位。資助詳情待公布。青年18–30歲(詳情待定)。
 - [未來人才深造獎學金（授課式碩士高達$10萬） | Future Talents Scholarship for Advanced Studies (up to $100,000 TPg)](https://warenix.github.io/wellfairy/s/ftss-2026.html) — 指定授課式深造課程學費減免高達$10萬（8大優先範疇：創科、數碼、金融、法律、文化、創意、健康、可持續）。2026/27須付底線$47,000。每年1,200名額。全日制／兼讀皆可。
 - [全職就業津貼 | Full-time Employment Subsidy](https://warenix.github.io/wellfairy/s/full-time-employment-subsidy.html) — 全職就業津貼資格人士支援
 - [大灣區青年就業計劃2026（僱主月補$12,000） | Greater Bay Area Youth Employment Scheme 2026 (employer $12,000/mo)](https://warenix.github.io/wellfairy/s/gba-yes-2026.html) — 29歲或以下、副學位+：經香港僱主派往大灣區內地工作（學位持有人月薪$18,000或以上）。僱主獲6成薪金資助、上限$12,000/月、為期18個月。
 - [大灣區青年創業（經資助高達$600,000） | GBA Youth Start-ups (up to $600,000 via NGOs)](https://warenix.github.io/wellfairy/s/gba-youth-startup-600k.html) — 本港青年在港／大灣區創業：每隊高達$600,000啟動資助＋孵化、師友、市場網絡，經16間資助NGO（2024–27輪；上輪217隊）。經NGO計劃申請（WeVenture平台）。
+- [畢業生就業啟航計劃 (2027–28) | Graduate Employment Launch (2027–28)](https://warenix.github.io/wellfairy/s/grad-employment-launch-2027.html) — 僱主資助：每月薪金三分一，上限$6,000/月，資助期6個月。2027年首季起兩年增設10,000全職職位。香港居民，29歲或以下，全職經驗≤6個月，非全職受僱。
 - [幼稚園學生就學開支津貼 | Grant for KG School-related Expenses](https://warenix.github.io/wellfairy/s/grant-kg-2026.html) — KCFRS以外額外津貼，9月起自動轉賬。
 - [一帶一路獎學金（全額學費） | Belt and Road Scholarship (full tuition)](https://warenix.github.io/wellfairy/s/gsf-belt-road-2026.html) — 一帶一路國家／地區優異生在港修讀全日制資助課程全額學費。2025/26共150名新獎。
 - [政府獎學基金毅進獎（$15,000，特殊學習需要） | GSF Endeavour Merit Award ($15,000, SEN)](https://warenix.github.io/wellfairy/s/gsf-ema-2026.html) — 特殊學習需要專上學生追求卓越一次性$15,000。
@@ -107,6 +110,7 @@
 - [香港博士研究生獎學金計劃（每年$344,400津貼，400名額） | Hong Kong PhD Fellowship Scheme ($344,400/yr stipend, 400 awards)](https://warenix.github.io/wellfairy/s/hkpfs-2728.html) — 每年400名額。每年津貼$344,400＋會議／差旅$14,400，最長3年。8大新入讀全日制博士，任何國籍。按學業＋研究＋溝通＋領袖擇優。
 - [香港特別行政區政府獎學基金（本地每年$40,000） | HKSAR Government Scholarship ($40,000/yr local)](https://warenix.github.io/wellfairy/s/hksar-gov-scholarship.html) — 全日制資助副學位／學位+優異生本地每年$40,000（非本地$80,000）。院校提名（成績＋領袖＋服務）。
 - [香港卓越獎學金計劃（學費高達每年$30萬＋助學金$20萬） | Hong Kong Scholarship for Excellence Scheme (up to $300,000/yr tuition + $200,000 bursary)](https://warenix.github.io/wellfairy/s/hkses-2627.html) — 每年高達100名。非經濟審查獎學金高達每年$30萬學費＋經濟審查助學金高達每年$20萬生活費。可續至正常修業期。
+- [青年發展局青年創業實習計劃 (優化版, 2027) | HYAB Youth Start-up Internship Programme (Enhanced, 2027)](https://warenix.github.io/wellfairy/s/hyab-youth-startup-internship-2027.html) — 薪金資助≥$11,000/月(2026年$11,490)。3–6個月於數碼港/科大園區創業公司 + 新設港深創科園實習。2027年名額由200增至300。18–30歲香港永久居民/本地生，全日制專上課程(副學位/學士/研究生)。
 - [創新科技獎學金（高達$150,000＋海外交流） | Innovation & Technology Scholarship (up to $150,000 + overseas attachment)](https://warenix.github.io/wellfairy/s/innotech-scholarship-150k.html) — 非應屆畢業本地本科生（任何學科）高達$150,000：海外／內地交流（≥3週，須含內地）、師友、服務計劃、本地科企實習。每年25名，經大學提名（第16屆，累計400人）。
 - [幼稚園入學註冊證／入學許可證（9–11月申請！） | K1 Registration Certificate / Admission Pass (apply Sep–Nov!)](https://warenix.github.io/wellfairy/s/k1-rc-ap.html) — 無註冊證入唔到資助幼稚園K1。註冊證有資助，許可證交全費。9–11月申請，6–8星期處理，電子證QR碼1月統一註冊用。
 - [幼稚園及幼兒中心學費減免計劃 | Kindergarten and Child Care Centre Fee Remission Scheme](https://warenix.github.io/wellfairy/s/kcfrs-2026.html) — K1-K3學費減免100%/75%/50%，家庭入息限額AFI。
@@ -135,6 +139,7 @@
 - [柏立基爵士信託基金研究生獎學金 | Sir Robert Black Trust Fund Postgraduate Scholarships](https://warenix.github.io/wellfairy/s/srb-postgrad-2026.html) — 香港畢業生海外研究生獎學金，優異者經提名競逐。
 - [指定專業課程資助2026/27（實驗室$81,450／非實驗室$46,780） | SSSDP 2026/27: Designated Professions Subsidy ($81,450 lab / $46,780)](https://warenix.github.io/wellfairy/s/sssdp-2627.html) — 57個課程4,781個學士名額（10大人才短缺學科）。實驗室$81,450/年、非實驗室$46,780/年；應用學位$89,620/$51,880。經JUPAS／院校直收。
 - [實習津貼（每月$11,790，每年≤90天） | STEM Internship Allowance ($11,790/mo, ≤90 days/yr)](https://warenix.github.io/wellfairy/s/stem-internship-11790.html) — 每30天$11,790（2026年4月1日起），每年上限$35,370（90天）。指定大學全日制STEM本科／研究生（本地＋非本地）；經大學安排創科相關實習≥28天。不可與其他政府實習資助重疊。
+- [STEM 實習計劃 (擴展版, 2027–28) | STEM Internship Scheme (Expanded, 2027–28)](https://warenix.github.io/wellfairy/s/stem-internship-expanded-2027.html) — 學生實習津貼$11,790/月(由2026年4月起)，上限每學年≤90天。擴展：2027年起兩年約10,000名額。9所指定大學STEM本科/研究生 + 研發中心/生產力局。非本地生只可參與香港實習。
 - [共創明：師友＋$10,000（中一至中四） | Strive and Rise: Teen Mentoring + $10,000 (S1-S4)](https://warenix.github.io/wellfairy/s/strive-rise-teen.html) — 基層中一至中四（特別劏房戶）：1年師友＋發展計劃＋$5,000啟動＋$5,000畢業獎學金。每屆4,000名額，經學校。
 - [學生資助計劃 | Student Finance Assistance Scheme](https://warenix.github.io/wellfairy/s/student-finance-assistance.html) — 學生資助計劃資格人士支援
 - [學生健康服務（中小學生免費全年檢查） | Student Health Service (free annual check, P/S day students)](https://warenix.github.io/wellfairy/s/student-health-service.html) — 合資格中小日校生13間中心免費全年檢查（生長、視力、聽力、輔導）。
