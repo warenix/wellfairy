@@ -74,6 +74,50 @@
     ]
   },
   {
+    "id": "after-school-care-regularised-2027",
+    "title_en": "School-based After School Care Regularised (EDB/SWD, from 2027/28)",
+    "title_zh": "校本課後託管常規化 (教育局/社署, 2027/28學年起)",
+    "category": "family",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "household",
+    "value_summary_en": "School-based After School Care Service Scheme regularised from 2027/28 school year, no quota limit. Continuous support for primary school students' families.",
+    "value_summary_zh": "校本課後託管服務計劃2027/28學年起常規化,不設名額上限。持續支援小學生家庭。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Primary school student",
+      "HK resident family",
+      "School participating in scheme"
+    ],
+    "apply_link": "https://www.edb.gov.hk/",
+    "apply_link_zh": "https://www.edb.gov.hk/",
+    "needs": {
+      "hk_resident": true,
+      "has_kids_any": true
+    },
+    "why_en": "Primary school parent — free after-school care at school, no quota limit from 2027/28.",
+    "why_zh": "小學生家長 — 校內免費課後託管,2027/28起不設名額上限。",
+    "proof_needed_zh": [
+      "小學生",
+      "香港居民家庭",
+      "學校參與計劃"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address fertility measure 10; Annex indicator 120",
+      "Regularised from 2027/28 school year; no quota",
+      "Was pilot/scheme before; now permanent"
+    ],
+    "confirm_zh": [
+      "2026年施政報告鼓勵生育第10項措施;附件指標120",
+      "2027/28學年起常規化;不設名額上限",
+      "以往為先導/計劃;現為永久安排"
+    ],
+    "event_based": false
+  },
+  {
     "id": "agri-scholarship-2026",
     "title_en": "Agricultural Products Scholarship Fund",
     "title_zh": "農產品獎學基金",
@@ -103,6 +147,49 @@
     ],
     "source_url_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php",
     "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
+  },
+  {
+    "id": "ai-subsidy-scheme-additional-1b-2027",
+    "title_en": "Artificial Intelligence Subsidy Scheme Additional $1B (ITIB, 2027)",
+    "title_zh": "人工智能資助計劃額外撥款$10億 (創新科技及工業局, 2027)",
+    "category": "family",
+    "kind": "opportunity",
+    "payment": "varies",
+    "audience": "business",
+    "value_summary_en": "Additional $1B injection into AISS (launched 2024, $3B/3yr) to support AIRDI using Cyberport AISC high-performance computing for frontier AI research. >30 projects approved, >$1.7B committed. For local institutions/R&D/tech enterprises.",
+    "value_summary_zh": "向AISS(2024年啟動,$30億/3年)額外注資$10億,支持港大AI研發院(AIRDI)善用數碼港超算中心(AISC)算力做前沿AI研究。已批>30項目,撥款>$17億。適用於本地機構/研發中心/科技企業。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter5.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter5.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Local institution/R&D centre/tech enterprise",
+      "Frontier AI research using high-performance computing",
+      "Details per AISS Committee guidelines"
+    ],
+    "apply_link": "https://www.cyberport.hk/en/ai_supercomputing_centre",
+    "apply_link_zh": "https://www.cyberport.hk/tc/ai_supercomputing_centre",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "AI researcher/enterprise — $1B more for AISC computing power for frontier research.",
+    "why_zh": "AI研究者/企業 — 額外$10億算力資助做前沿研究。",
+    "proof_needed_zh": [
+      "本地機構/研發中心/科技企業",
+      "利用高性能算力進行前沿AI研究",
+      "按AISS委員會指引申請"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address Chapter 5 para 201; ITIB speeches Oct/Nov 2026",
+      "Existing AISS (2024, $3B/3yr) via Cyberport AISC; this is additional $1B for AIRDI",
+      "Not a direct individual benefit — supports enterprise/research R&D"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第5章第201段宣佈；創科局10/11月講話確認",
+      "現有AISS(2024,$30億/3年)經數碼港AISC運作;此為額外$10億支援AIRDI",
+      "非直接個人福利 — 支援企業/研究機構研發"
+    ],
+    "event_based": false
   },
   {
     "id": "ascp",
@@ -1875,6 +1962,47 @@
     "why_zh": "擔心又唔敢問 — 免費保密，直接去。"
   },
   {
+    "id": "dhc-free-prenatal-classes-2027",
+    "title_en": "Free Pre/Ante/Postnatal Classes at All DHCs (PHC Commission, from 2027)",
+    "title_zh": "全區健康中心免費產前/產後/產中課程 (基層醫療發展辦, 2027年起)",
+    "category": "health",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "self",
+    "value_summary_en": "Free pre-pregnancy, antenatal and postnatal classes gradually extended to all DHCs and DHC Expresses. FPAHK publicity campaign. For expectant/new parents in the district.",
+    "value_summary_zh": "免費婚前、產前、產後課程逐步推展至所有地區健康中心(DHC)及DHC Express。香港家庭計劃指導會宣傳。適用於轄區準父母/新手父母。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "HK resident, expectant or new parent",
+      "Residing in DHC service district"
+    ],
+    "apply_link": "https://www.primaryhealthcare.gov.hk/",
+    "apply_link_zh": "https://www.primaryhealthcare.gov.hk/",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Expectant/new parent — free classes at your local DHC coming progressively.",
+    "why_zh": "準父母/新手父母 — 免費課程將逐步覆蓋所有地區健康中心。",
+    "proof_needed_zh": [
+      "香港居民、準父母或新手父母",
+      "居住於DHC服務地區"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address measure 8; gradual extension, timeline TBD",
+      "FPAHK to launch publicity campaign",
+      "Separate from HA IVF quota increase"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第8項措施；逐步推展，時間表待定",
+      "香港家庭計劃指導會將推出宣傳活動",
+      "與醫管局體外授精增額不同"
+    ],
+    "event_based": false
+  },
+  {
     "id": "dhc-member",
     "title_en": "District Health Centre Membership (free, lifelong)",
     "title_zh": "地區康健中心會籍（免費、終身）",
@@ -2808,6 +2936,49 @@
         "note_zh": "同一學年只可領TSFS或FASP其中一項"
       }
     ]
+  },
+  {
+    "id": "fdh-training-regularised-2027",
+    "title_en": "FDH Elderly/Disability Care Training Regularised (LWB, from Apr 2027)",
+    "title_zh": "外傭長者/殘疾照顧培訓常規化 (勞福局, 2027年4月起)",
+    "category": "elderly",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "self",
+    "value_summary_en": "Pilot Scheme on Training for FDH in Elderly Care + Care for PWDs regularised from Apr 2027. Enhances basic caregiving skills of FDHs, improves quality of life for elderly/PWDs at home, alleviates carer pressure.",
+    "value_summary_zh": "外傭長者照顧培訓先導計劃及外傭殘疾人士照顧培訓先導計劃,2027年4月起常規化。提升外傭基本照顧技能,改善長者/殘疾人士居家生活質素,紓緩照顧者壓力。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Employed FDH",
+      "Employer consent",
+      "Training provider accredited"
+    ],
+    "apply_link": "https://www.lwb.gov.hk/",
+    "apply_link_zh": "https://www.lwb.gov.hk/",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Employer with FDH caring for elderly/PWD — free training to upskill your helper.",
+    "why_zh": "僱用外傭照顧長者/殘疾人士 — 免費培訓提升外傭照顧技能。",
+    "proof_needed_zh": [
+      "受僱外傭",
+      "僱主同意",
+      "培訓機構獲認可"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address measure 5 (Support Carers) & para 376(5); Supplement p.7",
+      "Regularised from Apr 2027; was pilot before",
+      "Complements new Foreign Domestic Carers pilot (separate scheme)"
+    ],
+    "confirm_zh": [
+      "2026年施政報告照顧者支援第5項及第376段第5項宣佈;補充文件第7頁",
+      "2027年4月起常規化;以往為先導計劃",
+      "配合新增外籍家庭照顧者先導計劃(另一計劃)"
+    ],
+    "event_based": false
   },
   {
     "id": "fit-solar-4kwh",
@@ -3963,6 +4134,51 @@
     "source_url_zh": "https://www.hcv.gov.hk/tc/hcvs/background.html",
     "apply_link_zh": "https://www.hcv.gov.hk/tc/",
     "needs_ehealth": true
+  },
+  {
+    "id": "hcv-gba-expansion-2027",
+    "title_en": "GBA Elderly Health Care Voucher Expansion (HHB, from 2027)",
+    "title_zh": "大灣區長者醫療券擴展 (衞生局, 2027年起)",
+    "category": "health",
+    "kind": "entitlement",
+    "payment": "varies",
+    "audience": "self",
+    "value_summary_en": "Extend EHCV GBA Pilot service points to community health centres of current participating institutions + add more pilot institutions. For HK elderly in GBA.",
+    "value_summary_zh": "擴展長者醫療券大灣區先導計劃服務點至現有參與機構的社區健康中心,並增設更多先導機構。適用於居住大灣區港籍長者。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "HK resident aged 65+, eligible for EHCV",
+      "Residing in Guangdong/Fujian GBA cities",
+      "Using participating institution"
+    ],
+    "apply_link": "https://www.hcv.gov.hk/",
+    "apply_link_zh": "https://www.hcv.gov.hk/",
+    "needs": {
+      "min_age": 65,
+      "hk_resident": true,
+      "lives_mainland": true
+    },
+    "why_en": "HK elderly in GBA — more service points for health care voucher use.",
+    "why_zh": "居住大灣區港籍長者 — 醫療券可用服務點增加。",
+    "proof_needed_zh": [
+      "65歲以上香港居民、合資格用醫療券",
+      "居住廣東/福建大灣區城市",
+      "使用參與計劃機構"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 394; details TBD",
+      "Updates existing hcv-2026 scheme (GBA pilot)",
+      "Community health centres of current institutions + new pilot institutions"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第394段宣佈;詳情待定",
+      "更新現有hcv-2026計劃(大灣區先導)",
+      "現有機構社區健康中心 + 新增先導機構"
+    ],
+    "event_based": false
   },
   {
     "id": "hcv-reward-2026",
@@ -7085,6 +7301,50 @@
     "apply_link_zh": "https://www.swd.gov.hk/tc/"
   },
   {
+    "id": "pre-primary-after-school-strengthened-2027",
+    "title_en": "After School Care Programme for Pre-primary Children Strengthened (SWD, from 2027)",
+    "title_zh": "學前兒童課後託管計劃優化 (社署, 2027年起)",
+    "category": "family",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "household",
+    "value_summary_en": "Professional support enhanced for pre-primary after-school care: escort services + increased publicity. For children under 6.",
+    "value_summary_zh": "優化學前兒童課後託管專業支援:增設護送服務 + 加強宣傳。適用於6歲以下兒童。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Child under 6",
+      "HK resident family",
+      "Enrolled in participating service"
+    ],
+    "apply_link": "https://www.swd.gov.hk/",
+    "apply_link_zh": "https://www.swd.gov.hk/",
+    "needs": {
+      "hk_resident": true,
+      "toddler": true
+    },
+    "why_en": "Parent of child under 6 — better after-school care with escort service and more info.",
+    "why_zh": "6歲以下子女家長 — 改善課後託管,增設護送服務、更多資訊。",
+    "proof_needed_zh": [
+      "6歲以下子女",
+      "香港居民家庭",
+      "參與計劃服務"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address fertility measure 11",
+      "Enhancement of existing programme; professional support + escort + publicity",
+      "Complements regularised school-based after-school care (measure 10)"
+    ],
+    "confirm_zh": [
+      "2026年施政報告鼓勵生育第11項措施",
+      "優化現有計劃:專業支援+護送+宣傳",
+      "配合校本課後託管常規化(第10項措施)"
+    ],
+    "event_based": false
+  },
+  {
     "id": "prh-apply",
     "title_en": "Public Rental Housing Application (income + asset tested)",
     "title_zh": "公屋申請（入息及資產審查）",
@@ -7321,6 +7581,94 @@
     ],
     "why_en": "Smoking in the house — free help that actually works.",
     "why_zh": "屋企有人食煙 — 免費又有成效的幫助。"
+  },
+  {
+    "id": "rche-end-of-life-care-2027",
+    "title_en": "End-of-life Care for Subvented RCHEs (3-year, from 2027)",
+    "title_zh": "資助安老院舍臨終關顧服務 (三年, 2027年起)",
+    "category": "elderly",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "self",
+    "value_summary_en": "Additional resources for subvented RCHEs to offer end-of-life care services over 3 years. For terminally ill elderly residents.",
+    "value_summary_zh": "為資助安老院舍提供額外資源推行臨終關顧服務,為期三年。適用於末期病長者住客。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Resident of subvented RCHE",
+      "Terminal illness diagnosis",
+      "Service availability at specific RCHE"
+    ],
+    "apply_link": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "apply_link_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "needs": {
+      "min_age": 60,
+      "hk_resident": true,
+      "requires_elderly_in_house": true
+    },
+    "why_en": "Terminally ill elderly in RCHE — dedicated end-of-life care support coming.",
+    "why_zh": "院舍內末期病長者 — 將有專門臨終關顧支援。",
+    "proof_needed_zh": [
+      "資助安老院舍住客",
+      "確診末期疾病",
+      "該院舍提供臨終關顧服務"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 393(5); 3-year programme from 2027",
+      "Subvented RCHEs only; implementation details TBD",
+      "Complements existing palliative care services"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第393段第5項宣佈;2027年起三年計劃",
+      "僅限資助安老院舍;推行詳情待定",
+      "配合現有紓緩照顧服務"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "rche-premises-incentive-2027",
+    "title_en": "RCHE Premises Incentive Enhancement (HB/DEVB, from 2027)",
+    "title_zh": "安老院舍 premises 激勵優化 (房屋局/發展局, 2027年起)",
+    "category": "housing",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "business",
+    "value_summary_en": "Allow developers to use GFA-exempt floor area for elderly day-care facilities in new private developments. Incentivises RCHE/day-care provision.",
+    "value_summary_zh": "容許發展商在新私人發展項目中,利用豁免計算總樓面面積的樓面面積,提供長者日間照顧設施。激勵提供安老院舍/日間照顧。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Property developer with new private development",
+      "Proposal for elderly day-care facility using GFA-exempt area",
+      "Approval by relevant authorities"
+    ],
+    "apply_link": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "apply_link_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Developer — GFA exemption for including elderly day-care in new buildings.",
+    "why_zh": "發展商 — 新樓宇加入長者日間照顧設施可獲豁免總樓面面積。",
+    "proof_needed_zh": [
+      "有新私人發展項目的發展商",
+      "擬用豁免樓面面積提供長者日間照顧設施",
+      "獲相關當局批准"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 393(4); details TBD",
+      "Enhancement of existing incentive scheme for RCHE premises",
+      "Benefits developers, not direct elderly benefit"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第393段第4項宣佈;詳情待定",
+      "優化現有安老院舍 premises 激勵計劃",
+      "受惠者為發展商,非直接長者福利"
+    ],
+    "event_based": false
   },
   {
     "id": "rcsv",
@@ -7835,6 +8183,51 @@
     ],
     "why_en": "You have a primary-school child — $45 for a year of dental.",
     "why_zh": "你有小學生 — $45包全年牙科。"
+  },
+  {
+    "id": "self-financed-rche-pilot-2027",
+    "title_en": "Self-financed RCHE Premises Pilot (LWB, from 2027)",
+    "title_zh": "自負盈虧安老院舍 premises 先導計劃 (勞福局, 2027年起)",
+    "category": "elderly",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "self",
+    "value_summary_en": "Newly built govt RCHE premises for self-financed operation by sector on pilot basis, allowing diversified residential care services. For elderly needing residential care.",
+    "value_summary_zh": "新建政府安老院舍 premises 供業界自負盈虧營運先導計劃,提供多元化住宿照顧服務。適用於需住宿照顧長者。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Elderly assessed as needing RCS (SCNAMES)",
+      "On CWL for residential care",
+      "Details TBD — pilot not yet launched"
+    ],
+    "apply_link": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "apply_link_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "needs": {
+      "min_age": 60,
+      "hk_resident": true,
+      "requires_elderly_in_house": true
+    },
+    "why_en": "Elderly needing residential care — new self-financed RCHE option from pilot.",
+    "why_zh": "需要住宿照顧長者 — 自負盈虧院舍先導計劃提供新選擇。",
+    "proof_needed_zh": [
+      "經統一評估需住宿照顧服務(SCNAMES)",
+      "輪候中央輪候冊住宿服務",
+      "詳情待定 — 先導計劃未啟動"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 393(2); details TBD",
+      "Pilot basis — not a permanent scheme yet",
+      "Operator self-financed; Govt provides premises only"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第393段第2項宣佈;詳情待定",
+      "先導計劃性質 — 非長期計劃",
+      "營辦機構自負盈虧;政府只提供 premises"
+    ],
+    "event_based": false
   },
   {
     "id": "senior-card",
@@ -8454,6 +8847,50 @@
     "apply_link_zh": "https://www.wfsfaa.gov.hk/tc/other/index.php"
   },
   {
+    "id": "sssdp-2027-subdegree",
+    "title_en": "SSSDP 2027/28 Sub-degree Programmes (2,196 places, $40,730/$23,390)",
+    "title_zh": "指定專業/界別課程資助計劃 2027/28 副學位 (2,196個名額, $40,730/$23,390)",
+    "category": "student",
+    "kind": "entitlement",
+    "payment": "annual",
+    "audience": "self",
+    "value_summary_en": "2,196 places in 35 sub-degree programmes at 5 institutions for 2027/28. Lab-based $40,730/yr; non-lab $23,390/yr. 7 disciplines: architecture/engineering, computer science, creative industries, healthcare, sports/recreation, testing/certification, tourism/hospitality. For local students meeting residency requirement.",
+    "value_summary_zh": "2027/28學年5間院校35個副學位課程共2,196個資助名額。實驗室課程$40,730/年;非實驗室$23,390/年。7大範疇:建築/工程、電腦科學、創意產業、醫療、體育/康樂、測試/認證、旅遊/款待。本地生須符合居住要求。",
+    "deadline": null,
+    "source_url": "https://www.info.gov.hk/gia/general/202611/19/P2026111900217.htm",
+    "source_url_zh": "https://www.info.gov.hk/gia/general/202611/19/P2026111900217_557667_1_1795061999682.pdf",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Local student meeting residency requirement (from 2027/28)",
+      "Admitted to designated SSSDP sub-degree programme",
+      "Full-time study"
+    ],
+    "apply_link": "https://www.cspe.edu.hk/sssdp",
+    "apply_link_zh": "https://www.cspe.edu.hk/sssdp",
+    "needs": {
+      "tertiary": true,
+      "hk_resident": true
+    },
+    "why_en": "Local sub-degree student in high-demand field — annual subsidy up to $40,730.",
+    "why_zh": "修讀高需求範疇副學位的本地生 — 每年資助高達$40,730。",
+    "proof_needed_zh": [
+      "符合居住要求的本地生(2027/28起適用)",
+      "獲取錄修讀SSSDP指定副學位課程",
+      "全日制就讀"
+    ],
+    "confirm_en": [
+      "Announced 2026-11-19 by EDB; distinct from existing sssdp-2627 (undergrad)",
+      "5 institutions: HKCT IHE, HKU SPACE PLK, HKMU, SFU, TWC",
+      "Students may still apply for SFAA means-tested aid for remaining fees"
+    ],
+    "confirm_zh": [
+      "教育局2026-11-19宣佈;區別於現有sssdp-2627(學士學位)",
+      "5間院校:港專學院、港大專業進修保良局、都大、聖方濟各、東華學院",
+      "學生仍可申請學生資助處入息審查資助支付餘下學費"
+    ],
+    "event_based": false
+  },
+  {
     "id": "sssdp-2627",
     "title_en": "SSSDP 2026/27: Designated Professions Subsidy ($81,450 lab / $46,780)",
     "title_zh": "指定專業課程資助2026/27（實驗室$81,450／非實驗室$46,780）",
@@ -8537,6 +8974,50 @@
       "稅局常見問題：https://www.ird.gov.hk/chi/faq/newbornconcession.htm",
       "尚未立法 — 須待修訂條例生效後適用",
       "如條例生效前已繳付符合條件物業的從價稅，可申請退還"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "standalone-ccc-2030",
+    "title_en": "Three New Aided Standalone CCCs (~1,800 places by 2030)",
+    "title_zh": "三間新資助獨立幼兒中心 (~1,800個學額, 2030年)",
+    "category": "family",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "household",
+    "value_summary_en": "3 new aided standalone child care centres (CCCs) by end 2030, providing ~1,800 additional day-care places for children under 3. Part of 11 fertility measures.",
+    "value_summary_zh": "2030年底前增設3間資助獨立幼兒中心(CCC),提供約1,800個額外3歲以下兒童日間照顧學額。11項鼓勵生育措施之一。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Child under 3",
+      "HK resident family",
+      "Place availability at new CCC"
+    ],
+    "apply_link": "https://www.swd.gov.hk/",
+    "apply_link_zh": "https://www.swd.gov.hk/",
+    "needs": {
+      "hk_resident": true,
+      "toddler": true
+    },
+    "why_en": "Family with child under 3 — 1,800 more subsidised day-care places by 2030.",
+    "why_zh": "有3歲以下子女家庭 — 2030年前新增1,800個資助日間照顧學額。",
+    "proof_needed_zh": [
+      "3歲以下子女",
+      "香港居民家庭",
+      "新CCC有學額"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address fertility measure 9; Annex indicator 119",
+      "By end 2030; locations TBD; aided standalone CCCs",
+      "Complements existing CCC subsidy and NSCCP"
+    ],
+    "confirm_zh": [
+      "2026年施政報告鼓勵生育第9項措施;附件指標119",
+      "2030年底前;地點待定;資助獨立幼兒中心",
+      "配合現有幼兒中心資助及鄰里支援幼兒照顧計劃"
     ],
     "event_based": false
   },

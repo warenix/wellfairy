@@ -141,17 +141,17 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P42 | Mobile JoyYou Card (LWB/Octopus) | `mobile-joyyou-card-2026` | done (nemotron-ultra) | 2026-11-27 |
 | P43 | Foreign Domestic Carers pilot (LWB/ImmD) | `foreign-domestic-carers-pilot-2027` | done (nemotron-ultra) | 2026-11-27 |
 | P44 | HA IVF quota increase (HHB) | `ha-ivf-quota-increase-2027` | done (nemotron-ultra) | 2026-11-27 |
-| P45 | Free pre/ante/postnatal classes at all DHCs (PHC Commission) | Gradual extension to all DHCs/DHC Expresses. FPAHK publicity. | pending |
-| P46 | Artificial Intelligence Subsidy Scheme additional $1B (ITIB) | Further injection to support AIRDI using high-performance computing for frontier AI research. Cyberport AISC. Existing AISS launched 2024, $3B/3yr, >30 projects approved. | pending |
-| P47 | SSSDP 2027/28 sub-degree (EDB) | 2,196 places, 35 programmes, 5 institutions. Lab-based $40,730/yr; non-lab $23,390/yr. 7 disciplines. Announced 2026-11-19. | pending |
-| P48 | Self-financed RCHE premises pilot (LWB) | Newly built govt RCHE premises for self-financed operation by sector, pilot basis, diversified services. | pending |
-| P49 | End-of-life care for subvented RCHEs (LWB) | Additional resources for subvented RCHEs to offer end-of-life care over 3 years. | pending |
-| P50 | GBA Elderly Health Care Voucher expansion (HHB) | Extend service points to "community health centres" of current participating institutions + add more pilot institutions. Update `hcv-2026`. | pending |
-| P51 | RCHE premises incentive enhancement (HB/DEVB) | Allow developers to use GFA-exempt floor area for elderly day-care facilities. | pending |
-| P52 | Regularise FDH elderly/disability care training (LWB) | Pilot Scheme on Training for FDH in Elderly Care + Care for PWDs regularised from Apr 2027. | pending |
-| P53 | Three new aided standalone CCCs (LWB/EDB) | ~1,800 additional day-care places for children <3 by end 2030. | pending |
-| P54 | School-based After School Care regularised (EDB/SWD) | From 2027/28 school year, no quota. Continuous support for primary students' families. | pending |
-| P55 | After School Care Programme for Pre-primary Children strengthened (SWD) | Professional support enhanced: escort services + increased publicity. | pending |
+| P45 | Free pre/ante/postnatal classes at all DHCs (PHC Commission) | `dhc-free-prenatal-classes-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P46 | Artificial Intelligence Subsidy Scheme additional $1B (ITIB) | `ai-subsidy-scheme-additional-1b-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P47 | SSSDP 2027/28 sub-degree (EDB) | `sssdp-2027-subdegree` | done (nemotron-ultra) | 2026-11-27 |
+| P48 | Self-financed RCHE premises pilot (LWB) | `self-financed-rche-pilot-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P49 | End-of-life care for subvented RCHEs (LWB) | `rche-end-of-life-care-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P50 | GBA Elderly Health Care Voucher expansion (HHB) | `hcv-gba-expansion-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P51 | RCHE premises incentive enhancement (HB/DEVB) | `rche-premises-incentive-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P52 | Regularise FDH elderly/disability care training (LWB) | `fdh-training-regularised-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P53 | Three new aided standalone CCCs (LWB/EDB) | `standalone-ccc-2030` | done (nemotron-ultra) | 2026-11-27 |
+| P54 | School-based After School Care regularised (EDB/SWD) | `after-school-care-regularised-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P55 | After School Care Programme for Pre-primary Children strengthened (SWD) | `pre-primary-after-school-strengthened-2027` | done (nemotron-ultra) | 2026-11-27 |
 
 ## Expired / do-not-revive
 
