@@ -9468,5 +9468,93 @@
       "基本免稅額與額外免稅額同由$14萬增至$16萬"
     ],
     "event_based": false
+  },
+  {
+    "id": "young-old-mentorship-2027",
+    "title_en": "Young-Old Mentorship Programme (3-year, from 2027)",
+    "title_zh": "青老導師計劃 (三年, 2027年起)",
+    "category": "elderly",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "self",
+    "value_summary_en": "3-year programme by LWB+SWD: mutual support network for young-olds (vibrant seniors) to share skills/experience, raise self-worth, active ageing. Aligns with OEP. Details TBD, launch 2027.",
+    "value_summary_zh": "勞福局+社署三年計劃：建立青老互助網絡，讓有活力長者分享技能經驗、提升自我價值、實踐活力老齡。與長者機會計劃(OEP)方向一致。詳情待定，2027年推出。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Age 60+, vibrant health, willing to mentor/share skills",
+      "Details to be announced by LWB/SWD in 2027"
+    ],
+    "apply_link": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "apply_link_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "needs": {
+      "min_age": 60,
+      "hk_resident": true
+    },
+    "why_en": "Vibrant senior wanting to contribute — mentor others, stay active, build self-worth.",
+    "why_zh": "有活力長者想貢獻社會 — 當導師、分享經驗、活力老齡。",
+    "proof_needed_zh": [
+      "60歲以上、健康、願意擔任導師/分享技能",
+      "詳情待勞福局/社署2027年公布"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 396; LegCo Panel paper Oct 2026 confirms LWB+SWD launch",
+      "3-year programme, details TBD — not yet open for application",
+      "Aligns with existing Opportunities for the Elderly Project (OEP)"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第396段宣佈；立法會福利事務委員會文件確認勞福局+社署推出",
+      "三年計劃，詳情待定 — 尚未開放申請",
+      "方向與現有長者機會計劃(OEP)一致"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "mobile-joyyou-card-2026",
+    "title_en": "Mobile JoyYou Card (launched end of 2026)",
+    "title_zh": "流動樂悠咭 (2026年底推出)",
+    "category": "transport",
+    "kind": "service",
+    "payment": "varies",
+    "audience": "self",
+    "value_summary_en": "Digital JoyYou Card on iPhone/Android via Octopus App: enjoy $2 flat rate or 80% off public transport without physical card. Requires iAM Smart app + HK Smart ID. Apply via Octopus App (new) or transfer physical card. $20 first-time fee subsidised by Govt. Approval ~2 weeks. Launched Nov 2026.",
+    "value_summary_zh": "iPhone/Android上用Octopus App裝流動樂悠咭：免實體卡享$2平價或八折車費。需iAM Smart App+智慧身份證。Octopus App申請新咭或轉移實體咭。首次申請費$20政府資助。批核約2週。2026年11月已推出。",
+    "deadline": null,
+    "source_url": "https://www.octopus.com.hk/en/consumer/joyyou/mobile-octopus/about/index.html",
+    "source_url_zh": "https://www.octopus.com.hk/tc/consumer/joyyou/mobile-octopus/about/index.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "HK resident aged 60+, valid HK Smart Identity Card",
+      "Compatible phone (iPhone 8+/iOS latest, Android 12+/NFC)",
+      "iAM Smart app + Octopus App installed"
+    ],
+    "apply_link": "https://www.octopus.com.hk/en/consumer/joyyou/mobile-octopus/apply/index.html",
+    "apply_link_zh": "https://www.octopus.com.hk/tc/consumer/joyyou/mobile-octopus/apply/index.html",
+    "needs": {
+      "min_age": 60,
+      "hk_resident": true
+    },
+    "why_en": "60+ HK resident — use phone instead of physical card for $2/80% transport concession.",
+    "why_zh": "60歲以上港人 — 用手機代替實體咭享$2/八折車費優惠。",
+    "proof_needed_zh": [
+      "香港居民60歲以上、有效智慧身份證",
+      "支援手機(iPhone 8+/最新iOS, Android 12+/NFC)",
+      "已安裝iAM Smart App + Octopus App"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 397; launched Nov 2026 per Octopus",
+      "Can only hold ONE JoyYou Card (physical OR mobile) — transfer disables old card",
+      "Octopus App is ticket inspection interface; phone must have battery",
+      "Physical JoyYou Card NOT discontinued — choose either"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第397段宣佈；八達通2026年11月已推出",
+      "只可持一張樂悠咭(實體或流動) — 轉移後舊咭失效",
+      "Octopus App為查票介面；手機須有電",
+      "實體樂悠咭並未停發 — 可自行選擇"
+    ],
+    "event_based": false
   }
 ]

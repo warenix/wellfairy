@@ -1,6 +1,6 @@
 # Welly 惠您 — Hong Kong welfare benefit matcher
 
-> 2 分鐘檔案，自動配對 233 項香港政府福利。Free, offline-first, data stays on device.
+> 2 分鐘檔案，自動配對 235 項香港政府福利。Free, offline-first, data stays on device.
 > App: https://warenix.github.io/wellfairy/
 > Machine-readable catalog: https://warenix.github.io/wellfairy/data/benefits.json
 > Sitemap: https://warenix.github.io/wellfairy/sitemap.xml
@@ -220,7 +220,7 @@
 - [疫苗資助計劃 | Vaccination Subsidy Scheme](https://warenix.github.io/wellfairy/s/vss-elderly.html) — 指定診所享流感/肺炎球菌資助，去前先問有無貨。
 - [女性健康衛星中心（64歲或以下，分擔收費篩查） | Women Wellness Satellites (≤64, co-pay screening)](https://warenix.github.io/wellfairy/s/wws-women.html) — 預防為本婦女檢查（評估、子宮頸＋乳房篩查、護士診所），經地區康健中心轉介、分擔收費。先入會DHC。柴灣2025年6月開；藍田＋屯門9月起。
 
-## elderly (25)
+## elderly (26)
 
 - [低收入家庭護老者生活津貼 ($3,300/月) | Living Allowance for Carers of Elderly Persons from Low-income Families ($3,300/mo)](https://warenix.github.io/wellfairy/s/carer-elderly-3000.html) — 每月$3,300 (施政報告加幅10%)。照顧80小時+/月(2老120小時+)。長者需經安老服務統一評估機制輪候資助長期護理、在社區居住。
 - [照顧者支援專線 182 183 (24小時免費) | Carer Hotline 182 183 (24hr, free)](https://warenix.github.io/wellfairy/s/carer-hotline.html) — 24小時社工專線：輔導、暫託配對、外展探訪、暫託交通津貼。聽障/言語障礙WhatsApp 5322 2183。
@@ -247,12 +247,14 @@
 - [安老按揭（55歲+，終身月收） | Reverse Mortgage on Flat (55+, monthly payouts for life)](https://warenix.github.io/wellfairy/s/reverse-mortgage-property.html) — 55歲+，物業抵押；60歲每$1,000,000物業值$2,000/月（浮息、終身）；$25,000,000上限；2026年3月固定4%/+5%選項
 - [長者咭 (65歲+) | Senior Citizen Card (65+)](https://warenix.github.io/wellfairy/s/senior-card.html) — 年齡證明，享交通、政府及商戶優惠。
 - [智齡長者數碼課程＋平板借用（免費，60歲+） | Smart Silver Elderly ICT Courses + Tablet Lending (free, 60+)](https://warenix.github.io/wellfairy/s/smartsilver-ict.html) — 經長者學苑／NGO免費：智方便、電子錢包、內地App、AI助手、防騙；全港流動外展＋平板借用。2026–2028新一輪（加AI、區塊鏈、編程）。
+- [青老導師計劃 (三年, 2027年起) | Young-Old Mentorship Programme (3-year, from 2027)](https://warenix.github.io/wellfairy/s/young-old-mentorship-2027.html) — 勞福局+社署三年計劃：建立青老互助網絡，讓有活力長者分享技能經驗、提升自我價值、實踐活力老齡。與長者機會計劃(OEP)方向一致。詳情待定，2027年推出。
 
-## transport (11)
+## transport (12)
 
 - [$2優惠計劃 (60歲以下殘疾人士) | $2 Scheme for Disabled Persons (<60)](https://warenix.github.io/wellfairy/s/fare-2-disabled.html) — 同享$2/8折，用殘疾身份個人八達通。批出傷殘津貼/綜援時社署會寄已核實申請表。
 - [$2優惠計劃 (60歲+ 樂悠咭) | $2 Scheme (60+, JoyYou Card)](https://warenix.github.io/wellfairy/s/fare-2dollar.html) — 每程$2或八折優惠（以較低者計算），需用悠遊咭；無悠遊咭為$2固定
 - [九巴月票（$834／30日，每日10程） | KMB Monthly Pass ($834/30 days, 10 trips/day)](https://warenix.github.io/wellfairy/s/kmb-monthly-834.html) — 付$834包30日：每日最多10程九巴龍運＋2程B1，450+條線。八達通售票機買。
+- [流動樂悠咭 (2026年底推出) | Mobile JoyYou Card (launched end of 2026)](https://warenix.github.io/wellfairy/s/mobile-joyyou-card-2026.html) — iPhone/Android上用Octopus App裝流動樂悠咭：免實體卡享$2平價或八折車費。需iAM Smart App+智慧身份證。Octopus App申請新咭或轉移實體咭。首次申請費$20政府資助。批核約2週。2026年11月已推出。
 - [港鐵都會票（$460＝40程／40日） | MTR City Saver ($460 = 40 rides / 40 days)](https://warenix.github.io/wellfairy/s/mtr-city-saver.html) — 付$460包40程單程、40日內67個市區站用。啱頻繁中長途過海返工。買後14日內展開首程。
 - [港鐵早鳥75折（平日7:15-8:15出閘） | MTR Early Bird 25% Off (7:15-8:15am weekdays)](https://warenix.github.io/wellfairy/s/mtr-early-bird-25.html) — 平日（假日除外）7:15-8:15成人八達通出指定市區站75折。可疊加轉乘／特惠站／全月通接駁折。
 - [港鐵特惠站減$2＋綠轉乘優惠 | MTR Fare Saver $2 Off + Green-Minibus Interchange](https://warenix.github.io/wellfairy/s/mtr-fare-saver-2.html) — 撳特惠站讀卡器同日搭港鐵：成人八達通減$2。另港鐵↔全部綠Van線八達通轉乘減$0.5+。

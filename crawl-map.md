@@ -137,8 +137,8 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P38 | Stamp duty waiver for newborn families (FSTB) | `stamp-duty-waiver-newborn-2027` | done (nemotron-ultra) | 2026-11-27 |
 | P39 | Carer allowance increase 10% (LWB) | `carer-elderly-3000`, `carer-disabled-3000` | done (nemotron-ultra) | 2026-11-27 |
 | P40 | CCSV + RCSV quota increases (LWB) | `ccsv`, `rcsv` | done (nemotron-ultra) | 2026-11-27 |
-| P41 | Young-Old Mentorship Programme (LWB/SWD) | 3-year programme: mutual support network for young-olds to share skills/experience, raise self-worth, active ageing. | pending |
-| P42 | Mobile JoyYou Card (LWB/Octopus) | Launch end of 2026: $2 flat rate / 80% discount without physical card. Push notifications for elderly info. | pending |
+| P41 | Young-Old Mentorship Programme (LWB/SWD) | `young-old-mentorship-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P42 | Mobile JoyYou Card (LWB/Octopus) | `mobile-joyyou-card-2026` | done (nemotron-ultra) | 2026-11-27 |
 | P43 | Foreign Domestic Carers pilot (LWB/ImmD) | Pilot H2 2027: admit FDCs with ≥3yr elderly care experience + 150hr accredited training (origin country), assessed by HK-commissioned body. Min wage > FDH MAW. Initial few hundred/yr. | pending |
 | P44 | HA IVF quota increase (HHB) | +300 cycles over 3 years from 2026-27: 1,600→1,900/yr. Update `ha-ivf-public`. | pending |
 | P45 | Free pre/ante/postnatal classes at all DHCs (PHC Commission) | Gradual extension to all DHCs/DHC Expresses. FPAHK publicity. | pending |
