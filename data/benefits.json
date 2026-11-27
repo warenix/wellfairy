@@ -463,17 +463,17 @@
   },
   {
     "id": "carer-disabled-3000",
-    "title_en": "Living Allowance for Low-income Carers of Persons with Disabilities ($3,000/mo)",
-    "title_zh": "低收入家庭殘疾人士照顧者生活津貼 ($3,000/月)",
+    "title_en": "Living Allowance for Low-income Carers of Persons with Disabilities ($3,300/mo)",
+    "title_zh": "低收入家庭殘疾人士照顧者生活津貼 ($3,300/月)",
     "category": "health",
     "kind": "entitlement",
     "payment": "monthly",
     "audience": "household",
-    "value_summary_en": "$3,000/mo for carers giving 80+ hrs/mo. PWD must be on rehab/special-school/infirmary waitlist, living in community.",
-    "value_summary_zh": "每月$3,000。照顧80小時+/月。殘疾人士需輪候康復/特殊學校住宿/療養服務，在社區居住。",
+    "value_summary_en": "$3,300/mo for carers giving 80+ hrs/mo (10% increase from 2026 Policy Address). PWD must be on rehab/special-school/infirmary waitlist, living in community.",
+    "value_summary_zh": "每月$3,300 (施政報告加幅10%)。照顧80小時+/月。殘疾人士需輪候康復/特殊學校住宿/療養服務，在社區居住。",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/rehab/cat_supportcom/scpd/alcpd/",
-    "updated_at": "2026-10-08",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "Waitlist letter (CRSRehab/EDB/HA)",
       "Care hours declaration",
@@ -489,16 +489,18 @@
       "PWD on specified rehab waitlist",
       "80+ hrs care/mo (120+ if 2 persons)",
       "Household income within CAST table by size",
-      "One living allowance per care recipient - caring for two different persons may be claimed separately (confirm with SWD)"
+      "One living allowance per care recipient - caring for two different persons may be claimed separately (confirm with SWD)",
+      "10% increase announced in 2026 Policy Address, effective date TBA"
     ],
     "confirm_zh": [
       "殘疾人士輪候指定康復服務",
       "每月照顧80小時+(2人120小時+)",
       "住戶入息符合CAST按人數限額",
-      "每位受照顧者只限一項照顧者津貼；照顧兩位不同人士或可分開申領（請向社署確認）"
+      "每位受照顧者只限一項照顧者津貼；照顧兩位不同人士或可分開申領（請向社署確認）",
+      "2026年施政報告宣佈加幅10%，生效日期待定"
     ],
-    "why_en": "You care for a disabled person 80+ hrs/mo and are not on CSSA/OALA/DA.",
-    "why_zh": "你每月照顧殘疾人士80小時+，且非領綜合社會保障援助/長者生活津貼/傷殘津貼。",
+    "why_en": "You care for a disabled person 80+ hrs/mo and are not on CSSA/OALA/DA — now $3,300/mo.",
+    "why_zh": "你每月照顧殘疾人士80小時+，且非領綜合社會保障援助/長者生活津貼/傷殘津貼 — 現為$3,300/月。",
     "proof_needed_zh": [
       "輪候信(康復服務中央轉介系統/教育局/醫管局)",
       "照顧時數聲明",
@@ -517,17 +519,17 @@
   },
   {
     "id": "carer-elderly-3000",
-    "title_en": "Living Allowance for Carers of Elderly Persons from Low-income Families ($3,000/mo)",
-    "title_zh": "低收入家庭護老者生活津貼 ($3,000/月)",
+    "title_en": "Living Allowance for Carers of Elderly Persons from Low-income Families ($3,300/mo)",
+    "title_zh": "低收入家庭護老者生活津貼 ($3,300/月)",
     "category": "elderly",
     "kind": "entitlement",
     "payment": "monthly",
     "audience": "household",
-    "value_summary_en": "$3,000/mo for carers giving 80+ hrs/mo (120+ for 2 elderly). Elderly must be on CWL for long-term care, living in community.",
-    "value_summary_zh": "每月$3,000。照顧80小時+/月(2老120小時+)。長者需經安老服務統一評估機制輪候資助長期護理、在社區居住。",
+    "value_summary_en": "$3,300/mo for carers giving 80+ hrs/mo (120+ for 2 elderly) — 10% increase from 2026 Policy Address. Elderly must be on CWL for long-term care, living in community.",
+    "value_summary_zh": "每月$3,300 (施政報告加幅10%)。照顧80小時+/月(2老120小時+)。長者需經安老服務統一評估機制輪候資助長期護理、在社區居住。",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_careersupp/allowanceforcarersoftheelderly/",
-    "updated_at": "2026-10-08",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "SCNAMES assessment + CWL letter",
       "Care hours declaration",
@@ -546,7 +548,8 @@
       "Household income within CAST table by size",
       "Carer not employed by the elderly",
       "Income caps by size: 1p $18,000 / 2p $24,225 / 3p $30,750 / 4p $38,700 / 5p $47,925 / 6+ $52,800",
-      "One living allowance per care recipient - caring for two different persons may be claimed separately (confirm with SWD)"
+      "One living allowance per care recipient - caring for two different persons may be claimed separately (confirm with SWD)",
+      "10% increase announced in 2026 Policy Address, effective date TBA"
     ],
     "confirm_zh": [
       "長者經安老服務統一評估機制並輪候資助長期護理",
@@ -554,10 +557,11 @@
       "住戶入息符合CAST按人數限額",
       "照顧者非受僱於長者",
       "按人數入息限額：1人$18,000／2人$24,225／3人$30,750／4人$38,700／5人$47,925／6人+$52,800",
-      "每位受照顧者只限一項照顧者津貼；照顧兩位不同人士或可分開申領（請向社署確認）"
+      "每位受照顧者只限一項照顧者津貼；照顧兩位不同人士或可分開申領（請向社署確認）",
+      "2026年施政報告宣佈加幅10%，生效日期待定"
     ],
-    "why_en": "You care for an elderly person 80+ hrs/mo and are not on CSSA/OALA/DA.",
-    "why_zh": "你每月照顧長者80小時+，且非領綜合社會保障援助/長者生活津貼/傷殘津貼。",
+    "why_en": "You care for an elderly person 80+ hrs/mo and are not on CSSA/OALA/DA — now $3,300/mo.",
+    "why_zh": "你每月照顧長者80小時+，且非領綜合社會保障援助/長者生活津貼/傷殘津貼 — 現為$3,300/月。",
     "proof_needed_zh": [
       "安老服務統一評估+中央輪候冊信件",
       "照顧時數聲明",
@@ -886,11 +890,11 @@
     "kind": "entitlement",
     "payment": "monthly",
     "audience": "self",
-    "value_summary_en": "Up to $10,824/mo home/centre care voucher after SCNAMES assessment. Co-pay by affordability.",
-    "value_summary_zh": "經統一評估後最高$10,824/月社區照顧服務券，自選服務單位，按負擔能力共同付款（自付）。",
+    "value_summary_en": "Up to $10,824/mo home/centre care voucher after SCNAMES assessment. Co-pay by affordability. Quota +2,000 to 18,000 in 2027-28 per 2026 Policy Address.",
+    "value_summary_zh": "經統一評估後最高$10,824/月社區照顧服務券，自選服務單位，按負擔能力共同付款（自付）。2026年施政報告：名額增2,000至18,000個(2027-28年度)。",
     "deadline": null,
     "source_url": "https://www.gov.hk/en/residents/housing/socialservices/elderly/elderlyservices.htm",
-    "updated_at": "2026-10-09",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "SCNAMES assessment",
       "HKID"
@@ -901,18 +905,20 @@
       "hk_resident": true,
       "requires_elderly_in_house": true
     },
-    "why_en": "Household has elderly needing care. Requires assessment.",
-    "why_zh": "家中有需要照顧長者，需經評估。",
+    "why_en": "Household has elderly needing care. Requires assessment. Quota expanding to 18,000 in 2027-28.",
+    "why_zh": "家中有需要照顧長者，需經評估。名額將於2027-28增至18,000個。",
     "proof_needed_zh": [
       "安老服務統一評估機制評估",
       "香港身份證"
     ],
     "source_url_zh": "https://www.gov.hk/tc/residents/housing/socialservices/elderly/elderlyservices.htm",
     "confirm_en": [
-      "SWD invites by CWL application-date batches; or apply via VISE"
+      "SWD invites by CWL application-date batches; or apply via VISE",
+      "Quota increase to 18,000 in 2027-28 announced in 2026 Policy Address"
     ],
     "confirm_zh": [
-      "社署按中央輪候冊日期分批邀請，亦可經VISE網上申請"
+      "社署按中央輪候冊日期分批邀請，亦可經VISE網上申請",
+      "2026年施政報告宣佈2027-28年度名額增至18,000個"
     ],
     "conflicts": [
       {
@@ -1131,6 +1137,51 @@
       "香港身份證"
     ],
     "source_url_zh": "https://www.chp.gov.hk/files/pdf/0_health_information_on_cancer_screening_chi.pdf"
+  },
+  {
+    "id": "child-tax-allowance-increase-2026",
+    "title_en": "Child Tax Allowance Increase (2nd+ child born ≥16 Sep 2026)",
+    "title_zh": "子女免稅額加寬 (2026年9月16日或後出生的第二名或其後子女)",
+    "category": "family",
+    "kind": "entitlement",
+    "payment": "annual",
+    "audience": "household",
+    "value_summary_en": "2nd+ child born ≥16 Sep 2026: basic child allowance $140,000→$160,000 (YA 2026/27); additional child allowance (1st 2 years) $140,000→$160,000 (YA 2026/27). Claimable until child turns 25.",
+    "value_summary_zh": "2026年9月16日或後出生的第二名或其後子女：基本免稅額$140,000→$160,000(2026/27課稅年度)；額外免稅額(首兩年)$140,000→$160,000(2026/27課稅年度)。可申領至子女25歲。",
+    "deadline": null,
+    "source_url": "https://www.ird.gov.hk/eng/tax/policyaddress2026.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/policyaddress2026.htm",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "2nd+ child born in HK on/after 16 Sep 2026",
+      "Taxpayer or spouse",
+      "Child qualifies as dependent"
+    ],
+    "apply_link": "https://www.ird.gov.hk/eng/tax/policyaddress2026.htm",
+    "apply_link_zh": "https://www.ird.gov.hk/chi/tax/policyaddress2026.htm",
+    "needs": {
+      "hk_resident": true,
+      "toddler": true,
+      "married": true
+    },
+    "why_en": "2nd+ child born ≥16 Sep 2026 — higher tax allowance saves tax until child turns 25.",
+    "why_zh": "2026年9月16日或後出生第二名或其後子女 — 更高免稅額節稅至子女25歲。",
+    "proof_needed_zh": [
+      "第二名或其後子女於2026年9月16日或後在港出生",
+      "納稅人或其配偶",
+      "子女符合受養人資格"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address measures 3-4; Annex indicator 117",
+      "Effective YA 2026/27; requires legislative amendment",
+      "Basic + additional allowance both increased from $140k to $160k"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第3-4項措施；附件指標117",
+      "2026/27課稅年度生效；須經立法修訂",
+      "基本免稅額與額外免稅額同由$14萬增至$16萬"
+    ],
+    "event_based": false
   },
   {
     "id": "cic-itcts-10200",
@@ -7138,12 +7189,12 @@
     "kind": "entitlement",
     "payment": "monthly",
     "audience": "self",
-    "value_summary_en": "From Apr 2026: $17,015/mo care-and-attention, $21,982 nursing. For SCNAMES-RCS elders on the CWL; invited in batches, apply via VISE.",
-    "value_summary_zh": "2026年4月起：照顧$17,015/月、護養$21,982/月。經統一評估需院舍並輪候冊等候長者；分批邀請，可經VISE申請。",
+    "value_summary_en": "From Apr 2026: $17,015/mo care-and-attention, $21,982 nursing. For SCNAMES-RCS elders on the CWL; invited in batches, apply via VISE. Quota +1,000 to 8,000 in 2027-28 per 2026 Policy Address.",
+    "value_summary_zh": "2026年4月起：照顧$17,015/月、護養$21,982/月。經統一評估需院舍並輪候冊等候長者；分批邀請，可經VISE申請。2026年施政報告：名額增1,000至8,000個(2027-28年度)。",
     "deadline": null,
     "source_url": "https://www.swd.gov.hk/en/pubsvc/elderly/cat_residentcare/psrcsv/",
     "source_url_zh": "https://www.swd.gov.hk/tc/pubsvc/elderly/cat_residentcare/psrcsv/",
-    "updated_at": "2026-10-08",
+    "updated_at": "2026-11-27",
     "proof_needed_en": [
       "SCNAMES RCS assessment",
       "CWL waitlist place",
@@ -7165,16 +7216,18 @@
       "Inactive CWL status or already-placed elders excluded",
       "Level-0 holders: auto fee waiver path",
       "L0 holders: medical fee waiver + full Samaritan/CCF help; care supplement for diapers/special diets",
-      "CWL status goes inactive in trial; resumes if you opt out"
+      "CWL status goes inactive in trial; resumes if you opt out",
+      "Quota increase to 8,000 in 2027-28 announced in 2026 Policy Address"
     ],
     "confirm_zh": [
       "凍結輪候或已入住者不合",
       "零級券持有人走自動減免通道",
       "第0級：醫療費用減免＋撒瑪利亞／關愛基金全資；尿片／特別餐飲有照顧補助金",
-      "試用期中央輪候冊凍結；退出可復效"
+      "試用期中央輪候冊凍結；退出可復效",
+      "2026年施政報告宣佈2027-28年度名額增至8,000個"
     ],
-    "why_en": "Residential care in the family future — know the voucher before the crisis.",
-    "why_zh": "家中或需院舍照顧 — 危機前先認識此券。",
+    "why_en": "Residential care in the family future — know the voucher before the crisis. Quota expanding to 8,000 in 2027-28.",
+    "why_zh": "家中或需院舍照顧 — 危機前先認識此券。名額將於2027-28增至8,000個。",
     "conflicts": [
       {
         "with": "ccsv",
@@ -8297,6 +8350,54 @@
     ],
     "why_en": "Self-financing degree at home - up to $81,450 off, no means test.",
     "why_zh": "家有自資學位生 — 最高減$81,450，免審查。"
+  },
+  {
+    "id": "stamp-duty-waiver-newborn-2027",
+    "title_en": "Stamp Duty Waiver for Newborn Families (up to $20,000, from 2027)",
+    "title_zh": "新生嬰兒家庭印花稅寬免 (最高$20,000, 2027年起)",
+    "category": "housing",
+    "kind": "entitlement",
+    "payment": "one_off",
+    "audience": "household",
+    "value_summary_en": "Up to $20,000 AVD waiver for residential property purchased 1 year before to 2 years after birth of child born ≥16 Sep 2026 in HK. Either parent must be HKPR. Bill to LegCo H1 2027. Not yet in effect.",
+    "value_summary_zh": "購買住宅物業由子女出生前1年至出生後2年(子女須於2026年9月16日或後在港出生)，可獲印花稅從價稅寬免上限$20,000。父或母需為香港永久居民。法案2027上半年提交立法會。尚未生效。",
+    "deadline": null,
+    "source_url": "https://www.ird.gov.hk/eng/tax/policyaddress2026.htm",
+    "source_url_zh": "https://www.ird.gov.hk/chi/tax/policyaddress2026.htm",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Child born in HK on/after 16 Sep 2026",
+      "Either parent HKPR",
+      "Property purchased 1yr before–2yr after birth",
+      "Parent acquiring on own behalf"
+    ],
+    "apply_link": "https://www.ird.gov.hk/eng/tax/policyaddress2026.htm",
+    "apply_link_zh": "https://www.ird.gov.hk/chi/tax/policyaddress2026.htm",
+    "needs": {
+      "hk_resident": true,
+      "toddler": true
+    },
+    "why_en": "Newborn family buying home — up to $20,000 stamp duty relief coming 2027.",
+    "why_zh": "新生嬰兒家庭購樓 — 最高$20,000印花稅寬免2027年生效。",
+    "proof_needed_zh": [
+      "子女2026年9月16日或後在港出生",
+      "父或母為香港永久居民",
+      "物業購入時間：出生前1年至出生後2年",
+      "父母以個人名義購入"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address measure 5; Annex indicator 118: Bill to LegCo H1 2027",
+      "IRD FAQ: https://www.ird.gov.hk/eng/faq/newbornconcession.htm",
+      "Not yet law — applies only after amendment ordinance enacted",
+      "Can apply for refund if AVD paid before enactment on qualifying property"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第5項措施；附件指標118：2027上半年提交法案",
+      "稅局常見問題：https://www.ird.gov.hk/chi/faq/newbornconcession.htm",
+      "尚未立法 — 須待修訂條例生效後適用",
+      "如條例生效前已繳付符合條件物業的從價稅，可申請退還"
+    ],
+    "event_based": false
   },
   {
     "id": "stem-internship-11790",

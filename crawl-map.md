@@ -132,11 +132,11 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P33 | 30,000 Youth Employment and Internship Programme (2027-28) | `grad-employment-launch-2027`, `stem-internship-expanded-2027`, `hyab-youth-startup-internship-2027`, `cic-pdgotss-2027`, `fsdc-financial-services-youth-internship-2027` | done (nemotron-ultra) | 2026-11-27
 | P34 | Gerontechnology Promotion Scheme (ITIB) | `gerontechnology-promotion-scheme-2027` | done (nemotron-ultra) | 2026-11-27 |
 | P35 | HA Gerontechnology Pilot (HB) | `hkha-gerontechnology-pilot-2027` | done (nemotron-ultra) | 2026-11-27 |
-| P36 | Newborn Baby Bonus extension + 2nd-child boost (DCSO) | $20k extended 3 years to Oct 2029; 2nd+ child born ≥16 Sep 2026: $30k for 3 years. Update `newborn-bonus-20k`. | pending |
-| P37 | Child tax allowance increases (FSTB) | 2nd+ child born ≥16 Sep 2026: basic allowance $140k→$160k (YA 2026/27); additional allowance (1st 2 yrs) $140k→$160k (YA 2026/27). | pending |
-| P38 | Stamp duty waiver for newborn families (FSTB) | Up to $20k AVD waiver for property purchased 1yr before–2yr after birth of child born ≥16 Sep 2026 in HK, either parent HKPR. Bill → LegCo H1 2027. | pending |
-| P39 | Carer allowance increase 10% (LWB) | Living Allowance for Carers of Elderly (Low-income) + Carers of PWDs (Low-income): $3,000→$3,300/mo. Expected >10k families. Update existing carer schemes. | pending |
-| P40 | CCSV + RCSV quota increases (LWB) | CCSV +2,000 →18,000; RCSV +1,000 →8,000 in 2027-28. Update `ccsv` and `rcsv-elderly`. | pending |
+| P36 | Newborn Baby Bonus extension + 2nd-child boost (DCSO) | `newborn-bonus-20k` (already updated) | done (nemotron-ultra) | 2026-11-27 |
+| P37 | Child tax allowance increases (FSTB) | `child-tax-allowance-increase-2026` | done (nemotron-ultra) | 2026-11-27 |
+| P38 | Stamp duty waiver for newborn families (FSTB) | `stamp-duty-waiver-newborn-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P39 | Carer allowance increase 10% (LWB) | `carer-elderly-3000`, `carer-disabled-3000` | done (nemotron-ultra) | 2026-11-27 |
+| P40 | CCSV + RCSV quota increases (LWB) | `ccsv`, `rcsv` | done (nemotron-ultra) | 2026-11-27 |
 | P41 | Young-Old Mentorship Programme (LWB/SWD) | 3-year programme: mutual support network for young-olds to share skills/experience, raise self-worth, active ageing. | pending |
 | P42 | Mobile JoyYou Card (LWB/Octopus) | Launch end of 2026: $2 flat rate / 80% discount without physical card. Push notifications for elderly info. | pending |
 | P43 | Foreign Domestic Carers pilot (LWB/ImmD) | Pilot H2 2027: admit FDCs with ≥3yr elderly care experience + 150hr accredited training (origin country), assessed by HK-commissioned body. Min wage > FDH MAW. Initial few hundred/yr. | pending |

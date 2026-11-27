@@ -191,8 +191,8 @@
   },
   "carer-elderly-3000": {
     "decision": "approved",
-    "by": "ses_ee9b92e8dffegkt5qUOMaghRKx",
-    "at": "2026-10-07"
+    "by": "nemotron-ultra",
+    "at": "2026-11-27"
   },
   "ccf-gd-rche-5000": {
     "decision": "approved",
@@ -506,13 +506,13 @@
   },
   "carer-disabled-3000": {
     "decision": "approved",
-    "by": "warenix",
-    "at": "2026-10-08"
+    "by": "nemotron-ultra",
+    "at": "2026-11-27"
   },
   "ccsv": {
     "decision": "approved",
-    "by": "full-recrawl-2026-10-09 (user pre-authorized publish-if-valid)",
-    "at": "2026-10-09"
+    "by": "nemotron-ultra",
+    "at": "2026-11-27"
   },
   "cdcc-cocare": {
     "decision": "approved",
@@ -616,8 +616,8 @@
   },
   "rcsv": {
     "decision": "approved",
-    "by": "warenix",
-    "at": "2026-10-08"
+    "by": "nemotron-ultra",
+    "at": "2026-11-27"
   },
   "rcsv-elderly": {
     "decision": "approved",
@@ -845,6 +845,16 @@
     "at": "2026-11-27"
   },
   "hkha-gerontechnology-pilot-2027": {
+    "decision": "approved",
+    "by": "nemotron-ultra",
+    "at": "2026-11-27"
+  },
+  "child-tax-allowance-increase-2026": {
+    "decision": "approved",
+    "by": "nemotron-ultra",
+    "at": "2026-11-27"
+  },
+  "stamp-duty-waiver-newborn-2027": {
     "decision": "approved",
     "by": "nemotron-ultra",
     "at": "2026-11-27"
