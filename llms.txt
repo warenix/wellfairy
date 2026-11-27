@@ -1,6 +1,6 @@
 # Welly 惠您 — Hong Kong welfare benefit matcher
 
-> 2 分鐘檔案，自動配對 229 項香港政府福利。Free, offline-first, data stays on device.
+> 2 分鐘檔案，自動配對 231 項香港政府福利。Free, offline-first, data stays on device.
 > App: https://warenix.github.io/wellfairy/
 > Machine-readable catalog: https://warenix.github.io/wellfairy/data/benefits.json
 > Sitemap: https://warenix.github.io/wellfairy/sitemap.xml
@@ -154,7 +154,7 @@
 - [展翅青見計劃 | Youth Employment & Training Programme](https://warenix.github.io/wellfairy/s/yetp.html) — 15-29歲副學位或以下：有薪實習($8,000津貼)、培訓$333/日、就業顧問跟進。免費。
 - [青年就業津貼 | Youth Employment Subsidy](https://warenix.github.io/wellfairy/s/youth-employment-subsidy.html) — 青年就業津貼資格人士支援
 
-## housing (19)
+## housing (20)
 
 - [樓宇安全貸款（每單位高達$100萬，有免息途徑） | Building Safety Loan (up to $1,000,000/unit, interest-free path)](https://warenix.github.io/wellfairy/s/bd-safety-loan.html) — 私人樓宇業主：每單位高達$100萬做維修、消防、升降機、渠務、僭建、斜坡。付息貸款免審查；綜援／長生津／低收入免息（60歲+單人入息≤$13,455、資產≤$415,000）。60歲+困難可延至轉售／身故還。
 - [有需要業主維修津貼$80,000（長者業主） | Building Maintenance Grant $80,000 (needy elderly owners)](https://warenix.github.io/wellfairy/s/bmgsno-80k.html) — 60歲+自住業主（或長生津／綜援／傷殘津貼經審查）：每業主／物業高達$80,000做單位＋公用安全工程。10年最多4次。經市建局。（舊$40,000長者計劃2020年停。）
@@ -164,6 +164,7 @@
 - [上網電價太陽能（≤10千瓦每度$4，至2033年） | Feed-in Tariff Solar ($4/kWh ≤10kW, to 2033)](https://warenix.github.io/wellfairy/s/fit-solar-4kwh.html) — 天台太陽能售予中電／港燈：≤10千瓦每度$4、10–200千瓦$3、200千瓦–1兆瓦$2.5 — 總電量計，鎖定至項目完結或2033年底。村屋天台最常見。2024年9月已批約26,000宗。
 - [長者換樓計劃（60歲+，差價養老） | Flat-for-Flat for Elderly SSF Owners (60+, keep the surplus)](https://warenix.github.io/wellfairy/s/flat-for-flat-elderly.html) — 全家60歲+、持有房委會資助屋10年+：付$500換樓證費，居二市場賣樓，買細單位或偏遠區，差價留用養老。2026年9月28日起收表。
 - [大廈管理諮詢（免費，三無／舊樓） | Building Management Advisory (free, three-nil/old buildings)](https://warenix.github.io/wellfairy/s/had-bmpass.html) — 民政免費幫：BMPASS（18區至2027年7月）助三無／停擺法團大廈成立／重啟法團、申請維修貸款資助、招標；法團諮詢計劃（2025–26接受申請）；新法團$3,000津貼（經市建局）。
+- [房委會樂齡科技先導計劃 (長者住戶, 2027-28起) | HKHA Gerontechnology Pilot (Elderly Households, from 2027-28)](https://warenix.github.io/wellfairy/s/hkha-gerontechnology-pilot-2027.html) — 為高齡獨居長者及全長者戶引進家用樂齡科技設備，於高長者比例公屋邨試行。首階段(2027-28)5個屋邨、約1,500戶。設備類型(如跌倒偵測)待定。逐步推展至其他屋邨。
 - [居屋綠表 (公屋戶) | HOS Green Form (PRH tenants)](https://warenix.github.io/wellfairy/s/hos-green.html) — 綠表：公屋住戶3年+，無入息資產審查；優先家庭、長者
 - [居屋白表 (資助出售房屋) | HOS White Form (subsidised flats)](https://warenix.github.io/wellfairy/s/hos-white.html) — 白表：1人入息≤$30,000、資產≤$615,000；2人≤$60,000/≤$1,230,000；$350申請費
 - [家居維修免息貸款（$50,000） | Home Renovation Interest-free Loan ($50,000)](https://warenix.github.io/wellfairy/s/hril-50k.html) — 合資格業主每單位免息貸款高達$50,000做室內維修（包括窗戶）。樓宇安全貸款的姊妹計劃（IBRAS）。
@@ -176,7 +177,7 @@
 - [水安全計劃資助（每幢高達$310,000） | Water Safety Plan Subsidy (up to $310,000/building)](https://warenix.github.io/wellfairy/s/wsd-wspss-310k.html) — 每幢高達$310,000資助推行水安全計劃：風險評估＋計劃（$10,000）、兩輪2年保養（$32,500＋$10,000）、審核（$5,000＋$2,500）、整改工程至$250,000。私人住宅／綜合樓宇（差餉限額內）；法團／委員會／合作社申請。
 - [青年宿舍計劃（六折租金，18-30歲） | Youth Hostel Scheme (≤60% market rent, 18-30)](https://warenix.github.io/wellfairy/s/youth-hostel-yhs.html) — 在職青年18-30歲（香港永久居民、無物業）：宿舍六折租金，首約2年、最長5年。申請時入息資產審查。約3,700宿位。
 
-## health (37)
+## health (38)
 
 - [乳癌篩查先導計劃第二期 (高風險35-74歲) | Breast Cancer Screening Pilot Programme Phase II (high-risk 35-74)](https://warenix.github.io/wellfairy/s/breast-pilot2.html) — 高風險35-74歲女性(家族史/BRCA)：NGO+衛生署資助造影。無病徵、過去一年無照過。
 - [低收入家庭殘疾人士照顧者生活津貼 ($3,000/月) | Living Allowance for Low-income Carers of Persons with Disabilities ($3,000/mo)](https://warenix.github.io/wellfairy/s/carer-disabled-3000.html) — 每月$3,000。照顧80小時+/月。殘疾人士需輪候康復/特殊學校住宿/療養服務，在社區居住。
@@ -194,6 +195,7 @@
 - [殘疾人士登記證 | Registration Card for People with Disabilities](https://warenix.github.io/wellfairy/s/disabled-registration-card.html) — 殘疾身分證明文件（2024年6月24日起設實體證＋電子證）；首次簽發及續證免費；補領遺失證件或更改證面資料須繳付$61費用
 - [長者健康中心會籍（65歲+，只可一間） | Elderly Health Centre Membership (65+, one centre only)](https://warenix.github.io/wellfairy/s/ehc-member.html) — 65歲+：18間中心家庭醫學團隊全年檢查、輔導、治療。外展健康講座免費。輪候較長；服務正併入地區網絡。
 - [企業支援計劃 | Enterprise Support Scheme (ESS)](https://warenix.github.io/wellfairy/s/ess-itf.html) — 每項項目最高$10,000,000港元的等額配對資助，用於院內研發；最長項目時長24個月
+- [樂齡科技推廣計劃 (創新科技及工業局, 2027上半年推出) | Gerontechnology Promotion Scheme (ITIB, from H1 2027)](https://warenix.github.io/wellfairy/s/gerontechnology-promotion-scheme-2027.html) — 預留$1億支持本地科技企業開發長者照顧產品/方案。2027上半年推出。詳情(資格、資助形式、申請流程)待定。尚未開放申請。
 - [白內障手術計劃（$8,000資助＋自付≤$8,000） | Cataract Surgeries Programme ($8,000 subsidy + ≤$8,000 copay)](https://warenix.github.io/wellfairy/s/ha-cataract-ppp.html) — 在醫管局白內障例行輪候名單（穩定組、可局部麻醉）：獲邀私家手術 — 資助$8,000、自付上限$8,000；合資格豁免（綜援／全免／75歲+長生津／長者券第0級）經名單醫生$0。須登記醫健通。
 - [醫院管理局醫療費用減免機制 (最長18個月) | Medical Fee Waiving Mechanism, Hospital Authority (up to 18 months)](https://warenix.github.io/wellfairy/s/ha-fee-waiver.html) — 全免費用：家庭收入≤100% MMDHI（2人+）或≤150% MMDHI（1人）；資產限制=公屋上限；18個月有效
 - [醫管局家庭醫學門診（$150/次，全年$10,000封頂） | HA Family Medicine Clinics ($150/visit, $10,000 yearly cap)](https://warenix.github.io/wellfairy/s/ha-fmc-cap.html) — 合資格香港身份證持有人：$150/次＋$5/種藥（4星期）、$50洗傷口打針，基本化驗照X光免費。HA Go預約。（前普通科，2026年1月1日新收費。）

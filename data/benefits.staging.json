@@ -9283,5 +9283,89 @@
       "將設專題網頁+「青年就業通」申請"
     ],
     "event_based": false
+  },
+  {
+    "id": "gerontechnology-promotion-scheme-2027",
+    "title_en": "Gerontechnology Promotion Scheme (ITIB, from H1 2027)",
+    "title_zh": "樂齡科技推廣計劃 (創新科技及工業局, 2027上半年推出)",
+    "category": "health",
+    "kind": "opportunity",
+    "payment": "varies",
+    "audience": "business",
+    "value_summary_en": "$100M earmarked to support local tech enterprises developing elderly-care products/solutions. Launch H1 2027. Details (eligibility, funding type, application process) TBD. Not yet open for applications.",
+    "value_summary_zh": "預留$1億支持本地科技企業開發長者照顧產品/方案。2027上半年推出。詳情(資格、資助形式、申請流程)待定。尚未開放申請。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "Local technology enterprise developing elderly-care products/solutions",
+      "Details to be announced by ITIB in H1 2027"
+    ],
+    "apply_link": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "apply_link_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "needs": {
+      "hk_resident": true
+    },
+    "why_en": "Tech enterprise developing gerontechnology — $100M fund coming H1 2027.",
+    "why_zh": "開發樂齡科技的企業 — $1億基金2027上半年推出。",
+    "proof_needed_zh": [
+      "開發長者照顧產品/方案的本地科技企業",
+      "詳情待創新科技及工業局2027上半年公布"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 400; launch H1 2027 per Annex indicator 175",
+      "Operational details (grant/subsidy/procurement, eligibility, application) not yet published",
+      "Separate from I&T Fund for Elderly/Rehabilitation Care (SWD) and HKHA pilot"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第400段宣佈；附件指標175指2027上半年推出",
+      "營運詳情(資助/補貼/採購、資格、申請)尚未公布",
+      "與創新及科技基金(長者及復康護理)(社署)及房委會先導計劃不同"
+    ],
+    "event_based": false
+  },
+  {
+    "id": "hkha-gerontechnology-pilot-2027",
+    "title_en": "HKHA Gerontechnology Pilot (Elderly Households, from 2027-28)",
+    "title_zh": "房委會樂齡科技先導計劃 (長者住戶, 2027-28起)",
+    "category": "housing",
+    "kind": "service",
+    "payment": "one_off",
+    "audience": "self",
+    "value_summary_en": "Household gerontech equipment for elderly singletons & all-elderly households in selected PRH estates with high elderly population. 5 estates, ~1,500 households first phase (2027-28). Equipment type (e.g. fall detection) TBD. Gradual extension to other estates.",
+    "value_summary_zh": "為高齡獨居長者及全長者戶引進家用樂齡科技設備，於高長者比例公屋邨試行。首階段(2027-28)5個屋邨、約1,500戶。設備類型(如跌倒偵測)待定。逐步推展至其他屋邨。",
+    "deadline": null,
+    "source_url": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "source_url_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "updated_at": "2026-11-27",
+    "proof_needed_en": [
+      "PRH tenant in selected estate (5 estates TBD for 2027-28)",
+      "Elderly singleton of advanced age OR all-elderly household"
+    ],
+    "apply_link": "https://www.policyaddress.gov.hk/2026/en/chapter7.html",
+    "apply_link_zh": "https://www.policyaddress.gov.hk/2026/tc/chapter7.html",
+    "needs": {
+      "hk_resident": true,
+      "min_age": 65,
+      "housing_in": ["prh"]
+    },
+    "why_en": "Elderly PRH tenant — free gerontech equipment pilot coming to selected estates 2027-28.",
+    "why_zh": "長者公屋租戶 — 樂齡科技設備先導計劃2027-28起分階段推出。",
+    "proof_needed_zh": [
+      "入住獲選公屋邨租戶(2027-28首5邨待定)",
+      "高齡獨居長者 或 全長者戶"
+    ],
+    "confirm_en": [
+      "Announced in 2026 Policy Address para 399; Annex indicator 174: 5 estates, ~1,500 households in 2027-28",
+      "Equipment type, eligibility details, application process TBD — not yet open",
+      "Separate from IoT Door Sensor pilot (Wan Hon/Sheung Lok/Tung Wui/Tin Yan) and I&T Fund"
+    ],
+    "confirm_zh": [
+      "2026年施政報告第399段宣佈；附件指標174：2027-28首5邨、約1,500戶",
+      "設備類型、資格詳情、申請流程待定 — 尚未開放申請",
+      "與IoT門磁感應器先導計劃(環康/常樂/東匯/天恩)及創科基金不同"
+    ],
+    "event_based": false
   }
 ]

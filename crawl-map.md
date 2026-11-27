@@ -130,8 +130,8 @@ Status values: `pending` → `in_progress (session)` → `done` → re-crawl per
 | P31 | Labour Dept Employees' Compensation Ordinance Cap.282 (work-injury/death statutory compensation) | staged `eco-work-injury` → approved + live 2026-09-24 (first review→publish pipeline test) | done |
 | P32 | Community Pharmacy Programme + Community Drug Formulary (PHC Commission/HA) | staged `cpp-community-pharmacy` 2026-09-25 → pending review (EN/TC press 200, PHCC apply lang=2/1 200); promote to S51 on publish | done |
 | P33 | 30,000 Youth Employment and Internship Programme (2027-28) | `grad-employment-launch-2027`, `stem-internship-expanded-2027`, `hyab-youth-startup-internship-2027`, `cic-pdgotss-2027`, `fsdc-financial-services-youth-internship-2027` | done (nemotron-ultra) | 2026-11-27
-| P34 | Gerontechnology Promotion Scheme (ITIB) | $100M earmarked, launch H1 2027. Support local tech enterprises developing elderly-care products/solutions. Details TBD. | pending |
-| P35 | HA Gerontechnology Pilot (HB) | Household gerontech equipment for elderly singletons & all-elderly households in selected PRH estates with high elderly population. Gradual extension. | pending |
+| P34 | Gerontechnology Promotion Scheme (ITIB) | `gerontechnology-promotion-scheme-2027` | done (nemotron-ultra) | 2026-11-27 |
+| P35 | HA Gerontechnology Pilot (HB) | `hkha-gerontechnology-pilot-2027` | done (nemotron-ultra) | 2026-11-27 |
 | P36 | Newborn Baby Bonus extension + 2nd-child boost (DCSO) | $20k extended 3 years to Oct 2029; 2nd+ child born ≥16 Sep 2026: $30k for 3 years. Update `newborn-bonus-20k`. | pending |
 | P37 | Child tax allowance increases (FSTB) | 2nd+ child born ≥16 Sep 2026: basic allowance $140k→$160k (YA 2026/27); additional allowance (1st 2 yrs) $140k→$160k (YA 2026/27). | pending |
 | P38 | Stamp duty waiver for newborn families (FSTB) | Up to $20k AVD waiver for property purchased 1yr before–2yr after birth of child born ≥16 Sep 2026 in HK, either parent HKPR. Bill → LegCo H1 2027. | pending |
